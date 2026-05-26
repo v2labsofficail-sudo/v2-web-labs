@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee: marquee 35s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 35s linear infinite;
 
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
 }
 
 :root {
   /* Font Family Definitions */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
 }
 
 html, body {
@@ -29,6 +34,44 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
+}
+
+.home-montserrat,
+.home-montserrat * {
+  font-family: var(--font-home-montserrat), 'Montserrat', sans-serif !important;
+}
+
+@keyframes testimonials-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes testimonials-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-testimonials-up {
+  animation: testimonials-up 30s linear infinite;
+}
+
+.animate-testimonials-down {
+  animation: testimonials-down 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-testimonials-up,
+  .animate-testimonials-down {
+    animation: none;
+  }
 }
 
 /* Premium utility to hide scrollbars for clean carousel containers */

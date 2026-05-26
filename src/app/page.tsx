@@ -2,6 +2,130 @@
 
 import React from "react";
 import Link from "next/link";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-home-montserrat",
+});
+
+const TESTIMONIALS = [
+  {
+    name: "Aris Thorne",
+    role: "Founder, SynthFlow AI",
+    initials: "AT",
+    quote:
+      "V2Labs shipped our MVP in just 18 days. The speed, clarity, and finish quality gave our launch a serious edge.",
+  },
+  {
+    name: "Sarah Chen",
+    role: "Co-Founder, MedLink",
+    initials: "SC",
+    quote:
+      "The product feels premium on every screen. Their mobile-first thinking helped us convert more users from day one.",
+  },
+  {
+    name: "Devin Patel",
+    role: "Founder, GrowthPilot",
+    initials: "DP",
+    quote:
+      "They made the frontend incredibly smooth and fast. Our landing page conversion rate jumped within the first week.",
+  },
+  {
+    name: "Maya Verma",
+    role: "CEO, NovaDesk",
+    initials: "MV",
+    quote:
+      "Design and development finally felt aligned. Every detail was thoughtful, and the final experience matched our brand perfectly.",
+  },
+  {
+    name: "Nikhil Rao",
+    role: "Founder, FleetOps",
+    initials: "NR",
+    quote:
+      "We needed clean execution without agency drag. V2Labs moved like an in-house product team and delivered with confidence.",
+  },
+  {
+    name: "Laura Winters",
+    role: "Product Lead, CoreStack",
+    initials: "LW",
+    quote:
+      "The UI feels modern, calm, and trustworthy. Our customers noticed the polish immediately after the redesign went live.",
+  },
+  {
+    name: "Jason Reed",
+    role: "Founder, PulseCart",
+    initials: "JR",
+    quote:
+      "Their structure, communication, and delivery speed were excellent. We always knew what was happening and what came next.",
+  },
+  {
+    name: "Priya Malhotra",
+    role: "Co-Founder, SkillMint",
+    initials: "PM",
+    quote:
+      "They turned a rough concept into a sharp product experience. The responsive layouts feel especially good on smaller devices.",
+  },
+  {
+    name: "Cory Zamora",
+    role: "Marketing Specialist, Influx",
+    initials: "CZ",
+    quote:
+      "The final product looks elevated and performs beautifully. It gave our team a much stronger foundation to scale from.",
+  },
+  {
+    name: "Alex Rivera",
+    role: "Founder, ApexLabs",
+    initials: "AR",
+    quote:
+      "V2Labs exceeded all expectations. The custom animations are fluid, and the page loading speeds are absolutely blazing fast.",
+  },
+] as const;
+
+const TESTIMONIALS_ROW_1 = TESTIMONIALS.slice(0, 5);
+const TESTIMONIALS_ROW_2 = TESTIMONIALS.slice(5, 10);
+
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof TESTIMONIALS)[number];
+}) {
+  return (
+    <article className="w-[290px] sm:w-[340px] md:w-[380px] shrink-0 rounded-[22px] border border-[#1161ed]/10 bg-white/80 p-5 shadow-[0_10px_30px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_20px_40px_rgba(17,97,237,0.12)] sm:p-6">
+      <div className="mb-3.5 flex items-center gap-1 text-[#f5b301]">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <svg
+            key={index}
+            className="h-3.5 w-3.5 fill-current"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M12 2.75l2.86 5.79 6.39.93-4.62 4.5 1.09 6.36L12 17.32l-5.72 3.01 1.09-6.36-4.62-4.5 6.39-.93L12 2.75z" />
+          </svg>
+        ))}
+      </div>
+
+      <p className="text-[0.78rem] font-medium leading-[1.65] text-[#334155] sm:text-[0.84rem] md:text-[0.88rem] italic">
+        "{testimonial.quote}"
+      </p>
+
+      <div className="mt-5 flex items-center gap-3.5 border-t border-slate-100 pt-4">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1161ed] to-[#3b82f6] text-[0.72rem] font-extrabold text-white shadow-[0_4px_12px_rgba(17,97,237,0.2)]">
+          {testimonial.initials}
+        </div>
+        <div className="min-w-0">
+          <p className="truncate text-[0.82rem] font-black tracking-tight text-[#0F172A] sm:text-[0.88rem]">
+            {testimonial.name}
+          </p>
+          <p className="truncate text-[0.68rem] font-bold text-[#64748B] sm:text-[0.72rem]">
+            {testimonial.role}
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function Home() {
   const scrollTo = (id: string) => {
@@ -78,7 +202,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="container mx-auto px-6 relative overflow-hidden">
+    <main className={`${montserrat.variable} home-montserrat container mx-auto px-6 relative overflow-hidden`}>
       {/* Background Soft Mesh Gradients for Premium Studio Feel */}
       <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
       <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
@@ -221,37 +345,106 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] relative z-10">
           {[
-            { 
-              title: "Website Development", 
-              desc: "Custom, responsive, and high performance websites tailored to showcase your unique brand identity.", 
-              icon: <polyline points="16 18 22 12 16 6" /> 
+            {
+              title: "SaaS & Product Development",
+              desc: "High-scale multi-tenant dashboards, secure billing portals, and fast analytical monitoring tools.",
+              link: "/services/saas-product",
+              icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1161ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+              )
             },
-            { 
-              title: "Web Applications", 
-              desc: "Powerful, highly scalable web portals built with cutting-edge technologies to automate and scale business growth.", 
-              icon: <rect x="2" y="3" width="20" height="14" rx="2" ry="2" /> 
+            {
+              title: "ERP & CRM Systems",
+              desc: "Secure corporate operations database portals, HubSpot pipelines, and lead automations.",
+              link: "/services/erp-crm",
+              icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1161ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <line x1="21" y1="9" x2="3" y2="9" />
+                  <line x1="21" y1="15" x2="3" y2="15" />
+                  <line x1="12" y1="3" x2="12" y2="21" />
+                </svg>
+              )
             },
-            { 
-              title: "Logo & Brand Identity", 
-              desc: "Iconic logos, bespoke branding assets, and graphic design that set your brand miles apart.", 
-              icon: <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" /> 
+            {
+              title: "AI Automation Solutions",
+              desc: "Autonomous workflow auto-agents, proprietary LLM integrations, and fast semantic lookups.",
+              link: "/services/ai-automation",
+              icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1161ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="5" r="2.5" />
+                  <circle cx="5" cy="18" r="2.5" />
+                  <circle cx="19" cy="18" r="2.5" />
+                  <line x1="12" y1="7.5" x2="5" y2="15.5" />
+                  <line x1="12" y1="7.5" x2="19" y2="15.5" />
+                  <line x1="7.5" y1="18" x2="16.5" y2="18" />
+                </svg>
+              )
+            },
+            {
+              title: "Web Platform Development",
+              desc: "Sub-second React & Next.js systems optimized for SEO authority and Core Web Vitals.",
+              link: "/services/web-platform",
+              icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1161ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                  <line x1="14" y1="4" x2="10" y2="20" />
+                </svg>
+              )
+            },
+            {
+              title: "Video Editing & Motion Editing",
+              desc: "Cinematic post-production cuts, sound design, hook tuning, and frame pacing.",
+              link: "/services/video-motion",
+              icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1161ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+                  <line x1="7" y1="2" x2="7" y2="22" />
+                  <line x1="17" y1="2" x2="17" y2="22" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <line x1="2" y1="7" x2="7" y2="7" />
+                  <line x1="2" y1="17" x2="7" y2="17" />
+                  <line x1="17" y1="17" x2="22" y2="17" />
+                  <line x1="17" y1="7" x2="22" y2="7" />
+                </svg>
+              )
+            },
+            {
+              title: "UI/UX & Brand Systems",
+              desc: "Atomic Figma layouts, interactive user pathways, design spacing tokens, and asset guides.",
+              link: "/services/ui-ux-brand",
+              icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1161ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+              )
             },
           ].map((service, index) => (
-            <div key={index} className="p-10 rounded-[24px] border border-black/[0.03] bg-gradient-to-br from-white to-[#1161ed]/[0.005] shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_50px_rgba(17,97,237,0.08)] hover:border-[#1161ed]/20 group">
-              {/* Premium Top Border Strip in Brand Gradient */}
-              <div className="h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-t-[24px]" />
-              
-              {/* Icon Container */}
-              <div className="mb-6 relative">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1161ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:scale-110 group-hover:stroke-[#1161ed] transition-all duration-300">
-                  {service.icon}
-                  {index === 0 && <><polyline points="8 6 2 12 8 18" /><line x1="14" y1="4" x2="10" y2="20" /></>}
-                  {index === 1 && <><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></>}
-                  {index === 2 && <path d="M8 12h8" />}
-                </svg>
+            <Link 
+              key={index}
+              href={service.link}
+              className="p-8 rounded-[24px] border border-black/[0.03] bg-gradient-to-br from-white to-[#1161ed]/[0.005] shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_50px_rgba(17,97,237,0.08)] hover:border-[#1161ed]/20 group flex flex-col justify-between"
+            >
+              <div>
+                {/* Premium Top Border Strip in Brand Gradient */}
+                <div className="h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-t-[24px]" />
+                
+                {/* Icon Container */}
+                <div className="mb-6 relative">
+                  <div className="transform group-hover:scale-110 transition-transform duration-300 [&>svg]:stroke-[#1161ed]">
+                    {service.icon}
+                  </div>
+                </div>
+                <h3 className="text-[1.3rem] text-[#0F172A] mb-3 font-bold group-hover:text-[#1161ed] transition-colors duration-200">{service.title}</h3>
+                <p className="text-[#64748B] leading-relaxed text-sm">{service.desc}</p>
               </div>
-              <h3 className="text-[1.4rem] text-[#0F172A] mb-3 font-bold">{service.title}</h3>
-              <p className="text-[#64748B] leading-relaxed text-base">{service.desc}</p>
               
               {/* Explore Service micro-action */}
               <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#1161ed] mt-6 cursor-pointer select-none">
@@ -261,7 +454,7 @@ export default function Home() {
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -653,226 +846,80 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials in Video & Organic Mockup Styles */}
-      <section id="testimonials" className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden">
-        {/* Background Soft Mesh Gradients */}
-        <div className="absolute top-[20%] left-[-5%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[110px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
-        
-        <div className="max-w-[1100px] mx-auto px-4 relative z-10">
-          
-          {/* Header */}
-          <div className="text-center mb-16">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">Founder Proof</p>
-            <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
-              What Our <span className="text-[#1161ed]">Founders Say</span>
-            </h2>
-            <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed">
-              No generic reviews. Real, raw, and organic feedback from fast-growing startups built by V2Labs.
-            </p>
+      {/* Auto-Moving Testimonials Wall */}
+      <section id="testimonials" className="relative overflow-hidden border-t border-[rgba(0,0,0,0.05)] py-16 md:py-24">
+        <div className="absolute left-[-5%] top-[20%] h-[350px] w-[350px] animate-pulse rounded-full bg-[#1161ed]/[0.02] blur-[110px] duration-[8s] pointer-events-none select-none -z-10" />
+
+        <div className="relative z-10 mx-auto px-4 max-w-[1400px]">
+          <div className="relative overflow-hidden rounded-[32px] border border-[#1161ed]/10 bg-[linear-gradient(180deg,rgba(248,250,252,0.98),rgba(239,246,255,0.96))] py-8 shadow-[0_30px_90px_rgba(17,97,237,0.08)] sm:py-12 md:rounded-[40px] md:py-16">
+            <div className="pointer-events-none absolute left-[-40px] top-[-20px] h-36 w-36 rounded-full bg-[#1161ed]/10 blur-3xl" />
+            <div className="pointer-events-none absolute bottom-[-30px] right-[-20px] h-40 w-40 rounded-full bg-[#60A5FA]/15 blur-3xl" />
+
+            <div className="relative mb-8 text-center md:mb-12 px-4">
+              <p className="mb-3 text-[0.72rem] font-extrabold uppercase tracking-[0.22em] text-[#1161ed]">
+                Founder Proof
+              </p>
+              <h2 className="mx-auto max-w-[620px] text-[1.9rem] font-extrabold leading-[1.2] text-[#0F172A] sm:text-[2.2rem] md:text-[2.8rem]">
+                What Our <span className="text-[#1161ed]">Founders Say</span>
+              </h2>
+              <p className="mx-auto mt-4 max-w-[620px] text-sm leading-7 text-[#64748B] sm:text-base md:text-lg">
+                Real feedback in a high-fidelity auto-sliding horizontal marquee, fully mobile-responsive and pausing on hover.
+              </p>
+            </div>
+
+            {/* Double Row Horizontal Marquee */}
+            <div className="relative flex flex-col gap-6 overflow-hidden py-4 select-none">
+              {/* Fade masks */}
+              <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-12 bg-gradient-to-r from-[#f8fbff] to-transparent sm:w-24 md:w-36 lg:w-48" />
+              <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-12 bg-gradient-to-l from-[#eef6ff] to-transparent sm:w-24 md:w-36 lg:w-48" />
+
+              {/* Row 1: Leftward Marquee */}
+              <div className="relative flex w-full overflow-hidden">
+                <div className="flex shrink-0 gap-6 animate-marquee hover:[animation-play-state:paused] py-2 cursor-pointer">
+                  {/* Set 1 */}
+                  <div className="flex gap-6 shrink-0">
+                    {TESTIMONIALS_ROW_1.map((t, idx) => (
+                      <TestimonialCard key={`row1-1-${idx}`} testimonial={t} />
+                    ))}
+                  </div>
+                  {/* Set 2 (Duplicate) */}
+                  <div className="flex gap-6 shrink-0" aria-hidden="true">
+                    {TESTIMONIALS_ROW_1.map((t, idx) => (
+                      <TestimonialCard key={`row1-2-${idx}`} testimonial={t} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 2: Rightward Marquee */}
+              <div className="relative flex w-full overflow-hidden">
+                <div className="flex shrink-0 gap-6 animate-marquee-reverse hover:[animation-play-state:paused] py-2 cursor-pointer">
+                  {/* Set 1 */}
+                  <div className="flex gap-6 shrink-0">
+                    {TESTIMONIALS_ROW_2.map((t, idx) => (
+                      <TestimonialCard key={`row2-1-${idx}`} testimonial={t} />
+                    ))}
+                  </div>
+                  {/* Set 2 (Duplicate) */}
+                  <div className="flex gap-6 shrink-0" aria-hidden="true">
+                    {TESTIMONIALS_ROW_2.map((t, idx) => (
+                      <TestimonialCard key={`row2-2-${idx}`} testimonial={t} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center gap-2 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#64748B] sm:text-[0.72rem]">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1161ed] opacity-75"></span>
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#1161ed]"></span>
+              </span>
+              <span>Auto-moving founder feedback • Hover to Pause</span>
+            </div>
           </div>
-
-          {/* Grid Layout - Mobile Swipe Carousel / Desktop Grid */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar pb-6 gap-4 px-6 -mx-6 md:mx-0 md:px-0 md:grid md:grid-cols-2 md:gap-8 md:pb-0">
-            
-            {/* 1. Video Card Mockup */}
-            <div className="flex-shrink-0 w-[82vw] sm:w-[320px] snap-center md:w-auto md:flex-shrink-0 relative rounded-[28px] overflow-hidden border border-black/[0.04] bg-gradient-to-tr from-slate-950 to-slate-900 shadow-sm h-[340px] group flex flex-col justify-between p-6">
-              {/* Abs mesh background glow */}
-              <div className="absolute inset-0 bg-[#1161ed]/[0.08] blur-xl opacity-30 pointer-events-none" />
-
-              {/* Card Header Profile Overlay */}
-              <div className="relative z-10 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#1161ed] to-[#3b82f6] text-white flex items-center justify-center text-[0.75rem] font-black shadow-md select-none">
-                  AT
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[0.78rem] font-extrabold text-white leading-tight">Aris Thorne</span>
-                  <span className="text-[0.62rem] font-extrabold text-[#94A3B8] leading-tight">CEO, SynthFlow AI</span>
-                </div>
-              </div>
-
-              {/* Center Play Indicator */}
-              <div className="relative z-10 flex items-center justify-center w-full my-auto">
-                <div className="w-14 h-14 rounded-full bg-[#1161ed]/85 text-white flex items-center justify-center shadow-[0_4px_25px_rgba(17,97,237,0.4)] group-hover:scale-110 group-hover:bg-[#1161ed] transition-all duration-300 cursor-pointer select-none">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="ml-1">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-
-              {/* Lower Transcription Caption Block */}
-              <div className="relative z-10 w-full flex flex-col gap-3">
-                <div className="bg-black/60 backdrop-blur-md px-3.5 py-3 rounded-2xl border border-white/10 text-white text-[0.72rem] leading-relaxed text-center font-bold shadow-md">
-                  “V2Labs shipped our MVP in just 18 days. The velocity was absolutely game-changing.”
-                </div>
-
-                {/* Progress bar tracking */}
-                <div className="flex items-center gap-3 text-[0.62rem] font-bold text-[#94A3B8] select-none">
-                  <span>0:14</span>
-                  <div className="flex-1 h-1.5 rounded-full bg-white/10 overflow-hidden relative">
-                    <div className="absolute left-0 top-0 bottom-0 w-[22%] bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-full" />
-                  </div>
-                  <span>1:05</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 2. Voice Note UI Mockup */}
-            <div className="flex-shrink-0 w-[82vw] sm:w-[320px] snap-center md:w-auto md:flex-shrink-0 p-6 rounded-[28px] border border-black/[0.03] bg-white shadow-sm flex flex-col justify-between h-[340px] hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden group">
-              {/* Glassmorphic glow indicator */}
-              <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-[#1161ed]/[0.008] group-hover:bg-[#1161ed]/[0.04] rounded-full blur-xl transition-colors duration-300 pointer-events-none" />
-
-              {/* Profile Header */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-slate-200 text-[0.8rem] font-black text-slate-600 flex items-center justify-center shadow-inner select-none">
-                  SC
-                </div>
-                <div className="flex flex-col">
-                  <h4 className="text-[0.82rem] font-extrabold text-[#0F172A] leading-tight">Sarah Chen</h4>
-                  <p className="text-[0.65rem] font-bold text-[#64748B] leading-tight">Co-Founder, MedLink</p>
-                </div>
-              </div>
-
-              {/* Transcription */}
-              <div className="my-auto">
-                <p className="text-[0.82rem] text-[#334155] leading-relaxed italic font-bold">
-                  “The scalable architecture they designed handled our product launch traffic spike of 50k users without a single hiccup!”
-                </p>
-              </div>
-
-              {/* Waveform Player block */}
-              <div className="flex items-center gap-3.5 bg-[#F8FAFC] border border-slate-100/60 p-3 rounded-2xl">
-                {/* Brand blue Play circle */}
-                <div className="w-9 h-9 rounded-full bg-[#1161ed] text-white flex items-center justify-center shadow-sm flex-shrink-0 cursor-pointer hover:bg-[#0c4ec3] transition-colors select-none">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="ml-0.5">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-
-                {/* Animated Waveform Visualizer simulation */}
-                <div className="flex-1 flex items-end gap-[3px] h-6 px-1">
-                  {[2, 5, 3, 7, 4, 6, 3, 5, 2, 4, 6, 2, 5, 3, 7, 4, 3, 5, 2].map((height, i) => (
-                    <div 
-                      key={i} 
-                      className={`w-[2px] rounded-full transition-colors duration-300 ${
-                        i < 7 ? "bg-[#1161ed]" : "bg-[#1161ed]/25"
-                      }`}
-                      style={{ height: `${height * 14}%` }}
-                    />
-                  ))}
-                </div>
-
-                {/* Audio timestamp */}
-                <span className="text-[0.62rem] font-black text-[#64748B] select-none">0:42 / 1:20</span>
-              </div>
-            </div>
-
-            {/* 3. WhatsApp Message Mockup */}
-            <div className="flex-shrink-0 w-[82vw] sm:w-[320px] snap-center md:w-auto md:flex-shrink-0 rounded-[28px] border border-black/[0.04] bg-[#efeae2] shadow-sm h-[340px] flex flex-col justify-between overflow-hidden relative">
-              {/* WhatsApp background abstract pattern */}
-              <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.25] pointer-events-none" />
-
-              {/* Chat Header Mockup */}
-              <div className="relative z-10 bg-white border-b border-slate-200/40 px-4 py-3 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-slate-300 flex items-center justify-center text-[0.7rem] font-black text-slate-600 select-none">
-                    DP
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-[0.78rem] font-extrabold text-[#0F172A] leading-tight">Devin Patel</span>
-                    <span className="text-[0.55rem] font-extrabold text-[#22c55e] leading-tight flex items-center gap-1 select-none">
-                      <span className="w-1.5 h-1.5 bg-[#22c55e] rounded-full animate-pulse"></span>
-                      Online
-                    </span>
-                  </div>
-                </div>
-                <div className="text-slate-400 cursor-pointer select-none">
-                  •••
-                </div>
-              </div>
-
-              {/* Chat Bubble Area */}
-              <div className="relative z-10 flex-1 p-4 flex flex-col justify-start">
-                <div className="relative max-w-[85%] bg-white rounded-2xl rounded-tl-none p-3.5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] text-[0.78rem] leading-relaxed text-[#334155] font-bold">
-                  “Hey guys, just wanted to say the Next.js frontend is incredibly snappy. Conversion rate is already up by 32%! Absolute class work! 🔥🙌”
-                  
-                  {/* Bubble double check indicators */}
-                  <div className="flex items-center gap-0.5 mt-1 justify-end text-[0.58rem] text-[#94A3B8] select-none font-bold">
-                    <span>10:24 AM</span>
-                    <svg className="w-3.5 h-3.5 text-[#1161ed] ml-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 17l4 4L22 9" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Chat Footer Input Mockup */}
-              <div className="relative z-10 bg-white border-t border-slate-200/40 px-4 py-3 flex items-center justify-between text-slate-400 text-[0.72rem] select-none font-bold">
-                <span>Type a message...</span>
-                <div className="flex gap-3">
-                  <span>📎</span>
-                  <span>🎙️</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 4. Slack Feedback Mockup */}
-            <div className="flex-shrink-0 w-[82vw] sm:w-[320px] snap-center md:w-auto md:flex-shrink-0 p-6 rounded-[28px] border border-black/[0.03] bg-white shadow-sm flex flex-col justify-between h-[340px] hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden group">
-              {/* Header Bar */}
-              <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-3 text-[0.62rem] font-black text-[#64748B] tracking-widest uppercase select-none">
-                <span>💬 #launch-announcements</span>
-                <span className="text-[#1161ed]">slack workspace</span>
-              </div>
-
-              {/* Slack Post content */}
-              <div className="flex gap-3 items-start my-auto">
-                <div className="w-9 h-9 rounded-md bg-gradient-to-tr from-[#e01e5a] to-[#2eb67d] flex items-center justify-center text-[0.7rem] font-black text-white select-none flex-shrink-0">
-                  MV
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex items-baseline">
-                    <span className="font-extrabold text-[#0F172A] text-[0.78rem] leading-none">Marcus Vance</span>
-                    <span className="text-[0.62rem] text-[#94A3B8] font-bold ml-2 leading-none select-none">11:05 AM</span>
-                  </div>
-                  <p className="text-[0.78rem] text-[#334155] leading-relaxed mt-2 font-bold">
-                    Big shoutout to <span className="text-[#1161ed] font-extrabold bg-[#1161ed]/[0.06] px-1.5 py-0.5 rounded">@V2Labs</span> team for building our entire payment gateway. The AI integration works flawless. Can't recommend them enough for startup builders.
-                  </p>
-                </div>
-              </div>
-
-              {/* Slack Reaction Pill buttons */}
-              <div className="flex flex-wrap gap-1.5 mt-3 select-none">
-                {[
-                  { emoji: "👍", count: 14 },
-                  { emoji: "🔥", count: 8 },
-                  { emoji: "🚀", count: 11 },
-                  { emoji: "🎉", count: 5 }
-                ].map((react, i) => (
-                  <div 
-                    key={i} 
-                    className="inline-flex items-center gap-1.5 bg-[#F8FAFC] border border-slate-100 px-2.5 py-1 rounded-xl text-[0.68rem] font-black text-slate-500 hover:bg-slate-100 transition-colors cursor-pointer"
-                  >
-                    <span>{react.emoji}</span>
-                    <span>{react.count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-
-          {/* Mobile Swipe Help Note */}
-          <div className="flex md:hidden items-center justify-center gap-2 mt-2 text-[0.7rem] font-bold text-[#64748B] uppercase tracking-widest animate-pulse">
-            <span>Swipe to browse testimonials</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </div>
-
         </div>
       </section>
-
       {/* Information & Coordinates Section */}
       <section id="info" className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative">
         {/* Soft Background glow-orb */}
