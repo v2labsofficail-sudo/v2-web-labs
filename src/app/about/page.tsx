@@ -12,92 +12,21 @@ export default function AboutPage() {
     { value: "15+", label: "Design Awards" },
   ];
 
-  const values = [
-    {
-      title: "Modern Design",
-      desc: "We build gorgeous, high-fidelity user layouts. Every pixel is deliberately crafted to stun your audiences.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polygon points="12 2 2 7 12 12 22 7 12 2" />
-          <polyline points="2 12 12 17 22 12" />
-          <polyline points="2 17 12 22 22 17" />
-        </svg>
-      ),
-    },
-    {
-      title: "Clean Code",
-      desc: "Our systems are built on Next.js, Django, and clean engineering principles. Speed, safety, and scale are guaranteed.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
-          <line x1="14" y1="4" x2="10" y2="20" />
-        </svg>
-      ),
-    },
-    {
-      title: "Scalable Solutions",
-      desc: "Whether you represent a local shop or a global corporate hub, our architectures scale alongside your daily users.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect x="3" y="3" width="18" height="18" rx="2" />
-          <line x1="21" y1="9" x2="3" y2="9" />
-          <line x1="12" y1="3" x2="12" y2="21" />
-        </svg>
-      ),
-    },
-    {
-      title: "Timely Delivery",
-      desc: "We understand that speed to market defines startup survival. We deliver projects on schedule without cutting corners.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <polyline points="12 6 12 12 16 14" />
-        </svg>
-      ),
-    },
-  ];
 
   const team = [
     {
+      name: "Vishal Dudhabarve",
+      role: "Founder & AI Full Stack Developer",
+      initials: "VD",
+      quote: "Building intelligent systems that push boundaries.",
+      gradient: "from-[#6366f1] to-[#4f46e5]",
+      linkedin: "#",
+      github: "#",
+      bio: "Founder of V2 Labs. Focuses on architecting multi-agent AI ecosystems, custom LLM fine-tuning, and scalable TypeScript frontends.",
+    },
+    {
       name: "Vandan Darji",
-      role: "Full Stack Developer + Market Strategy Builder",
+      role: "Co-Founder & Full Stack Developer",
       initials: "VD",
       quote: "Compiles bulletproof, sub-second architectures.",
       gradient: "from-[#1161ed] to-[#3b82f6]",
@@ -119,6 +48,17 @@ export default function AboutPage() {
       img: "/Jevin Kalathiya.jpeg",
     },
     {
+      name: "Biswadeep Dey",
+      role: "Professional Video Editor",
+      initials: "BD",
+      quote: "Cinematic storytelling that captivates and converts.",
+      gradient: "from-[#f43f5e] to-[#e11d48]",
+      linkedin: "#",
+      github: "#",
+      bio: "Crafts premium cinematic edits, complex motion graphics, and high-conversion brand advertisements. Expert in Premiere Pro and After Effects.",
+      img: "/Biswadeep Dey.jpg",
+    },
+    {
       name: "Rishabh Tiwari",
       role: "Social media manager/ and wordpress desinger & developer",
       initials: "RT",
@@ -129,28 +69,7 @@ export default function AboutPage() {
       bio: "Social media manager and wordpress designer & developer focused on building secure, scalable, and high-performance web applications. Experienced in REST APIs, database design, authentication systems, and backend architecture.",
       img: "/Rishabh Tiwari.png",
     },
-    {
-      name: "Rohan Malhotra",
-      role: "Creative Director",
-      initials: "RM",
-      quote: "Transforms abstract ideas into bold visual stories.",
-      gradient: "from-[#8b5cf6] to-[#d946ef]",
-      linkedin: "#",
-      github: "#",
-      bio: "Guides brand visual directions, customized assets, and cross-channel campaign media. Focused on bringing emotional warmth to digital products.",
-      img: "/team_rohan.png",
-    },
-    {
-      name: "Sarah Jenkins",
-      role: "AI Operations Lead",
-      initials: "SJ",
-      quote: "Leverages machine intelligence for hyper-efficient workflows.",
-      gradient: "from-[#f59e0b] to-[#ec4899]",
-      linkedin: "#",
-      github: "#",
-      bio: "Designs custom multi-agent LLM systems, prompt chains, and predictive analytics modules. Specializes in automating studio operational tasks.",
-      img: "/team_sarah.png",
-    },
+
   ];
 
   return (
@@ -216,7 +135,7 @@ export default function AboutPage() {
               Built for Velocity and Design Integrity
             </h2>
             <p className="text-[#64748B] text-sm sm:text-[0.96rem] leading-relaxed mb-5">
-              At V2 Labs, we believe outstanding interfaces shouldn't take
+              At V2 Labs, we believe outstanding interfaces shouldn&apos;t take
               months to deploy. We have streamlined the classic development
               bottlenecks by keeping design and engineering closely tied.
             </p>
@@ -314,44 +233,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Core Studio Principles Section */}
-      <section className="py-12 border-t border-slate-200/50 mb-24 max-w-[1100px] mx-auto px-6">
-        <div className="text-center mb-16 relative z-10">
-          <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
-            Our Foundation
-          </div>
-          <h2 className="text-3xl md:text-[2.4rem] font-black text-[#0F172A] tracking-tight">
-            Core Studio Principles
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-[1100px] mx-auto">
-          {values.map((val, idx) => (
-            <div
-              key={idx}
-              className="p-8 rounded-[24px] border border-black/[0.03] bg-white shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_45px_rgba(17,97,237,0.07)] hover:border-[#1161ed]/20 group flex flex-col justify-between"
-            >
-              {/* Premium Top Border Strip in Brand Gradient */}
-              <div className="h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-t-[24px]" />
-
-              <div>
-                {/* Icon Container */}
-                <div className="mb-6 relative">
-                  <div className="w-12 h-12 rounded-xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm">
-                    {val.icon}
-                  </div>
-                </div>
-                <h3 className="text-[1.2rem] text-slate-900 mb-3 font-extrabold group-hover:text-[#1161ed] transition-colors duration-200">
-                  {val.title}
-                </h3>
-                <p className="text-slate-500 leading-relaxed text-sm">
-                  {val.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Team Section */}
       <section className="py-12 border-t border-slate-200/50 mb-24 max-w-[1100px] mx-auto px-6 overflow-visible">
@@ -378,7 +259,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-[650px] mx-auto">
           <h2 className="text-3xl sm:text-[2.5rem] font-black tracking-tight leading-tight mb-4 text-white">
-            Let's Build Your Digital Future
+            Let&apos;s Build Your Digital Future
           </h2>
           <p className="text-[#94A3B8] max-w-[520px] mx-auto text-[0.92rem] leading-relaxed mb-8">
             Our engineering team is ready to map your code architectures, visual

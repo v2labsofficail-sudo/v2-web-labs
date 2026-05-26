@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 
 interface TeamMember {
   name: string;
@@ -119,7 +119,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
       <div className="absolute -left-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#1161ed]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#3b82f6]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
 
-      {/* Main Track Container */}
       <div
         ref={containerRef}
         onScroll={handleScroll}
@@ -143,10 +142,12 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                   : "opacity-80 scale-95 hover:opacity-100 hover:scale-[0.98] duration-300"
               }`}
             >
-              {/* Active Card Glowing Background Ring */}
-              {isActive && (
-                <div className="absolute -inset-[1px] bg-gradient-to-br from-[#1161ed] to-[#3b82f6] rounded-3xl -z-10 opacity-30 blur-[4px] animate-pulse" />
-              )}
+              {/* Glowing Background Ring - active pulse, elegant hover glow */}
+              <div className={`absolute -inset-[1px] bg-gradient-to-br from-[#1161ed] to-[#3b82f6] rounded-3xl -z-10 blur-[4px] transition-opacity duration-300 ${
+                isActive 
+                  ? "opacity-30 animate-pulse" 
+                  : "opacity-0 group-hover:opacity-30"
+              }`} />
 
               {/* Image / Fallback Container */}
               <div 
@@ -158,7 +159,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                   <span className="text-[1.8rem] font-black tracking-widest leading-none drop-shadow-sm">{member.initials}</span>
                   <div className="flex flex-col">
                     <span className="text-[0.68rem] font-black uppercase tracking-widest text-white/80 mb-0.5 leading-none">Studio DNA</span>
-                    <span className="text-xs font-bold leading-normal italic">"{member.quote}"</span>
+                    <span className="text-xs font-bold leading-normal italic">&quot;{member.quote}&quot;</span>
                   </div>
                 </div>
 
@@ -214,12 +215,11 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               {/* Designation & Names */}
               <span className="text-[0.72rem] font-black uppercase tracking-widest text-[#1161ed] mb-1.5 leading-none">{member.role}</span>
               <h3 className="text-lg font-black text-slate-900 mb-2 transition-colors group-hover:text-[#1161ed]">{member.name}</h3>
-              <p className="text-xs text-slate-500 leading-relaxed max-w-[240px] line-clamp-2">{member.bio}</p>
               
               {/* Mini Interactive View Trigger */}
               <button 
                 onClick={(e) => handleCardClick(e, member)}
-                className="mt-4 text-[0.72rem] font-black uppercase tracking-wider text-[#1161ed] hover:text-[#0c4ec3] flex items-center gap-1 transition-colors"
+                className="mt-3 text-[0.72rem] font-black uppercase tracking-wider text-[#1161ed] hover:text-[#0c4ec3] flex items-center gap-1 transition-colors"
               >
                 Read Journey
                 <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -314,8 +314,19 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               {/* Decorative Orbs */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
               
-              <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-[2rem] font-black select-none shadow-md shrink-0">
-                {selectedMember.initials}
+              <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center overflow-hidden shadow-md shrink-0 relative">
+                {selectedMember.img ? (
+                  <img 
+                    src={selectedMember.img} 
+                    alt={selectedMember.name} 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLElement).style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="text-[2rem] font-black select-none text-white">{selectedMember.initials}</span>
+                )}
               </div>
 
               <div>
@@ -330,7 +341,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               <div className="mb-6">
                 <span className="text-[0.68rem] font-black uppercase tracking-[0.12em] text-[#1161ed] block mb-2">Core Philosophy</span>
                 <p className="text-slate-600 text-sm italic font-medium leading-relaxed bg-[#1161ed]/[0.03] border-l-2 border-[#1161ed] p-3.5 rounded-r-xl">
-                  "{selectedMember.quote}"
+                  &quot;{selectedMember.quote}&quot;
                 </p>
               </div>
 

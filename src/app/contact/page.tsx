@@ -8,7 +8,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     service: "website_dev",
-    budget: "$1,000 - $3,000",
+    budget: "₹50,000 - ₹1,50,000",
     message: "",
   });
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
           email: "",
           phone: "",
           service: "website_dev",
-          budget: "$1,000 - $3,000",
+          budget: "₹50,000 - ₹1,50,000",
           message: "",
         });
       } else {
@@ -334,11 +334,11 @@ export default function ContactPage() {
                   onChange={handleChange}
                   className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-bold text-slate-700 outline-none focus:bg-white focus:border-[#1161ed] focus:ring-4 focus:ring-[#1161ed]/5 transition-all cursor-pointer"
                 >
-                  <option value="Under $1,000">Under $1,000</option>
-                  <option value="$1,000 - $3,000">$1,000 - $3,000</option>
-                  <option value="$3,000 - $5,000">$3,000 - $5,000</option>
-                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                  <option value="$10,000+">$10,000+</option>
+                  <option value="Under ₹50,000">Under ₹50,000</option>
+                  <option value="₹50,000 - ₹1,50,000">₹50,000 - ₹1,50,000</option>
+                  <option value="₹1,50,000 - ₹3,00,000">₹1,50,000 - ₹3,00,000</option>
+                  <option value="₹3,00,000 - ₹5,00,000">₹3,00,000 - ₹5,00,000</option>
+                  <option value="₹5,00,000+">₹5,00,000+</option>
                 </select>
               </div>
 
