@@ -381,23 +381,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
         </div>
       )}
 
-      {/* Inject custom CSS keyframes directly if needed for animation classes */}
-      <style jsx global>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes scaleUp {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        .animate-scaleUp {
-          animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-      `}</style>
     </div>
   );
 }

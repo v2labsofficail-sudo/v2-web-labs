@@ -129,22 +129,16 @@ export default function AboutPage() {
           {/* Left Description Column */}
           <div className="lg:col-span-6 flex flex-col items-start text-left">
             <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-4">
-              Our DNA
+              Our Journey
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-              Built for Velocity and Design Integrity
+              From College Dorm Hustle to Proper Engineering
             </h2>
             <p className="text-[#64748B] text-sm sm:text-[0.96rem] leading-relaxed mb-5">
-              At V2 Labs, we believe outstanding interfaces shouldn&apos;t take
-              months to deploy. We have streamlined the classic development
-              bottlenecks by keeping design and engineering closely tied.
+              V2Labs was forged through relentless dedication. Our founders, **Vishal** and **Vandan**, began their partnership during college. Struggling to manage rigid university workloads, attendance requirements, and exams, they invested every spare night self-teaching advanced web architectures and system designs.
             </p>
             <p className="text-[#64748B] text-sm sm:text-[0.96rem] leading-relaxed">
-              We focus on building performant frontend experiences that sit on
-              clean architecture models. When you partner with us, you are
-              working directly with specialized engineers dedicated to scaling
-              your product conversion speeds and ensuring bulletproof code
-              delivery.
+              They started by freelancing on small client projects, delivering proper high-quality execution and pixel-perfect precision. This hands-on experience and obsession with performance laid the foundation for V2Labs (named after **Vishal** + **Vandan**). Today, we operate as an elite engineering studio shipping high-scale software globally.
             </p>
           </div>
 

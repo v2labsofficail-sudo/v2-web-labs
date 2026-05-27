@@ -36,10 +36,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.home-montserrat,
-.home-montserrat * {
-  font-family: var(--font-home-montserrat), 'Montserrat', sans-serif !important;
-}
 
 @keyframes testimonials-up {
   from {
@@ -81,4 +77,63 @@ h1, h2, h3, h4, h5, h6 {
 .no-scrollbar {
   -ms-overflow-style: none; /* IE/Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* Custom Video-Motion Keyframes & Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes float-reverse {
+  0% {
+    transform: translateY(0px) scale(1.05);
+  }
+  50% {
+    transform: translateY(20px) scale(1);
+  }
+  100% {
+    transform: translateY(0px) scale(1.05);
+  }
+}
+@keyframes svgDraw {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+.animate-float-reverse {
+  animation: float-reverse 9s ease-in-out infinite;
+}
+.animate-svg-draw {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: svgDraw 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards infinite;
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-scaleUp {
+  animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }

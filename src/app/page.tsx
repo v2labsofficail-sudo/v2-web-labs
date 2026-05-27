@@ -2,13 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-home-montserrat",
-});
 
 const TESTIMONIALS = [
   {
@@ -128,6 +122,51 @@ function TestimonialCard({
 }
 
 export default function Home() {
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null);
+
+  const FAQS = [
+    {
+      question: "What core services does V2Labs specialize in?",
+      answer: "V2Labs specializes in high-velocity SaaS & product development, custom ERP & CRM solutions, AI-ready automations, sub-second React/Next.js platforms, cinematic post-production video editing, and complete brand design systems."
+    },
+    {
+      question: "How quickly can V2Labs deliver a production-ready MVP?",
+      answer: "We move with startup speed. A standard MVP takes 2 to 4 weeks depending on the complexity. We launch fast, gather active user feedback, and iterate in rapid, continuous cycles."
+    },
+    {
+      question: "Do you offer long-term support and maintenance post-launch?",
+      answer: "Yes. We act as a dedicated engineering partner, providing ongoing feature updates, database scaling, server optimizations, and UX modifications as your product grows."
+    },
+    {
+      question: "How does V2Labs collaborate with our internal team?",
+      answer: "We operate with a founder's mindset. We communicate directly via Slack, collaborate in GitHub, maintain clear Linear boards, and eliminate typical agency overhead."
+    },
+    {
+      question: "What technology stack does V2Labs build on?",
+      answer: "We select and utilize the optimal technology stack according to each client's unique requirements, objectives, and existing infrastructure. While we have deep expertise in modern tools like Next.js, React, Tailwind CSS, TypeScript, Node.js, Django, PostgreSQL, and native AI SDKs (OpenAI, Gemini, Claude), we always prioritize the best fit for your specific project."
+    },
+    {
+      question: "Can you build custom AI models and automations?",
+      answer: "Yes. We specialize in building custom AI integrations, autonomous agentic grids, semantic vector database lookups, and specialized LLM pipelines tailored to your business needs."
+    },
+    {
+      question: "Are your platforms optimized for Core Web Vitals and SEO?",
+      answer: "Absolutely. Every platform we build is engineered for sub-second loading speeds, clean Core Web Vitals, semantic HTML structures, and immediate search index authority."
+    },
+    {
+      question: "Who owns the project intellectual property (IP)?",
+      answer: "You do. The client retains 100% ownership of the custom code, designs, and intellectual property from day one, with complete transfer upon project completion."
+    },
+    {
+      question: "How do you handle pricing and project estimates?",
+      answer: "We offer transparent, milestone-based pricing or flexible monthly retainer models depending on your startup's roadmap, ensuring complete budget clarity."
+    },
+    {
+      question: "How do we kickstart our project with V2Labs today?",
+      answer: "Simply reach out via hello@v2labs.co or click 'Get Started' to schedule a direct discovery consultation with our product and engineering team."
+    }
+  ];
+
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: "smooth" });
@@ -202,7 +241,7 @@ export default function Home() {
   ];
 
   return (
-    <main className={`${montserrat.variable} home-montserrat container mx-auto px-6 relative overflow-hidden`}>
+    <main className="container mx-auto px-6 relative overflow-hidden">
       {/* Background Soft Mesh Gradients for Premium Studio Feel */}
       <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
       <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
@@ -920,75 +959,156 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Information & Coordinates Section */}
+
+      {/* Success Story Section */}
+      <section id="story" className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.03)] relative overflow-hidden">
+        {/* Glowing Ambient Background Orb */}
+        <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[110px] pointer-events-none select-none -z-10" />
+        <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.015] rounded-full blur-[110px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
+
+        <div className="max-w-[1100px] mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left: Journey Visual Timeline */}
+            <div className="lg:col-span-5 flex flex-col gap-8 relative pl-6 before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-[#1161ed]/30 before:via-[#1161ed]/20 before:to-[#1161ed]/5">
+              
+              {/* Milestone 1 */}
+              <div className="relative flex flex-col gap-2 group">
+                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10 group-hover:bg-[#1161ed] group-hover:border-transparent transition-all duration-300">
+                  <span className="text-[0.8rem] font-black text-[#1161ed] group-hover:text-white transition-colors duration-300">01</span>
+                </div>
+                <div className="p-5 pl-6 rounded-2xl border border-black/[0.03] bg-[#F8FAFC]/80 backdrop-blur-sm group-hover:bg-white group-hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] group-hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#1161ed] opacity-70" />
+                  <h4 className="text-[0.95rem] font-black text-[#0F172A] mb-1">Academics & College Struggle</h4>
+                  <p className="text-xs text-[#64748B] leading-relaxed">
+                    Balancing rigid curriculums, college exams, and attendance requirements while independently learning cutting-edge engineering.
+                  </p>
+                </div>
+              </div>
+
+              {/* Milestone 2 */}
+              <div className="relative flex flex-col gap-2 group">
+                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10 group-hover:bg-[#1161ed] group-hover:border-transparent transition-all duration-300">
+                  <span className="text-[0.8rem] font-black text-[#1161ed] group-hover:text-white transition-colors duration-300">02</span>
+                </div>
+                <div className="p-5 pl-6 rounded-2xl border border-black/[0.03] bg-[#F8FAFC]/80 backdrop-blur-sm group-hover:bg-white group-hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] group-hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#1161ed] opacity-70" />
+                  <h4 className="text-[0.95rem] font-black text-[#0F172A] mb-1">The Freelance Hustle</h4>
+                  <p className="text-xs text-[#64748B] leading-relaxed">
+                    Starting with lightweight freelance projects, delivering proper execution and high quality to build deep product expertise.
+                  </p>
+                </div>
+              </div>
+
+              {/* Milestone 3 */}
+              <div className="relative flex flex-col gap-2 group">
+                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10 group-hover:bg-[#1161ed] group-hover:border-transparent transition-all duration-300">
+                  <span className="text-[0.8rem] font-black text-[#1161ed] group-hover:text-white transition-colors duration-300">03</span>
+                </div>
+                <div className="p-5 pl-6 rounded-2xl border border-black/[0.03] bg-[#F8FAFC]/80 backdrop-blur-sm group-hover:bg-white group-hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] group-hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] to-[#3b82f6]" />
+                  <h4 className="text-[0.95rem] font-black text-[#0F172A] mb-1">The Genesis of V2Labs</h4>
+                  <p className="text-xs text-[#64748B] leading-relaxed">
+                    Uniting the skills, ambition, and names of **Vishal** and **Vandan** into a proper, elite high-velocity digital agency.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Right: Compelling Narrative Copy */}
+            <div className="lg:col-span-7 flex flex-col text-left items-start">
+              <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+                <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+                Success Story
+              </div>
+              <h2 className="text-[2.2rem] lg:text-[2.8rem] font-extrabold text-[#0F172A] mb-6 tracking-tight leading-tight">
+                From College Workloads to <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">Elite Engineering</span>
+              </h2>
+              <div className="flex flex-col gap-6 text-[#64748B] text-[1.05rem] leading-[1.75]">
+                <p>
+                  V2Labs wasn't born in a corporate boardroom—it was forged in college dorms, fueled by late-night coding sessions and a relentless ambition. Our founders, **Vishal** and **Vandan**, started with a simple belief: that digital experiences should be designed properly, built for extreme performance, and executed without compromise.
+                </p>
+                <p>
+                  While struggling to manage rigid college curriculums, exams, and attendance workloads, they chose to invest every spare hour in learning the modern web architecture. What began as small, custom freelance projects for local businesses quickly evolved. Because of their sheer speed and quality, they won client trust and delivered flawless builds every single time.
+                </p>
+                <p className="font-medium text-[#334155] border-l-4 border-[#1161ed]/70 pl-4 italic">
+                  "We operate with a founder's mindset because we've lived the struggle. We don't just ship lines of code; we build proper scalable assets that drive real conversion and growth."
+                </p>
+                <p>
+                  Today, **V2Labs** represents the combined partnership and technical obsession of its two founders. We have scaled from simple freelance code into a proper engineering partner for startups globally, combining cutting-edge technology with visual excellence.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Information & FAQ Section */}
       <section id="info" className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative">
         {/* Soft Background glow-orb */}
         <div className="absolute right-[10%] top-[10%] w-[300px] h-[300px] bg-[#1161ed]/[0.015] rounded-full blur-[90px] pointer-events-none select-none -z-10" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[50px] lg:gap-[60px] max-w-[1100px] mx-auto items-center px-5 relative z-10">
-          {/* Left: About Details */}
-          <div className="lg:col-span-7 flex flex-col">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">The Studio</p>
-            <h2 className="text-[2.2rem] lg:text-[2.8rem] font-extrabold text-[#0F172A] mb-5 tracking-tight leading-tight">Expertise in Modern Engineering</h2>
-            <p className="text-[1.1rem] text-[#64748B] mb-10 leading-[1.7]">
-              V2 Labs operates at the intersection of design and technology. We don't just build websites; we engineer digital infrastructures that support rapid scale and brand authority.
+        <div className="max-w-[850px] mx-auto px-5 relative z-10 flex flex-col items-center">
+          {/* FAQ Header */}
+          <div className="text-center mb-12">
+            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">FAQ</p>
+            <h2 className="text-[2.2rem] lg:text-[2.8rem] font-extrabold text-[#0F172A] tracking-tight leading-tight mb-4">Got Questions? We Have Answers.</h2>
+            <p className="text-[1.05rem] text-[#64748B] max-w-[620px] mx-auto leading-[1.6]">
+              Explore detailed, proper answers about our high-velocity development cycles, customized tech stack, AI capabilities, and client collaboration.
             </p>
-            
-            <div className="flex flex-col gap-5">
-              <div className="flex gap-[15px] items-start text-[#334155]">
-                {/* Custom Glowing bullet list */}
-                <div className="w-5 h-5 rounded-full border border-[#1161ed] bg-white flex items-center justify-center text-[0.65rem] text-[#1161ed] font-black shadow-[0_0_8px_rgba(17,97,237,0.2)] select-none">✓</div>
-                <div>
-                  <strong>Performance First:</strong> Every build is optimized for sub-second loading speeds.
-                </div>
-              </div>
-              <div className="flex gap-[15px] items-start text-[#334155]">
-                <div className="w-5 h-5 rounded-full border border-[#1161ed] bg-white flex items-center justify-center text-[0.65rem] text-[#1161ed] font-black shadow-[0_0_8px_rgba(17,97,237,0.2)] select-none">✓</div>
-                <div>
-                  <strong>Bespoke Design:</strong> No templates. We design unique architectures for every client.
-                </div>
-              </div>
-              <div className="flex gap-[15px] items-start text-[#334155]">
-                <div className="w-5 h-5 rounded-full border border-[#1161ed] bg-white flex items-center justify-center text-[0.65rem] text-[#1161ed] font-black shadow-[0_0_8px_rgba(17,97,237,0.2)] select-none">✓</div>
-                <div>
-                  <strong>Scalable Systems:</strong> Our React & Next.js builds are ready for enterprise traffic.
-                </div>
-              </div>
-            </div>
           </div>
-
-          {/* Right: Contact Coordinates Card */}
-          <div className="lg:col-span-5 p-8 md:p-[50px] rounded-[30px] bg-white/[0.8] backdrop-blur-md relative overflow-hidden border border-[#1161ed]/[0.1] shadow-sm hover:shadow-[0_30px_60px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 transition-all duration-300">
-            {/* Soft left brand border accent */}
-            <div className="w-1 h-[65%] bg-gradient-to-b from-[#1161ed] to-[#3b82f6] absolute left-0 top-[17.5%] rounded-r-md" />
-
-            <h3 className="text-2xl mb-[30px] text-[#0F172A] font-extrabold">Global Coordinates</h3>
-            <div className="flex flex-col gap-[25px] mb-10">
-              <div className="flex gap-5 items-center">
-                <span className="text-[1.8rem]">📧</span>
-                <div className="flex flex-col">
-                  <p className="text-xs uppercase text-[#94A3B8] font-bold leading-normal mb-1">Project Inquiries</p>
-                  <p className="text-[#0F172A] font-semibold text-[1.1rem] leading-normal">hello@v2labs.co</p>
+          
+          {/* FAQ Accordions */}
+          <div className="w-full flex flex-col gap-4">
+            {FAQS.map((faq, idx) => (
+              <div
+                key={idx}
+                className={`rounded-2xl border p-4 sm:p-5 transition-all duration-300 ${
+                  openFaq === idx
+                    ? "bg-white border-[#1161ed]/30 shadow-[0_15px_35px_rgba(17,97,237,0.06)]"
+                    : "bg-white/60 border-black/[0.03] shadow-sm hover:border-[#1161ed]/20 hover:bg-white hover:shadow-[0_10px_25px_rgba(17,97,237,0.04)]"
+                }`}
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  className="w-full flex items-center justify-between text-left font-black text-[#0F172A] text-sm sm:text-base cursor-pointer select-none group"
+                >
+                  <span className="pr-4 group-hover:text-[#1161ed] transition-colors duration-200">
+                    {faq.question}
+                  </span>
+                  <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300 ${
+                    openFaq === idx
+                      ? "bg-[#1161ed] text-white border-transparent"
+                      : "bg-[#1161ed]/[0.05] text-[#1161ed] border-transparent group-hover:bg-[#1161ed] group-hover:text-white"
+                  }`}>
+                    <svg
+                      className={`w-3.5 h-3.5 transform transition-transform duration-300 ${
+                        openFaq === idx ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                    openFaq === idx ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="text-xs sm:text-sm leading-relaxed text-[#64748B] pt-3 pr-2 mt-3 border-t border-slate-100">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-5 items-center">
-                <span className="text-[1.8rem]">📍</span>
-                <div className="flex flex-col">
-                  <p className="text-xs uppercase text-[#94A3B8] font-bold leading-normal mb-1">Studio Location</p>
-                  <p className="text-[#0F172A] font-semibold text-[1.1rem] leading-normal">Silicon Square, Hubli, India</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <span className="text-[1.8rem]">🕒</span>
-                <div className="flex flex-col">
-                  <p className="text-xs uppercase text-[#94A3B8] font-bold leading-normal mb-1">Studio Hours</p>
-                  <p className="text-[#0F172A] font-semibold text-[1.1rem] leading-normal">Mon — Fri, 10:00 — 18:00 IST</p>
-                </div>
-              </div>
-            </div>
-            <Link href="/contact" className="block bg-[#1161ed] hover:bg-[#0c4ec3] text-white text-center py-[18px] rounded-xl font-bold transition-all duration-300 hover:scale-[1.02] shadow-[0_4px_15px_rgba(17,97,237,0.15)] hover:shadow-[0_6px_22px_rgba(17,97,237,0.25)]">
-              Book a Consultation
-            </Link>
+            ))}
           </div>
         </div>
       </section>
