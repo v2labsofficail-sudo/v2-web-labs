@@ -423,6 +423,16 @@ function MouseTrackingAnimation() {
   );
 }
 
+const PARTNER_COMPANIES = [
+  { name: "Caldreplus", logo: "/companies/calendar-plus.jpeg" },
+  { name: "Freelancer Wala", logo: "/companies/freelancer-wala.jpeg" },
+  { name: "Meckon Flex", logo: "/companies/meckon-flex.jpeg" },
+  { name: "Naya-Job", logo: "/companies/naya-job.jpeg" },
+  { name: "Placfy AI", logo: "/companies/placfy-ai.jpeg" },
+  { name: "ThinknShop", logo: "/companies/thinkn-shop.jpeg" },
+  { name: "WebProArts", logo: "/companies/webpro-arts.jpeg" },
+] as const;
+
 export default function Home() {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
@@ -941,34 +951,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SaaS Solutions Marquee Section */}
-      <section className="py-6 bg-white border-y border-black/[0.03] overflow-hidden select-none">
+      {/* Company Logos Marquee Section */}
+      <section className="py-12 md:py-16 bg-white border-y border-black/[0.03] overflow-hidden select-none">
+        <div className="text-center mb-10 md:mb-12">
+          <span className="text-[0.7rem] md:text-xs font-black uppercase text-[#64748B]/80 tracking-[0.25em] select-none">
+            TRUSTED BY LEADING COMPANIES WE'VE WORKED WITH
+          </span>
+        </div>
         <div className="relative flex max-w-[100vw] overflow-hidden">
-          <div className="flex animate-marquee whitespace-nowrap py-2">
+          {/* Left and Right Ambient Fade Overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+          
+          <div className="flex animate-marquee whitespace-nowrap items-center py-4">
             {[
-              "CRM Softwares",
-              "HR Recruitment Software",
-              "ERP Solutions",
-              "E-commerce Platforms",
-              "Custom Software Solutions",
-              "SaaS Architectures",
-              // Duplicate items for seamless loop
-              "CRM Softwares",
-              "HR Recruitment Software",
-              "ERP Solutions",
-              "E-commerce Platforms",
-              "Custom Software Solutions",
-              "SaaS Architectures",
-            ].map((item, index) => (
-              <div key={index} className="flex items-center">
-                <span className="mx-12 text-2xl md:text-4xl font-bold tracking-tighter text-[#64748B]/[0.4] hover:text-[#1161ed] transition-colors duration-300 cursor-pointer">
-                  {item}
-                </span>
-                <span className="text-[#1161ed]/[0.2] text-2xl font-black">
-                  /
-                </span>
-              </div>
-            ))}
+              ...PARTNER_COMPANIES,
+              ...PARTNER_COMPANIES,
+              ...PARTNER_COMPANIES,
+              ...PARTNER_COMPANIES,
+              ...PARTNER_COMPANIES,
+              ...PARTNER_COMPANIES,
+            ].map((company, index) => {
+              let logoHeight = "h-10 sm:h-12 md:h-14";
+              if (company.name === "Caldreplus") {
+                logoHeight = "h-12 sm:h-15 md:h-18";
+              } else if (company.name === "Naya-Job") {
+                logoHeight = "h-14 sm:h-18 md:h-22";
+              }
+              
+              return (
+                <div 
+                  key={index} 
+                  className="mx-3 md:mx-4 flex items-center justify-center shrink-0 w-36 sm:w-44 md:w-52 h-20 sm:h-24 md:h-28 rounded-2xl border border-[#1161ed]/10 bg-white hover:border-[#1161ed]/30 hover:shadow-[0_8px_30px_rgba(17,97,237,0.06)] hover:-translate-y-0.5 transition-all duration-300 select-none cursor-pointer"
+                >
+                  <img
+                    src={company.logo}
+                    alt={`${company.name} Logo`}
+                    className={`${logoHeight} w-auto object-contain transition-all duration-300 mix-blend-multiply`}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

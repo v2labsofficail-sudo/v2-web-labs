@@ -126,7 +126,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 left-0 w-full h-20 bg-white border-b border-slate-100 z-[1000] flex items-center select-none">
+    <header className="sticky top-0 left-0 w-full h-20 bg-white border-b border-slate-200/70 shadow-[0_4px_20px_rgba(15,23,42,0.04)] z-[1000] flex items-center select-none">
       <div className="flex justify-between items-center w-full max-w-[1280px] mx-auto px-6">
         
         {/* Brand Logo */}
@@ -281,7 +281,7 @@ export default function Navbar() {
 
         {/* Mobile Responsive Drawer (Slides in from Left edge) */}
         <aside 
-          className={`fixed top-0 left-0 w-full max-w-[340px] h-screen bg-white z-[1100] border-r border-slate-100 shadow-[0_0_50px_rgba(0,0,0,0.06)] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] min-[901px]:hidden ${
+          className={`fixed top-0 left-0 w-full max-w-[340px] h-screen bg-white z-[1100] border-r border-slate-200/80 shadow-[6px_0_40px_rgba(15,23,42,0.08)] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] min-[901px]:hidden ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
