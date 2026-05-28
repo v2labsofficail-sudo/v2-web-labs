@@ -23,7 +23,7 @@ export default function AboutPage() {
       linkedin: "#",
       github: "#",
       bio: "Founder of V2 Labs. Focuses on architecting multi-agent AI ecosystems, custom LLM fine-tuning, and scalable TypeScript frontends.",
-      img: "/Vishal Dudhabarve.jpeg",
+      img: "/vishal-dudhabarve.jpeg",
     },
     {
       name: "Vandan Darji",
