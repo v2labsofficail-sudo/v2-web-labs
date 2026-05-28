@@ -34,7 +34,7 @@ export default function Logo({
       <img
         src="/logo-cover-v2labs.jpeg"
         alt="V2 Labs"
-        className="h-[43px] sm:h-[61px] w-auto object-contain mix-blend-multiply"
+        className="h-[54px] sm:h-[76px] w-auto object-contain mix-blend-multiply"
       />
     </div>
   );

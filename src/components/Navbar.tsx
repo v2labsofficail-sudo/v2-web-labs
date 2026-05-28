@@ -127,7 +127,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 left-0 w-full h-[72px] bg-white/80 backdrop-blur-xl border-b border-slate-100 z-[1000] flex items-center select-none">
+    <header className="sticky top-0 left-0 w-full h-20 md:h-24 bg-white/80 backdrop-blur-xl border-b border-slate-100 z-[1000] flex items-center select-none">
       <div className="flex justify-between items-center w-full max-w-[1280px] mx-auto px-6">
         
         {/* Brand Logo */}

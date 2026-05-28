@@ -382,7 +382,7 @@ export default function Home() {
           <h2 className="text-[2.5rem] text-[#0F172A] font-extrabold tracking-tight">Our Premium Services</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] relative z-10">
+        <div className="grid grid-cols-2 gap-3.5 sm:gap-[30px] relative z-10">
           {[
             {
               title: "SaaS & Product Development",
@@ -469,30 +469,21 @@ export default function Home() {
             <Link 
               key={index}
               href={service.link}
-              className="p-8 rounded-[24px] border border-black/[0.03] bg-gradient-to-br from-white to-[#1161ed]/[0.005] shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_50px_rgba(17,97,237,0.08)] hover:border-[#1161ed]/20 group flex flex-col justify-between"
+              className="p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] border border-black/[0.03] bg-white/70 backdrop-blur-md shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 group flex flex-col items-center text-center justify-center min-h-[140px] sm:min-h-[180px]"
             >
-              <div>
-                {/* Premium Top Border Strip in Brand Gradient */}
-                <div className="h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-t-[24px]" />
-                
-                {/* Icon Container */}
-                <div className="mb-6 relative">
-                  <div className="transform group-hover:scale-110 transition-transform duration-300 [&>svg]:stroke-[#1161ed]">
-                    {service.icon}
-                  </div>
+              {/* Premium Top Border Strip in Brand Gradient */}
+              <div className="h-[4px] w-full absolute top-0 left-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-t-[20px] sm:rounded-t-[24px]" />
+              
+              {/* Icon Container (Designed to look like a premium pic/emblem) */}
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-105 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm mb-3 sm:mb-4">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current">
+                  {service.icon}
                 </div>
-                <h3 className="text-[1.3rem] text-[#0F172A] mb-3 font-bold group-hover:text-[#1161ed] transition-colors duration-200">{service.title}</h3>
-                <p className="text-[#64748B] leading-relaxed text-sm">{service.desc}</p>
               </div>
               
-              {/* Explore Service micro-action */}
-              <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#1161ed] mt-6 cursor-pointer select-none">
-                <span>Explore Service</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transform group-hover:translate-x-1.5 transition-transform duration-300">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </div>
+              <h3 className="text-xs sm:text-base md:text-lg font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-200 font-Outfit tracking-tight leading-tight">
+                {service.title}
+              </h3>
             </Link>
           ))}
         </div>
@@ -599,172 +590,136 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Integrations Ecosystem Section */}
-      <section id="ecosystem" className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden">
-        {/* Soft Glowing Orbs in Background */}
+      {/* Industries Solutions Section */}
+      <section id="industries" className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden">
+        {/* Soft Background Orbs */}
         <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
-        <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.015] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[6s]" />
+        <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#8b5cf6]/[0.015] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[6s]" />
 
         <div className="max-w-[1100px] mx-auto px-4 relative z-10">
-          
-          {/* Header */}
-          <div className="text-center mb-16">
+          {/* Section Header */}
+          <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-4 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
               <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
-              Universal Connectivity
+              Vertical Focus
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
-              Connected With Your <span className="text-[#1161ed]">Entire Business Stack</span>
+              Customised Solutions for <span className="text-[#1161ed]">Industries</span>
             </h2>
-            <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed">
-              V2 Labs integrates flawlessly with all major service providers, automating raw data transfers and synchronizing your operational pipelines seamlessly.
+            <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
+              We design and engineer bespoke software ecosystems tailored to the unique operational parameters of modern industry verticals.
             </p>
           </div>
 
-          {/* Connected Categories Interactive Grid - Mobile Snap Carousel / Desktop Grid */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar pb-6 gap-4 px-6 -mx-6 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:pb-0">
+          {/* Modern Responsive Grid / Mobile Swipe Carousel for Industries */}
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 px-4 -mx-4 no-scrollbar md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:pb-0">
             {[
               {
-                category: "Payments",
-                icon: (
-                  <svg className="w-6 h-6 text-[#1161ed] group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                    <rect x="2" y="5" width="20" height="14" rx="2" fill="currentColor" fillOpacity="0.08" />
-                    <line x1="2" y1="10" x2="22" y2="10" />
-                  </svg>
-                ),
-                integrations: [
-                  { name: "Stripe", color: "hover:text-[#635BFF] hover:bg-[#635BFF]/5 hover:border-[#635BFF]/30", initial: "S", bg: "bg-gradient-to-tr from-[#635BFF] to-[#8b82ff]" },
-                  { name: "Razorpay", color: "hover:text-[#0b72e7] hover:bg-[#0b72e7]/5 hover:border-[#0b72e7]/30", initial: "R", bg: "bg-gradient-to-tr from-[#0b72e7] to-[#4ba3ff]" },
-                  { name: "PayPal", color: "hover:text-[#003087] hover:bg-[#003087]/5 hover:border-[#003087]/30", initial: "P", bg: "bg-gradient-to-tr from-[#003087] to-[#0079C1]" }
-                ]
+                name: "Food & Beverage",
+                desc: "Headless ordering apps, automated inventory trackers, and delivery route integrations.",
+                image: "/industry_food.png",
+                badge: "F&B Operations",
+                gradient: "from-[#f59e0b] to-[#d97706]"
               },
               {
-                category: "AI",
-                icon: (
-                  <svg className="w-6 h-6 text-[#1161ed] group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 2v20M2 12h20M12 12m-4 0a4 4 0 108 0 4 4 0 10-8 0" fill="currentColor" fillOpacity="0.08" />
-                  </svg>
-                ),
-                integrations: [
-                  { name: "OpenAI", color: "hover:text-[#10A37F] hover:bg-[#10A37F]/5 hover:border-[#10A37F]/30", initial: "O", bg: "bg-gradient-to-tr from-[#10A37F] to-[#3cd3ab]" },
-                  { name: "Gemini", color: "hover:text-[#1a73e8] hover:bg-[#1a73e8]/5 hover:border-[#1a73e8]/30", initial: "G", bg: "bg-gradient-to-tr from-[#1a73e8] to-[#60a5fa]" },
-                  { name: "Claude", color: "hover:text-[#D97706] hover:bg-[#D97706]/5 hover:border-[#D97706]/30", initial: "C", bg: "bg-gradient-to-tr from-[#D97706] to-[#fbbf24]" }
-                ]
+                name: "Industrial & Manufacturing",
+                desc: "Real-time assembly line telemetry, supplier portals, and precision engineering databases.",
+                image: "/industry_manufacturing.png",
+                badge: "Industry 4.0",
+                gradient: "from-[#ef4444] to-[#f97316]"
               },
               {
-                category: "CRM",
-                icon: (
-                  <svg className="w-6 h-6 text-[#1161ed] group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                    <circle cx="9" cy="7" r="4" fill="currentColor" fillOpacity="0.08" />
-                    <path d="M23 21v-2a4 4 0 00-3-3.87" />
-                    <path d="M16 3.13a4 4 0 010 7.75" />
-                  </svg>
-                ),
-                integrations: [
-                  { name: "HubSpot", color: "hover:text-[#FF7A59] hover:bg-[#FF7A59]/5 hover:border-[#FF7A59]/30", initial: "H", bg: "bg-gradient-to-tr from-[#FF7A59] to-[#ffaa85]" },
-                  { name: "Zoho", color: "hover:text-[#E81C24] hover:bg-[#E81C24]/5 hover:border-[#E81C24]/30", initial: "Z", bg: "bg-gradient-to-tr from-[#E81C24] to-[#f46b70]" }
-                ]
+                name: "Real Estate & Architecture",
+                desc: "3D virtual listing modules, automated contract generators, and custom broker CRM networks.",
+                image: "/industry_real_estate.png",
+                badge: "PropTech",
+                gradient: "from-[#10b981] to-[#059669]"
               },
               {
-                category: "Communication",
-                icon: (
-                  <svg className="w-6 h-6 text-[#1161ed] group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" fill="currentColor" fillOpacity="0.08" />
-                  </svg>
-                ),
-                integrations: [
-                  { name: "WhatsApp", color: "hover:text-[#25D366] hover:bg-[#25D366]/5 hover:border-[#25D366]/30", initial: "W", bg: "bg-gradient-to-tr from-[#25D366] to-[#4ade80]" },
-                  { name: "Twilio", color: "hover:text-[#F22F46] hover:bg-[#F22F46]/5 hover:border-[#F22F46]/30", initial: "T", bg: "bg-gradient-to-tr from-[#F22F46] to-[#f87171]" },
-                  { name: "Slack", color: "hover:text-[#4A154B] hover:bg-[#4A154B]/5 hover:border-[#4A154B]/30", initial: "S", bg: "bg-gradient-to-tr from-[#4A154B] to-[#ec4899]" }
-                ]
+                name: "Entertainment & Media",
+                desc: "High-retention streaming pipelines, digital asset catalogs, and motion graphics automation.",
+                image: "/industry_entertainment.png",
+                badge: "MediaTech",
+                gradient: "from-[#ec4899] to-[#d946ef]"
               },
               {
-                category: "Database & Cloud",
-                icon: (
-                  <svg className="w-6 h-6 text-[#1161ed] group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                    <ellipse cx="12" cy="5" rx="9" ry="3" fill="currentColor" fillOpacity="0.08" />
-                    <path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                    <path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6" />
-                  </svg>
-                ),
-                integrations: [
-                  { name: "Firebase", color: "hover:text-[#FFCA28] hover:bg-[#FFCA28]/5 hover:border-[#FFCA28]/30", initial: "F", bg: "bg-gradient-to-tr from-[#FFCA28] to-[#fde047]" },
-                  { name: "AWS", color: "hover:text-[#FF9900] hover:bg-[#FF9900]/5 hover:border-[#FF9900]/30", initial: "A", bg: "bg-gradient-to-tr from-[#FF9900] to-[#fbbf24]" },
-                  { name: "MongoDB", color: "hover:text-[#47A248] hover:bg-[#47A248]/5 hover:border-[#47A248]/30", initial: "M", bg: "bg-gradient-to-tr from-[#47A248] to-[#86efac]" }
-                ]
+                name: "Healthcare & MedTech",
+                desc: "ACID-compliant patient portals, secure HIPAA-ready databases, and AI diagnostic guides.",
+                image: "/industry_healthcare.png",
+                badge: "HealthTech",
+                gradient: "from-[#06b6d4] to-[#3b82f6]"
               },
               {
-                category: "Productivity",
-                icon: (
-                  <svg className="w-6 h-6 text-[#1161ed] group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                    <rect x="3" y="4" width="18" height="18" rx="2" fill="currentColor" fillOpacity="0.08" />
-                    <line x1="16" y1="2" x2="16" y2="6" />
-                    <line x1="8" y1="2" x2="8" y2="6" />
-                    <line x1="3" y1="10" x2="21" y2="10" />
-                  </svg>
-                ),
-                integrations: [
-                  { name: "Google Calendar", color: "hover:text-[#4285F4] hover:bg-[#4285F4]/5 hover:border-[#4285F4]/30", initial: "G", bg: "bg-gradient-to-tr from-[#4285F4] to-[#93c5fd]" },
-                  { name: "Notion", color: "hover:text-[#000000] hover:bg-[#000000]/5 hover:border-[#000000]/30", initial: "N", bg: "bg-gradient-to-tr from-[#000000] to-[#4b5563]" },
-                  { name: "Trello", color: "hover:text-[#0079BF] hover:bg-[#0079BF]/5 hover:border-[#0079BF]/30", initial: "T", bg: "bg-gradient-to-tr from-[#0079BF] to-[#60a5fa]" }
-                ]
+                name: "Fashion & Cosmetics",
+                desc: "Immersive luxury catalog systems, influencer pipelines, and Shopify Plus headless hubs.",
+                image: "/industry_fashion.png",
+                badge: "E-Commerce",
+                gradient: "from-[#d946ef] to-[#8b5cf6]"
+              },
+              {
+                name: "Financial & Investment",
+                desc: "High-fidelity stock ticker logs, secure transaction gateways, and automated ledger indexing.",
+                image: "/industry_finance.png",
+                badge: "FinTech",
+                gradient: "from-[#1161ed] to-[#8b5cf6]"
               }
-            ].map((cat, idx) => (
+            ].map((ind, idx) => (
               <div 
                 key={idx} 
-                className="flex-shrink-0 w-[80vw] sm:w-[280px] snap-center md:w-auto md:flex-shrink-0 p-8 rounded-[24px] border border-black/[0.03] bg-white shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 group"
+                className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md p-5 sm:p-6 shadow-[0_8px_30px_rgba(17,97,237,0.01)] hover:shadow-[0_25px_50px_rgba(17,97,237,0.05)] hover:border-[#1161ed]/20 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none"
               >
-                {/* Visual Category Connection Accent */}
-                <div className="absolute top-0 left-0 w-full h-[4px] bg-[#1161ed]/5 group-hover:bg-gradient-to-r group-hover:from-[#1161ed] group-hover:to-[#3b82f6] transition-colors duration-300" />
-                
-                {/* Category Header */}
-                <div className="flex items-center gap-3.5 mb-6">
-                  <div className="w-11 h-11 rounded-xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-105 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm">
-                    {cat.icon}
+                {/* Premium Subtle Accent Line */}
+                <div className={`absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r ${ind.gradient} rounded-t-[24px] sm:rounded-t-[32px]`} />
+
+                <div className="flex flex-col gap-4 sm:gap-5">
+                  {/* Image Holder Frame with soft smooth borders */}
+                  <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-100 shadow-sm relative group-hover:scale-[1.015] transition-transform duration-500 ease-out bg-slate-50">
+                    <img 
+                      src={ind.image} 
+                      alt={`${ind.name} Customized Solution Artwork`} 
+                      className="w-full h-full object-cover filter transition-all duration-700 ease-out group-hover:brightness-[1.02]"
+                    />
+                    
+                    {/* Float Badge tag */}
+                    <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 bg-slate-900/90 text-white font-mono text-[0.52rem] sm:text-[0.58rem] tracking-wider px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-white/5 backdrop-blur-sm shadow z-20 font-bold">
+                      {ind.badge}
+                    </div>
                   </div>
-                  <h3 className="text-lg font-extrabold text-[#0F172A] tracking-tight">{cat.category}</h3>
+
+                  <div>
+                    <h3 className="text-base sm:text-lg md:text-lg lg:text-xl font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-300 font-Outfit tracking-tight leading-tight">
+                      {ind.name}
+                    </h3>
+                    <p className="text-slate-500 leading-relaxed text-xs sm:text-[0.8rem] font-semibold mt-1.5 font-Outfit">
+                      {ind.desc}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Sub-Badges Integrations List */}
-                <div className="flex flex-wrap gap-2.5">
-                  {cat.integrations.map((int, i) => (
-                    <div 
-                      key={i} 
-                      className={`inline-flex items-center gap-2.5 px-3.5 py-2.5 bg-[#F8FAFC] border border-slate-100/80 rounded-xl text-[0.82rem] font-bold text-[#475569] transition-all duration-200 cursor-pointer select-none ${int.color}`}
-                    >
-                      <span className={`w-5 h-5 rounded-md flex items-center justify-center text-[0.62rem] font-black text-white ${int.bg} shadow-sm select-none`}>
-                        {int.initial}
-                      </span>
-                      <span>{int.name}</span>
-                    </div>
-                  ))}
+                {/* Explore Case action */}
+                <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#1161ed] mt-6 cursor-pointer select-none font-Outfit">
+                  <span>View Solution Spec</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transform group-hover:translate-x-1 transition-transform duration-300">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Mobile Swipe Help Note */}
-          <div className="flex md:hidden items-center justify-center gap-2 mt-2 text-[0.7rem] font-bold text-[#64748B] uppercase tracking-widest animate-pulse">
-            <span>Swipe to explore stack</span>
+          {/* Mobile Swipe Indicators */}
+          <div className="flex md:hidden items-center justify-center gap-1.5 mt-5 text-[#1161ed]/70 font-Outfit text-[0.68rem] font-bold uppercase tracking-[0.12em] animate-pulse">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+            <span>Swipe to explore industries</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
             </svg>
           </div>
-
-          {/* Support Indicator Badge */}
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-3.5 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] px-8 py-4 rounded-full text-white font-extrabold shadow-[0_8px_30px_rgba(17,97,237,0.25)] hover:shadow-[0_12px_40px_rgba(17,97,237,0.4)] transition-all duration-300 hover:scale-[1.02]">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
-              </span>
-              <span className="text-base uppercase tracking-wider">52+ integrations supported</span>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -960,90 +915,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Success Story Section */}
-      <section id="story" className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.03)] relative overflow-hidden">
-        {/* Glowing Ambient Background Orb */}
-        <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[110px] pointer-events-none select-none -z-10" />
-        <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.015] rounded-full blur-[110px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
-
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            {/* Left: Journey Visual Timeline */}
-            <div className="lg:col-span-5 flex flex-col gap-8 relative pl-6 before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-[#1161ed]/30 before:via-[#1161ed]/20 before:to-[#1161ed]/5">
-              
-              {/* Milestone 1 */}
-              <div className="relative flex flex-col gap-2 group">
-                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10 group-hover:bg-[#1161ed] group-hover:border-transparent transition-all duration-300">
-                  <span className="text-[0.8rem] font-black text-[#1161ed] group-hover:text-white transition-colors duration-300">01</span>
-                </div>
-                <div className="p-5 pl-6 rounded-2xl border border-black/[0.03] bg-[#F8FAFC]/80 backdrop-blur-sm group-hover:bg-white group-hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] group-hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#1161ed] opacity-70" />
-                  <h4 className="text-[0.95rem] font-black text-[#0F172A] mb-1">Academics & College Struggle</h4>
-                  <p className="text-xs text-[#64748B] leading-relaxed">
-                    Balancing rigid curriculums, college exams, and attendance requirements while independently learning cutting-edge engineering.
-                  </p>
-                </div>
-              </div>
-
-              {/* Milestone 2 */}
-              <div className="relative flex flex-col gap-2 group">
-                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10 group-hover:bg-[#1161ed] group-hover:border-transparent transition-all duration-300">
-                  <span className="text-[0.8rem] font-black text-[#1161ed] group-hover:text-white transition-colors duration-300">02</span>
-                </div>
-                <div className="p-5 pl-6 rounded-2xl border border-black/[0.03] bg-[#F8FAFC]/80 backdrop-blur-sm group-hover:bg-white group-hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] group-hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#1161ed] opacity-70" />
-                  <h4 className="text-[0.95rem] font-black text-[#0F172A] mb-1">The Freelance Hustle</h4>
-                  <p className="text-xs text-[#64748B] leading-relaxed">
-                    Starting with lightweight freelance projects, delivering proper execution and high quality to build deep product expertise.
-                  </p>
-                </div>
-              </div>
-
-              {/* Milestone 3 */}
-              <div className="relative flex flex-col gap-2 group">
-                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10 group-hover:bg-[#1161ed] group-hover:border-transparent transition-all duration-300">
-                  <span className="text-[0.8rem] font-black text-[#1161ed] group-hover:text-white transition-colors duration-300">03</span>
-                </div>
-                <div className="p-5 pl-6 rounded-2xl border border-black/[0.03] bg-[#F8FAFC]/80 backdrop-blur-sm group-hover:bg-white group-hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] group-hover:border-[#1161ed]/20 transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] to-[#3b82f6]" />
-                  <h4 className="text-[0.95rem] font-black text-[#0F172A] mb-1">The Genesis of V2Labs</h4>
-                  <p className="text-xs text-[#64748B] leading-relaxed">
-                    Uniting the skills, ambition, and names of **Vishal** and **Vandan** into a proper, elite high-velocity digital agency.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Right: Compelling Narrative Copy */}
-            <div className="lg:col-span-7 flex flex-col text-left items-start">
-              <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-                <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
-                Success Story
-              </div>
-              <h2 className="text-[2.2rem] lg:text-[2.8rem] font-extrabold text-[#0F172A] mb-6 tracking-tight leading-tight">
-                From College Workloads to <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">Elite Engineering</span>
-              </h2>
-              <div className="flex flex-col gap-6 text-[#64748B] text-[1.05rem] leading-[1.75]">
-                <p>
-                  V2Labs wasn't born in a corporate boardroom—it was forged in college dorms, fueled by late-night coding sessions and a relentless ambition. Our founders, **Vishal** and **Vandan**, started with a simple belief: that digital experiences should be designed properly, built for extreme performance, and executed without compromise.
-                </p>
-                <p>
-                  While struggling to manage rigid college curriculums, exams, and attendance workloads, they chose to invest every spare hour in learning the modern web architecture. What began as small, custom freelance projects for local businesses quickly evolved. Because of their sheer speed and quality, they won client trust and delivered flawless builds every single time.
-                </p>
-                <p className="font-medium text-[#334155] border-l-4 border-[#1161ed]/70 pl-4 italic">
-                  "We operate with a founder's mindset because we've lived the struggle. We don't just ship lines of code; we build proper scalable assets that drive real conversion and growth."
-                </p>
-                <p>
-                  Today, **V2Labs** represents the combined partnership and technical obsession of its two founders. We have scaled from simple freelance code into a proper engineering partner for startups globally, combining cutting-edge technology with visual excellence.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* Information & FAQ Section */}
       <section id="info" className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative">
@@ -1073,7 +944,7 @@ export default function Home() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full flex items-center justify-between text-left font-black text-[#0F172A] text-sm sm:text-base cursor-pointer select-none group"
+                  className="w-full flex items-center justify-between text-left font-bold text-slate-800 text-sm sm:text-base cursor-pointer select-none group"
                 >
                   <span className="pr-4 group-hover:text-[#1161ed] transition-colors duration-200">
                     {faq.question}
@@ -1102,7 +973,7 @@ export default function Home() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-xs sm:text-sm leading-relaxed text-[#64748B] pt-3 pr-2 mt-3 border-t border-slate-100">
+                    <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-medium pt-3 pr-2 mt-3 border-t border-slate-100">
                       {faq.answer}
                     </p>
                   </div>

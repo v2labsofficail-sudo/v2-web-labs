@@ -143,7 +143,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     service: "custom_erp",
-    budget: "₹50,000 - ₹1,50,000",
+    budget: "₹10,000 - ₹20,000",
     message: "",
   });
 
@@ -196,11 +196,11 @@ export default function ContactPage() {
   }, []);
 
   const standardBudgets = [
-    "Under ₹50,000",
-    "₹50,000 - ₹1,50,000",
-    "₹1,50,000 - ₹3,00,000",
-    "₹3,00,000 - ₹5,00,000",
-    "₹5,00,000+",
+    "Under ₹10,000",
+    "₹10,000 - ₹20,000",
+    "₹20,000 - ₹50,000",
+    "₹50,000 - ₹2,00,000",
+    "₹2,00,000+",
   ];
 
   const isCustomBudget = !standardBudgets.includes(formData.budget);
@@ -260,7 +260,7 @@ export default function ContactPage() {
           email: "",
           phone: "",
           service: "custom_erp",
-          budget: "₹50,000 - ₹1,50,000",
+          budget: "₹10,000 - ₹20,000",
           message: "",
         });
       } else {
@@ -668,20 +668,20 @@ export default function ContactPage() {
                   }
                 }}
                 options={[
-                  { value: "Under ₹50,000", label: "Under ₹50,000" },
+                  { value: "Under ₹10,000", label: "Under ₹10,000" },
                   {
-                    value: "₹50,000 - ₹1,50,000",
-                    label: "₹50,000 - ₹1,50,000",
+                    value: "₹10,000 - ₹20,000",
+                    label: "₹10,000 - ₹20,000",
                   },
                   {
-                    value: "₹1,50,000 - ₹3,00,000",
-                    label: "₹1,50,000 - ₹3,00,000",
+                    value: "₹20,000 - ₹50,000",
+                    label: "₹20,000 - ₹50,000",
                   },
                   {
-                    value: "₹3,00,000 - ₹5,00,000",
-                    label: "₹3,00,000 - ₹5,00,000",
+                    value: "₹50,000 - ₹2,00,000",
+                    label: "₹50,000 - ₹2,00,000",
                   },
-                  { value: "₹5,00,000+", label: "₹5,00,000+" },
+                  { value: "₹2,00,000+", label: "₹2,00,000+" },
                   { value: "custom", label: "Custom Amount" },
                 ]}
               />
