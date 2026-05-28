@@ -86,8 +86,8 @@ function TestimonialCard({
   testimonial: (typeof TESTIMONIALS)[number];
 }) {
   return (
-    <article className="w-[290px] sm:w-[340px] md:w-[380px] shrink-0 rounded-[22px] border border-[#1161ed]/10 bg-white/80 p-5 shadow-[0_10px_30px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_20px_40px_rgba(17,97,237,0.12)] sm:p-6">
-      <div className="mb-3.5 flex items-center gap-1 text-[#f5b301]">
+    <article className="w-[300px] sm:w-[350px] md:w-[400px] shrink-0 bg-transparent p-4 transition-all duration-300 hover:scale-[1.015] select-none">
+      <div className="mb-3 flex items-center gap-1 text-[#f5b301]">
         {Array.from({ length: 5 }).map((_, index) => (
           <svg
             key={index}
@@ -100,19 +100,19 @@ function TestimonialCard({
         ))}
       </div>
 
-      <p className="text-[0.78rem] font-medium leading-[1.65] text-[#334155] sm:text-[0.84rem] md:text-[0.88rem] italic">
+      <p className="text-[0.84rem] sm:text-[0.92rem] md:text-[0.98rem] font-semibold leading-[1.65] text-[#1E293B] italic">
         "{testimonial.quote}"
       </p>
 
-      <div className="mt-5 flex items-center gap-3.5 border-t border-slate-100 pt-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1161ed] to-[#3b82f6] text-[0.72rem] font-extrabold text-white shadow-[0_4px_12px_rgba(17,97,237,0.2)]">
+      <div className="mt-4 flex items-center gap-3.5 pt-3.5">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1161ed] to-[#3b82f6] text-[0.68rem] font-extrabold text-white shadow-[0_3px_8px_rgba(17,97,237,0.15)]">
           {testimonial.initials}
         </div>
         <div className="min-w-0">
-          <p className="truncate text-[0.82rem] font-black tracking-tight text-[#0F172A] sm:text-[0.88rem]">
+          <p className="truncate text-[0.8rem] sm:text-[0.84rem] font-black tracking-tight text-[#0F172A]">
             {testimonial.name}
           </p>
-          <p className="truncate text-[0.68rem] font-bold text-[#64748B] sm:text-[0.72rem]">
+          <p className="truncate text-[0.64rem] sm:text-[0.68rem] font-bold text-[#64748B]">
             {testimonial.role}
           </p>
         </div>
@@ -247,19 +247,19 @@ export default function Home() {
       <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
       {/* Hero Section */}
-      <section id="hero" className="pt-10 pb-12 md:pt-14 md:pb-16 flex items-center relative overflow-hidden">
+      <section id="hero" className="pt-12 pb-16 md:pt-16 md:pb-24 flex items-center relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full relative z-10">
           
           {/* Left Text Column - Bottom on Mobile / Left on Desktop */}
-          <div className="lg:col-span-7 flex flex-col text-left items-start order-2 lg:order-1 mt-6 lg:mt-0">
-            <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)] animate-fade-in">
+          <div className="lg:col-span-6 flex flex-col text-left items-start order-2 lg:order-1 mt-4 lg:mt-0">
+            <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)] animate-fade-in select-none">
               <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
               A trusted digital agency
             </div>
-            <h1 className="text-[clamp(1.8rem,5.8vw,4.8rem)] font-black leading-[1.1] lg:leading-[1.05] text-[#0F172A] max-w-[650px] mb-4 lg:mb-6 tracking-tight">
+            <h1 className="text-[clamp(1.8rem,5.8vw,4.4rem)] font-black leading-[1.08] text-[#0F172A] max-w-[650px] mb-4 lg:mb-6 tracking-tight text-left">
               Quality digital <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">services you</span> really want !
             </h1>
-            <p className="text-[#64748B] text-sm lg:text-[1.05rem] leading-[1.7] max-w-[500px] mb-6 lg:mb-8">
+            <p className="text-[#64748B] text-sm lg:text-[1.05rem] leading-[1.7] max-w-[500px] mb-6 lg:mb-8 text-left font-medium">
               We are delivering top-level digital services with our best-experienced team. Just get started with us today and accelerate your growth.
             </p>
             
@@ -285,62 +285,199 @@ export default function Home() {
             </div>
 
             {/* Already a member */}
-            <div className="mt-6 lg:mt-8 text-[0.85rem] text-[#64748B]">
+            <div className="mt-6 lg:mt-8 text-[0.85rem] text-[#64748B] select-none">
               Already a member? <Link href="/contact" className="text-[#0F172A] font-bold hover:text-[#1161ed] transition-colors duration-200">Sign in.</Link>
             </div>
           </div>
 
           {/* Right Image/Graphics Column - Top on Mobile / Right on Desktop */}
-          <div className="lg:col-span-5 relative flex justify-center items-center h-[260px] sm:h-[320px] lg:h-[500px] order-1 lg:order-2">
-            {/* Background Glow Orb behind Portrait */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] bg-gradient-to-tr from-[#1161ed]/20 to-[#3b82f6]/20 rounded-full blur-[70px] lg:blur-[100px] z-0 pointer-events-none select-none animate-pulse duration-[8s]" />
-
-            {/* Background Semicircle Shapes (Limited to Brand Colors) */}
-            <div className="absolute left-[5%] top-[15%] w-[60px] h-[120px] lg:w-[100px] lg:h-[200px] rounded-r-full bg-[#1161ed]/[0.12] z-0 animate-pulse duration-[4s]" />
-            <div className="absolute bottom-[10px] left-[15%] w-[110px] h-[55px] lg:bottom-[20px] lg:left-[15%] lg:w-[180px] lg:h-[90px] rounded-t-full bg-[#1161ed]/[0.18] z-0" />
-            <div className="absolute right-[5%] top-[10%] w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] rounded-bl-full bg-[#1161ed]/[0.12] z-0" />
+          <div className="hidden lg:flex lg:col-span-6 relative flex-row items-stretch justify-between gap-6 h-[460px] sm:h-[500px] lg:h-[550px] order-1 lg:order-2 w-full select-none">
             
-            {/* Luminous Dotted Grid Background Pattern (Top-Right) - Enlarged with Premium Drop Shadow */}
-            <div className="absolute right-[-30px] top-[-20px] w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] lg:bg-[radial-gradient(#1161ed_4.5px,transparent_4.5px)] [background-size:18px_18px] lg:[background-size:28px_28px] opacity-[0.4] lg:opacity-[0.55] z-0 pointer-events-none select-none drop-shadow-[0_10px_25px_rgba(17,97,237,0.22)]" />
+            {/* Soft Glow Mesh behind portrait */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] lg:w-[320px] lg:h-[320px] bg-gradient-to-tr from-[#1161ed]/15 to-[#3b82f6]/15 rounded-full blur-[60px] lg:blur-[95px] -z-10 pointer-events-none select-none animate-pulse duration-[8s]" />
 
-            {/* Centered Grayscale Man Image */}
-            <div className="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-[390px] z-10 relative flex justify-center items-end bottom-0 overflow-hidden rounded-b-full">
+            {/* Dotted Grid Pattern Background */}
+            <div className="absolute right-[-10px] top-[-10px] w-[140px] h-[140px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:22px_22px] opacity-[0.35] -z-10 pointer-events-none" />
+
+            {/* Interactive Services & Tech Stack List (Left Side of Graphic Column) */}
+            <div className="flex flex-col w-[55%] md:w-[50%] lg:w-[52%] z-20 gap-3 md:gap-4 py-2">
+              
+              {/* AI Solutions */}
+              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
+                  <svg className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="3" />
+                    <rect x="9" y="9" width="6" height="6" rx="1" />
+                    <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
+                    AI Solutions
+                  </h3>
+                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
+                    Smart AI for Smarter Business
+                  </p>
+                </div>
+              </div>
+
+              {/* Divider Line with Dot */}
+              <div className="relative w-full py-1">
+                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
+                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-slate-900 shadow-sm" />
+              </div>
+
+              {/* Web Sites */}
+              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
+                  <svg className="w-5 h-5 transition-transform duration-500 group-hover:rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
+                    Web Sites
+                  </h3>
+                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
+                    Modern, Responsive & Fast Websites
+                  </p>
+                </div>
+              </div>
+
+              {/* Divider Line with Dot */}
+              <div className="relative w-full py-1">
+                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
+                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-slate-900 shadow-sm" />
+              </div>
+
+              {/* Branding */}
+              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
+                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 2v7M12 15v7M2 12h7M15 12h7" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
+                    Branding
+                  </h3>
+                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
+                    Unique Identity, Memorable Brands
+                  </p>
+                </div>
+              </div>
+
+              {/* Divider Line with Dot */}
+              <div className="relative w-full py-1">
+                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
+                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-slate-900 shadow-sm" />
+              </div>
+
+              {/* Editing */}
+              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
+                  <svg className="w-5 h-5 transition-transform duration-500 group-hover:rotate-[-6deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="3" width="20" height="18" rx="2" ry="2" />
+                    <path d="M2 8h20M2 14h20M6 3v18M18 3v18" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
+                    Editing
+                  </h3>
+                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
+                    Professional Video Editing Solutions
+                  </p>
+                </div>
+              </div>
+
+              {/* Terminal Divider Line with Dot (Aligned directly with index finger pointing) */}
+              <div className="relative w-full py-1">
+                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
+                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#1161ed] shadow-[0_0_8px_rgba(17,97,237,0.8)] animate-pulse" />
+              </div>
+
+              {/* Technology Badges Column */}
+              <div className="mt-3 flex flex-row lg:flex-col flex-wrap gap-2 z-30">
+                
+                {/* OpenAI */}
+                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
+                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-500 group-hover/tech:rotate-45">
+                    <svg className="w-4 h-4 text-[#10a37f] fill-current" viewBox="0 0 24 24">
+                      <path d="M21.3 10.3c.3-1 .1-2-.4-2.8-.5-.9-1.4-1.5-2.4-1.7-.2-.1-.4-.2-.5-.3-.2-.2-.3-.5-.3-.8V3.1c0-1.1-.6-2.1-1.6-2.6-1-.5-2.2-.4-3.1.2l-.5.3c-.3.2-.6.2-.9 0L11.1.7c-.9-.6-2.1-.7-3.1-.2C7 1 6.4 2 6.4 3.1v1.6c0 .3-.1.6-.3.8-.1.1-.3.2-.5.3-1 .2-1.9.8-2.4 1.7-.5.8-.7 1.8-.4 2.8l.3.5c.2.3.2.6 0 .9l-.3.5c-.6.9-.7 2.1-.2 3.1.5 1 1.5 1.6 2.6 1.6h1.6c.3 0 .6.1.8.3.1.1.2.3.3.5.2 1 .8 1.9 1.7 2.4.8.5 1.8.7 2.8.4l.5-.3c.3-.2.6-.2.9 0l.5.3c.9.6 2.1.7 3.1.2 1-.5 1.6-1.5 1.6-2.6v-1.6c0-.3.1-.6.3-.8.1-.1.3-.2.5-.3 1-.2 1.9-.8 2.4-1.7.5-.8.7-1.8.4-2.8l-.3-.5c-.2-.3-.2-.6 0-.9l.3-.5z" />
+                    </svg>
+                  </div>
+                  <div className="w-[1px] h-3 bg-slate-200" />
+                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">OpenAI</span>
+                </div>
+
+                {/* VN */}
+                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
+                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-300 group-hover/tech:scale-105">
+                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-[4px] bg-black text-[0.45rem] font-black text-white tracking-tighter">
+                      VN
+                    </span>
+                  </div>
+                  <div className="w-[1px] h-3 bg-slate-200" />
+                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">VN</span>
+                </div>
+
+                {/* Python */}
+                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
+                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-500 group-hover/tech:scale-110">
+                    <svg className="w-4 h-4 text-[#3776ab] fill-current" viewBox="0 0 24 24">
+                      <path d="M11.9 2c-3.1 0-2.9 1.3-2.9 1.3v1.8h3c2 0 3.7 1.7 3.7 3.7v3h1.8s1.3-.2 1.3-2.9c0-3-2.6-6.9-6.9-6.9zm.2 20c3.1 0 2.9-1.3 2.9-1.3v-1.8h-3c-2 0-3.7-1.7-3.7-3.7v-3H6.4s-1.3.2-1.3 2.9c0 3 2.6 6.9 6.9 6.9z" />
+                    </svg>
+                  </div>
+                  <div className="w-[1px] h-3 bg-slate-200" />
+                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">Python</span>
+                </div>
+
+                {/* WordPress */}
+                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
+                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-300 group-hover/tech:scale-110">
+                    <svg className="w-4 h-4 text-[#21759b] fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 1.2c-4.86 0-8.8 3.94-8.8 8.8 0 .97.16 1.9.45 2.77l5.05-13.82c-.23-.05-.46-.07-.7-.07zm7.55 10.97c-.03-.4-.2-.84-.42-1.35-.35-.78-.77-1.42-.77-2.12 0-.82.63-1.58 1.51-1.58.07 0 .14 0 .21.01A8.75 8.75 0 0 0 12 3.2c-.44 0-.86.05-1.28.13l5.04 13.8a8.77 8.77 0 0 0 3.79-4.96zM12 20.8c.84 0 1.66-.12 2.44-.34l-3.32-9.67-3.23 9.4c.8.38 1.68.61 2.61.61z" />
+                    </svg>
+                  </div>
+                  <div className="w-[1px] h-3 bg-slate-200" />
+                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">WordPress</span>
+                </div>
+
+                {/* App */}
+                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
+                  <div className="w-5 h-5 flex items-center justify-center text-slate-700 transition-transform duration-300 group-hover/tech:translate-y-[-1px]">
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                      <line x1="12" y1="18" x2="12.01" y2="18" />
+                    </svg>
+                  </div>
+                  <div className="w-[1px] h-3 bg-slate-200" />
+                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">App</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* Pointing Man Image (Right Side of Graphic Column, overlapping list) */}
+            <div className="absolute bottom-0 right-[-10px] sm:right-[-20px] lg:right-[-30px] h-[92%] sm:h-[96%] lg:h-[100%] w-auto z-10 flex justify-center items-end select-none pointer-events-none group">
               <img 
                 src="/hero_man.png" 
                 alt="Digital Agency Professional"
-                className="w-full h-auto object-contain filter grayscale select-none"
+                className="h-full w-auto object-contain filter grayscale select-none transition-all duration-500 group-hover:scale-[1.015]"
               />
-            </div>
-
-            {/* Floating Glassmorphic Semicircle Gauge Card */}
-            <div className="absolute right-0 sm:right-[-20px] bottom-[4%] lg:bottom-[8%] bg-white/85 backdrop-blur-md rounded-2xl p-3 lg:p-5 shadow-[0_20px_50px_rgba(17,97,237,0.06)] border border-[#1161ed]/[0.12] max-w-[130px] lg:max-w-[210px] z-20 select-none hover:translate-y-[-6px] transition-all duration-300 group">
-              <h3 className="text-[0.62rem] lg:text-[0.85rem] text-[#0F172A] font-extrabold mb-0.5 tracking-tight">Grow Your Business !</h3>
-              <p className="text-[0.48rem] lg:text-[0.65rem] text-[#94A3B8] font-bold mb-1.5 lg:mb-3">V2 Labs Project Success</p>
               
-              {/* Semicircular SVG Gauge */}
-              <div className="relative w-full h-[40px] lg:h-[60px]">
-                <svg viewBox="0 0 100 60" className="w-16 h-10 lg:w-[100px] lg:h-[55px] mx-auto">
-                  {/* Semicircle track */}
-                  <path d="M 15 50 A 35 35 0 0 1 85 50" fill="none" stroke="#E2E8F0" strokeWidth="8" strokeLinecap="round" />
-                  {/* Progress arc */}
-                  <path d="M 15 50 A 35 35 0 0 1 76 25" fill="none" stroke="#1161ed" strokeWidth="8" strokeLinecap="round" strokeDasharray="110" strokeDashoffset="0" />
-                  {/* Indicator dot */}
-                  <circle cx="76" cy="25" r="3.5" fill="#0F172A" stroke="#FFFFFF" strokeWidth="1" />
-                </svg>
-                <span className="absolute bottom-0 inset-x-0 text-center text-xs lg:text-lg text-[#0F172A] font-black leading-none mt-0.5 lg:mt-1">760</span>
-              </div>
-              <span className="text-[0.45rem] lg:text-[0.6rem] text-[#1161ed] font-black uppercase text-center block tracking-widest mt-0.5 lg:mt-1">Excellent</span>
-
-              {/* Bottom Avatar / Mentor stack */}
-              <div className="flex items-center gap-2 mt-1.5 pt-1.5 lg:mt-3 lg:pt-3 border-t border-slate-100/60 justify-between">
-                <span className="text-[0.45rem] lg:text-[0.6rem] font-bold text-[#94A3B8] uppercase tracking-wider">Top Builders</span>
-                <div className="flex -space-x-1.5">
-                  <span className="w-3.5 h-3.5 lg:w-5 lg:h-5 rounded-full border border-white bg-slate-200 text-[0.4rem] lg:text-[0.55rem] font-bold flex items-center justify-center shadow-sm">👨‍💻</span>
-                  <span className="w-3.5 h-3.5 lg:w-5 lg:h-5 rounded-full border border-white bg-slate-300 text-[0.4rem] lg:text-[0.55rem] font-bold flex items-center justify-center shadow-sm">👩‍🎨</span>
-                  <span className="w-3.5 h-3.5 lg:w-5 lg:h-5 rounded-full border border-white bg-[#1161ed] text-[0.35rem] lg:text-[0.45rem] text-white font-extrabold flex items-center justify-center shadow-sm">+24</span>
-                </div>
+              {/* Pocket Chest Logo Overlay Badge (Aligned with shirt chest area) */}
+              <div className="absolute top-[64%] left-[46%] -translate-x-[20%] -translate-y-1/2 bg-white/95 border border-slate-200/50 rounded-xl py-0.5 px-2 flex items-center justify-center shadow-md backdrop-blur-sm transition-transform duration-300 group-hover:scale-105 pointer-events-auto">
+                <img src="/logo-cover-v2labs.jpeg" alt="V2 Labs Logo" className="h-5 w-auto object-contain mix-blend-multiply" />
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -840,79 +977,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Auto-Moving Testimonials Wall */}
-      <section id="testimonials" className="relative overflow-hidden border-t border-[rgba(0,0,0,0.05)] py-16 md:py-24">
-        <div className="absolute left-[-5%] top-[20%] h-[350px] w-[350px] animate-pulse rounded-full bg-[#1161ed]/[0.02] blur-[110px] duration-[8s] pointer-events-none select-none -z-10" />
+      {/* Auto-Moving Testimonials Wall - Edge-to-Edge Premium Marquee */}
+      <section id="testimonials" className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30">
+        
+        {/* Soft Glowing Orbs */}
+        <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#1161ed]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
+        <div className="absolute right-[-5%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#3b82f6]/[0.02] blur-[120px] duration-[8s] pointer-events-none select-none -z-10" />
 
-        <div className="relative z-10 mx-auto px-4 max-w-[1400px]">
-          <div className="relative overflow-hidden rounded-[32px] border border-[#1161ed]/10 bg-[linear-gradient(180deg,rgba(248,250,252,0.98),rgba(239,246,255,0.96))] py-8 shadow-[0_30px_90px_rgba(17,97,237,0.08)] sm:py-12 md:rounded-[40px] md:py-16">
-            <div className="pointer-events-none absolute left-[-40px] top-[-20px] h-36 w-36 rounded-full bg-[#1161ed]/10 blur-3xl" />
-            <div className="pointer-events-none absolute bottom-[-30px] right-[-20px] h-40 w-40 rounded-full bg-[#60A5FA]/15 blur-3xl" />
+        {/* Section Header */}
+        <div className="relative mb-12 text-center md:mb-16 px-6 z-10">
+          <p className="mb-3 text-[0.72rem] font-black uppercase tracking-[0.22em] text-[#1161ed] select-none">
+            Founder Proof
+          </p>
+          <h2 className="mx-auto max-w-[620px] text-[2.2rem] sm:text-[2.6rem] md:text-[3.2rem] font-extrabold tracking-tight text-[#0F172A] leading-[1.1]">
+            What Our <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">Founders Say</span>
+          </h2>
+        </div>
 
-            <div className="relative mb-8 text-center md:mb-12 px-4">
-              <p className="mb-3 text-[0.72rem] font-extrabold uppercase tracking-[0.22em] text-[#1161ed]">
-                Founder Proof
-              </p>
-              <h2 className="mx-auto max-w-[620px] text-[1.9rem] font-extrabold leading-[1.2] text-[#0F172A] sm:text-[2.2rem] md:text-[2.8rem]">
-                What Our <span className="text-[#1161ed]">Founders Say</span>
-              </h2>
-              <p className="mx-auto mt-4 max-w-[620px] text-sm leading-7 text-[#64748B] sm:text-base md:text-lg">
-                Real feedback in a high-fidelity auto-sliding horizontal marquee, fully mobile-responsive and pausing on hover.
-              </p>
-            </div>
+        {/* Double Row Horizontal Marquee - Full Page Edge-to-Edge */}
+        <div className="relative flex flex-col gap-8 overflow-hidden py-4 select-none z-10 w-full">
+          {/* Transparent Gradient Fade Masks at Page Edges */}
+          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-16 bg-gradient-to-r from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
+          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-16 bg-gradient-to-l from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
 
-            {/* Double Row Horizontal Marquee */}
-            <div className="relative flex flex-col gap-6 overflow-hidden py-4 select-none">
-              {/* Fade masks */}
-              <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-12 bg-gradient-to-r from-[#f8fbff] to-transparent sm:w-24 md:w-36 lg:w-48" />
-              <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-12 bg-gradient-to-l from-[#eef6ff] to-transparent sm:w-24 md:w-36 lg:w-48" />
-
-              {/* Row 1: Leftward Marquee */}
-              <div className="relative flex w-full overflow-hidden">
-                <div className="flex shrink-0 gap-6 animate-marquee hover:[animation-play-state:paused] py-2 cursor-pointer">
-                  {/* Set 1 */}
-                  <div className="flex gap-6 shrink-0">
-                    {TESTIMONIALS_ROW_1.map((t, idx) => (
-                      <TestimonialCard key={`row1-1-${idx}`} testimonial={t} />
-                    ))}
-                  </div>
-                  {/* Set 2 (Duplicate) */}
-                  <div className="flex gap-6 shrink-0" aria-hidden="true">
-                    {TESTIMONIALS_ROW_1.map((t, idx) => (
-                      <TestimonialCard key={`row1-2-${idx}`} testimonial={t} />
-                    ))}
-                  </div>
-                </div>
+          {/* Row 1: Leftward Marquee */}
+          <div className="relative flex w-full overflow-hidden">
+            <div className="flex shrink-0 gap-8 md:gap-12 animate-marquee hover:[animation-play-state:paused] py-2 cursor-pointer">
+              {/* Set 1 */}
+              <div className="flex gap-8 md:gap-12 shrink-0">
+                {TESTIMONIALS_ROW_1.map((t, idx) => (
+                  <TestimonialCard key={`row1-1-${idx}`} testimonial={t} />
+                ))}
               </div>
-
-              {/* Row 2: Rightward Marquee */}
-              <div className="relative flex w-full overflow-hidden">
-                <div className="flex shrink-0 gap-6 animate-marquee-reverse hover:[animation-play-state:paused] py-2 cursor-pointer">
-                  {/* Set 1 */}
-                  <div className="flex gap-6 shrink-0">
-                    {TESTIMONIALS_ROW_2.map((t, idx) => (
-                      <TestimonialCard key={`row2-1-${idx}`} testimonial={t} />
-                    ))}
-                  </div>
-                  {/* Set 2 (Duplicate) */}
-                  <div className="flex gap-6 shrink-0" aria-hidden="true">
-                    {TESTIMONIALS_ROW_2.map((t, idx) => (
-                      <TestimonialCard key={`row2-2-${idx}`} testimonial={t} />
-                    ))}
-                  </div>
-                </div>
+              {/* Set 2 (Duplicate) */}
+              <div className="flex gap-8 md:gap-12 shrink-0" aria-hidden="true">
+                {TESTIMONIALS_ROW_1.map((t, idx) => (
+                  <TestimonialCard key={`row1-2-${idx}`} testimonial={t} />
+                ))}
               </div>
             </div>
+          </div>
 
-            <div className="mt-8 flex items-center justify-center gap-2 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#64748B] sm:text-[0.72rem]">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1161ed] opacity-75"></span>
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#1161ed]"></span>
-              </span>
-              <span>Auto-moving founder feedback • Hover to Pause</span>
+          {/* Row 2: Rightward Marquee */}
+          <div className="relative flex w-full overflow-hidden">
+            <div className="flex shrink-0 gap-8 md:gap-12 animate-marquee-reverse hover:[animation-play-state:paused] py-2 cursor-pointer">
+              {/* Set 1 */}
+              <div className="flex gap-8 md:gap-12 shrink-0">
+                {TESTIMONIALS_ROW_2.map((t, idx) => (
+                  <TestimonialCard key={`row2-1-${idx}`} testimonial={t} />
+                ))}
+              </div>
+              {/* Set 2 (Duplicate) */}
+              <div className="flex gap-8 md:gap-12 shrink-0" aria-hidden="true">
+                {TESTIMONIALS_ROW_2.map((t, idx) => (
+                  <TestimonialCard key={`row2-2-${idx}`} testimonial={t} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Dynamic status helper indicator */}
+        <div className="mt-10 flex items-center justify-center gap-2.5 text-[0.68rem] sm:text-[0.74rem] font-bold uppercase tracking-[0.18em] text-[#64748B] select-none z-10">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1161ed] opacity-75"></span>
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#1161ed]"></span>
+          </span>
+          <span>Auto-moving founder feedback • Hover to Pause</span>
+        </div>
+
       </section>
 
 
