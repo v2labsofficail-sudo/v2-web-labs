@@ -17,20 +17,72 @@ interface CustomSelectProps {
 }
 
 const serviceOptions: Option[] = [
-  { value: "custom_erp", label: "Custom ERP Software", group: "Enterprise Systems" },
-  { value: "saas_dev", label: "SaaS Product Development", group: "Enterprise Systems" },
-  { value: "enterprise_web", label: "Enterprise Web Application", group: "Enterprise Systems" },
+  {
+    value: "custom_erp",
+    label: "Custom ERP Software",
+    group: "Enterprise Systems",
+  },
+  {
+    value: "saas_dev",
+    label: "SaaS Product Development",
+    group: "Enterprise Systems",
+  },
+  {
+    value: "enterprise_web",
+    label: "Enterprise Web Application",
+    group: "Enterprise Systems",
+  },
   { value: "crm_dev", label: "CRM Development", group: "Enterprise Systems" },
-  { value: "startup_mvp", label: "Startup MVP Development", group: "Enterprise Systems" },
-  { value: "hrms_ai", label: "HRMS and Recruitment AI Platform", group: "AI and Automation" },
-  { value: "ai_automation", label: "AI Automation Solutions", group: "AI and Automation" },
-  { value: "ai_chatbot", label: "AI Chatbot or AI Agent", group: "AI and Automation" },
-  { value: "dashboard_analytics", label: "Dashboard and Analytics System", group: "AI and Automation" },
-  { value: "workflow_automation", label: "Workflow Automation System", group: "AI and Automation" },
-  { value: "mobile_app", label: "Mobile App Development", group: "Infrastructure and Integrations" },
-  { value: "cloud_devops", label: "Cloud and DevOps Infrastructure", group: "Infrastructure and Integrations" },
-  { value: "api_integrations", label: "API Development and Integrations", group: "Infrastructure and Integrations" },
-  { value: "custom_software", label: "Custom Software Solution", group: "Infrastructure and Integrations" },
+  {
+    value: "startup_mvp",
+    label: "Startup MVP Development",
+    group: "Enterprise Systems",
+  },
+  {
+    value: "hrms_ai",
+    label: "HRMS and Recruitment AI Platform",
+    group: "AI and Automation",
+  },
+  {
+    value: "ai_automation",
+    label: "AI Automation Solutions",
+    group: "AI and Automation",
+  },
+  {
+    value: "ai_chatbot",
+    label: "AI Chatbot or AI Agent",
+    group: "AI and Automation",
+  },
+  {
+    value: "dashboard_analytics",
+    label: "Dashboard and Analytics System",
+    group: "AI and Automation",
+  },
+  {
+    value: "workflow_automation",
+    label: "Workflow Automation System",
+    group: "AI and Automation",
+  },
+  {
+    value: "mobile_app",
+    label: "Mobile App Development",
+    group: "Infrastructure and Integrations",
+  },
+  {
+    value: "cloud_devops",
+    label: "Cloud and DevOps Infrastructure",
+    group: "Infrastructure and Integrations",
+  },
+  {
+    value: "api_integrations",
+    label: "API Development and Integrations",
+    group: "Infrastructure and Integrations",
+  },
+  {
+    value: "custom_software",
+    label: "Custom Software Solution",
+    group: "Infrastructure and Integrations",
+  },
 ];
 
 const budgetOptions: Option[] = [
@@ -53,7 +105,11 @@ const serviceHighlights: Record<
   custom_erp: {
     title: "Custom ERP Software",
     desc: "Best for operational control, role-based workflows, approvals, reporting, and internal process management.",
-    points: ["department workflows", "role-based dashboards", "approval chains"],
+    points: [
+      "department workflows",
+      "role-based dashboards",
+      "approval chains",
+    ],
   },
   saas_dev: {
     title: "SaaS Product Development",
@@ -78,7 +134,11 @@ const serviceHighlights: Record<
   hrms_ai: {
     title: "HRMS and Recruitment AI Platform",
     desc: "For hiring pipelines, employee records, onboarding, attendance, and AI-assisted people workflows.",
-    points: ["recruitment pipelines", "employee records", "AI-assisted operations"],
+    points: [
+      "recruitment pipelines",
+      "employee records",
+      "AI-assisted operations",
+    ],
   },
   ai_automation: {
     title: "AI Automation Solutions",
@@ -122,15 +182,94 @@ const serviceHighlights: Record<
   },
 };
 
-const serviceGroups = ["Enterprise Systems", "AI and Automation", "Infrastructure and Integrations"];
+const serviceGroups = [
+  "Enterprise Systems",
+  "AI and Automation",
+  "Infrastructure and Integrations",
+];
 const serviceGroupDescriptions: Record<string, string> = {
-  "Enterprise Systems": "Core software for operations, teams, customers, and scalable product workflows.",
-  "AI and Automation": "Intelligent systems that reduce manual work and improve decision-making speed.",
+  "Enterprise Systems":
+    "Core software for operations, teams, customers, and scalable product workflows.",
+  "AI and Automation":
+    "Intelligent systems that reduce manual work and improve decision-making speed.",
   "Infrastructure and Integrations":
     "Connected platforms, mobile experiences, APIs, and cloud-ready engineering foundations.",
 };
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ||
+  "http://127.0.0.1:8000";
+const CLIENT_APP_KEY =
+  process.env.NEXT_RAW_PUBLIC_CLIENT_APP_KEY ||
+  process.env.NEXT_PUBLIC_RAW_CLIENT_APP_KEY ||
+  "ca58164177924b6871806cfb91390bdb0d5a48336dc28a3902283dbf617be731";
+
+const NEXT_PUBLIC_API_SIGN_SECRET =
+  process.env.NEXT_PUBLIC_API_SIGN_SECRET ||
+  process.env.NEXT_RAW_PUBLIC_API_SIGN_SECRET ||
+  "9f7a6c8e5b4d3a2f1e0d9c8b7a6e5f4d";
+
+function base64ToBytes(base64: string): Uint8Array {
+  const binaryString = atob(base64.replace("base64:", ""));
+  const bytes = new Uint8Array(binaryString.length);
+  for (let i = 0; i < binaryString.length; i++) {
+    bytes[i] = binaryString.charCodeAt(i);
+  }
+  return bytes;
+}
+
+function hexToBytes(hex: string): Uint8Array {
+  const bytes = new Uint8Array(hex.length / 2);
+  for (let i = 0; i < hex.length; i += 2) {
+    bytes[i / 2] = parseInt(hex.substring(i, i + 2), 16);
+  }
+  return bytes;
+}
+
+async function generateDynamicHMACSignature(
+  requestBodyString: string,
+  timestamp: string,
+): Promise<string> {
+  const encoder = new TextEncoder();
+  const rawAppKeyBytes = hexToBytes(CLIENT_APP_KEY);
+  const timestampBytes = encoder.encode(timestamp);
+  const signSecretBytes = hexToBytes(NEXT_PUBLIC_API_SIGN_SECRET);
+
+  // Concatenate bytes: rawAppKeyBytes + timestampBytes + signSecretBytes
+  const combinedBytes = new Uint8Array(
+    rawAppKeyBytes.length + timestampBytes.length + signSecretBytes.length,
+  );
+  combinedBytes.set(rawAppKeyBytes, 0);
+  combinedBytes.set(timestampBytes, rawAppKeyBytes.length);
+  combinedBytes.set(
+    signSecretBytes,
+    rawAppKeyBytes.length + timestampBytes.length,
+  );
+
+  // Compute SHA-256 hash of combinedBytes to get the 32-byte dynamic key
+  const dynamicKeyBuffer = await window.crypto.subtle.digest(
+    "SHA-256",
+    combinedBytes,
+  );
+
+  // Import dynamicKeyBuffer as HMAC-SHA256 key
+  const cryptoKey = await window.crypto.subtle.importKey(
+    "raw",
+    dynamicKeyBuffer,
+    { name: "HMAC", hash: { name: "SHA-256" } },
+    false,
+    ["sign"],
+  );
+
+  const bodyBytes = encoder.encode(requestBodyString);
+  const signatureBuffer = await window.crypto.subtle.sign(
+    "HMAC",
+    cryptoKey,
+    bodyBytes,
+  );
+
+  const hashArray = Array.from(new Uint8Array(signatureBuffer));
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+}
 
 function CustomSelect({
   label,
@@ -178,7 +317,9 @@ function CustomSelect({
         className="group relative flex h-[56px] w-full items-center justify-between rounded-2xl border border-slate-200/80 bg-slate-50 px-5 text-left text-sm font-semibold text-slate-700 shadow-sm transition-all hover:border-slate-300 hover:bg-slate-100/30 hover:shadow-[0_4px_20px_rgba(0,0,0,0.02)] focus:border-[#1161ed] focus:bg-white focus:ring-4 focus:ring-[#1161ed]/5 active:scale-[0.995]"
       >
         <span className={selectedOption ? "text-slate-800" : "text-slate-400"}>
-          {selectedOption ? selectedOption.label : placeholder || "Select option"}
+          {selectedOption
+            ? selectedOption.label
+            : placeholder || "Select option"}
         </span>
         <svg
           className={`h-4 w-4 text-slate-400 transition-transform duration-300 ${
@@ -189,7 +330,11 @@ function CustomSelect({
           strokeWidth="2.5"
           viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
         </svg>
       </button>
 
@@ -230,7 +375,11 @@ function CustomSelect({
                         strokeWidth="3"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m4.5 12.75 6 6 9-13.5"
+                        />
                       </svg>
                     )}
                   </button>
@@ -291,11 +440,15 @@ export default function ContactPage() {
         "Applying for open alignment application. Details about my skillset and background:\n\n";
     }
 
-    setFormData((prev) => ({
-      ...prev,
-      service: serviceVal,
-      message: messagePrefix,
-    }));
+    const timer = setTimeout(() => {
+      setFormData((prev) => ({
+        ...prev,
+        service: serviceVal,
+        message: messagePrefix,
+      }));
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const activeService = useMemo(
@@ -323,8 +476,6 @@ export default function ContactPage() {
   useEffect(() => {
     if (!selectionToast) return;
 
-    setShowSelectionToast(false);
-
     const frame = window.setTimeout(() => {
       setShowSelectionToast(true);
     }, 30);
@@ -347,7 +498,9 @@ export default function ContactPage() {
   const isCustomBudget = !standardBudgets.includes(formData.budget);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -362,20 +515,37 @@ export default function ContactPage() {
     setStatus({ type: null, message: "" });
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/contact/`, {
+      const payload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        budget: formData.budget,
+        description: formData.message,
+        source_page:
+          typeof window !== "undefined" ? window.location.href : "/contact",
+      };
+
+      const requestBodyString = JSON.stringify(payload);
+      const timestamp = Math.floor(Date.now() / 1000).toString();
+      const signature = await generateDynamicHMACSignature(
+        requestBodyString,
+        timestamp,
+      );
+
+      const response = await fetch(`${API_BASE_URL}/leads`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-App-Key": CLIENT_APP_KEY,
+          "X-Timestamp": timestamp,
+          "X-Signature": signature,
         },
-        body: JSON.stringify({
-          ...formData,
-          source_page:
-            typeof window !== "undefined" ? window.location.href : "/contact",
-        }),
+        body: requestBodyString,
       });
 
       const data = await response.json();
- 
+
       if (response.ok && data.success) {
         setStatus({
           type: "success",
@@ -411,7 +581,7 @@ export default function ContactPage() {
       setStatus({
         type: "error",
         message:
-          "Unable to connect to the server. Please verify the Django API backend is running or try again later.",
+          "Unable to connect to the server. Please verify the Laravel API backend is running or try again later.",
       });
     } finally {
       setLoading(false);
@@ -424,6 +594,7 @@ export default function ContactPage() {
       ...prev,
       service,
     }));
+    setShowSelectionToast(false);
     setSelectionToast(`${nextService} selected`);
   };
 
@@ -466,9 +637,23 @@ export default function ContactPage() {
               <div className="flex flex-col gap-6 relative z-10">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 text-[#1161ed]">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -483,8 +668,18 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 text-[#1161ed]">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.722-5.184-4.084-6.907-6.907l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.722-5.184-4.084-6.907-6.907l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -513,8 +708,18 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 text-[#1161ed]">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -565,9 +770,14 @@ export default function ContactPage() {
                   "The service picker now opens only when needed, so the form area stays cleaner and wider.",
                   "Clients still get a guided selection experience, but it feels closer to a premium product workflow.",
                 ].map((point) => (
-                  <div key={point} className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-3">
+                  <div
+                    key={point}
+                    className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-3"
+                  >
                     <span className="w-2.5 h-2.5 rounded-full bg-[#1161ed] mt-2 shrink-0" />
-                    <p className="text-[0.88rem] leading-7 text-slate-600">{point}</p>
+                    <p className="text-[0.88rem] leading-7 text-slate-600">
+                      {point}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -595,12 +805,32 @@ export default function ContactPage() {
                   }`}
                 >
                   {status.type === "success" ? (
-                    <svg className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    <svg
+                      className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                      />
                     </svg>
                   ) : (
-                    <svg className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 7.5h.008v.008H12v-.008Z" />
+                    <svg
+                      className="w-5 h-5 text-rose-600 shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 7.5h.008v.008H12v-.008Z"
+                      />
                     </svg>
                   )}
                   <div className="font-semibold leading-relaxed">
@@ -630,8 +860,18 @@ export default function ContactPage() {
                       </div>
                       <div className="flex shrink-0 items-center gap-2 rounded-2xl border border-slate-200 bg-white px-3 py-2 text-[11px] font-extrabold uppercase tracking-[0.16em] text-slate-500 transition-colors group-hover:border-[#1161ed]/20 group-hover:text-[#1161ed]">
                         <span>Select</span>
-                        <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        <svg
+                          className="h-4 w-4"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.4"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -640,7 +880,10 @@ export default function ContactPage() {
 
                 <div className="grid gap-3 sm:grid-cols-3">
                   {activeService.points.map((point) => (
-                    <div key={point} className="flex items-center gap-3 rounded-2xl border border-slate-200/70 bg-slate-50 px-4 py-3">
+                    <div
+                      key={point}
+                      className="flex items-center gap-3 rounded-2xl border border-slate-200/70 bg-slate-50 px-4 py-3"
+                    >
                       <span className="h-2.5 w-2.5 rounded-full bg-[#1161ed]" />
                       <span className="text-[0.82rem] font-semibold capitalize text-slate-700">
                         {point}
@@ -748,17 +991,42 @@ export default function ContactPage() {
                 >
                   {loading ? (
                     <>
-                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                      <svg
+                        className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
                       </svg>
                       <span>Submitting lead...</span>
                     </>
                   ) : (
                     <>
                       <span>Submit Project Lead</span>
-                      <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                      <svg
+                        className="w-4 h-4 shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                        />
                       </svg>
                     </>
                   )}
@@ -778,57 +1046,71 @@ export default function ContactPage() {
             onClick={() => setIsServicePanelOpen(false)}
           />
 
-          <div className="relative h-[84vh] w-full max-w-[780px] overflow-hidden rounded-t-[34px] border border-slate-200/70 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.16)] sm:h-screen sm:max-w-[760px] sm:rounded-none sm:rounded-l-[34px]">
-            <div className="border-b border-slate-100 bg-[linear-gradient(135deg,#ffffff_0%,#f8fbff_58%,#eef4ff_100%)] px-6 py-6 sm:px-8">
+          <div className="relative flex flex-col h-[85vh] w-full max-w-[780px] overflow-hidden rounded-t-[34px] border border-slate-200/70 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.16)] sm:h-screen sm:max-w-[760px] sm:rounded-none sm:rounded-l-[34px]">
+            <div className="flex-shrink-0 border-b border-slate-100 bg-[linear-gradient(135deg,#ffffff_0%,#f8fbff_58%,#eef4ff_100%)] px-4 py-4 sm:px-8 sm:py-6">
               <div className="flex items-start justify-between gap-5">
                 <div>
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#1161ed]">
                     Service selector
                   </p>
-                  <h3 className="mt-2 text-[1.6rem] font-black tracking-tight text-slate-900">
+                  <h3 className="mt-1 text-xl sm:text-[1.6rem] sm:mt-2 font-black tracking-tight text-slate-900">
                     Pick the closest service direction
                   </h3>
-                  <p className="mt-3 max-w-[460px] text-[0.92rem] leading-7 text-slate-600">
-                    Choose the nearest fit for your project and continue with the form once the right direction is selected.
+                  <p className="mt-1.5 text-xs sm:text-[0.92rem] sm:mt-3 max-w-[460px] leading-relaxed text-slate-600">
+                    Choose the nearest fit for your project and continue with
+                    the form once the right direction is selected.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={() => setIsServicePanelOpen(false)}
-                  className="rounded-2xl border border-slate-200 bg-white/90 p-3 text-slate-500 transition-colors hover:text-slate-900"
+                  className="rounded-2xl border border-slate-200 bg-white/90 p-2.5 sm:p-3 text-slate-500 transition-colors hover:text-slate-900"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6 6 18" />
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 6l12 12M18 6 6 18"
+                    />
                   </svg>
                 </button>
               </div>
 
-              <div className="mt-5 grid gap-3 sm:grid-cols-[1.2fr_0.8fr]">
+              <div className="mt-4 hidden sm:grid gap-3 sm:grid-cols-[1.2fr_0.8fr]">
                 <div className="rounded-[24px] border border-[#1161ed]/10 bg-white px-5 py-4 shadow-[0_8px_24px_rgba(17,97,237,0.05)]">
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-slate-400">
                     Current selection
                   </p>
                   <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-[1rem] font-black text-slate-900">{activeService.title}</p>
-                  <span className="inline-flex w-fit items-center rounded-full bg-[#1161ed]/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#1161ed]">
-                    selected
-                  </span>
+                    <p className="text-[1rem] font-black text-slate-900">
+                      {activeService.title}
+                    </p>
+                    <span className="inline-flex w-fit items-center rounded-full bg-[#1161ed]/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#1161ed]">
+                      selected
+                    </span>
+                  </div>
                 </div>
-              </div>
 
                 <div className="rounded-[24px] border border-slate-200 bg-slate-950 px-5 py-4 text-white shadow-[0_10px_24px_rgba(15,23,42,0.12)]">
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-white/50">
                     V2 Labs fit
                   </p>
                   <p className="mt-2 text-[0.88rem] leading-6 text-white/85">
-                    Built for custom software conversations, not generic lead forms.
+                    Built for custom software conversations, not generic lead
+                    forms.
                   </p>
                 </div>
               </div>
 
               {selectionToast && (
                 <div
-                  className={`mt-4 font-Outfit relative overflow-hidden rounded-[24px] border border-emerald-200/80 bg-white/95 px-4 py-4 shadow-[0_18px_40px_rgba(15,23,42,0.12)] transition-all duration-500 ease-out ${
+                  className={`mt-3 font-Outfit relative overflow-hidden rounded-[24px] border border-emerald-200/80 bg-white/95 px-4 py-3 shadow-[0_18px_40px_rgba(15,23,42,0.12)] transition-all duration-500 ease-out ${
                     showSelectionToast
                       ? "translate-y-0 scale-100 opacity-100"
                       : "-translate-y-3 scale-95 opacity-0"
@@ -836,16 +1118,26 @@ export default function ContactPage() {
                 >
                   <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#10b981_0%,#34d399_55%,#86efac_100%)]" />
                   <div className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#10b981_0%,#34d399_100%)] text-white shadow-[0_10px_20px_rgba(16,185,129,0.22)]">
-                      <svg className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#10b981_0%,#34d399_100%)] text-white shadow-[0_10px_20px_rgba(16,185,129,0.22)]">
+                      <svg
+                        className="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m4.5 12.75 6 6 9-13.5"
+                        />
                       </svg>
                     </div>
                     <div className="min-w-0">
-                      <p className="text-[0.95rem] font-black tracking-tight text-slate-900">
+                      <p className="text-[0.9rem] font-black tracking-tight text-slate-900">
                         Service selected
                       </p>
-                      <p className="mt-1 text-[0.84rem] leading-6 text-slate-600">
+                      <p className="mt-0.5 text-xs sm:text-[0.84rem] leading-relaxed text-slate-600">
                         {selectionToast}. You can close the window now.
                       </p>
                     </div>
@@ -854,24 +1146,24 @@ export default function ContactPage() {
               )}
             </div>
 
-            <div className="grid h-[calc(100%-190px)] gap-0 sm:grid-cols-[1fr_0.92fr]">
+            <div className="grid flex-1 min-h-0 gap-0 grid-cols-1 sm:grid-cols-[1fr_0.92fr]">
               <div
-                className="overflow-y-auto border-r border-slate-100 px-6 py-6 sm:px-8"
+                className="overflow-y-auto border-r border-slate-100 px-4 py-4 sm:px-8 sm:py-6"
                 style={{ scrollbarWidth: "thin" }}
               >
-                <div className="grid gap-5">
+                <div className="grid gap-4 sm:gap-5">
                   {serviceGroups.map((group) => (
-                    <section key={group} className="flex flex-col gap-3">
-                      <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">
-                        <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#1161ed]">
+                    <section key={group} className="flex flex-col gap-2.5">
+                      <div className="px-2 py-2 sm:rounded-[22px] sm:border sm:border-slate-200 sm:bg-slate-50 sm:px-4 sm:py-4">
+                        <p className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#1161ed]">
                           {group}
                         </p>
-                        <p className="mt-2 text-[0.84rem] leading-6 text-slate-600">
+                        <p className="mt-1 sm:mt-2 text-xs sm:text-[0.84rem] leading-relaxed text-slate-600 hidden sm:block">
                           {serviceGroupDescriptions[group]}
                         </p>
                       </div>
 
-                      <div className="grid gap-2.5">
+                      <div className="grid gap-2">
                         {serviceOptions
                           .filter((option) => option.group === group)
                           .map((option) => {
@@ -880,26 +1172,40 @@ export default function ContactPage() {
                               <button
                                 key={option.value}
                                 type="button"
-                                 onClick={() => handleServiceSelect(option.value)}
-                                 className={`rounded-[24px] border px-4 py-4 text-left transition-all duration-200 ${
-                                   isActive
-                                     ? "border-[#1161ed]/25 bg-[linear-gradient(135deg,#f8fbff_0%,#eef4ff_100%)] shadow-[0_10px_22px_rgba(17,97,237,0.06)]"
+                                onClick={() =>
+                                  handleServiceSelect(option.value)
+                                }
+                                className={`rounded-2xl sm:rounded-[24px] border px-4 py-3 sm:py-4 text-left transition-all duration-200 ${
+                                  isActive
+                                    ? "border-[#1161ed]/25 bg-[linear-gradient(135deg,#f8fbff_0%,#eef4ff_100%)] shadow-[0_10px_22px_rgba(17,97,237,0.06)]"
                                     : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
                                 }`}
                               >
                                 <div className="flex items-start justify-between gap-4">
-                                  <div className="pr-2">
-                                    <span className="text-[0.92rem] font-extrabold text-slate-900">
+                                  <div className="pr-1.5 flex-1">
+                                    <span className="text-[0.88rem] sm:text-[0.92rem] font-extrabold text-slate-900 block">
                                       {option.label}
                                     </span>
-                                    <p className="mt-1 text-[0.8rem] leading-6 text-slate-500">
+                                    <p
+                                      className={`mt-1 text-xs sm:text-[0.8rem] leading-relaxed text-slate-500 transition-all duration-300 ${isActive ? "block" : "hidden sm:block"}`}
+                                    >
                                       {serviceHighlights[option.value]?.desc}
                                     </p>
                                   </div>
                                   {isActive && (
-                                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1161ed] text-white">
-                                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                    <div className="mt-0.5 flex h-7.5 w-7.5 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-[#1161ed] text-white">
+                                      <svg
+                                        className="h-3.5 w-3.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="3"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          d="m4.5 12.75 6 6 9-13.5"
+                                        />
                                       </svg>
                                     </div>
                                   )}
@@ -914,7 +1220,7 @@ export default function ContactPage() {
               </div>
 
               <div
-                className="overflow-y-auto bg-[linear-gradient(180deg,#fbfdff_0%,#f5f9ff_100%)] px-6 py-6 sm:px-8"
+                className="hidden sm:block overflow-y-auto bg-[linear-gradient(180deg,#fbfdff_0%,#f5f9ff_100%)] px-6 py-6 sm:px-8"
                 style={{ scrollbarWidth: "thin" }}
               >
                 <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
@@ -929,7 +1235,10 @@ export default function ContactPage() {
                   </p>
                   <div className="mt-5 flex flex-wrap gap-2.5">
                     {activeService.points.map((point) => (
-                      <div key={point} className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2.5">
+                      <div
+                        key={point}
+                        className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2.5"
+                      >
                         <span className="text-[0.8rem] font-semibold capitalize text-slate-700">
                           {point}
                         </span>
@@ -948,9 +1257,14 @@ export default function ContactPage() {
                       "A faster way to align on product scope, workflow type, or system architecture direction.",
                       "A software team that can translate your idea into the right technical execution path.",
                     ].map((point) => (
-                      <div key={point} className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-3">
+                      <div
+                        key={point}
+                        className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-3"
+                      >
                         <span className="w-2.5 h-2.5 rounded-full bg-[#1161ed] mt-2 shrink-0" />
-                        <p className="text-[0.84rem] leading-7 text-slate-600">{point}</p>
+                        <p className="text-[0.84rem] leading-7 text-slate-600">
+                          {point}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -964,6 +1278,17 @@ export default function ContactPage() {
                   Continue with selected service
                 </button>
               </div>
+            </div>
+
+            {/* Mobile Sticky Footer */}
+            <div className="flex-shrink-0 border-t border-slate-100 bg-white p-4 block sm:hidden">
+              <button
+                type="button"
+                onClick={() => setIsServicePanelOpen(false)}
+                className="w-full rounded-2xl bg-slate-900 px-5 py-4 text-sm font-extrabold uppercase tracking-[0.16em] text-white transition-all duration-200 hover:bg-[#1161ed] active:scale-[0.99]"
+              >
+                Continue with selected service
+              </button>
             </div>
           </div>
         </div>

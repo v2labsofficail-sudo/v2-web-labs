@@ -78,56 +78,58 @@ const ECO_ICONS = {
     </svg>
   )
 };
+const tickerTexts = [
+  "Automating workflows...",
+  "Connecting platforms...",
+  "Processing operations...",
+  "Reducing manual tasks..."
+];
+
+const operationsStream = [
+  {
+    id: 0,
+    input: { label: "Incoming Lead", desc: "HubSpot Form Ingested", value: "$42,500" },
+    brain: { text: "Qualifying Intent & Sentiment", model: "OpenAI GPT-4o" },
+    output: { label: "CRM Lead Active", desc: "Auto Routed & Slack Notified", status: "Completed" }
+  },
+  {
+    id: 1,
+    input: { label: "Payment Received", desc: "Stripe Invoice Successful", value: "$12,400" },
+    brain: { text: "Drafting PDF Receipt & Ledger Record", model: "V2 Finance Agent" },
+    output: { label: "Invoice Emailed", desc: "QuickBooks Synced & Archived", status: "Synced" }
+  },
+  {
+    id: 2,
+    input: { label: "Support Ticket", desc: "API Sync Failure Logged", value: "Severity 2" },
+    brain: { text: "Analyzing Trace Logs & Diagnostic Codes", model: "V2 Debug Engine" },
+    output: { label: "Slack Warning Alert", desc: "Jira Task Ingested", status: "Alert Sent" }
+  },
+  {
+    id: 3,
+    input: { label: "New Product Order", desc: "Headless Checkout Catalog", value: "$1,899" },
+    brain: { text: "Verifying Inventory & Dispatch Schedule", model: "Logistics Router" },
+    output: { label: "Warehouse Dispatched", desc: "Delivery Webhooks Hooked", status: "Dispatched" }
+  }
+];
+
+const workflowSteps = [
+  { step: 1, label: "Customer inquiry submitted", desc: "An inbound email, lead form, or chat query triggers a webhook listener in sub-second time." },
+  { step: 2, label: "AI analyzes request intent", desc: "V2 Labs neural filters run semantic analysis via OpenAI/Gemini to extract user goals and budget parameters." },
+  { step: 3, label: "Lead routed automatically", desc: "The analyzed record is instantly routed to the optimal sales rep based on territory rules." },
+  { step: 4, label: "CRM updated instantly", desc: "Customer records in HubSpot or Salesforce are populated with direct intent tags and transcript summaries." },
+  { step: 5, label: "Team notified in real-time", desc: "A beautifully formatted rich Slack or MS Teams alert tags team members with action items." },
+  { step: 6, label: "Analytics dashboard updated", desc: "Telemetry charts and pipeline numbers update dynamically with zero latency." }
+];
 
 export default function AiAutomationPage() {
   // --- Hero State ---
   const [tickerIndex, setTickerIndex] = useState(0);
-  const tickerTexts = [
-    "Automating workflows...",
-    "Connecting platforms...",
-    "Processing operations...",
-    "Reducing manual tasks..."
-  ];
 
   // --- Live Operations Dashboard State ---
   const [activeStreamIndex, setActiveStreamIndex] = useState(0);
-  const operationsStream = [
-    {
-      id: 0,
-      input: { label: "Incoming Lead", desc: "HubSpot Form Ingested", value: "$42,500" },
-      brain: { text: "Qualifying Intent & Sentiment", model: "OpenAI GPT-4o" },
-      output: { label: "CRM Lead Active", desc: "Auto Routed & Slack Notified", status: "Completed" }
-    },
-    {
-      id: 1,
-      input: { label: "Payment Received", desc: "Stripe Invoice Successful", value: "$12,400" },
-      brain: { text: "Drafting PDF Receipt & Ledger Record", model: "V2 Finance Agent" },
-      output: { label: "Invoice Emailed", desc: "QuickBooks Synced & Archived", status: "Synced" }
-    },
-    {
-      id: 2,
-      input: { label: "Support Ticket", desc: "API Sync Failure Logged", value: "Severity 2" },
-      brain: { text: "Analyzing Trace Logs & Diagnostic Codes", model: "V2 Debug Engine" },
-      output: { label: "Slack Warning Alert", desc: "Jira Task Ingested", status: "Alert Sent" }
-    },
-    {
-      id: 3,
-      input: { label: "New Product Order", desc: "Headless Checkout Catalog", value: "$1,899" },
-      brain: { text: "Verifying Inventory & Dispatch Schedule", model: "Logistics Router" },
-      output: { label: "Warehouse Dispatched", desc: "Delivery Webhooks Hooked", status: "Dispatched" }
-    }
-  ];
 
   // --- Stepper State ---
   const [activeWorkflowStep, setActiveWorkflowStep] = useState(0);
-  const workflowSteps = [
-    { step: 1, label: "Customer inquiry submitted", desc: "An inbound email, lead form, or chat query triggers a webhook listener in sub-second time." },
-    { step: 2, label: "AI analyzes request intent", desc: "V2 Labs neural filters run semantic analysis via OpenAI/Gemini to extract user goals and budget parameters." },
-    { step: 3, label: "Lead routed automatically", desc: "The analyzed record is instantly routed to the optimal sales rep based on territory rules." },
-    { step: 4, label: "CRM updated instantly", desc: "Customer records in HubSpot or Salesforce are populated with direct intent tags and transcript summaries." },
-    { step: 5, label: "Team notified in real-time", desc: "A beautifully formatted rich Slack or MS Teams alert tags team members with action items." },
-    { step: 6, label: "Analytics dashboard updated", desc: "Telemetry charts and pipeline numbers update dynamically with zero latency." }
-  ];
 
   // --- Command Terminal State ---
   const [terminalLogs, setTerminalLogs] = useState<string[]>([
@@ -915,7 +917,7 @@ export default function AiAutomationPage() {
 
           <div className="relative z-10 max-w-[650px] mx-auto">
             <h2 className="text-3xl sm:text-[2.8rem] font-black tracking-tight leading-tight mb-5 text-slate-900">
-              Let's Automate Your Business Systems
+              {"Let's Automate Your Business Systems"}
             </h2>
             <p className="text-slate-500 max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-semibold">
               Our AI workflow architects are ready to blueprint custom LLM integrations, operational event triggers, and secure database bridges.

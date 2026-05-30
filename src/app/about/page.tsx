@@ -38,7 +38,7 @@ export default function AboutPage() {
     },
     {
       name: "Jevin Kalathiya",
-      role: "PHP & Laravel Developer",
+      role: "PHP & Laravel Developer / Manager",
       initials: "JK",
       quote:
         "Building scalable backend systems and efficient web applications.",
@@ -61,7 +61,7 @@ export default function AboutPage() {
     },
     {
       name: "Rishabh Tiwari",
-      role: "Social media manager/ and wordpress desinger & developer",
+      role: "Social Media Manager / Wordpress Developer / Co-Manager",
       initials: "RT",
       quote: "Transforms abstract ideas into bold visual stories.",
       gradient: "from-[#10b981] to-[#059669]",

@@ -134,7 +134,7 @@ function MouseTrackingAnimation() {
     if (!ctx) return;
 
     let animationFrameId: number;
-    const mouse = { x: -1000, y: -1000, active: false };
+    const mouse = { x: -1000, y: -1000, active: false, motion: 0 };
 
     const resizeCanvas = () => {
       canvas.width = parent.clientWidth;
@@ -153,9 +153,20 @@ function MouseTrackingAnimation() {
     }
 
     let nodes: Node[] = [];
-    const nodeCount = 110; // Perfectly balanced density across canvas
-    const connectionDist = 120; // Expanded to ensure high global connectivity
+    const connectionDist = 115; // Adjusted slightly to maintain clean grid paths with higher density
     const spotlightRadius = 250; // Active glow spotlight field
+
+    // Dynamically adjust node count based on screen width to optimize mobile layout and rendering
+    const getNodeCount = () => {
+      if (typeof window !== "undefined") {
+        if (window.innerWidth < 640) {
+          return 130; // Clean, high-performance node density for mobile screens
+        } else if (window.innerWidth < 1024) {
+          return 240; // Beautiful density for tablet screens
+        }
+      }
+      return 450; // Denser mesh for desktop monitors to fill white space
+    };
 
     // Evenly distribute nodes initially across full bounds
     const initNodes = () => {
@@ -164,7 +175,8 @@ function MouseTrackingAnimation() {
       const height = canvas.height;
       if (width === 0 || height === 0) return;
 
-      for (let i = 0; i < nodeCount; i++) {
+      const activeNodeCount = getNodeCount();
+      for (let i = 0; i < activeNodeCount; i++) {
         const vx = (Math.random() - 0.5) * 0.45;
         const vy = (Math.random() - 0.5) * 0.45;
         nodes.push({
@@ -184,6 +196,7 @@ function MouseTrackingAnimation() {
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
       mouse.active = true;
+      mouse.motion = 1.0; // Instantly boost motion energy when the mouse moves
 
       container.style.setProperty("--mouse-x", `${mouse.x}px`);
       container.style.setProperty("--mouse-y", `${mouse.y}px`);
@@ -193,13 +206,23 @@ function MouseTrackingAnimation() {
       mouse.x = -1000;
       mouse.y = -1000;
       mouse.active = false;
+      mouse.motion = 0; // Reset motion energy instantly
       container.style.setProperty("--mouse-x", `-1000px`);
       container.style.setProperty("--mouse-y", `-1000px`);
     };
 
+    // Detect touch-screen / mobile devices to avoid synthetic tap tracking clumping
+    const isTouchDevice =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(pointer: coarse)").matches ||
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0);
+
     window.addEventListener("resize", resizeCanvas);
-    parent.addEventListener("mousemove", onMouseMove);
-    parent.addEventListener("mouseleave", onMouseLeave);
+    if (!isTouchDevice) {
+      parent.addEventListener("mousemove", onMouseMove);
+      parent.addEventListener("mouseleave", onMouseLeave);
+    }
 
     resizeCanvas();
 
@@ -207,6 +230,13 @@ function MouseTrackingAnimation() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const width = canvas.width;
       const height = canvas.height;
+
+      // Smoothly decay mouse motion if stationary
+      if (mouse.active) {
+        mouse.motion += (0 - mouse.motion) * 0.015;
+      } else {
+        mouse.motion = 0;
+      }
 
       // Update particle positions and magnetic drag
       for (let i = 0; i < nodes.length; i++) {
@@ -218,14 +248,19 @@ function MouseTrackingAnimation() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < spotlightRadius) {
-            // Cushioned magnetic pull towards cursor inside active circle
-            const force = (spotlightRadius - dist) / spotlightRadius;
-            const pullStrength = 0.08 * force;
+            // Ambient pull towards cursor at distance, but gently repel when very close to prevent clumping
+            let force = (spotlightRadius - dist) / spotlightRadius;
+            if (dist < 50) {
+              // Create a 50px soft exclusion bubble under the cursor
+              force = -0.6 * (1 - dist / 50);
+            }
+            // Pull strength decays as the mouse becomes stationary to let particles float back naturally
+            const pullStrength = 0.025 * force * mouse.motion;
             node.vx += (dx / dist) * pullStrength;
             node.vy += (dy / dist) * pullStrength;
 
-            // Maintain smooth speed boundaries
-            const maxSpeed = 1.8;
+            // Maintain smooth, premium speed boundaries
+            const maxSpeed = 1.2;
             const speed = Math.sqrt(node.vx * node.vx + node.vy * node.vy);
             if (speed > maxSpeed) {
               node.vx = (node.vx / speed) * maxSpeed;
@@ -273,17 +308,17 @@ function MouseTrackingAnimation() {
 
       // 1. Pre-calculate all distance vectors to the mouse for performance
       const mouseDistances = nodes.map((node) => {
-        if (!mouse.active) return { dist: Infinity, opacity: 0.1 };
+        if (!mouse.active) return { dist: Infinity, opacity: 0.28 };
         const dist = Math.sqrt(
           (mouse.x - node.x) ** 2 + (mouse.y - node.y) ** 2,
         );
 
-        // Base ambient opacity is 10%, adding up to 85% boost as the mouse approaches
+        // Base ambient opacity is 28%, adding up to 57% boost as the mouse approaches
         const boost =
-          dist < spotlightRadius ? (1 - dist / spotlightRadius) * 0.82 : 0;
+          dist < spotlightRadius ? (1 - dist / spotlightRadius) * 0.57 * mouse.motion : 0;
         return {
           dist,
-          opacity: 0.1 + boost,
+          opacity: 0.28 + boost,
         };
       });
 
@@ -295,7 +330,10 @@ function MouseTrackingAnimation() {
         for (let j = i + 1; j < nodes.length; j++) {
           const nodeB = nodes[j];
           const dx = nodeA.x - nodeB.x;
+          if (Math.abs(dx) >= connectionDist) continue;
           const dy = nodeA.y - nodeB.y;
+          if (Math.abs(dy) >= connectionDist) continue;
+
           const distAB = Math.sqrt(dx * dx + dy * dy);
 
           if (distAB < connectionDist) {
@@ -304,11 +342,11 @@ function MouseTrackingAnimation() {
 
             const stateB = mouseDistances[j];
 
-            // Connection line is faintly visible globally, lights up when near the cursor
-            const baseLineOpacity = 0.05;
+            // Connection line is clearly visible globally, lights up when near the cursor
+            const baseLineOpacity = 0.16; // Increased from 0.12 for better ambient visibility
             const boostFactor = Math.max(
-              stateA.opacity - 0.1,
-              stateB.opacity - 0.1,
+              stateA.opacity - 0.28,
+              stateB.opacity - 0.28,
             );
             const distanceFactor = 1 - distAB / connectionDist;
             const lineOpacity =
@@ -346,10 +384,10 @@ function MouseTrackingAnimation() {
             const stateA = mouseDistances[i];
             const stateB = mouseDistances[closestIndex];
 
-            const baseLineOpacity = 0.04;
+            const baseLineOpacity = 0.14; // Increased from 0.10
             const boostFactor = Math.max(
-              stateA.opacity - 0.1,
-              stateB.opacity - 0.1,
+              stateA.opacity - 0.28,
+              stateB.opacity - 0.28,
             );
             const lineOpacity = baseLineOpacity + boostFactor * 0.2;
 
@@ -376,8 +414,8 @@ function MouseTrackingAnimation() {
         ctx.fill();
 
         // Secondary glowing halos under active spotlights
-        if (state.opacity > 0.6) {
-          ctx.strokeStyle = `rgba(6, 182, 212, ${(state.opacity - 0.6) * 0.4})`;
+        if (state.opacity > 0.65) {
+          ctx.strokeStyle = `rgba(6, 182, 212, ${(state.opacity - 0.65) * 0.4})`;
           ctx.beginPath();
           ctx.arc(node.x, node.y, node.radius * 2.5, 0, Math.PI * 2);
           ctx.stroke();
@@ -955,7 +993,7 @@ export default function Home() {
       <section className="py-12 md:py-16 bg-white border-y border-black/[0.03] overflow-hidden select-none">
         <div className="text-center mb-10 md:mb-12">
           <span className="text-[0.7rem] md:text-xs font-black uppercase text-[#64748B]/80 tracking-[0.25em] select-none">
-            TRUSTED BY LEADING COMPANIES WE'VE WORKED WITH
+            {"TRUSTED BY LEADING COMPANIES WE'VE WORKED WITH"}
           </span>
         </div>
         <div className="relative flex max-w-[100vw] overflow-hidden">
@@ -1606,7 +1644,7 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-16">
             <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">
-              Founders' Choice
+              {"Founders' Choice"}
             </p>
             <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
               Why Startups Choose <span className="text-[#1161ed]">V2Labs</span>

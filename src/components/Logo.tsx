@@ -10,8 +10,6 @@ interface LogoProps {
 }
 
 export default function Logo({
-  showText = true,
-  showTagline = true,
   dark = false,
   className = "",
 }: LogoProps) {

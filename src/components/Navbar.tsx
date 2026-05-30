@@ -80,10 +80,13 @@ export default function Navbar() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close mobile sidebar on route change
+  // Close mobile sidebar on route change asynchronously to avoid synchronous cascading renders
   useEffect(() => {
-    setIsMenuOpen(false);
-    setIsMobileServicesOpen(false);
+    const timer = setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsMobileServicesOpen(false);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   const services = [

@@ -806,7 +806,7 @@ export default function UiUxBrandPage() {
 
           <div className="relative z-10 max-w-[650px] mx-auto">
             <h2 className="text-3xl sm:text-[2.8rem] font-black tracking-tight leading-tight mb-5 text-slate-900">
-              Let's Design Your Future Identity
+              {"Let's Design Your Future Identity"}
             </h2>
             <p className="text-slate-500 max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-semibold">
               Our UI/UX specialists are ready to architect responsive wireframe
