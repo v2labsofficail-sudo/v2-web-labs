@@ -197,14 +197,14 @@ const serviceGroupDescriptions: Record<string, string> = {
 };
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ||
-  "http://127.0.0.1:8000";
+  "http://madhavsolutions.tech/api";
 const CLIENT_APP_KEY =
   process.env.NEXT_RAW_PUBLIC_CLIENT_APP_KEY ||
-  "ca58164177924b6871806cfb91390bdb0d5a48336dc28a3902283dbf617be731";
+  "not defined";
 
 const NEXT_API_SIGN_SECRET =
   process.env.NEXT_API_SIGN_SECRET ||
-  "9f7a6c8e5b4d3a2f1e0d9c8b7a6e5f4d";
+  "not defined";
 
 function base64ToBytes(base64: string): Uint8Array {
   const binaryString = atob(base64.replace("base64:", ""));
