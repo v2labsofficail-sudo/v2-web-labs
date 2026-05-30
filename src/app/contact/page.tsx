@@ -204,7 +204,6 @@ const CLIENT_APP_KEY =
 
 const NEXT_API_SIGN_SECRET =
   process.env.NEXT_API_SIGN_SECRET ||
-  process.env.NEXT_RAW_PUBLIC_API_SIGN_SECRET ||
   "9f7a6c8e5b4d3a2f1e0d9c8b7a6e5f4d";
 
 function base64ToBytes(base64: string): Uint8Array {
