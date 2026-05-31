@@ -347,7 +347,7 @@ export default function PrivacyPage() {
                   </ul>
                   <p className="mt-2 text-xs bg-slate-50 border border-slate-200/50 p-4.5 rounded-2xl text-slate-500 leading-relaxed font-semibold">
                     To exercise any of these security choices, please submit a
-                    written coordinate request to v2labsglobal@gmail.com. We will
+                    written coordinate request to contact@v2labsglobal.com. We will
                     process and respond to all requests within 30 calendar days.
                   </p>
                 </div>
@@ -418,10 +418,10 @@ export default function PrivacyPage() {
                           Email Coordinates
                         </h4>
                         <a
-                          href="mailto:v2labsglobal@gmail.com"
+                          href="mailto:contact@v2labsglobal.com"
                           className="text-slate-800 font-extrabold text-xs hover:text-[#1161ed] transition-colors"
                         >
-                          v2labsglobal@gmail.com
+                          contact@v2labsglobal.com
                         </a>
                       </div>
                     </div>

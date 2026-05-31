@@ -524,7 +524,7 @@ export default function Home() {
     {
       question: "How do we kickstart our project with V2Labs today?",
       answer:
-        "Simply reach out via v2labsglobal@gmail.com or click 'Get Started' to schedule a direct discovery consultation with our product and engineering team.",
+        "Simply reach out via contact@v2labsglobal.com or click 'Get Started' to schedule a direct discovery consultation with our product and engineering team.",
     },
   ];
 

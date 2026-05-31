@@ -659,10 +659,10 @@ export default function ContactPage() {
                       Email Us
                     </h4>
                     <a
-                      href="mailto:hello@v2labs.co"
+                      href="mailto:contact@v2labsglobal.com"
                       className="text-sm text-white font-semibold hover:text-[#1161ed] transition-colors"
                     >
-                      hello@v2labs.co
+                      contact@v2labsglobal.com
                     </a>
                   </div>
                 </div>
