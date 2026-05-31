@@ -39,8 +39,11 @@ export async function POST(req: Request) {
 
   const timestamp = Math.floor(Date.now() / 1000).toString();
 
+
+  const requestBodyString = JSON.stringify(payload);
+
   const signature = generateSignature(
-    payload,
+    requestBodyString,
     timestamp,
     APP_KEY,
     SECRET
@@ -56,7 +59,7 @@ export async function POST(req: Request) {
         "X-Timestamp": timestamp,
         "X-Signature": signature,
       },
-      body: JSON.stringify(payload),
+      body: requestBodyString,
     }
   );
 
