@@ -671,7 +671,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="container mx-auto px-6 relative overflow-hidden">
+    <div className="container mx-auto px-6 relative overflow-hidden">
       {/* Background Soft Mesh Gradients for Premium Studio Feel */}
       <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
       <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
@@ -1932,6 +1932,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
