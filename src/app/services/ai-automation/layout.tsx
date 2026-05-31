@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, buildBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   title: "AI Solutions Services",
@@ -19,5 +19,19 @@ export default function AiAutomationLayout({
 }: {
   children: ReactNode;
 }) {
-  return children;
+  const breadcrumbJson = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "AI Solutions Services", path: "/services/ai-automation" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
+      />
+      {children}
+    </>
+  );
 }

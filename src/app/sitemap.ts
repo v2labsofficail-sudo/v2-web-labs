@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl, publicRoutes } from "@/lib/seo";
+import { blogCategories } from "@/lib/site-data";
 
 const homepage = new Set<string>(["/"]);
 const priorityRoutes = new Set<string>([
@@ -16,8 +17,12 @@ const priorityRoutes = new Set<string>([
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const dynamicCategoryRoutes = blogCategories.map(
+    (category) => `/blog/category/${category.slug}` as const
+  );
+  const allRoutes = [...publicRoutes, ...dynamicCategoryRoutes];
 
-  return publicRoutes.map((route) => ({
+  return allRoutes.map((route) => ({
     url: absoluteUrl(route),
     lastModified: now,
     changeFrequency: homepage.has(route) ? "weekly" : "monthly",

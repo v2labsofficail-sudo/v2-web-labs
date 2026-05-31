@@ -67,11 +67,6 @@ export const publicRoutes = [
   "/services/ui-ux-brand",
   "/services/saas-product",
   "/services/digital-marketing",
-  "/blog/category/ai-automation",
-  "/blog/category/web-development",
-  "/blog/category/branding",
-  "/blog/category/erp-crm",
-  "/blog/category/digital-marketing",
 ] as const;
 
 export function absoluteUrl(path = "/") {
@@ -99,17 +94,11 @@ export function buildPageMetadata({
   const ogImage = buildOgImageUrl(title, description);
 
   return {
-    title: {
-      absolute: fullTitle,
-    },
+    title: title,
     description,
     keywords: [...siteConfig.defaultKeywords, ...keywords],
     alternates: {
       canonical: url,
-      languages: {
-        "en-US": url,
-        "x-default": url,
-      },
     },
     openGraph: {
       title: fullTitle,
@@ -221,3 +210,31 @@ export const structuredData = {
     },
   },
 };
+
+export function buildBreadcrumbJsonLd(segments: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": segments.map((seg, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "name": seg.name,
+      "item": absoluteUrl(seg.path),
+    })),
+  };
+}
+
+export function buildFaqJsonLd(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+}

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
@@ -226,24 +224,6 @@ export default function WebPlatformPage() {
           description="This cluster should help users move from a web development entry point into AI, branding, ERP CRM, SaaS, and marketing services without dead ends."
         />
       </div>
-
-      {/* Embedded CSS Custom Keyframe animations for elite visual float */}
-      <style jsx global>{`
-        @keyframes float {
-          0% {
-            transform: translateY(0px) scale(1);
-          }
-          50% {
-            transform: translateY(-20px) scale(1.05);
-          }
-          100% {
-            transform: translateY(0px) scale(1);
-          }
-        }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 }
