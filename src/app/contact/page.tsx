@@ -195,16 +195,6 @@ const serviceGroupDescriptions: Record<string, string> = {
   "Infrastructure and Integrations":
     "Connected platforms, mobile experiences, APIs, and cloud-ready engineering foundations.",
 };
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ||
-  "http://madhavsolutions.tech/api";
-const CLIENT_APP_KEY =
-  process.env.NEXT_RAW_PUBLIC_CLIENT_APP_KEY ||
-  "not defined";
-
-const NEXT_API_SIGN_SECRET =
-  process.env.NEXT_API_SIGN_SECRET ||
-  "not defined";
 
 function base64ToBytes(base64: string): Uint8Array {
   const binaryString = atob(base64.replace("base64:", ""));
@@ -221,52 +211,6 @@ function hexToBytes(hex: string): Uint8Array {
     bytes[i / 2] = parseInt(hex.substring(i, i + 2), 16);
   }
   return bytes;
-}
-
-async function generateDynamicHMACSignature(
-  requestBodyString: string,
-  timestamp: string,
-): Promise<string> {
-  const encoder = new TextEncoder();
-  const rawAppKeyBytes = hexToBytes(CLIENT_APP_KEY);
-  const timestampBytes = encoder.encode(timestamp);
-  const signSecretBytes = hexToBytes(NEXT_API_SIGN_SECRET);
-
-  // Concatenate bytes: rawAppKeyBytes + timestampBytes + signSecretBytes
-  const combinedBytes = new Uint8Array(
-    rawAppKeyBytes.length + timestampBytes.length + signSecretBytes.length,
-  );
-  combinedBytes.set(rawAppKeyBytes, 0);
-  combinedBytes.set(timestampBytes, rawAppKeyBytes.length);
-  combinedBytes.set(
-    signSecretBytes,
-    rawAppKeyBytes.length + timestampBytes.length,
-  );
-
-  // Compute SHA-256 hash of combinedBytes to get the 32-byte dynamic key
-  const dynamicKeyBuffer = await window.crypto.subtle.digest(
-    "SHA-256",
-    combinedBytes,
-  );
-
-  // Import dynamicKeyBuffer as HMAC-SHA256 key
-  const cryptoKey = await window.crypto.subtle.importKey(
-    "raw",
-    dynamicKeyBuffer,
-    { name: "HMAC", hash: { name: "SHA-256" } },
-    false,
-    ["sign"],
-  );
-
-  const bodyBytes = encoder.encode(requestBodyString);
-  const signatureBuffer = await window.crypto.subtle.sign(
-    "HMAC",
-    cryptoKey,
-    bodyBytes,
-  );
-
-  const hashArray = Array.from(new Uint8Array(signatureBuffer));
-  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
 function CustomSelect({
@@ -524,23 +468,13 @@ export default function ContactPage() {
           typeof window !== "undefined" ? window.location.href : "/contact",
       };
 
-      const requestBodyString = JSON.stringify(payload);
-      const timestamp = Math.floor(Date.now() / 1000).toString();
-      const signature = await generateDynamicHMACSignature(
-        requestBodyString,
-        timestamp,
-      );
-
-      const response = await fetch(`${API_BASE_URL}/leads`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-App-Key": CLIENT_APP_KEY,
-          "X-Timestamp": timestamp,
-          "X-Signature": signature,
-        },
-        body: requestBodyString,
-      });
+      const response = await fetch("/api/leads", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(payload),
+});
 
       const data = await response.json();
 
@@ -725,10 +659,10 @@ export default function ContactPage() {
                       Email Us
                     </h4>
                     <a
-                      href="mailto:v2labsglobal@gmail.com"
+                      href="mailto:hello@v2labs.co"
                       className="text-sm text-white font-semibold hover:text-[#1161ed] transition-colors"
                     >
-                      v2labsglobal@gmail.com
+                      hello@v2labs.co
                     </a>
                   </div>
                 </div>
