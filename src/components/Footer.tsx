@@ -190,7 +190,7 @@ export default function Footer() {
           </h4>
           <div className="flex flex-col gap-4">
             <a
-              href="mailto:v2labsglobal@gmail.com"
+              href="mailto:contact@v2labsglobal.com"
               className="flex items-center gap-3 text-[#94A3B8] hover:text-white text-[0.88rem] transition-colors duration-300 font-Outfit group"
             >
               <svg
@@ -207,7 +207,7 @@ export default function Footer() {
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <span>v2labsglobal@gmail.com</span>
+              <span>contact@v2labsglobal.com</span>
             </a>
             <div className="flex items-center gap-3 text-[#94A3B8] text-[0.88rem] font-Outfit">
               <svg

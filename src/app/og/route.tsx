@@ -115,7 +115,7 @@ export async function GET(request: NextRequest) {
           }}
         >
           <div>https://v2labsglobal.com</div>
-          <div>v2labsglobal@gmail.com</div>
+          <div>contact@v2labsglobal.com</div>
         </div>
       </div>
     ),

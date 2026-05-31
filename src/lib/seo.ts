@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "V2Labs Global",
   shortName: "V2Labs",
   url: "https://v2labsglobal.com",
-  email: "v2labsglobal@gmail.com",
+  email: "contact@v2labsglobal.com",
   locale: "en_US",
   defaultTitle:
     "V2Labs Global | AI Solutions Company, Web Development Company & Branding Agency",
