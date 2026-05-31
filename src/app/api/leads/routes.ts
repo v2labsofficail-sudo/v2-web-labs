@@ -47,7 +47,7 @@ export async function POST(req: Request) {
   );
 
   const response = await fetch(
-    `${process.env.API_BASE_URL}/leads`,
+    `http://madhavsolutions.tech/api/leads`,
     {
       method: "POST",
       headers: {
