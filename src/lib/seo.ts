@@ -24,6 +24,7 @@ export const siteConfig = {
     "Automation Agency",
     "V2Labs Services",
     "V2Labs Portfolio",
+    "V2Labs instagram",
     "V2Labs Contact",
     "v2 labs global ai solutions",
     "v2 labs global web development",
