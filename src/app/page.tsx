@@ -523,7 +523,7 @@ export default function Home() {
     {
       question: "How do we kickstart our project with V2Labs today?",
       answer:
-        "Simply reach out via hello@v2labs.co or click 'Get Started' to schedule a direct discovery consultation with our product and engineering team.",
+        "Simply reach out via v2labsglobal@gmail.com or click 'Get Started' to schedule a direct discovery consultation with our product and engineering team.",
     },
   ];
 
@@ -726,6 +726,21 @@ export default function Home() {
                 </div>
                 <span>How it works</span>
               </button>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-sm font-bold">
+              <Link
+                href="/services"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700 transition hover:border-[#1161ed] hover:text-[#1161ed]"
+              >
+                Explore services
+              </Link>
+              <Link
+                href="/about"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700 transition hover:border-[#1161ed] hover:text-[#1161ed]"
+              >
+                Meet the team
+              </Link>
             </div>
 
           </div>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
+import { serviceItems } from "@/lib/site-data";
 
 // --- Icons (Clean, Professional SVG elements) ---
 const Icons = {
@@ -89,44 +90,23 @@ export default function Navbar() {
     return () => clearTimeout(timer);
   }, [pathname]);
 
-  const services = [
-    { 
-      name: "SaaS & Product Development", 
-      desc: "High-scale multi-tenant dashboards & tools", 
-      href: "/services/saas-product", 
-      icon: <Icons.Ecom /> 
-    },
-    { 
-      name: "ERP & CRM Systems", 
-      desc: "Secure operational databases & sync grids", 
-      href: "/services/erp-crm", 
-      icon: <Icons.Database /> 
-    },
-    { 
-      name: "AI Automation Solutions", 
-      desc: "Autonomous workflow agents & LLM pipelines", 
-      href: "/services/ai-automation", 
-      icon: <Icons.UiUx /> 
-    },
-    { 
-      name: "Web Platform Development", 
-      desc: "Sub-second static & dynamic React platforms", 
-      href: "/services/web-platform", 
-      icon: <Icons.Web /> 
-    },
-    { 
-      name: "Video Editing & Motion Editing", 
-      desc: "Cinematic, high-retention post-production Cuts", 
-      href: "/services/video-motion", 
-      icon: <Icons.Video /> 
-    },
-    { 
-      name: "UI/UX & Brand Systems", 
-      desc: "Atomic Figma components & spacing guidelines", 
-      href: "/services/ui-ux-brand", 
-      icon: <Icons.Design /> 
-    },
-  ];
+  const services = serviceItems.map((service) => ({
+    ...service,
+    name: service.title,
+    desc: service.summary,
+    icon:
+      service.slug === "saas-product"
+        ? <Icons.Ecom />
+        : service.slug === "erp-crm"
+          ? <Icons.Database />
+          : service.slug === "ai-automation"
+            ? <Icons.UiUx />
+            : service.slug === "web-platform"
+              ? <Icons.Web />
+              : service.slug === "video-motion"
+                ? <Icons.Video />
+                : <Icons.Design />,
+  }));
 
   return (
     <header className="sticky top-0 left-0 w-full h-20 bg-white border-b border-slate-200/70 shadow-[0_4px_20px_rgba(15,23,42,0.04)] z-[1000] flex items-center select-none">
@@ -206,6 +186,13 @@ export default function Navbar() {
                   </p>
                 </div>
                 
+                <Link 
+                  href="/services"
+                  className="inline-flex items-center gap-1 text-[0.74rem] font-black text-slate-700 hover:text-[#1161ed] transition-colors group/promo mt-4 select-none"
+                >
+                  <span>Explore all services</span>
+                </Link>
+
                 <Link 
                   href="/contact" 
                   className="inline-flex items-center gap-1 text-[0.74rem] font-black text-[#1161ed] hover:text-[#0c4ec3] transition-colors group/promo mt-4 select-none"
@@ -365,6 +352,18 @@ export default function Navbar() {
               >
                 <div className="overflow-hidden">
                   <div className="grid gap-2 pb-2">
+                    <Link 
+                      href="/services"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="w-full flex items-center justify-between gap-3.5 p-3.5 rounded-xl bg-[#1161ed]/5 border border-[#1161ed]/10 hover:bg-[#1161ed]/10 active:scale-[0.99] transition-all group"
+                    >
+                      <span className="text-[0.84rem] font-extrabold text-slate-800">
+                        Explore all services
+                      </span>
+                      <svg className="w-3.5 h-3.5 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                     {services.map((s) => (
                       <Link 
                         key={s.href} 

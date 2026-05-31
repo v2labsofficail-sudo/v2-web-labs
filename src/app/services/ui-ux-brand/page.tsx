@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
 export default function UiUxBrandPage() {
   // Figma Sandbox interactive mode
@@ -867,6 +868,13 @@ export default function UiUxBrandPage() {
           animation: svgDraw 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards infinite;
         }
       `}</style>
+      <div className="max-w-[1200px] mx-auto px-6 pb-12">
+        <RelatedServiceLinks
+          currentSlug="ui-ux-brand"
+          heading="Support branding intent with service-cluster links"
+          description="Branding pages should naturally feed visitors toward web development, SaaS, AI, and marketing pages because those projects usually overlap in real buying journeys."
+        />
+      </div>
     </div>
   );
 }

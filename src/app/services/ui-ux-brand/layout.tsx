@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Branding Agency and UI UX Services",
+  title: "Branding Services",
   description:
     "V2Labs Global is a branding agency crafting UI UX systems, design language foundations, prototypes, and visual identities for digital products.",
   path: "/services/ui-ux-brand",

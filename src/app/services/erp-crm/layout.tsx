@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "ERP CRM Solutions",
+  title: "ERP CRM Services",
   description:
     "V2Labs Global designs and develops ERP CRM solutions, workflow automation systems, internal dashboards, and business software for operational clarity.",
   path: "/services/erp-crm",

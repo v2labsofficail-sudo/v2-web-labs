@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
 // --- Custom clean SVG icons for enterprise CRM/ERP ---
 const SVG = {
@@ -851,6 +852,11 @@ export default function ErpCrmPage() {
           </div>
         </section>
 
+        <RelatedServiceLinks
+          currentSlug="erp-crm"
+          heading="Guide ERP and CRM visitors into neighboring commercial pages"
+          description="Operations-focused users often need CRM delivery, AI automation, SaaS layers, and digital marketing support together. This cross-link block keeps those paths visible."
+        />
       </div>
     </div>
   );

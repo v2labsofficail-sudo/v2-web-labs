@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
+import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
 export default function WebPlatformPage() {
   const STACKS = [
@@ -220,6 +220,11 @@ export default function WebPlatformPage() {
           </div>
         </section>
 
+        <RelatedServiceLinks
+          currentSlug="web-platform"
+          heading="Connect web development with adjacent solution pages"
+          description="This cluster should help users move from a web development entry point into AI, branding, ERP CRM, SaaS, and marketing services without dead ends."
+        />
       </div>
 
       {/* Embedded CSS Custom Keyframe animations for elite visual float */}

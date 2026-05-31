@@ -725,10 +725,10 @@ export default function ContactPage() {
                       Email Us
                     </h4>
                     <a
-                      href="mailto:hello@v2labs.co"
+                      href="mailto:v2labsglobal@gmail.com"
                       className="text-sm text-white font-semibold hover:text-[#1161ed] transition-colors"
                     >
-                      hello@v2labs.co
+                      v2labsglobal@gmail.com
                     </a>
                   </div>
                 </div>

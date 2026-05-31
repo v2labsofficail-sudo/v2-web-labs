@@ -37,6 +37,7 @@ export const siteConfig = {
   socialLinks: [
     "https://www.linkedin.com/company/v2labsco/",
     "https://x.com/v2labsglobal",
+    "https://www.instagram.com/v2.labsglobal?igsh=bmd5ZzJrcHl4NGls",
   ],
 } as const;
 
@@ -45,12 +46,15 @@ type PageMetadataInput = {
   description: string;
   path: string;
   keywords?: string[];
+  type?: "website" | "article";
 };
 
 export const publicRoutes = [
   "/",
   "/about",
+  "/services",
   "/work",
+  "/blog",
   "/contact",
   "/careers",
   "/privacy",
@@ -61,10 +65,25 @@ export const publicRoutes = [
   "/services/ai-automation",
   "/services/ui-ux-brand",
   "/services/saas-product",
+  "/services/digital-marketing",
+  "/blog/category/ai-automation",
+  "/blog/category/web-development",
+  "/blog/category/branding",
+  "/blog/category/erp-crm",
+  "/blog/category/digital-marketing",
 ] as const;
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteConfig.url).toString();
+}
+
+export function buildOgImageUrl(title: string, description: string) {
+  const params = new URLSearchParams({
+    title,
+    description,
+  });
+
+  return absoluteUrl(`/og?${params.toString()}`);
 }
 
 export function buildPageMetadata({
@@ -72,16 +91,24 @@ export function buildPageMetadata({
   description,
   path,
   keywords = [],
+  type = "website",
 }: PageMetadataInput): Metadata {
   const fullTitle = `${title} | ${siteConfig.name}`;
   const url = absoluteUrl(path);
+  const ogImage = buildOgImageUrl(title, description);
 
   return {
-    title,
+    title: {
+      absolute: fullTitle,
+    },
     description,
     keywords: [...siteConfig.defaultKeywords, ...keywords],
     alternates: {
       canonical: url,
+      languages: {
+        "en-US": url,
+        "x-default": url,
+      },
     },
     openGraph: {
       title: fullTitle,
@@ -89,13 +116,13 @@ export function buildPageMetadata({
       url,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
-      type: "website",
+      type,
       images: [
         {
-          url: siteConfig.ogImage,
+          url: ogImage,
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} brand cover`,
+          alt: `${fullTitle} open graph image`,
         },
       ],
     },
@@ -103,7 +130,9 @@ export function buildPageMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [siteConfig.ogImage],
+      creator: "@v2labsglobal",
+      site: "@v2labsglobal",
+      images: [ogImage],
     },
     robots: {
       index: true,
@@ -121,7 +150,6 @@ export function buildPageMetadata({
 
 export const structuredData = {
   organization: {
-    "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
@@ -149,13 +177,14 @@ export const structuredData = {
       "Automation",
     ],
   },
-  localBusiness: {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${siteConfig.url}/#localbusiness`,
+  professionalService: {
+    "@type": "ProfessionalService",
+    "@id": `${siteConfig.url}/#professional-service`,
     name: siteConfig.name,
     url: siteConfig.url,
     email: siteConfig.email,
+    description:
+      "V2Labs Global provides AI solutions, web development, branding, ERP CRM implementation, SaaS engineering, and digital marketing services for growth-focused companies.",
     image: absoluteUrl("/logo-cover-v2labs.jpeg"),
     logo: absoluteUrl("/logo-cover-v2labs.jpeg"),
     areaServed: "Worldwide",
@@ -167,10 +196,14 @@ export const structuredData = {
       "ERP CRM Solutions",
       "UI UX Design",
       "SaaS Product Development",
+      "Digital Marketing",
     ],
+    sameAs: siteConfig.socialLinks,
+    provider: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
   },
   website: {
-    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${siteConfig.url}/#website`,
     name: siteConfig.name,
@@ -179,6 +212,11 @@ export const structuredData = {
     inLanguage: "en",
     publisher: {
       "@id": `${siteConfig.url}/#organization`,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteConfig.url}/blog?query={search_term_string}`,
+      "query-input": "required name=search_term_string",
     },
   },
 };

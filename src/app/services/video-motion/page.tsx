@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
 const PORTFOLIO_VIDEOS = [
   {
@@ -868,9 +869,12 @@ export default function VideoMotionPage() {
             </Link>
           </div>
         </section>
+        <RelatedServiceLinks
+          currentSlug="video-motion"
+          heading="Tie motion content back to service and marketing pages"
+          description="Video content can support branding, campaigns, SEO landing pages, and product launches, so it should point back into those revenue-driving service pages."
+        />
       </div>
-
-
     </div>
   );
 }

@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 
@@ -115,7 +112,7 @@ export default function Footer() {
               Work
             </Link>
             <Link
-              href="/#services"
+              href="/services"
               className="text-[#94A3B8] hover:text-white text-[0.88rem] font-medium transition-all duration-300 hover:translate-x-1 font-Outfit"
             >
               Services
@@ -177,6 +174,12 @@ export default function Footer() {
             >
               UI/UX & Branding
             </Link>
+            <Link
+              href="/services/digital-marketing"
+              className="text-[#94A3B8] hover:text-white text-[0.88rem] font-medium transition-all duration-300 hover:translate-x-1 font-Outfit"
+            >
+              Digital Marketing
+            </Link>
           </nav>
         </div>
 
@@ -187,7 +190,7 @@ export default function Footer() {
           </h4>
           <div className="flex flex-col gap-4">
             <a
-              href="mailto:contact@v2labs.co"
+              href="mailto:v2labsglobal@gmail.com"
               className="flex items-center gap-3 text-[#94A3B8] hover:text-white text-[0.88rem] transition-colors duration-300 font-Outfit group"
             >
               <svg
@@ -204,7 +207,7 @@ export default function Footer() {
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <span>contact@v2labs.co</span>
+              <span>v2labsglobal@gmail.com</span>
             </a>
             <div className="flex items-center gap-3 text-[#94A3B8] text-[0.88rem] font-Outfit">
               <svg
@@ -230,7 +233,7 @@ export default function Footer() {
       {/* Bottom Legal / Trademark bar */}
       <div className="border-t border-white/[0.04] py-[24px] relative z-10">
         <div className="flex flex-col sm:flex-row justify-between items-center text-[#64748B] text-[0.8rem] max-w-[1200px] mx-auto px-6 gap-4 sm:gap-0 text-center sm:text-left font-Outfit">
-          <p>© {currentYear} V2 Labs. All rights reserved.</p>
+          <p>© {currentYear} V2Labs Global. All rights reserved.</p>
           <div className="flex gap-[24px]">
             <Link
               href="/privacy"

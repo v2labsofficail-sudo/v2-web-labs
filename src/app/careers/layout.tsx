@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Careers at V2Labs Global",
+  title: "Careers",
   description:
     "Join V2Labs Global and help build AI solutions, web products, branding systems, and ERP CRM platforms for growing businesses.",
   path: "/careers",

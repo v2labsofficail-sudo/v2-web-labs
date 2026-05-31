@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
 // --- Vector SVGs for floating ecosystem nodes and models ---
 const ECO_ICONS = {
@@ -976,6 +977,13 @@ export default function AiAutomationPage() {
           animation: svgDraw 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards infinite;
         }
       `}</style>
+      <div className="max-w-[1200px] mx-auto px-6 pb-12">
+        <RelatedServiceLinks
+          currentSlug="ai-automation"
+          heading="Move AI visitors into the broader solution cluster"
+          description="AI pages should feed traffic into web development, SaaS delivery, ERP CRM implementation, branding, and marketing pages so the intent path keeps expanding instead of ending."
+        />
+      </div>
     </div>
   );
 }

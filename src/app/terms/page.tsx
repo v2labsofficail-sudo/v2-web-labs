@@ -311,8 +311,8 @@ export default function TermsPage() {
                         <h4 className="text-[10px] font-extrabold uppercase text-slate-400 tracking-wider leading-none mb-1">
                           Email Coordinates
                         </h4>
-                        <a href="mailto:hello@v2labs.co" className="text-slate-800 font-extrabold text-xs hover:text-[#1161ed] transition-colors">
-                          hello@v2labs.co
+                        <a href="mailto:v2labsglobal@gmail.com" className="text-slate-800 font-extrabold text-xs hover:text-[#1161ed] transition-colors">
+                          v2labsglobal@gmail.com
                         </a>
                       </div>
                     </div>

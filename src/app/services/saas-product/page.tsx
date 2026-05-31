@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
 // --- Custom clean SVG icons for SaaS ---
 const SVG = {
@@ -702,6 +703,11 @@ export default function SaasProductPage() {
           </div>
         </section>
 
+        <RelatedServiceLinks
+          currentSlug="saas-product"
+          heading="Keep SaaS demand connected to the rest of the service architecture"
+          description="SaaS buyers often compare platform builds, AI features, ERP integrations, and brand systems. These links help both users and crawlers understand that relationship."
+        />
       </div>
     </div>
   );

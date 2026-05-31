@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { siteConfig, structuredData } from "@/lib/seo";
+import { buildOgImageUrl, siteConfig, structuredData } from "@/lib/seo";
 import "./globals.css";
+
+const defaultOgImage = buildOgImageUrl(
+  "AI Solutions, Web Development and Branding",
+  siteConfig.defaultDescription,
+);
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -14,6 +19,10 @@ export const metadata: Metadata = {
   keywords: [...siteConfig.defaultKeywords],
   alternates: {
     canonical: siteConfig.url,
+    languages: {
+      "en-US": siteConfig.url,
+      "x-default": siteConfig.url,
+    },
   },
   openGraph: {
     title: siteConfig.defaultTitle,
@@ -24,10 +33,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: siteConfig.ogImage,
+        url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} brand cover`,
+        alt: `${siteConfig.defaultTitle} open graph image`,
       },
     ],
   },
@@ -35,7 +44,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.defaultTitle,
     description: siteConfig.defaultDescription,
-    images: [siteConfig.ogImage],
+    creator: "@v2labsglobal",
+    site: "@v2labsglobal",
+    images: [defaultOgImage],
   },
   robots: {
     index: true,
@@ -59,7 +70,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       structuredData.organization,
-      structuredData.localBusiness,
+      structuredData.professionalService,
       structuredData.website,
     ],
   };

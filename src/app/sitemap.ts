@@ -4,10 +4,14 @@ import { absoluteUrl, publicRoutes } from "@/lib/seo";
 const homepage = new Set<string>(["/"]);
 const priorityRoutes = new Set<string>([
   "/",
+  "/services",
+  "/contact",
+  "/blog",
   "/services/ai-automation",
   "/services/web-platform",
   "/services/erp-crm",
   "/services/ui-ux-brand",
+  "/services/digital-marketing",
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
