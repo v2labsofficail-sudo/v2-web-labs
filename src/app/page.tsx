@@ -472,6 +472,82 @@ const PARTNER_COMPANIES = [
   { name: "WebProArts", logo: "/companies/webpro-arts.jpeg" },
 ] as const;
 
+function TiltIllustration() {
+  const cardRef = React.useRef<HTMLDivElement>(null);
+  const [coords, setCoords] = React.useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    const rotateX = -(y / (rect.height / 2)) * 6;
+    const rotateY = (x / (rect.width / 2)) * 6;
+
+    setCoords({ x: rotateY, y: rotateX });
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setCoords({ x: 0, y: 0 });
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={handleMouseLeave}
+      className="relative w-full max-w-[480px] lg:max-w-full transition-all duration-500 ease-out cursor-pointer select-none"
+      style={{
+        transform: isHovered
+          ? `perspective(1000px) rotateX(${coords.y}deg) rotateY(${coords.x}deg) scale3d(1.03, 1.03, 1.03)`
+          : "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)",
+        transformStyle: "preserve-3d",
+      }}
+    >
+      <div className={isHovered ? "" : "animate-float"}>
+        <img
+          src="/hero_illustration_flat.jpg"
+          alt="V2Labs Tech Collaboration Flat Illustration"
+          className="w-full h-auto object-contain mix-blend-multiply"
+          style={{ transform: "translateZ(30px)" }}
+        />
+        
+        <div 
+          className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 bg-white/90 backdrop-blur-md border border-slate-200/60 rounded-2xl p-2.5 sm:p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
+          style={{ transform: "translateZ(65px)" }}
+        >
+          <div className="w-8 h-8 rounded-xl bg-[#1161ed]/10 text-[#1161ed] flex items-center justify-center font-black text-sm">
+            ⚡
+          </div>
+          <div className="text-left">
+            <p className="text-[9px] sm:text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">Next.js 16</p>
+            <p className="text-[7px] sm:text-[8px] font-bold text-slate-400 mt-1 leading-none">React 19 Engine</p>
+          </div>
+        </div>
+
+        <div 
+          className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white/90 backdrop-blur-md border border-slate-200/60 rounded-2xl p-2.5 sm:p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
+          style={{ transform: "translateZ(55px)" }}
+        >
+          <div className="w-8 h-8 rounded-xl bg-[#06b6d4]/10 text-[#06b6d4] flex items-center justify-center font-black text-sm">
+            🤖
+          </div>
+          <div className="text-left">
+            <p className="text-[9px] sm:text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">AI Automation</p>
+            <p className="text-[7px] sm:text-[8px] font-bold text-slate-400 mt-1 leading-none">Agentic Workflows</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
@@ -675,41 +751,38 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1161ed/[0.012]_1px,transparent_1px),linear-gradient(to_bottom,#1161ed/[0.012]_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20 pointer-events-none" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
       />
-      {/* Background Soft Mesh Gradients for Premium Studio Feel */}
       <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
       <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
-      {/* Hero Section */}
       <section
         id="hero"
         className="pt-12 pb-16 md:pt-16 md:pb-24 flex items-center relative overflow-hidden"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full relative z-10">
-          {/* Left Text Column - Bottom on Mobile / Left on Desktop */}
           <div className="lg:col-span-6 flex flex-col text-left items-start order-2 lg:order-1 mt-4 lg:mt-0">
-            <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)] animate-fade-in select-none">
+            <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)] animate-fade-in-up select-none">
               <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
               A trusted digital agency
             </div>
-            <h1 className="text-[clamp(1.8rem,5.8vw,4.4rem)] font-black leading-[1.08] text-[#0F172A] max-w-[650px] mb-4 lg:mb-6 tracking-tight text-left">
+            <h1 className="text-[clamp(1.8rem,5.8vw,4.4rem)] font-black leading-[1.08] text-[#0F172A] max-w-[650px] mb-4 lg:mb-6 tracking-tight text-left animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
               Quality digital{" "}
               <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">
                 services you
               </span>{" "}
               really want !
             </h1>
-            <p className="text-[#64748B] text-sm lg:text-[1.05rem] leading-[1.7] max-w-[500px] mb-6 lg:mb-8 text-left font-medium">
+            <p className="text-[#64748B] text-sm lg:text-[1.05rem] leading-[1.7] max-w-[500px] mb-6 lg:mb-8 text-left font-medium animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
               We are delivering top-level digital services with our
               best-experienced team. Just get started with us today and
               accelerate your growth.
             </p>
 
-            {/* Buttons Row */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center"
@@ -735,7 +808,7 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-3 text-sm font-bold">
+            <div className="mt-6 flex flex-wrap gap-3 text-sm font-bold animate-fade-in-up opacity-0" style={{ animationDelay: "600ms" }}>
               <Link
                 href="/services"
                 className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700 transition hover:border-[#1161ed] hover:text-[#1161ed]"
@@ -753,266 +826,37 @@ export default function Home() {
           </div>
 
           {/* Right Image/Graphics Column - Top on Mobile / Right on Desktop */}
-          <div className="hidden lg:flex lg:col-span-6 relative flex-row items-stretch justify-between gap-6 h-[460px] sm:h-[500px] lg:h-[550px] order-1 lg:order-2 w-full select-none">
+          <div className="col-span-1 lg:col-span-6 order-1 lg:order-2 w-full flex items-center justify-center relative select-none py-4 lg:py-0 px-4 sm:px-6 md:px-8 lg:px-12">
             {/* Soft Glow Mesh behind portrait */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] lg:w-[320px] lg:h-[320px] bg-gradient-to-tr from-[#1161ed]/15 to-[#3b82f6]/15 rounded-full blur-[60px] lg:blur-[95px] -z-10 pointer-events-none select-none animate-pulse duration-[8s]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] lg:w-[320px] lg:h-[320px] bg-gradient-to-tr from-[#1161ed]/10 to-[#06b6d4]/10 rounded-full blur-[60px] lg:blur-[95px] -z-10 pointer-events-none select-none animate-pulse duration-[8s]" />
 
             {/* Dotted Grid Pattern Background */}
-            <div className="absolute right-[-10px] top-[-10px] w-[140px] h-[140px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:22px_22px] opacity-[0.35] -z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 w-[140px] h-[140px] bg-[radial-gradient(#1161ed_2px,transparent_2px)] [background-size:20px_20px] opacity-[0.25] -z-10 pointer-events-none hidden sm:block" />
 
-            {/* Interactive Services & Tech Stack List (Left Side of Graphic Column) */}
-            <div className="flex flex-col w-[55%] md:w-[50%] lg:w-[52%] z-20 gap-3 md:gap-4 py-2">
-              {/* AI Solutions */}
-              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
-                  <svg
-                    className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="4" y="4" width="16" height="16" rx="3" />
-                    <rect x="9" y="9" width="6" height="6" rx="1" />
-                    <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
-                    AI Solutions
-                  </h3>
-                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
-                    Smart AI for Smarter Business
-                  </p>
-                </div>
-              </div>
-
-              {/* Divider Line with Dot */}
-              <div className="relative w-full py-1">
-                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
-                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-slate-900 shadow-sm" />
-              </div>
-
-              {/* Web Sites */}
-              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
-                  <svg
-                    className="w-5 h-5 transition-transform duration-500 group-hover:rotate-12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
-                    Web Sites
-                  </h3>
-                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
-                    Modern, Responsive & Fast Websites
-                  </p>
-                </div>
-              </div>
-
-              {/* Divider Line with Dot */}
-              <div className="relative w-full py-1">
-                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
-                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-slate-900 shadow-sm" />
-              </div>
-
-              {/* Branding */}
-              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
-                  <svg
-                    className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M12 2v7M12 15v7M2 12h7M15 12h7" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
-                    Branding
-                  </h3>
-                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
-                    Unique Identity, Memorable Brands
-                  </p>
-                </div>
-              </div>
-
-              {/* Divider Line with Dot */}
-              <div className="relative w-full py-1">
-                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
-                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-slate-900 shadow-sm" />
-              </div>
-
-              {/* Editing */}
-              <div className="flex items-center gap-3.5 group cursor-pointer transition-all duration-300">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-[#1161ed]/15 bg-white/90 text-slate-800 shadow-[0_4px_12px_rgba(17,97,237,0.04)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white group-hover:border-[#1161ed] group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)]">
-                  <svg
-                    className="w-5 h-5 transition-transform duration-500 group-hover:rotate-[-6deg]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="2" y="3" width="20" height="18" rx="2" ry="2" />
-                    <path d="M2 8h20M2 14h20M6 3v18M18 3v18" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-[0.84rem] sm:text-[0.92rem] font-black text-[#0F172A] tracking-tight transition-colors duration-200 group-hover:text-[#1161ed] truncate">
-                    Editing
-                  </h3>
-                  <p className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-500 leading-tight mt-0.5 truncate">
-                    Professional Video Editing Solutions
-                  </p>
-                </div>
-              </div>
-
-              {/* Terminal Divider Line with Dot (Aligned directly with index finger pointing) */}
-              <div className="relative w-full py-1">
-                <div className="w-[85%] h-[1px] bg-gradient-to-r from-slate-200 via-slate-300/80 to-transparent" />
-                <div className="absolute left-[85%] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#1161ed] shadow-[0_0_8px_rgba(17,97,237,0.8)] animate-pulse" />
-              </div>
-
-              {/* Technology Badges Column */}
-              <div className="mt-3 flex flex-row lg:flex-col flex-wrap gap-2 z-30">
-                {/* OpenAI */}
-                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
-                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-500 group-hover/tech:rotate-45">
-                    <svg
-                      className="w-4 h-4 text-[#10a37f] fill-current"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M21.3 10.3c.3-1 .1-2-.4-2.8-.5-.9-1.4-1.5-2.4-1.7-.2-.1-.4-.2-.5-.3-.2-.2-.3-.5-.3-.8V3.1c0-1.1-.6-2.1-1.6-2.6-1-.5-2.2-.4-3.1.2l-.5.3c-.3.2-.6.2-.9 0L11.1.7c-.9-.6-2.1-.7-3.1-.2C7 1 6.4 2 6.4 3.1v1.6c0 .3-.1.6-.3.8-.1.1-.3.2-.5.3-1 .2-1.9.8-2.4 1.7-.5.8-.7 1.8-.4 2.8l.3.5c.2.3.2.6 0 .9l-.3.5c-.6.9-.7 2.1-.2 3.1.5 1 1.5 1.6 2.6 1.6h1.6c.3 0 .6.1.8.3.1.1.2.3.3.5.2 1 .8 1.9 1.7 2.4.8.5 1.8.7 2.8.4l.5-.3c.3-.2.6-.2.9 0l.5.3c.9.6 2.1.7 3.1.2 1-.5 1.6-1.5 1.6-2.6v-1.6c0-.3.1-.6.3-.8.1-.1.3-.2.5-.3 1-.2 1.9-.8 2.4-1.7.5-.8.7-1.8.4-2.8l-.3-.5c-.2-.3-.2-.6 0-.9l.3-.5z" />
-                    </svg>
-                  </div>
-                  <div className="w-[1px] h-3 bg-slate-200" />
-                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">
-                    OpenAI
-                  </span>
-                </div>
-
-                {/* VN */}
-                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
-                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-300 group-hover/tech:scale-105">
-                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-[4px] bg-black text-[0.45rem] font-black text-white tracking-tighter">
-                      VN
-                    </span>
-                  </div>
-                  <div className="w-[1px] h-3 bg-slate-200" />
-                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">
-                    VN
-                  </span>
-                </div>
-
-                {/* Python */}
-                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
-                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-500 group-hover/tech:scale-110">
-                    <svg
-                      className="w-4 h-4 text-[#3776ab] fill-current"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M11.9 2c-3.1 0-2.9 1.3-2.9 1.3v1.8h3c2 0 3.7 1.7 3.7 3.7v3h1.8s1.3-.2 1.3-2.9c0-3-2.6-6.9-6.9-6.9zm.2 20c3.1 0 2.9-1.3 2.9-1.3v-1.8h-3c-2 0-3.7-1.7-3.7-3.7v-3H6.4s-1.3.2-1.3 2.9c0 3 2.6 6.9 6.9 6.9z" />
-                    </svg>
-                  </div>
-                  <div className="w-[1px] h-3 bg-slate-200" />
-                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">
-                    Python
-                  </span>
-                </div>
-
-                {/* WordPress */}
-                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
-                  <div className="w-5 h-5 flex items-center justify-center transition-transform duration-300 group-hover/tech:scale-110">
-                    <svg
-                      className="w-4 h-4 text-[#21759b] fill-current"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 1.2c-4.86 0-8.8 3.94-8.8 8.8 0 .97.16 1.9.45 2.77l5.05-13.82c-.23-.05-.46-.07-.7-.07zm7.55 10.97c-.03-.4-.2-.84-.42-1.35-.35-.78-.77-1.42-.77-2.12 0-.82.63-1.58 1.51-1.58.07 0 .14 0 .21.01A8.75 8.75 0 0 0 12 3.2c-.44 0-.86.05-1.28.13l5.04 13.8a8.77 8.77 0 0 0 3.79-4.96zM12 20.8c.84 0 1.66-.12 2.44-.34l-3.32-9.67-3.23 9.4c.8.38 1.68.61 2.61.61z" />
-                    </svg>
-                  </div>
-                  <div className="w-[1px] h-3 bg-slate-200" />
-                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">
-                    WordPress
-                  </span>
-                </div>
-
-                {/* App */}
-                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl border border-slate-200/50 bg-white/80 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-300 hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_4px_12px_rgba(17,97,237,0.06)] hover:scale-[1.02] cursor-pointer w-fit min-w-[110px] sm:min-w-[120px] group/tech select-none">
-                  <div className="w-5 h-5 flex items-center justify-center text-slate-700 transition-transform duration-300 group-hover/tech:translate-y-[-1px]">
-                    <svg
-                      className="w-3.5 h-3.5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                      <line x1="12" y1="18" x2="12.01" y2="18" />
-                    </svg>
-                  </div>
-                  <div className="w-[1px] h-3 bg-slate-200" />
-                  <span className="text-[0.68rem] sm:text-[0.74rem] font-bold text-slate-800">
-                    App
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Pointing Man Image (Right Side of Graphic Column, overlapping list) */}
-            <div className="absolute bottom-0 right-[-10px] sm:right-[-20px] lg:right-[-30px] h-[92%] sm:h-[96%] lg:h-[100%] w-auto z-10 flex justify-center items-end select-none pointer-events-none group">
-              <img
-                src="/hero_man.png"
-                alt="Digital Agency Professional"
-                className="h-full w-auto object-contain filter grayscale select-none transition-all duration-500 group-hover:scale-[1.015]"
-              />
-
-              {/* Pocket Chest Logo Overlay Badge (Aligned with shirt chest area) */}
-              <div className="absolute top-[64%] left-[46%] -translate-x-[20%] -translate-y-1/2 bg-white/95 border border-slate-200/50 rounded-xl py-0.5 px-2 flex items-center justify-center shadow-md backdrop-blur-sm transition-transform duration-300 group-hover:scale-105 pointer-events-auto">
-                <img
-                  src="/logo-cover-v2labs.jpeg"
-                  alt="V2 Labs Logo"
-                  className="h-5 w-auto object-contain mix-blend-multiply"
-                />
-              </div>
-            </div>
+            <TiltIllustration />
           </div>
         </div>
       </section>
 
-      {/* Company Logos Marquee Section */}
-      <section className="py-12 md:py-16 bg-white border-y border-black/[0.03] overflow-hidden select-none">
-        <div className="text-center mb-10 md:mb-12">
-          <span className="text-[0.7rem] md:text-xs font-black uppercase text-[#64748B]/80 tracking-[0.25em] select-none">
-            {"TRUSTED BY LEADING COMPANIES WE'VE WORKED WITH"}
-          </span>
+      <section className="py-16 md:py-20 bg-gradient-to-b from-slate-50/30 to-white border-y border-[rgba(0,0,0,0.03)] overflow-hidden select-none content-visibility-auto relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-[100px] bg-gradient-to-r from-[#1161ed]/[0.015] to-[#3b82f6]/[0.015] rounded-full blur-[120px] pointer-events-none select-none -z-10" />
+
+        <div className="flex flex-col items-center justify-center text-center mb-10 md:mb-14 px-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/60 shadow-[0_2px_10px_rgba(0,0,0,0.01)] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1161ed] animate-pulse" />
+            <span className="text-[0.62rem] sm:text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-[#1161ed]">
+              Proven Experience
+            </span>
+          </div>
+          <h3 className="text-sm sm:text-base md:text-lg font-extrabold tracking-tight text-slate-800 uppercase">
+            Trusted by Leading Companies Worldwide
+          </h3>
         </div>
+
         <div className="relative flex max-w-[100vw] overflow-hidden">
-          {/* Left and Right Ambient Fade Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
-          
+          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
+
           <div className="flex animate-marquee whitespace-nowrap items-center py-4">
             {[
               ...PARTNER_COMPANIES,
@@ -1028,16 +872,17 @@ export default function Home() {
               } else if (company.name === "Naya-Job") {
                 logoHeight = "h-14 sm:h-18 md:h-22";
               }
-              
+
               return (
-                <div 
-                  key={index} 
-                  className="mx-3 md:mx-4 flex items-center justify-center shrink-0 w-36 sm:w-44 md:w-52 h-20 sm:h-24 md:h-28 rounded-2xl border border-[#1161ed]/10 bg-white hover:border-[#1161ed]/30 hover:shadow-[0_8px_30px_rgba(17,97,237,0.06)] hover:-translate-y-0.5 transition-all duration-300 select-none cursor-pointer"
+                <div
+                  key={index}
+                  className="mx-3 md:mx-4 flex items-center justify-center shrink-0 w-36 sm:w-44 md:w-52 h-20 sm:h-24 md:h-28 rounded-2xl border border-slate-200/40 bg-slate-50/15 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.7)] shadow-[0_4px_16px_rgba(15,23,42,0.015)] hover:border-[#1161ed]/20 hover:bg-white hover:shadow-[0_12px_30px_rgba(17,97,237,0.06)] hover:-translate-y-1 transition-all duration-500 ease-out select-none cursor-pointer overflow-hidden group relative"
                 >
+                  <div className="absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   <img
                     src={company.logo}
                     alt={`${company.name} Logo`}
-                    className={`${logoHeight} w-auto object-contain transition-all duration-300 mix-blend-multiply`}
+                    className={`${logoHeight} w-auto object-contain transition-all duration-500 grayscale opacity-50 contrast-125 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 mix-blend-multiply`}
                   />
                 </div>
               );
@@ -1049,8 +894,11 @@ export default function Home() {
       {/* Services Grid Section */}
       <section
         id="services"
-        className="py-12 md:py-16 border-t border-[rgba(0,0,0,0.05)] relative"
+        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative content-visibility-auto overflow-hidden"
       >
+        <div className="absolute top-10 left-10 w-[250px] h-[250px] bg-[#1161ed]/[0.03] rounded-full blur-[80px] pointer-events-none select-none -z-10" />
+        <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#3b82f6]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10" />
+
         <div className="text-center mb-[60px] relative z-10">
           <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">
             Exclusive Capabilities
@@ -1060,7 +908,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 gap-3.5 sm:gap-[30px] relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[30px] relative z-10">
           {[
             {
               title: "SaaS & Product Development",
@@ -1072,7 +920,7 @@ export default function Home() {
                   height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1161ed"
+                  stroke="currentColor"
                   strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -1093,7 +941,7 @@ export default function Home() {
                   height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1161ed"
+                  stroke="currentColor"
                   strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -1115,7 +963,7 @@ export default function Home() {
                   height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1161ed"
+                  stroke="currentColor"
                   strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -1139,7 +987,7 @@ export default function Home() {
                   height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1161ed"
+                  stroke="currentColor"
                   strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -1160,7 +1008,7 @@ export default function Home() {
                   height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1161ed"
+                  stroke="currentColor"
                   strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -1193,7 +1041,7 @@ export default function Home() {
                   height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1161ed"
+                  stroke="currentColor"
                   strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -1208,21 +1056,39 @@ export default function Home() {
             <Link
               key={index}
               href={service.link}
-              className="p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] border border-black/[0.03] bg-white/70 backdrop-blur-md shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 group flex flex-col items-center text-center justify-center min-h-[140px] sm:min-h-[180px]"
+              className="p-6 sm:p-8 rounded-[24px] border border-slate-200/50 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(15,23,42,0.02)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/30 hover:bg-white/60 group flex flex-col justify-between items-start text-left min-h-[270px] sm:min-h-[290px] gpu-accelerated"
             >
-              {/* Premium Top Border Strip in Brand Gradient */}
-              <div className="h-[4px] w-full absolute top-0 left-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-t-[20px] sm:rounded-t-[24px]" />
+              <div className="absolute top-0 left-0 h-[4px] w-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] group-hover:w-full transition-all duration-500 ease-out" />
+              <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.07)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-              {/* Icon Container (Designed to look like a premium pic/emblem) */}
-              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-105 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm mb-3 sm:mb-4">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current">
-                  {service.icon}
+              <div className="w-full flex flex-col items-start">
+                <div className="w-12 h-12 rounded-xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:bg-[#1161ed] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.25)] transition-all duration-300 shadow-sm mb-5">
+                  <div className="w-6 h-6 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current transition-transform duration-300 group-hover:-translate-y-0.5">
+                    {service.icon}
+                  </div>
                 </div>
+
+                <h3 className="text-base sm:text-lg md:text-xl font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-200 font-Outfit tracking-tight leading-tight relative z-10">
+                  {service.title}
+                </h3>
+
+                <p className="text-slate-500 font-medium text-xs sm:text-sm mt-3 leading-relaxed transition-colors duration-300 group-hover:text-slate-600">
+                  {service.desc}
+                </p>
               </div>
 
-              <h3 className="text-xs sm:text-base md:text-lg font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-200 font-Outfit tracking-tight leading-tight">
-                {service.title}
-              </h3>
+              <div className="mt-6 pt-4 border-t border-slate-100 w-full flex items-center justify-between text-xs font-black text-[#1161ed] tracking-wider uppercase">
+                <span>Explore Details</span>
+                <svg
+                  className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </Link>
           ))}
         </div>
@@ -1231,7 +1097,7 @@ export default function Home() {
       {/* How We Work / Process Section */}
       <section
         id="process"
-        className="py-24 md:py-36 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
+        className="py-24 md:py-36 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
       >
         {/* Mouse Tracking Particles Animation */}
         <MouseTrackingAnimation />
@@ -1485,14 +1351,12 @@ export default function Home() {
       {/* Industries Solutions Section */}
       <section
         id="industries"
-        className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
+        className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
       >
-        {/* Soft Background Orbs */}
         <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
         <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#8b5cf6]/[0.015] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[6s]" />
 
         <div className="max-w-[1100px] mx-auto px-4 relative z-10">
-          {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-4 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
               <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
@@ -1508,7 +1372,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Modern Responsive Grid / Mobile Swipe Carousel for Industries */}
           <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 px-4 -mx-4 no-scrollbar md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:pb-0">
             {[
               {
@@ -1560,62 +1423,119 @@ export default function Home() {
                 badge: "FinTech",
                 gradient: "from-[#1161ed] to-[#8b5cf6]",
               },
-            ].map((ind, idx) => (
-              <div
-                key={idx}
-                className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md p-5 sm:p-6 shadow-[0_8px_30px_rgba(17,97,237,0.01)] hover:shadow-[0_25px_50px_rgba(17,97,237,0.05)] hover:border-[#1161ed]/20 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none"
-              >
-                {/* Premium Subtle Accent Line */}
+              {
+                name: "Your Vertical Solution",
+                desc: "Don't see your specific industry? We build bespoke operational software tailored to any complex model.",
+                image: "",
+                badge: "Bespoke",
+                gradient: "from-[#1161ed] to-[#3b82f6]",
+                isCTA: true,
+              },
+            ].map((ind, idx) => {
+              if (ind.isCTA) {
+                return (
+                  <Link
+                    key={idx}
+                    href="/contact"
+                    className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-gradient-to-br from-[#1161ed] to-[#3b82f6] p-6 shadow-[0_8px_32px_rgba(15,23,42,0.05)] hover:shadow-[0_20px_45px_rgba(17,97,237,0.15)] transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
+                  >
+                    <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] opacity-100 animate-pulse pointer-events-none" />
+                    <div className="flex flex-col gap-4 relative z-10">
+                      <div className="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center border border-white/20 mb-2">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-black text-white font-Outfit tracking-tight leading-tight">
+                        {ind.name}
+                      </h3>
+                      <p className="text-white/80 leading-relaxed text-xs sm:text-[0.8rem] font-semibold font-Outfit">
+                        {ind.desc}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-xs font-black uppercase text-white mt-6 cursor-pointer select-none font-Outfit relative self-start group/action">
+                      <span className="relative">
+                        Start Your Spec
+                        <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-white scale-x-0 group-hover/action:scale-x-100 transition-transform origin-left duration-300" />
+                      </span>
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        className="transform group-hover:translate-x-1.5 transition-transform duration-300"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </div>
+                  </Link>
+                );
+              }
+
+              return (
                 <div
-                  className={`absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r ${ind.gradient} rounded-t-[24px] sm:rounded-t-[32px]`}
-                />
-
-                <div className="flex flex-col gap-4 sm:gap-5">
-                  {/* Image Holder Frame with soft smooth borders */}
-                  <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-100 shadow-sm relative group-hover:scale-[1.015] transition-transform duration-500 ease-out bg-slate-50">
-                    <img
-                      src={ind.image}
-                      alt={`${ind.name} Customized Solution Artwork`}
-                      className="w-full h-full object-cover filter transition-all duration-700 ease-out group-hover:brightness-[1.02]"
-                    />
-
-                    {/* Float Badge tag */}
-                    <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 bg-slate-900/90 text-white font-mono text-[0.52rem] sm:text-[0.58rem] tracking-wider px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-white/5 backdrop-blur-sm shadow z-20 font-bold">
-                      {ind.badge}
+                  key={idx}
+                  className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-white/40 backdrop-blur-xl p-5 sm:p-6 shadow-[0_8px_32px_rgba(15,23,42,0.02)] hover:shadow-[0_25px_50px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/30 hover:bg-white/70 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
+                >
+                  <div
+                    className={`absolute top-0 left-0 h-[4px] bg-gradient-to-r ${ind.gradient} w-0 group-hover:w-full transition-all duration-500 rounded-t-[24px] sm:rounded-t-[32px]`}
+                  />
+                  <div className="flex flex-col gap-4 sm:gap-5">
+                    <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-100 shadow-sm relative group-hover:scale-[1.015] transition-transform duration-500 ease-out bg-slate-50">
+                      <img
+                        src={ind.image}
+                        alt={`${ind.name} Customized Solution Artwork`}
+                        className="w-full h-full object-cover filter transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-[1.03]"
+                      />
+                      <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 bg-slate-900/90 text-white font-mono text-[0.52rem] sm:text-[0.58rem] tracking-wider px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-white/5 backdrop-blur-sm shadow z-20 font-bold">
+                        {ind.badge}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg md:text-lg lg:text-xl font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-300 font-Outfit tracking-tight leading-tight">
+                        {ind.name}
+                      </h3>
+                      <p className="text-slate-500 leading-relaxed text-xs sm:text-[0.8rem] font-semibold mt-1.5 font-Outfit">
+                        {ind.desc}
+                      </p>
                     </div>
                   </div>
-
-                  <div>
-                    <h3 className="text-base sm:text-lg md:text-lg lg:text-xl font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-300 font-Outfit tracking-tight leading-tight">
-                      {ind.name}
-                    </h3>
-                    <p className="text-slate-500 leading-relaxed text-xs sm:text-[0.8rem] font-semibold mt-1.5 font-Outfit">
-                      {ind.desc}
-                    </p>
+                  <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#1161ed] mt-6 cursor-pointer select-none font-Outfit relative self-start group/action">
+                    <span className="relative">
+                      View Solution Spec
+                      <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#1161ed] scale-x-0 group-hover/action:scale-x-100 transition-transform origin-left duration-300" />
+                    </span>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      className="transform group-hover:translate-x-1.5 transition-transform duration-300"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
                   </div>
                 </div>
-
-                {/* Explore Case action */}
-                <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#1161ed] mt-6 cursor-pointer select-none font-Outfit">
-                  <span>View Solution Spec</span>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    className="transform group-hover:translate-x-1 transition-transform duration-300"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
-          {/* Mobile Swipe Indicators */}
           <div className="flex md:hidden items-center justify-center gap-1.5 mt-5 text-[#1161ed]/70 font-Outfit text-[0.68rem] font-bold uppercase tracking-[0.12em] animate-pulse">
             <svg
               width="12"
@@ -1647,27 +1567,26 @@ export default function Home() {
       {/* Why Startups Choose V2Labs Section */}
       <section
         id="why-us"
-        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
+        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
       >
-        {/* Soft Glowing Orbs in Background */}
         <div className="absolute top-[30%] right-[-5%] w-[400px] h-[400px] bg-[#1161ed]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
         <div className="max-w-[1100px] mx-auto px-4 relative z-10">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">
-              {"Founders' Choice"}
-            </p>
+          <div className="text-center mb-16 px-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/60 shadow-[0_2px_10px_rgba(0,0,0,0.01)] mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1161ed] animate-pulse" />
+              <span className="text-[0.62rem] sm:text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-[#1161ed]">
+                Founders' Choice
+              </span>
+            </div>
             <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
               Why Startups Choose <span className="text-[#1161ed]">V2Labs</span>
             </h2>
-            <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed">
-              Engineered for absolute velocity. Architected for rapid enterprise
-              scaling.
+            <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
+              Engineered for absolute velocity. Architected for rapid enterprise scaling.
             </p>
           </div>
 
-          {/* Grid Layout */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-8">
             {[
               {
@@ -1776,23 +1695,21 @@ export default function Home() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-3.5 sm:p-5 md:p-9 rounded-2xl md:rounded-[30px] border border-black/[0.03] bg-gradient-to-br from-white to-[#1161ed]/[0.003] shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 group"
+                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/40 bg-white/40 backdrop-blur-xl shadow-[0_8px_30px_rgba(15,23,42,0.01)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 hover:bg-white/70 group gpu-accelerated"
               >
-                {/* Visual Accent */}
-                <div className="absolute top-0 left-0 w-full h-[3px] md:h-[5px] bg-[#1161ed]/5 group-hover:bg-gradient-to-r group-hover:from-[#1161ed] group-hover:to-[#3b82f6] transition-colors duration-300" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-gradient-to-r from-[#1161ed] to-[#3b82f6] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
+                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.06)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                {/* Visual Glassmorphic glow helper */}
-                <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-[#1161ed]/[0.01] group-hover:bg-[#1161ed]/[0.05] rounded-full blur-xl transition-colors duration-300 pointer-events-none" />
-
-                {/* Icon Container */}
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-105 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm mb-3 md:mb-6">
-                  {feature.icon}
+                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:bg-gradient-to-br group-hover:from-[#1161ed] group-hover:to-[#3b82f6] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)] transition-all duration-300 shadow-sm mb-4 md:mb-6">
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current transform group-hover:rotate-[8deg] group-hover:scale-105 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
                 </div>
 
-                <h3 className="text-[0.78rem] sm:text-[0.95rem] md:text-[1.3rem] text-[#0F172A] font-black mb-1.5 md:mb-3.5 tracking-tight group-hover:text-[#1161ed] transition-colors duration-200 leading-tight">
+                <h3 className="text-[0.95rem] sm:text-[1.1rem] md:text-[1.3rem] text-[#0F172A] font-Outfit font-black mb-2 md:mb-3.5 tracking-tight group-hover:text-[#1161ed] transition-colors duration-200 leading-tight">
                   {feature.title}
                 </h3>
-                <p className="text-[#64748B] leading-normal md:leading-relaxed text-[0.62rem] sm:text-[0.72rem] md:text-[0.92rem]">
+                <p className="text-[#64748B] leading-relaxed text-[0.7rem] sm:text-[0.78rem] md:text-[0.9rem] font-Outfit font-semibold group-hover:text-slate-600 transition-colors duration-300">
                   {feature.desc}
                 </p>
               </div>
@@ -1804,7 +1721,7 @@ export default function Home() {
       {/* Auto-Moving Testimonials Wall - Edge-to-Edge Premium Marquee */}
       <section
         id="testimonials"
-        className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30"
+        className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30 content-visibility-auto"
       >
         {/* Soft Glowing Orbs */}
         <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#1161ed]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
@@ -1879,7 +1796,7 @@ export default function Home() {
       {/* Information & FAQ Section */}
       <section
         id="info"
-        className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative"
+        className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative content-visibility-auto"
       >
         {/* Soft Background glow-orb */}
         <div className="absolute right-[10%] top-[10%] w-[300px] h-[300px] bg-[#1161ed]/[0.015] rounded-full blur-[90px] pointer-events-none select-none -z-10" />
@@ -1905,12 +1822,15 @@ export default function Home() {
             {FAQS.map((faq, idx) => (
               <div
                 key={idx}
-                className={`rounded-2xl border p-4 sm:p-5 transition-all duration-300 ${
+                className={`rounded-2xl border p-4 sm:p-5 transition-all duration-300 relative overflow-hidden ${
                   openFaq === idx
-                    ? "bg-white border-[#1161ed]/30 shadow-[0_15px_35px_rgba(17,97,237,0.06)]"
+                    ? "bg-white border-[#1161ed]/30 shadow-[0_15px_35px_rgba(17,97,237,0.06)] pl-7 sm:pl-8"
                     : "bg-white/60 border-black/[0.03] shadow-sm hover:border-[#1161ed]/20 hover:bg-white hover:shadow-[0_10px_25px_rgba(17,97,237,0.04)]"
                 }`}
               >
+                <span className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#1161ed] to-[#3b82f6] transition-transform duration-300 origin-left ${
+                  openFaq === idx ? "scale-x-100" : "scale-x-0"
+                }`} />
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full flex items-center justify-between text-left font-bold text-slate-800 text-sm sm:text-base cursor-pointer select-none group"
