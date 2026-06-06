@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import Image from "next/image";
 
 const PORTFOLIO_VIDEOS = [
   {
@@ -283,13 +284,15 @@ function PortfolioVideoCard({
             playsInline
           />
         ) : (
-          /* Premium static cover image/gradient when not hovered */
           <div className="absolute inset-0 w-full h-full transition-all duration-300 flex flex-col items-center justify-center p-6 text-white text-center">
             {video.img ? (
-              <img
+              <Image
                 src={video.img}
                 alt={video.title}
-                className="absolute inset-0 w-full h-full object-cover brightness-[0.55] transition-all duration-500 group-hover:scale-105"
+                fill
+                sizes="(max-width: 768px) 100vw, 500px"
+                loading="lazy"
+                className="object-cover brightness-[0.55] transition-all duration-500 group-hover:scale-105"
               />
             ) : (
               <div className={`absolute inset-0 bg-gradient-to-br ${video.gradient} opacity-90`} />

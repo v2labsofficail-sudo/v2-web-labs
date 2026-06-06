@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import Image from "next/image";
 
-// --- Custom clean SVG icons for SaaS ---
 const SVG = {
   Nextjs: () => (
     <svg className="w-5 h-5 text-[#00D8FF]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -317,20 +317,26 @@ export default function SaasProductPage() {
                 <div className="w-3 h-3" />
               </div>
 
-              {/* High-Fidelity UI Image */}
               <div className="relative bg-slate-900 overflow-hidden group">
-                <img 
+                <Image 
                   src="/saas_dashboard.png" 
                   alt="High-fidelity SaaS analytics dashboard interface mockup" 
-                  className="w-full h-auto object-cover select-none transition-transform duration-500 group-hover:scale-105"
+                  width={460}
+                  height={320}
+                  style={{ width: "100%", height: "auto" }}
+                  loading="lazy"
+                  className="object-cover select-none transition-transform duration-500 group-hover:scale-105"
                 />
                 
-                {/* Micro-interactive verified badge overlay */}
                 <div className="absolute bottom-4 left-4 bg-slate-950/80 backdrop-blur border border-white/10 px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-lg">
-                  <img 
+                  <Image 
                     src="/hero_man.png" 
                     alt="AWS Certified Architect avatar" 
-                    className="w-7 h-7 rounded-full object-cover filter grayscale border border-[#1161ed]/30"
+                    width={28}
+                    height={28}
+                    sizes="28px"
+                    loading="lazy"
+                    className="rounded-full object-cover filter grayscale border border-[#1161ed]/30"
                   />
                   <div className="text-left">
                     <p className="text-[0.62rem] font-black text-white leading-none mb-0.5">Architecture Verified</p>
@@ -558,11 +564,14 @@ export default function SaasProductPage() {
                     <div className="w-3.5 h-3.5" />
                   </div>
 
-                  {/* High-Fidelity UI Image Asset */}
-                  <img 
+                  <Image 
                     src="/calendar_mockup.png" 
                     alt="High-fidelity Calendar Plus meeting scheduler UI mockup" 
-                    className="w-full h-auto object-cover select-none transition-transform duration-500 group-hover/mockup:scale-102"
+                    width={460}
+                    height={320}
+                    style={{ width: "100%", height: "auto" }}
+                    loading="lazy"
+                    className="object-cover select-none transition-transform duration-500 group-hover/mockup:scale-102"
                   />
 
                 </div>
@@ -626,11 +635,14 @@ export default function SaasProductPage() {
                     <div className="w-3.5 h-3.5" />
                   </div>
 
-                  {/* High-Fidelity UI Image Asset */}
-                  <img 
+                  <Image 
                     src="/shop_mockup.png" 
                     alt="High-fidelity ThinkNShop headless commerce checkout interface mockup" 
-                    className="w-full h-auto object-cover select-none transition-transform duration-500 group-hover/mockup:scale-102"
+                    width={460}
+                    height={320}
+                    style={{ width: "100%", height: "auto" }}
+                    loading="lazy"
+                    className="object-cover select-none transition-transform duration-500 group-hover/mockup:scale-102"
                   />
 
                 </div>

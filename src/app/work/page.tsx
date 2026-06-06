@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function WorkPage() {
   const PROJECTS = [
@@ -167,7 +168,8 @@ export default function WorkPage() {
         {/* ========================================================================= */}
         {/* SECTION 2: FEATURED CLIENT CASE STUDIES GRID */}
         {/* ========================================================================= */}
-        <section className="mb-24 relative z-10">
+        <ScrollReveal>
+          <section className="mb-24 relative z-10">
           <div className="text-center md:text-left mb-12">
             <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3">
               Case Studies
@@ -187,7 +189,7 @@ export default function WorkPage() {
                 key={idx}
                 className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#1161ed]/30 hover:bg-white group flex flex-col justify-between min-h-[360px]"
               >
-                {/* Premium Gradient Top Border Strip */}
+                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div
                   className={`h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r ${proj.gradient} rounded-t-[32px]`}
                 />
@@ -239,13 +241,11 @@ export default function WorkPage() {
             ))}
           </div>
         </section>
+      </ScrollReveal>
 
-        {/* ========================================================================= */}
-        {/* SECTION 3: ARCHITECTURAL PERFORMANCE STANDARDS & CTA */}
-        {/* ========================================================================= */}
+      <ScrollReveal>
         <section className="relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-            {/* Left Column: Technical Guidelines */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3.5 w-fit">
                 Production Standards
@@ -332,6 +332,7 @@ export default function WorkPage() {
             </div>
           </div>
         </section>
+      </ScrollReveal>
       </div>
 
       {/* Embedded CSS Custom Keyframe animations for elite visual float */}

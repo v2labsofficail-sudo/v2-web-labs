@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import ScrollReveal from "@/components/ScrollReveal";
+import Image from "next/image";
 
 interface Option {
   value: string;
@@ -535,26 +537,28 @@ export default function ContactPage() {
       <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#1161ed]/[0.03] rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-0 w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-3xl -z-10" />
 
-      <section className="relative pt-24 pb-12 bg-white border-b border-slate-100">
-        <div className="max-w-[1100px] mx-auto px-6 text-center">
-          <p className="text-[#1161ed] font-extrabold text-[0.8rem] uppercase tracking-widest mb-4">
-            GET IN TOUCH
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none mb-6">
-            Let&apos;s Build Something Revolutionary
-          </h1>
-          <p className="text-lg text-slate-500 max-w-[760px] mx-auto leading-relaxed">
-            Have an idea for a startup? Looking to build ERP software, HR and
-            recruitment systems, AI automations, dashboards, portals, or custom
-            business software? Share the direction here and we will help shape
-            the right path.
-          </p>
-        </div>
-      </section>
+      <ScrollReveal>
+        <section className="relative pt-24 pb-12 bg-white border-b border-slate-100">
+          <div className="max-w-[1100px] mx-auto px-6 text-center">
+            <p className="text-[#1161ed] font-extrabold text-[0.8rem] uppercase tracking-widest mb-4">
+              GET IN TOUCH
+            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none mb-6">
+              Let&apos;s Build Something Revolutionary
+            </h1>
+            <p className="text-lg text-slate-500 max-w-[760px] mx-auto leading-relaxed">
+              Have an idea for a startup? Looking to build ERP software, HR and
+              recruitment systems, AI automations, dashboards, portals, or custom
+              business software? Share the direction here and we will help shape
+              the right path.
+            </p>
+          </div>
+        </section>
+      </ScrollReveal>
 
       <div className="max-w-[1100px] mx-auto px-6 mt-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
-          <div className="flex flex-col gap-10">
+          <ScrollReveal className="flex flex-col gap-10">
             <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 bg-[#1161ed] opacity-15 rounded-full blur-2xl -mr-12 -mt-12" />
               <h2 className="text-2xl font-black tracking-tight mb-4 relative z-10">
@@ -669,10 +673,10 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 border border-slate-200/60 shadow-sm relative overflow-hidden group">
+            <div className="bg-white/40 border border-slate-200/40 backdrop-blur-xl rounded-3xl p-6 shadow-sm relative overflow-hidden group">
               <div className="absolute inset-0 bg-slate-950/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
               <div className="flex justify-between items-center mb-4">
-                <span className="text-[10px] bg-slate-100 text-slate-500 font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-lg border border-slate-200/50">
+                <span className="text-[10px] bg-slate-100/90 text-slate-500 font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-lg border border-slate-200/50">
                   Engineering Systems
                 </span>
                 <span className="text-xs text-[#1161ed] font-bold flex items-center gap-1">
@@ -681,10 +685,13 @@ export default function ContactPage() {
                 </span>
               </div>
               <div className="relative rounded-2xl overflow-hidden border border-slate-200/80 shadow-[0_12px_24px_rgba(0,0,0,0.04)] aspect-video">
-                <img
+                <Image
                   src="/saas_dashboard.png"
                   alt="High Fidelity Studio System Dashboard"
-                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  loading="lazy"
+                  className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                 />
               </div>
               <p className="text-[11px] text-slate-400 mt-4 text-center font-semibold">
@@ -692,7 +699,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 border border-slate-200/60 shadow-sm">
+            <div className="bg-white/40 border border-slate-200/40 backdrop-blur-xl rounded-3xl p-6 shadow-sm">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#1161ed] mb-3">
                 Contact flow
               </p>
@@ -714,10 +721,10 @@ export default function ContactPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="flex flex-col gap-8">
-            <div className="bg-white rounded-3xl border border-slate-200/60 p-8 sm:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.02)]">
+          <ScrollReveal delay={150} className="flex flex-col gap-8">
+            <div className="bg-white/50 border border-slate-200/40 backdrop-blur-xl rounded-3xl p-8 sm:p-10 shadow-lg">
               <div className="border-b border-slate-100 pb-6 mb-8">
                 <h2 className="text-2xl font-black text-slate-900 tracking-tight mb-2">
                   Project Estimator
@@ -965,7 +972,7 @@ export default function ContactPage() {
                 </button>
               </form>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
 

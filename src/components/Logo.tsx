@@ -22,11 +22,10 @@ export default function Logo({
     );
   }
 
-  // Default: Light Theme Header Logo (blends seamlessly with white header background and mix-blend-mode multiply for transparency)
   return (
     <div className={`flex items-center select-none ${className}`}>
       <img
-        src="/logo-cover-v2labs.jpeg"
+        src="/logo-global.png"
         alt="V2 Labs"
         className="h-[54px] sm:h-[76px] w-auto object-contain mix-blend-multiply"
       />
