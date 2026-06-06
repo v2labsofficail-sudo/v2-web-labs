@@ -323,6 +323,7 @@ export default function SaasProductPage() {
                   alt="High-fidelity SaaS analytics dashboard interface mockup" 
                   width={460}
                   height={320}
+                  sizes="(max-width: 640px) 90vw, 460px"
                   style={{ width: "100%", height: "auto" }}
                   loading="lazy"
                   className="object-cover select-none transition-transform duration-500 group-hover:scale-105"
@@ -569,6 +570,7 @@ export default function SaasProductPage() {
                     alt="High-fidelity Calendar Plus meeting scheduler UI mockup" 
                     width={460}
                     height={320}
+                    sizes="(max-width: 640px) 90vw, 460px"
                     style={{ width: "100%", height: "auto" }}
                     loading="lazy"
                     className="object-cover select-none transition-transform duration-500 group-hover/mockup:scale-102"
@@ -640,6 +642,7 @@ export default function SaasProductPage() {
                     alt="High-fidelity ThinkNShop headless commerce checkout interface mockup" 
                     width={460}
                     height={320}
+                    sizes="(max-width: 640px) 90vw, 460px"
                     style={{ width: "100%", height: "auto" }}
                     loading="lazy"
                     className="object-cover select-none transition-transform duration-500 group-hover/mockup:scale-102"

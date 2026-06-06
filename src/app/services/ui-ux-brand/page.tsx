@@ -698,6 +698,7 @@ export default function UiUxBrandPage() {
                     alt="Creative UI/UX Branding Illustration Artwork"
                     width={460}
                     height={460}
+                    sizes="(max-width: 640px) 90vw, 460px"
                     className="w-full h-full object-cover rounded-[28px] shadow-sm transform group-hover:scale-[1.015] transition-transform duration-700 ease-out"
                     loading="lazy"
                   />

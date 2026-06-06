@@ -152,7 +152,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                     src={member.img}
                     alt={member.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 340px"
+                    sizes="(max-width: 640px) 290px, (max-width: 768px) 325px, 340px"
                     loading="lazy"
                     className="object-cover relative z-10 transition-transform duration-500 group-hover:scale-105"
                   />

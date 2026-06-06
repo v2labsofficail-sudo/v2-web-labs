@@ -689,7 +689,7 @@ export default function ContactPage() {
                   src="/saas_dashboard.png"
                   alt="High Fidelity Studio System Dashboard"
                   fill
-                  sizes="(max-width: 768px) 100vw, 400px"
+                  sizes="(max-width: 640px) 90vw, 400px"
                   loading="lazy"
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                 />

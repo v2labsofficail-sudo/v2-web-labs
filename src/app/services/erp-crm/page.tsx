@@ -437,12 +437,13 @@ export default function ErpCrmPage() {
                 
                 <div className="flex items-center gap-3 border-t border-slate-100 pt-4">
                   <Image 
-                    src="/hero_man.png" 
-                    alt="DevOps Lead verified professional" 
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 rounded-full object-cover filter grayscale border border-[#635BFF]/20 shadow-sm shrink-0"
-                    loading="lazy"
+                     src="/hero_man.png" 
+                     alt="DevOps Lead verified professional" 
+                     width={40}
+                     height={40}
+                     sizes="40px"
+                     className="w-10 h-10 rounded-full object-cover filter grayscale border border-[#635BFF]/20 shadow-sm shrink-0"
+                     loading="lazy"
                   />
                   <div>
                     <p className="text-[0.78rem] font-black text-[#0F172A]">Enterprise Database Architect</p>

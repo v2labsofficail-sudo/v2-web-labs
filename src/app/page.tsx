@@ -512,12 +512,13 @@ function TiltIllustration() {
         transformStyle: "preserve-3d",
       }}
     >
-      <div className={isHovered ? "" : "animate-float"}>
+      <div className={`${isHovered ? "" : "animate-float"} gpu-accelerated`}>
         <Image
           src="/hero_collaboration.jpg"
           alt="V2Labs Tech Collaboration Flat Illustration"
           width={480}
           height={360}
+          sizes="(max-width: 640px) 100vw, 480px"
           preload={true}
           fetchPriority="high"
           className="w-full h-auto object-contain mix-blend-multiply"
@@ -890,6 +891,7 @@ export default function Home() {
                     alt={`${company.name} Logo`}
                     width={180}
                     height={80}
+                    sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 208px"
                     style={{ width: "auto", height: "auto" }}
                     className={`${logoHeight} object-contain transition-all duration-500 grayscale opacity-50 contrast-125 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 mix-blend-multiply`}
                   />
@@ -1513,7 +1515,7 @@ export default function Home() {
                         src={ind.image}
                         alt={`${ind.name} Customized Solution Artwork`}
                         fill
-                        sizes="(max-width: 768px) 100vw, 320px"
+                        sizes="(max-width: 640px) 82vw, (max-width: 1024px) 45vw, 320px"
                         loading="lazy"
                         className="object-cover filter transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-[1.03]"
                       />

@@ -809,7 +809,7 @@ export default function AiAutomationPage() {
                     src="/ai_automation_showcase.png"
                     alt="AI Automation & Pipeline Illustration Artwork"
                     fill
-                    sizes="(max-width: 768px) 100vw, 420px"
+                    sizes="(max-width: 640px) 90vw, 460px"
                     loading="lazy"
                     className="object-cover rounded-[28px] shadow-sm transform group-hover:scale-[1.015] transition-transform duration-700 ease-out"
                   />

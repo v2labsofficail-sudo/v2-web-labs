@@ -290,7 +290,7 @@ function PortfolioVideoCard({
                 src={video.img}
                 alt={video.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 500px"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                 loading="lazy"
                 className="object-cover brightness-[0.55] transition-all duration-500 group-hover:scale-105"
               />
