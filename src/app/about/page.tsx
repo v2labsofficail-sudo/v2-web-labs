@@ -79,19 +79,40 @@ export default function AboutPage() {
       bio: "Junior web developer contributing to responsive interfaces and smooth user experiences across modern web projects.",
       img: "/vansh-je.jpeg",
     },
-
+    {
+      name: "Omm S. Das",
+      role: "Video Editor & Social Media Manager",
+      initials: "OD",
+      quote: "Crafting visual narratives that engage and inspire on every screen.",
+      gradient: "from-[#8b5cf6] to-[#ec4899]",
+      linkedin: "#",
+      github: "#",
+      bio: "Specializes in editing high-impact videos and managing dynamic social media campaigns to elevate brand presence.",
+      img: "/Omm_S_Das.jpg",
+    },
+    {
+      name: "Navneet Vyas",
+      role: "Senior Frontend & Mobile App Developer",
+      initials: "NV",
+      quote: "Architecting gorgeous, high-fidelity responsive layouts.",
+      gradient: "from-[#1161ed] to-[#06b6d4]",
+      linkedin: "#",
+      github: "#",
+      bio: "Leads engineering of premium responsive frontends, interactive motion architectures, and robust styling systems with pixel-perfect precision.",
+      img: "/Navneet_Vyas.png",
+    },
   ];
 
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
-      {/* Background Soft Mesh Gradients for Premium Studio Feel */}
+      
       <div className="absolute top-[8%] left-[5%] w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
       <div className="absolute top-[35%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
-      {/* Luminous Dotted Grid Background Pattern */}
+      
       <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.25] -z-10 pointer-events-none select-none" />
 
-      {/* Hero Section */}
+      
       <section className="relative overflow-hidden pt-24 pb-16 max-w-[1100px] mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
           <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
@@ -136,7 +157,7 @@ export default function AboutPage() {
       <ScrollReveal>
         <section className="py-12 border-t border-slate-200/50 mb-24 max-w-[1100px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Description Column */}
+          
           <div className="lg:col-span-6 flex flex-col items-start text-left">
             <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-4">
               Our Journey
@@ -152,7 +173,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Right Cards Stack Column */}
+          
           <div className="lg:col-span-6 flex flex-col gap-5">
             {[
               {
@@ -217,7 +238,7 @@ export default function AboutPage() {
                 key={idx}
                 className="flex gap-4 p-5 rounded-2xl border border-slate-200/40 bg-white/40 backdrop-blur-xl shadow-sm hover:shadow-[0_15px_30px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 hover:bg-white/60 transition-all duration-300 relative group overflow-hidden"
               >
-                {/* Left Line Indicator */}
+                
                 <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] to-[#3b82f6]" />
 
                 <div className="w-10 h-10 rounded-xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm">
