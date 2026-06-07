@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 
 interface TeamMember {
   name: string;
@@ -24,24 +25,21 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
   const [showModal, setShowModal] = useState(false);
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
-  // Dragging / swiping variables
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
   const [isDragActive, setIsDragActive] = useState(false);
 
-  // Track active slide index on scroll
   const handleScroll = () => {
     if (!containerRef.current) return;
     const container = containerRef.current;
     const scrollPosition = container.scrollLeft;
     
-    // Find the closest item index based on scroll position and item widths
     const children = container.children;
     if (children.length === 0) return;
     
     const cardWidth = (children[0] as HTMLElement).offsetWidth;
-    const gap = 32; // match gap-8 (32px)
+    const gap = 32;
     const step = cardWidth + gap;
     
     const calculatedIndex = Math.round(scrollPosition / step);
@@ -49,7 +47,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
     setActiveIndex(clampedIndex);
   };
 
-  // Drag start
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
     isDragging.current = true;
@@ -58,30 +55,25 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
     scrollLeft.current = containerRef.current.scrollLeft;
   };
 
-  // Drag move
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging.current || !containerRef.current) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.5; // multiplier for sensitivity
+    const walk = (x - startX.current) * 1.5;
     containerRef.current.scrollLeft = scrollLeft.current - walk;
   };
 
-  // Drag stop
   const handleMouseUpOrLeave = () => {
     isDragging.current = false;
     setIsDragActive(false);
   };
 
-  // Touch handlers aren't explicitly needed for desktop drag, but we handle click vs drag clicks
   const handleCardClick = (e: React.MouseEvent, member: TeamMember) => {
-    // If the user was dragging, don't open the modal
     if (isDragging.current) return;
     setSelectedMember(member);
     setShowModal(true);
   };
 
-  // Navigation functions
   const scrollToIndex = (index: number) => {
     if (!containerRef.current) return;
     const container = containerRef.current;
@@ -109,13 +101,8 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
     scrollToIndex(nextIdx);
   };
 
-  // Auto-scroll logic (optional premium touch: subtle shift or auto scroll when idle)
-  // Let's keep it purely user-controlled to prevent accessibility distraction, but offer responsive dots
-
   return (
     <div className="relative w-full overflow-visible z-10 px-2 sm:px-6">
-      
-      {/* Outer Glow Decorators */}
       <div className="absolute -left-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#1161ed]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#3b82f6]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
 
@@ -142,19 +129,16 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                   : "opacity-80 scale-95 hover:opacity-100 hover:scale-[0.98] duration-300"
               }`}
             >
-              {/* Glowing Background Ring - active pulse, elegant hover glow */}
               <div className={`absolute -inset-[1px] bg-gradient-to-br from-[#1161ed] to-[#3b82f6] rounded-3xl -z-10 blur-[4px] transition-opacity duration-300 ${
                 isActive 
                   ? "opacity-30 animate-pulse" 
                   : "opacity-0 group-hover:opacity-30"
               }`} />
 
-              {/* Image / Fallback Container */}
               <div 
                 className="w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 relative bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center shadow-inner cursor-pointer"
                 onClick={(e) => handleCardClick(e, member)}
               >
-                {/* Fallback Canvas */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${member.gradient} opacity-90 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-between p-6 text-white text-left`}>
                   <span className="text-[1.8rem] font-black tracking-widest leading-none drop-shadow-sm">{member.initials}</span>
                   <div className="flex flex-col">
@@ -163,19 +147,17 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                   </div>
                 </div>
 
-                {/* Picture element */}
                 {member.img && (
-                  <img
+                  <Image
                     src={member.img}
                     alt={member.name}
-                    className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-105"
-                    onError={(e) => {
-                      (e.target as HTMLElement).style.display = "none";
-                    }}
+                    fill
+                    sizes="(max-width: 640px) 290px, (max-width: 768px) 325px, 340px"
+                    loading="lazy"
+                    className="object-cover relative z-10 transition-transform duration-500 group-hover:scale-105"
                   />
                 )}
 
-                {/* Hover overlay and prompt */}
                 <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
                   <button 
                     onClick={(e) => {
@@ -212,11 +194,9 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                 </div>
               </div>
 
-              {/* Designation & Names */}
               <span className="text-[0.72rem] font-black uppercase tracking-widest text-[#1161ed] mb-1.5 leading-none">{member.role}</span>
               <h3 className="text-lg font-black text-slate-900 mb-2 transition-colors group-hover:text-[#1161ed]">{member.name}</h3>
               
-              {/* Mini Interactive View Trigger */}
               <button 
                 onClick={(e) => handleCardClick(e, member)}
                 className="mt-3 text-[0.72rem] font-black uppercase tracking-wider text-[#1161ed] hover:text-[#0c4ec3] flex items-center gap-1 transition-colors"
@@ -231,10 +211,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
         })}
       </div>
 
-      {/* Interactive controls and Navigation row */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6 max-w-[1100px] mx-auto px-6 mt-4">
-        
-        {/* Visual Custom Progress Line */}
         <div className="w-full sm:w-1/3 h-[2px] bg-slate-200 rounded-full relative overflow-hidden hidden md:block">
           <div 
             className="absolute top-0 bottom-0 left-0 bg-[#1161ed] transition-all duration-300 rounded-full"
@@ -244,7 +221,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
           />
         </div>
 
-        {/* Carousel Page Dots Indicator */}
         <div className="flex gap-2">
           {team.map((_, idx) => {
             const isActive = idx === activeIndex;
@@ -263,7 +239,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
           })}
         </div>
 
-        {/* Next & Prev Arrows */}
         <div className="flex gap-3">
           <button
             onClick={handlePrev}
@@ -287,19 +262,14 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
         </div>
       </div>
 
-      {/* Premium Full-featured Bio Modal */}
       {showModal && selectedMember && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          {/* Frosted Backdrop */}
           <div 
             onClick={() => setShowModal(false)}
             className="absolute inset-0 bg-slate-950/50 backdrop-blur-md transition-opacity duration-300 animate-fadeIn" 
           />
           
-          {/* Modal Content Window */}
           <div className="bg-white border border-slate-200 rounded-[32px] w-full max-w-[550px] overflow-hidden shadow-2xl relative z-10 flex flex-col animate-scaleUp">
-            
-            {/* Top Close Button */}
             <button 
               onClick={() => setShowModal(false)}
               className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors font-bold text-sm"
@@ -308,24 +278,20 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               ✕
             </button>
 
-            {/* Profile Canvas Header */}
             <div className={`w-full py-10 px-8 bg-gradient-to-br ${selectedMember.gradient} text-white flex items-center gap-6 relative overflow-hidden`}>
-              
-              {/* Decorative Orbs */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
               
               <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center overflow-hidden shadow-md shrink-0 relative">
                 {selectedMember.img ? (
-                  <img 
+                  <Image 
                     src={selectedMember.img} 
                     alt={selectedMember.name} 
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLElement).style.display = "none";
-                    }}
+                    fill
+                    sizes="80px"
+                    className="object-cover"
                   />
                 ) : (
-                  <span className="text-[2rem] font-black select-none text-white">{selectedMember.initials}</span>
+                  <span className="text-[2.2rem] font-black select-none text-white">{selectedMember.initials}</span>
                 )}
               </div>
 
@@ -336,7 +302,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               </div>
             </div>
 
-            {/* Detailed Content */}
             <div className="p-8 text-slate-800 flex-1">
               <div className="mb-6">
                 <span className="text-[0.68rem] font-black uppercase tracking-[0.12em] text-[#1161ed] block mb-2">Core Philosophy</span>
@@ -352,7 +317,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                 </p>
               </div>
 
-              {/* Action Buttons & Socials */}
               <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
                 <div className="flex gap-2">
                   <a
@@ -380,7 +344,6 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
           </div>
         </div>
       )}
-
     </div>
   );
 }

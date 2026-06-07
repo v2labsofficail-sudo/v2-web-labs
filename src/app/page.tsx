@@ -2,7 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { buildFaqJsonLd } from "@/lib/seo";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const TESTIMONIALS = [
   {
@@ -510,10 +512,15 @@ function TiltIllustration() {
         transformStyle: "preserve-3d",
       }}
     >
-      <div className={isHovered ? "" : "animate-float"}>
-        <img
-          src="/hero_illustration_flat.jpg"
+      <div className={`${isHovered ? "" : "animate-float"} gpu-accelerated`}>
+        <Image
+          src="/hero_collaboration.jpg"
           alt="V2Labs Tech Collaboration Flat Illustration"
+          width={480}
+          height={360}
+          sizes="(max-width: 640px) 100vw, 480px"
+          preload={true}
+          fetchPriority="high"
           className="w-full h-auto object-contain mix-blend-multiply"
           style={{ transform: "translateZ(30px)" }}
         />
@@ -526,8 +533,8 @@ function TiltIllustration() {
             ⚡
           </div>
           <div className="text-left">
-            <p className="text-[9px] sm:text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">Next.js 16</p>
-            <p className="text-[7px] sm:text-[8px] font-bold text-slate-400 mt-1 leading-none">React 19 Engine</p>
+            <p className="text-[9px] sm:text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">SaaS Development</p>
+            <p className="text-[7px] sm:text-[8px] font-bold text-slate-400 mt-1 leading-none">Cloud Dashboards</p>
           </div>
         </div>
 
@@ -785,7 +792,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center"
+                className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center animate-pulse-glow"
               >
                 Get Started
               </Link>
@@ -879,10 +886,14 @@ export default function Home() {
                   className="mx-3 md:mx-4 flex items-center justify-center shrink-0 w-36 sm:w-44 md:w-52 h-20 sm:h-24 md:h-28 rounded-2xl border border-slate-200/40 bg-slate-50/15 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.7)] shadow-[0_4px_16px_rgba(15,23,42,0.015)] hover:border-[#1161ed]/20 hover:bg-white hover:shadow-[0_12px_30px_rgba(17,97,237,0.06)] hover:-translate-y-1 transition-all duration-500 ease-out select-none cursor-pointer overflow-hidden group relative"
                 >
                   <div className="absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  <img
+                  <Image
                     src={company.logo}
                     alt={`${company.name} Logo`}
-                    className={`${logoHeight} w-auto object-contain transition-all duration-500 grayscale opacity-50 contrast-125 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 mix-blend-multiply`}
+                    width={180}
+                    height={80}
+                    sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 208px"
+                    style={{ width: "auto", height: "auto" }}
+                    className={`${logoHeight} object-contain transition-all duration-500 grayscale opacity-50 contrast-125 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 mix-blend-multiply`}
                   />
                 </div>
               );
@@ -892,10 +903,11 @@ export default function Home() {
       </section>
 
       {/* Services Grid Section */}
-      <section
-        id="services"
-        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative content-visibility-auto overflow-hidden"
-      >
+      <ScrollReveal>
+        <section
+          id="services"
+          className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative content-visibility-auto overflow-hidden"
+        >
         <div className="absolute top-10 left-10 w-[250px] h-[250px] bg-[#1161ed]/[0.03] rounded-full blur-[80px] pointer-events-none select-none -z-10" />
         <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#3b82f6]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10" />
 
@@ -1093,12 +1105,14 @@ export default function Home() {
           ))}
         </div>
       </section>
+    </ScrollReveal>
 
       {/* How We Work / Process Section */}
-      <section
-        id="process"
-        className="py-24 md:py-36 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
-      >
+      <ScrollReveal>
+        <section
+          id="process"
+          className="py-24 md:py-36 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
+        >
         {/* Mouse Tracking Particles Animation */}
         <MouseTrackingAnimation />
 
@@ -1347,12 +1361,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </ScrollReveal>
 
       {/* Industries Solutions Section */}
-      <section
-        id="industries"
-        className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
-      >
+      <ScrollReveal>
+        <section
+          id="industries"
+          className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
+        >
         <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
         <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#8b5cf6]/[0.015] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[6s]" />
 
@@ -1495,10 +1511,13 @@ export default function Home() {
                   />
                   <div className="flex flex-col gap-4 sm:gap-5">
                     <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-100 shadow-sm relative group-hover:scale-[1.015] transition-transform duration-500 ease-out bg-slate-50">
-                      <img
+                      <Image
                         src={ind.image}
                         alt={`${ind.name} Customized Solution Artwork`}
-                        className="w-full h-full object-cover filter transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-[1.03]"
+                        fill
+                        sizes="(max-width: 640px) 82vw, (max-width: 1024px) 45vw, 320px"
+                        loading="lazy"
+                        className="object-cover filter transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-[1.03]"
                       />
                       <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 bg-slate-900/90 text-white font-mono text-[0.52rem] sm:text-[0.58rem] tracking-wider px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-white/5 backdrop-blur-sm shadow z-20 font-bold">
                         {ind.badge}
@@ -1563,12 +1582,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </ScrollReveal>
 
       {/* Why Startups Choose V2Labs Section */}
-      <section
-        id="why-us"
-        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
-      >
+      <ScrollReveal>
+        <section
+          id="why-us"
+          className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
+        >
         <div className="absolute top-[30%] right-[-5%] w-[400px] h-[400px] bg-[#1161ed]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
         <div className="max-w-[1100px] mx-auto px-4 relative z-10">
@@ -1717,12 +1738,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </ScrollReveal>
 
       {/* Auto-Moving Testimonials Wall - Edge-to-Edge Premium Marquee */}
-      <section
-        id="testimonials"
-        className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30 content-visibility-auto"
-      >
+      <ScrollReveal>
+        <section
+          id="testimonials"
+          className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30 content-visibility-auto"
+        >
         {/* Soft Glowing Orbs */}
         <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#1161ed]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
         <div className="absolute right-[-5%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#3b82f6]/[0.02] blur-[120px] duration-[8s] pointer-events-none select-none -z-10" />
@@ -1792,12 +1815,14 @@ export default function Home() {
           <span>Auto-moving founder feedback • Hover to Pause</span>
         </div>
       </section>
+    </ScrollReveal>
 
       {/* Information & FAQ Section */}
-      <section
-        id="info"
-        className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative content-visibility-auto"
-      >
+      <ScrollReveal>
+        <section
+          id="info"
+          className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative content-visibility-auto"
+        >
         {/* Soft Background glow-orb */}
         <div className="absolute right-[10%] top-[10%] w-[300px] h-[300px] bg-[#1161ed]/[0.015] rounded-full blur-[90px] pointer-events-none select-none -z-10" />
 
@@ -1822,12 +1847,13 @@ export default function Home() {
             {FAQS.map((faq, idx) => (
               <div
                 key={idx}
-                className={`rounded-2xl border p-4 sm:p-5 transition-all duration-300 relative overflow-hidden ${
+                className={`rounded-2xl border p-4 sm:p-5 transition-all duration-300 relative overflow-hidden group ${
                   openFaq === idx
                     ? "bg-white border-[#1161ed]/30 shadow-[0_15px_35px_rgba(17,97,237,0.06)] pl-7 sm:pl-8"
                     : "bg-white/60 border-black/[0.03] shadow-sm hover:border-[#1161ed]/20 hover:bg-white hover:shadow-[0_10px_25px_rgba(17,97,237,0.04)]"
                 }`}
               >
+                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <span className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#1161ed] to-[#3b82f6] transition-transform duration-300 origin-left ${
                   openFaq === idx ? "scale-x-100" : "scale-x-0"
                 }`} />
@@ -1874,6 +1900,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </ScrollReveal>
     </div>
   );
 }

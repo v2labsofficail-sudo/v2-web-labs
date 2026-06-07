@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import Image from "next/image";
 
-// --- Vector SVGs for floating ecosystem nodes and models ---
 const ECO_ICONS = {
   Whatsapp: () => (
     <svg className="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
@@ -799,22 +799,21 @@ export default function AiAutomationPage() {
 
             {/* Two-Column Tool Stack Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              {/* Left Column: Unique Generated Illustration */}
               <div className="lg:col-span-6 flex justify-center relative">
-                {/* Floating Luminous Glow Background behind the image */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#1161ed]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
                 
-                {/* Premium floating glass framework holding our generated artwork */}
                 <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17,97,237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-50/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
                   
-                  <img
+                  <Image
                     src="/ai_automation_showcase.png"
                     alt="AI Automation & Pipeline Illustration Artwork"
-                    className="w-full h-full object-cover rounded-[28px] shadow-sm transform group-hover:scale-[1.015] transition-transform duration-700 ease-out"
+                    fill
+                    sizes="(max-width: 640px) 90vw, 460px"
+                    loading="lazy"
+                    className="object-cover rounded-[28px] shadow-sm transform group-hover:scale-[1.015] transition-transform duration-700 ease-out"
                   />
                   
-                  {/* Subtle float tag */}
                   <div className="absolute bottom-6 right-6 bg-slate-900/90 text-white font-mono text-[0.62rem] tracking-wider px-3.5 py-2 rounded-xl backdrop-blur-sm shadow-md border border-white/10 z-20">
                     ◇ ENGINE: ACTIVE
                   </div>

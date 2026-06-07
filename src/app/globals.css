@@ -15,7 +15,6 @@
 }
 
 :root {
-  /* Font Family Definitions */
   --font-heading: var(--font-outfit), 'Outfit', sans-serif;
   --font-body: var(--font-outfit), 'Outfit', sans-serif;
   --font-montserrat: var(--font-montserrat), sans-serif;
@@ -72,16 +71,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Premium utility to hide scrollbars for clean carousel containers */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE/Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Custom Video-Motion Keyframes & Animations */
 @keyframes float {
   0% {
     transform: translateY(0px) scale(1);
@@ -124,7 +121,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: svgDraw 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards infinite;
 }
 
-/* Modal Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -163,4 +159,17 @@ h1, h2, h3, h4, h5, h6 {
 .gpu-accelerated {
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(17, 97, 237, 0.25);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(17, 97, 237, 0.55), 0 0 15px rgba(6, 182, 212, 0.25);
+  }
+}
+
+.animate-pulse-glow:hover {
+  animation: pulseGlow 2s infinite ease-in-out;
 }

@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
-// --- Custom clean SVG icons for enterprise CRM/ERP ---
+
 const SVG = {
   Nextjs: () => (
     <svg className="w-5 h-5 text-[#00D8FF]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -172,7 +173,7 @@ export default function ErpCrmPage() {
     { id: 4, name: "Emma Patterson", source: "HubSpot API", value: "$8,900", status: "Active", time: "5m ago" }
   ]);
 
-  // Telemetry simulation for the live lead dashboard widget
+  
   useEffect(() => {
     const interval = setInterval(() => {
       const names = ["Olivia Taylor", "Liam Johnson", "Nora Bennett", "Lucas Miller", "Lucas Vance"];
@@ -194,7 +195,7 @@ export default function ErpCrmPage() {
     return () => clearInterval(interval);
   }, []);
 
-  // Stats / Credibility Section
+  
   const stats = [
     { value: "15+", label: "Systems Deployed" },
     { value: "1.2M+", label: "Daily Sync Actions" },
@@ -203,7 +204,7 @@ export default function ErpCrmPage() {
     { value: "Sub-200ms", label: "DB Query Latency" },
   ];
 
-  // Marquee tech stack data with clean SVG icons
+  
   const marqueeTech = [
     { name: "Next.js 16", desc: "Admin Interfaces", icon: <SVG.Nextjs /> },
     { name: "Retool Suite", desc: "Operations Dashboards", icon: <SVG.Retool /> },
@@ -217,7 +218,7 @@ export default function ErpCrmPage() {
     { name: "AWS Cloud", desc: "Secure Isolated VPCs", icon: <SVG.AWS /> },
   ];
 
-  // "What We Build" Grid
+  
   const systemsWeBuild = [
     {
       title: "Custom ERP Suites",
@@ -261,7 +262,7 @@ export default function ErpCrmPage() {
     },
   ];
 
-  // Data Pipeline flowchart steps
+  
   const archSteps = [
     {
       id: 1,
@@ -295,7 +296,7 @@ export default function ErpCrmPage() {
     }
   ];
 
-  // Process timeline UI steps
+  
   const timelineSteps = [
     { phase: "01", name: "Operational Auditing", desc: "blueprinting existing database tables, identifying legacy operational bottlenecks, and mapping target API requirements." },
     { phase: "02", name: "Database Normalization", desc: "Designing robust relational ERDs, defining primary keys, and establishing data validation rules." },
@@ -306,7 +307,7 @@ export default function ErpCrmPage() {
     { phase: "07", name: "Zero-Downtime Deployment", desc: "Deploying secure AWS VPC containers, setting up webhook latency alarms, and tracking real-time status." }
   ];
 
-  // ERP & CRM capabilities grid
+  
   const capabilities = [
     "Webhook Automation",
     "Two-Way CRM Sync",
@@ -322,15 +323,15 @@ export default function ErpCrmPage() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] py-16 md:py-24 relative overflow-hidden select-none">
-      {/* Background Soft Mesh Gradients - Operational Deep Violet & Blue */}
+      
       <div className="absolute top-[5%] left-[-10%] w-[500px] h-[500px] bg-[#635BFF]/[0.025] rounded-full blur-[130px] pointer-events-none -z-10" />
       <div className="absolute top-[45%] right-[-10%] w-[600px] h-[600px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse duration-[8s]" />
 
       <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
         
-        {/* 1. Hero Section */}
+        
         <section id="hero" className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-20 md:mb-28">
-          {/* Left Text Column */}
+          
           <div className="lg:col-span-7 flex flex-col text-left items-start">
             <div className="inline-flex items-center gap-2 bg-[#635BFF]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#635BFF] tracking-[0.15em] mb-8 border border-[#635BFF]/20 shadow-[0_2px_10px_rgba(99,91,255,0.05)]">
               <span className="w-2 h-2 bg-[#635BFF] rounded-full animate-ping"></span>
@@ -343,7 +344,7 @@ export default function ErpCrmPage() {
               From workflow automation to secure database warehouses, V2 Labs designs, codes, and deploys high-performance internal tools that eliminate operational friction and save overhead.
             </p>
             
-            {/* Buttons Row */}
+            
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto">
               <Link 
                 href="/contact" 
@@ -360,16 +361,16 @@ export default function ErpCrmPage() {
             </div>
           </div>
 
-          {/* Right Column - Premium Browser-framed Operational Dashboard */}
+          
           <div className="lg:col-span-5 relative w-full flex justify-center">
             
-            {/* Background Glow Orb */}
+            
             <div className="absolute w-[300px] h-[300px] bg-gradient-to-tr from-[#635BFF]/10 to-[#1161ed]/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
             
-            {/* Dashboard UI panel with mock browser framework */}
+            
             <div className="w-full max-w-[440px] rounded-3xl border border-[#635BFF]/10 bg-white shadow-[0_25px_60px_rgba(99,91,255,0.08)] overflow-hidden hover:-translate-y-1 transition-all duration-300">
               
-              {/* Browser bar header */}
+              
               <div className="flex items-center justify-between bg-slate-50/80 border-b border-slate-100 px-5 py-3.5">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-[#ef4444] shadow-sm" />
@@ -382,10 +383,10 @@ export default function ErpCrmPage() {
                 <div className="w-3 h-3" />
               </div>
 
-              {/* Inner Dashboard content */}
+              
               <div className="p-5 select-none text-left">
                 
-                {/* Header title */}
+                
                 <div className="flex justify-between items-center mb-5">
                   <div>
                     <h3 className="text-[0.65rem] font-extrabold uppercase text-[#94A3B8] tracking-widest leading-none mb-1">Operational Telemetry</h3>
@@ -394,7 +395,7 @@ export default function ErpCrmPage() {
                   <span className="text-[0.6rem] font-bold text-white bg-[#635BFF] px-2.5 py-0.5 rounded-full shadow-sm animate-pulse">Sync Active</span>
                 </div>
 
-                {/* Grid stats */}
+                
                 <div className="grid grid-cols-2 gap-3.5 mb-4">
                   <div className="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-100">
                     <span className="text-[0.62rem] font-bold uppercase text-[#94A3B8] tracking-wider block mb-1">Database Queries</span>
@@ -411,12 +412,12 @@ export default function ErpCrmPage() {
                   </div>
                 </div>
 
-                {/* Live leads feed block */}
+                
                 <div className="p-4 rounded-2xl bg-slate-900 text-white mb-5 shadow-[0_10px_25px_rgba(99,91,255,0.18)] relative overflow-hidden">
                   <div className="absolute right-0 bottom-0 w-28 h-28 bg-white/5 rounded-tl-full pointer-events-none" />
                   <span className="text-[0.62rem] font-bold uppercase text-slate-400 tracking-widest block mb-2.5">Live Lead Ingestion Queue</span>
                   
-                  {/* Lead list feed elements */}
+                  
                   <div className="flex flex-col gap-2">
                     {leadList.map((lead) => (
                       <div key={lead.id} className="flex items-center justify-between text-xs border-b border-white/5 pb-1.5 last:border-b-0 last:pb-0">
@@ -433,12 +434,16 @@ export default function ErpCrmPage() {
                   </div>
                 </div>
 
-                {/* Real Human Professional Integration Profile */}
+                
                 <div className="flex items-center gap-3 border-t border-slate-100 pt-4">
-                  <img 
-                    src="/hero_man.png" 
-                    alt="DevOps Lead verified professional" 
-                    className="w-10 h-10 rounded-full object-cover filter grayscale border border-[#635BFF]/20 shadow-sm shrink-0"
+                  <Image 
+                     src="/hero_man.png" 
+                     alt="DevOps Lead verified professional" 
+                     width={40}
+                     height={40}
+                     sizes="40px"
+                     className="w-10 h-10 rounded-full object-cover filter grayscale border border-[#635BFF]/20 shadow-sm shrink-0"
+                     loading="lazy"
                   />
                   <div>
                     <p className="text-[0.78rem] font-black text-[#0F172A]">Enterprise Database Architect</p>
@@ -453,7 +458,7 @@ export default function ErpCrmPage() {
           </div>
         </section>
 
-        {/* Client/Integration Tech Marquee Section - WIDER SPACING */}
+        
         <section className="w-[100vw] relative left-1/2 right-1/2 -mx-[50vw] py-10 bg-white border-y border-slate-100 overflow-hidden select-none mb-20 md:mb-28">
           <div className="relative flex max-w-[100vw] overflow-hidden">
             <div className="flex animate-marquee whitespace-nowrap gap-8">
@@ -477,7 +482,7 @@ export default function ErpCrmPage() {
           </div>
         </section>
 
-        {/* 2. "What We Build" Section - EXPANDED SPACE */}
+        
         <section id="what-we-build" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
             <p className="text-[#635BFF] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Enterprise Modules</p>
@@ -496,7 +501,7 @@ export default function ErpCrmPage() {
                 className="p-6 rounded-[24px] border border-black/[0.03] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(99,91,255,0.06)] hover:border-[#635BFF]/20 group flex flex-col justify-between"
               >
                 <div>
-                  {/* Icon Container */}
+                  
                   <div className="w-11 h-11 rounded-xl bg-[#635BFF]/[0.08] flex items-center justify-center border border-[#635BFF]/10 group-hover:scale-105 group-hover:bg-[#635BFF] group-hover:text-white transition-all duration-300 mb-5 shadow-sm">
                     <div className="[&>svg]:stroke-current text-[#635BFF] group-hover:text-white transition-colors duration-300">
                       {p.icon}
@@ -506,20 +511,20 @@ export default function ErpCrmPage() {
                   <p className="text-[#64748B] text-xs leading-relaxed">{p.desc}</p>
                 </div>
                 
-                {/* Subtle card bottom line accent */}
+                
                 <div className="h-[3px] w-0 bg-gradient-to-r from-[#635BFF] to-[#1161ed] rounded-full mt-5 group-hover:w-[40px] transition-all duration-300" />
               </div>
             ))}
           </div>
         </section>
 
-        {/* 3. Trust-Building Architecture Section - EXPANDED SPACE */}
+        
         <section id="architecture" className="py-12 md:py-16 border-t border-b border-black/[0.04] mb-20 md:mb-28 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#635BFF]/[0.015] rounded-full blur-[130px] pointer-events-none -z-10" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
-            {/* Left Column Description */}
+            
             <div className="lg:col-span-5 flex flex-col text-left items-start">
               <p className="text-[#635BFF] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Technical Integrity</p>
               <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] font-extrabold text-[#0F172A] tracking-tight leading-none mb-6">
@@ -529,7 +534,7 @@ export default function ErpCrmPage() {
                 Most agencies hide their technical designs. We map out robust databases engineered to scale. Our platforms feature isolated local variables, automated rate limit rules, TLS encrypted Postgres replication tunnels, and AWS virtual isolated clouds.
               </p>
 
-              {/* Highlight Badges */}
+              
               <div className="flex flex-wrap gap-2.5">
                 {["Encrypted Logs", "PostgreSQL Replicas", "JWT Verification", "AWS VPC Isolations", "Bulk Query Optimization"].map((tag, idx) => (
                   <span key={idx} className="px-3.5 py-1.5 rounded-full border border-slate-100 bg-white text-[0.68rem] font-extrabold uppercase text-slate-600 tracking-wider">
@@ -539,7 +544,7 @@ export default function ErpCrmPage() {
               </div>
             </div>
 
-            {/* Right Column Flowchart */}
+            
             <div className="lg:col-span-7 w-full flex flex-col gap-3 relative">
               <span className="text-[0.62rem] font-extrabold uppercase text-[#94A3B8] tracking-widest text-center block mb-3">Interactive Data Pipeline (Hover to inspect)</span>
               
@@ -564,7 +569,7 @@ export default function ErpCrmPage() {
                       <h3 className="font-extrabold text-[0.88rem] text-[#0F172A] tracking-tight">{step.title}</h3>
                       <span className="text-[0.62rem] font-bold text-[#635BFF] bg-[#635BFF]/[0.05] px-1.5 py-0.5 rounded">{step.tech}</span>
                     </div>
-                    {/* Collapsible descriptions */}
+                    
                     <div className={`text-[#64748B] text-xs transition-all duration-300 ${
                       activeArchStep === step.id ? "max-h-[100px] opacity-100 mt-2 leading-relaxed" : "max-h-0 opacity-0 overflow-hidden"
                     }`}>
@@ -572,7 +577,7 @@ export default function ErpCrmPage() {
                     </div>
                   </div>
                   
-                  {/* Visual Connection Arrow with Animated Pulsing Data Dot */}
+                  
                   {idx < 4 && (
                     <div className="absolute bottom-[-16px] left-[32px] w-[2px] h-[16px] bg-[#635BFF]/15 pointer-events-none z-10">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#635BFF] absolute left-[-2px] animate-ping" />
@@ -585,7 +590,7 @@ export default function ErpCrmPage() {
           </div>
         </section>
 
-        {/* 4. "From Idea to System" Process - EXPANDED SPACE */}
+        
         <section id="process" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
             <p className="text-[#635BFF] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Our Methodology</p>
@@ -597,17 +602,17 @@ export default function ErpCrmPage() {
             </p>
           </div>
 
-          {/* Timeline UI */}
+          
           <div className="relative pl-6 before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:border-l-2 before:border-dashed before:border-[#635BFF]/30 max-w-[850px] mx-auto">
             {timelineSteps.map((s, idx) => (
               <div key={idx} className="relative flex items-start gap-4 mb-8 last:mb-0 group">
                 
-                {/* Timeline Circle Bullet */}
+                
                 <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#635BFF] flex items-center justify-center shadow-[0_0_12px_rgba(99,91,255,0.12)] z-10">
                   <span className="text-[0.75rem] font-black text-[#635BFF] tracking-tighter">{s.phase}</span>
                 </div>
 
-                {/* Content Card */}
+                
                 <div className="flex-1 p-5 rounded-2xl border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_15px_30px_rgba(99,91,255,0.05)] hover:border-[#635BFF]/20 transition-all duration-300 flex flex-col text-left">
                   <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-[#635BFF] transition-colors">{s.name}</h3>
                   <p className="text-[#64748B] text-xs leading-relaxed">{s.desc}</p>
@@ -617,7 +622,7 @@ export default function ErpCrmPage() {
           </div>
         </section>
 
-        {/* 5. Product Showcase (V2 OpsSuite & StockFlow) - EXPANDED SPACE */}
+        
         <section id="showcase" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
             <p className="text-[#635BFF] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Internal Products</p>
@@ -631,7 +636,7 @@ export default function ErpCrmPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-[1100px] mx-auto">
             
-            {/* Card 1: V2 OpsSuite */}
+            
             <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(99,91,255,0.08)] hover:border-[#635BFF]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
               <div className="absolute top-0 right-0 w-28 h-28 bg-[#635BFF]/5 rounded-bl-full pointer-events-none -z-10" />
               <div>
@@ -652,10 +657,10 @@ export default function ErpCrmPage() {
                   An advanced operations CRM built with rapid automated HubSpot two-way database webhooks. Eliminates sync drops and maps incoming leads instantly to account managers.
                 </p>
 
-                {/* Dashboard mockup */}
+                
                 <div className="rounded-2xl border border-slate-100 shadow-[0_10px_25px_rgba(0,0,0,0.02)] overflow-hidden mb-6 bg-white select-none">
                   
-                  {/* Browser bar */}
+                  
                   <div className="bg-slate-50/80 border-b border-slate-100 px-4 py-2.5 flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444] shadow-sm" />
@@ -668,7 +673,7 @@ export default function ErpCrmPage() {
                     <div className="w-3.5 h-3.5" />
                   </div>
 
-                  {/* Inside Mock lead manager */}
+                  
                   <div className="p-4 font-sans">
                     <div className="flex items-center justify-between border-b border-slate-200/60 pb-3 mb-3">
                       <span className="text-[0.68rem] font-extrabold text-[#0F172A] tracking-tight flex items-center gap-2">
@@ -692,7 +697,7 @@ export default function ErpCrmPage() {
 
                 </div>
 
-                {/* Features List */}
+                
                 <div className="flex flex-col gap-2.5 mb-8">
                   <div className="flex gap-2 items-center text-xs text-slate-600">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
@@ -714,7 +719,7 @@ export default function ErpCrmPage() {
               </Link>
             </div>
 
-            {/* Card 2: StockFlow */}
+            
             <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(99,91,255,0.08)] hover:border-[#635BFF]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
               <div className="absolute top-0 right-0 w-28 h-28 bg-[#635BFF]/5 rounded-bl-full pointer-events-none -z-10" />
               <div>
@@ -735,10 +740,10 @@ export default function ErpCrmPage() {
                   An automated inventory tracker connecting supply chains and warehouses. Maps real-time stock deficits and automates vendor ordering webhooks under preset thresholds.
                 </p>
 
-                {/* Dashboard mockup */}
+                
                 <div className="rounded-2xl border border-slate-100 shadow-[0_10px_25px_rgba(0,0,0,0.02)] overflow-hidden mb-6 bg-white select-none">
                   
-                  {/* Browser bar */}
+                  
                   <div className="bg-slate-50/80 border-b border-slate-100 px-4 py-2.5 flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444] shadow-sm" />
@@ -751,7 +756,7 @@ export default function ErpCrmPage() {
                     <div className="w-3.5 h-3.5" />
                   </div>
 
-                  {/* Inside Inventory Mockup */}
+                  
                   <div className="p-4 font-sans">
                     <div className="flex items-center justify-between mb-3 border-b border-slate-100 pb-2">
                       <span className="text-[0.68rem] font-extrabold text-[#0F172A] tracking-tight flex items-center gap-2">
@@ -784,7 +789,7 @@ export default function ErpCrmPage() {
 
                 </div>
 
-                {/* Features List */}
+                
                 <div className="flex flex-col gap-2.5 mb-8">
                   <div className="flex gap-2 items-center text-xs text-slate-600">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
@@ -809,7 +814,7 @@ export default function ErpCrmPage() {
           </div>
         </section>
 
-        {/* 6. ERP & CRM Capabilities Section - EXPANDED SPACE */}
+        
         <section id="saas-features" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
             <p className="text-[#635BFF] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Technical Checklist</p>
@@ -821,7 +826,7 @@ export default function ErpCrmPage() {
             </p>
           </div>
 
-          {/* Grid of visual feature pills */}
+          
           <div className="flex flex-wrap items-center justify-center gap-3.5 max-w-[900px] mx-auto">
             {capabilities.map((feat, idx) => (
               <div 
@@ -830,7 +835,7 @@ export default function ErpCrmPage() {
               >
                 <div className="h-[4px] w-[50%] absolute top-0 left-0 bg-gradient-to-r from-[#635BFF] to-[#1161ed] rounded-tr group-hover:w-full transition-all duration-300" />
                 
-                {/* Glowing Bullet Node */}
+                
                 <div className="w-5.5 h-5.5 rounded-full bg-[#635BFF]/[0.08] flex items-center justify-center text-[0.62rem] font-black text-[#635BFF] shadow-inner select-none shrink-0 group-hover:bg-[#635BFF] group-hover:text-white transition-all duration-300">
                   ✓
                 </div>
@@ -840,7 +845,7 @@ export default function ErpCrmPage() {
           </div>
         </section>
 
-        {/* 8. Metrics / Credibility Section - FINAL CLEAN FINISH */}
+        
         <section id="credibility" className="py-12 border-t border-black/[0.04] mb-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4 items-center justify-center">
             {stats.map((st, idx) => (

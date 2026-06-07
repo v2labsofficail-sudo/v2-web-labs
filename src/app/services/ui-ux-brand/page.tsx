@@ -2,15 +2,16 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 
 export default function UiUxBrandPage() {
-  // Figma Sandbox interactive mode
+  
   const [sandboxMode, setSandboxMode] = useState<
     "wireframe" | "tokens" | "hifi"
   >("hifi");
 
-  // Interactive Timeline active step
+  
   const [activeStep, setActiveStep] = useState(0);
 
   const capabilities = [
@@ -206,16 +207,16 @@ export default function UiUxBrandPage() {
 
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
-      {/* Animated Floating Luminous Mesh Background Orbs */}
+      
       <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#1161ed]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
       <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#3b82f6]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
       <div className="absolute bottom-[15%] left-[10%] w-[400px] h-[400px] bg-[#8b5cf6]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-float-reverse" />
 
-      {/* Luminous Dotted Grid Background Pattern */}
+      
       <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.15] -z-10 pointer-events-none select-none" />
 
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
-        {/* Hero Section with premium typographic depth */}
+        
         <header className="mb-24 text-center md:text-left relative z-10">
           <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#1161ed] tracking-[0.18em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
             <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
@@ -236,9 +237,9 @@ export default function UiUxBrandPage() {
           </p>
         </header>
 
-        {/* Light-Themed Interactive Sandbox Workspace Section */}
+        
         <section className="mb-28 relative z-10">
-          {/* Header Controls for Sandbox */}
+          
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8">
             <div>
               <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
@@ -254,7 +255,7 @@ export default function UiUxBrandPage() {
               </p>
             </div>
 
-            {/* Premium Selector Switchers */}
+            
             <div className="flex p-1.5 bg-slate-200/50 backdrop-blur-md border border-slate-200/60 rounded-[20px] w-full md:w-auto shadow-inner">
               {(["wireframe", "tokens", "hifi"] as const).map((mode) => (
                 <button
@@ -272,12 +273,12 @@ export default function UiUxBrandPage() {
             </div>
           </div>
 
-          {/* Master Interactive Workspace Container - Completely Redesigned as Light glassmorphism */}
+          
           <div className="w-full bg-white/70 backdrop-blur-xl border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col md:flex-row gap-10 items-center justify-between">
-            {/* Luminous Inner Gradient Glow */}
+            
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#1161ed]/[0.05] rounded-full blur-[110px] pointer-events-none" />
 
-            {/* Sidebar Code Variable Panel */}
+            
             <div className="w-full md:w-[330px] shrink-0 z-10 flex flex-col gap-4 font-mono text-[0.72rem] text-slate-500">
               <div className="pb-3 border-b border-slate-200 flex justify-between items-center">
                 <span className="text-[#1161ed] font-extrabold flex items-center gap-1.5">
@@ -334,7 +335,7 @@ export default function UiUxBrandPage() {
                 </div>
               </div>
 
-              {/* Dynamic JSON / CSS Tagging panel */}
+              
               <div className="p-5 rounded-3xl bg-slate-55 border border-dashed border-slate-200 flex flex-col gap-2">
                 <div className="text-[0.62rem] text-slate-400">
                   {"/* active active CSS variable tags */"}
@@ -350,9 +351,9 @@ export default function UiUxBrandPage() {
               </div>
             </div>
 
-            {/* Sandbox Visual Output Container */}
+            
             <div className="w-full flex-1 flex items-center justify-center p-2 z-10">
-              {/* Output Frame Mockup */}
+              
               <div
                 className={`w-full max-w-[420px] transition-all duration-500 p-8 ${
                   sandboxMode === "wireframe"
@@ -362,7 +363,7 @@ export default function UiUxBrandPage() {
                       : "bg-white/90 backdrop-blur-xl border border-slate-200 rounded-[32px] text-slate-800 shadow-[0_25px_60px_rgba(17,97,237,0.06)] relative"
                 }`}
               >
-                {/* Token Overlays tags in Tokens mode */}
+                
                 {sandboxMode === "tokens" && (
                   <>
                     <div className="absolute top-0 left-1/2 -translate-y-1/2 bg-purple-500 text-white font-mono text-[0.58rem] px-2.5 py-0.5 rounded shadow-md z-20">
@@ -374,9 +375,9 @@ export default function UiUxBrandPage() {
                   </>
                 )}
 
-                {/* Inside Component Rendering */}
+                
                 <div className="flex flex-col gap-6">
-                  {/* Dashboard Header */}
+                  
                   <div
                     className={`flex justify-between items-center pb-4 ${
                       sandboxMode === "wireframe"
@@ -412,7 +413,7 @@ export default function UiUxBrandPage() {
                     )}
                   </div>
 
-                  {/* Body Content simulation */}
+                  
                   {sandboxMode === "wireframe" ? (
                     <div className="flex flex-col gap-4">
                       <div className="h-6 w-full bg-slate-200/60 border border-dashed border-slate-300" />
@@ -421,7 +422,7 @@ export default function UiUxBrandPage() {
                     </div>
                   ) : sandboxMode === "tokens" ? (
                     <div className="flex flex-col gap-4">
-                      {/* Spacing tokens indicator line */}
+                      
                       <div className="relative border border-dashed border-purple-300 p-4 rounded-xl bg-purple-50/50">
                         <div className="absolute top-0 right-3 bg-purple-500 text-white text-[0.5rem] font-mono px-1 rounded shadow">
                           gap-4 [16px]
@@ -442,7 +443,7 @@ export default function UiUxBrandPage() {
                     </div>
                   ) : (
                     <div className="flex flex-col gap-5">
-                      {/* Beautiful Neon glassmorphic details pane inside HIFI dashboard preview */}
+                      
                       <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between relative overflow-hidden shadow-inner">
                         <div className="absolute top-0 right-0 w-16 h-16 bg-[#1161ed]/5 rounded-full blur-lg" />
                         <div className="flex justify-between items-center mb-3">
@@ -457,7 +458,7 @@ export default function UiUxBrandPage() {
                           $62,810
                         </span>
 
-                        {/* Dynamic Neon Visual SVG Path Line Graph */}
+                        
                         <div className="mt-5 h-16 w-full relative">
                           <svg
                             className="w-full h-full overflow-visible"
@@ -477,13 +478,13 @@ export default function UiUxBrandPage() {
                                 <stop offset="100%" stopColor="#8b5cf6" />
                               </linearGradient>
                             </defs>
-                            {/* Area Fill */}
+                            
                             <path
                                 d="M0,30 L10,24 L25,28 L40,15 L60,20 L75,8 L90,12 L100,2 L100,30 Z"
                                 fill="url(#neonGlow)"
                                 fillOpacity="0.08"
                             />
-                            {/* Stroke Path */}
+                            
                             <path
                               d="M0,30 L10,24 L25,28 L40,15 L60,20 L75,8 L90,12 L100,2"
                               fill="none"
@@ -492,7 +493,7 @@ export default function UiUxBrandPage() {
                               strokeLinecap="round"
                               className="animate-svg-draw"
                             />
-                            {/* Pulsing indicator node */}
+                            
                             <circle
                               cx="100"
                               cy="2"
@@ -505,7 +506,7 @@ export default function UiUxBrandPage() {
                         </div>
                       </div>
 
-                      {/* Interactive compiler button with neon drop-shadow */}
+                      
                       <button className="w-full py-3.5 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] rounded-xl text-white font-extrabold text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(17,97,237,0.15)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.3)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
                         Launch Figma Hifi Blueprint
                       </button>
@@ -517,7 +518,7 @@ export default function UiUxBrandPage() {
           </div>
         </section>
 
-        {/* Upgraded Capabilities Grid in premium frosted-glass design */}
+        
         <section className="mb-28 border-t border-slate-200/50 pt-16 relative">
           <div className="text-center mb-20 relative z-10">
             <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
@@ -538,13 +539,13 @@ export default function UiUxBrandPage() {
                 key={idx}
                 className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.01)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.05)] hover:border-[#1161ed]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
               >
-                {/* Premium Accent Top Border in Brand Gradient */}
+                
                 <div
                   className={`h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r ${cap.gradient} rounded-t-[32px]`}
                 />
 
                 <div>
-                  {/* Icon Container with radial backdrop shine */}
+                  
                   <div className="mb-8 relative">
                     <div className="w-13 h-13 rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-500 shadow-sm">
                       {cap.icon}
@@ -565,7 +566,7 @@ export default function UiUxBrandPage() {
           </div>
         </section>
 
-        {/* Process Roadmap Section (Dynamic, click-interactive step selector) */}
+        
         <section className="py-20 border-t border-slate-200/50 mb-24 relative">
           <div className="text-center mb-20 relative z-10">
             <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
@@ -581,7 +582,7 @@ export default function UiUxBrandPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-[1100px] mx-auto items-center relative z-10">
-            {/* Left Steps selectors with hover transforms */}
+            
             <div className="lg:col-span-5 flex flex-col gap-4.5">
               {steps.map((step, idx) => {
                 const isActive = idx === activeStep;
@@ -595,7 +596,7 @@ export default function UiUxBrandPage() {
                         : "bg-transparent border-transparent hover:border-slate-200"
                     }`}
                   >
-                    {/* Left Brand Line accent */}
+                    
                     {isActive && (
                       <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] via-[#3b82f6] to-[#8b5cf6]" />
                     )}
@@ -624,10 +625,10 @@ export default function UiUxBrandPage() {
               })}
             </div>
 
-            {/* Right Active Step visual preview box */}
+            
             <div className="lg:col-span-7 z-10">
               <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.04)] hover:border-[#1161ed]/20 transition-all duration-500">
-                {/* Visual Top Accent Strip */}
+                
                 <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] rounded-t-[36px]" />
 
                 <div>
@@ -641,13 +642,13 @@ export default function UiUxBrandPage() {
                     {steps[activeStep].desc}
                   </p>
 
-                  {/* Interactive Phase Preview component */}
+                  
                   <div className="w-full h-40 mb-6 group-hover:scale-[1.01] transition-transform duration-300">
                     {steps[activeStep].preview}
                   </div>
                 </div>
 
-                {/* System Tools Used Badger bar */}
+                
                 <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-100 text-[0.65rem] font-bold text-slate-400">
                   <span>STAGE TOOLKIT:</span>
                   {steps[activeStep].tools.map((tool, i) => (
@@ -664,9 +665,9 @@ export default function UiUxBrandPage() {
           </div>
         </section>
 
-        {/* ========================================================================= */}
-        {/* NEW DESIGN TOOLING STACK & SHOWCASE SECTION (COMMISSIONED BY USER) */}
-        {/* ========================================================================= */}
+        
+        
+        
         <section className="py-24 border-t border-slate-200/50 relative z-10">
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-16">
@@ -681,34 +682,38 @@ export default function UiUxBrandPage() {
               </p>
             </div>
 
-            {/* Two-Column Tool Stack Layout */}
+            
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              {/* Left Column: Unique Generated Illustration */}
+              
               <div className="lg:col-span-6 flex justify-center relative">
-                {/* Floating Luminous Glow Background behind the image */}
+                
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#1161ed]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
                 
-                {/* Premium floating glass framework holding our generated artwork */}
+                
                 <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17,97,237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-50/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
                   
-                  <img
+                  <Image
                     src="/ui_ux_tools_showcase.png"
                     alt="Creative UI/UX Branding Illustration Artwork"
+                    width={460}
+                    height={460}
+                    sizes="(max-width: 640px) 90vw, 460px"
                     className="w-full h-full object-cover rounded-[28px] shadow-sm transform group-hover:scale-[1.015] transition-transform duration-700 ease-out"
+                    loading="lazy"
                   />
                   
-                  {/* Subtle float tag */}
+                  
                   <div className="absolute bottom-6 right-6 bg-slate-900/90 text-white font-mono text-[0.62rem] tracking-wider px-3.5 py-2 rounded-xl backdrop-blur-sm shadow-md border border-white/10 z-20">
                     ◇ SHADER: ACTIVE
                   </div>
                 </div>
               </div>
 
-              {/* Right Column: Creative floating presentation of Figma, Photoshop, Canva, Illustrator */}
+              
               <div className="lg:col-span-6 flex flex-col gap-6">
                 
-                {/* Figma Tool Element */}
+                
                 <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(17,97,237,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 100 150" fill="none">
@@ -730,7 +735,7 @@ export default function UiUxBrandPage() {
                   </div>
                 </div>
 
-                {/* Photoshop Tool Element */}
+                
                 <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-blue-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(0,196,255,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -749,7 +754,7 @@ export default function UiUxBrandPage() {
                   </div>
                 </div>
 
-                {/* Illustrator Tool Element */}
+                
                 <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-amber-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(255,154,0,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -768,7 +773,7 @@ export default function UiUxBrandPage() {
                   </div>
                 </div>
 
-                {/* Canva Tool Element */}
+                
                 <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-purple-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(125,42,232,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -798,9 +803,9 @@ export default function UiUxBrandPage() {
           </div>
         </section>
 
-        {/* Premium Light CTA Section with glowing grid borders (NO MORE NAVY DARK BLUE BOX!) */}
+        
         <section className="relative rounded-[40px] bg-gradient-to-tr from-[#1161ed]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60">
-          {/* Luminous soft mesh bubbles */}
+          
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#1161ed] opacity-5 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8b5cf6] opacity-5 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
@@ -824,7 +829,7 @@ export default function UiUxBrandPage() {
         </section>
       </div>
 
-      {/* Embedded CSS Custom Keyframe animations for elite visual wow factors */}
+      
       <style jsx global>{`
         @keyframes float {
           0% {

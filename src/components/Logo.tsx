@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface LogoProps {
   showText?: boolean;
   showTagline?: boolean;
@@ -10,25 +12,30 @@ export default function Logo({
   className = "",
 }: LogoProps) {
   if (dark) {
-    // Default: Dark Theme Footer Logo (blends seamlessly with dark navy footer background)
     return (
       <div className={`flex items-center select-none ${className}`}>
-        <img
+        <Image
           src="/logo-cover-v2labs-black.jpeg"
           alt="V2 Labs"
+          width={150}
+          height={48}
           className="h-10 sm:h-[48px] w-auto object-contain"
+          loading="lazy"
         />
       </div>
     );
   }
 
-  // Default: Light Theme Header Logo (blends seamlessly with white header background and mix-blend-mode multiply for transparency)
   return (
     <div className={`flex items-center select-none ${className}`}>
-      <img
-        src="/logo-cover-v2labs.jpeg"
+      <Image
+        src="/logo-global.png"
         alt="V2 Labs"
+        width={230}
+        height={76}
         className="h-[54px] sm:h-[76px] w-auto object-contain mix-blend-multiply"
+        preload={true}
+        fetchPriority="high"
       />
     </div>
   );

@@ -1,11 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function CareersPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 120);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const perks = [
     {
@@ -84,7 +94,6 @@ export default function CareersPage() {
 
   const categories = ["All", "Engineering", "AI & Automation", "Creative"];
 
-  // Highly responsive client-side search and category filtering
   const filteredRoles = roles.filter((role) => {
     const matchesSearch =
       role.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -115,85 +124,90 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Filter and Search Interface Section (Highly Responsive & Tactile) */}
-      <section className="py-12 bg-white border-b border-slate-200/50 sticky top-[72px] z-30 shadow-[0_4px_16px_rgba(0,0,0,0.02)]">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-            {/* Search Input bar */}
-            <div className="relative w-full md:max-w-md shrink-0">
-              <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
-                </svg>
-              </span>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search positions, technologies, skills..."
-                className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#1161ed] focus:ring-4 focus:ring-[#1161ed]/5 transition-all text-slate-800"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery("")}
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600 transition-colors"
-                >
+      <section className="sticky z-30 transition-all duration-300 w-full bg-transparent top-[83px] sm:top-[107px] lg:top-[111px]">
+        <div className={`transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          isScrolled
+            ? "max-w-[1100px] py-3 bg-white/85 backdrop-blur-xl border border-slate-200/40 rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.06)] mx-4 sm:mx-6 lg:mx-auto px-5"
+            : "max-w-full py-6 bg-white border-b border-slate-100 rounded-none mx-0 px-6"
+        }`}>
+          <div className="max-w-[1100px] mx-auto w-full">
+            <div className="flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+              <div className="relative w-full md:max-w-md shrink-0">
+                <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
                   </svg>
-                </button>
-              )}
-            </div>
-
-            {/* Responsive Category pills */}
-            <div className="w-full flex gap-2 overflow-x-auto no-scrollbar pb-1 md:pb-0 justify-start md:justify-end">
-              {categories.map((cat) => {
-                const isActive = selectedCategory === cat;
-                return (
+                </span>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search positions, technologies, skills..."
+                  className="w-full pl-11 pr-4 py-3 bg-slate-50/60 hover:bg-slate-100/50 hover:border-slate-300/80 border border-slate-200 rounded-2xl text-sm font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#1161ed] focus:ring-4 focus:ring-[#1161ed]/8 transition-all text-slate-800"
+                />
+                {searchQuery && (
                   <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`whitespace-nowrap px-5 py-2.5 rounded-xl text-sm font-bold border transition-all cursor-pointer active:scale-95 duration-150 ${
-                      isActive
-                        ? "bg-[#1161ed] border-[#1161ed] text-white shadow-sm shadow-[#1161ed]/15"
-                        : "bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 hover:border-slate-300"
-                    }`}
+                    onClick={() => setSearchQuery("")}
+                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600 transition-colors"
                   >
-                    {cat}
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   </button>
-                );
-              })}
+                )}
+              </div>
+
+              <div className="w-full flex gap-2 overflow-x-auto no-scrollbar pb-1 md:pb-0 justify-start md:justify-end">
+                {categories.map((cat) => {
+                  const isActive = selectedCategory === cat;
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => setSelectedCategory(cat)}
+                      className={`whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold border transition-all cursor-pointer active:scale-95 duration-150 ${
+                        isActive
+                          ? "bg-[#1161ed] border-[#1161ed] text-white shadow-sm shadow-[#1161ed]/15"
+                          : "bg-slate-50/60 border-slate-200 text-slate-600 hover:bg-slate-100 hover:border-slate-300"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Perks Section */}
-      <section className="py-20 max-w-[1100px] mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-[#1161ed] font-extrabold text-[0.75rem] uppercase tracking-widest mb-3">
-            Why Us
-          </p>
-          <h2 className="text-3xl font-black tracking-tight text-slate-900">
-            A Collaborative Digital Environment
-          </h2>
-        </div>
+      <ScrollReveal>
+        {/* Perks Section */}
+        <section className="py-20 max-w-[1100px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-[#1161ed] font-extrabold text-[0.75rem] uppercase tracking-widest mb-3">
+              Why Us
+            </p>
+            <h2 className="text-3xl font-black tracking-tight text-slate-900">
+              A Collaborative Digital Environment
+            </h2>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {perks.map((p, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-start hover:border-[#1161ed]/10 transition-colors group">
-              <div className="w-12 h-12 rounded-xl bg-[#1161ed]/[0.05] flex items-center justify-center mb-6 shrink-0 group-hover:bg-[#1161ed]/10 transition-colors">
-                {p.icon}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {perks.map((p, idx) => (
+              <div key={idx} className="bg-white/40 border border-slate-200/40 backdrop-blur-xl p-8 rounded-2xl shadow-sm flex flex-col items-start hover:border-[#1161ed]/20 hover:bg-white/60 hover:shadow-[0_15px_30px_rgba(17,97,237,0.04)] transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-xl bg-[#1161ed]/[0.05] flex items-center justify-center mb-6 shrink-0 group-hover:bg-[#1161ed]/10 transition-colors">
+                  {p.icon}
+                </div>
+                <h3 className="text-lg font-extrabold text-slate-900 mb-3">{p.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{p.desc}</p>
               </div>
-              <h3 className="text-lg font-extrabold text-slate-900 mb-3">{p.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </ScrollReveal>
 
-      {/* Open Positions list */}
-      <section className="py-20 bg-slate-100/50 border-t border-slate-200/60 border-b border-slate-200/60">
+      <ScrollReveal>
+        <section className="py-20 bg-slate-100/50 border-t border-slate-200/60 border-b border-slate-200/60">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[#1161ed] font-extrabold text-[0.75rem] uppercase tracking-widest mb-3">
@@ -275,9 +289,11 @@ export default function CareersPage() {
           )}
         </div>
       </section>
+      </ScrollReveal>
 
-      {/* General Submission */}
-      <section className="py-24 max-w-[1100px] mx-auto px-6 text-center">
+      <ScrollReveal>
+        {/* General Submission */}
+        <section className="py-24 max-w-[1100px] mx-auto px-6 text-center">
         <div className="bg-slate-900 rounded-3xl p-10 sm:p-14 text-white shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#1161ed] opacity-10 rounded-full blur-3xl -mr-16 -mt-16" />
           <h2 className="text-3xl font-black tracking-tight mb-4 relative z-10">Don&apos;t see your alignment?</h2>
@@ -292,6 +308,7 @@ export default function CareersPage() {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   );
 }
