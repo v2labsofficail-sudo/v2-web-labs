@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { buildPageMetadata } from "@/lib/seo";
-
+// 1
 export const metadata = buildPageMetadata({
   title: "About",
   description:
