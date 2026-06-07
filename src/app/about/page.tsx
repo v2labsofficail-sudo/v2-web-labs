@@ -25,7 +25,7 @@ export default function AboutPage() {
     },
     {
       name: "Vandan Darji",
-      role: "Co-Founder & Full Stack Developer",
+      role: "CEO & Full Stack Developer",
       initials: "VD",
       quote: "Compiles bulletproof, sub-second architectures.",
       gradient: "from-[#1161ed] to-[#3b82f6]",
@@ -36,7 +36,7 @@ export default function AboutPage() {
     },
     {
       name: "Jevin Kalathiya",
-      role: "PHP & Laravel Developer / Manager",
+      role: "MD & PHP Laravel Developer",
       initials: "JK",
       quote:
         "Building scalable backend systems and efficient web applications.",
@@ -300,3 +300,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

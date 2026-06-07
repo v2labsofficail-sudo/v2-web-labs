@@ -194,8 +194,14 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                 </div>
               </div>
 
-              <span className="text-[0.72rem] font-black uppercase tracking-widest text-[#1161ed] mb-1.5 leading-none">{member.role}</span>
-              <h3 className="text-lg font-black text-slate-900 mb-2 transition-colors group-hover:text-[#1161ed]">{member.name}</h3>
+              <div className="mb-2.5 inline-flex min-h-[3rem] items-center justify-center rounded-full border border-[#1161ed]/15 bg-[#1161ed]/[0.06] px-4 py-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
+                <span className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#1161ed] leading-relaxed">
+                  {member.role}
+                </span>
+              </div>
+              <h3 className="mb-2 bg-gradient-to-r from-slate-900 via-slate-800 to-[#1161ed] bg-clip-text text-[1.2rem] font-black tracking-[-0.02em] text-transparent transition-all duration-300 group-hover:tracking-[-0.03em]">
+                {member.name}
+              </h3>
               
               <button 
                 onClick={(e) => handleCardClick(e, member)}
@@ -347,3 +353,5 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
     </div>
   );
 }
+
+
