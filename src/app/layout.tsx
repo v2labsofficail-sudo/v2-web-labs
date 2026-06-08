@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter, Outfit } from "next/font/google";
+import { Montserrat, Inter, Outfit, Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { buildOgImageUrl, siteConfig, structuredData } from "@/lib/seo";
@@ -21,6 +21,12 @@ const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 const defaultOgImage = buildOgImageUrl(
@@ -95,7 +101,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${outfit.variable} ${poppins.variable}`}>
       <head>
         <script
           type="application/ld+json"

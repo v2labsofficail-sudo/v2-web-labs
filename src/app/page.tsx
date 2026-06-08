@@ -504,7 +504,7 @@ function TiltIllustration() {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full max-w-[480px] lg:max-w-full transition-all duration-500 ease-out cursor-pointer select-none"
+      className="relative w-full max-w-[500px] lg:max-w-full transition-all duration-500 ease-out cursor-pointer select-none"
       style={{
         transform: isHovered
           ? `perspective(1000px) rotateX(${coords.y}deg) rotateY(${coords.x}deg) scale3d(1.03, 1.03, 1.03)`
@@ -512,42 +512,104 @@ function TiltIllustration() {
         transformStyle: "preserve-3d",
       }}
     >
-      <div className={`${isHovered ? "" : "animate-float"} gpu-accelerated`}>
-        <Image
-          src="/hero_collaboration.jpg"
-          alt="V2Labs Tech Collaboration Flat Illustration"
-          width={480}
-          height={360}
-          sizes="(max-width: 640px) 100vw, 480px"
-          preload={true}
-          fetchPriority="high"
-          className="w-full h-auto object-contain mix-blend-multiply"
-          style={{ transform: "translateZ(30px)" }}
-        />
-        
+      <div className={`${isHovered ? "" : "animate-float"} gpu-accelerated relative w-full h-[380px] bg-slate-950/90 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-5 shadow-[0_30px_60px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden`}>
+        {/* Browser control header */}
+        <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4 select-none" style={{ transform: "translateZ(20px)" }}>
+          <div className="flex gap-1.5">
+            <span className="w-3 h-3 rounded-full bg-red-500/80" />
+            <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
+            <span className="w-3 h-3 rounded-full bg-green-500/80" />
+          </div>
+          <div className="bg-slate-900 border border-slate-800 px-4 py-0.5 rounded-full text-[10px] text-slate-500 font-mono tracking-tight w-1/2 text-center">
+            app.v2labs.com/designer
+          </div>
+          <div className="w-6" /> {/* spacer */}
+        </div>
+
+        {/* Browser Content */}
+        <div className="flex-1 grid grid-cols-12 gap-3" style={{ transform: "translateZ(35px)" }}>
+          {/* Sidebar */}
+          <div className="col-span-3 border-r border-slate-800/60 pr-2 flex flex-col gap-2.5">
+            <div className="h-6 bg-slate-900 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-[#1161ed] font-bold border border-[#1161ed]/15 bg-[#1161ed]/5">
+              Canvas
+            </div>
+            <div className="h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-slate-500 font-bold border border-transparent hover:border-slate-800 transition-colors">
+              AI Flows
+            </div>
+            <div className="h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-slate-500 font-bold border border-transparent hover:border-slate-800 transition-colors">
+              Integrations
+            </div>
+            <div className="mt-auto h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-slate-500 font-bold border border-transparent hover:border-slate-800 transition-colors">
+              Settings
+            </div>
+          </div>
+
+          {/* Designer Canvas */}
+          <div className="col-span-9 flex flex-col gap-3">
+            {/* Toolbar status */}
+            <div className="flex items-center justify-between">
+              <span className="font-poppins text-[10px] font-bold text-slate-400">Design Preview</span>
+              <span className="inline-flex items-center gap-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[9px] px-2 py-0.5 rounded-full font-bold leading-none">
+                <span className="w-1 h-1 rounded-full bg-emerald-400 animate-ping" />
+                Live Sync
+              </span>
+            </div>
+
+            {/* Premium Signature Preview Box */}
+            <div className="flex-1 bg-white border border-slate-200 shadow-lg rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden group/sig">
+              {/* Grid Background Overlay */}
+              <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:12px_12px] opacity-[0.25] pointer-events-none" />
+              
+              <div className="relative z-10 flex gap-3.5 items-start">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1161ed] to-[#3b82f6] text-white flex items-center justify-center font-poppins font-black text-sm shadow-[0_4px_12px_rgba(17,97,237,0.18)]">
+                  AT
+                </div>
+                <div>
+                  <h4 className="font-poppins text-[0.88rem] font-black text-slate-900 leading-none mb-1">Alex Thorne</h4>
+                  <p className="font-poppins text-[0.66rem] font-bold text-[#1161ed] leading-none mb-2">Founder & CEO, SynthFlow AI</p>
+                  <div className="flex flex-col gap-1 text-[0.6rem] font-bold text-slate-400">
+                    <span className="flex items-center gap-1">✉ alex@synthflow.ai</span>
+                    <span className="flex items-center gap-1">☏ +1 (555) 019-2834</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dynamic divider line */}
+              <div className="relative z-10 h-px bg-gradient-to-r from-[#1161ed] via-slate-200 to-transparent my-3" />
+
+              {/* Company banner area */}
+              <div className="relative z-10 flex justify-between items-center text-[0.55rem] font-black text-slate-400 uppercase tracking-widest leading-none">
+                <span>V2Labs engineered product</span>
+                <span className="text-[#1161ed] tracking-wider leading-none">synthflow.ai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating statistics/glowing cards */}
         <div 
-          className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 bg-white/90 backdrop-blur-md border border-slate-200/60 rounded-2xl p-2.5 sm:p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
+          className="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
           style={{ transform: "translateZ(65px)" }}
         >
           <div className="w-8 h-8 rounded-xl bg-[#1161ed]/10 text-[#1161ed] flex items-center justify-center font-black text-sm">
             ⚡
           </div>
-          <div className="text-left">
-            <p className="text-[9px] sm:text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">SaaS Development</p>
-            <p className="text-[7px] sm:text-[8px] font-bold text-slate-400 mt-1 leading-none">Cloud Dashboards</p>
+          <div className="text-left font-poppins">
+            <p className="text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">99.9% Delivery</p>
+            <p className="text-[8px] font-bold text-slate-400 mt-1 leading-none">Global cloud sync</p>
           </div>
         </div>
 
         <div 
-          className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white/90 backdrop-blur-md border border-slate-200/60 rounded-2xl p-2.5 sm:p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
+          className="absolute -bottom-4 -right-4 bg-slate-900/95 backdrop-blur-md border border-slate-800/80 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.15)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
           style={{ transform: "translateZ(55px)" }}
         >
           <div className="w-8 h-8 rounded-xl bg-[#06b6d4]/10 text-[#06b6d4] flex items-center justify-center font-black text-sm">
-            🤖
+            📈
           </div>
-          <div className="text-left">
-            <p className="text-[9px] sm:text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">AI Automation</p>
-            <p className="text-[7px] sm:text-[8px] font-bold text-slate-400 mt-1 leading-none">Agentic Workflows</p>
+          <div className="text-left font-poppins">
+            <p className="text-[10px] font-black text-white uppercase tracking-wider leading-none">+148% CTR</p>
+            <p className="text-[8px] font-bold text-slate-500 mt-1 leading-none">Campaign growth</p>
           </div>
         </div>
       </div>
@@ -776,29 +838,27 @@ export default function Home() {
               <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
               A trusted digital agency
             </div>
-            <h1 className="text-[clamp(1.8rem,5.8vw,4.4rem)] font-black leading-[1.08] text-[#0F172A] max-w-[650px] mb-4 lg:mb-6 tracking-tight text-left animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
-              Quality digital{" "}
+            <h1 className="text-[clamp(1.8rem,5.8vw,4.4rem)] font-black font-poppins leading-[1.08] text-[#0F172A] max-w-[650px] mb-4 lg:mb-6 tracking-tight text-left animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
+              The most trusted{" "}
               <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">
-                services you
+                SaaS & Digital Product
               </span>{" "}
-              really want !
+              engineering partner.
             </h1>
-            <p className="text-[#64748B] text-sm lg:text-[1.05rem] leading-[1.7] max-w-[500px] mb-6 lg:mb-8 text-left font-medium animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
-              We are delivering top-level digital services with our
-              best-experienced team. Just get started with us today and
-              accelerate your growth.
+            <p className="text-[#64748B] text-sm lg:text-[1.05rem] leading-[1.7] max-w-[500px] mb-6 lg:mb-8 text-left font-normal font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
+              We design, build, and deploy premium cloud platforms, custom enterprise systems, and autonomous AI integrations. Move from MVP to scale with startup velocity.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center animate-pulse-glow"
+                className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center animate-pulse-glow"
               >
                 Get Started
               </Link>
               <button
                 onClick={() => scrollTo("process")}
-                className="inline-flex items-center justify-center gap-3 font-extrabold text-[#0F172A] hover:text-[#1161ed] transition-colors duration-200 cursor-pointer group text-[0.95rem]"
+                className="inline-flex items-center justify-center gap-3 font-extrabold font-poppins text-[#0F172A] hover:text-[#1161ed] transition-colors duration-200 cursor-pointer group text-[0.95rem]"
               >
                 <div className="w-12 h-12 rounded-full bg-[#1161ed]/[0.08] text-[#1161ed] border border-[#1161ed]/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm">
                   <svg
@@ -815,19 +875,15 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-3 text-sm font-bold animate-fade-in-up opacity-0" style={{ animationDelay: "600ms" }}>
-              <Link
-                href="/services"
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700 transition hover:border-[#1161ed] hover:text-[#1161ed]"
-              >
-                Explore services
-              </Link>
-              <Link
-                href="/about"
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700 transition hover:border-[#1161ed] hover:text-[#1161ed]"
-              >
-                Meet the team
-              </Link>
+            <div className="mt-8 pt-6 border-t border-slate-200/80 w-full animate-fade-in-up opacity-0 font-poppins" style={{ animationDelay: "600ms" }}>
+              <p className="text-[0.66rem] font-bold uppercase tracking-wider text-slate-400 mb-3">Works seamlessly with your ecosystem</p>
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-[0.8rem] font-bold text-slate-600">
+                <span className="flex items-center gap-1.5"><span className="text-[#1161ed]">●</span> Next.js</span>
+                <span className="flex items-center gap-1.5"><span className="text-[#06b6d4]">●</span> React</span>
+                <span className="flex items-center gap-1.5"><span className="text-emerald-500">●</span> Node.js</span>
+                <span className="flex items-center gap-1.5"><span className="text-indigo-500">●</span> AWS</span>
+                <span className="flex items-center gap-1.5"><span className="text-amber-500">●</span> Google Cloud</span>
+              </div>
             </div>
 
           </div>

@@ -1,8 +1,23 @@
+@font-face {
+  font-family: 'webflow-icons';
+  src: url('https://d3e54v103j8qbb.cloudfront.net/fonts/webflow-icons.woff2') format('woff2'),
+       url('https://d3e54v103j8qbb.cloudfront.net/fonts/webflow-icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 
 @theme {
   --animate-marquee: marquee 35s linear infinite;
   --animate-marquee-reverse: marquee-reverse 35s linear infinite;
+  --font-montserrat: var(--font-montserrat), sans-serif;
+  --font-inter: var(--font-inter), Arial, sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
+  --font-poppins: var(--font-poppins), Arial, sans-serif;
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-webflow-icons: 'webflow-icons';
 
   @keyframes marquee {
     0% { transform: translateX(0); }
@@ -19,6 +34,7 @@
   --font-body: var(--font-outfit), 'Outfit', sans-serif;
   --font-montserrat: var(--font-montserrat), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
+  --font-poppins: var(--font-poppins), sans-serif;
 }
 
 html, body {
