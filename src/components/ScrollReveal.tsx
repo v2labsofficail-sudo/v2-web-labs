@@ -49,8 +49,8 @@ export default function ScrollReveal({
       ref={ref}
       className={`transition-all ease-[cubic-bezier(0.16,1,0.3,1)] ${
         isVisible
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-12 scale-[0.98] pointer-events-none"
+          ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+          : "opacity-100 translate-y-0 scale-100 pointer-events-auto md:opacity-0 md:translate-y-12 md:scale-[0.98] md:pointer-events-none"
       } ${className}`}
       style={{
         transitionDelay: `${delay}ms`,

@@ -119,14 +119,14 @@ export default function Navbar() {
     <>
       <header className={`sticky top-0 left-0 w-full z-[1000] select-none transition-all duration-300 ${
         isScrolled 
-          ? "py-1.5 lg:py-2 px-4 sm:px-6" 
-          : "py-3 lg:py-5 px-4 sm:px-6"
+          ? "py-1 sm:py-1.5 lg:py-2 px-3 sm:px-6" 
+          : "py-2 sm:py-3 lg:py-5 px-3 sm:px-6"
       }`}>
         <div 
           className={`flex justify-between items-center w-full max-w-[1240px] mx-auto transition-all duration-300 ${
             isScrolled 
-              ? "shadow-[0_12px_40px_rgba(15,23,42,0.06)] border-slate-200/40 py-1.5 px-5 rounded-[18px] bg-white/85 backdrop-blur-xl" 
-              : "shadow-[0_2px_15px_rgba(15,23,42,0.02)] border-slate-100/30 py-4 px-6 rounded-[24px] bg-white/75 backdrop-blur-xl"
+              ? "shadow-[0_12px_40px_rgba(15,23,42,0.06)] border-slate-200/40 py-1 sm:py-1.5 px-3.5 sm:px-5 rounded-[14px] sm:rounded-[18px] bg-white/85 backdrop-blur-xl" 
+              : "shadow-[0_2px_15px_rgba(15,23,42,0.02)] border-slate-100/30 py-2.5 sm:py-4 px-4 sm:px-6 rounded-[18px] sm:rounded-[24px] bg-white/75 backdrop-blur-xl"
           }`}
         >
           <Link 
@@ -300,7 +300,18 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          <div className="hidden min-[901px]:block">
+          <div className="hidden min-[901px]:flex items-center gap-3">
+            <Link 
+              href="/request-a-demo" 
+              className={`group relative inline-flex items-center gap-1.5 bg-white text-[#1161ed] border-2 border-[#1161ed] rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(17,97,237,0.1)] hover:shadow-[0_8px_25px_rgba(17,97,237,0.25)] hover:bg-[#1161ed]/5 active:scale-95 overflow-hidden ${
+                isScrolled ? "px-4 py-1.5 text-[0.66rem]" : "px-5 py-2 text-[0.72rem]"
+              }`}
+            >
+              <span className="relative z-10 flex items-center gap-1.5">
+                Demo
+              </span>
+            </Link>
+
             <Link 
               href="/contact" 
               className={`group relative inline-flex items-center gap-1.5 bg-slate-900 text-white rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_rgba(17,97,237,0.35)] active:scale-95 overflow-hidden ${
@@ -336,6 +347,7 @@ export default function Navbar() {
         className={`fixed inset-0 bg-slate-950/20 backdrop-blur-sm z-[1050] transition-all duration-500 min-[901px]:hidden ${
           isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
+        style={{ visibility: isMenuOpen ? "visible" : "hidden" }}
         onClick={() => setIsMenuOpen(false)}
       />
 
@@ -343,7 +355,10 @@ export default function Navbar() {
         className={`fixed top-4 left-4 w-[calc(100%-2rem)] max-w-[340px] h-[calc(100vh-2rem)] bg-white/95 backdrop-blur-xl z-[1100] border border-slate-200/50 rounded-[24px] shadow-[10px_10px_40px_rgba(15,23,42,0.08)] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] min-[901px]:hidden ${
           isMenuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
-        style={{ transform: isMenuOpen ? "translateX(0)" : "translateX(calc(-100% - 2rem))" }}
+        style={{ 
+          transform: isMenuOpen ? "translateX(0)" : "translateX(calc(-100% - 2rem))",
+          visibility: isMenuOpen ? "visible" : "hidden"
+        }}
       >
         <div className="flex flex-col h-full px-6 py-8 overflow-y-auto">
           <div className="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">

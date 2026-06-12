@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildFaqJsonLd } from "@/lib/seo";
 import ScrollReveal from "@/components/ScrollReveal";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const TESTIMONIALS = [
   {
@@ -88,35 +89,37 @@ function TestimonialCard({
   testimonial: (typeof TESTIMONIALS)[number];
 }) {
   return (
-    <article className="w-[300px] sm:w-[350px] md:w-[400px] shrink-0 bg-transparent p-4 transition-all duration-300 hover:scale-[1.015] select-none">
-      <div className="mb-3 flex items-center gap-1 text-[#f5b301]">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <svg
-            key={index}
-            className="h-3.5 w-3.5 fill-current"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path d="M12 2.75l2.86 5.79 6.39.93-4.62 4.5 1.09 6.36L12 17.32l-5.72 3.01 1.09-6.36-4.62-4.5 6.39-.93L12 2.75z" />
-          </svg>
-        ))}
-      </div>
-
-      <p className="text-[0.84rem] sm:text-[0.92rem] md:text-[0.98rem] font-semibold leading-[1.65] text-[#1E293B] italic">
-        &quot;{testimonial.quote}&quot;
-      </p>
-
-      <div className="mt-4 flex items-center gap-3.5 pt-3.5">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1161ed] to-[#3b82f6] text-[0.68rem] font-extrabold text-white shadow-[0_3px_8px_rgba(17,97,237,0.15)]">
-          {testimonial.initials}
+    <article className="w-[350px] sm:w-[450px] md:w-[600px] lg:w-[800px] shrink-0 bg-[#F4F4F4] rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-12 transition-all duration-300 select-none flex flex-row gap-5 md:gap-10 h-full relative group items-center">
+      
+      {/* Left side: Avatar */}
+      <div className="shrink-0 flex items-center justify-center">
+        <div className="flex h-16 w-16 sm:h-20 sm:w-20 md:h-36 md:w-36 shrink-0 items-center justify-center rounded-full bg-slate-800 text-xl sm:text-2xl md:text-5xl font-bold text-white shadow-xl overflow-hidden">
+           {testimonial.initials}
         </div>
-        <div className="min-w-0">
-          <p className="truncate text-[0.8rem] sm:text-[0.84rem] font-black tracking-tight text-[#0F172A]">
-            {testimonial.name}
-          </p>
-          <p className="truncate text-[0.64rem] sm:text-[0.68rem] font-bold text-[#64748B]">
-            {testimonial.role}
-          </p>
+      </div>
+      
+      {/* Right side: Content */}
+      <div className="flex-1 flex flex-col w-full h-full justify-center">
+        <p className="text-[0.85rem] sm:text-[1rem] md:text-[1.3rem] font-semibold leading-snug md:leading-relaxed text-slate-800 flex-1 mb-4 md:mb-8">
+          {testimonial.quote}
+        </p>
+
+        <div className="flex items-end justify-between w-full mt-auto">
+          <div>
+             <p className="text-[0.9rem] md:text-[1.1rem] font-bold text-slate-900">
+               {testimonial.name}
+             </p>
+             <p className="text-[0.75rem] md:text-[0.9rem] font-medium text-slate-500 mt-0.5 md:mt-1">
+               {testimonial.role}
+             </p>
+          </div>
+          
+          {/* Quote Icon */}
+          <div className="text-[#FF5A1F] opacity-90 pb-1 pr-1 md:pr-2">
+            <svg className="w-6 h-6 md:w-10 md:h-10" viewBox="0 0 24 24" fill="currentColor">
+               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+          </div>
         </div>
       </div>
     </article>
@@ -617,6 +620,184 @@ function TiltIllustration() {
   );
 }
 
+function AnimatedHeroImages() {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [100, -50]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+
+  return (
+    <div ref={ref} className="relative w-full max-w-[1100px] mx-auto mt-12 lg:mt-20 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] perspective-1000 z-10 pointer-events-none">
+      <motion.div 
+        style={{ y: y2 }} 
+        className="absolute -bottom-4 right-0 sm:right-10 md:-right-10 lg:-right-20 w-[130px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-[260px] sm:h-[440px] md:h-[520px] lg:h-[600px] bg-slate-900 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] border-[4px] sm:border-[6px] lg:border-[8px] border-slate-800 shadow-2xl overflow-hidden z-20"
+      >
+        <div className="h-full w-full relative bg-slate-900">
+          <div className="absolute top-0 inset-x-0 h-3.5 sm:h-5 lg:h-6 bg-slate-800 rounded-b-lg sm:rounded-b-xl w-[40%] mx-auto z-30"></div>
+          <Image src="/hero-mobile.png" alt="Mobile App Dashboard Mockup" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" priority />
+        </div>
+      </motion.div>
+      <motion.div 
+        style={{ y: y1, scale }} 
+        className="absolute inset-0 flex justify-center items-start origin-top"
+      >
+        <div className="relative w-full h-[80%] bg-slate-900 rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.2)] border border-slate-800 flex flex-col">
+          <div className="w-full h-8 bg-slate-800 flex items-center px-4 gap-2 border-b border-slate-700/50 shrink-0 z-10 relative">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+          </div>
+          <div className="w-full flex-1 relative bg-slate-900 overflow-hidden">
+             <Image src="/hero-dashboard.png" alt="SaaS Dashboard Mockup" fill sizes="(max-width: 768px) 100vw, 1000px" className="object-cover object-top" priority />
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+function AnimatedHubImage() {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const y = useTransform(scrollYProgress, [0, 1], [50, 0]);
+
+  return (
+    <div ref={ref} className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden drop-shadow-xl">
+      <motion.div style={{ scale, opacity, y }} className="w-full h-full relative">
+        <Image
+          src="/hub_graphic.png"
+          alt="Company-wide Engineering Hub"
+          fill
+          sizes="(max-width: 768px) 100vw, 500px"
+          className="object-contain"
+        />
+      </motion.div>
+    </div>
+  );
+}
+
+function AnimatedLaptopImage() {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"],
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [25, 5]);
+  const rotateY = useTransform(scrollYProgress, [0, 1], [-25, -10]);
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  return (
+    <div ref={ref} className="w-full aspect-[4/3] relative perspective-1000">
+      <motion.div 
+        style={{ rotateX, rotateY, y, opacity }} 
+        className="w-full h-full relative transition-transform duration-700 ease-out hover:rotate-x-0 hover:rotate-y-0"
+      >
+        <Image
+          src="/laptop_animation.png"
+          alt="V2Labs Platform Analytics"
+          fill
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="object-contain drop-shadow-2xl"
+        />
+      </motion.div>
+    </div>
+  );
+}
+
+function HubSection() {
+  return (
+    <section className="py-20 md:py-32 relative bg-white overflow-hidden border-b border-slate-100">
+      <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex-1 relative flex justify-center">
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] -z-10" />
+           <AnimatedHubImage />
+        </div>
+        <div className="flex-1">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
+            Company-wide <br />
+            <span className="text-[#1161ed]">Engineering Solutions</span> <br />
+            Made Easy
+          </h2>
+          <p className="text-lg text-slate-600 mb-8 font-medium leading-relaxed">
+            Create and manage scalable engineering ecosystems for as many teams as you need.
+          </p>
+          <ul className="space-y-6">
+            {[
+              "Centrally manage all engineering flows from a single dashboard",
+              "Maintain consistent architecture across all tech stacks",
+              "Enable each department to innovate securely and efficiently"
+            ].map((item, idx) => (
+              <li key={idx} className="flex gap-4 items-start">
+                 <div className="w-6 h-6 rounded-full bg-[#1161ed]/10 text-[#1161ed] flex items-center justify-center shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                 </div>
+                 <span className="text-slate-700 font-semibold text-lg">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MobileScrollSection() {
+  const ref = React.useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [60, -30]);
+
+  return (
+    <section ref={ref} className="py-20 md:py-32 relative overflow-hidden bg-slate-900 border-y border-slate-800 mb-10 md:mb-14 rounded-[40px] mx-4 md:mx-10">
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-[#1161ed]/20 to-[#06b6d4]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
+       
+       <div className="text-center mb-16 relative z-10 px-4">
+          <h2 className="text-[clamp(2rem,5vw,3rem)] text-white font-extrabold tracking-tight mb-4">
+            Flawless on <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">Every Device</span>
+          </h2>
+          <p className="text-slate-400 text-lg max-w-[600px] mx-auto font-semibold font-poppins">
+            Our interfaces adapt seamlessly. Experience pixel-perfect scaling, fluid animations, and optimal Core Web Vitals on mobile.
+          </p>
+       </div>
+
+       <div className="flex justify-center items-center gap-6 sm:gap-10 h-[400px] sm:h-[500px] relative px-4 z-10 perspective-1000">
+         <motion.div style={{ y: y1 }} className="w-[160px] sm:w-[220px] h-[340px] sm:h-[460px] bg-slate-800 rounded-[2rem] border-4 border-slate-700 shadow-2xl overflow-hidden hidden sm:block relative">
+           <div className="absolute top-0 inset-x-0 h-4 bg-slate-700 rounded-b-lg w-1/2 mx-auto z-30"></div>
+           <Image src="/mobile-flow-1.png" alt="Mobile Flow 1" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
+         </motion.div>
+         
+         <motion.div style={{ y: y2 }} className="w-[200px] sm:w-[260px] h-[400px] sm:h-[540px] bg-slate-800 rounded-[2.5rem] border-[6px] border-slate-700 shadow-[0_30px_60px_rgba(0,0,0,0.5)] overflow-hidden relative z-20">
+           <div className="absolute top-0 inset-x-0 h-5 bg-slate-700 rounded-b-xl w-1/2 mx-auto z-30"></div>
+           <Image src="/mobile-flow-2.png" alt="Mobile Flow 2" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
+         </motion.div>
+
+         <motion.div style={{ y: y3 }} className="w-[160px] sm:w-[220px] h-[340px] sm:h-[460px] bg-slate-800 rounded-[2rem] border-4 border-slate-700 shadow-2xl overflow-hidden hidden sm:block relative">
+           <div className="absolute top-0 inset-x-0 h-4 bg-slate-700 rounded-b-lg w-1/2 mx-auto z-30"></div>
+           <Image src="/hero-mobile.png" alt="Mobile Flow 3" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
+         </motion.div>
+       </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
@@ -819,7 +1000,7 @@ export default function Home() {
   const faqJson = buildFaqJsonLd(FAQS);
 
   return (
-    <div className="container mx-auto px-6 relative overflow-hidden">
+    <div className="w-full relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1161ed/[0.012]_1px,transparent_1px),linear-gradient(to_bottom,#1161ed/[0.012]_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20 pointer-events-none" />
       <script
         type="application/ld+json"
@@ -830,344 +1011,206 @@ export default function Home() {
 
       <section
         id="hero"
-        className="pt-12 pb-16 md:pt-16 md:pb-24 flex items-center relative overflow-hidden"
+        className="pt-16 pb-8 md:pt-24 md:pb-16 flex flex-col items-center relative overflow-hidden"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full relative z-10">
-          <div className="lg:col-span-6 flex flex-col text-left items-start order-2 lg:order-1 mt-4 lg:mt-0">
-            <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)] animate-fade-in-up select-none">
-              <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
-              A trusted digital agency
-            </div>
-            <h1 className="text-[clamp(1.8rem,5.8vw,4.4rem)] font-black font-poppins leading-[1.08] text-[#0F172A] max-w-[650px] mb-4 lg:mb-6 tracking-tight text-left animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
-              The most trusted{" "}
-              <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">
-                SaaS & Digital Product
-              </span>{" "}
-              engineering partner.
-            </h1>
-            <p className="text-[#64748B] text-sm lg:text-[1.05rem] leading-[1.7] max-w-[500px] mb-6 lg:mb-8 text-left font-normal font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
-              We design, build, and deploy premium cloud platforms, custom enterprise systems, and autonomous AI integrations. Move from MVP to scale with startup velocity.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center animate-pulse-glow"
-              >
-                Get Started
-              </Link>
-              <button
-                onClick={() => scrollTo("process")}
-                className="inline-flex items-center justify-center gap-3 font-extrabold font-poppins text-[#0F172A] hover:text-[#1161ed] transition-colors duration-200 cursor-pointer group text-[0.95rem]"
-              >
-                <div className="w-12 h-12 rounded-full bg-[#1161ed]/[0.08] text-[#1161ed] border border-[#1161ed]/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm">
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="ml-0.5 transition-transform duration-300"
-                  >
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-                <span>How it works</span>
-              </button>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-slate-200/80 w-full animate-fade-in-up opacity-0 font-poppins" style={{ animationDelay: "600ms" }}>
-              <p className="text-[0.66rem] font-bold uppercase tracking-wider text-slate-400 mb-3">Works seamlessly with your ecosystem</p>
-              <div className="flex flex-wrap gap-x-5 gap-y-2 text-[0.8rem] font-bold text-slate-600">
-                <span className="flex items-center gap-1.5"><span className="text-[#1161ed]">●</span> Next.js</span>
-                <span className="flex items-center gap-1.5"><span className="text-[#06b6d4]">●</span> React</span>
-                <span className="flex items-center gap-1.5"><span className="text-emerald-500">●</span> Node.js</span>
-                <span className="flex items-center gap-1.5"><span className="text-indigo-500">●</span> AWS</span>
-                <span className="flex items-center gap-1.5"><span className="text-amber-500">●</span> Google Cloud</span>
-              </div>
-            </div>
-
+        <div className="flex flex-col text-center items-center w-full max-w-[900px] mx-auto relative z-10 px-4">
+          <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)] animate-fade-in-up select-none">
+            <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+            A trusted digital agency
           </div>
+          
+          <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-black font-poppins leading-[1.05] text-[#0F172A] mb-6 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
+            The most trusted <br className="hidden md:block" />
+            <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">
+              SaaS & Digital Product
+            </span>{" "}
+            <br className="hidden md:block" />
+            engineering partner.
+          </h1>
+          
+          <p className="text-[#64748B] text-base md:text-xl leading-[1.7] max-w-[700px] mb-8 font-semibold font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
+            We design, build, and deploy premium cloud platforms, custom enterprise systems, and autonomous AI integrations. Move from MVP to scale with startup velocity.
+          </p>
 
-          {/* Right Image/Graphics Column - Top on Mobile / Right on Desktop */}
-          <div className="col-span-1 lg:col-span-6 order-1 lg:order-2 w-full flex items-center justify-center relative select-none py-4 lg:py-0 px-4 sm:px-6 md:px-8 lg:px-12">
-            {/* Soft Glow Mesh behind portrait */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] lg:w-[320px] lg:h-[320px] bg-gradient-to-tr from-[#1161ed]/10 to-[#06b6d4]/10 rounded-full blur-[60px] lg:blur-[95px] -z-10 pointer-events-none select-none animate-pulse duration-[8s]" />
-
-            {/* Dotted Grid Pattern Background */}
-            <div className="absolute right-0 top-0 w-[140px] h-[140px] bg-[radial-gradient(#1161ed_2px,transparent_2px)] [background-size:20px_20px] opacity-[0.25] -z-10 pointer-events-none hidden sm:block" />
-
-            <TiltIllustration />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
+            <Link
+              href="/request-a-demo"
+              className="inline-flex items-center justify-center px-10 py-4 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
+            >
+              Start Free Trial
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center animate-pulse-glow w-full sm:w-auto"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
+
+        <AnimatedHeroImages />
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-slate-50/30 to-white border-y border-[rgba(0,0,0,0.03)] overflow-hidden select-none content-visibility-auto relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-[100px] bg-gradient-to-r from-[#1161ed]/[0.015] to-[#3b82f6]/[0.015] rounded-full blur-[120px] pointer-events-none select-none -z-10" />
+      <HubSection />
 
-        <div className="flex flex-col items-center justify-center text-center mb-10 md:mb-14 px-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/60 shadow-[0_2px_10px_rgba(0,0,0,0.01)] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1161ed] animate-pulse" />
-            <span className="text-[0.62rem] sm:text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-[#1161ed]">
-              Proven Experience
-            </span>
-          </div>
-          <h3 className="text-sm sm:text-base md:text-lg font-extrabold tracking-tight text-slate-800 uppercase">
-            Trusted by Leading Companies Worldwide
-          </h3>
-        </div>
 
-        <div className="relative flex max-w-[100vw] overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
-
-          <div className="flex animate-marquee whitespace-nowrap items-center py-4">
-            {[
-              ...PARTNER_COMPANIES,
-              ...PARTNER_COMPANIES,
-              ...PARTNER_COMPANIES,
-              ...PARTNER_COMPANIES,
-              ...PARTNER_COMPANIES,
-              ...PARTNER_COMPANIES,
-            ].map((company, index) => {
-              let logoHeight = "h-10 sm:h-12 md:h-14";
-              if (company.name === "Caldreplus") {
-                logoHeight = "h-12 sm:h-15 md:h-18";
-              } else if (company.name === "Naya-Job") {
-                logoHeight = "h-14 sm:h-18 md:h-22";
-              }
-
-              return (
-                <div
-                  key={index}
-                  className="mx-3 md:mx-4 flex items-center justify-center shrink-0 w-36 sm:w-44 md:w-52 h-20 sm:h-24 md:h-28 rounded-2xl border border-slate-200/40 bg-slate-50/15 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.7)] shadow-[0_4px_16px_rgba(15,23,42,0.015)] hover:border-[#1161ed]/20 hover:bg-white hover:shadow-[0_12px_30px_rgba(17,97,237,0.06)] hover:-translate-y-1 transition-all duration-500 ease-out select-none cursor-pointer overflow-hidden group relative"
-                >
-                  <div className="absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  <Image
-                    src={company.logo}
-                    alt={`${company.name} Logo`}
-                    width={180}
-                    height={80}
-                    sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 208px"
-                    style={{ width: "auto", height: "auto" }}
-                    className={`${logoHeight} object-contain transition-all duration-500 grayscale opacity-50 contrast-125 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 mix-blend-multiply`}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Services Grid Section */}
       <ScrollReveal>
         <section
-          id="services"
-          className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative content-visibility-auto overflow-hidden"
-        >
+        id="services"
+        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden bg-slate-50/50"
+      >
         <div className="absolute top-10 left-10 w-[250px] h-[250px] bg-[#1161ed]/[0.03] rounded-full blur-[80px] pointer-events-none select-none -z-10" />
         <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#3b82f6]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10" />
 
-        <div className="text-center mb-[60px] relative z-10">
-          <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">
-            Exclusive Capabilities
-          </p>
-          <h2 className="text-[2.5rem] text-[#0F172A] font-extrabold tracking-tight">
-            Our Premium Services
+        <div className="text-center mb-16 relative z-10 px-4">
+          <h2 className="text-[clamp(2rem,5vw,3rem)] text-[#0F172A] font-extrabold tracking-tight mb-4">
+            Why <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">V2Labs</span> Engineering?
           </h2>
+          <p className="text-[#64748B] text-lg max-w-[700px] mx-auto font-semibold font-poppins">
+            V2Labs is the world-leading centrally managed solution for bespoke software ecosystems, platforms, and AI automations.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[30px] relative z-10">
-          {[
-            {
-              title: "SaaS & Product Development",
-              desc: "High-scale multi-tenant dashboards, secure billing portals, and fast analytical monitoring tools.",
-              link: "/services/saas-product",
-              icon: (
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="9" cy="21" r="1" />
-                  <circle cx="20" cy="21" r="1" />
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                </svg>
-              ),
-            },
-            {
-              title: "ERP & CRM Systems",
-              desc: "Secure corporate operations database portals, HubSpot pipelines, and lead automations.",
-              link: "/services/erp-crm",
-              icon: (
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <line x1="21" y1="9" x2="3" y2="9" />
-                  <line x1="21" y1="15" x2="3" y2="15" />
-                  <line x1="12" y1="3" x2="12" y2="21" />
-                </svg>
-              ),
-            },
-            {
-              title: "AI Automation Solutions",
-              desc: "Autonomous workflow auto-agents, proprietary LLM integrations, and fast semantic lookups.",
-              link: "/services/ai-automation",
-              icon: (
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="5" r="2.5" />
-                  <circle cx="5" cy="18" r="2.5" />
-                  <circle cx="19" cy="18" r="2.5" />
-                  <line x1="12" y1="7.5" x2="5" y2="15.5" />
-                  <line x1="12" y1="7.5" x2="19" y2="15.5" />
-                  <line x1="7.5" y1="18" x2="16.5" y2="18" />
-                </svg>
-              ),
-            },
-            {
-              title: "Web Platform Development",
-              desc: "Sub-second React & Next.js systems optimized for SEO authority and Core Web Vitals.",
-              link: "/services/web-platform",
-              icon: (
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                  <line x1="14" y1="4" x2="10" y2="20" />
-                </svg>
-              ),
-            },
-            {
-              title: "Video Editing & Motion Editing",
-              desc: "Cinematic post-production cuts, sound design, hook tuning, and frame pacing.",
-              link: "/services/video-motion",
-              icon: (
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect
-                    x="2"
-                    y="2"
-                    width="20"
-                    height="20"
-                    rx="2.18"
-                    ry="2.18"
-                  />
-                  <line x1="7" y1="2" x2="7" y2="22" />
-                  <line x1="17" y1="2" x2="17" y2="22" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <line x1="2" y1="7" x2="7" y2="7" />
-                  <line x1="2" y1="17" x2="7" y2="17" />
-                  <line x1="17" y1="17" x2="22" y2="17" />
-                  <line x1="17" y1="7" x2="22" y2="7" />
-                </svg>
-              ),
-            },
-            {
-              title: "UI/UX & Brand Systems",
-              desc: "Atomic Figma layouts, interactive user pathways, design spacing tokens, and asset guides.",
-              link: "/services/ui-ux-brand",
-              icon: (
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                  <polyline points="2 17 12 22 22 17" />
-                  <polyline points="2 12 12 17 22 12" />
-                </svg>
-              ),
-            },
-          ].map((service, index) => (
-            <Link
-              key={index}
-              href={service.link}
-              className="p-6 sm:p-8 rounded-[24px] border border-slate-200/50 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(15,23,42,0.02)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/30 hover:bg-white/60 group flex flex-col justify-between items-start text-left min-h-[270px] sm:min-h-[290px] gpu-accelerated"
-            >
-              <div className="absolute top-0 left-0 h-[4px] w-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] group-hover:w-full transition-all duration-500 ease-out" />
-              <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.07)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        <div className="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+          
+          {/* Left Side: Sticky Image */}
+          <div className="hidden lg:block relative">
+            <div className="sticky top-32 w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.15)] flex items-center justify-center bg-slate-100 border border-slate-200">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/live_preview.png"
+                  alt="Live Preview Interface"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
 
-              <div className="w-full flex flex-col items-start">
-                <div className="w-12 h-12 rounded-xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:bg-[#1161ed] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.25)] transition-all duration-300 shadow-sm mb-5">
-                  <div className="w-6 h-6 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current transition-transform duration-300 group-hover:-translate-y-0.5">
-                    {service.icon}
-                  </div>
+          {/* Right Side: Scrolling Features */}
+          <div className="flex flex-col gap-6 lg:pb-32">
+             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 font-Outfit">Dynamic features for every condition</h3>
+             
+             {[
+               {
+                 title: "SaaS & Product Development",
+                 desc: "High-scale multi-tenant dashboards, secure billing portals, and fast analytical monitoring tools.",
+               },
+               {
+                 title: "AI Automation Solutions",
+                 desc: "Autonomous workflow auto-agents, proprietary LLM integrations, and fast semantic lookups.",
+               },
+               {
+                 title: "Web Platform Development",
+                 desc: "Sub-second React & Next.js systems optimized for SEO authority and Core Web Vitals.",
+               },
+               {
+                 title: "ERP & CRM Systems",
+                 desc: "Secure corporate operations database portals, HubSpot pipelines, and lead automations.",
+               }
+             ].map((feature, idx) => (
+                <div key={idx} className="flex gap-4 sm:gap-6 items-start py-4 group">
+                   <div className="w-6 h-6 rounded-full bg-[#1161ed]/10 flex items-center justify-center shrink-0 mt-1 transition-transform group-hover:scale-110">
+                      <svg className="w-3.5 h-3.5 text-[#1161ed]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                   </div>
+                   <div>
+                      <h4 className="text-lg sm:text-xl font-bold text-slate-900 mb-1.5 font-Outfit">{feature.title}</h4>
+                      <p className="text-slate-500 font-medium text-sm">{feature.desc}</p>
+                   </div>
                 </div>
+             ))}
 
-                <h3 className="text-base sm:text-lg md:text-xl font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-200 font-Outfit tracking-tight leading-tight relative z-10">
-                  {service.title}
-                </h3>
-
-                <p className="text-slate-500 font-medium text-xs sm:text-sm mt-3 leading-relaxed transition-colors duration-300 group-hover:text-slate-600">
-                  {service.desc}
-                </p>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-slate-100 w-full flex items-center justify-between text-xs font-black text-[#1161ed] tracking-wider uppercase">
-                <span>Explore Details</span>
-                <svg
-                  className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </Link>
-          ))}
+             <div className="mt-6">
+               <Link href="/request-a-demo" className="inline-flex px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-[#1161ed] transition-colors shadow-lg">
+                 Start Free Trial
+               </Link>
+             </div>
+          </div>
         </div>
       </section>
     </ScrollReveal>
+
+      <ScrollReveal>
+        <section className="py-20 md:py-32 bg-white relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
+          <div className="max-w-[1200px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+            <div className="flex-1 relative flex justify-center w-full max-w-[600px] lg:max-w-none">
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.08)_0%,transparent_70%)] -z-10" />
+               <AnimatedLaptopImage />
+            </div>
+            
+            <div className="flex-1 lg:pl-10">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
+                Extend Your <br />
+                <span className="text-[#1161ed]">Engineering Impact</span>
+              </h2>
+              <p className="text-lg text-slate-600 mb-8 font-medium leading-relaxed max-w-[500px]">
+                Integrate custom analytics, scalable pipelines, and real-time monitoring directly into your workflows. Manage everything beautifully.
+              </p>
+              
+              <div className="space-y-6">
+                {[
+                  { title: "Advanced Analytics", desc: "Gain deep insights into system performance and user engagement." },
+                  { title: "Pipeline Automation", desc: "Reduce manual overhead with smart, autonomous CI/CD pipelines." },
+                  { title: "Real-time Monitoring", desc: "Track errors and latency with sub-second accuracy globally." }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-4">
+                     <div className="w-8 h-8 rounded-full bg-[#1161ed] text-white flex items-center justify-center shrink-0 shadow-lg shadow-[#1161ed]/30">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                     </div>
+                     <div>
+                        <h4 className="text-lg font-bold text-slate-900 mb-1">{item.title}</h4>
+                        <p className="text-slate-500 font-medium text-sm">{item.desc}</p>
+                     </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-10">
+                <Link href="/contact" className="inline-flex items-center gap-2 text-[#1161ed] font-bold text-lg hover:underline group">
+                  Explore full platform capabilities 
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Flawless on Every Device Section */}
+      <ScrollReveal>
+        <section className="py-20 md:py-32 bg-[#FBF6F0] relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
+          <div className="max-w-[1200px] mx-auto px-4 flex flex-col items-center text-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
+              Flawless on <span className="text-[#1161ed]">Every Device</span>
+            </h2>
+            <p className="text-lg text-slate-600 mb-12 font-medium leading-relaxed max-w-[700px]">
+              Whether you're managing pipelines on your desktop, checking metrics on a tablet, or responding to alerts on your phone, V2Labs ensures a seamless, responsive experience across all your screens.
+            </p>
+            
+            <div className="w-full max-w-[900px] aspect-[16/10] relative perspective-1000 group">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.1)_0%,transparent_60%)] -z-10" />
+              <div className="w-full h-full relative transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+                <Image
+                  src="/multi_device_mockup.png"
+                  alt="V2Labs Flawless on Every Device"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* How We Work / Process Section */}
       <ScrollReveal>
         <section
           id="process"
-          className="py-24 md:py-36 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
+          className="py-24 md:py-36 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
         >
         {/* Mouse Tracking Particles Animation */}
         <MouseTrackingAnimation />
@@ -1419,11 +1462,55 @@ export default function Home() {
       </section>
     </ScrollReveal>
 
+      {/* Trusted By Section (Marquee) */}
+      <div className="border-y border-slate-100 bg-white py-12 md:py-16 relative overflow-hidden">
+         <div className="text-center mb-8 px-4">
+           <h3 className="text-sm sm:text-base font-bold tracking-widest text-slate-400 uppercase">
+             Trusted by leading brands worldwide
+           </h3>
+         </div>
+         
+         <div className="relative flex max-w-[100vw] overflow-hidden">
+           <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
+           <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
+           
+           <div className="flex animate-marquee whitespace-nowrap items-center py-4">
+             {[
+               ...PARTNER_COMPANIES,
+               ...PARTNER_COMPANIES,
+               ...PARTNER_COMPANIES,
+               ...PARTNER_COMPANIES,
+               ...PARTNER_COMPANIES,
+               ...PARTNER_COMPANIES,
+             ].map((company, index) => {
+               let logoHeight = "h-10 sm:h-12 md:h-14";
+               if (company.name === "Caldreplus") logoHeight = "h-12 sm:h-15 md:h-18";
+               else if (company.name === "Naya-Job") logoHeight = "h-14 sm:h-18 md:h-22";
+               return (
+                 <div
+                   key={index}
+                   className="mx-6 md:mx-10 flex items-center justify-center shrink-0 w-32 sm:w-40 md:w-48 h-16 sm:h-20 transition-all duration-300 select-none grayscale opacity-60 hover:grayscale-0 hover:opacity-100 cursor-pointer"
+                 >
+                   <Image
+                     src={company.logo}
+                     alt={`${company.name} Logo`}
+                     width={180}
+                     height={80}
+                     style={{ width: "auto", height: "auto" }}
+                     className={`${logoHeight} object-contain`}
+                   />
+                 </div>
+               );
+             })}
+           </div>
+         </div>
+      </div>
+
       {/* Industries Solutions Section */}
       <ScrollReveal>
         <section
           id="industries"
-          className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
+          className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
         >
         <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
         <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#8b5cf6]/[0.015] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[6s]" />
@@ -1644,7 +1731,7 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="why-us"
-          className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden content-visibility-auto"
+          className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
         >
         <div className="absolute top-[30%] right-[-5%] w-[400px] h-[400px] bg-[#1161ed]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
@@ -1800,30 +1887,24 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="testimonials"
-          className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30 content-visibility-auto"
+          className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30"
         >
         {/* Soft Glowing Orbs */}
         <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#1161ed]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
         <div className="absolute right-[-5%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#3b82f6]/[0.02] blur-[120px] duration-[8s] pointer-events-none select-none -z-10" />
 
         {/* Section Header */}
-        <div className="relative mb-12 text-center md:mb-16 px-6 z-10">
-          <p className="mb-3 text-[0.72rem] font-black uppercase tracking-[0.22em] text-[#1161ed] select-none">
-            Founder Proof
-          </p>
-          <h2 className="mx-auto max-w-[620px] text-[2.2rem] sm:text-[2.6rem] md:text-[3.2rem] font-extrabold tracking-tight text-[#0F172A] leading-[1.1]">
-            What Our{" "}
-            <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">
-              Founders Say
-            </span>
+        <div className="relative mb-12 text-center md:mb-20 px-6 z-10">
+          <h2 className="mx-auto max-w-[800px] text-[2.5rem] sm:text-[3rem] md:text-[4rem] font-extrabold tracking-tight text-[#0F172A] leading-[1.1] font-Outfit">
+            What Our <span className="text-[#FF5A1F]">Customers</span> Say
           </h2>
         </div>
 
         {/* Double Row Horizontal Marquee - Full Page Edge-to-Edge */}
         <div className="relative flex flex-col gap-8 overflow-hidden py-4 select-none z-10 w-full">
           {/* Transparent Gradient Fade Masks at Page Edges */}
-          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-16 bg-gradient-to-r from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
-          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-16 bg-gradient-to-l from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
+          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-16 bg-gradient-to-r from-[#fafbfc] via-[#fafbfc]/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
+          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-16 bg-gradient-to-l from-[#fafbfc] via-[#fafbfc]/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
 
           {/* Row 1: Leftward Marquee */}
           <div className="relative flex w-full overflow-hidden">
@@ -1874,10 +1955,12 @@ export default function Home() {
     </ScrollReveal>
 
       {/* Information & FAQ Section */}
+      <MobileScrollSection />
+
       <ScrollReveal>
         <section
           id="info"
-          className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative content-visibility-auto"
+          className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative mx-4 md:mx-10"
         >
         {/* Soft Background glow-orb */}
         <div className="absolute right-[10%] top-[10%] w-[300px] h-[300px] bg-[#1161ed]/[0.015] rounded-full blur-[90px] pointer-events-none select-none -z-10" />
