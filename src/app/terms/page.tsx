@@ -329,7 +329,7 @@ export default function TermsPage() {
                           HQ Coordinates
                         </h4>
                         <p className="text-slate-800 font-extrabold text-xs">
-                          Mumbai, Maharashtra, India
+                          Bhayandar East, Thane, Maharashtra, India
                         </p>
                       </div>
                     </div>

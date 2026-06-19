@@ -597,7 +597,7 @@ export default function ContactPage() {
                       Headquarters
                     </h4>
                     <p className="text-sm text-white font-semibold">
-                      Mumbai, Maharashtra, India
+                      Bhayandar East, Thane, Maharashtra, India
                     </p>
                   </div>
                 </div>
