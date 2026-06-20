@@ -46,12 +46,27 @@ html, body {
   line-height: 1.6;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  background-color: #FBF6F0;
+  background-color: #FFFFFF;
+  color: #0F172A;
+}
+
+p {
+  color: #111111;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
+}
+
+h1 span:not(.text-white):not(.text-slate-100):not(.text-slate-200),
+h2 span:not(.text-white):not(.text-slate-100):not(.text-slate-200),
+.text-brand-gradient {
+  background: linear-gradient(to right, #2F2FE4, #0F172A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
 }
 
 

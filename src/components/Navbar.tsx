@@ -117,18 +117,12 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`sticky top-0 left-0 w-full z-[1000] select-none transition-all duration-300 ${
+      <header className={`sticky top-0 left-0 w-full z-[1000] select-none transition-all duration-300 border-b ${
         isScrolled 
-          ? "py-1 sm:py-1.5 lg:py-2 px-3 sm:px-6" 
-          : "py-2 sm:py-3 lg:py-5 px-3 sm:px-6"
+          ? "py-2 sm:py-3 px-4 sm:px-8 bg-white/90 border-slate-200/50 backdrop-blur-xl shadow-[0_12px_40px_rgba(15,23,42,0.04)]" 
+          : "py-3.5 sm:py-5 px-4 sm:px-8 bg-white/75 border-slate-100/10 backdrop-blur-xl"
       }`}>
-        <div 
-          className={`flex justify-between items-center w-full max-w-[1240px] mx-auto transition-all duration-300 ${
-            isScrolled 
-              ? "shadow-[0_12px_40px_rgba(15,23,42,0.06)] border-slate-200/40 py-1 sm:py-1.5 px-3.5 sm:px-5 rounded-[14px] sm:rounded-[18px] bg-white/85 backdrop-blur-xl" 
-              : "shadow-[0_2px_15px_rgba(15,23,42,0.02)] border-slate-100/30 py-2.5 sm:py-4 px-4 sm:px-6 rounded-[18px] sm:rounded-[24px] bg-white/75 backdrop-blur-xl"
-          }`}
-        >
+        <div className="flex justify-between items-center w-full max-w-[1240px] mx-auto">
           <Link 
             href="/" 
             className={`flex items-center group active:scale-[0.98] transition-all duration-300 ${

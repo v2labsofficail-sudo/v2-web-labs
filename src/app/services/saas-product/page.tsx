@@ -70,7 +70,7 @@ const SVG = {
     </svg>
   ),
   Database: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <ellipse cx="12" cy="5" rx="9" ry="3" />
       <path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5" />
       <path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6" />
@@ -110,7 +110,7 @@ export default function SaasProductPage() {
       title: "SaaS Platforms",
       desc: "Robust, multi-tenant subscription software platforms built for infinite organic scaling.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
           <path d="M7 2v20M17 2v20M2 7h20M2 17h20" />
         </svg>
@@ -120,7 +120,7 @@ export default function SaasProductPage() {
       title: "AI Products",
       desc: "Agentic AI engines, large language model integrations, and semantic vector data systems.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <circle cx="12" cy="5" r="2.5" />
           <circle cx="5" cy="18" r="2.5" />
           <circle cx="19" cy="18" r="2.5" />
@@ -134,7 +134,7 @@ export default function SaasProductPage() {
       title: "CRM Systems",
       desc: "Custom database pipelines, lead routing rules, and high-legibility operations dashboards.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
           <circle cx="9" cy="7" r="4" />
           <path d="M23 21v-2a4 4 0 00-3-3.87" />
@@ -146,7 +146,7 @@ export default function SaasProductPage() {
       title: "Multi-tenant Applications",
       desc: "Highly secure workspace partition networks, organization parameters, and isolated state structures.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
       )
@@ -155,7 +155,7 @@ export default function SaasProductPage() {
       title: "Internal Business Tools",
       desc: "Automated billing bridges, inventory managers, tracking layers, and administrative panels.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <rect x="3" y="3" width="18" height="18" rx="2" />
           <line x1="9" y1="9" x2="15" y2="15" />
           <line x1="15" y1="9" x2="9" y2="15" />
@@ -166,7 +166,7 @@ export default function SaasProductPage() {
       title: "Analytics Dashboards",
       desc: "Real-time charts, conversion trackers, tracking pixels, and sub-second metrics generators.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <line x1="18" y1="20" x2="18" y2="10" />
           <line x1="12" y1="20" x2="12" y2="4" />
           <line x1="6" y1="20" x2="6" y2="14" />
@@ -177,7 +177,7 @@ export default function SaasProductPage() {
       title: "Subscription Platforms",
       desc: "Stripe checkouts, billing cycles, automated coupon models, and webhook pipelines.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
           <line x1="1" y1="10" x2="23" y2="10" />
         </svg>
@@ -187,7 +187,7 @@ export default function SaasProductPage() {
       title: "Marketplace Systems",
       desc: "Scalable buyer-seller relation networks, secure escrow bridges, and payout schedules.",
       icon: (
-        <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="10" />
           <line x1="2" y1="12" x2="22" y2="12" />
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10" />
@@ -258,8 +258,8 @@ export default function SaasProductPage() {
   return (
     <div className="min-h-screen bg-[#F8FAFC] py-16 md:py-24 relative overflow-hidden select-none">
       {/* Background Soft Mesh Gradients - Premium Blue Themes */}
-      <div className="absolute top-[5%] left-[-10%] w-[500px] h-[500px] bg-[#1161ed]/[0.035] rounded-full blur-[130px] pointer-events-none -z-10" />
-      <div className="absolute top-[45%] right-[-10%] w-[600px] h-[600px] bg-[#3b82f6]/[0.02] rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse duration-[8s]" />
+      <div className="absolute top-[5%] left-[-10%] w-[500px] h-[500px] bg-[#111111]/[0.035] rounded-full blur-[130px] pointer-events-none -z-10" />
+      <div className="absolute top-[45%] right-[-10%] w-[600px] h-[600px] bg-[#2A2A2A]/[0.02] rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse duration-[8s]" />
 
       <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
         
@@ -267,14 +267,14 @@ export default function SaasProductPage() {
         <section id="hero" className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-20 md:mb-28">
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col text-left items-start">
-            <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-8 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+            <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-8 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
               <span className="w-2 h-2 bg-[#22c55e] rounded-full animate-ping"></span>
               SaaS Engine Studio
             </div>
             <h1 className="text-[clamp(2.2rem,5.5vw,4.2rem)] font-black leading-[1.1] text-[#0F172A] mb-8 tracking-tight">
-              Building scalable SaaS products <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">engineered for growth.</span>
+              Building scalable SaaS products <span>engineered for growth.</span>
             </h1>
-            <p className="text-[#64748B] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
+            <p className="text-[#111111] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
               From MVPs to enterprise-grade platforms, V2 Labs develops high-performance software products with modern architecture, automation, and scalable infrastructure.
             </p>
             
@@ -282,13 +282,13 @@ export default function SaasProductPage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center justify-center px-8 py-4.5 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_8px_25px_rgba(17,97,237,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
+                className="inline-flex items-center justify-center px-8 py-4.5 bg-gradient-to-r from-[#2F2FE4] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_8px_25px_rgba(17,97,237,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
               >
                 Start Your Product
               </Link>
               <a 
                 href="#showcase" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-white border border-[#1161ed]/20 hover:border-[#1161ed]/50 text-slate-800 font-extrabold rounded-full transition-all duration-300 hover:bg-slate-50 shadow-sm text-[0.95rem] text-center cursor-pointer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white border border-[#111111]/20 hover:border-[#111111]/50 text-slate-800 font-extrabold rounded-full transition-all duration-300 hover:bg-slate-50 shadow-sm text-[0.95rem] text-center cursor-pointer"
               >
                 View Live Mockups
               </a>
@@ -299,10 +299,10 @@ export default function SaasProductPage() {
           <div className="lg:col-span-5 relative w-full flex justify-center">
             
             {/* Background Glow Orb */}
-            <div className="absolute w-[300px] h-[300px] bg-gradient-to-tr from-[#1161ed]/10 to-[#3b82f6]/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
+            <div className="absolute w-[300px] h-[300px] bg-gradient-to-tr from-[#111111]/10 to-[#2A2A2A]/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
             
             {/* Dashboard UI panel with mock browser framework */}
-            <div className="w-full max-w-[460px] rounded-3xl border border-[#1161ed]/10 bg-white shadow-[0_25px_60px_rgba(17,97,237,0.12)] overflow-hidden hover:-translate-y-1 transition-all duration-300">
+            <div className="w-full max-w-[460px] rounded-3xl border border-[#111111]/10 bg-white shadow-[0_25px_60px_rgba(17,97,237,0.12)] overflow-hidden hover:-translate-y-1 transition-all duration-300">
               
               {/* Browser bar header */}
               <div className="flex items-center justify-between bg-slate-50/80 border-b border-slate-100 px-5 py-3.5">
@@ -311,7 +311,7 @@ export default function SaasProductPage() {
                   <span className="w-3 h-3 rounded-full bg-[#eab308] shadow-sm" />
                   <span className="w-3 h-3 rounded-full bg-[#22c55e] shadow-sm" />
                 </div>
-                <div className="w-[180px] bg-white border border-slate-200/50 rounded-lg py-1 px-3 text-[0.62rem] text-slate-400 font-medium text-center truncate shadow-inner">
+                <div className="w-[180px] bg-white border border-slate-200/50 rounded-lg py-1 px-3 text-[0.62rem] text-[#111111] font-medium text-center truncate shadow-inner">
                   v2labs.co/saas-dashboard
                 </div>
                 <div className="w-3 h-3" />
@@ -337,11 +337,11 @@ export default function SaasProductPage() {
                     height={28}
                     sizes="28px"
                     loading="lazy"
-                    className="rounded-full object-cover filter grayscale border border-[#1161ed]/30"
+                    className="rounded-full object-cover filter grayscale border border-[#111111]/30"
                   />
                   <div className="text-left">
                     <p className="text-[0.62rem] font-black text-white leading-none mb-0.5">Architecture Verified</p>
-                    <p className="text-[0.52rem] font-bold text-slate-400 uppercase tracking-widest">AWS Cloud Architect</p>
+                    <p className="text-[0.52rem] font-bold text-[#111111] uppercase tracking-widest">AWS Cloud Architect</p>
                   </div>
                 </div>
               </div>
@@ -359,12 +359,12 @@ export default function SaasProductPage() {
                   {marqueeTech.map((tech, idx) => (
                     <div 
                       key={`${tech.name}-${i}-${idx}`} 
-                      className="inline-flex items-center gap-4 px-6.5 py-4 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm hover:border-[#1161ed]/20 hover:bg-white transition-all duration-300"
+                      className="inline-flex items-center gap-4 px-6.5 py-4 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm hover:border-[#111111]/20 hover:bg-white transition-all duration-300"
                     >
                       <span className="w-9 h-9 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">{tech.icon}</span>
                       <div className="text-left">
                         <span className="text-[0.88rem] font-black text-slate-850 block leading-tight">{tech.name}</span>
-                        <span className="text-[0.68rem] font-bold text-slate-400 block mt-0.5">{tech.desc}</span>
+                        <span className="text-[0.68rem] font-bold text-[#111111] block mt-0.5">{tech.desc}</span>
                       </div>
                     </div>
                   ))}
@@ -377,11 +377,11 @@ export default function SaasProductPage() {
         {/* 2. "What We Build" Section - EXPANDED SPACE */}
         <section id="what-we-build" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Product Engineering</p>
+            <p className="text-[#111111] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Product Engineering</p>
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               What We Build
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               We specialize in custom SaaS platforms and structural data layers built to command market authority.
             </p>
           </div>
@@ -390,21 +390,21 @@ export default function SaasProductPage() {
             {productsWeBuild.map((p, idx) => (
               <div 
                 key={idx} 
-                className="p-6 rounded-[24px] border border-black/[0.03] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 group flex flex-col justify-between"
+                className="p-6 rounded-[24px] border border-black/[0.03] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(17,97,237,0.06)] hover:border-[#111111]/20 group flex flex-col justify-between"
               >
                 <div>
                   {/* Icon Container */}
-                  <div className="w-11 h-11 rounded-xl bg-[#1161ed]/[0.08] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-105 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 mb-5 shadow-sm">
-                    <div className="[&>svg]:stroke-current text-[#1161ed] group-hover:text-white transition-colors duration-300">
+                  <div className="w-11 h-11 rounded-xl bg-[#111111]/[0.08] flex items-center justify-center border border-[#111111]/10 group-hover:scale-105 group-hover:bg-[#111111] group-hover:text-white transition-all duration-300 mb-5 shadow-sm">
+                    <div className="[&>svg]:stroke-current text-[#111111] group-hover:text-white transition-colors duration-300">
                       {p.icon}
                     </div>
                   </div>
-                  <h3 className="text-[1.05rem] text-[#0F172A] font-black tracking-tight mb-2 group-hover:text-[#1161ed] transition-colors">{p.title}</h3>
-                  <p className="text-[#64748B] text-xs leading-relaxed">{p.desc}</p>
+                  <h3 className="text-[1.05rem] text-[#0F172A] font-black tracking-tight mb-2 group-hover:text-[#111111] transition-colors">{p.title}</h3>
+                  <p className="text-[#111111] text-xs leading-relaxed">{p.desc}</p>
                 </div>
                 
                 {/* Subtle card bottom line accent */}
-                <div className="h-[3px] w-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-full mt-5 group-hover:w-[40px] transition-all duration-300" />
+                <div className="h-[3px] w-0 bg-gradient-to-r from-[#2F2FE4] to-[#111111] rounded-full mt-5 group-hover:w-[40px] transition-all duration-300" />
               </div>
             ))}
           </div>
@@ -412,24 +412,24 @@ export default function SaasProductPage() {
 
         {/* 3. Trust-Building Architecture Section - EXPANDED SPACE */}
         <section id="architecture" className="py-12 md:py-16 border-t border-b border-black/[0.04] mb-20 md:mb-28 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#1161ed]/[0.015] rounded-full blur-[130px] pointer-events-none -z-10" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#111111]/[0.015] rounded-full blur-[130px] pointer-events-none -z-10" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             {/* Left Column Description */}
             <div className="lg:col-span-5 flex flex-col text-left items-start">
-              <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Technical Integrity</p>
+              <p className="text-[#111111] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Technical Integrity</p>
               <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] font-extrabold text-[#0F172A] tracking-tight leading-none mb-6">
                 Built with scalable architecture from day one.
               </h2>
-              <p className="text-[#64748B] text-sm sm:text-base leading-[1.65] mb-10">
+              <p className="text-[#111111] text-sm sm:text-base leading-[1.65] mb-10">
                 Most agencies never explain their software design. We engineer production-ready environments structured to scale. Our platforms feature modular components, API-first interfaces, secure authentication tokens, and advanced load-balancing caches.
               </p>
 
               {/* Highlight Badges */}
               <div className="flex flex-wrap gap-2.5">
                 {["Modular Systems", "API-First", "Token Authentication", "Security Grids", "Performance Tuning"].map((tag, idx) => (
-                  <span key={idx} className="px-3.5 py-1.5 rounded-full border border-slate-100 bg-white text-[0.68rem] font-extrabold uppercase text-slate-600 tracking-wider">
+                  <span key={idx} className="px-3.5 py-1.5 rounded-full border border-slate-100 bg-white text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider">
                     {tag}
                   </span>
                 ))}
@@ -447,22 +447,22 @@ export default function SaasProductPage() {
                   onMouseLeave={() => setActiveArchStep(null)}
                   className={`p-4.5 rounded-2xl border transition-all duration-300 cursor-pointer relative overflow-hidden flex items-center gap-4.5 ${
                     activeArchStep === step.id 
-                      ? "bg-white border-[#1161ed] shadow-[0_12px_30px_rgba(17,97,237,0.06)] -translate-y-0.5" 
-                      : "bg-white/80 border-slate-100 hover:border-[#1161ed]/30"
+                      ? "bg-white border-[#111111] shadow-[0_12px_30px_rgba(17,97,237,0.06)] -translate-y-0.5" 
+                      : "bg-white/80 border-slate-100 hover:border-[#111111]/30"
                   }`}
                 >
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-black text-xs transition-colors shrink-0 ${
-                    activeArchStep === step.id ? "bg-[#1161ed] text-white" : "bg-[#1161ed]/[0.08] text-[#1161ed]"
+                    activeArchStep === step.id ? "bg-[#111111] text-white" : "bg-[#111111]/[0.08] text-[#111111]"
                   }`}>
                     {step.id}
                   </div>
                   <div className="min-w-0 flex-1 text-left">
                     <div className="flex items-center gap-2 mb-0.5">
                       <h3 className="font-extrabold text-[0.88rem] text-[#0F172A] tracking-tight">{step.title}</h3>
-                      <span className="text-[0.62rem] font-bold text-[#1161ed] bg-[#1161ed]/[0.05] px-1.5 py-0.5 rounded">{step.tech}</span>
+                      <span className="text-[0.62rem] font-bold text-[#111111] bg-[#111111]/[0.05] px-1.5 py-0.5 rounded">{step.tech}</span>
                     </div>
                     {/* Collapsible descriptions */}
-                    <div className={`text-[#64748B] text-xs transition-all duration-300 ${
+                    <div className={`text-[#111111] text-xs transition-all duration-300 ${
                       activeArchStep === step.id ? "max-h-[100px] opacity-100 mt-2 leading-relaxed" : "max-h-0 opacity-0 overflow-hidden"
                     }`}>
                       {step.desc}
@@ -471,8 +471,8 @@ export default function SaasProductPage() {
                   
                   {/* Visual Connection Arrow with Animated Pulsing Data Dot */}
                   {idx < 4 && (
-                    <div className="absolute bottom-[-16px] left-[32px] w-[2px] h-[16px] bg-[#1161ed]/15 pointer-events-none z-10">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#1161ed] absolute left-[-2px] animate-ping" />
+                    <div className="absolute bottom-[-16px] left-[32px] w-[2px] h-[16px] bg-[#111111]/15 pointer-events-none z-10">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#111111] absolute left-[-2px] animate-ping" />
                     </div>
                   )}
                 </div>
@@ -485,29 +485,29 @@ export default function SaasProductPage() {
         {/* 4. "From Idea to Product" Process - EXPANDED SPACE */}
         <section id="process" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Our Methodology</p>
+            <p className="text-[#111111] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Our Methodology</p>
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               From Idea to Product
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               A streamlined, highly structured development cycle that skips confusion and drives results.
             </p>
           </div>
 
           {/* Timeline UI */}
-          <div className="relative pl-6 before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:border-l-2 before:border-dashed before:border-[#1161ed]/30 max-w-[850px] mx-auto">
+          <div className="relative pl-6 before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:border-l-2 before:border-dashed before:border-[#111111]/30 max-w-[850px] mx-auto">
             {timelineSteps.map((s, idx) => (
               <div key={idx} className="relative flex items-start gap-4 mb-8 last:mb-0 group">
                 
                 {/* Timeline Circle Bullet */}
-                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10">
-                  <span className="text-[0.75rem] font-black text-[#1161ed] tracking-tighter">{s.phase}</span>
+                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#111111] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10">
+                  <span className="text-[0.75rem] font-black text-[#111111] tracking-tighter">{s.phase}</span>
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 p-5 rounded-2xl border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] hover:border-[#1161ed]/20 transition-all duration-300 flex flex-col text-left">
-                  <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-[#1161ed] transition-colors">{s.name}</h3>
-                  <p className="text-[#64748B] text-xs leading-relaxed">{s.desc}</p>
+                <div className="flex-1 p-5 rounded-2xl border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] hover:border-[#111111]/20 transition-all duration-300 flex flex-col text-left">
+                  <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-[#111111] transition-colors">{s.name}</h3>
+                  <p className="text-[#111111] text-xs leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -517,11 +517,11 @@ export default function SaasProductPage() {
         {/* 5. Product Showcase (Calendar Plus & ThinkNShop) - EXPANDED SPACE */}
         <section id="showcase" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Live Projects</p>
+            <p className="text-[#111111] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Live Projects</p>
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               Product Showcase
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               We build real, scalable software systems. Here are high-fidelity mockups of actual projects in active development.
             </p>
           </div>
@@ -529,23 +529,23 @@ export default function SaasProductPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-[1100px] mx-auto">
             
             {/* Card 1: Calendar Plus */}
-            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17,97,237,0.08)] hover:border-[#1161ed]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
-              <div className="absolute top-0 right-0 w-28 h-28 bg-[#1161ed]/5 rounded-bl-full pointer-events-none -z-10" />
+            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17,97,237,0.08)] hover:border-[#111111]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
+              <div className="absolute top-0 right-0 w-28 h-28 bg-[#111111]/5 rounded-bl-full pointer-events-none -z-10" />
               <div>
                 <div className="flex justify-between items-center mb-6">
-                  <span className="text-[0.62rem] font-extrabold uppercase text-[#1161ed] bg-[#1161ed]/[0.08] px-3 py-1 rounded-full tracking-widest flex items-center gap-1.5 shadow-sm">
+                  <span className="text-[0.62rem] font-extrabold uppercase text-[#111111] bg-[#111111]/[0.08] px-3 py-1 rounded-full tracking-widest flex items-center gap-1.5 shadow-sm">
                     <span className="w-1.5 h-1.5 bg-[#22c55e] rounded-full animate-ping" />
                     Interactive Booking
                   </span>
                   <div className="flex gap-1.5">
                     {["Next.js", "Node.js", "Redis"].map((tag, i) => (
-                      <span key={i} className="text-[0.55rem] font-bold text-slate-500 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
+                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
                     ))}
                   </div>
                 </div>
                 
                 <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight mb-3">Calendar Plus</h3>
-                <p className="text-[#64748B] text-xs sm:text-sm leading-relaxed mb-6">
+                <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6">
                   An automated multi-timezone meeting scheduler built with dynamic webhook syncing. Solves scheduling latency by automating user invitations and time blocks across platforms.
                 </p>
 
@@ -559,7 +559,7 @@ export default function SaasProductPage() {
                       <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
                       <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-sm" />
                     </div>
-                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-slate-400 truncate shadow-inner text-center">
+                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-[#111111] truncate shadow-inner text-center">
                       calendarplus.app/book
                     </div>
                     <div className="w-3.5 h-3.5" />
@@ -580,44 +580,44 @@ export default function SaasProductPage() {
 
                 {/* Features List */}
                 <div className="flex flex-col gap-2.5 mb-8">
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
-                    <span className="text-[#1161ed] font-extrabold">✓</span>
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
+                    <span className="text-[#111111] font-extrabold">✓</span>
                     <span>Multi-timezone smart synchronization</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
-                    <span className="text-[#1161ed] font-extrabold">✓</span>
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
+                    <span className="text-[#111111] font-extrabold">✓</span>
                     <span>Direct Google Calendar & Outlook webhook syncs</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
-                    <span className="text-[#1161ed] font-extrabold">✓</span>
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
+                    <span className="text-[#111111] font-extrabold">✓</span>
                     <span>Automated transactional email notification pipelines</span>
                   </div>
                 </div>
               </div>
 
-              <Link href="/contact" className="block text-center bg-slate-900 group-hover:bg-[#1161ed] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
+              <Link href="/contact" className="block text-center bg-slate-900 group-hover:bg-[#111111] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
                 Inquire About Calendar Plus
               </Link>
             </div>
 
             {/* Card 2: ThinkNShop */}
-            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17,97,237,0.08)] hover:border-[#1161ed]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
-              <div className="absolute top-0 right-0 w-28 h-28 bg-[#1161ed]/5 rounded-bl-full pointer-events-none -z-10" />
+            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17,97,237,0.08)] hover:border-[#111111]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
+              <div className="absolute top-0 right-0 w-28 h-28 bg-[#111111]/5 rounded-bl-full pointer-events-none -z-10" />
               <div>
                 <div className="flex justify-between items-center mb-6">
-                  <span className="text-[0.62rem] font-extrabold uppercase text-[#1161ed] bg-[#1161ed]/[0.08] px-3 py-1 rounded-full tracking-widest flex items-center gap-1.5 shadow-sm">
+                  <span className="text-[0.62rem] font-extrabold uppercase text-[#111111] bg-[#111111]/[0.08] px-3 py-1 rounded-full tracking-widest flex items-center gap-1.5 shadow-sm">
                     <span className="w-1.5 h-1.5 bg-[#22c55e] rounded-full animate-ping" />
                     Checkout Engine
                   </span>
                   <div className="flex gap-1.5">
                     {["Next.js", "Stripe", "Postgres"].map((tag, i) => (
-                      <span key={i} className="text-[0.55rem] font-bold text-slate-500 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
+                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
                     ))}
                   </div>
                 </div>
                 
                 <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight mb-3">ThinkNShop</h3>
-                <p className="text-[#64748B] text-xs sm:text-sm leading-relaxed mb-6">
+                <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6">
                   A high-velocity headless commerce storefront integrated with Stripe API checkouts. Solves catalog latency speeds by pre-compiling inventory pages on the edge.
                 </p>
 
@@ -631,7 +631,7 @@ export default function SaasProductPage() {
                       <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
                       <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-sm" />
                     </div>
-                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-slate-400 truncate shadow-inner text-center">
+                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-[#111111] truncate shadow-inner text-center">
                       thinknshop.co/cart
                     </div>
                     <div className="w-3.5 h-3.5" />
@@ -652,22 +652,22 @@ export default function SaasProductPage() {
 
                 {/* Features List */}
                 <div className="flex flex-col gap-2.5 mb-8">
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
-                    <span className="text-[#1161ed] font-extrabold">✓</span>
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
+                    <span className="text-[#111111] font-extrabold">✓</span>
                     <span>Edge catalog pre-compilation</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
-                    <span className="text-[#1161ed] font-extrabold">✓</span>
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
+                    <span className="text-[#111111] font-extrabold">✓</span>
                     <span>Stripe API checkout pipeline</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
-                    <span className="text-[#1161ed] font-extrabold">✓</span>
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
+                    <span className="text-[#111111] font-extrabold">✓</span>
                     <span>Real-time inventory database hooks</span>
                   </div>
                 </div>
               </div>
 
-              <Link href="/contact" className="block text-center bg-slate-900 group-hover:bg-[#1161ed] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
+              <Link href="/contact" className="block text-center bg-slate-900 group-hover:bg-[#111111] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
                 Inquire About ThinkNShop
               </Link>
             </div>
@@ -678,11 +678,11 @@ export default function SaasProductPage() {
         {/* 6. SaaS Features Section - EXPANDED SPACE */}
         <section id="saas-features" className="mb-20 md:mb-28">
           <div className="text-center mb-20">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Feature Library</p>
+            <p className="text-[#111111] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-4">Feature Library</p>
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               SaaS Features
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               We implement comprehensive technical parameters into our SaaS architectures.
             </p>
           </div>
@@ -692,12 +692,12 @@ export default function SaasProductPage() {
             {saasFeatures.map((feat, idx) => (
               <div 
                 key={idx} 
-                className="px-6 py-4 rounded-[20px] bg-white border border-slate-100 shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#1161ed]/30 hover:shadow-[0_15px_30px_rgba(17,97,237,0.06)] group flex items-center gap-3.5"
+                className="px-6 py-4 rounded-[20px] bg-white border border-slate-100 shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#111111]/30 hover:shadow-[0_15px_30px_rgba(17,97,237,0.06)] group flex items-center gap-3.5"
               >
-                <div className="h-[4px] w-[50%] absolute top-0 left-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-tr group-hover:w-full transition-all duration-300" />
+                <div className="h-[4px] w-[50%] absolute top-0 left-0 bg-gradient-to-r from-[#2F2FE4] to-[#111111] rounded-tr group-hover:w-full transition-all duration-300" />
                 
                 {/* Glowing Bullet Node */}
-                <div className="w-5.5 h-5.5 rounded-full bg-[#1161ed]/[0.08] flex items-center justify-center text-[0.62rem] font-black text-[#1161ed] shadow-inner select-none shrink-0 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300">
+                <div className="w-5.5 h-5.5 rounded-full bg-[#111111]/[0.08] flex items-center justify-center text-[0.62rem] font-black text-[#111111] shadow-inner select-none shrink-0 group-hover:bg-[#111111] group-hover:text-white transition-all duration-300">
                   ✓
                 </div>
                 <span className="text-slate-800 font-extrabold text-[0.84rem] sm:text-[0.92rem] tracking-tight">{feat}</span>
@@ -711,8 +711,8 @@ export default function SaasProductPage() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center">
-                <span className="text-[2.2rem] md:text-[2.8rem] font-black text-[#1161ed] tracking-tight mb-1 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">{stat.value}</span>
-                <span className="text-[#64748B] text-[0.68rem] md:text-[0.75rem] font-black uppercase tracking-widest leading-snug">{stat.label}</span>
+                <span className="text-[2.2rem] md:text-[2.8rem] font-black text-[#111111] tracking-tight mb-1 bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">{stat.value}</span>
+                <span className="text-[#111111] text-[0.68rem] md:text-[0.75rem] font-black uppercase tracking-widest leading-snug">{stat.label}</span>
               </div>
             ))}
           </div>

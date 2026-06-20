@@ -8,7 +8,7 @@ export default function WebPlatformPage() {
       badge: "User Interface & Experience",
       desc: "Pixel-perfect conversion of designs into blazing-fast, responsive web interfaces. We construct semantic, accessible React layouts with flawless Core Web Vitals.",
       techs: ["Next.js (App Router)", "React 19 & TypeScript", "Tailwind CSS v4", "Framer Motion Animations"],
-      gradient: "from-[#1161ed] to-[#3b82f6]",
+      gradient: "from-[#2F2FE4] to-[#111111]",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
@@ -44,11 +44,11 @@ export default function WebPlatformPage() {
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       {/* Background Soft Mesh Gradients for Premium Studio Feel */}
-      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#1161ed]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
-      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#3b82f6]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
+      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
+      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
       
       {/* Premium Dotted Grid Background */}
-      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.18] -z-10 pointer-events-none select-none" />
+      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.18] -z-10 pointer-events-none select-none" />
 
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
         
@@ -56,19 +56,16 @@ export default function WebPlatformPage() {
         {/* SECTION 1: HERO & CORE HEADING STATEMENT */}
         {/* ========================================================================= */}
         <header className="mb-20 relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#1161ed] tracking-[0.18em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-            <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+            <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             Performance Engine
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            High-Performance Web{" "}
-            <span className="bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent drop-shadow-sm">
-              Engineering
-            </span>
+            High-Performance Web <span>Engineering</span>
           </h1>
 
-          <p className="text-[#64748B] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium">
+          <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium">
             We architect and develop enterprise-level web platforms prioritizing speed, SEO, and structural integrity. Utilizing React, Next.js, and secure backend systems, we construct highly polished digital experiences built to convert visitors and scale effortlessly.
           </p>
         </header>
@@ -78,13 +75,13 @@ export default function WebPlatformPage() {
         {/* ========================================================================= */}
         <section className="mb-24 relative z-10">
           <div className="text-center md:text-left mb-12">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3">
               Capabilities
             </div>
             <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight">
               Web Development Frameworks & Solutions
             </h2>
-            <p className="text-slate-500 text-sm mt-2 max-w-[650px]">
+            <p className="text-[#111111] text-sm mt-2 max-w-[650px]">
               Proper, production-ready technological choices designed to eliminate system lag, protect client data, and secure organic search indexing authority.
             </p>
           </div>
@@ -93,7 +90,7 @@ export default function WebPlatformPage() {
             {STACKS.map((stack, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#1161ed]/30 hover:bg-white group flex flex-col justify-between min-h-[360px]"
+                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[360px]"
               >
                 {/* Premium Gradient Top Border Strip */}
                 <div className={`h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r ${stack.gradient} rounded-t-[32px]`} />
@@ -101,20 +98,20 @@ export default function WebPlatformPage() {
                 <div>
                   {/* Icon emblem */}
                   <div className="mb-6 relative">
-                    <div className="w-12 h-12 rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="w-12 h-12 rounded-2xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center border border-[#111111]/10 group-hover:scale-110 group-hover:bg-[#111111] group-hover:text-white transition-all duration-500 shadow-sm">
                       {stack.icon}
                     </div>
                   </div>
 
-                  <span className="text-[0.62rem] font-black uppercase text-[#1161ed] tracking-[0.15em] mb-2.5 block">
+                  <span className="text-[0.62rem] font-black uppercase text-[#111111] tracking-[0.15em] mb-2.5 block">
                     {stack.badge}
                   </span>
                   
-                  <h3 className="text-[1.28rem] text-slate-900 mb-3.5 font-black group-hover:text-[#1161ed] transition-colors duration-300">
+                  <h3 className="text-[1.28rem] text-slate-900 mb-3.5 font-black group-hover:text-[#111111] transition-colors duration-300">
                     {stack.title}
                   </h3>
                   
-                  <p className="text-slate-500 leading-relaxed text-[0.84rem] mb-6">
+                  <p className="text-[#111111] leading-relaxed text-[0.84rem] mb-6">
                     {stack.desc}
                   </p>
                 </div>
@@ -124,7 +121,7 @@ export default function WebPlatformPage() {
                   {stack.techs.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-1 bg-slate-100/80 hover:bg-slate-100 font-mono text-[0.64rem] font-bold text-slate-600 rounded-md transition-colors"
+                      className="px-2.5 py-1 bg-slate-100/80 hover:bg-slate-100 font-mono text-[0.64rem] font-bold text-[#111111] rounded-md transition-colors"
                     >
                       {tech}
                     </span>
@@ -143,7 +140,7 @@ export default function WebPlatformPage() {
             
             {/* Left Column: Informative Technical Benchmarks */}
             <div className="lg:col-span-7 flex flex-col justify-center">
-              <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3.5 w-fit">
+              <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3.5 w-fit">
                 Performance Sweep
               </div>
               
@@ -151,7 +148,7 @@ export default function WebPlatformPage() {
                 Our Core Web Performance Standards
               </h2>
 
-              <p className="text-[#64748B] text-sm leading-relaxed mb-6 font-medium">
+              <p className="text-[#111111] text-sm leading-relaxed mb-6 font-medium">
                 We believe premium aesthetics must be supported by bulletproof technical implementations. Every web platform leaving our studio is calibrated to hit elite technical benchmarks:
               </p>
 
@@ -174,9 +171,9 @@ export default function WebPlatformPage() {
                     desc: "Decoupling standard routing layouts from backend APIs to prevent database injections and maintain 100% platform uptime.",
                   },
                 ].map((spec, i) => (
-                  <div key={i} className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17,97,237,0.01)] hover:border-[#1161ed]/15 transition-all duration-300">
+                  <div key={i} className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17,97,237,0.01)] hover:border-[#111111]/15 transition-all duration-300">
                     <h4 className="text-slate-900 font-extrabold text-[0.84rem] tracking-tight mb-1.5">{spec.title}</h4>
-                    <p className="text-slate-500 text-[0.72rem] leading-relaxed font-semibold">{spec.desc}</p>
+                    <p className="text-[#111111] text-[0.72rem] leading-relaxed font-semibold">{spec.desc}</p>
                   </div>
                 ))}
               </div>
@@ -186,12 +183,12 @@ export default function WebPlatformPage() {
             <div className="lg:col-span-5 flex items-stretch">
               <div className="relative rounded-[40px] bg-[#020713] p-8 sm:p-12 text-left text-white overflow-hidden shadow-2xl flex flex-col justify-between border border-white/5 w-full">
                 {/* Luminous soft mesh bubbles */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#1161ed] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#111111] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#8b5cf6] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-                <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
+                <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
 
                 <div className="relative z-10">
-                  <span className="inline-block bg-[#1161ed]/[0.15] text-[#3b82f6] border border-[#1161ed]/20 font-extrabold text-[0.62rem] uppercase tracking-wider px-3 py-1 rounded-md mb-6">
+                  <span className="inline-block bg-[#111111]/[0.15] text-[#2A2A2A] border border-[#111111]/20 font-extrabold text-[0.62rem] uppercase tracking-wider px-3 py-1 rounded-md mb-6">
                     Connect With Engineers
                   </span>
                   
@@ -207,7 +204,7 @@ export default function WebPlatformPage() {
                 <div className="relative z-10 pt-4 border-t border-white/5">
                   <Link
                     href="/contact"
-                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] hover:from-[#0c4ec3] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
+                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
                   >
                     Start Your Project
                   </Link>

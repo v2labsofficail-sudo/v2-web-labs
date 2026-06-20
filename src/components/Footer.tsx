@@ -5,9 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-slate-200 bg-white pt-20 pb-8 text-black font-montserrat">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(17,97,237,0.05),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.03),transparent_24%)]" />
+    <footer className="relative overflow-hidden bg-white pt-20 pb-8 text-black font-montserrat">
 
       <div className="relative z-10 mx-auto grid max-w-[1240px] grid-cols-1 gap-10 px-6 pb-[60px] sm:grid-cols-2 lg:grid-cols-[1.7fr_1fr_1fr_1fr_0.9fr]">
         <div className="flex flex-col">

@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
           justifyContent: "space-between",
           padding: "64px",
           background:
-            "linear-gradient(135deg, #020b1c 0%, #0f172a 42%, #1161ed 100%)",
+            "linear-gradient(135deg, #020b1c 0%, #0f172a 42%, #111111 100%)",
           color: "#f8fafc",
           fontFamily: "Arial, sans-serif",
         }}

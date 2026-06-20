@@ -28,7 +28,7 @@ export default function AboutPage() {
       role: "CEO & Full Stack Developer",
       initials: "VD",
       quote: "Compiles bulletproof, sub-second architectures.",
-      gradient: "from-[#1161ed] to-[#3b82f6]",
+      gradient: "from-[#2F2FE4] to-[#111111]",
       linkedin: "https://www.linkedin.com/in/vandan-darji-3b282931a/",
       github: "https://github.com/Vandann-1/",
       bio: "Oversees core systems scaling, cloud sync grids, and security layers. Focused on TypeScript and React performance.",
@@ -95,7 +95,7 @@ export default function AboutPage() {
       role: "Senior Frontend & Mobile App Developer",
       initials: "NV",
       quote: "Architecting gorgeous, high-fidelity responsive layouts.",
-      gradient: "from-[#1161ed] to-[#06b6d4]",
+      gradient: "from-[#2F2FE4] to-[#111111]",
       linkedin: "#",
       github: "#",
       bio: "Leads engineering of premium responsive frontends, interactive motion architectures, and robust styling systems with pixel-perfect precision.",
@@ -106,27 +106,27 @@ export default function AboutPage() {
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       
-      <div className="absolute top-[8%] left-[5%] w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
-      <div className="absolute top-[35%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
+      <div className="absolute top-[8%] left-[5%] w-[400px] h-[400px] bg-[#111111]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
+      <div className="absolute top-[35%] right-[5%] w-[500px] h-[500px] bg-[#111111]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
       
-      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.25] -z-10 pointer-events-none select-none" />
+      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.25] -z-10 pointer-events-none select-none" />
 
       
       <section className="relative overflow-hidden pt-24 pb-16 max-w-[1100px] mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-          <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+        <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+          <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
           Who We Are
         </div>
 
         <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1.1] text-slate-900 max-w-[850px] mx-auto mb-6 tracking-tight">
           Pioneering Premium{" "}
-          <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">
             Digital Experiences
           </span>
         </h1>
 
-        <p className="text-[#64748B] text-sm sm:text-base lg:text-[1.05rem] leading-[1.75] max-w-[720px] mx-auto">
+        <p className="text-[#111111] text-sm sm:text-base lg:text-[1.05rem] leading-[1.75] max-w-[720px] mx-auto">
           V2 Labs is a modern digital agency and collaborative engineering
           studio. We partner with visionary startups and global brands to
           architect gorgeous websites, scalable software products, customized
@@ -139,14 +139,14 @@ export default function AboutPage() {
         {stats.map((stat, idx) => (
           <div
             key={idx}
-            className="group relative p-6 sm:p-8 rounded-[24px] border border-[#1161ed]/10 bg-white/70 backdrop-blur-md shadow-[0_10px_30px_rgba(17,97,237,0.02)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#1161ed]/25 hover:bg-white hover:shadow-[0_20px_40px_rgba(17,97,237,0.08)] flex flex-col justify-center items-center text-center"
+            className="group relative p-6 sm:p-8 rounded-[24px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#2F2FE4]/30 hover:shadow-[0_20px_45px_rgba(47,47,228,0.08)] flex flex-col justify-center items-center text-center"
           >
-            <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-t-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#2F2FE4] to-[#111111] rounded-t-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            <span className="text-[2.2rem] sm:text-[2.8rem] font-black tracking-tight text-[#1161ed] mb-1.5 leading-none">
+            <span className="text-[2.2rem] sm:text-[2.8rem] font-black tracking-tight text-[#111111] mb-1.5 leading-none">
               {stat.value}
             </span>
-            <span className="text-slate-500 font-extrabold text-[0.8rem] sm:text-[0.88rem] tracking-tight leading-snug">
+            <span className="text-[#111111] font-extrabold text-[0.8rem] sm:text-[0.88rem] tracking-tight leading-snug">
               {stat.label}
             </span>
           </div>
@@ -159,16 +159,16 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           <div className="lg:col-span-6 flex flex-col items-start text-left">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-4">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-4">
               Our Journey
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-              From College Dorm Hustle to Proper Engineering
+              From College Dorm Hustle to <span>Proper Engineering</span>
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-[0.96rem] leading-relaxed mb-5">
+            <p className="text-[#111111] text-sm sm:text-[0.96rem] leading-relaxed mb-5">
               V2Labs was forged through relentless dedication. Our founders, **Vishal** and **Vandan**, began their partnership during college. Struggling to manage rigid university workloads, attendance requirements, and exams, they invested every spare night self-teaching advanced web architectures and system designs.
             </p>
-            <p className="text-[#64748B] text-sm sm:text-[0.96rem] leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-[0.96rem] leading-relaxed">
               They started by freelancing on small client projects, delivering proper high-quality execution and pixel-perfect precision. This hands-on experience and obsession with performance laid the foundation for V2Labs (named after **Vishal** + **Vandan**). Today, we operate as an elite engineering studio shipping high-scale software globally.
             </p>
           </div>
@@ -236,19 +236,19 @@ export default function AboutPage() {
             ].map((dna, idx) => (
               <div
                 key={idx}
-                className="flex gap-4 p-5 rounded-2xl border border-slate-200/40 bg-white/40 backdrop-blur-xl shadow-sm hover:shadow-[0_15px_30px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 hover:bg-white/60 transition-all duration-300 relative group overflow-hidden"
+                className="flex gap-4 p-5 rounded-2xl border border-slate-200/40 bg-white/40 backdrop-blur-xl shadow-sm hover:shadow-[0_15px_30px_rgba(17,97,237,0.06)] hover:border-[#111111]/20 hover:bg-white/60 transition-all duration-300 relative group overflow-hidden"
               >
                 
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] to-[#3b82f6]" />
+                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] to-[#111111]" />
 
-                <div className="w-10 h-10 rounded-xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-[#111111] group-hover:text-white transition-all duration-300 shadow-sm">
                   {dna.icon}
                 </div>
                 <div>
-                  <h4 className="text-[0.94rem] font-black text-slate-900 mb-1 group-hover:text-[#1161ed] transition-colors">
+                  <h4 className="text-[0.94rem] font-black text-slate-900 mb-1 group-hover:text-[#111111] transition-colors">
                     {dna.title}
                   </h4>
-                  <p className="text-[0.82rem] text-slate-500 leading-relaxed">
+                  <p className="text-[0.82rem] text-[#111111] leading-relaxed">
                     {dna.desc}
                   </p>
                 </div>
@@ -262,13 +262,13 @@ export default function AboutPage() {
       <ScrollReveal>
         <section className="py-12 border-t border-slate-200/50 mb-24 max-w-[1100px] mx-auto px-6 overflow-visible">
         <div className="text-center mb-16 relative z-10">
-          <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+          <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
             Our Crew
           </div>
           <h2 className="text-3xl md:text-[2.4rem] font-black text-[#0F172A] tracking-tight">
-            Meet the Builders
+            Meet the <span>Builders</span>
           </h2>
-          <p className="text-slate-500 text-sm max-w-[500px] mx-auto mt-2">
+          <p className="text-[#111111] text-sm max-w-[500px] mx-auto mt-2">
             The design-obsessed partners and engineering minds behind V2 Labs.
           </p>
         </div>
@@ -277,8 +277,8 @@ export default function AboutPage() {
       </ScrollReveal>
       <ScrollReveal>
         <section className="relative rounded-[32px] bg-[#020B1C] p-10 sm:p-16 text-center text-white overflow-hidden shadow-2xl z-10 mt-16 max-w-[1100px] mx-auto mx-6">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-[#1161ed] opacity-10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#3b82f6] opacity-5 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-[#111111] opacity-10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#2A2A2A] opacity-5 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
 
         <div className="relative z-10 max-w-[650px] mx-auto">
           <h2 className="text-3xl sm:text-[2.5rem] font-black tracking-tight leading-tight mb-4 text-white">
@@ -290,7 +290,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-wider"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-[#2F2FE4] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-wider"
           >
             Initiate Estimate
           </Link>

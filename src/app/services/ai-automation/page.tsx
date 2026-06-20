@@ -200,12 +200,12 @@ export default function AiAutomationPage() {
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       {/* Animated Floating Luminous Mesh Background Orbs (Premium Light Theme!) */}
-      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#1161ed]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
-      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#3b82f6]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
+      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
+      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
       <div className="absolute bottom-[15%] left-[10%] w-[400px] h-[400px] bg-[#8b5cf6]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-float-reverse" />
 
       {/* Luminous Dotted Grid Background Pattern */}
-      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.15] -z-10 pointer-events-none select-none" />
+      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.15] -z-10 pointer-events-none select-none" />
 
       {/* 1. Refined Light Hero Section */}
       <section className="min-h-[85vh] flex flex-col items-center justify-center relative overflow-hidden text-center px-6 pt-12 mb-20 select-none">
@@ -213,15 +213,15 @@ export default function AiAutomationPage() {
         {/* Centerpiece: Animated Light Neural Core System */}
         <div className="relative w-[240px] h-[240px] md:w-[320px] md:h-[320px] flex items-center justify-center mb-10 select-none">
           {/* External Spinning Ring */}
-          <div className="absolute inset-0 rounded-full border border-dashed border-[#1161ed]/20 animate-spin duration-[25s]" />
+          <div className="absolute inset-0 rounded-full border border-dashed border-[#111111]/20 animate-spin duration-[25s]" />
           
           {/* Middle Counter-rotating Ring */}
           <div className="absolute inset-[25px] rounded-full border border-[#8b5cf6]/20 border-t-2 border-b-2 border-t-[#8b5cf6]/60 border-b-[#8b5cf6]/60 animate-spin duration-[15s] [animation-direction:reverse]" />
           
           {/* Glowing Neural Core */}
-          <div className="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#1161ed] p-[1.5px] shadow-[0_8px_35px_rgba(17,97,237,0.15)] flex items-center justify-center animate-pulse duration-[3.5s]">
+          <div className="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#111111] p-[1.5px] shadow-[0_8px_35px_rgba(17,97,237,0.15)] flex items-center justify-center animate-pulse duration-[3.5s]">
             <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-inner">
-              <svg className="w-12 h-12 md:w-16 md:h-16 text-[#1161ed] animate-spin duration-[40s]" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
+              <svg className="w-12 h-12 md:w-16 md:h-16 text-[#111111] animate-spin duration-[40s]" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 2v20M2 12h20M12 12m-5 0a5 5 0 1010 0 5 5 0 10-10 0" />
                 <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(45 12 12)" />
@@ -233,22 +233,22 @@ export default function AiAutomationPage() {
 
         {/* Hero Text */}
         <div className="max-w-[850px] relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#1161ed] tracking-[0.18em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-            <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+            <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             Autonomous AI Focus
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.05] text-slate-900 tracking-tight mb-6 max-w-[850px] mx-auto">
-            AI Systems That Run Operations <span className="bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent drop-shadow-sm">Automatically.</span>
+            AI Systems That Run Operations <span>Automatically.</span>
           </h1>
           
-          <p className="text-[#64748B] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[760px] mx-auto font-medium mb-8">
+          <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[760px] mx-auto font-medium mb-8">
             We blueprint custom intelligent workflows, internal database integrations, RAG pipelines, and automated logic hooks to scale business operations with zero manual bottlenecks.
           </p>
 
           {/* Typewriter active ticker */}
           <div className="h-[36px] flex items-center justify-center mb-10">
-            <span className="text-slate-400 font-extrabold text-xs sm:text-sm tracking-widest uppercase animate-pulse">
+            <span className="text-[#111111] font-extrabold text-xs sm:text-sm tracking-widest uppercase animate-pulse">
               {tickerTexts[tickerIndex]}
             </span>
           </div>
@@ -257,7 +257,7 @@ export default function AiAutomationPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link 
               href="/contact" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_6px_25px_rgba(17,97,237,0.15)] hover:shadow-[0_10px_30px_rgba(17,97,237,0.25)] text-xs uppercase tracking-widest text-center"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_6px_25px_rgba(17,97,237,0.15)] hover:shadow-[0_10px_30px_rgba(17,97,237,0.25)] text-xs uppercase tracking-widest text-center"
             >
               Start Automated Pipeline
             </Link>
@@ -276,24 +276,24 @@ export default function AiAutomationPage() {
         {/* 2. Live Operations Center Dashboard (Polished as light glassmorphism!) */}
         <section id="operations-center" className="py-16 border-b border-slate-200/50 mb-28 scroll-mt-20">
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Real-Time Ingestion Loop
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Live Operations Center
             </h2>
-            <p className="text-slate-500 text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
+            <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
               Ditch static diagrams. Watch our automated pipeline actively ingest data, analyze tasks via custom brains, and commit actions in real-time.
             </p>
           </div>
 
           {/* Fake Live Dashboard Grid */}
           <div className="w-full bg-white/70 backdrop-blur-xl border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col lg:flex-row gap-10 items-center justify-between">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[110px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#111111]/[0.03] rounded-full blur-[110px] pointer-events-none" />
             
             {/* LEFT: Ingest Cards */}
             <div className="w-full lg:w-[320px] shrink-0 z-10 flex flex-col gap-4 font-Outfit">
-              <span className="text-[0.62rem] font-extrabold uppercase text-slate-400 tracking-wider block mb-1">Inbound Events Ingestion</span>
+              <span className="text-[0.62rem] font-extrabold uppercase text-[#111111] tracking-wider block mb-1">Inbound Events Ingestion</span>
               {operationsStream.map((item, idx) => {
                 const isActive = activeStreamIndex === idx;
                 return (
@@ -301,16 +301,16 @@ export default function AiAutomationPage() {
                     key={`in-${item.id}`}
                     className={`p-4.5 rounded-2xl border text-left transition-all duration-500 flex justify-between items-center ${
                       isActive 
-                        ? "bg-white border-[#1161ed]/40 shadow-[0_12px_25px_rgba(17,97,237,0.04)] -translate-y-0.5 scale-[1.01]" 
+                        ? "bg-white border-[#111111]/40 shadow-[0_12px_25px_rgba(17,97,237,0.04)] -translate-y-0.5 scale-[1.01]" 
                         : "bg-white/40 border-slate-100/60 opacity-60"
                     }`}
                   >
                     <div>
-                      <span className={`text-[0.55rem] font-black uppercase px-2 py-0.5 rounded-full mb-1.5 inline-block ${isActive ? "bg-[#1161ed]/10 text-[#1161ed] font-extrabold" : "bg-slate-100 text-slate-500"}`}>
+                      <span className={`text-[0.55rem] font-black uppercase px-2 py-0.5 rounded-full mb-1.5 inline-block ${isActive ? "bg-[#111111]/10 text-[#111111] font-extrabold" : "bg-slate-100 text-[#111111]"}`}>
                         Event Ingested
                       </span>
                       <h4 className="font-extrabold text-sm text-[#0F172A]">{item.input.label}</h4>
-                      <p className="text-[0.68rem] text-slate-400 mt-0.5 font-medium">{item.input.desc}</p>
+                      <p className="text-[0.68rem] text-[#111111] mt-0.5 font-medium">{item.input.desc}</p>
                     </div>
                     <span className="font-black text-xs text-[#0F172A]">{item.input.value}</span>
                   </div>
@@ -320,13 +320,13 @@ export default function AiAutomationPage() {
 
             {/* CENTER: AI Neural Processor Brain */}
             <div className="flex-1 w-full flex flex-col items-center justify-center p-8 bg-slate-50/50 border border-slate-200/60 rounded-[32px] shadow-inner relative overflow-hidden min-h-[340px] z-10">
-              <div className="absolute w-[200px] h-[200px] rounded-full border border-[#1161ed]/5 animate-ping duration-[3.5s] pointer-events-none" />
+              <div className="absolute w-[200px] h-[200px] rounded-full border border-[#111111]/5 animate-ping duration-[3.5s] pointer-events-none" />
               
               <div className="relative z-10 flex flex-col items-center text-center">
                 
                 {/* SVG Brain Processor icon */}
-                <div className="w-15 h-15 rounded-2xl bg-white border border-[#1161ed]/10 flex items-center justify-center mb-6 shadow-sm animate-pulse duration-[2.5s]">
-                  <svg className="w-8 h-8 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                <div className="w-15 h-15 rounded-2xl bg-white border border-[#111111]/10 flex items-center justify-center mb-6 shadow-sm animate-pulse duration-[2.5s]">
+                  <svg className="w-8 h-8 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="4" />
                     <line x1="12" y1="2" x2="12" y2="4" />
                     <line x1="12" y1="20" x2="12" y2="22" />
@@ -335,28 +335,28 @@ export default function AiAutomationPage() {
                   </svg>
                 </div>
                 
-                <span className="text-[0.62rem] font-extrabold uppercase text-[#1161ed] tracking-[0.18em] mb-1">V2 AI Neural Core</span>
+                <span className="text-[0.62rem] font-extrabold uppercase text-[#111111] tracking-[0.18em] mb-1">V2 AI Neural Core</span>
                 
                 {/* Dynamic Brain State */}
                 <div className="min-h-[70px] mt-2.5 flex flex-col items-center">
                   <p className="font-black text-slate-800 text-[0.88rem] leading-snug px-3 max-w-[220px] transition-all duration-300">
                     {operationsStream[activeStreamIndex].brain.text}
                   </p>
-                  <span className="text-[0.58rem] font-bold text-[#1161ed] bg-[#1161ed]/5 border border-[#1161ed]/10 px-2.5 py-0.5 rounded mt-3.5 block uppercase tracking-wider font-mono">
+                  <span className="text-[0.58rem] font-bold text-[#111111] bg-[#111111]/5 border border-[#111111]/10 px-2.5 py-0.5 rounded mt-3.5 block uppercase tracking-wider font-mono">
                     {operationsStream[activeStreamIndex].brain.model}
                   </span>
                 </div>
 
                 {/* Progress bar wave simulation */}
                 <div className="w-[140px] h-[3px] bg-slate-200 rounded-full mt-6 overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#1161ed] to-[#3b82f6] rounded-full animate-marquee" style={{ width: "60%" }} />
+                  <div className="h-full bg-gradient-to-r from-[#2F2FE4] to-[#111111] rounded-full animate-marquee" style={{ width: "60%" }} />
                 </div>
               </div>
             </div>
 
             {/* RIGHT: Actions Outputs */}
             <div className="w-full lg:w-[320px] shrink-0 z-10 flex flex-col gap-4 font-Outfit">
-              <span className="text-[0.62rem] font-extrabold uppercase text-slate-400 tracking-wider block mb-1">Automated Operations Output</span>
+              <span className="text-[0.62rem] font-extrabold uppercase text-[#111111] tracking-wider block mb-1">Automated Operations Output</span>
               {operationsStream.map((item, idx) => {
                 const isActive = activeStreamIndex === idx;
                 return (
@@ -369,13 +369,13 @@ export default function AiAutomationPage() {
                     }`}
                   >
                     <div>
-                      <span className={`text-[0.55rem] font-black uppercase px-2 py-0.5 rounded-full mb-1.5 inline-block ${isActive ? "bg-green-500/10 text-[#22c55e] font-extrabold" : "bg-slate-100 text-slate-500"}`}>
+                      <span className={`text-[0.55rem] font-black uppercase px-2 py-0.5 rounded-full mb-1.5 inline-block ${isActive ? "bg-green-500/10 text-[#22c55e] font-extrabold" : "bg-slate-100 text-[#111111]"}`}>
                         Output Sync
                       </span>
                       <h4 className="font-extrabold text-sm text-[#0F172A]">{item.output.label}</h4>
-                      <p className="text-[0.68rem] text-slate-400 mt-0.5 font-medium">{item.output.desc}</p>
+                      <p className="text-[0.68rem] text-[#111111] mt-0.5 font-medium">{item.output.desc}</p>
                     </div>
-                    <span className={`text-[0.55rem] font-black px-2 py-0.5 rounded-full ${isActive ? "bg-[#22c55e] text-white" : "bg-slate-100 text-slate-400"}`}>
+                    <span className={`text-[0.55rem] font-black px-2 py-0.5 rounded-full ${isActive ? "bg-[#22c55e] text-white" : "bg-slate-100 text-[#111111]"}`}>
                       {item.output.status}
                     </span>
                   </div>
@@ -389,13 +389,13 @@ export default function AiAutomationPage() {
         {/* 3. Workflow Story (Stepper Section) */}
         <section id="workflow-story" className="mb-28 border-t border-slate-200/50 pt-16 relative">
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Pipeline Story
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Workflow Pipeline Builder
             </h2>
-            <p className="text-slate-500 text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
+            <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
               Watch how our structural integration builds itself step-by-step from raw inquiry to verified business analytics.
             </p>
           </div>
@@ -403,19 +403,19 @@ export default function AiAutomationPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-[1100px] mx-auto select-none relative z-10">
             {/* Left selector steps */}
             <div className="lg:col-span-5 flex flex-col gap-3">
-              <span className="text-[0.62rem] font-extrabold uppercase text-slate-400 tracking-wider block mb-1">Click to trigger workflow steps</span>
+              <span className="text-[0.62rem] font-extrabold uppercase text-[#111111] tracking-wider block mb-1">Click to trigger workflow steps</span>
               {workflowSteps.map((s, idx) => (
                 <button 
                   key={idx}
                   onClick={() => setActiveWorkflowStep(idx)}
                   className={`p-4 rounded-2xl border text-left transition-all duration-300 flex items-center gap-3.5 cursor-pointer ${
                     activeWorkflowStep === idx 
-                      ? "bg-white border-[#1161ed]/30 shadow-[0_12px_25px_rgba(17,97,237,0.03)] -translate-x-0.5 font-bold" 
+                      ? "bg-white border-[#111111]/30 shadow-[0_12px_25px_rgba(17,97,237,0.03)] -translate-x-0.5 font-bold" 
                       : "bg-white/40 border-slate-100/60 hover:bg-white hover:border-slate-250"
                   }`}
                 >
                   <div className={`w-7 h-7 rounded-lg flex items-center justify-center font-black text-xs transition-colors shrink-0 ${
-                    activeWorkflowStep === idx ? "bg-[#1161ed] text-white" : "bg-[#1161ed]/10 text-[#1161ed]"
+                    activeWorkflowStep === idx ? "bg-[#111111] text-white" : "bg-[#111111]/10 text-[#111111]"
                   }`}>
                     {s.step}
                   </div>
@@ -426,21 +426,21 @@ export default function AiAutomationPage() {
 
             {/* Right display card displaying active flow details */}
             <div className="lg:col-span-7 z-10">
-              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[340px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.04)] hover:border-[#1161ed]/20 transition-all duration-500">
-                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] rounded-t-[36px]" />
+              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[340px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.04)] hover:border-[#111111]/20 transition-all duration-500">
+                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
                 
                 <div>
                   <div className="flex justify-between items-center mb-6">
-                    <span className="text-[0.62rem] font-black uppercase text-[#1161ed] bg-[#1161ed]/10 px-3.5 py-1 rounded-full tracking-widest shadow-sm">
+                    <span className="text-[0.62rem] font-black uppercase text-[#111111] bg-[#111111]/10 px-3.5 py-1 rounded-full tracking-widest shadow-sm">
                       Pipeline State #0{activeWorkflowStep + 1}
                     </span>
-                    <span className="text-[0.58rem] font-bold text-slate-400 tracking-wider">ACTIVE SYNC</span>
+                    <span className="text-[0.58rem] font-bold text-[#111111] tracking-wider">ACTIVE SYNC</span>
                   </div>
 
                   <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
                     {workflowSteps[activeWorkflowStep].label}
                   </h3>
-                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
+                  <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
                     {workflowSteps[activeWorkflowStep].desc}
                   </p>
                 </div>
@@ -452,12 +452,12 @@ export default function AiAutomationPage() {
                       <div 
                         className={`h-[5px] rounded-full transition-all duration-500 flex-1 ${
                           idx <= activeWorkflowStep 
-                            ? "bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6]" 
+                            ? "bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6]" 
                             : "bg-slate-100"
                         }`} 
                       />
                       {idx < 5 && (
-                        <span className={`text-[0.55rem] font-black transition-colors ${idx < activeWorkflowStep ? "text-[#1161ed]" : "text-slate-200"}`}>
+                        <span className={`text-[0.55rem] font-black transition-colors ${idx < activeWorkflowStep ? "text-[#111111]" : "text-slate-200"}`}>
                           ➔
                         </span>
                       )}
@@ -476,19 +476,19 @@ export default function AiAutomationPage() {
             
             {/* Left description */}
             <div className="lg:col-span-5 flex flex-col text-left items-start">
-              <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
                 Command Console
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] font-black text-[#0F172A] tracking-tight leading-none mb-6">
                 Technical AI Command Terminal.
               </h2>
-              <p className="text-slate-500 text-sm leading-[1.65] font-semibold mb-8">
+              <p className="text-[#111111] text-sm leading-[1.65] font-semibold mb-8">
                 Watch raw actions stream instantly through our database gates. We code robust serverless handlers designed to secure role validation keys and sync operations with zero downtime.
               </p>
 
               <div className="flex flex-wrap gap-2">
                 {["REST Bridges", "SSO Audited", "Safe Webhooks", "Zero Latency Logs"].map((tag, idx) => (
-                  <span key={idx} className="px-3.5 py-1.5 rounded-xl border border-slate-200/60 bg-white/70 backdrop-blur-sm text-[0.68rem] font-extrabold uppercase text-slate-600 tracking-wider">
+                  <span key={idx} className="px-3.5 py-1.5 rounded-xl border border-slate-200/60 bg-white/70 backdrop-blur-sm text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider">
                     {tag}
                   </span>
                 ))}
@@ -506,22 +506,22 @@ export default function AiAutomationPage() {
                     <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-sm" />
                   </div>
-                  <span className="text-[0.62rem] font-bold text-slate-500 uppercase tracking-widest font-mono">
+                  <span className="text-[0.62rem] font-bold text-[#111111] uppercase tracking-widest font-mono">
                     v2-logger@sh - active
                   </span>
                   <div className="w-4 h-4" />
                 </div>
 
                 {/* Console logs output */}
-                <div className="p-6 font-mono text-left text-[0.72rem] text-slate-400 min-h-[220px] flex flex-col gap-2.5">
+                <div className="p-6 font-mono text-left text-[0.72rem] text-[#111111] min-h-[220px] flex flex-col gap-2.5">
                   {terminalLogs.map((log, idx) => (
                     <div key={idx} className={`leading-relaxed ${idx === terminalLogs.length - 1 ? "text-white font-extrabold" : "opacity-75"}`}>
-                      <span className="text-[#1161ed] mr-2">&gt;</span>
+                      <span className="text-[#111111] mr-2">&gt;</span>
                       {log}
                     </div>
                   ))}
                   <div className="flex items-center gap-1">
-                    <span className="text-[#1161ed] mr-2">&gt;</span>
+                    <span className="text-[#111111] mr-2">&gt;</span>
                     <span className="w-2 h-4 bg-[#22c55e] animate-ping" />
                   </div>
                 </div>
@@ -535,13 +535,13 @@ export default function AiAutomationPage() {
         {/* 5. Dynamic Ecosystem Map */}
         <section id="ecosystem" className="py-16 border-t border-slate-200/50 mb-28 select-none relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Integration Hub
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Dynamic Ecosystem Map
             </h2>
-            <p className="text-slate-500 text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
+            <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
               Hover over float nodes to trace secure, zero-latency webhook connections linking back to the core V2 AI Automation Engine.
             </p>
           </div>
@@ -553,9 +553,9 @@ export default function AiAutomationPage() {
             <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1.5px,transparent_1.5px)] [background-size:24px_24px] opacity-40 pointer-events-none" />
             
             {/* Center Node (V2 AI Engine Core) */}
-            <div className="relative z-20 w-[140px] h-[140px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#1161ed] p-[1.5px] shadow-[0_8px_30px_rgba(17,97,237,0.12)] animate-pulse duration-[3s] flex items-center justify-center">
+            <div className="relative z-20 w-[140px] h-[140px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#111111] p-[1.5px] shadow-[0_8px_30px_rgba(17,97,237,0.12)] animate-pulse duration-[3s] flex items-center justify-center">
               <div className="w-full h-full bg-white rounded-full flex flex-col items-center justify-center text-slate-800 text-center shadow-inner">
-                <span className="text-[0.45rem] font-black uppercase text-[#1161ed] tracking-widest mb-0.5">V2 Core</span>
+                <span className="text-[0.45rem] font-black uppercase text-[#111111] tracking-widest mb-0.5">V2 Core</span>
                 <span className="text-[0.92rem] font-black leading-none">AI ENGINE</span>
               </div>
             </div>
@@ -575,12 +575,12 @@ export default function AiAutomationPage() {
                 >
                   {/* Floating Circular Node */}
                   <div className={`w-14 h-14 rounded-2xl bg-white border flex items-center justify-center shadow-[0_5px_15px_rgba(0,0,0,0.02)] transition-all duration-300 ${
-                    isHovered ? "border-[#1161ed] shadow-[0_8px_25px_rgba(17,97,237,0.08)]" : "border-slate-100"
+                    isHovered ? "border-[#111111] shadow-[0_8px_25px_rgba(17,97,237,0.08)]" : "border-slate-100"
                   }`}>
                     {node.icon}
                   </div>
                   <span className={`text-[0.58rem] font-black uppercase tracking-wider mt-2 px-2 py-0.5 rounded transition-all duration-300 ${
-                    isHovered ? "bg-[#1161ed] text-white" : "bg-slate-50 text-slate-500"
+                    isHovered ? "bg-[#111111] text-white" : "bg-slate-50 text-[#111111]"
                   }`}>
                     {node.label}
                   </span>
@@ -593,7 +593,7 @@ export default function AiAutomationPage() {
                         y1="400" 
                         x2="400" 
                         y2="400" 
-                        stroke="#1161ed" 
+                        stroke="#111111" 
                         strokeWidth="3.5" 
                         strokeDasharray="6 6" 
                         className="animate-ping" 
@@ -609,13 +609,13 @@ export default function AiAutomationPage() {
         {/* 6. Integrated LLM Engines */}
         <section id="ai-models" className="mb-28 border-t border-slate-200/50 pt-16 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Foundation Models
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Integrated LLM Engines
             </h2>
-            <p className="text-slate-500 text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
+            <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
               We connect your workflows to state-of-the-art neural engines, matching tasks to their ideal model strengths.
             </p>
           </div>
@@ -628,8 +628,8 @@ export default function AiAutomationPage() {
                   <ECO_ICONS.OpenAIModel />
                 </div>
                 <h3 className="text-lg font-black text-slate-850 mb-1 group-hover:text-[#10A37F] transition-colors font-Outfit">OpenAI GPT-4o</h3>
-                <p className="text-[0.62rem] text-slate-400 font-extrabold uppercase tracking-wider mb-4">Elite Reasoning & Planning</p>
-                <p className="text-slate-500 text-xs leading-relaxed mb-6 font-semibold font-Outfit">
+                <p className="text-[0.62rem] text-[#111111] font-extrabold uppercase tracking-wider mb-4">Elite Reasoning & Planning</p>
+                <p className="text-[#111111] text-xs leading-relaxed mb-6 font-semibold font-Outfit">
                   Perfect for multi-step agent decisions, complex software writing, structured JSON outputs, and high-intensity logic pipelines.
                 </p>
               </div>
@@ -645,8 +645,8 @@ export default function AiAutomationPage() {
                   <ECO_ICONS.GeminiModel />
                 </div>
                 <h3 className="text-lg font-black text-slate-850 mb-1 group-hover:text-[#1a73e8] transition-colors font-Outfit">Google Gemini 1.5</h3>
-                <p className="text-[0.62rem] text-slate-400 font-extrabold uppercase tracking-wider mb-4">Massive Context & Multimodal</p>
-                <p className="text-slate-500 text-xs leading-relaxed mb-6 font-semibold font-Outfit">
+                <p className="text-[0.62rem] text-[#111111] font-extrabold uppercase tracking-wider mb-4">Massive Context & Multimodal</p>
+                <p className="text-[#111111] text-xs leading-relaxed mb-6 font-semibold font-Outfit">
                   Perfect for processing hours of video, massive databases, whole PDF manuals, and high-volume image analysis pipelines.
                 </p>
               </div>
@@ -662,8 +662,8 @@ export default function AiAutomationPage() {
                   <ECO_ICONS.ClaudeModel />
                 </div>
                 <h3 className="text-lg font-black text-slate-850 mb-1 group-hover:text-[#D97706] transition-colors font-Outfit">Anthropic Claude 3.5</h3>
-                <p className="text-[0.62rem] text-slate-400 font-extrabold uppercase tracking-wider mb-4">Precise Logic & Writing</p>
-                <p className="text-slate-500 text-xs leading-relaxed mb-6 font-semibold font-Outfit">
+                <p className="text-[0.62rem] text-[#111111] font-extrabold uppercase tracking-wider mb-4">Precise Logic & Writing</p>
+                <p className="text-[#111111] text-xs leading-relaxed mb-6 font-semibold font-Outfit">
                   Perfect for precise document parsing, mathematical code vetting, enterprise writing styles, and safe, guardrailed automations.
                 </p>
               </div>
@@ -677,13 +677,13 @@ export default function AiAutomationPage() {
         {/* 7. "Chaos to Automation" Transformation */}
         <section id="chaos-transformation" className="py-20 border-t border-slate-200/50 mb-20 select-none relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Operations Shift
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Chaos to Automation
             </h2>
-            <p className="text-slate-500 text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
+            <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
               Use the sliding controller directly below to witness messy operations transform into centralized, systemized, and automated V2 pipelines.
             </p>
           </div>
@@ -728,42 +728,42 @@ export default function AiAutomationPage() {
 
               {/* AUTOMATION PANEL (RIGHT) */}
               <div 
-                className="flex flex-col justify-between p-6 rounded-2xl bg-[#1161ed]/[0.015] border border-[#1161ed]/10 min-h-[300px] transition-opacity duration-300"
+                className="flex flex-col justify-between p-6 rounded-2xl bg-[#111111]/[0.015] border border-[#111111]/10 min-h-[300px] transition-opacity duration-300"
                 style={{ opacity: transformationSlider / 100 }}
               >
                 <div>
-                  <span className="text-[0.62rem] font-black uppercase text-[#1161ed] bg-[#1161ed]/10 px-2.5 py-1 rounded-full tracking-wider mb-5 inline-block shadow-sm">
+                  <span className="text-[0.62rem] font-black uppercase text-[#111111] bg-[#111111]/10 px-2.5 py-1 rounded-full tracking-wider mb-5 inline-block shadow-sm">
                     ✓ Clean V2 Pipeline
                   </span>
                   <h3 className="text-lg font-black text-[#0F172A] mb-4">Centralized Systemized Ecosystem</h3>
                   
-                  <ul className="flex flex-col gap-3 text-xs text-slate-600">
+                  <ul className="flex flex-col gap-3 text-xs text-[#111111]">
                     <li className="flex gap-2 items-center">
-                      <span className="text-[#1161ed] font-extrabold">✓</span>
+                      <span className="text-[#111111] font-extrabold">✓</span>
                       <span className="font-semibold">Direct bidirectional live API webhook connections</span>
                     </li>
                     <li className="flex gap-2 items-center">
-                      <span className="text-[#1161ed] font-extrabold">✓</span>
+                      <span className="text-[#111111] font-extrabold">✓</span>
                       <span className="font-semibold">Qualify and segment leads on the fly using OpenAI models</span>
                     </li>
                     <li className="flex gap-2 items-center">
-                      <span className="text-[#1161ed] font-extrabold">✓</span>
+                      <span className="text-[#111111] font-extrabold">✓</span>
                       <span className="font-semibold">Instant automated Slack alarms and customer alerts</span>
                     </li>
                     <li className="flex gap-2 items-center">
-                      <span className="text-[#1161ed] font-extrabold">✓</span>
+                      <span className="text-[#111111] font-extrabold">✓</span>
                       <span className="font-semibold">One centralized database dashboard showing real-time logs</span>
                     </li>
                   </ul>
                 </div>
-                <span className="text-[0.58rem] font-bold text-[#1161ed] uppercase tracking-widest mt-6 font-Outfit">Zero manual copy-paste action</span>
+                <span className="text-[0.58rem] font-bold text-[#111111] uppercase tracking-widest mt-6 font-Outfit">Zero manual copy-paste action</span>
               </div>
 
             </div>
 
             {/* Slider controller */}
             <div className="mt-10 border-t border-slate-150 pt-6 flex flex-col items-center">
-              <label htmlFor="slider" className="text-[0.68rem] font-extrabold uppercase text-slate-400 tracking-wider mb-3 block">
+              <label htmlFor="slider" className="text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider mb-3 block">
                 Slide to Automate: {transformationSlider}%
               </label>
               <input 
@@ -773,7 +773,7 @@ export default function AiAutomationPage() {
                 max="100"
                 value={transformationSlider}
                 onChange={(e) => setTransformationSlider(Number(e.target.value))}
-                className="w-full max-w-md h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#1161ed]"
+                className="w-full max-w-md h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#111111]"
               />
             </div>
 
@@ -792,7 +792,7 @@ export default function AiAutomationPage() {
               <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
                 Our Automation Stack
               </h2>
-              <p className="text-slate-500 text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
+              <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
                 We design and engineer enterprise automation scripts using industry-defining frameworks. Custom REST hooks, secure RAG indexing, and seamless operations.
               </p>
             </div>
@@ -800,7 +800,7 @@ export default function AiAutomationPage() {
             {/* Two-Column Tool Stack Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 flex justify-center relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#1161ed]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#111111]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
                 
                 <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17,97,237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-50/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
@@ -836,7 +836,7 @@ export default function AiAutomationPage() {
                       <h4 className="text-[1.05rem] font-black text-slate-800">OpenAI & LLMs</h4>
                       <span className="text-[0.58rem] font-bold bg-[#10A37F]/10 text-[#10A37F] px-2 py-0.5 rounded-md uppercase tracking-wider">Cognitive Brain</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Integrating advanced models (GPT-4o, Claude 3.5, Gemini 1.5) for intent classification, visual analysis, and semantic data extraction.
                     </p>
                   </div>
@@ -847,7 +847,7 @@ export default function AiAutomationPage() {
                   <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
                       <circle cx="6" cy="12" r="3" fill="#FF6D5A" />
-                      <circle cx="18" cy="6" r="3" fill="#1161ed" />
+                      <circle cx="18" cy="6" r="3" fill="#111111" />
                       <circle cx="18" cy="18" r="3" fill="#8b5cf6" />
                       <line x1="9" y1="11" x2="15" y2="7" stroke="#FF6D5A" strokeWidth="2" />
                       <line x1="9" y1="13" x2="15" y2="17" stroke="#FF6D5A" strokeWidth="2" />
@@ -858,7 +858,7 @@ export default function AiAutomationPage() {
                       <h4 className="text-[1.05rem] font-black text-slate-800">n8n & Make</h4>
                       <span className="text-[0.58rem] font-bold bg-orange-500/10 text-orange-600 px-2 py-0.5 rounded-md uppercase tracking-wider">Workflow Orchestration</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Developing secure internal webhook listeners, visual node logic, loops, conditional routers, and CRM sync gateways.
                     </p>
                   </div>
@@ -878,7 +878,7 @@ export default function AiAutomationPage() {
                       <h4 className="text-[1.05rem] font-black text-slate-800">LangChain & Python</h4>
                       <span className="text-[0.58rem] font-bold bg-blue-500/10 text-blue-600 px-2 py-0.5 rounded-md uppercase tracking-wider">Cognitive Scripts</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Coding autonomous database agents, document semantic RAG retrieval arrays, serverless cloud runners, and secure Python cron scripts.
                     </p>
                   </div>
@@ -897,7 +897,7 @@ export default function AiAutomationPage() {
                       <h4 className="text-[1.05rem] font-black text-slate-800">PostgreSQL & Redis</h4>
                       <span className="text-[0.58rem] font-bold bg-purple-500/10 text-purple-650 px-2 py-0.5 rounded-md uppercase tracking-wider">Storage & Caching</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Storing qualified event logs in ACID-compliant SQL nodes, caching system logic in rapid Redis pipelines, and syncing transactional ledgers.
                     </p>
                   </div>
@@ -909,22 +909,22 @@ export default function AiAutomationPage() {
         </section>
 
         {/* Premium Light CTA Section with glowing grid borders (NO MORE NAVY DARK BLUE BOX!) */}
-        <section className="relative rounded-[40px] bg-gradient-to-tr from-[#1161ed]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60 animate-fade-in">
+        <section className="relative rounded-[40px] bg-gradient-to-tr from-[#111111]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60 animate-fade-in">
           {/* Luminous soft mesh bubbles */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#1161ed] opacity-5 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#111111] opacity-5 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8b5cf6] opacity-5 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
 
           <div className="relative z-10 max-w-[650px] mx-auto">
             <h2 className="text-3xl sm:text-[2.8rem] font-black tracking-tight leading-tight mb-5 text-slate-900">
               {"Let's Automate Your Business Systems"}
             </h2>
-            <p className="text-slate-500 max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-semibold">
+            <p className="text-[#111111] max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-semibold">
               Our AI workflow architects are ready to blueprint custom LLM integrations, operational event triggers, and secure database bridges.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] hover:from-[#0c4ec3] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.15)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.15)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Initiate Pipeline Estimate
             </Link>

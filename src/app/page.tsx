@@ -109,13 +109,13 @@ function TestimonialCard({
              <p className="text-[0.9rem] md:text-[1.1rem] font-bold text-slate-900">
                {testimonial.name}
              </p>
-             <p className="text-[0.75rem] md:text-[0.9rem] font-medium text-slate-500 mt-0.5 md:mt-1">
+             <p className="text-[0.75rem] md:text-[0.9rem] font-medium text-[#111111] mt-0.5 md:mt-1">
                {testimonial.role}
              </p>
           </div>
           
           {/* Quote Icon */}
-          <div className="text-[#FF5A1F] opacity-90 pb-1 pr-1 md:pr-2">
+          <div className="text-[#111111] opacity-90 pb-1 pr-1 md:pr-2">
             <svg className="w-6 h-6 md:w-10 md:h-10" viewBox="0 0 24 24" fill="currentColor">
                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
@@ -450,8 +450,8 @@ function MouseTrackingAnimation() {
         backgroundSize: "24px 24px",
       }}
     >
-      <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] bg-[#1161ed]/[0.025] rounded-full blur-[110px] pointer-events-none select-none animate-pulse duration-[12s]" />
-      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#06b6d4]/[0.015] rounded-full blur-[100px] pointer-events-none select-none animate-pulse duration-[8s]" />
+      <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] bg-[#111111]/[0.025] rounded-full blur-[110px] pointer-events-none select-none animate-pulse duration-[12s]" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#404040]/[0.015] rounded-full blur-[100px] pointer-events-none select-none animate-pulse duration-[8s]" />
 
       <div
         className="absolute inset-0 transition-opacity duration-300 pointer-events-none"
@@ -523,7 +523,7 @@ function TiltIllustration() {
             <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
             <span className="w-3 h-3 rounded-full bg-green-500/80" />
           </div>
-          <div className="bg-slate-900 border border-slate-800 px-4 py-0.5 rounded-full text-[10px] text-slate-500 font-mono tracking-tight w-1/2 text-center">
+          <div className="bg-slate-900 border border-slate-800 px-4 py-0.5 rounded-full text-[10px] text-[#111111] font-mono tracking-tight w-1/2 text-center">
             app.v2labs.com/designer
           </div>
           <div className="w-6" /> {/* spacer */}
@@ -533,16 +533,16 @@ function TiltIllustration() {
         <div className="flex-1 grid grid-cols-12 gap-3" style={{ transform: "translateZ(35px)" }}>
           {/* Sidebar */}
           <div className="col-span-3 border-r border-slate-800/60 pr-2 flex flex-col gap-2.5">
-            <div className="h-6 bg-slate-900 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-[#1161ed] font-bold border border-[#1161ed]/15 bg-[#1161ed]/5">
+            <div className="h-6 bg-slate-900 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-[#111111] font-bold border border-[#111111]/15 bg-[#111111]/5">
               Canvas
             </div>
-            <div className="h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-slate-500 font-bold border border-transparent hover:border-slate-800 transition-colors">
+            <div className="h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-[#111111] font-bold border border-transparent hover:border-slate-800 transition-colors">
               AI Flows
             </div>
-            <div className="h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-slate-500 font-bold border border-transparent hover:border-slate-800 transition-colors">
+            <div className="h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-[#111111] font-bold border border-transparent hover:border-slate-800 transition-colors">
               Integrations
             </div>
-            <div className="mt-auto h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-slate-500 font-bold border border-transparent hover:border-slate-800 transition-colors">
+            <div className="mt-auto h-6 bg-slate-900/40 rounded-lg w-full flex items-center justify-center font-poppins text-[9px] text-[#111111] font-bold border border-transparent hover:border-slate-800 transition-colors">
               Settings
             </div>
           </div>
@@ -551,7 +551,7 @@ function TiltIllustration() {
           <div className="col-span-9 flex flex-col gap-3">
             {/* Toolbar status */}
             <div className="flex items-center justify-between">
-              <span className="font-poppins text-[10px] font-bold text-slate-400">Design Preview</span>
+              <span className="font-poppins text-[10px] font-bold text-[#111111]">Design Preview</span>
               <span className="inline-flex items-center gap-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[9px] px-2 py-0.5 rounded-full font-bold leading-none">
                 <span className="w-1 h-1 rounded-full bg-emerald-400 animate-ping" />
                 Live Sync
@@ -564,13 +564,13 @@ function TiltIllustration() {
               <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:12px_12px] opacity-[0.25] pointer-events-none" />
               
               <div className="relative z-10 flex gap-3.5 items-start">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1161ed] to-[#3b82f6] text-white flex items-center justify-center font-poppins font-black text-sm shadow-[0_4px_12px_rgba(17,97,237,0.18)]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#2F2FE4] to-[#111111] text-white flex items-center justify-center font-poppins font-black text-sm shadow-[0_4px_12px_rgba(17,97,237,0.18)]">
                   AT
                 </div>
                 <div>
                   <h4 className="font-poppins text-[0.88rem] font-black text-slate-900 leading-none mb-1">Alex Thorne</h4>
-                  <p className="font-poppins text-[0.66rem] font-bold text-[#1161ed] leading-none mb-2">Founder & CEO, SynthFlow AI</p>
-                  <div className="flex flex-col gap-1 text-[0.6rem] font-bold text-slate-400">
+                  <p className="font-poppins text-[0.66rem] font-bold text-[#111111] leading-none mb-2">Founder & CEO, SynthFlow AI</p>
+                  <div className="flex flex-col gap-1 text-[0.6rem] font-bold text-[#111111]">
                     <span className="flex items-center gap-1">✉ alex@synthflow.ai</span>
                     <span className="flex items-center gap-1">☏ +1 (555) 019-2834</span>
                   </div>
@@ -578,12 +578,12 @@ function TiltIllustration() {
               </div>
 
               {/* Dynamic divider line */}
-              <div className="relative z-10 h-px bg-gradient-to-r from-[#1161ed] via-slate-200 to-transparent my-3" />
+              <div className="relative z-10 h-px bg-gradient-to-r from-[#111111] via-slate-200 to-transparent my-3" />
 
               {/* Company banner area */}
-              <div className="relative z-10 flex justify-between items-center text-[0.55rem] font-black text-slate-400 uppercase tracking-widest leading-none">
+              <div className="relative z-10 flex justify-between items-center text-[0.55rem] font-black text-[#111111] uppercase tracking-widest leading-none">
                 <span>V2Labs engineered product</span>
-                <span className="text-[#1161ed] tracking-wider leading-none">synthflow.ai</span>
+                <span className="text-[#111111] tracking-wider leading-none">synthflow.ai</span>
               </div>
             </div>
           </div>
@@ -594,12 +594,12 @@ function TiltIllustration() {
           className="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
           style={{ transform: "translateZ(65px)" }}
         >
-          <div className="w-8 h-8 rounded-xl bg-[#1161ed]/10 text-[#1161ed] flex items-center justify-center font-black text-sm">
+          <div className="w-8 h-8 rounded-xl bg-[#111111]/10 text-[#111111] flex items-center justify-center font-black text-sm">
             ⚡
           </div>
           <div className="text-left font-poppins">
             <p className="text-[10px] font-black text-slate-800 uppercase tracking-wider leading-none">99.9% Delivery</p>
-            <p className="text-[8px] font-bold text-slate-400 mt-1 leading-none">Global cloud sync</p>
+            <p className="text-[8px] font-bold text-[#111111] mt-1 leading-none">Global cloud sync</p>
           </div>
         </div>
 
@@ -607,12 +607,12 @@ function TiltIllustration() {
           className="absolute -bottom-4 -right-4 bg-slate-900/95 backdrop-blur-md border border-slate-800/80 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.15)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
           style={{ transform: "translateZ(55px)" }}
         >
-          <div className="w-8 h-8 rounded-xl bg-[#06b6d4]/10 text-[#06b6d4] flex items-center justify-center font-black text-sm">
+          <div className="w-8 h-8 rounded-xl bg-[#404040]/10 text-[#404040] flex items-center justify-center font-black text-sm">
             📈
           </div>
           <div className="text-left font-poppins">
             <p className="text-[10px] font-black text-white uppercase tracking-wider leading-none">+148% CTR</p>
-            <p className="text-[8px] font-bold text-slate-500 mt-1 leading-none">Campaign growth</p>
+            <p className="text-[8px] font-bold text-[#111111] mt-1 leading-none">Campaign growth</p>
           </div>
         </div>
       </div>
@@ -728,10 +728,10 @@ function HubSection() {
         <div className="flex-1">
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
             Company-wide <br />
-            <span className="text-[#1161ed]">Engineering Solutions</span> <br />
+            <span className="text-[#111111]">Engineering Solutions</span> <br />
             Made Easy
           </h2>
-          <p className="text-lg text-slate-600 mb-8 font-medium leading-relaxed">
+          <p className="text-lg text-[#111111] mb-8 font-medium leading-relaxed">
             Create and manage scalable engineering ecosystems for as many teams as you need.
           </p>
           <ul className="space-y-6">
@@ -741,7 +741,7 @@ function HubSection() {
               "Enable each department to innovate securely and efficiently"
             ].map((item, idx) => (
               <li key={idx} className="flex gap-4 items-start">
-                 <div className="w-6 h-6 rounded-full bg-[#1161ed]/10 text-[#1161ed] flex items-center justify-center shrink-0 mt-1">
+                 <div className="w-6 h-6 rounded-full bg-[#111111]/10 text-[#111111] flex items-center justify-center shrink-0 mt-1">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                  </div>
                  <span className="text-slate-700 font-semibold text-lg">{item}</span>
@@ -766,14 +766,14 @@ function MobileScrollSection() {
   const y3 = useTransform(scrollYProgress, [0, 1], [60, -30]);
 
   return (
-    <section ref={ref} className="py-20 md:py-32 relative overflow-hidden bg-slate-900 border-y border-slate-800 mb-10 md:mb-14 rounded-[40px] mx-4 md:mx-10">
-       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-[#1161ed]/20 to-[#06b6d4]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
+    <section ref={ref} className="py-20 md:py-32 relative overflow-hidden bg-slate-900 border-y border-slate-800 w-full">
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-[#111111]/20 to-[#404040]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
        
        <div className="text-center mb-16 relative z-10 px-4">
           <h2 className="text-[clamp(2rem,5vw,3rem)] text-white font-extrabold tracking-tight mb-4">
-            Flawless on <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">Every Device</span>
+            Flawless on Every Device
           </h2>
-          <p className="text-slate-400 text-lg max-w-[600px] mx-auto font-semibold font-poppins">
+          <p className="text-white/90 text-lg max-w-[600px] mx-auto font-semibold font-poppins">
             Our interfaces adapt seamlessly. Experience pixel-perfect scaling, fluid animations, and optimal Core Web Vitals on mobile.
           </p>
        </div>
@@ -867,7 +867,7 @@ export default function Home() {
       isTop: true,
       icon: (
         <svg
-          className="w-7 h-7 text-[#1161ed]"
+          className="w-7 h-7 text-[#111111]"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -878,7 +878,7 @@ export default function Home() {
             strokeLinejoin="round"
             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
           />
-          <circle cx="10" cy="10" r="3" fill="#1161ed" opacity="0.15" />
+          <circle cx="10" cy="10" r="3" fill="#111111" opacity="0.15" />
         </svg>
       ),
     },
@@ -889,7 +889,7 @@ export default function Home() {
       isTop: false,
       icon: (
         <svg
-          className="w-7 h-7 text-[#1161ed]"
+          className="w-7 h-7 text-[#111111]"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -900,7 +900,7 @@ export default function Home() {
             strokeLinejoin="round"
             d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
           />
-          <polygon points="9 7 15 4 15 17 9 20" fill="#1161ed" opacity="0.15" />
+          <polygon points="9 7 15 4 15 17 9 20" fill="#111111" opacity="0.15" />
         </svg>
       ),
     },
@@ -911,7 +911,7 @@ export default function Home() {
       isTop: true,
       icon: (
         <svg
-          className="w-7 h-7 text-[#1161ed]"
+          className="w-7 h-7 text-[#111111]"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -924,7 +924,7 @@ export default function Home() {
           />
           <path
             d="M6.5 21.036H3v-3.572L14 7l3.5 3.5-11 10.536z"
-            fill="#1161ed"
+            fill="#111111"
             opacity="0.15"
           />
         </svg>
@@ -937,7 +937,7 @@ export default function Home() {
       isTop: false,
       icon: (
         <svg
-          className="w-7 h-7 text-[#1161ed]"
+          className="w-7 h-7 text-[#111111]"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -958,7 +958,7 @@ export default function Home() {
       isTop: true,
       icon: (
         <svg
-          className="w-7 h-7 text-[#1161ed]"
+          className="w-7 h-7 text-[#111111]"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -969,7 +969,7 @@ export default function Home() {
             strokeLinejoin="round"
             d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.63 3.84a14.98 14.98 0 00-6.16 12.12c0 2.3.52 4.49 1.46 6.45M18 10a2 2 0 11-4 0 2 2 0 014 0z"
           />
-          <circle cx="16" cy="10" r="2" fill="#1161ed" opacity="0.15" />
+          <circle cx="16" cy="10" r="2" fill="#111111" opacity="0.15" />
         </svg>
       ),
     },
@@ -980,7 +980,7 @@ export default function Home() {
       isTop: false,
       icon: (
         <svg
-          className="w-7 h-7 text-[#1161ed]"
+          className="w-7 h-7 text-[#111111]"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -991,60 +991,114 @@ export default function Home() {
             strokeLinejoin="round"
             d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
           />
-          <polygon points="13 7 21 7 21 15" fill="#1161ed" opacity="0.15" />
+          <polygon points="13 7 21 7 21 15" fill="#111111" opacity="0.15" />
         </svg>
       ),
     },
   ];
 
   const faqJson = buildFaqJsonLd(FAQS);
+  const homepageJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://v2labsglobal.com/#webpage",
+        url: "https://v2labsglobal.com/",
+        name: "V2Labs Global Homepage",
+        description:
+          "AI solutions, web development, branding, SEO, GEO, and AEO services for startups and growing businesses.",
+        isPartOf: {
+          "@id": "https://v2labsglobal.com/#website",
+        },
+        about: {
+          "@id": "https://v2labsglobal.com/#professional-service",
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "https://v2labsglobal.com/logo-cover-v2labs.jpeg",
+        },
+      },
+      {
+        "@type": "ItemList",
+        name: "Core service areas",
+        itemListElement: [
+          "AI Solutions",
+          "Web Development",
+          "Branding and UI UX",
+          "ERP CRM",
+          "SaaS Product Development",
+          "SEO, GEO and AEO",
+        ].map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+        })),
+      },
+      faqJson,
+    ],
+  };
 
   return (
     <div className="w-full relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1161ed/[0.012]_1px,transparent_1px),linear-gradient(to_bottom,#1161ed/[0.012]_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111111/[0.012]_1px,transparent_1px),linear-gradient(to_bottom,#111111/[0.012]_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20 pointer-events-none" />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd) }}
       />
-      <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-[#1161ed]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
-      <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
+      <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-[#111111]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
+      <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#111111]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
       <section
         id="hero"
         className="pt-16 pb-8 md:pt-24 md:pb-16 flex flex-col items-center relative overflow-hidden"
       >
         <div className="flex flex-col text-center items-center w-full max-w-[900px] mx-auto relative z-10 px-4">
-          <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)] animate-fade-in-up select-none">
-            <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
-            A trusted digital agency
+          <div className="inline-flex items-center gap-2 bg-[#2F2FE4]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#2F2FE4] tracking-[0.15em] mb-6 border border-[#2F2FE4]/15 shadow-[0_2px_10px_rgba(17,97,237,0.06)] animate-fade-in-up select-none">
+            <span className="w-1.5 h-1.5 bg-[#2F2FE4] rounded-full animate-ping"></span>
+            SEO • GEO • AEO ready delivery
           </div>
           
           <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-black font-poppins leading-[1.05] text-[#0F172A] mb-6 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
-            The most trusted <br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">
-              SaaS & Digital Product
+            AI systems, websites, and brand experiences <br className="hidden md:block" />
+            <span className="bg-gradient-to-r from-[#2F2FE4] via-[#0F172A] to-[#111111] bg-clip-text text-transparent">
+              built to rank, convert,
             </span>{" "}
             <br className="hidden md:block" />
-            engineering partner.
+            and scale.
           </h1>
           
-          <p className="text-[#64748B] text-base md:text-xl leading-[1.7] max-w-[700px] mb-8 font-semibold font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
-            We design, build, and deploy premium cloud platforms, custom enterprise systems, and autonomous AI integrations. Move from MVP to scale with startup velocity.
+          <p className="text-[#111111] text-base md:text-xl leading-[1.7] max-w-[700px] mb-8 font-semibold font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
+            V2Labs Global helps startups and growth teams launch AI solutions, high-performance web platforms, branding systems, and search-ready digital experiences across Mumbai, Thane, and global markets.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
             <Link
-              href="/request-a-demo"
+              href="/contact"
               className="inline-flex items-center justify-center px-10 py-4 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
             >
-              Start Free Trial
+              Book a strategy call
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center animate-pulse-glow w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-[#2F2FE4] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_10px_30px_rgba(15,23,42,0.16)] hover:shadow-[0_14px_36px_rgba(15,23,42,0.2)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
             >
-              Get Started
+              Start your project
             </Link>
+          </div>
+
+          <div className="mt-8 grid w-full max-w-[760px] grid-cols-1 gap-3 text-left sm:grid-cols-3 animate-fade-in-up opacity-0" style={{ animationDelay: "600ms" }}>
+            {[
+              ["AI + Automation", "Agent workflows, copilots, and business automations."],
+              ["Web + SEO", "Fast, indexable websites with strong technical SEO foundations."],
+              ["Brand + Growth", "Design systems, landing pages, and conversion-focused messaging."],
+            ].map(([title, copy]) => (
+              <div key={title} className="rounded-[24px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2F2FE4] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="text-sm font-black uppercase tracking-[0.12em] text-[#2F2FE4] relative z-10">{title}</p>
+                <p className="mt-2 text-sm font-medium leading-6 text-[#111111] relative z-10">{copy}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -1061,14 +1115,14 @@ export default function Home() {
         id="services"
         className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden bg-slate-50/50"
       >
-        <div className="absolute top-10 left-10 w-[250px] h-[250px] bg-[#1161ed]/[0.03] rounded-full blur-[80px] pointer-events-none select-none -z-10" />
-        <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#3b82f6]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10" />
+        <div className="absolute top-10 left-10 w-[250px] h-[250px] bg-[#111111]/[0.03] rounded-full blur-[80px] pointer-events-none select-none -z-10" />
+        <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#2A2A2A]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10" />
 
         <div className="text-center mb-16 relative z-10 px-4">
           <h2 className="text-[clamp(2rem,5vw,3rem)] text-[#0F172A] font-extrabold tracking-tight mb-4">
-            Why <span className="bg-gradient-to-r from-[#1161ed] to-[#3b82f6] bg-clip-text text-transparent">V2Labs</span> Engineering?
+            Why <span className="bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">V2Labs</span> Engineering?
           </h2>
-          <p className="text-[#64748B] text-lg max-w-[700px] mx-auto font-semibold font-poppins">
+          <p className="text-[#111111] text-lg max-w-[700px] mx-auto font-semibold font-poppins">
             V2Labs is the world-leading centrally managed solution for bespoke software ecosystems, platforms, and AI automations.
           </p>
         </div>
@@ -1113,19 +1167,19 @@ export default function Home() {
                }
              ].map((feature, idx) => (
                 <div key={idx} className="flex gap-4 sm:gap-6 items-start py-4 group">
-                   <div className="w-6 h-6 rounded-full bg-[#1161ed]/10 flex items-center justify-center shrink-0 mt-1 transition-transform group-hover:scale-110">
-                      <svg className="w-3.5 h-3.5 text-[#1161ed]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                   <div className="w-6 h-6 rounded-full bg-[#111111]/10 flex items-center justify-center shrink-0 mt-1 transition-transform group-hover:scale-110">
+                      <svg className="w-3.5 h-3.5 text-[#111111]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                    </div>
                    <div>
                       <h4 className="text-lg sm:text-xl font-bold text-slate-900 mb-1.5 font-Outfit">{feature.title}</h4>
-                      <p className="text-slate-500 font-medium text-sm">{feature.desc}</p>
+                      <p className="text-[#111111] font-medium text-sm">{feature.desc}</p>
                    </div>
                 </div>
              ))}
 
              <div className="mt-6">
-               <Link href="/request-a-demo" className="inline-flex px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-[#1161ed] transition-colors shadow-lg">
-                 Start Free Trial
+               <Link href="/contact" className="inline-flex px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-[#111111] transition-colors shadow-lg">
+                 Book a Discovery Call
                </Link>
              </div>
           </div>
@@ -1144,9 +1198,9 @@ export default function Home() {
             <div className="flex-1 lg:pl-10">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
                 Extend Your <br />
-                <span className="text-[#1161ed]">Engineering Impact</span>
+                <span className="text-[#111111]">Engineering Impact</span>
               </h2>
-              <p className="text-lg text-slate-600 mb-8 font-medium leading-relaxed max-w-[500px]">
+              <p className="text-lg text-[#111111] mb-8 font-medium leading-relaxed max-w-[500px]">
                 Integrate custom analytics, scalable pipelines, and real-time monitoring directly into your workflows. Manage everything beautifully.
               </p>
               
@@ -1157,19 +1211,19 @@ export default function Home() {
                   { title: "Real-time Monitoring", desc: "Track errors and latency with sub-second accuracy globally." }
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-4">
-                     <div className="w-8 h-8 rounded-full bg-[#1161ed] text-white flex items-center justify-center shrink-0 shadow-lg shadow-[#1161ed]/30">
+                     <div className="w-8 h-8 rounded-full bg-[#111111] text-white flex items-center justify-center shrink-0 shadow-lg shadow-[#111111]/30">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                      </div>
                      <div>
                         <h4 className="text-lg font-bold text-slate-900 mb-1">{item.title}</h4>
-                        <p className="text-slate-500 font-medium text-sm">{item.desc}</p>
+                        <p className="text-[#111111] font-medium text-sm">{item.desc}</p>
                      </div>
                   </div>
                 ))}
               </div>
               
               <div className="mt-10">
-                <Link href="/contact" className="inline-flex items-center gap-2 text-[#1161ed] font-bold text-lg hover:underline group">
+                <Link href="/contact" className="inline-flex items-center gap-2 text-[#111111] font-bold text-lg hover:underline group">
                   Explore full platform capabilities 
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
@@ -1181,12 +1235,12 @@ export default function Home() {
 
       {/* Flawless on Every Device Section */}
       <ScrollReveal>
-        <section className="py-20 md:py-32 bg-[#FBF6F0] relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
+        <section className="py-20 md:py-32 bg-[#FFFFFF] relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
           <div className="max-w-[1200px] mx-auto px-4 flex flex-col items-center text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
-              Flawless on <span className="text-[#1161ed]">Every Device</span>
+              Flawless on <span className="text-[#111111]">Every Device</span>
             </h2>
-            <p className="text-lg text-slate-600 mb-12 font-medium leading-relaxed max-w-[700px]">
+            <p className="text-lg text-[#111111] mb-12 font-medium leading-relaxed max-w-[700px]">
               Whether you're managing pipelines on your desktop, checking metrics on a tablet, or responding to alerts on your phone, V2Labs ensures a seamless, responsive experience across all your screens.
             </p>
             
@@ -1216,7 +1270,7 @@ export default function Home() {
         <MouseTrackingAnimation />
 
         {/* Soft Background blur */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#1161ed]/[0.02] rounded-full blur-[140px] pointer-events-none select-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#111111]/[0.02] rounded-full blur-[140px] pointer-events-none select-none -z-10" />
 
         <style
           dangerouslySetInnerHTML={{
@@ -1268,13 +1322,13 @@ export default function Home() {
         />
 
         <div className="text-center mb-16 relative z-10">
-          <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3 select-none">
+          <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3 select-none">
             Our Process
           </div>
           <h2 className="text-3xl md:text-[2.5rem] font-extrabold text-[#0F172A] mb-3 tracking-tight">
-            How <span className="text-[#1161ed]">We Work</span>
+            How <span className="text-[#111111]">We Work</span>
           </h2>
-          <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto">
+          <p className="text-[#111111] text-base md:text-lg max-w-[600px] mx-auto">
             A clear, step-by-step process that takes you from idea to launch
             without confusion.
           </p>
@@ -1283,24 +1337,24 @@ export default function Home() {
         {/* Process Flow - Desktop alternating grid / Mobile stacked */}
         <div className="relative max-w-[1100px] mx-auto px-4 z-10">
           {/* Mobile Process Flow (Compact, Premium Vertical Timeline) */}
-          <div className="flex flex-col lg:hidden gap-6 relative pl-6 before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-[#1161ed]/30 before:via-[#3b82f6]/20 before:to-[#1161ed]/5">
+          <div className="flex flex-col lg:hidden gap-6 relative pl-6 before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-[#111111]/30 before:via-[#2A2A2A]/20 before:to-[#111111]/5">
             {PROCESS_STEPS.map((s, idx) => (
               <div key={idx} className="relative flex items-center gap-4 group">
                 {/* Timeline Circle Bullet Node with Dynamic Ping Ripple */}
-                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#1161ed] flex items-center justify-center shadow-[0_0_15px_rgba(17,97,237,0.15)] z-10 select-none transition-all duration-300 group-hover:scale-105">
-                  <span className="absolute -inset-1.5 rounded-full border border-[#1161ed]/20 animate-ping duration-[3.5s] pointer-events-none" />
-                  <span className="text-[0.8rem] font-black text-[#1161ed] tracking-tighter">
+                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#111111] flex items-center justify-center shadow-[0_0_15px_rgba(17,97,237,0.15)] z-10 select-none transition-all duration-300 group-hover:scale-105">
+                  <span className="absolute -inset-1.5 rounded-full border border-[#111111]/20 animate-ping duration-[3.5s] pointer-events-none" />
+                  <span className="text-[0.8rem] font-black text-[#111111] tracking-tighter">
                     {s.step}
                   </span>
                 </div>
 
                 {/* Premium Glassmorphic Step Card on Right */}
-                <div className="flex-1 p-4 pl-6 rounded-2xl border-[2px] border-[#1161ed]/18 bg-gradient-to-r from-white to-[#1161ed]/[0.05] shadow-[0_10px_25px_rgba(15,23,42,0.04),0_3px_10px_rgba(17,97,237,0.04),inset_0_0_12px_rgba(17,97,237,0.04)] hover:shadow-[0_18px_36px_rgba(15,23,42,0.08),0_6px_18px_rgba(17,97,237,0.12)] hover:border-[#1161ed]/40 transition-all duration-300 relative overflow-hidden flex items-center gap-4">
+                <div className="flex-1 p-4 pl-6 rounded-2xl border-[2px] border-[#111111]/18 bg-gradient-to-r from-white to-[#111111]/[0.05] shadow-[0_10px_25px_rgba(15,23,42,0.04),0_3px_10px_rgba(17,97,237,0.04),inset_0_0_12px_rgba(17,97,237,0.04)] hover:shadow-[0_18px_36px_rgba(15,23,42,0.08),0_6px_18px_rgba(17,97,237,0.12)] hover:border-[#111111]/40 transition-all duration-300 relative overflow-hidden flex items-center gap-4">
                   {/* Left Premium Accent Line */}
-                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] to-[#3b82f6]" />
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] to-[#111111]" />
 
                   {/* Icon Container with glowing scale reveal */}
-                  <div className="w-10 h-10 rounded-xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-300 shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-[#111111] group-hover:text-white transition-all duration-300 shadow-sm">
                     <div className="w-5.5 h-5.5 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current">
                       {s.icon}
                     </div>
@@ -1308,7 +1362,7 @@ export default function Home() {
 
                   {/* Details */}
                   <div className="flex flex-col">
-                    <span className="text-[0.62rem] font-black uppercase text-[#1161ed] tracking-widest block mb-0.5">
+                    <span className="text-[0.62rem] font-black uppercase text-[#111111] tracking-widest block mb-0.5">
                       Step {s.step}
                     </span>
                     <h3 className="text-[0.88rem] font-extrabold text-[#0F172A] leading-tight tracking-tight">
@@ -1338,11 +1392,11 @@ export default function Home() {
                   x2="100%"
                   y2="0%"
                 >
-                  <stop offset="0%" stopColor="#1161ed" stopOpacity="0.05" />
-                  <stop offset="15%" stopColor="#1161ed" stopOpacity="0.45" />
-                  <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.65" />
-                  <stop offset="85%" stopColor="#1161ed" stopOpacity="0.45" />
-                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.05" />
+                  <stop offset="0%" stopColor="#111111" stopOpacity="0.05" />
+                  <stop offset="15%" stopColor="#111111" stopOpacity="0.45" />
+                  <stop offset="50%" stopColor="#2A2A2A" stopOpacity="0.65" />
+                  <stop offset="85%" stopColor="#111111" stopOpacity="0.45" />
+                  <stop offset="100%" stopColor="#2A2A2A" stopOpacity="0.05" />
                 </linearGradient>
                 <linearGradient
                   id="pulse-gradient"
@@ -1351,8 +1405,8 @@ export default function Home() {
                   x2="100%"
                   y2="0%"
                 >
-                  <stop offset="0%" stopColor="#1161ed" />
-                  <stop offset="100%" stopColor="#3b82f6" />
+                  <stop offset="0%" stopColor="#111111" />
+                  <stop offset="100%" stopColor="#2A2A2A" />
                 </linearGradient>
               </defs>
 
@@ -1385,7 +1439,7 @@ export default function Home() {
               {/* Glowing signal sphere moving along the Bezier curve */}
               <circle
                 r="5"
-                fill="#1161ed"
+                fill="#111111"
                 className="filter drop-shadow-[0_0_8px_rgba(17,97,237,0.85)]"
               >
                 <animateMotion
@@ -1408,20 +1462,20 @@ export default function Home() {
                   }`}
                 >
                   {/* Ambient Background Glow behind Card */}
-                  <div className="absolute inset-0 rotate-45 rounded-[2.5rem] bg-gradient-to-tr from-[#1161ed]/15 to-[#3b82f6]/5 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+                  <div className="absolute inset-0 rotate-45 rounded-[2.5rem] bg-gradient-to-tr from-[#111111]/15 to-[#2A2A2A]/5 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
 
                   {/* Card Inner Wrapper that rotates in 3D */}
                   <div className="flip-card-inner">
                     {/* FRONT FACE (Ice-glass layout with icon and title) */}
-                    <div className="flip-card-front border-[2px] border-[#1161ed]/20 bg-gradient-to-br from-white to-[#1161ed]/[0.05] overflow-hidden flex items-center justify-center">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-[#1161ed]/[0.005] to-transparent transition-all duration-500" />
-                      <div className="absolute top-0 right-0 w-10 h-10 bg-gradient-to-bl from-[#1161ed]/15 to-transparent rounded-bl-3xl" />
+                    <div className="flip-card-front border-[2px] border-[#111111]/20 bg-gradient-to-br from-white to-[#111111]/[0.05] overflow-hidden flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-[#111111]/[0.005] to-transparent transition-all duration-500" />
+                      <div className="absolute top-0 right-0 w-10 h-10 bg-gradient-to-bl from-[#111111]/15 to-transparent rounded-bl-3xl" />
 
                       <div className="relative -rotate-45 text-center flex flex-col items-center justify-center p-5 select-none w-full h-full">
-                        <div className="mb-3 w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1161ed]/[0.08] to-[#1161ed]/[0.02] border border-[#1161ed]/10 flex items-center justify-center text-[#1161ed]">
+                        <div className="mb-3 w-14 h-14 rounded-2xl bg-gradient-to-br from-[#111111]/[0.08] to-[#111111]/[0.02] border border-[#111111]/10 flex items-center justify-center text-[#111111]">
                           {s.icon}
                         </div>
-                        <span className="text-[0.7rem] font-black uppercase text-white tracking-widest bg-gradient-to-r from-[#1161ed] to-[#3b82f6] px-4 py-1 rounded-full mb-2.5 shadow-[0_2px_8px_rgba(17,97,237,0.2)]">
+                        <span className="text-[0.7rem] font-black uppercase text-white tracking-widest bg-gradient-to-r from-[#2F2FE4] to-[#111111] px-4 py-1 rounded-full mb-2.5 shadow-[0_2px_8px_rgba(17,97,237,0.2)]">
                           Step {s.step}
                         </span>
                         <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] leading-snug max-w-[140px] tracking-tight">
@@ -1431,7 +1485,7 @@ export default function Home() {
                     </div>
 
                     {/* BACK FACE (Vibrant blue layout with step description - horizontal orientation!) */}
-                    <div className="flip-card-back border-[2px] border-[#1161ed]/25 bg-gradient-to-br from-[#1161ed] to-[#3b82f6] overflow-hidden flex items-center justify-center">
+                    <div className="flip-card-back border-[2px] border-[#111111]/25 bg-gradient-to-br from-[#2F2FE4] to-[#111111] overflow-hidden flex items-center justify-center">
                       <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.08] to-transparent transition-all duration-500" />
                       <div className="absolute top-0 right-0 w-10 h-10 bg-gradient-to-bl from-white/20 to-transparent rounded-bl-3xl" />
 
@@ -1465,7 +1519,7 @@ export default function Home() {
       {/* Trusted By Section (Marquee) */}
       <div className="border-y border-slate-100 bg-white py-12 md:py-16 relative overflow-hidden">
          <div className="text-center mb-8 px-4">
-           <h3 className="text-sm sm:text-base font-bold tracking-widest text-slate-400 uppercase">
+           <h3 className="text-sm sm:text-base font-bold tracking-widest text-[#111111] uppercase">
              Trusted by leading brands worldwide
            </h3>
          </div>
@@ -1512,20 +1566,20 @@ export default function Home() {
           id="industries"
           className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
         >
-        <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#1161ed]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
+        <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#111111]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
         <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#8b5cf6]/[0.015] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[6s]" />
 
         <div className="max-w-[1100px] mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#1161ed] tracking-[0.15em] mb-4 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-              <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+            <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-4 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+              <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
               Vertical Focus
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
               Customised Solutions for{" "}
-              <span className="text-[#1161ed]">Industries</span>
+              <span className="text-[#111111]">Industries</span>
             </h2>
-            <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
+            <p className="text-[#111111] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
               We design and engineer bespoke software ecosystems tailored to the
               unique operational parameters of modern industry verticals.
             </p>
@@ -1566,7 +1620,7 @@ export default function Home() {
                 desc: "ACID-compliant patient portals, secure HIPAA-ready databases, and AI diagnostic guides.",
                 image: "/industry_healthcare.png",
                 badge: "HealthTech",
-                gradient: "from-[#06b6d4] to-[#3b82f6]",
+                gradient: "from-[#404040] to-[#2A2A2A]",
               },
               {
                 name: "Fashion & Cosmetics",
@@ -1580,14 +1634,14 @@ export default function Home() {
                 desc: "High-fidelity stock ticker logs, secure transaction gateways, and automated ledger indexing.",
                 image: "/industry_finance.png",
                 badge: "FinTech",
-                gradient: "from-[#1161ed] to-[#8b5cf6]",
+                gradient: "from-[#111111] to-[#8b5cf6]",
               },
               {
                 name: "Your Vertical Solution",
                 desc: "Don't see your specific industry? We build bespoke operational software tailored to any complex model.",
                 image: "",
                 badge: "Bespoke",
-                gradient: "from-[#1161ed] to-[#3b82f6]",
+                gradient: "from-[#2F2FE4] to-[#111111]",
                 isCTA: true,
               },
             ].map((ind, idx) => {
@@ -1596,7 +1650,7 @@ export default function Home() {
                   <Link
                     key={idx}
                     href="/contact"
-                    className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-gradient-to-br from-[#1161ed] to-[#3b82f6] p-6 shadow-[0_8px_32px_rgba(15,23,42,0.05)] hover:shadow-[0_20px_45px_rgba(17,97,237,0.15)] transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
+                    className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-gradient-to-br from-[#2F2FE4] to-[#111111] p-6 shadow-[0_8px_32px_rgba(15,23,42,0.05)] hover:shadow-[0_20px_45px_rgba(17,97,237,0.15)] transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
                   >
                     <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] opacity-100 animate-pulse pointer-events-none" />
                     <div className="flex flex-col gap-4 relative z-10">
@@ -1647,7 +1701,7 @@ export default function Home() {
               return (
                 <div
                   key={idx}
-                  className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-white/40 backdrop-blur-xl p-5 sm:p-6 shadow-[0_8px_32px_rgba(15,23,42,0.02)] hover:shadow-[0_25px_50px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/30 hover:bg-white/70 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
+                  className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 p-5 sm:p-6 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_55px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
                 >
                   <div
                     className={`absolute top-0 left-0 h-[4px] bg-gradient-to-r ${ind.gradient} w-0 group-hover:w-full transition-all duration-500 rounded-t-[24px] sm:rounded-t-[32px]`}
@@ -1667,18 +1721,18 @@ export default function Home() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg md:text-lg lg:text-xl font-black text-slate-900 group-hover:text-[#1161ed] transition-colors duration-300 font-Outfit tracking-tight leading-tight">
+                      <h3 className="text-base sm:text-lg md:text-lg lg:text-xl font-black text-slate-900 group-hover:text-[#111111] transition-colors duration-300 font-Outfit tracking-tight leading-tight">
                         {ind.name}
                       </h3>
-                      <p className="text-slate-500 leading-relaxed text-xs sm:text-[0.8rem] font-semibold mt-1.5 font-Outfit">
+                      <p className="text-[#111111] leading-relaxed text-xs sm:text-[0.8rem] font-semibold mt-1.5 font-Outfit">
                         {ind.desc}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#1161ed] mt-6 cursor-pointer select-none font-Outfit relative self-start group/action">
+                  <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#111111] mt-6 cursor-pointer select-none font-Outfit relative self-start group/action">
                     <span className="relative">
                       View Solution Spec
-                      <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#1161ed] scale-x-0 group-hover/action:scale-x-100 transition-transform origin-left duration-300" />
+                      <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#111111] scale-x-0 group-hover/action:scale-x-100 transition-transform origin-left duration-300" />
                     </span>
                     <svg
                       width="14"
@@ -1698,7 +1752,7 @@ export default function Home() {
             })}
           </div>
 
-          <div className="flex md:hidden items-center justify-center gap-1.5 mt-5 text-[#1161ed]/70 font-Outfit text-[0.68rem] font-bold uppercase tracking-[0.12em] animate-pulse">
+          <div className="flex md:hidden items-center justify-center gap-1.5 mt-5 text-[#111111]/70 font-Outfit text-[0.68rem] font-bold uppercase tracking-[0.12em] animate-pulse">
             <svg
               width="12"
               height="12"
@@ -1733,20 +1787,20 @@ export default function Home() {
           id="why-us"
           className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
         >
-        <div className="absolute top-[30%] right-[-5%] w-[400px] h-[400px] bg-[#1161ed]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
+        <div className="absolute top-[30%] right-[-5%] w-[400px] h-[400px] bg-[#111111]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
 
         <div className="max-w-[1100px] mx-auto px-4 relative z-10">
           <div className="text-center mb-16 px-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/60 shadow-[0_2px_10px_rgba(0,0,0,0.01)] mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1161ed] animate-pulse" />
-              <span className="text-[0.62rem] sm:text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-[#1161ed]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#111111] animate-pulse" />
+              <span className="text-[0.62rem] sm:text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-[#111111]">
                 Founders' Choice
               </span>
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
-              Why Startups Choose <span className="text-[#1161ed]">V2Labs</span>
+              Why Startups Choose <span className="text-[#111111]">V2Labs</span>
             </h2>
-            <p className="text-[#64748B] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
+            <p className="text-[#111111] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
               Engineered for absolute velocity. Architected for rapid enterprise scaling.
             </p>
           </div>
@@ -1859,21 +1913,21 @@ export default function Home() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/40 bg-white/40 backdrop-blur-xl shadow-[0_8px_30px_rgba(15,23,42,0.01)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_rgba(17,97,237,0.06)] hover:border-[#1161ed]/20 hover:bg-white/70 group gpu-accelerated"
+                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 shadow-[0_10px_30px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 group gpu-accelerated"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-gradient-to-r from-[#1161ed] to-[#3b82f6] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-gradient-to-r from-[#2F2FE4] to-[#111111] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.06)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:bg-gradient-to-br group-hover:from-[#1161ed] group-hover:to-[#3b82f6] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)] transition-all duration-300 shadow-sm mb-4 md:mb-6">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center border border-[#111111]/10 group-hover:bg-gradient-to-br group-hover:from-[#111111] group-hover:to-[#2A2A2A] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)] transition-all duration-300 shadow-sm mb-4 md:mb-6">
                   <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current transform group-hover:rotate-[8deg] group-hover:scale-105 transition-transform duration-300">
                     {feature.icon}
                   </div>
                 </div>
 
-                <h3 className="text-[0.95rem] sm:text-[1.1rem] md:text-[1.3rem] text-[#0F172A] font-Outfit font-black mb-2 md:mb-3.5 tracking-tight group-hover:text-[#1161ed] transition-colors duration-200 leading-tight">
+                <h3 className="text-[0.95rem] sm:text-[1.1rem] md:text-[1.3rem] text-[#0F172A] font-Outfit font-black mb-2 md:mb-3.5 tracking-tight group-hover:text-[#111111] transition-colors duration-200 leading-tight">
                   {feature.title}
                 </h3>
-                <p className="text-[#64748B] leading-relaxed text-[0.7rem] sm:text-[0.78rem] md:text-[0.9rem] font-Outfit font-semibold group-hover:text-slate-600 transition-colors duration-300">
+                <p className="text-[#111111] leading-relaxed text-[0.7rem] sm:text-[0.78rem] md:text-[0.9rem] font-Outfit font-semibold group-hover:text-[#111111] transition-colors duration-300">
                   {feature.desc}
                 </p>
               </div>
@@ -1890,13 +1944,13 @@ export default function Home() {
           className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30"
         >
         {/* Soft Glowing Orbs */}
-        <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#1161ed]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
-        <div className="absolute right-[-5%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#3b82f6]/[0.02] blur-[120px] duration-[8s] pointer-events-none select-none -z-10" />
+        <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#111111]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
+        <div className="absolute right-[-5%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#2A2A2A]/[0.02] blur-[120px] duration-[8s] pointer-events-none select-none -z-10" />
 
         {/* Section Header */}
         <div className="relative mb-12 text-center md:mb-20 px-6 z-10">
-          <h2 className="mx-auto max-w-[800px] text-[2.5rem] sm:text-[3rem] md:text-[4rem] font-extrabold tracking-tight text-[#0F172A] leading-[1.1] font-Outfit">
-            What Our <span className="text-[#FF5A1F]">Customers</span> Say
+          <h2 className="mx-auto max-w-[800px] text-3xl md:text-[2.6rem] font-extrabold tracking-tight text-[#0F172A] leading-[1.15] font-Outfit">
+            What Our <span>Customers</span> Say
           </h2>
         </div>
 
@@ -1944,10 +1998,10 @@ export default function Home() {
         </div>
 
         {/* Dynamic status helper indicator */}
-        <div className="mt-10 flex items-center justify-center gap-2.5 text-[0.68rem] sm:text-[0.74rem] font-bold uppercase tracking-[0.18em] text-[#64748B] select-none z-10">
+        <div className="mt-10 flex items-center justify-center gap-2.5 text-[0.68rem] sm:text-[0.74rem] font-bold uppercase tracking-[0.18em] text-[#111111] select-none z-10">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1161ed] opacity-75"></span>
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#1161ed]"></span>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#111111] opacity-75"></span>
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#111111]"></span>
           </span>
           <span>Auto-moving founder feedback • Hover to Pause</span>
         </div>
@@ -1963,18 +2017,18 @@ export default function Home() {
           className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative mx-4 md:mx-10"
         >
         {/* Soft Background glow-orb */}
-        <div className="absolute right-[10%] top-[10%] w-[300px] h-[300px] bg-[#1161ed]/[0.015] rounded-full blur-[90px] pointer-events-none select-none -z-10" />
+        <div className="absolute right-[10%] top-[10%] w-[300px] h-[300px] bg-[#111111]/[0.015] rounded-full blur-[90px] pointer-events-none select-none -z-10" />
 
         <div className="max-w-[850px] mx-auto px-5 relative z-10 flex flex-col items-center">
           {/* FAQ Header */}
           <div className="text-center mb-12">
-            <p className="text-[#1161ed] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">
+            <p className="text-[#111111] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">
               FAQ
             </p>
             <h2 className="text-[2.2rem] lg:text-[2.8rem] font-extrabold text-[#0F172A] tracking-tight leading-tight mb-4">
-              Got Questions? We Have Answers.
+              Frequently Asked <span className="bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">Questions</span>
             </h2>
-            <p className="text-[1.05rem] text-[#64748B] max-w-[620px] mx-auto leading-[1.6]">
+            <p className="text-[1.05rem] text-[#111111] max-w-[620px] mx-auto leading-[1.6]">
               Explore detailed, proper answers about our high-velocity
               development cycles, customized tech stack, AI capabilities, and
               client collaboration.
@@ -1988,26 +2042,26 @@ export default function Home() {
                 key={idx}
                 className={`rounded-2xl border p-4 sm:p-5 transition-all duration-300 relative overflow-hidden group ${
                   openFaq === idx
-                    ? "bg-white border-[#1161ed]/30 shadow-[0_15px_35px_rgba(17,97,237,0.06)] pl-7 sm:pl-8"
-                    : "bg-white/60 border-black/[0.03] shadow-sm hover:border-[#1161ed]/20 hover:bg-white hover:shadow-[0_10px_25px_rgba(17,97,237,0.04)]"
+                    ? "bg-white border-[#111111]/30 shadow-[0_15px_35px_rgba(17,97,237,0.06)] pl-7 sm:pl-8"
+                    : "bg-white/60 border-black/[0.03] shadow-sm hover:border-[#111111]/20 hover:bg-white hover:shadow-[0_10px_25px_rgba(17,97,237,0.04)]"
                 }`}
               >
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <span className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#1161ed] to-[#3b82f6] transition-transform duration-300 origin-left ${
+                <span className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#2F2FE4] to-[#111111] transition-transform duration-300 origin-left ${
                   openFaq === idx ? "scale-x-100" : "scale-x-0"
                 }`} />
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full flex items-center justify-between text-left font-bold text-slate-800 text-sm sm:text-base cursor-pointer select-none group"
                 >
-                  <span className="pr-4 group-hover:text-[#1161ed] transition-colors duration-200">
+                  <span className="pr-4 group-hover:text-[#111111] transition-colors duration-200">
                     {faq.question}
                   </span>
                   <span
                     className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300 ${
                       openFaq === idx
-                        ? "bg-[#1161ed] text-white border-transparent"
-                        : "bg-[#1161ed]/[0.05] text-[#1161ed] border-transparent group-hover:bg-[#1161ed] group-hover:text-white"
+                        ? "bg-[#111111] text-white border-transparent"
+                        : "bg-[#111111]/[0.05] text-[#111111] border-transparent group-hover:bg-[#111111] group-hover:text-white"
                     }`}
                   >
                     <svg
@@ -2029,7 +2083,7 @@ export default function Home() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-medium pt-3 pr-2 mt-3 border-t border-slate-100">
+                    <p className="text-xs sm:text-sm leading-relaxed text-[#111111] font-medium pt-3 pr-2 mt-3 border-t border-slate-100">
                       {faq.answer}
                     </p>
                   </div>

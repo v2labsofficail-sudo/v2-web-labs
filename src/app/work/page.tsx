@@ -11,7 +11,7 @@ export default function WorkPage() {
       badge: "AI-Powered Systems",
       desc: "Full custom engineering of an autonomous talent recruitment matching platform. Implemented advanced semantic vector database search filters and real-time applicant indexing pipelines.",
       stat: "45% Match Speed Optimization",
-      gradient: "from-[#1161ed] to-[#3b82f6]",
+      gradient: "from-[#2F2FE4] to-[#111111]",
       tools: ["Next.js App Router", "FastAPI", "VectorDB", "Tailwind CSS"],
       icon: (
         <svg
@@ -134,30 +134,27 @@ export default function WorkPage() {
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       {/* Background Soft Mesh Gradients for Premium Studio Feel */}
-      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#1161ed]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
-      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#3b82f6]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
+      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
+      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
 
       {/* Premium Dotted Grid Background */}
-      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.18] -z-10 pointer-events-none select-none" />
+      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.18] -z-10 pointer-events-none select-none" />
 
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
         {/* ========================================================================= */}
         {/* SECTION 1: HERO HEADER (Simplified, No Back Button) */}
         {/* ========================================================================= */}
         <header className="mb-20 relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#1161ed] tracking-[0.18em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-            <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+            <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             OUR PORTFOLIO
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            Selected{" "}
-            <span className="bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent drop-shadow-sm">
-              Studio Projects
-            </span>
+            Selected <span>Studio Projects</span>
           </h1>
 
-          <p className="text-[#64748B] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium">
+          <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium">
             Explore how we partner with forward-thinking brands and startups to
             design, build, and deploy custom web solutions. From custom SaaS
             engines to high-velocity headless commerce platforms, we build
@@ -171,13 +168,13 @@ export default function WorkPage() {
         <ScrollReveal>
           <section className="mb-24 relative z-10">
           <div className="text-center md:text-left mb-12">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3">
               Case Studies
             </div>
             <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight">
-              Real Work, Measured Results
+              Real Work, <span>Measured Results</span>
             </h2>
-            <p className="text-slate-500 text-sm mt-2 max-w-[650px]">
+            <p className="text-[#111111] text-sm mt-2 max-w-[650px]">
               Review the detailed specifications of systems we have coded and
               shipped to production for active startup networks.
             </p>
@@ -187,7 +184,7 @@ export default function WorkPage() {
             {PROJECTS.map((proj, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#1161ed]/30 hover:bg-white group flex flex-col justify-between min-h-[360px]"
+                className="p-8 rounded-[32px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 shadow-[0_10px_35px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 group flex flex-col justify-between min-h-[360px]"
               >
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div
@@ -196,19 +193,19 @@ export default function WorkPage() {
 
                 <div>
                   <div className="flex justify-between items-center mb-5">
-                    <span className="text-[0.62rem] font-black uppercase text-[#1161ed] tracking-[0.15em]">
+                    <span className="text-[0.62rem] font-black uppercase text-[#111111] tracking-[0.15em]">
                       {proj.category}
                     </span>
-                    <span className="text-[0.6rem] px-2.5 py-1 rounded-lg bg-slate-100/90 font-Outfit text-slate-500 font-bold border border-slate-200/50 shadow-sm">
+                    <span className="text-[0.6rem] px-2.5 py-1 rounded-lg bg-slate-100/90 font-Outfit text-[#111111] font-bold border border-slate-200/50 shadow-sm">
                       {proj.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-[1.28rem] text-slate-900 mb-3.5 font-black group-hover:text-[#1161ed] transition-colors duration-300 leading-tight">
+                  <h3 className="text-[1.28rem] text-slate-900 mb-3.5 font-black group-hover:text-[#111111] transition-colors duration-300 leading-tight">
                     {proj.title}
                   </h3>
 
-                  <p className="text-slate-500 leading-relaxed text-[0.84rem] mb-6">
+                  <p className="text-[#111111] leading-relaxed text-[0.84rem] mb-6">
                     {proj.desc}
                   </p>
                 </div>
@@ -219,7 +216,7 @@ export default function WorkPage() {
                     {proj.tools.map((tool, i) => (
                       <span
                         key={i}
-                        className="px-2.5 py-1 bg-slate-100/80 hover:bg-slate-100 font-mono text-[0.64rem] font-bold text-slate-600 rounded-md transition-colors"
+                        className="px-2.5 py-1 bg-slate-100/80 hover:bg-slate-100 font-mono text-[0.64rem] font-bold text-[#111111] rounded-md transition-colors"
                       >
                         {tool}
                       </span>
@@ -247,7 +244,7 @@ export default function WorkPage() {
         <section className="relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             <div className="lg:col-span-7 flex flex-col justify-center">
-              <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3.5 w-fit">
+              <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3.5 w-fit">
                 Production Standards
               </div>
 
@@ -255,7 +252,7 @@ export default function WorkPage() {
                 Our Architectural Benchmarks
               </h2>
 
-              <p className="text-[#64748B] text-sm leading-relaxed mb-6 font-medium">
+              <p className="text-[#111111] text-sm leading-relaxed mb-6 font-medium">
                 We approach design and systems development with mathematical
                 rigor. Every case study displayed represents thousands of lines
                 of optimized code formulated to operate under direct compliance
@@ -283,12 +280,12 @@ export default function WorkPage() {
                 ].map((spec, i) => (
                   <div
                     key={i}
-                    className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17,97,237,0.01)] hover:border-[#1161ed]/15 transition-all duration-300"
+                    className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17,97,237,0.01)] hover:border-[#111111]/15 transition-all duration-300"
                   >
                     <h4 className="text-slate-900 font-extrabold text-[0.84rem] tracking-tight mb-1.5">
                       {spec.title}
                     </h4>
-                    <p className="text-slate-500 text-[0.72rem] leading-relaxed font-semibold">
+                    <p className="text-[#111111] text-[0.72rem] leading-relaxed font-semibold">
                       {spec.desc}
                     </p>
                   </div>
@@ -300,12 +297,12 @@ export default function WorkPage() {
             <div className="lg:col-span-5 flex items-stretch">
               <div className="relative rounded-[40px] bg-[#020713] p-8 sm:p-12 text-left text-white overflow-hidden shadow-2xl flex flex-col justify-between border border-white/5 w-full">
                 {/* Luminous soft mesh bubbles */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#1161ed] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#111111] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#8b5cf6] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-                <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
+                <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
 
                 <div className="relative z-10">
-                  <span className="inline-block bg-[#1161ed]/[0.15] text-[#3b82f6] border border-[#1161ed]/20 font-extrabold text-[0.62rem] uppercase tracking-wider px-3 py-1 rounded-md mb-6">
+                  <span className="inline-block bg-[#111111]/[0.15] text-[#2A2A2A] border border-[#111111]/20 font-extrabold text-[0.62rem] uppercase tracking-wider px-3 py-1 rounded-md mb-6">
                     Connect With Engineers
                   </span>
 
@@ -323,7 +320,7 @@ export default function WorkPage() {
                 <div className="relative z-10 pt-4 border-t border-white/5">
                   <Link
                     href="/contact"
-                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] hover:from-[#0c4ec3] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
+                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
                   >
                     Start Your Project
                   </Link>

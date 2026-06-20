@@ -36,12 +36,22 @@ const defaultOgImage = buildOgImageUrl(
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
   title: {
     default: siteConfig.defaultTitle,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.defaultDescription,
   keywords: [...siteConfig.defaultKeywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "Technology",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
   alternates: {
     canonical: siteConfig.url,
     languages: {
@@ -83,6 +93,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
+  },
+  other: {
+    "geo.region": siteConfig.region,
+    "geo.placename": `${siteConfig.city}, Maharashtra, India`,
+    "geo.position": `${siteConfig.latitude};${siteConfig.longitude}`,
+    ICBM: `${siteConfig.latitude}, ${siteConfig.longitude}`,
   },
 };
 

@@ -16,7 +16,7 @@ const SVG = {
     </svg>
   ),
   Retool: () => (
-    <svg className="w-5 h-5 text-[#2563EB]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-5 h-5 text-[#1A1A1A]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <rect x="3" y="3" width="7" height="9" rx="1" />
       <rect x="14" y="3" width="7" height="5" rx="1" />
       <rect x="3" y="16" width="7" height="5" rx="1" />
@@ -46,7 +46,7 @@ const SVG = {
     </svg>
   ),
   SapApi: () => (
-    <svg className="w-5 h-5 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-5 h-5 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
     </svg>
   ),
@@ -77,14 +77,14 @@ const SVG = {
     </svg>
   ),
   Database: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <ellipse cx="12" cy="5" rx="9" ry="3" />
       <path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5" />
       <path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6" />
     </svg>
   ),
   Server: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <rect x="2" y="2" width="20" height="8" rx="2" />
       <rect x="2" y="14" width="20" height="8" rx="2" />
       <line x1="6" y1="6" x2="6.01" y2="6" strokeWidth="3" />
@@ -94,7 +94,7 @@ const SVG = {
     </svg>
   ),
   Key: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <circle cx="7.5" cy="15.5" r="4.5" />
       <path d="M21 3L11.5 12.5" />
       <path d="M16 8l3 3" />
@@ -102,25 +102,25 @@ const SVG = {
     </svg>
   ),
   Shield: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     </svg>
   ),
   Settings: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="3" />
       <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
     </svg>
   ),
   Chart: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <line x1="18" y1="20" x2="18" y2="10" />
       <line x1="12" y1="20" x2="12" y2="4" />
       <line x1="6" y1="20" x2="6" y2="14" />
     </svg>
   ),
   Truck: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <rect x="1" y="3" width="15" height="13" rx="2" />
       <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
       <circle cx="5.5" cy="18.5" r="2.5" />
@@ -128,7 +128,7 @@ const SVG = {
     </svg>
   ),
   Users: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="9" cy="7" r="4" />
       <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -136,18 +136,18 @@ const SVG = {
     </svg>
   ),
   Wallet: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <rect x="2" y="4" width="20" height="16" rx="2" />
       <line x1="12" y1="4" x2="12" y2="20" />
     </svg>
   ),
   Sync: () => (
-    <svg className="w-6 h-6 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
       <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l.57-1.19" />
     </svg>
   ),
   Alert: () => (
-    <svg className="w-4 h-4 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+    <svg className="w-4 h-4 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="10" />
       <line x1="12" y1="8" x2="12" y2="12" />
       <line x1="12" y1="16" x2="12.01" y2="16" />
@@ -325,7 +325,7 @@ export default function ErpCrmPage() {
     <div className="min-h-screen bg-[#F8FAFC] py-16 md:py-24 relative overflow-hidden select-none">
       
       <div className="absolute top-[5%] left-[-10%] w-[500px] h-[500px] bg-[#635BFF]/[0.025] rounded-full blur-[130px] pointer-events-none -z-10" />
-      <div className="absolute top-[45%] right-[-10%] w-[600px] h-[600px] bg-[#1161ed]/[0.02] rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse duration-[8s]" />
+      <div className="absolute top-[45%] right-[-10%] w-[600px] h-[600px] bg-[#111111]/[0.02] rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse duration-[8s]" />
 
       <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
         
@@ -338,9 +338,9 @@ export default function ErpCrmPage() {
               Operational Control
             </div>
             <h1 className="text-[clamp(2.2rem,5.5vw,4.2rem)] font-black leading-[1.1] text-[#0F172A] mb-8 tracking-tight">
-              Intelligent ERP & CRM systems <span className="bg-gradient-to-r from-[#635BFF] to-[#1161ed] bg-clip-text text-transparent">engineered for operational dominance.</span>
+              Intelligent ERP & CRM systems <span>engineered for operational dominance.</span>
             </h1>
-            <p className="text-[#64748B] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
+            <p className="text-[#111111] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
               From workflow automation to secure database warehouses, V2 Labs designs, codes, and deploys high-performance internal tools that eliminate operational friction and save overhead.
             </p>
             
@@ -348,7 +348,7 @@ export default function ErpCrmPage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center justify-center px-8 py-4.5 bg-gradient-to-r from-[#635BFF] to-[#1161ed] hover:from-[#5145CD] hover:to-[#0c4ec3] shadow-[0_8px_25px_rgba(99,91,255,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
+                className="inline-flex items-center justify-center px-8 py-4.5 bg-gradient-to-r from-[#635BFF] to-[#111111] hover:from-[#5145CD] hover:to-[#000000] shadow-[0_8px_25px_rgba(99,91,255,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
               >
                 Start Your System
               </Link>
@@ -365,7 +365,7 @@ export default function ErpCrmPage() {
           <div className="lg:col-span-5 relative w-full flex justify-center">
             
             
-            <div className="absolute w-[300px] h-[300px] bg-gradient-to-tr from-[#635BFF]/10 to-[#1161ed]/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
+            <div className="absolute w-[300px] h-[300px] bg-gradient-to-tr from-[#635BFF]/10 to-[#111111]/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
             
             
             <div className="w-full max-w-[440px] rounded-3xl border border-[#635BFF]/10 bg-white shadow-[0_25px_60px_rgba(99,91,255,0.08)] overflow-hidden hover:-translate-y-1 transition-all duration-300">
@@ -377,7 +377,7 @@ export default function ErpCrmPage() {
                   <span className="w-3 h-3 rounded-full bg-[#eab308] shadow-sm" />
                   <span className="w-3 h-3 rounded-full bg-[#22c55e] shadow-sm" />
                 </div>
-                <div className="w-[180px] bg-white border border-slate-200/50 rounded-lg py-1 px-3 text-[0.62rem] text-slate-400 font-medium text-center truncate shadow-inner">
+                <div className="w-[180px] bg-white border border-slate-200/50 rounded-lg py-1 px-3 text-[0.62rem] text-[#111111] font-medium text-center truncate shadow-inner">
                   v2ops.labs/dashboard
                 </div>
                 <div className="w-3 h-3" />
@@ -415,7 +415,7 @@ export default function ErpCrmPage() {
                 
                 <div className="p-4 rounded-2xl bg-slate-900 text-white mb-5 shadow-[0_10px_25px_rgba(99,91,255,0.18)] relative overflow-hidden">
                   <div className="absolute right-0 bottom-0 w-28 h-28 bg-white/5 rounded-tl-full pointer-events-none" />
-                  <span className="text-[0.62rem] font-bold uppercase text-slate-400 tracking-widest block mb-2.5">Live Lead Ingestion Queue</span>
+                  <span className="text-[0.62rem] font-bold uppercase text-[#111111] tracking-widest block mb-2.5">Live Lead Ingestion Queue</span>
                   
                   
                   <div className="flex flex-col gap-2">
@@ -423,7 +423,7 @@ export default function ErpCrmPage() {
                       <div key={lead.id} className="flex items-center justify-between text-xs border-b border-white/5 pb-1.5 last:border-b-0 last:pb-0">
                         <div className="flex flex-col min-w-0">
                           <span className="font-extrabold text-white truncate">{lead.name}</span>
-                          <span className="text-[0.58rem] text-slate-400">{lead.source}</span>
+                          <span className="text-[0.58rem] text-[#111111]">{lead.source}</span>
                         </div>
                         <div className="text-right shrink-0 flex items-center gap-2">
                           <span className="font-black text-[#635BFF]">{lead.value}</span>
@@ -472,7 +472,7 @@ export default function ErpCrmPage() {
                       <span className="w-9 h-9 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">{tech.icon}</span>
                       <div className="text-left">
                         <span className="text-[0.88rem] font-black text-slate-850 block leading-tight">{tech.name}</span>
-                        <span className="text-[0.68rem] font-bold text-slate-400 block mt-0.5">{tech.desc}</span>
+                        <span className="text-[0.68rem] font-bold text-[#111111] block mt-0.5">{tech.desc}</span>
                       </div>
                     </div>
                   ))}
@@ -489,7 +489,7 @@ export default function ErpCrmPage() {
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               What We Build
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               We engineer custom database environments, lead pipelines, and internal tools tailored for operation clarity.
             </p>
           </div>
@@ -508,11 +508,11 @@ export default function ErpCrmPage() {
                     </div>
                   </div>
                   <h3 className="text-[1.05rem] text-[#0F172A] font-black tracking-tight mb-2 group-hover:text-[#635BFF] transition-colors">{p.title}</h3>
-                  <p className="text-[#64748B] text-xs leading-relaxed">{p.desc}</p>
+                  <p className="text-[#111111] text-xs leading-relaxed">{p.desc}</p>
                 </div>
                 
                 
-                <div className="h-[3px] w-0 bg-gradient-to-r from-[#635BFF] to-[#1161ed] rounded-full mt-5 group-hover:w-[40px] transition-all duration-300" />
+                <div className="h-[3px] w-0 bg-gradient-to-r from-[#635BFF] to-[#111111] rounded-full mt-5 group-hover:w-[40px] transition-all duration-300" />
               </div>
             ))}
           </div>
@@ -530,14 +530,14 @@ export default function ErpCrmPage() {
               <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] font-extrabold text-[#0F172A] tracking-tight leading-none mb-6">
                 Built with scalable data pipelines from day one.
               </h2>
-              <p className="text-[#64748B] text-sm sm:text-base leading-[1.65] mb-10">
+              <p className="text-[#111111] text-sm sm:text-base leading-[1.65] mb-10">
                 Most agencies hide their technical designs. We map out robust databases engineered to scale. Our platforms feature isolated local variables, automated rate limit rules, TLS encrypted Postgres replication tunnels, and AWS virtual isolated clouds.
               </p>
 
               
               <div className="flex flex-wrap gap-2.5">
                 {["Encrypted Logs", "PostgreSQL Replicas", "JWT Verification", "AWS VPC Isolations", "Bulk Query Optimization"].map((tag, idx) => (
-                  <span key={idx} className="px-3.5 py-1.5 rounded-full border border-slate-100 bg-white text-[0.68rem] font-extrabold uppercase text-slate-600 tracking-wider">
+                  <span key={idx} className="px-3.5 py-1.5 rounded-full border border-slate-100 bg-white text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider">
                     {tag}
                   </span>
                 ))}
@@ -570,7 +570,7 @@ export default function ErpCrmPage() {
                       <span className="text-[0.62rem] font-bold text-[#635BFF] bg-[#635BFF]/[0.05] px-1.5 py-0.5 rounded">{step.tech}</span>
                     </div>
                     
-                    <div className={`text-[#64748B] text-xs transition-all duration-300 ${
+                    <div className={`text-[#111111] text-xs transition-all duration-300 ${
                       activeArchStep === step.id ? "max-h-[100px] opacity-100 mt-2 leading-relaxed" : "max-h-0 opacity-0 overflow-hidden"
                     }`}>
                       {step.desc}
@@ -597,7 +597,7 @@ export default function ErpCrmPage() {
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               From Idea to System
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               A highly normalized integration lifecycle designed to guarantee database security and zero data loss.
             </p>
           </div>
@@ -615,7 +615,7 @@ export default function ErpCrmPage() {
                 
                 <div className="flex-1 p-5 rounded-2xl border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_15px_30px_rgba(99,91,255,0.05)] hover:border-[#635BFF]/20 transition-all duration-300 flex flex-col text-left">
                   <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-[#635BFF] transition-colors">{s.name}</h3>
-                  <p className="text-[#64748B] text-xs leading-relaxed">{s.desc}</p>
+                  <p className="text-[#111111] text-xs leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -629,7 +629,7 @@ export default function ErpCrmPage() {
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               Systems Showcase
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               We deploy real, working enterprise platforms. Here are detailed visual outlines of operational suites.
             </p>
           </div>
@@ -647,13 +647,13 @@ export default function ErpCrmPage() {
                   </span>
                   <div className="flex gap-1.5">
                     {["Next.js", "FastAPI", "HubSpot API"].map((tag, i) => (
-                      <span key={i} className="text-[0.55rem] font-bold text-slate-500 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
+                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
                     ))}
                   </div>
                 </div>
                 
                 <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight mb-3">V2 OpsSuite</h3>
-                <p className="text-[#64748B] text-xs sm:text-sm leading-relaxed mb-6">
+                <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6">
                   An advanced operations CRM built with rapid automated HubSpot two-way database webhooks. Eliminates sync drops and maps incoming leads instantly to account managers.
                 </p>
 
@@ -667,7 +667,7 @@ export default function ErpCrmPage() {
                       <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
                       <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-sm" />
                     </div>
-                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-slate-400 truncate shadow-inner text-center">
+                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-[#111111] truncate shadow-inner text-center">
                       opssuite.v2labs.co/leads
                     </div>
                     <div className="w-3.5 h-3.5" />
@@ -699,15 +699,15 @@ export default function ErpCrmPage() {
 
                 
                 <div className="flex flex-col gap-2.5 mb-8">
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
                     <span>Multi-tenant secure dashboard portals</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
                     <span>Two-way Salesforce & HubSpot database synchronization</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
                     <span>Automated Slack webhooks for incoming lead values</span>
                   </div>
@@ -730,13 +730,13 @@ export default function ErpCrmPage() {
                   </span>
                   <div className="flex gap-1.5">
                     {["Next.js", "Django", "Redis DB"].map((tag, i) => (
-                      <span key={i} className="text-[0.55rem] font-bold text-slate-500 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
+                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
                     ))}
                   </div>
                 </div>
                 
                 <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight mb-3">StockFlow</h3>
-                <p className="text-[#64748B] text-xs sm:text-sm leading-relaxed mb-6">
+                <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6">
                   An automated inventory tracker connecting supply chains and warehouses. Maps real-time stock deficits and automates vendor ordering webhooks under preset thresholds.
                 </p>
 
@@ -750,7 +750,7 @@ export default function ErpCrmPage() {
                       <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
                       <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-sm" />
                     </div>
-                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-slate-400 truncate shadow-inner text-center">
+                    <div className="w-[140px] bg-white border border-slate-200/50 rounded py-0.5 px-2 text-[0.55rem] text-[#111111] truncate shadow-inner text-center">
                       stockflow.co/warehouse-1
                     </div>
                     <div className="w-3.5 h-3.5" />
@@ -780,7 +780,7 @@ export default function ErpCrmPage() {
                       <div className="p-2 rounded bg-[#F8FAFC] border border-slate-100 flex flex-col justify-between text-[0.6rem] text-left">
                         <span className="font-extrabold text-slate-800">Operational Server Cases</span>
                         <div className="flex justify-between items-center mt-2.5">
-                          <span className="text-slate-500 font-bold">Stock: 248 units</span>
+                          <span className="text-[#111111] font-bold">Stock: 248 units</span>
                           <span className="text-[0.48rem] font-extrabold uppercase text-[#22c55e] bg-[#22c55e]/[0.08] px-1 rounded">Stable</span>
                         </div>
                       </div>
@@ -791,15 +791,15 @@ export default function ErpCrmPage() {
 
                 
                 <div className="flex flex-col gap-2.5 mb-8">
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
                     <span>Low-stock automated supplier webhooks</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
                     <span>Barcode & hardware scanner API hook integrations</span>
                   </div>
-                  <div className="flex gap-2 items-center text-xs text-slate-600">
+                  <div className="flex gap-2 items-center text-xs text-[#111111]">
                     <span className="text-[#635BFF] font-extrabold">✓</span>
                     <span>Automated PDF invoice generation and Stripe triggers</span>
                   </div>
@@ -821,7 +821,7 @@ export default function ErpCrmPage() {
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-none">
               System Capabilities
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
+            <p className="text-[#111111] text-sm sm:text-base max-w-[600px] mx-auto mt-5 leading-relaxed">
               We construct all essential structural database features and compliance audits into our enterprise setups.
             </p>
           </div>
@@ -833,7 +833,7 @@ export default function ErpCrmPage() {
                 key={idx} 
                 className="px-6 py-4 rounded-[20px] bg-white border border-slate-100 shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#635BFF]/30 hover:shadow-[0_15px_30px_rgba(99,91,255,0.06)] group flex items-center gap-3.5 animate-fade-in"
               >
-                <div className="h-[4px] w-[50%] absolute top-0 left-0 bg-gradient-to-r from-[#635BFF] to-[#1161ed] rounded-tr group-hover:w-full transition-all duration-300" />
+                <div className="h-[4px] w-[50%] absolute top-0 left-0 bg-gradient-to-r from-[#635BFF] to-[#111111] rounded-tr group-hover:w-full transition-all duration-300" />
                 
                 
                 <div className="w-5.5 h-5.5 rounded-full bg-[#635BFF]/[0.08] flex items-center justify-center text-[0.62rem] font-black text-[#635BFF] shadow-inner select-none shrink-0 group-hover:bg-[#635BFF] group-hover:text-white transition-all duration-300">
@@ -850,8 +850,8 @@ export default function ErpCrmPage() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4 items-center justify-center">
             {stats.map((st, idx) => (
               <div key={idx} className="flex flex-col items-center text-center p-3 rounded-2xl hover:bg-slate-50 transition-colors duration-300">
-                <span className="text-3xl md:text-4xl font-black text-[#0F172A] tracking-tight mb-2 block bg-gradient-to-r from-[#635BFF] to-[#1161ed] bg-clip-text text-transparent">{st.value}</span>
-                <span className="text-[0.68rem] font-extrabold uppercase text-slate-400 tracking-wider block max-w-[140px] leading-tight">{st.label}</span>
+                <span className="text-3xl md:text-4xl font-black text-[#0F172A] tracking-tight mb-2 block bg-gradient-to-r from-[#635BFF] to-[#111111] bg-clip-text text-transparent">{st.value}</span>
+                <span className="text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider block max-w-[140px] leading-tight">{st.label}</span>
               </div>
             ))}
           </div>

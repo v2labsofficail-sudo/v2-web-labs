@@ -14,7 +14,7 @@ const PORTFOLIO_VIDEOS = [
     url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
     img: "/cinematic_supercar.png",
     aspect: "video", // 16:9
-    gradient: "from-[#1161ed] to-[#3b82f6]",
+    gradient: "from-[#2F2FE4] to-[#111111]",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -94,7 +94,7 @@ const capabilities = [
     title: "Cinematic Post-Production",
     desc: "Crafting bespoke color grading ranges that perfectly match your visual identity guidelines and establish content authority.",
     badge: "Studio Cinematic",
-    gradient: "from-[#1161ed] to-[#3b82f6]",
+    gradient: "from-[#2F2FE4] to-[#111111]",
     icon: (
       <svg
         className="w-6 h-6"
@@ -151,13 +151,13 @@ const steps = [
       "Typography Spec Sheets",
     ],
     preview: (
-      <div className="w-full h-full border border-slate-200 bg-slate-50/70 p-4 rounded-2xl flex flex-col justify-between text-[0.68rem] font-mono text-slate-500 shadow-inner relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
+      <div className="w-full h-full border border-slate-200 bg-slate-50/70 p-4 rounded-2xl flex flex-col justify-between text-[0.68rem] font-mono text-[#111111] shadow-inner relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
         <div className="flex justify-between items-center pb-2 border-b border-slate-200/60 relative z-10">
-          <span className="font-extrabold text-[#1161ed]">
+          <span className="font-extrabold text-[#111111]">
             ◇ STORYBOARD_TIMELINE
           </span>
-          <span className="text-[0.6rem] px-2 py-0.5 rounded bg-[#1161ed]/10 text-[#1161ed] border border-[#1161ed]/20 font-black animate-pulse">
+          <span className="text-[0.6rem] px-2 py-0.5 rounded bg-[#111111]/10 text-[#111111] border border-[#111111]/20 font-black animate-pulse">
             PLANNED
           </span>
         </div>
@@ -165,7 +165,7 @@ const steps = [
         <div className="flex flex-col gap-1 text-[0.62rem] bg-white/60 p-2.5 rounded-xl border border-slate-200/40 relative z-10">
           <div className="flex justify-between font-bold text-slate-800">
             <span>0:00 - 0:03</span>
-            <span className="text-[#1161ed]">Ultra High Hook Pacing</span>
+            <span className="text-[#111111]">Ultra High Hook Pacing</span>
           </div>
           <div className="flex justify-between">
             <span>0:03 - 0:15</span>
@@ -173,7 +173,7 @@ const steps = [
           </div>
         </div>
 
-        <div className="flex justify-between items-center text-[0.6rem] text-slate-400 relative z-10 pt-1.5 border-t border-slate-200/40">
+        <div className="flex justify-between items-center text-[0.6rem] text-[#111111] relative z-10 pt-1.5 border-t border-slate-200/40">
           <span>Subtitles: Dynamic-Outfit</span>
           <span>Target Retention: 85%+</span>
         </div>
@@ -187,23 +187,23 @@ const steps = [
     desc: "Assembling multi-cam tracks, mapping modern kinetic subtitles, introducing deep physical sound assets, and aligning key visual elements.",
     tools: ["DaVinci Resolve Studio", "After Effects", "Adobe Audition"],
     preview: (
-      <div className="w-full h-full border border-slate-200 rounded-2xl bg-slate-50/70 p-4 flex flex-col gap-3 font-mono text-[0.68rem] text-slate-400 relative overflow-hidden shadow-inner">
+      <div className="w-full h-full border border-slate-200 rounded-2xl bg-slate-50/70 p-4 flex flex-col gap-3 font-mono text-[0.68rem] text-[#111111] relative overflow-hidden shadow-inner">
         <div className="absolute left-1/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
         <div className="absolute left-2/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
         <div className="absolute left-3/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
 
-        <div className="h-6 bg-white border border-slate-200 rounded-lg flex items-center justify-between px-3 text-slate-500 shadow-sm z-10">
+        <div className="h-6 bg-white border border-slate-200 rounded-lg flex items-center justify-between px-3 text-[#111111] shadow-sm z-10">
           <span className="text-[0.6rem]">Kinetic Subtitle Node</span>
-          <div className="w-3 h-3 border border-[#1161ed]/30 rounded-full animate-ping bg-[#1161ed]/20" />
+          <div className="w-3 h-3 border border-[#111111]/30 rounded-full animate-ping bg-[#111111]/20" />
         </div>
 
         <div className="grid grid-cols-3 gap-3 flex-1 z-10">
           <div className="border border-dashed border-slate-300 rounded-xl flex items-center justify-center p-1 bg-white/40">
             Dialogue
           </div>
-          <div className="col-span-2 border border-dashed border-[#1161ed]/30 rounded-xl flex flex-col justify-between p-3 bg-white/60">
+          <div className="col-span-2 border border-dashed border-[#111111]/30 rounded-xl flex flex-col justify-between p-3 bg-white/60">
             <div className="h-2 bg-slate-200 rounded-full w-2/3" />
-            <div className="h-8 bg-[#1161ed]/5 border border-dashed border-[#1161ed]/20 rounded-lg flex items-center justify-center text-[#1161ed] text-[0.6rem] font-bold">
+            <div className="h-8 bg-[#111111]/5 border border-dashed border-[#111111]/20 rounded-lg flex items-center justify-center text-[#111111] text-[0.6rem] font-bold">
               {"scale(1.1) ease-out;"}
             </div>
           </div>
@@ -219,11 +219,11 @@ const steps = [
     tools: ["Rec.709 Lut Node", "Wwise Audio Sync", "ProRes 422 HQ"],
     preview: (
       <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#080d19] to-[#162238] p-4 flex flex-col justify-between text-white relative overflow-hidden shadow-xl border border-white/5">
-        <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#1161ed]/30 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-[#3b82f6]/20 rounded-full blur-2xl" />
+        <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#111111]/30 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-[#2A2A2A]/20 rounded-full blur-2xl" />
 
         <div className="flex justify-between items-center relative z-10">
-          <span className="text-[0.62rem] uppercase tracking-widest text-[#3b82f6] font-extrabold">
+          <span className="text-[0.62rem] uppercase tracking-widest text-[#2A2A2A] font-extrabold">
             Rendering Engine
           </span>
           <div className="flex items-center gap-1">
@@ -235,18 +235,18 @@ const steps = [
         </div>
 
         <div className="my-auto relative z-10">
-          <div className="text-[0.62rem] text-slate-400 uppercase tracking-wider mb-1 font-semibold">
+          <div className="text-[0.62rem] text-[#111111] uppercase tracking-wider mb-1 font-semibold">
             ProRes High bit-rate Format
           </div>
           <div className="text-sm font-black tracking-tight mb-2">
             Color Checked & Equalized
           </div>
           <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden border border-white/5">
-            <div className="h-full bg-gradient-to-r from-[#1161ed] to-[#3b82f6] w-[100%] rounded-full shadow-[0_0_10px_rgba(17,97,237,0.5)]" />
+            <div className="h-full bg-gradient-to-r from-[#2F2FE4] to-[#111111] w-[100%] rounded-full shadow-[0_0_10px_rgba(17,97,237,0.5)]" />
           </div>
         </div>
 
-        <div className="flex justify-between items-center text-[0.6rem] text-slate-400 relative z-10 pt-2 border-t border-white/5">
+        <div className="flex justify-between items-center text-[0.6rem] text-[#111111] relative z-10 pt-2 border-t border-white/5">
           <span>Video Resolution Rating</span>
           <span className="text-emerald-400 font-black">ProRes 4K</span>
         </div>
@@ -270,7 +270,7 @@ function PortfolioVideoCard({
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group p-2 rounded-[32px] border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-[0_12px_40px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(17,97,237,0.08)] hover:border-[#1161ed]/20 hover:bg-white flex flex-col min-h-[360px]"
+      className="group p-2 rounded-[32px] border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-[0_12px_40px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(17,97,237,0.08)] hover:border-[#111111]/20 hover:bg-white flex flex-col min-h-[360px]"
     >
       {/* Widescreen Video Player Wrapper */}
       <div className="relative w-full aspect-video rounded-[24px] bg-slate-950 shadow-inner overflow-hidden flex items-center justify-center border border-black/5">
@@ -299,7 +299,7 @@ function PortfolioVideoCard({
             )}
             
             {/* Play Button Overlay */}
-            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#1161ed] cursor-pointer z-10">
+            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#111111] cursor-pointer z-10">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <polygon points="5 3 19 12 5 21" />
               </svg>
@@ -310,7 +310,7 @@ function PortfolioVideoCard({
 
         {/* High Quality Badge */}
         <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded-full text-[0.55rem] text-white font-mono border border-white/10 font-bold z-20 shadow-sm flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#1161ed] animate-ping" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#111111] animate-ping" />
           1080P HD
         </div>
 
@@ -346,19 +346,19 @@ function PortfolioVideoCard({
       {/* Card Info Details */}
       <div className="p-6 flex-1 flex flex-col justify-between">
         <div>
-          <span className="text-[0.62rem] font-black uppercase text-[#1161ed] tracking-[0.15em] mb-2 block">
+          <span className="text-[0.62rem] font-black uppercase text-[#111111] tracking-[0.15em] mb-2 block">
             {video.badge}
           </span>
-          <h3 className="text-[1.15rem] text-slate-900 mb-2 font-black group-hover:text-[#1161ed] transition-colors duration-300">
+          <h3 className="text-[1.15rem] text-slate-900 mb-2 font-black group-hover:text-[#111111] transition-colors duration-300">
             {video.title}
           </h3>
-          <p className="text-slate-500 leading-relaxed text-[0.8rem] font-medium">
+          <p className="text-[#111111] leading-relaxed text-[0.8rem] font-medium">
             {video.desc}
           </p>
         </div>
         
         {/* Micro interaction CTA */}
-        <div className="flex items-center gap-1.5 text-[0.68rem] font-black uppercase text-[#1161ed] mt-5 cursor-pointer select-none">
+        <div className="flex items-center gap-1.5 text-[0.68rem] font-black uppercase text-[#111111] mt-5 cursor-pointer select-none">
           <span>Explore Editing Tech</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transform group-hover:translate-x-1 transition-transform duration-300">
             <line x1="5" y1="12" x2="19" y2="12" />
@@ -390,31 +390,28 @@ export default function VideoMotionPage() {
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       {/* Animated Floating Luminous Mesh Background Orbs */}
-      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#1161ed]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
-      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#3b82f6]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
+      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
+      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
       <div className="absolute bottom-[15%] left-[10%] w-[400px] h-[400px] bg-[#8b5cf6]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-float-reverse" />
 
       {/* Luminous Dotted Grid Background Pattern */}
-      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.22] -z-10 pointer-events-none select-none" />
+      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.22] -z-10 pointer-events-none select-none" />
 
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
 
 
         {/* Hero Section with premium typographic depth */}
         <header className="mb-24 text-center md:text-left relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#1161ed] tracking-[0.18em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-            <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+            <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             Motion Media Focus
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.05] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            Cinematic Post-Production &{" "}
-            <span className="bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent drop-shadow-sm">
-              Motion Design
-            </span>
+            Cinematic Post-Production & <span>Motion Design</span>
           </h1>
 
-          <p className="text-[#64748B] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[780px] font-medium">
+          <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[780px] font-medium">
             We deliver highly polished cinematic cuts, typographic motion
             graphics, and frame-by-frame sound engineering. We don&apos;t just
             cut clips together; we build visual retention systems.
@@ -426,13 +423,13 @@ export default function VideoMotionPage() {
           {/* Header Controls for Sandbox */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8">
             <div>
-              <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
                 Live Interactive Post Workspace
               </div>
               <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight">
                 Subtitle & Cinematic Timeline
               </h2>
-              <p className="text-slate-500 text-xs sm:text-sm mt-1">
+              <p className="text-[#111111] text-xs sm:text-sm mt-1">
                 Interact with the selectors below to view how dynamic subtitles
                 and color profiles are custom configured for cinematic media.
               </p>
@@ -450,8 +447,8 @@ export default function VideoMotionPage() {
                         ? "bg-white text-[#8b5cf6] shadow-[0_8px_20px_rgba(139,92,246,0.12)] scale-[1.02] border border-[#8b5cf6]/10"
                         : mode === "motion"
                           ? "bg-white text-[#10b981] shadow-[0_8px_20px_rgba(16,185,129,0.12)] scale-[1.02] border border-[#10b981]/10"
-                          : "bg-white text-[#1161ed] shadow-[0_8px_20px_rgba(17,97,237,0.12)] scale-[1.02] border border-[#1161ed]/10"
-                      : "text-slate-600 hover:text-[#1161ed]"
+                          : "bg-white text-[#111111] shadow-[0_8px_20px_rgba(17,97,237,0.12)] scale-[1.02] border border-[#111111]/10"
+                      : "text-[#111111] hover:text-[#111111]"
                   }`}
                 >
                   {mode === "shortform"
@@ -472,42 +469,42 @@ export default function VideoMotionPage() {
                 ? "bg-[#8b5cf6]/[0.12]"
                 : editorMode === "motion"
                   ? "bg-[#10b981]/[0.12]"
-                  : "bg-[#1161ed]/[0.18]"
+                  : "bg-[#111111]/[0.18]"
             }`} />
 
             {/* Sidebar Code Variable Panel */}
-            <div className="w-full md:w-[330px] shrink-0 z-10 flex flex-col gap-4 font-mono text-[0.72rem] text-slate-400">
+            <div className="w-full md:w-[330px] shrink-0 z-10 flex flex-col gap-4 font-mono text-[0.72rem] text-[#111111]">
               <div className="pb-3 border-b border-slate-800 flex justify-between items-center">
                 <span className={`font-extrabold flex items-center gap-1.5 transition-colors duration-350 ${
                   editorMode === "shortform"
                     ? "text-[#8b5cf6]"
                     : editorMode === "motion"
                       ? "text-[#10b981]"
-                      : "text-[#1161ed]"
+                      : "text-[#111111]"
                 }`}>
                   <span className={`w-2 h-2 rounded-full animate-ping ${
                     editorMode === "shortform"
                       ? "bg-[#8b5cf6]"
                       : editorMode === "motion"
                         ? "bg-[#10b981]"
-                        : "bg-[#1161ed]"
+                        : "bg-[#111111]"
                   }`} />
                   post_timeline_variables.json
                 </span>
-                <span className="px-2.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-[0.6rem] font-bold text-slate-500">
+                <span className="px-2.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-[0.6rem] font-bold text-[#111111]">
                   Davinci Resolve
                 </span>
               </div>
 
               <div className="p-5 rounded-3xl bg-slate-900/60 backdrop-blur-md border border-slate-800/80 flex flex-col gap-3.5 shadow-inner">
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Video Aspect Ratio</span>
+                  <span className="text-[#111111]">Video Aspect Ratio</span>
                   <span className={`px-2 py-0.5 rounded bg-slate-800 border border-slate-700/50 font-bold transition-colors duration-300 ${
                     editorMode === "shortform"
                       ? "text-[#8b5cf6]"
                       : editorMode === "motion"
                         ? "text-[#10b981]"
-                        : "text-[#1161ed]"
+                        : "text-[#111111]"
                   }`}>
                     {editorMode === "shortform"
                       ? "9:16 (Social Vertical)"
@@ -517,13 +514,13 @@ export default function VideoMotionPage() {
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Target Retention Lift</span>
+                  <span className="text-[#111111]">Target Retention Lift</span>
                   <span className={`font-bold transition-colors duration-300 ${
                     editorMode === "shortform"
                       ? "text-[#c084fc]"
                       : editorMode === "motion"
                         ? "text-[#34d399]"
-                        : "text-[#3b82f6]"
+                        : "text-[#2A2A2A]"
                   }`}>
                     {editorMode === "shortform"
                       ? "+82% Initial View"
@@ -533,21 +530,21 @@ export default function VideoMotionPage() {
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Audio Sample Rate</span>
-                  <span className="text-slate-400 font-bold">
+                  <span className="text-[#111111]">Audio Sample Rate</span>
+                  <span className="text-[#111111] font-bold">
                     {editorMode === "cinematic"
                       ? "48.0 kHz 24-bit"
                       : "44.1 kHz Standard"}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Color LUT Range</span>
+                  <span className="text-[#111111]">Color LUT Range</span>
                   <span className={`font-bold transition-colors duration-300 ${
                     editorMode === "shortform"
                       ? "text-[#c084fc]"
                       : editorMode === "motion"
                         ? "text-[#34d399]"
-                        : "text-[#3b82f6]"
+                        : "text-[#2A2A2A]"
                   }`}>
                     {editorMode === "cinematic"
                       ? "Bespoke Rec.709 Warm"
@@ -557,7 +554,7 @@ export default function VideoMotionPage() {
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Subtitles Layout</span>
+                  <span className="text-[#111111]">Subtitles Layout</span>
                   <span className="text-yellow-400 font-bold">
                     {editorMode === "shortform"
                       ? "Kinetic Yellow Pop"
@@ -570,7 +567,7 @@ export default function VideoMotionPage() {
 
               {/* Dynamic JSON / CSS Tagging panel */}
               <div className="p-5 rounded-3xl bg-slate-900/40 border border-dashed border-slate-800 flex flex-col gap-2">
-                <div className="text-[0.62rem] text-slate-500">
+                <div className="text-[0.62rem] text-[#111111]">
                   {"/* active timeline track data specs */"}
                 </div>
                 <code className={`font-bold text-[0.68rem] leading-relaxed whitespace-pre-wrap transition-colors duration-300 ${
@@ -578,7 +575,7 @@ export default function VideoMotionPage() {
                     ? "text-[#c084fc]"
                     : editorMode === "motion"
                       ? "text-[#34d399]"
-                      : "text-[#3b82f6]"
+                      : "text-[#2A2A2A]"
                 }`}>
                   {editorMode === "shortform" &&
                     '// Social hook caption overlay\nconst caption = {\n  text: "UNLEASH_POTENTIAL",\n  font: "Outfit Black",\n  color: "#facc15"\n};'}
@@ -622,7 +619,7 @@ export default function VideoMotionPage() {
                     </div>
                     {/* Top pill bar */}
                     <div className="absolute top-2 w-16 h-3 bg-black/40 backdrop-blur-md rounded-full z-20 flex items-center justify-center">
-                      <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+                      <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
                     </div>
                   </div>
                 ) : editorMode === "cinematic" ? (
@@ -646,7 +643,7 @@ export default function VideoMotionPage() {
                   </div>
                 ) : (
                   /* Abstract motion geometry physics guide loop mockup */
-                  <div className="w-full aspect-video bg-slate-950 border-4 border-dashed border-[#1161ed]/30 rounded-[24px] shadow-2xl relative overflow-hidden flex flex-col items-center justify-center transition-all duration-300">
+                  <div className="w-full aspect-video bg-slate-950 border-4 border-dashed border-[#111111]/30 rounded-[24px] shadow-2xl relative overflow-hidden flex flex-col items-center justify-center transition-all duration-300">
                     <video
                       className="absolute inset-0 w-full h-full object-cover opacity-80"
                       src={PORTFOLIO_VIDEOS[3].url}
@@ -656,11 +653,11 @@ export default function VideoMotionPage() {
                       playsInline
                     />
                     {/* Geometric overlays */}
-                    <div className="absolute inset-0 border border-[#1161ed]/10 pointer-events-none flex items-center justify-center z-10">
-                      <div className="w-32 h-32 border border-dashed border-[#1161ed]/30 rounded-full animate-spin duration-[12s]" />
+                    <div className="absolute inset-0 border border-[#111111]/10 pointer-events-none flex items-center justify-center z-10">
+                      <div className="w-32 h-32 border border-dashed border-[#111111]/30 rounded-full animate-spin duration-[12s]" />
                       <div className="absolute w-24 h-24 border border-dashed border-[#8b5cf6]/20 -rotate-45" />
                     </div>
-                    <div className="absolute bottom-2.5 right-3 bg-black/50 backdrop-blur-md px-2 py-0.5 rounded text-[0.55rem] text-slate-400 font-mono z-20">
+                    <div className="absolute bottom-2.5 right-3 bg-black/50 backdrop-blur-md px-2 py-0.5 rounded text-[0.55rem] text-[#111111] font-mono z-20">
                       SPRING_CONSTRAINT: 180
                     </div>
                   </div>
@@ -673,13 +670,13 @@ export default function VideoMotionPage() {
         {/* Upgraded Capabilities Grid in premium frosted-glass design */}
         <section className="mb-28 border-t border-slate-200/50 pt-16 relative">
           <div className="text-center mb-20 relative z-10">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Capabilities
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Motion Architecture Toolkit
             </h2>
-            <p className="text-slate-500 text-sm max-w-[500px] mx-auto mt-2 leading-relaxed">
+            <p className="text-[#111111] text-sm max-w-[500px] mx-auto mt-2 leading-relaxed">
               We compile highly robust visual cuts, kinetic elements, and audio
               environments tailored directly to content goals.
             </p>
@@ -689,7 +686,7 @@ export default function VideoMotionPage() {
             {capabilities.map((cap, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#1161ed]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
+                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
               >
                 {/* Premium Accent Top Border in Brand Gradient */}
                 <div
@@ -699,17 +696,17 @@ export default function VideoMotionPage() {
                 <div>
                   {/* Icon Container with radial backdrop shine */}
                   <div className="mb-8 relative">
-                    <div className="w-13 h-13 rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="w-13 h-13 rounded-2xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center border border-[#111111]/10 group-hover:scale-110 group-hover:bg-[#111111] group-hover:text-white transition-all duration-500 shadow-sm">
                       {cap.icon}
                     </div>
                   </div>
-                  <span className="text-[0.62rem] font-black uppercase text-[#1161ed] tracking-[0.15em] mb-2 block">
+                  <span className="text-[0.62rem] font-black uppercase text-[#111111] tracking-[0.15em] mb-2 block">
                     {cap.badge}
                   </span>
-                  <h3 className="text-[1.2rem] text-slate-900 mb-3 font-black group-hover:text-[#1161ed] transition-colors duration-300">
+                  <h3 className="text-[1.2rem] text-slate-900 mb-3 font-black group-hover:text-[#111111] transition-colors duration-300">
                     {cap.title}
                   </h3>
-                  <p className="text-slate-500 leading-relaxed text-[0.82rem]">
+                  <p className="text-[#111111] leading-relaxed text-[0.82rem]">
                     {cap.desc}
                   </p>
                 </div>
@@ -721,13 +718,13 @@ export default function VideoMotionPage() {
         {/* Cinematic & Motion Portfolio Showcase Section */}
         <section className="mb-28 border-t border-slate-200/50 pt-16 relative">
           <div className="text-center mb-16 relative z-10">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Studio Portfolio
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Cinematic & Motion Portfolio
             </h2>
-            <p className="text-slate-500 text-sm max-w-[580px] mx-auto mt-2 leading-relaxed">
+            <p className="text-[#111111] text-sm max-w-[580px] mx-auto mt-2 leading-relaxed">
               Explore our real, looping portfolio clips. Click the sound toggle icon on any card to unmute and hear our cinematic audio design.
             </p>
           </div>
@@ -752,13 +749,13 @@ export default function VideoMotionPage() {
         {/* Process Roadmap Section (Dynamic, click-interactive step selector) */}
         <section className="py-20 border-t border-slate-200/50 mb-24 relative">
           <div className="text-center mb-20 relative z-10">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Studio Methodology
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Frictionless Execution Map
             </h2>
-            <p className="text-slate-500 text-sm max-w-[520px] mx-auto mt-2 leading-relaxed">
+            <p className="text-[#111111] text-sm max-w-[520px] mx-auto mt-2 leading-relaxed">
               Click each milestone phase below to review our specific
               activities, tools used, and structural preview deliverables.
             </p>
@@ -775,30 +772,30 @@ export default function VideoMotionPage() {
                     onClick={() => setActiveStep(idx)}
                     className={`flex gap-5 p-5 rounded-[24px] border transition-all duration-300 cursor-pointer relative group overflow-hidden ${
                       isActive
-                        ? "bg-white shadow-[0_20px_40px_rgba(17,97,237,0.06)] border-[#1161ed]/20 scale-[1.03]"
+                        ? "bg-white shadow-[0_20px_40px_rgba(17,97,237,0.06)] border-[#111111]/20 scale-[1.03]"
                         : "bg-transparent border-transparent hover:border-slate-300/40"
                     }`}
                   >
                     {/* Left Brand Line accent */}
                     {isActive && (
-                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] via-[#3b82f6] to-[#8b5cf6]" />
+                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] via-[#111111] to-[#8b5cf6]" />
                     )}
 
                     <div
                       className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 font-black text-sm shadow-sm ${
                         isActive
-                          ? "bg-[#1161ed] text-white"
-                          : "bg-[#1161ed]/[0.08] text-[#1161ed] group-hover:bg-[#1161ed]/[0.15]"
+                          ? "bg-[#111111] text-white"
+                          : "bg-[#111111]/[0.08] text-[#111111] group-hover:bg-[#111111]/[0.15]"
                       }`}
                     >
                       {step.num}
                     </div>
                     <div>
-                      <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#64748B] block mb-0.5">
+                      <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#111111] block mb-0.5">
                         {step.subtitle}
                       </span>
                       <h4
-                        className={`text-[0.98rem] font-black transition-colors ${isActive ? "text-[#1161ed]" : "text-slate-900 group-hover:text-[#1161ed]"}`}
+                        className={`text-[0.98rem] font-black transition-colors ${isActive ? "text-[#111111]" : "text-slate-900 group-hover:text-[#111111]"}`}
                       >
                         {step.title}
                       </h4>
@@ -810,18 +807,18 @@ export default function VideoMotionPage() {
 
             {/* Right Active Step visual preview box */}
             <div className="lg:col-span-7 z-10">
-              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.07)] hover:border-[#1161ed]/20 transition-all duration-500">
+              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.07)] hover:border-[#111111]/20 transition-all duration-500">
                 {/* Visual Top Accent Strip */}
-                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] rounded-t-[36px]" />
+                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
 
                 <div>
-                  <span className="text-[0.62rem] font-black tracking-widest text-[#1161ed] uppercase block mb-1">
+                  <span className="text-[0.62rem] font-black tracking-widest text-[#111111] uppercase block mb-1">
                     Methodology Stage {steps[activeStep].num}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
                     {steps[activeStep].title}
                   </h3>
-                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6 font-medium">
+                  <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6 font-medium">
                     {steps[activeStep].desc}
                   </p>
 
@@ -832,12 +829,12 @@ export default function VideoMotionPage() {
                 </div>
 
                 {/* System Tools Used Badger bar */}
-                <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-100 text-[0.65rem] font-bold text-slate-400">
+                <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-100 text-[0.65rem] font-bold text-[#111111]">
                   <span>STAGE TOOLKIT:</span>
                   {steps[activeStep].tools.map((tool, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-600 rounded-lg transition-colors font-mono"
+                      className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-[#111111] rounded-lg transition-colors font-mono"
                     >
                       {tool}
                     </span>
@@ -851,9 +848,9 @@ export default function VideoMotionPage() {
         {/* Premium Navy CTA Section with glowing grid borders */}
         <section className="relative rounded-[40px] bg-[#020713] p-10 sm:p-20 text-center text-white overflow-hidden shadow-2xl z-10 mt-16 max-w-[1100px] mx-auto border border-white/5">
           {/* Luminous soft mesh bubbles */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#1161ed] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#111111] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8b5cf6] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
 
           <div className="relative z-10 max-w-[650px] mx-auto">
             <h2 className="text-3xl sm:text-[2.8rem] font-black tracking-tight leading-tight mb-5 text-white">
@@ -866,7 +863,7 @@ export default function VideoMotionPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] hover:from-[#0c4ec3] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Start Your Project
             </Link>

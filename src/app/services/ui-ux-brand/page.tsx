@@ -45,7 +45,7 @@ export default function UiUxBrandPage() {
       title: "Interactive High-Fi Prototypes",
       desc: "Constructing click-through user flows that perfectly simulate production system speeds and animations. This enables rapid client alignment and user feedback loop.",
       badge: "User Validated",
-      gradient: "from-[#1161ed] to-[#3b82f6]",
+      gradient: "from-[#2F2FE4] to-[#111111]",
       icon: (
         <svg
           className="w-6 h-6"
@@ -103,32 +103,32 @@ export default function UiUxBrandPage() {
       desc: "Creating solid, logical user navigation frameworks. We design flow connections and map exactly how clients complete actions before drawing any visual vectors.",
       tools: ["FigJam", "Miro Workspace", "Notion Studio"],
       preview: (
-        <div className="w-full h-full border border-slate-200 bg-slate-50/70 p-4 rounded-2xl flex flex-col justify-between text-[0.68rem] font-mono text-slate-500 shadow-inner relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
+        <div className="w-full h-full border border-slate-200 bg-slate-50/70 p-4 rounded-2xl flex flex-col justify-between text-[0.68rem] font-mono text-[#111111] shadow-inner relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
           <div className="flex justify-between items-center pb-2 border-b border-slate-200/60 relative z-10">
-            <span className="font-extrabold text-[#1161ed]">
+            <span className="font-extrabold text-[#111111]">
               ◇ MAP_USER_ROUTE
             </span>
-            <span className="text-[0.6rem] px-2 py-0.5 rounded bg-[#1161ed]/10 text-[#1161ed] border border-[#1161ed]/20 font-black animate-pulse">
+            <span className="text-[0.6rem] px-2 py-0.5 rounded bg-[#111111]/10 text-[#111111] border border-[#111111]/20 font-black animate-pulse">
               ACTIVE FLOW
             </span>
           </div>
           <div className="flex gap-2 items-center justify-center relative z-10">
-            <span className="px-2.5 py-1.5 bg-white border border-slate-200 rounded-xl shadow-sm text-slate-600">
+            <span className="px-2.5 py-1.5 bg-white border border-slate-200 rounded-xl shadow-sm text-[#111111]">
               Home Page
             </span>
-            <span className="text-[#1161ed] font-black animate-ping text-[0.6rem]">
+            <span className="text-[#111111] font-black animate-ping text-[0.6rem]">
               ➔
             </span>
-            <span className="px-2.5 py-1.5 bg-[#1161ed] text-white rounded-xl shadow-[0_4px_10px_rgba(17,97,237,0.2)] font-black">
+            <span className="px-2.5 py-1.5 bg-[#111111] text-white rounded-xl shadow-[0_4px_10px_rgba(17,97,237,0.2)] font-black">
               Configure Service
             </span>
-            <span className="text-slate-400">➔</span>
-            <span className="px-2.5 py-1.5 bg-white border border-slate-200 rounded-xl shadow-sm text-slate-600">
+            <span className="text-[#111111]">➔</span>
+            <span className="px-2.5 py-1.5 bg-white border border-slate-200 rounded-xl shadow-sm text-[#111111]">
               Estimate
             </span>
           </div>
-          <div className="flex justify-between items-center text-[0.6rem] text-slate-400 relative z-10 pt-1.5 border-t border-slate-200/40">
+          <div className="flex justify-between items-center text-[0.6rem] text-[#111111] relative z-10 pt-1.5 border-t border-slate-200/40">
             <span>Conversion Predictor: High</span>
             <span>Completion: 92%</span>
           </div>
@@ -142,21 +142,21 @@ export default function UiUxBrandPage() {
       desc: "Constructing high-contrast skeleton structures. This step maps proper element ratios, typographic layout priorities, and clear visual hooks.",
       tools: ["Figma Variables", "Structural Guides", "Atomic Assets"],
       preview: (
-        <div className="w-full h-full border border-slate-200 rounded-2xl bg-slate-50/70 p-4 flex flex-col gap-3 font-mono text-[0.68rem] text-slate-400 relative overflow-hidden shadow-inner">
+        <div className="w-full h-full border border-slate-200 rounded-2xl bg-slate-50/70 p-4 flex flex-col gap-3 font-mono text-[0.68rem] text-[#111111] relative overflow-hidden shadow-inner">
           <div className="absolute left-1/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
           <div className="absolute left-2/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
           <div className="absolute left-3/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
-          <div className="h-6 bg-white border border-slate-200 rounded-lg flex items-center justify-between px-3 text-slate-500 shadow-sm z-10">
+          <div className="h-6 bg-white border border-slate-200 rounded-lg flex items-center justify-between px-3 text-[#111111] shadow-sm z-10">
             <span className="text-[0.6rem]">Header [H: 48px]</span>
-            <div className="w-3 h-3 border border-[#1161ed]/30 rounded-full" />
+            <div className="w-3 h-3 border border-[#111111]/30 rounded-full" />
           </div>
           <div className="grid grid-cols-3 gap-3 flex-1 z-10">
             <div className="border border-dashed border-slate-300 rounded-xl flex items-center justify-center p-1 bg-white/40">
               Side Spec
             </div>
-            <div className="col-span-2 border border-dashed border-[#1161ed]/30 rounded-xl flex flex-col justify-between p-3 bg-white/60">
+            <div className="col-span-2 border border-dashed border-[#111111]/30 rounded-xl flex flex-col justify-between p-3 bg-white/60">
               <div className="h-2 bg-slate-200 rounded-full w-2/3" />
-              <div className="h-8 bg-[#1161ed]/5 border border-dashed border-[#1161ed]/20 rounded-lg flex items-center justify-center text-[#1161ed] text-[0.6rem] font-bold">
+              <div className="h-8 bg-[#111111]/5 border border-dashed border-[#111111]/20 rounded-lg flex items-center justify-center text-[#111111] text-[0.6rem] font-bold">
                 Grid Anchor [W: 100%]
               </div>
             </div>
@@ -172,33 +172,33 @@ export default function UiUxBrandPage() {
       tools: ["Tailwind v4", "Spline 3D", "Lottie Animations", "NextJS"],
       preview: (
         <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-4 flex flex-col justify-between text-slate-700 relative overflow-hidden shadow-inner border border-slate-200/60">
-          <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#1161ed]/10 rounded-full blur-2xl animate-pulse" />
-          <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-[#3b82f6]/5 rounded-full blur-2xl" />
+          <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#111111]/10 rounded-full blur-2xl animate-pulse" />
+          <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-[#2A2A2A]/5 rounded-full blur-2xl" />
           <div className="flex justify-between items-center relative z-10">
-            <span className="text-[0.62rem] uppercase tracking-widest text-[#1161ed] font-extrabold">
+            <span className="text-[0.62rem] uppercase tracking-widest text-[#111111] font-extrabold">
               Studio Output
             </span>
             <div className="flex items-center gap-1">
               <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
-              <span className="text-[0.58rem] font-mono text-slate-400">
+              <span className="text-[0.58rem] font-mono text-[#111111]">
                 SYNC_OK
               </span>
             </div>
           </div>
           <div className="my-auto relative z-10">
-            <div className="text-[0.62rem] text-slate-400 uppercase tracking-wider mb-1 font-semibold">
+            <div className="text-[0.62rem] text-[#111111] uppercase tracking-wider mb-1 font-semibold">
               Active Gradient Shader
             </div>
             <div className="text-sm font-black tracking-tight mb-2 text-slate-800">
               Neon Conversion Dashboard
             </div>
             <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden border border-slate-300/40">
-              <div className="h-full bg-gradient-to-r from-[#1161ed] to-[#3b82f6] w-[88%] rounded-full shadow-[0_0_10px_rgba(17,97,237,0.15)]" />
+              <div className="h-full bg-gradient-to-r from-[#2F2FE4] to-[#111111] w-[88%] rounded-full shadow-[0_0_10px_rgba(17,97,237,0.15)]" />
             </div>
           </div>
-          <div className="flex justify-between items-center text-[0.6rem] text-slate-400 relative z-10 pt-2 border-t border-slate-200/40">
+          <div className="flex justify-between items-center text-[0.6rem] text-[#111111] relative z-10 pt-2 border-t border-slate-200/40">
             <span>Visual Rating</span>
-            <span className="text-[#1161ed] font-black">9.8/10</span>
+            <span className="text-[#111111] font-black">9.8/10</span>
           </div>
         </div>
       ),
@@ -208,29 +208,26 @@ export default function UiUxBrandPage() {
   return (
     <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       
-      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#1161ed]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
-      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#3b82f6]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
+      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
+      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
       <div className="absolute bottom-[15%] left-[10%] w-[400px] h-[400px] bg-[#8b5cf6]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-float-reverse" />
 
       
-      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#1161ed_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.15] -z-10 pointer-events-none select-none" />
+      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.15] -z-10 pointer-events-none select-none" />
 
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
         
         <header className="mb-24 text-center md:text-left relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#1161ed]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#1161ed] tracking-[0.18em] mb-6 border border-[#1161ed]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-            <span className="w-1.5 h-1.5 bg-[#1161ed] rounded-full animate-ping"></span>
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+            <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             UI/UX Studio Focus
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.05] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            High-Fidelity Interfaces &{" "}
-            <span className="bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent drop-shadow-sm">
-              Brand Systems
-            </span>
+            High-Fidelity Interfaces & <span>Brand Systems</span>
           </h1>
 
-          <p className="text-[#64748B] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[780px] font-medium">
+          <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[780px] font-medium">
             We blueprint immersive experiences, user pathways, atomic design
             tokens, and cohesive brand systems. We balance visual wow factor
             with frictionless usability.
@@ -242,13 +239,13 @@ export default function UiUxBrandPage() {
           
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8">
             <div>
-              <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
                 Live Interactive Sandbox
               </div>
               <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight">
                 Responsive Design Blueprint
               </h2>
-              <p className="text-slate-500 text-xs sm:text-sm mt-1 font-semibold">
+              <p className="text-[#111111] text-xs sm:text-sm mt-1 font-semibold">
                 Interact with the selectors below to view how figma wireframe
                 models map directly to spacing variables and production-ready
                 visual modules.
@@ -263,8 +260,8 @@ export default function UiUxBrandPage() {
                   onClick={() => setSandboxMode(mode)}
                   className={`flex-1 md:flex-initial px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer ${
                     sandboxMode === mode
-                      ? "bg-white text-[#1161ed] shadow-[0_8px_20px_rgba(17,97,237,0.08)] scale-[1.02]"
-                      : "text-slate-600 hover:text-[#1161ed]"
+                      ? "bg-white text-[#111111] shadow-[0_8px_20px_rgba(17,97,237,0.08)] scale-[1.02]"
+                      : "text-[#111111] hover:text-[#111111]"
                   }`}
                 >
                   {mode}
@@ -276,46 +273,46 @@ export default function UiUxBrandPage() {
           
           <div className="w-full bg-white/70 backdrop-blur-xl border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col md:flex-row gap-10 items-center justify-between">
             
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#1161ed]/[0.05] rounded-full blur-[110px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#111111]/[0.05] rounded-full blur-[110px] pointer-events-none" />
 
             
-            <div className="w-full md:w-[330px] shrink-0 z-10 flex flex-col gap-4 font-mono text-[0.72rem] text-slate-500">
+            <div className="w-full md:w-[330px] shrink-0 z-10 flex flex-col gap-4 font-mono text-[0.72rem] text-[#111111]">
               <div className="pb-3 border-b border-slate-200 flex justify-between items-center">
-                <span className="text-[#1161ed] font-extrabold flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#1161ed] animate-ping" />
+                <span className="text-[#111111] font-extrabold flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#111111] animate-ping" />
                   figma_design_variables.json
                 </span>
-                <span className="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-[0.6rem] font-bold text-slate-500">
+                <span className="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-[0.6rem] font-bold text-[#111111]">
                   v5.2 Engine
                 </span>
               </div>
 
               <div className="p-5 rounded-3xl bg-slate-55/80 backdrop-blur-md border border-slate-200/60 flex flex-col gap-3.5 shadow-inner">
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-400">Interface Type</span>
-                  <span className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-[#1161ed] font-bold">
+                  <span className="text-[#111111]">Interface Type</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-[#111111] font-bold">
                     Interactive Viewport
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-400">Border Radius Spec</span>
-                  <span className="text-[#1161ed] font-bold">
+                  <span className="text-[#111111]">Border Radius Spec</span>
+                  <span className="text-[#111111] font-bold">
                     {sandboxMode === "wireframe"
                       ? "0px (Blueprint Square)"
                       : "28px (Adaptive Glass)"}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-400">Active Spacing Scale</span>
-                  <span className="text-[#1161ed] font-bold">
+                  <span className="text-[#111111]">Active Spacing Scale</span>
+                  <span className="text-[#111111] font-bold">
                     {sandboxMode === "wireframe"
                       ? "None (Unbound Layout)"
                       : "4px/8px Core Grid Alignment"}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-400">Background Style</span>
-                  <span className="text-[#1161ed] font-bold">
+                  <span className="text-[#111111]">Background Style</span>
+                  <span className="text-[#111111] font-bold">
                     {sandboxMode === "hifi"
                       ? "Glassmorphism Mesh Shader"
                       : sandboxMode === "tokens"
@@ -324,7 +321,7 @@ export default function UiUxBrandPage() {
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-400">Active Colors State</span>
+                  <span className="text-[#111111]">Active Colors State</span>
                   <span className="text-purple-600 font-bold">
                     {sandboxMode === "hifi"
                       ? "Brand Gradient Blend"
@@ -337,10 +334,10 @@ export default function UiUxBrandPage() {
 
               
               <div className="p-5 rounded-3xl bg-slate-55 border border-dashed border-slate-200 flex flex-col gap-2">
-                <div className="text-[0.62rem] text-slate-400">
+                <div className="text-[0.62rem] text-[#111111]">
                   {"/* active active CSS variable tags */"}
                 </div>
-                <code className="text-[#1161ed] font-bold text-[0.68rem] leading-relaxed whitespace-pre-line">
+                <code className="text-[#111111] font-bold text-[0.68rem] leading-relaxed whitespace-pre-line">
                   {sandboxMode === "wireframe" &&
                     `.viewport-view { \n  outline: 2px dashed #94a3b8;\n  border-radius: 0px;\n}`}
                   {sandboxMode === "tokens" &&
@@ -357,7 +354,7 @@ export default function UiUxBrandPage() {
               <div
                 className={`w-full max-w-[420px] transition-all duration-500 p-8 ${
                   sandboxMode === "wireframe"
-                    ? "bg-transparent border-[2.2px] border-dashed border-slate-300 rounded-none shadow-none text-slate-400"
+                    ? "bg-transparent border-[2.2px] border-dashed border-slate-300 rounded-none shadow-none text-[#111111]"
                     : sandboxMode === "tokens"
                       ? "bg-purple-50/20 border border-purple-300/60 rounded-[28px] text-purple-900 shadow-lg relative"
                       : "bg-white/90 backdrop-blur-xl border border-slate-200 rounded-[32px] text-slate-800 shadow-[0_25px_60px_rgba(17,97,237,0.06)] relative"
@@ -396,7 +393,7 @@ export default function UiUxBrandPage() {
                       <>
                         <div className="flex flex-col">
                           <span
-                            className={`text-[0.62rem] font-mono tracking-[0.2em] uppercase ${sandboxMode === "tokens" ? "text-purple-600 font-bold" : "text-[#1161ed] font-black"}`}
+                            className={`text-[0.62rem] font-mono tracking-[0.2em] uppercase ${sandboxMode === "tokens" ? "text-purple-600 font-bold" : "text-[#111111] font-black"}`}
                           >
                             Studio Viewport
                           </span>
@@ -431,8 +428,8 @@ export default function UiUxBrandPage() {
                           Design Spacing Tokens
                         </span>
                         <div className="flex gap-2 mt-1">
-                          <div className="w-5 h-5 rounded-md bg-[#1161ed] border border-white/10" />
-                          <div className="w-5 h-5 rounded-md bg-[#3b82f6] border border-white/10" />
+                          <div className="w-5 h-5 rounded-md bg-[#111111] border border-white/10" />
+                          <div className="w-5 h-5 rounded-md bg-[#2A2A2A] border border-white/10" />
                           <div className="w-5 h-5 rounded-md bg-[#8b5cf6] border border-white/10" />
                           <div className="w-5 h-5 rounded-md bg-[#d946ef] border border-white/10" />
                         </div>
@@ -445,9 +442,9 @@ export default function UiUxBrandPage() {
                     <div className="flex flex-col gap-5">
                       
                       <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between relative overflow-hidden shadow-inner">
-                        <div className="absolute top-0 right-0 w-16 h-16 bg-[#1161ed]/5 rounded-full blur-lg" />
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-[#111111]/5 rounded-full blur-lg" />
                         <div className="flex justify-between items-center mb-3">
-                          <span className="text-[0.68rem] font-bold text-slate-400 tracking-wider">
+                          <span className="text-[0.68rem] font-bold text-[#111111] tracking-wider">
                             Estimated Traffic Lift
                           </span>
                           <span className="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 text-[0.58rem] font-black uppercase tracking-widest border border-emerald-200">
@@ -473,8 +470,8 @@ export default function UiUxBrandPage() {
                                 x2="1"
                                 y2="0"
                               >
-                                <stop offset="0%" stopColor="#1161ed" />
-                                <stop offset="50%" stopColor="#3b82f6" />
+                                <stop offset="0%" stopColor="#111111" />
+                                <stop offset="50%" stopColor="#2A2A2A" />
                                 <stop offset="100%" stopColor="#8b5cf6" />
                               </linearGradient>
                             </defs>
@@ -507,7 +504,7 @@ export default function UiUxBrandPage() {
                       </div>
 
                       
-                      <button className="w-full py-3.5 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] rounded-xl text-white font-extrabold text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(17,97,237,0.15)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.3)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+                      <button className="w-full py-3.5 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] rounded-xl text-white font-extrabold text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(17,97,237,0.15)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.3)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
                         Launch Figma Hifi Blueprint
                       </button>
                     </div>
@@ -521,13 +518,13 @@ export default function UiUxBrandPage() {
         
         <section className="mb-28 border-t border-slate-200/50 pt-16 relative">
           <div className="text-center mb-20 relative z-10">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Capabilities
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Design Architecture Toolkit
             </h2>
-            <p className="text-slate-500 text-sm max-w-[500px] mx-auto mt-2 leading-relaxed font-semibold">
+            <p className="text-[#111111] text-sm max-w-[500px] mx-auto mt-2 leading-relaxed font-semibold">
               We compile highly robust layout constructs and graphic systems
               tailored directly to your startup goals.
             </p>
@@ -537,7 +534,7 @@ export default function UiUxBrandPage() {
             {capabilities.map((cap, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.01)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.05)] hover:border-[#1161ed]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
+                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.01)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.05)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
               >
                 
                 <div
@@ -547,17 +544,17 @@ export default function UiUxBrandPage() {
                 <div>
                   
                   <div className="mb-8 relative">
-                    <div className="w-13 h-13 rounded-2xl bg-[#1161ed]/[0.08] text-[#1161ed] flex items-center justify-center border border-[#1161ed]/10 group-hover:scale-110 group-hover:bg-[#1161ed] group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="w-13 h-13 rounded-2xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center border border-[#111111]/10 group-hover:scale-110 group-hover:bg-[#111111] group-hover:text-white transition-all duration-500 shadow-sm">
                       {cap.icon}
                     </div>
                   </div>
-                  <span className="text-[0.62rem] font-black uppercase text-[#1161ed] tracking-[0.15em] mb-2 block">
+                  <span className="text-[0.62rem] font-black uppercase text-[#111111] tracking-[0.15em] mb-2 block">
                     {cap.badge}
                   </span>
-                  <h3 className="text-[1.2rem] text-slate-900 mb-3 font-black group-hover:text-[#1161ed] transition-colors duration-300">
+                  <h3 className="text-[1.2rem] text-slate-900 mb-3 font-black group-hover:text-[#111111] transition-colors duration-300">
                     {cap.title}
                   </h3>
-                  <p className="text-slate-500 leading-relaxed text-[0.82rem] font-medium">
+                  <p className="text-[#111111] leading-relaxed text-[0.82rem] font-medium">
                     {cap.desc}
                   </p>
                 </div>
@@ -569,13 +566,13 @@ export default function UiUxBrandPage() {
         
         <section className="py-20 border-t border-slate-200/50 mb-24 relative">
           <div className="text-center mb-20 relative z-10">
-            <div className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Studio Methodology
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Frictionless Execution Map
             </h2>
-            <p className="text-slate-500 text-sm max-w-[520px] mx-auto mt-2 leading-relaxed font-semibold">
+            <p className="text-[#111111] text-sm max-w-[520px] mx-auto mt-2 leading-relaxed font-semibold">
               Click each milestone phase below to review our specific
               activities, tools used, and structural preview deliverables.
             </p>
@@ -592,30 +589,30 @@ export default function UiUxBrandPage() {
                     onClick={() => setActiveStep(idx)}
                     className={`flex gap-5 p-5 rounded-[24px] border transition-all duration-300 cursor-pointer relative group overflow-hidden ${
                       isActive
-                        ? "bg-white shadow-[0_20px_40px_rgba(17,97,237,0.04)] border-[#1161ed]/20 scale-[1.03]"
+                        ? "bg-white shadow-[0_20px_40px_rgba(17,97,237,0.04)] border-[#111111]/20 scale-[1.03]"
                         : "bg-transparent border-transparent hover:border-slate-200"
                     }`}
                   >
                     
                     {isActive && (
-                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#1161ed] via-[#3b82f6] to-[#8b5cf6]" />
+                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] via-[#111111] to-[#8b5cf6]" />
                     )}
 
                     <div
                       className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 font-black text-sm shadow-sm ${
                         isActive
-                          ? "bg-[#1161ed] text-white"
-                          : "bg-[#1161ed]/[0.08] text-[#1161ed] group-hover:bg-[#1161ed]/[0.15]"
+                          ? "bg-[#111111] text-white"
+                          : "bg-[#111111]/[0.08] text-[#111111] group-hover:bg-[#111111]/[0.15]"
                       }`}
                     >
                       {step.num}
                     </div>
                     <div>
-                      <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#64748B] block mb-0.5">
+                      <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#111111] block mb-0.5">
                         {step.subtitle}
                       </span>
                       <h4
-                        className={`text-[0.98rem] font-black transition-colors ${isActive ? "text-[#1161ed]" : "text-slate-900 group-hover:text-[#1161ed]"}`}
+                        className={`text-[0.98rem] font-black transition-colors ${isActive ? "text-[#111111]" : "text-slate-900 group-hover:text-[#111111]"}`}
                       >
                         {step.title}
                       </h4>
@@ -627,18 +624,18 @@ export default function UiUxBrandPage() {
 
             
             <div className="lg:col-span-7 z-10">
-              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.04)] hover:border-[#1161ed]/20 transition-all duration-500">
+              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.04)] hover:border-[#111111]/20 transition-all duration-500">
                 
-                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] rounded-t-[36px]" />
+                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
 
                 <div>
-                  <span className="text-[0.62rem] font-black tracking-widest text-[#1161ed] uppercase block mb-1">
+                  <span className="text-[0.62rem] font-black tracking-widest text-[#111111] uppercase block mb-1">
                     Methodology Stage {steps[activeStep].num}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
                     {steps[activeStep].title}
                   </h3>
-                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
+                  <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
                     {steps[activeStep].desc}
                   </p>
 
@@ -649,12 +646,12 @@ export default function UiUxBrandPage() {
                 </div>
 
                 
-                <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-100 text-[0.65rem] font-bold text-slate-400">
+                <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-100 text-[0.65rem] font-bold text-[#111111]">
                   <span>STAGE TOOLKIT:</span>
                   {steps[activeStep].tools.map((tool, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-600 rounded-lg transition-colors font-mono"
+                      className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-[#111111] rounded-lg transition-colors font-mono"
                     >
                       {tool}
                     </span>
@@ -677,7 +674,7 @@ export default function UiUxBrandPage() {
               <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
                 Our Creative Pipeline
               </h2>
-              <p className="text-slate-500 text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
+              <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
                 We craft state-of-the-art designs leveraging industry-defining tools. No templates, no generic boxes—pure customized visual systems.
               </p>
             </div>
@@ -687,7 +684,7 @@ export default function UiUxBrandPage() {
               
               <div className="lg:col-span-6 flex justify-center relative">
                 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#1161ed]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#111111]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
                 
                 
                 <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17,97,237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
@@ -714,7 +711,7 @@ export default function UiUxBrandPage() {
               <div className="lg:col-span-6 flex flex-col gap-6">
                 
                 
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-[#1161ed]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(17,97,237,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-[#111111]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(17,97,237,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 100 150" fill="none">
                       <path d="M25 37.5C25 51.3 36.2 62.5 50 62.5C50 48.7 38.8 37.5 25 37.5Z" fill="#F24E1E"/>
@@ -727,9 +724,9 @@ export default function UiUxBrandPage() {
                   <div>
                     <div className="flex items-center gap-2">
                       <h4 className="text-[1.05rem] font-black text-slate-800">Figma Studio</h4>
-                      <span className="text-[0.58rem] font-bold bg-[#1161ed]/10 text-[#1161ed] px-2 py-0.5 rounded-md uppercase tracking-wider">Interface Core</span>
+                      <span className="text-[0.58rem] font-bold bg-[#111111]/10 text-[#111111] px-2 py-0.5 rounded-md uppercase tracking-wider">Interface Core</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Architecting atomic design tokens, interactive prototypes, fluid layouts, and production-ready component libraries.
                     </p>
                   </div>
@@ -748,7 +745,7 @@ export default function UiUxBrandPage() {
                       <h4 className="text-[1.05rem] font-black text-slate-800">Adobe Photoshop</h4>
                       <span className="text-[0.58rem] font-bold bg-blue-500/10 text-blue-600 px-2 py-0.5 rounded-md uppercase tracking-wider">Raster Graphics</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Advanced picture composition, luxury image editing, custom texture shading, and ultra-high-fidelity product showcases.
                     </p>
                   </div>
@@ -767,7 +764,7 @@ export default function UiUxBrandPage() {
                       <h4 className="text-[1.05rem] font-black text-slate-800">Adobe Illustrator</h4>
                       <span className="text-[0.58rem] font-bold bg-amber-500/10 text-amber-600 px-2 py-0.5 rounded-md uppercase tracking-wider">Vector Assets</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Designing sleek logos, custom scale iconography, complex path illustrations, and scalable branding guides.
                     </p>
                   </div>
@@ -792,7 +789,7 @@ export default function UiUxBrandPage() {
                       <h4 className="text-[1.05rem] font-black text-slate-800">Canva Design</h4>
                       <span className="text-[0.58rem] font-bold bg-purple-500/10 text-purple-600 px-2 py-0.5 rounded-md uppercase tracking-wider">Rapid Collateral</span>
                     </div>
-                    <p className="text-slate-500 text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
+                    <p className="text-[#111111] text-xs sm:text-[0.8rem] leading-relaxed mt-1 font-semibold">
                       Sleek marketing banners, ready-to-post social layouts, editable corporate decks, and fast team collateral.
                     </p>
                   </div>
@@ -804,24 +801,24 @@ export default function UiUxBrandPage() {
         </section>
 
         
-        <section className="relative rounded-[40px] bg-gradient-to-tr from-[#1161ed]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60">
+        <section className="relative rounded-[40px] bg-gradient-to-tr from-[#111111]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60">
           
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#1161ed] opacity-5 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#111111] opacity-5 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8b5cf6] opacity-5 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(#1161ed_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
 
           <div className="relative z-10 max-w-[650px] mx-auto">
             <h2 className="text-3xl sm:text-[2.8rem] font-black tracking-tight leading-tight mb-5 text-slate-900">
               {"Let's Design Your Future Identity"}
             </h2>
-            <p className="text-slate-500 max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-semibold">
+            <p className="text-[#111111] max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-semibold">
               Our UI/UX specialists are ready to architect responsive wireframe
               modules, custom variables guidelines, or interactive vector
               components.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#1161ed] via-[#3b82f6] to-[#8b5cf6] hover:from-[#0c4ec3] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.15)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.15)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Initiate Blueprint Estimate
             </Link>

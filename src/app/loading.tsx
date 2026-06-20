@@ -3,8 +3,8 @@ import React from "react";
 export default function Loading() {
   return (
     <div className="w-full bg-[#fafbfc] min-h-[80vh] overflow-hidden select-none relative">
-      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-[#1161ed]/[0.02] rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#3b82f6]/[0.02] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-[#111111]/[0.02] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#2A2A2A]/[0.02] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-[1100px] mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

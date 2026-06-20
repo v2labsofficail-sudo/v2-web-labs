@@ -103,8 +103,8 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
 
   return (
     <div className="relative w-full overflow-visible z-10 px-2 sm:px-6">
-      <div className="absolute -left-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#1161ed]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
-      <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#3b82f6]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
+      <div className="absolute -left-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#111111]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
+      <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#2A2A2A]/5 rounded-full blur-[80px] pointer-events-none -z-10" />
 
       <div
         ref={containerRef}
@@ -125,11 +125,11 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               key={idx}
               className={`snap-center shrink-0 w-[290px] sm:w-[325px] md:w-[340px] bg-white rounded-3xl border border-black/[0.03] p-6 shadow-sm transition-all duration-500 flex flex-col items-center text-center relative group overflow-hidden ${
                 isActive 
-                  ? "scale-[1.03] md:scale-[1.05] border-[#1161ed]/30 shadow-[0_20px_50px_rgba(17,97,237,0.12)] z-10" 
+                  ? "scale-[1.03] md:scale-[1.05] border-[#111111]/30 shadow-[0_20px_50px_rgba(17,97,237,0.12)] z-10" 
                   : "opacity-80 scale-95 hover:opacity-100 hover:scale-[0.98] duration-300"
               }`}
             >
-              <div className={`absolute -inset-[1px] bg-gradient-to-br from-[#1161ed] to-[#3b82f6] rounded-3xl -z-10 blur-[4px] transition-opacity duration-300 ${
+              <div className={`absolute -inset-[1px] bg-gradient-to-br from-[#2F2FE4] to-[#111111] rounded-3xl -z-10 blur-[4px] transition-opacity duration-300 ${
                 isActive 
                   ? "opacity-30 animate-pulse" 
                   : "opacity-0 group-hover:opacity-30"
@@ -175,7 +175,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-8 h-8 rounded-lg bg-white/10 text-white hover:bg-white hover:text-[#1161ed] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
+                      className="w-8 h-8 rounded-lg bg-white/10 text-white hover:bg-white hover:text-[#111111] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
                       aria-label="LinkedIn"
                     >
                       in
@@ -194,18 +194,18 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                 </div>
               </div>
 
-              <div className="mb-2.5 inline-flex min-h-[3rem] items-center justify-center rounded-full border border-[#1161ed]/15 bg-[#1161ed]/[0.06] px-4 py-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
-                <span className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#1161ed] leading-relaxed">
+              <div className="mb-2.5 inline-flex min-h-[3rem] items-center justify-center rounded-full border border-[#111111]/15 bg-[#111111]/[0.06] px-4 py-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
+                <span className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#111111] leading-relaxed">
                   {member.role}
                 </span>
               </div>
-              <h3 className="mb-2 bg-gradient-to-r from-slate-900 via-slate-800 to-[#1161ed] bg-clip-text text-[1.2rem] font-black tracking-[-0.02em] text-transparent transition-all duration-300 group-hover:tracking-[-0.03em]">
+              <h3 className="mb-2 bg-gradient-to-r from-[#111111] via-[#2F2FE4] to-[#111111] bg-clip-text text-[1.2rem] font-black tracking-[-0.02em] text-transparent transition-all duration-300 group-hover:tracking-[-0.03em]">
                 {member.name}
               </h3>
               
               <button 
                 onClick={(e) => handleCardClick(e, member)}
-                className="mt-3 text-[0.72rem] font-black uppercase tracking-wider text-[#1161ed] hover:text-[#0c4ec3] flex items-center gap-1 transition-colors"
+                className="mt-3 text-[0.72rem] font-black uppercase tracking-wider text-[#111111] hover:text-[#000000] flex items-center gap-1 transition-colors"
               >
                 Read Journey
                 <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -220,7 +220,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6 max-w-[1100px] mx-auto px-6 mt-4">
         <div className="w-full sm:w-1/3 h-[2px] bg-slate-200 rounded-full relative overflow-hidden hidden md:block">
           <div 
-            className="absolute top-0 bottom-0 left-0 bg-[#1161ed] transition-all duration-300 rounded-full"
+            className="absolute top-0 bottom-0 left-0 bg-[#111111] transition-all duration-300 rounded-full"
             style={{
               width: `${((activeIndex + 1) / team.length) * 100}%`
             }}
@@ -236,7 +236,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                 onClick={() => scrollToIndex(idx)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
                   isActive 
-                    ? "w-8 bg-[#1161ed]" 
+                    ? "w-8 bg-[#111111]" 
                     : "w-2.5 bg-slate-300 hover:bg-slate-400"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
@@ -248,7 +248,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
         <div className="flex gap-3">
           <button
             onClick={handlePrev}
-            className="w-12 h-12 rounded-full border border-slate-200 bg-white/70 backdrop-blur-md text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#1161ed] hover:border-[#1161ed]/30 active:scale-95 hover:shadow-lg transition-all"
+            className="w-12 h-12 rounded-full border border-slate-200 bg-white/70 backdrop-blur-md text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#111111] hover:border-[#111111]/30 active:scale-95 hover:shadow-lg transition-all"
             aria-label="Previous Team Member"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -258,7 +258,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
           
           <button
             onClick={handleNext}
-            className="w-12 h-12 rounded-full border border-slate-200 bg-white/70 backdrop-blur-md text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#1161ed] hover:border-[#1161ed]/30 active:scale-95 hover:shadow-lg transition-all"
+            className="w-12 h-12 rounded-full border border-slate-200 bg-white/70 backdrop-blur-md text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#111111] hover:border-[#111111]/30 active:scale-95 hover:shadow-lg transition-all"
             aria-label="Next Team Member"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -278,7 +278,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
           <div className="bg-white border border-slate-200 rounded-[32px] w-full max-w-[550px] overflow-hidden shadow-2xl relative z-10 flex flex-col animate-scaleUp">
             <button 
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors font-bold text-sm"
+              className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-[#111111] flex items-center justify-center transition-colors font-bold text-sm"
               aria-label="Close modal"
             >
               ✕
@@ -310,15 +310,15 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
 
             <div className="p-8 text-slate-800 flex-1">
               <div className="mb-6">
-                <span className="text-[0.68rem] font-black uppercase tracking-[0.12em] text-[#1161ed] block mb-2">Core Philosophy</span>
-                <p className="text-slate-600 text-sm italic font-medium leading-relaxed bg-[#1161ed]/[0.03] border-l-2 border-[#1161ed] p-3.5 rounded-r-xl">
+                <span className="text-[0.68rem] font-black uppercase tracking-[0.12em] text-[#111111] block mb-2">Core Philosophy</span>
+                <p className="text-[#111111] text-sm italic font-medium leading-relaxed bg-[#111111]/[0.03] border-l-2 border-[#111111] p-3.5 rounded-r-xl">
                   &quot;{selectedMember.quote}&quot;
                 </p>
               </div>
 
               <div className="mb-6">
-                <span className="text-[0.68rem] font-black uppercase tracking-[0.12em] text-slate-400 block mb-2">Professional Background & Bio</span>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <span className="text-[0.68rem] font-black uppercase tracking-[0.12em] text-[#111111] block mb-2">Professional Background & Bio</span>
+                <p className="text-[#111111] text-sm leading-relaxed">
                   {selectedMember.bio}
                 </p>
               </div>
@@ -327,7 +327,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                 <div className="flex gap-2">
                   <a
                     href={selectedMember.linkedin}
-                    className="px-4 py-2 rounded-xl bg-[#1161ed]/[0.08] hover:bg-[#1161ed] text-[#1161ed] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5"
+                    className="px-4 py-2 rounded-xl bg-[#111111]/[0.08] hover:bg-[#111111] text-[#111111] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5"
                   >
                     LinkedIn
                   </a>
