@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import AlternatingText from "@/components/AlternatingText";
 import Image from "next/image";
 
 const SVG = {
@@ -267,12 +268,12 @@ export default function SaasProductPage() {
         <section id="hero" className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-20 md:mb-28">
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col text-left items-start">
-            <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-8 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+            <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-8 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
               <span className="w-2 h-2 bg-[#22c55e] rounded-full animate-ping"></span>
               SaaS Engine Studio
             </div>
             <h1 className="text-[clamp(2.2rem,5.5vw,4.2rem)] font-black leading-[1.1] text-[#0F172A] mb-8 tracking-tight">
-              Building scalable SaaS products <span>engineered for growth.</span>
+              Building scalable SaaS products <AlternatingText>engineered for growth.</AlternatingText>
             </h1>
             <p className="text-[#111111] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
               From MVPs to enterprise-grade platforms, V2 Labs develops high-performance software products with modern architecture, automation, and scalable infrastructure.
@@ -282,7 +283,7 @@ export default function SaasProductPage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center justify-center px-8 py-4.5 bg-gradient-to-r from-[#2F2FE4] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_8px_25px_rgba(17,97,237,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
+                className="inline-flex items-center justify-center px-8 py-4.5 bg-gradient-to-r from-[#0055DA] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_8px_25px_rgba(17, 97, 237,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
               >
                 Start Your Product
               </Link>
@@ -302,7 +303,7 @@ export default function SaasProductPage() {
             <div className="absolute w-[300px] h-[300px] bg-gradient-to-tr from-[#111111]/10 to-[#2A2A2A]/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
             
             {/* Dashboard UI panel with mock browser framework */}
-            <div className="w-full max-w-[460px] rounded-3xl border border-[#111111]/10 bg-white shadow-[0_25px_60px_rgba(17,97,237,0.12)] overflow-hidden hover:-translate-y-1 transition-all duration-300">
+            <div className="w-full max-w-[460px] rounded-3xl border border-[#111111]/10 bg-white shadow-[0_25px_60px_rgba(17, 97, 237,0.12)] overflow-hidden hover:-translate-y-1 transition-all duration-300">
               
               {/* Browser bar header */}
               <div className="flex items-center justify-between bg-slate-50/80 border-b border-slate-100 px-5 py-3.5">
@@ -390,7 +391,7 @@ export default function SaasProductPage() {
             {productsWeBuild.map((p, idx) => (
               <div 
                 key={idx} 
-                className="p-6 rounded-[24px] border border-black/[0.03] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(17,97,237,0.06)] hover:border-[#111111]/20 group flex flex-col justify-between"
+                className="p-6 rounded-[24px] border border-black/[0.03] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(17, 97, 237,0.06)] hover:border-[#111111]/20 group flex flex-col justify-between"
               >
                 <div>
                   {/* Icon Container */}
@@ -404,7 +405,7 @@ export default function SaasProductPage() {
                 </div>
                 
                 {/* Subtle card bottom line accent */}
-                <div className="h-[3px] w-0 bg-gradient-to-r from-[#2F2FE4] to-[#111111] rounded-full mt-5 group-hover:w-[40px] transition-all duration-300" />
+                <div className="h-[3px] w-0 bg-gradient-to-r from-[#0055DA] to-[#111111] rounded-full mt-5 group-hover:w-[40px] transition-all duration-300" />
               </div>
             ))}
           </div>
@@ -447,7 +448,7 @@ export default function SaasProductPage() {
                   onMouseLeave={() => setActiveArchStep(null)}
                   className={`p-4.5 rounded-2xl border transition-all duration-300 cursor-pointer relative overflow-hidden flex items-center gap-4.5 ${
                     activeArchStep === step.id 
-                      ? "bg-white border-[#111111] shadow-[0_12px_30px_rgba(17,97,237,0.06)] -translate-y-0.5" 
+                      ? "bg-white border-[#111111] shadow-[0_12px_30px_rgba(17, 97, 237,0.06)] -translate-y-0.5" 
                       : "bg-white/80 border-slate-100 hover:border-[#111111]/30"
                   }`}
                 >
@@ -500,12 +501,12 @@ export default function SaasProductPage() {
               <div key={idx} className="relative flex items-start gap-4 mb-8 last:mb-0 group">
                 
                 {/* Timeline Circle Bullet */}
-                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#111111] flex items-center justify-center shadow-[0_0_12px_rgba(17,97,237,0.12)] z-10">
+                <div className="absolute left-[-26px] w-9 h-9 rounded-full bg-white border-[3px] border-[#111111] flex items-center justify-center shadow-[0_0_12px_rgba(17, 97, 237,0.12)] z-10">
                   <span className="text-[0.75rem] font-black text-[#111111] tracking-tighter">{s.phase}</span>
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 p-5 rounded-2xl border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_15px_30px_rgba(17,97,237,0.05)] hover:border-[#111111]/20 transition-all duration-300 flex flex-col text-left">
+                <div className="flex-1 p-5 rounded-2xl border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_15px_30px_rgba(17, 97, 237,0.05)] hover:border-[#111111]/20 transition-all duration-300 flex flex-col text-left">
                   <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] tracking-tight mb-1 group-hover:text-[#111111] transition-colors">{s.name}</h3>
                   <p className="text-[#111111] text-xs leading-relaxed">{s.desc}</p>
                 </div>
@@ -529,7 +530,7 @@ export default function SaasProductPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-[1100px] mx-auto">
             
             {/* Card 1: Calendar Plus */}
-            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17,97,237,0.08)] hover:border-[#111111]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
+            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17, 97, 237,0.08)] hover:border-[#111111]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
               <div className="absolute top-0 right-0 w-28 h-28 bg-[#111111]/5 rounded-bl-full pointer-events-none -z-10" />
               <div>
                 <div className="flex justify-between items-center mb-6">
@@ -601,7 +602,7 @@ export default function SaasProductPage() {
             </div>
 
             {/* Card 2: ThinkNShop */}
-            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17,97,237,0.08)] hover:border-[#111111]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
+            <div className="p-8 rounded-[32px] border border-black/[0.03] bg-white shadow-sm hover:shadow-[0_30px_60px_rgba(17, 97, 237,0.08)] hover:border-[#111111]/20 transition-all duration-500 group flex flex-col justify-between overflow-hidden relative text-left">
               <div className="absolute top-0 right-0 w-28 h-28 bg-[#111111]/5 rounded-bl-full pointer-events-none -z-10" />
               <div>
                 <div className="flex justify-between items-center mb-6">
@@ -692,9 +693,9 @@ export default function SaasProductPage() {
             {saasFeatures.map((feat, idx) => (
               <div 
                 key={idx} 
-                className="px-6 py-4 rounded-[20px] bg-white border border-slate-100 shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#111111]/30 hover:shadow-[0_15px_30px_rgba(17,97,237,0.06)] group flex items-center gap-3.5"
+                className="px-6 py-4 rounded-[20px] bg-white border border-slate-100 shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#111111]/30 hover:shadow-[0_15px_30px_rgba(17, 97, 237,0.06)] group flex items-center gap-3.5"
               >
-                <div className="h-[4px] w-[50%] absolute top-0 left-0 bg-gradient-to-r from-[#2F2FE4] to-[#111111] rounded-tr group-hover:w-full transition-all duration-300" />
+                <div className="h-[4px] w-[50%] absolute top-0 left-0 bg-gradient-to-r from-[#0055DA] to-[#111111] rounded-tr group-hover:w-full transition-all duration-300" />
                 
                 {/* Glowing Bullet Node */}
                 <div className="w-5.5 h-5.5 rounded-full bg-[#111111]/[0.08] flex items-center justify-center text-[0.62rem] font-black text-[#111111] shadow-inner select-none shrink-0 group-hover:bg-[#111111] group-hover:text-white transition-all duration-300">
@@ -711,7 +712,7 @@ export default function SaasProductPage() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center">
-                <span className="text-[2.2rem] md:text-[2.8rem] font-black text-[#111111] tracking-tight mb-1 bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">{stat.value}</span>
+                <span className="text-[2.2rem] md:text-[2.8rem] font-black text-[#111111] tracking-tight mb-1 bg-gradient-to-r from-[#0055DA] to-[#111111] bg-clip-text text-transparent">{stat.value}</span>
                 <span className="text-[#111111] text-[0.68rem] md:text-[0.75rem] font-black uppercase tracking-widest leading-snug">{stat.label}</span>
               </div>
             ))}

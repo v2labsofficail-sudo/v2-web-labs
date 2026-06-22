@@ -64,8 +64,8 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
 
       <ScrollReveal delay={100}>
         <section className="max-w-5xl mx-auto px-6 pb-16">
-          <div className="rounded-3xl border border-slate-200/40 bg-white/40 backdrop-blur-xl p-8 shadow-[0_8px_32px_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_20px_45px_rgba(17,97,237,0.06)] hover:border-[#111111]/30 hover:bg-white/60 group relative overflow-hidden gpu-accelerated">
-            <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          <div className="rounded-3xl border border-slate-200/40 bg-white/40 backdrop-blur-xl p-8 shadow-[0_8px_32px_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_20px_45px_rgba(17, 97, 237,0.06)] hover:border-[#111111]/30 hover:bg-white/60 group relative overflow-hidden gpu-accelerated">
+            <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17, 97, 237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             <div className="relative z-10">
               <h2 className="text-2xl font-black tracking-tight">
                 Recommended production URL structure

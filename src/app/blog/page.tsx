@@ -1,3 +1,4 @@
+import AlternatingText from "@/components/AlternatingText";
 import Link from "next/link";
 import { blogCategories } from "@/lib/site-data";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -26,7 +27,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             Insights Hub
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none max-w-4xl">
-            Content architecture for <span>SEO, service discovery, and long-tail authority.</span>
+            Content architecture for <AlternatingText>SEO, service discovery, and long-tail authority.</AlternatingText>
           </h1>
           <p className="mt-6 max-w-3xl text-[#111111] text-base sm:text-lg leading-8">
             The blog is structured around service-led categories so each article can
@@ -46,10 +47,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             {filteredCategories.map((category) => (
               <article
                 key={category.slug}
-                className="rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 p-7 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 group relative overflow-hidden flex flex-col justify-between min-h-[290px] gpu-accelerated"
+                className="rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 p-7 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group relative overflow-hidden flex flex-col justify-between min-h-[290px] gpu-accelerated"
               >
-                <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#2F2FE4] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#0055DA] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17, 97, 237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="relative z-10 flex-1 flex flex-col justify-between">
                   <div>
                     <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#111111]">

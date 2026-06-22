@@ -183,7 +183,7 @@ export default function Footer() {
             </div>
             <a
               href="/contact"
-              className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-[#1161ed] px-5 py-2.5 text-[0.82rem] font-bold text-white transition-all duration-300 hover:bg-[#0c4ec3] hover:shadow-[0_8px_24px_rgba(17,97,237,0.18)]"
+              className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-[#1161ed] px-5 py-2.5 text-[0.82rem] font-bold text-white transition-all duration-300 hover:bg-[#0c4ec3] hover:shadow-[0_8px_24px_rgba(17, 97, 237,0.18)]"
             >
               Contact Us
             </a>

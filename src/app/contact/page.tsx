@@ -1,4 +1,5 @@
 "use client";
+import AlternatingText from "@/components/AlternatingText";
 
 import React, { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -116,11 +117,11 @@ export default function ContactPage() {
       <ScrollReveal>
         <section className="border-b border-slate-200 bg-white px-6 py-20">
           <div className="mx-auto max-w-[760px] text-center">
-            <p className="text-[0.78rem] font-extrabold uppercase tracking-[0.18em] text-[#2F2FE4]">
+            <p className="text-[0.78rem] font-extrabold uppercase tracking-[0.18em] text-[#0055DA]">
               Contact
             </p>
             <h1 className="mt-4 text-4xl font-black tracking-tight text-[#111111] sm:text-5xl">
-              Let&apos;s talk about <span>your project</span>
+              Let&apos;s talk about <AlternatingText>your project</AlternatingText>
             </h1>
             <p className="mt-5 text-base leading-8 text-[#111111] sm:text-lg">
               Fill out the form below and our team will get back to you.
@@ -157,7 +158,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#2F2FE4] focus:ring-4 focus:ring-[#2F2FE4]/10"
+                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#0055DA] focus:ring-4 focus:ring-[#0055DA]/10"
                   />
                 </div>
 
@@ -172,7 +173,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@example.com"
-                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#2F2FE4] focus:ring-4 focus:ring-[#2F2FE4]/10"
+                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#0055DA] focus:ring-4 focus:ring-[#0055DA]/10"
                   />
                 </div>
               </div>
@@ -188,7 +189,7 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 90000 00000"
-                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#2F2FE4] focus:ring-4 focus:ring-[#2F2FE4]/10"
+                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#0055DA] focus:ring-4 focus:ring-[#0055DA]/10"
                   />
                 </div>
 
@@ -200,7 +201,7 @@ export default function ContactPage() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#2F2FE4] focus:ring-4 focus:ring-[#2F2FE4]/10"
+                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#0055DA] focus:ring-4 focus:ring-[#0055DA]/10"
                   >
                     {serviceOptions.map((option) => (
                       <option key={option.value} value={option.value}>
@@ -219,7 +220,7 @@ export default function ContactPage() {
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#2F2FE4] focus:ring-4 focus:ring-[#2F2FE4]/10"
+                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#0055DA] focus:ring-4 focus:ring-[#0055DA]/10"
                 >
                   {budgetOptions.map((option) => (
                     <option key={option} value={option}>
@@ -239,14 +240,14 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your project..."
-                  className="min-h-[180px] w-full resize-none rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#2F2FE4] focus:ring-4 focus:ring-[#2F2FE4]/10"
+                  className="min-h-[180px] w-full resize-none rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm font-medium text-[#111111] outline-none transition focus:border-[#0055DA] focus:ring-4 focus:ring-[#0055DA]/10"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex w-full items-center justify-center rounded-2xl bg-[#111111] px-6 py-4 text-sm font-extrabold uppercase tracking-[0.16em] text-white transition hover:bg-[#2F2FE4] disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex w-full items-center justify-center rounded-2xl bg-[#111111] px-6 py-4 text-sm font-extrabold uppercase tracking-[0.16em] text-white transition hover:bg-[#0055DA] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {loading ? "Submitting..." : "Send Message"}
               </button>

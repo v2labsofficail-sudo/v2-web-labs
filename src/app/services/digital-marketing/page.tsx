@@ -1,3 +1,4 @@
+import AlternatingText from "@/components/AlternatingText";
 import Link from "next/link";
 
 const pillars = [
@@ -31,7 +32,7 @@ export default function DigitalMarketingPage() {
           Digital Marketing
         </p>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none max-w-4xl">
-          SEO and growth systems that turn <span>service pages into demand engines.</span>
+          SEO and growth systems that turn <AlternatingText>service pages into demand engines.</AlternatingText>
         </h1>
         <p className="mt-6 max-w-3xl text-[#111111] text-base sm:text-lg leading-8">
           This service connects search strategy, landing-page UX, and conversion-focused

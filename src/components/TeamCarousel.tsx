@@ -125,11 +125,11 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               key={idx}
               className={`snap-center shrink-0 w-[290px] sm:w-[325px] md:w-[340px] bg-white rounded-3xl border border-black/[0.03] p-6 shadow-sm transition-all duration-500 flex flex-col items-center text-center relative group overflow-hidden ${
                 isActive 
-                  ? "scale-[1.03] md:scale-[1.05] border-[#111111]/30 shadow-[0_20px_50px_rgba(17,97,237,0.12)] z-10" 
+                  ? "scale-[1.03] md:scale-[1.05] border-[#111111]/30 shadow-[0_20px_50px_rgba(17, 97, 237,0.12)] z-10" 
                   : "opacity-80 scale-95 hover:opacity-100 hover:scale-[0.98] duration-300"
               }`}
             >
-              <div className={`absolute -inset-[1px] bg-gradient-to-br from-[#2F2FE4] to-[#111111] rounded-3xl -z-10 blur-[4px] transition-opacity duration-300 ${
+              <div className={`absolute -inset-[1px] bg-gradient-to-br from-[#0055DA] to-[#111111] rounded-3xl -z-10 blur-[4px] transition-opacity duration-300 ${
                 isActive 
                   ? "opacity-30 animate-pulse" 
                   : "opacity-0 group-hover:opacity-30"
@@ -199,7 +199,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                   {member.role}
                 </span>
               </div>
-              <h3 className="mb-2 bg-gradient-to-r from-[#111111] via-[#2F2FE4] to-[#111111] bg-clip-text text-[1.2rem] font-black tracking-[-0.02em] text-transparent transition-all duration-300 group-hover:tracking-[-0.03em]">
+              <h3 className="mb-2 bg-gradient-to-r from-[#111111] via-[#0055DA] to-[#111111] bg-clip-text text-[1.2rem] font-black tracking-[-0.02em] text-transparent transition-all duration-300 group-hover:tracking-[-0.03em]">
                 {member.name}
               </h3>
               

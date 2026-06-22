@@ -1,5 +1,6 @@
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import AlternatingText from "@/components/AlternatingText";
 
 export default function WebPlatformPage() {
   const STACKS = [
@@ -8,7 +9,7 @@ export default function WebPlatformPage() {
       badge: "User Interface & Experience",
       desc: "Pixel-perfect conversion of designs into blazing-fast, responsive web interfaces. We construct semantic, accessible React layouts with flawless Core Web Vitals.",
       techs: ["Next.js (App Router)", "React 19 & TypeScript", "Tailwind CSS v4", "Framer Motion Animations"],
-      gradient: "from-[#2F2FE4] to-[#111111]",
+      gradient: "from-[#0055DA] to-[#111111]",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
@@ -56,13 +57,13 @@ export default function WebPlatformPage() {
         {/* SECTION 1: HERO & CORE HEADING STATEMENT */}
         {/* ========================================================================= */}
         <header className="mb-20 relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
             <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             Performance Engine
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            High-Performance Web <span>Engineering</span>
+            High-Performance Web <AlternatingText>Engineering</AlternatingText>
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium">
@@ -90,7 +91,7 @@ export default function WebPlatformPage() {
             {STACKS.map((stack, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[360px]"
+                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17, 97, 237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.09)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[360px]"
               >
                 {/* Premium Gradient Top Border Strip */}
                 <div className={`h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r ${stack.gradient} rounded-t-[32px]`} />
@@ -171,7 +172,7 @@ export default function WebPlatformPage() {
                     desc: "Decoupling standard routing layouts from backend APIs to prevent database injections and maintain 100% platform uptime.",
                   },
                 ].map((spec, i) => (
-                  <div key={i} className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17,97,237,0.01)] hover:border-[#111111]/15 transition-all duration-300">
+                  <div key={i} className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17, 97, 237,0.01)] hover:border-[#111111]/15 transition-all duration-300">
                     <h4 className="text-slate-900 font-extrabold text-[0.84rem] tracking-tight mb-1.5">{spec.title}</h4>
                     <p className="text-[#111111] text-[0.72rem] leading-relaxed font-semibold">{spec.desc}</p>
                   </div>
@@ -204,7 +205,7 @@ export default function WebPlatformPage() {
                 <div className="relative z-10 pt-4 border-t border-white/5">
                   <Link
                     href="/contact"
-                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
+                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17, 97, 237,0.3)] hover:shadow-[0_10px_35px_rgba(17, 97, 237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
                   >
                     Start Your Project
                   </Link>

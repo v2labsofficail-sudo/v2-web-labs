@@ -1,4 +1,5 @@
 "use client";
+import AlternatingText from "@/components/AlternatingText";
 
 import React, { useState, useEffect } from "react";
 
@@ -62,7 +63,7 @@ export default function PrivacyPage() {
             LEGAL FRAMEWORK
           </p>
           <h1 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-none mb-6">
-            Privacy <span>Policy</span>
+            Privacy <AlternatingText>Policy</AlternatingText>
           </h1>
           <p className="text-base sm:text-lg text-[#111111] max-w-[620px] mx-auto leading-relaxed">
             Last Updated: May 29, 2026. This Privacy Policy details how V2 Labs

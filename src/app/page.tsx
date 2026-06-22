@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildFaqJsonLd } from "@/lib/seo";
 import ScrollReveal from "@/components/ScrollReveal";
+import AlternatingText from "@/components/AlternatingText";
+import Typewriter from "@/components/Typewriter";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const TESTIMONIALS = [
@@ -564,7 +566,7 @@ function TiltIllustration() {
               <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:12px_12px] opacity-[0.25] pointer-events-none" />
               
               <div className="relative z-10 flex gap-3.5 items-start">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#2F2FE4] to-[#111111] text-white flex items-center justify-center font-poppins font-black text-sm shadow-[0_4px_12px_rgba(17,97,237,0.18)]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#0055DA] to-[#111111] text-white flex items-center justify-center font-poppins font-black text-sm shadow-[0_4px_12px_rgba(17,97,237,0.18)]">
                   AT
                 </div>
                 <div>
@@ -728,7 +730,7 @@ function HubSection() {
         <div className="flex-1">
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
             Company-wide <br />
-            <span className="text-[#111111]">Engineering Solutions</span> <br />
+            <AlternatingText>Engineering Solutions</AlternatingText> <br />
             Made Easy
           </h2>
           <p className="text-lg text-[#111111] mb-8 font-medium leading-relaxed">
@@ -1054,18 +1056,12 @@ export default function Home() {
         className="pt-16 pb-8 md:pt-24 md:pb-16 flex flex-col items-center relative overflow-hidden"
       >
         <div className="flex flex-col text-center items-center w-full max-w-[900px] mx-auto relative z-10 px-4">
-          <div className="inline-flex items-center gap-2 bg-[#2F2FE4]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#2F2FE4] tracking-[0.15em] mb-6 border border-[#2F2FE4]/15 shadow-[0_2px_10px_rgba(17,97,237,0.06)] animate-fade-in-up select-none">
-            <span className="w-1.5 h-1.5 bg-[#2F2FE4] rounded-full animate-ping"></span>
-            SEO • GEO • AEO ready delivery
-          </div>
-          
-          <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-black font-poppins leading-[1.05] text-[#0F172A] mb-6 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
-            AI systems, websites, and brand experiences <br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-[#2F2FE4] via-[#0F172A] to-[#111111] bg-clip-text text-transparent">
-              built to rank, convert,
-            </span>{" "}
-            <br className="hidden md:block" />
-            and scale.
+
+          <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-black font-poppins leading-[1.05] text-[#111111] mb-6 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
+            We build, innovate, and scale <br className="hidden md:block" />
+            <span className="text-[#0055DA] block mt-2 min-h-[1.2em]">
+              <Typewriter phrases={["AI systems.", "digital brands.", "websites & businesses."]} />
+            </span>
           </h1>
           
           <p className="text-[#111111] text-base md:text-xl leading-[1.7] max-w-[700px] mb-8 font-semibold font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
@@ -1081,7 +1077,7 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-[#2F2FE4] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_10px_30px_rgba(15,23,42,0.16)] hover:shadow-[0_14px_36px_rgba(15,23,42,0.2)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-[#0055DA] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_10px_30px_rgba(15,23,42,0.16)] hover:shadow-[0_14px_36px_rgba(15,23,42,0.2)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
             >
               Start your project
             </Link>
@@ -1093,9 +1089,9 @@ export default function Home() {
               ["Web + SEO", "Fast, indexable websites with strong technical SEO foundations."],
               ["Brand + Growth", "Design systems, landing pages, and conversion-focused messaging."],
             ].map(([title, copy]) => (
-              <div key={title} className="rounded-[24px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 relative overflow-hidden group">
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2F2FE4] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <p className="text-sm font-black uppercase tracking-[0.12em] text-[#2F2FE4] relative z-10">{title}</p>
+              <div key={title} className="rounded-[24px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0055DA] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="text-sm font-black uppercase tracking-[0.12em] text-[#0055DA] relative z-10">{title}</p>
                 <p className="mt-2 text-sm font-medium leading-6 text-[#111111] relative z-10">{copy}</p>
               </div>
             ))}
@@ -1120,7 +1116,7 @@ export default function Home() {
 
         <div className="text-center mb-16 relative z-10 px-4">
           <h2 className="text-[clamp(2rem,5vw,3rem)] text-[#0F172A] font-extrabold tracking-tight mb-4">
-            Why <span className="bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">V2Labs</span> Engineering?
+            Why <AlternatingText>V2Labs</AlternatingText> Engineering?
           </h2>
           <p className="text-[#111111] text-lg max-w-[700px] mx-auto font-semibold font-poppins">
             V2Labs is the world-leading centrally managed solution for bespoke software ecosystems, platforms, and AI automations.
@@ -1198,7 +1194,7 @@ export default function Home() {
             <div className="flex-1 lg:pl-10">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
                 Extend Your <br />
-                <span className="text-[#111111]">Engineering Impact</span>
+                <AlternatingText>Engineering Impact</AlternatingText>
               </h2>
               <p className="text-lg text-[#111111] mb-8 font-medium leading-relaxed max-w-[500px]">
                 Integrate custom analytics, scalable pipelines, and real-time monitoring directly into your workflows. Manage everything beautifully.
@@ -1238,7 +1234,7 @@ export default function Home() {
         <section className="py-20 md:py-32 bg-[#FFFFFF] relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
           <div className="max-w-[1200px] mx-auto px-4 flex flex-col items-center text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
-              Flawless on <span className="text-[#111111]">Every Device</span>
+              Flawless on <AlternatingText>Every Device</AlternatingText>
             </h2>
             <p className="text-lg text-[#111111] mb-12 font-medium leading-relaxed max-w-[700px]">
               Whether you're managing pipelines on your desktop, checking metrics on a tablet, or responding to alerts on your phone, V2Labs ensures a seamless, responsive experience across all your screens.
@@ -1326,7 +1322,7 @@ export default function Home() {
             Our Process
           </div>
           <h2 className="text-3xl md:text-[2.5rem] font-extrabold text-[#0F172A] mb-3 tracking-tight">
-            How <span className="text-[#111111]">We Work</span>
+            How <AlternatingText>We Work</AlternatingText>
           </h2>
           <p className="text-[#111111] text-base md:text-lg max-w-[600px] mx-auto">
             A clear, step-by-step process that takes you from idea to launch
@@ -1351,7 +1347,7 @@ export default function Home() {
                 {/* Premium Glassmorphic Step Card on Right */}
                 <div className="flex-1 p-4 pl-6 rounded-2xl border-[2px] border-[#111111]/18 bg-gradient-to-r from-white to-[#111111]/[0.05] shadow-[0_10px_25px_rgba(15,23,42,0.04),0_3px_10px_rgba(17,97,237,0.04),inset_0_0_12px_rgba(17,97,237,0.04)] hover:shadow-[0_18px_36px_rgba(15,23,42,0.08),0_6px_18px_rgba(17,97,237,0.12)] hover:border-[#111111]/40 transition-all duration-300 relative overflow-hidden flex items-center gap-4">
                   {/* Left Premium Accent Line */}
-                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] to-[#111111]" />
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#0055DA] to-[#111111]" />
 
                   {/* Icon Container with glowing scale reveal */}
                   <div className="w-10 h-10 rounded-xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-[#111111] group-hover:text-white transition-all duration-300 shadow-sm">
@@ -1475,7 +1471,7 @@ export default function Home() {
                         <div className="mb-3 w-14 h-14 rounded-2xl bg-gradient-to-br from-[#111111]/[0.08] to-[#111111]/[0.02] border border-[#111111]/10 flex items-center justify-center text-[#111111]">
                           {s.icon}
                         </div>
-                        <span className="text-[0.7rem] font-black uppercase text-white tracking-widest bg-gradient-to-r from-[#2F2FE4] to-[#111111] px-4 py-1 rounded-full mb-2.5 shadow-[0_2px_8px_rgba(17,97,237,0.2)]">
+                        <span className="text-[0.7rem] font-black uppercase text-white tracking-widest bg-gradient-to-r from-[#0055DA] to-[#111111] px-4 py-1 rounded-full mb-2.5 shadow-[0_2px_8px_rgba(17,97,237,0.2)]">
                           Step {s.step}
                         </span>
                         <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] leading-snug max-w-[140px] tracking-tight">
@@ -1485,7 +1481,7 @@ export default function Home() {
                     </div>
 
                     {/* BACK FACE (Vibrant blue layout with step description - horizontal orientation!) */}
-                    <div className="flip-card-back border-[2px] border-[#111111]/25 bg-gradient-to-br from-[#2F2FE4] to-[#111111] overflow-hidden flex items-center justify-center">
+                    <div className="flip-card-back border-[2px] border-[#111111]/25 bg-gradient-to-br from-[#0055DA] to-[#111111] overflow-hidden flex items-center justify-center">
                       <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.08] to-transparent transition-all duration-500" />
                       <div className="absolute top-0 right-0 w-10 h-10 bg-gradient-to-bl from-white/20 to-transparent rounded-bl-3xl" />
 
@@ -1641,7 +1637,7 @@ export default function Home() {
                 desc: "Don't see your specific industry? We build bespoke operational software tailored to any complex model.",
                 image: "",
                 badge: "Bespoke",
-                gradient: "from-[#2F2FE4] to-[#111111]",
+                gradient: "from-[#0055DA] to-[#111111]",
                 isCTA: true,
               },
             ].map((ind, idx) => {
@@ -1650,7 +1646,7 @@ export default function Home() {
                   <Link
                     key={idx}
                     href="/contact"
-                    className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-gradient-to-br from-[#2F2FE4] to-[#111111] p-6 shadow-[0_8px_32px_rgba(15,23,42,0.05)] hover:shadow-[0_20px_45px_rgba(17,97,237,0.15)] transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
+                    className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-gradient-to-br from-[#0055DA] to-[#111111] p-6 shadow-[0_8px_32px_rgba(15,23,42,0.05)] hover:shadow-[0_20px_45px_rgba(17,97,237,0.15)] transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
                   >
                     <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] opacity-100 animate-pulse pointer-events-none" />
                     <div className="flex flex-col gap-4 relative z-10">
@@ -1701,7 +1697,7 @@ export default function Home() {
               return (
                 <div
                   key={idx}
-                  className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 p-5 sm:p-6 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_55px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
+                  className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 p-5 sm:p-6 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
                 >
                   <div
                     className={`absolute top-0 left-0 h-[4px] bg-gradient-to-r ${ind.gradient} w-0 group-hover:w-full transition-all duration-500 rounded-t-[24px] sm:rounded-t-[32px]`}
@@ -1798,7 +1794,7 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
-              Why Startups Choose <span className="text-[#111111]">V2Labs</span>
+              Why Startups Choose <AlternatingText>V2Labs</AlternatingText>
             </h2>
             <p className="text-[#111111] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
               Engineered for absolute velocity. Architected for rapid enterprise scaling.
@@ -1913,9 +1909,9 @@ export default function Home() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 shadow-[0_10px_30px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 group gpu-accelerated"
+                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 shadow-[0_10px_30px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group gpu-accelerated"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-gradient-to-r from-[#2F2FE4] to-[#111111] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-gradient-to-r from-[#0055DA] to-[#111111] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.06)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center border border-[#111111]/10 group-hover:bg-gradient-to-br group-hover:from-[#111111] group-hover:to-[#2A2A2A] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)] transition-all duration-300 shadow-sm mb-4 md:mb-6">
@@ -1950,7 +1946,7 @@ export default function Home() {
         {/* Section Header */}
         <div className="relative mb-12 text-center md:mb-20 px-6 z-10">
           <h2 className="mx-auto max-w-[800px] text-3xl md:text-[2.6rem] font-extrabold tracking-tight text-[#0F172A] leading-[1.15] font-Outfit">
-            What Our <span>Customers</span> Say
+            What Our <AlternatingText>Customers</AlternatingText> Say
           </h2>
         </div>
 
@@ -2026,7 +2022,7 @@ export default function Home() {
               FAQ
             </p>
             <h2 className="text-[2.2rem] lg:text-[2.8rem] font-extrabold text-[#0F172A] tracking-tight leading-tight mb-4">
-              Frequently Asked <span className="bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">Questions</span>
+              Frequently Asked <AlternatingText>Questions</AlternatingText>
             </h2>
             <p className="text-[1.05rem] text-[#111111] max-w-[620px] mx-auto leading-[1.6]">
               Explore detailed, proper answers about our high-velocity
@@ -2047,7 +2043,7 @@ export default function Home() {
                 }`}
               >
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <span className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#2F2FE4] to-[#111111] transition-transform duration-300 origin-left ${
+                <span className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#0055DA] to-[#111111] transition-transform duration-300 origin-left ${
                   openFaq === idx ? "scale-x-100" : "scale-x-0"
                 }`} />
                 <button

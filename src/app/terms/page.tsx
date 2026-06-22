@@ -1,4 +1,5 @@
 "use client";
+import AlternatingText from "@/components/AlternatingText";
 
 import React, { useState, useEffect } from "react";
 
@@ -62,7 +63,7 @@ export default function TermsPage() {
             GOVERNANCE PROTOCOL
           </p>
           <h1 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-none mb-6">
-            Terms & <span>Conditions</span>
+            Terms & <AlternatingText>Conditions</AlternatingText>
           </h1>
           <p className="text-base sm:text-lg text-[#111111] max-w-[620px] mx-auto leading-relaxed">
             Last Updated: May 29, 2026. These Terms & Conditions define the professional engagement standards and client governance structures of V2 Labs.

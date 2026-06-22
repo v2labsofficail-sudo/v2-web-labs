@@ -187,7 +187,7 @@ export default function Navbar() {
                 }`} />
               </button>
               
-              <div className="invisible opacity-0 absolute top-full left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl min-w-[780px] grid grid-cols-12 gap-5 rounded-3xl p-5 shadow-[0_20px_50px_rgba(17,97,237,0.08)] border border-slate-200/40 transition-all duration-300 translate-y-3 group-hover:visible group-hover:opacity-100 group-hover:translate-y-2.5 z-50">
+              <div className="invisible opacity-0 absolute top-full left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl min-w-[780px] grid grid-cols-12 gap-5 rounded-3xl p-5 shadow-[0_20px_50px_rgba(17, 97, 237,0.08)] border border-slate-200/40 transition-all duration-300 translate-y-3 group-hover:visible group-hover:opacity-100 group-hover:translate-y-2.5 z-50">
                 <div className="col-span-8 grid grid-cols-2 gap-2">
                   {services.map((s) => (
                     <Link 
@@ -297,7 +297,7 @@ export default function Navbar() {
           <div className="hidden min-[901px]:flex items-center gap-3">
             <Link 
               href="/request-a-demo" 
-              className={`group relative inline-flex items-center gap-1.5 bg-white text-[#1161ed] border-2 border-[#1161ed] rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(17,97,237,0.1)] hover:shadow-[0_8px_25px_rgba(17,97,237,0.25)] hover:bg-[#1161ed]/5 active:scale-95 overflow-hidden ${
+              className={`group relative inline-flex items-center gap-1.5 bg-white text-[#1161ed] border-2 border-[#1161ed] rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(17, 97, 237,0.1)] hover:shadow-[0_8px_25px_rgba(17, 97, 237,0.25)] hover:bg-[#1161ed]/5 active:scale-95 overflow-hidden ${
                 isScrolled ? "px-4 py-1.5 text-[0.66rem]" : "px-5 py-2 text-[0.72rem]"
               }`}
             >
@@ -308,7 +308,7 @@ export default function Navbar() {
 
             <Link 
               href="/contact" 
-              className={`group relative inline-flex items-center gap-1.5 bg-slate-900 text-white rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_rgba(17,97,237,0.35)] active:scale-95 overflow-hidden ${
+              className={`group relative inline-flex items-center gap-1.5 bg-slate-900 text-white rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_rgba(17, 97, 237,0.35)] active:scale-95 overflow-hidden ${
                 isScrolled ? "px-4 py-2 text-[0.66rem]" : "px-5 py-2.5 text-[0.72rem]"
               }`}
             >
@@ -469,7 +469,7 @@ export default function Navbar() {
             <Link 
               href="/contact" 
               onClick={() => setIsMenuOpen(false)}
-              className="block w-full bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] text-white text-center py-3.5 rounded-xl font-extrabold text-[0.92rem] shadow-[0_4px_15px_rgba(17,97,237,0.12)] active:scale-[0.99] transition-all"
+              className="block w-full bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] text-white text-center py-3.5 rounded-xl font-extrabold text-[0.92rem] shadow-[0_4px_15px_rgba(17, 97, 237,0.12)] active:scale-[0.99] transition-all"
             >
               Let&apos;s Build Together
             </Link>

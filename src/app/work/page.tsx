@@ -1,4 +1,5 @@
 "use client";
+import AlternatingText from "@/components/AlternatingText";
 
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -11,7 +12,7 @@ export default function WorkPage() {
       badge: "AI-Powered Systems",
       desc: "Full custom engineering of an autonomous talent recruitment matching platform. Implemented advanced semantic vector database search filters and real-time applicant indexing pipelines.",
       stat: "45% Match Speed Optimization",
-      gradient: "from-[#2F2FE4] to-[#111111]",
+      gradient: "from-[#0055DA] to-[#111111]",
       tools: ["Next.js App Router", "FastAPI", "VectorDB", "Tailwind CSS"],
       icon: (
         <svg
@@ -145,13 +146,13 @@ export default function WorkPage() {
         {/* SECTION 1: HERO HEADER (Simplified, No Back Button) */}
         {/* ========================================================================= */}
         <header className="mb-20 relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
             <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             OUR PORTFOLIO
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            Selected <span>Studio Projects</span>
+            Selected <AlternatingText>Studio Projects</AlternatingText>
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium">
@@ -172,7 +173,7 @@ export default function WorkPage() {
               Case Studies
             </div>
             <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight">
-              Real Work, <span>Measured Results</span>
+              Real Work, <AlternatingText>Measured Results</AlternatingText>
             </h2>
             <p className="text-[#111111] text-sm mt-2 max-w-[650px]">
               Review the detailed specifications of systems we have coded and
@@ -184,9 +185,9 @@ export default function WorkPage() {
             {PROJECTS.map((proj, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 shadow-[0_10px_35px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(47,47,228,0.08)] hover:border-[#2F2FE4]/30 group flex flex-col justify-between min-h-[360px]"
+                className="p-8 rounded-[32px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 shadow-[0_10px_35px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group flex flex-col justify-between min-h-[360px]"
               >
-                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17, 97, 237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div
                   className={`h-[5px] w-full absolute top-0 left-0 bg-gradient-to-r ${proj.gradient} rounded-t-[32px]`}
                 />
@@ -280,7 +281,7 @@ export default function WorkPage() {
                 ].map((spec, i) => (
                   <div
                     key={i}
-                    className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17,97,237,0.01)] hover:border-[#111111]/15 transition-all duration-300"
+                    className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17, 97, 237,0.01)] hover:border-[#111111]/15 transition-all duration-300"
                   >
                     <h4 className="text-slate-900 font-extrabold text-[0.84rem] tracking-tight mb-1.5">
                       {spec.title}
@@ -320,7 +321,7 @@ export default function WorkPage() {
                 <div className="relative z-10 pt-4 border-t border-white/5">
                   <Link
                     href="/contact"
-                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
+                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17, 97, 237,0.3)] hover:shadow-[0_10px_35px_rgba(17, 97, 237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
                   >
                     Start Your Project
                   </Link>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import AlternatingText from "@/components/AlternatingText";
 
 
 const SVG = {
@@ -338,7 +339,7 @@ export default function ErpCrmPage() {
               Operational Control
             </div>
             <h1 className="text-[clamp(2.2rem,5.5vw,4.2rem)] font-black leading-[1.1] text-[#0F172A] mb-8 tracking-tight">
-              Intelligent ERP & CRM systems <span>engineered for operational dominance.</span>
+              Intelligent ERP & CRM systems <AlternatingText>engineered for operational dominance.</AlternatingText>
             </h1>
             <p className="text-[#111111] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
               From workflow automation to secure database warehouses, V2 Labs designs, codes, and deploys high-performance internal tools that eliminate operational friction and save overhead.

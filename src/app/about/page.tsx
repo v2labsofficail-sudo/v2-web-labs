@@ -1,3 +1,4 @@
+import AlternatingText from "@/components/AlternatingText";
 import Link from "next/link";
 import TeamCarousel from "@/components/TeamCarousel";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -28,7 +29,7 @@ export default function AboutPage() {
       role: "CEO & Full Stack Developer",
       initials: "VD",
       quote: "Compiles bulletproof, sub-second architectures.",
-      gradient: "from-[#2F2FE4] to-[#111111]",
+      gradient: "from-[#0055DA] to-[#111111]",
       linkedin: "https://www.linkedin.com/in/vandan-darji-3b282931a/",
       github: "https://github.com/Vandann-1/",
       bio: "Oversees core systems scaling, cloud sync grids, and security layers. Focused on TypeScript and React performance.",
@@ -95,7 +96,7 @@ export default function AboutPage() {
       role: "Senior Frontend & Mobile App Developer",
       initials: "NV",
       quote: "Architecting gorgeous, high-fidelity responsive layouts.",
-      gradient: "from-[#2F2FE4] to-[#111111]",
+      gradient: "from-[#0055DA] to-[#111111]",
       linkedin: "#",
       github: "#",
       bio: "Leads engineering of premium responsive frontends, interactive motion architectures, and robust styling systems with pixel-perfect precision.",
@@ -114,16 +115,14 @@ export default function AboutPage() {
 
       
       <section className="relative overflow-hidden pt-24 pb-16 max-w-[1100px] mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+        <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
           <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
           Who We Are
         </div>
 
         <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1.1] text-slate-900 max-w-[850px] mx-auto mb-6 tracking-tight">
           Pioneering Premium{" "}
-          <span className="bg-gradient-to-r from-[#2F2FE4] to-[#111111] bg-clip-text text-transparent">
-            Digital Experiences
-          </span>
+          <AlternatingText>Digital Experiences</AlternatingText>
         </h1>
 
         <p className="text-[#111111] text-sm sm:text-base lg:text-[1.05rem] leading-[1.75] max-w-[720px] mx-auto">
@@ -139,9 +138,9 @@ export default function AboutPage() {
         {stats.map((stat, idx) => (
           <div
             key={idx}
-            className="group relative p-6 sm:p-8 rounded-[24px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#2F2FE4]/30 hover:shadow-[0_20px_45px_rgba(47,47,228,0.08)] flex flex-col justify-center items-center text-center"
+            className="group relative p-6 sm:p-8 rounded-[24px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#0055DA]/30 hover:shadow-[0_20px_45px_rgba(0, 85, 218,0.08)] flex flex-col justify-center items-center text-center"
           >
-            <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#2F2FE4] to-[#111111] rounded-t-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#0055DA] to-[#111111] rounded-t-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             <span className="text-[2.2rem] sm:text-[2.8rem] font-black tracking-tight text-[#111111] mb-1.5 leading-none">
               {stat.value}
@@ -163,7 +162,7 @@ export default function AboutPage() {
               Our Journey
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-              From College Dorm Hustle to <span>Proper Engineering</span>
+              From College Dorm Hustle to <AlternatingText>Proper Engineering</AlternatingText>
             </h2>
             <p className="text-[#111111] text-sm sm:text-[0.96rem] leading-relaxed mb-5">
               V2Labs was forged through relentless dedication. Our founders, **Vishal** and **Vandan**, began their partnership during college. Struggling to manage rigid university workloads, attendance requirements, and exams, they invested every spare night self-teaching advanced web architectures and system designs.
@@ -236,10 +235,10 @@ export default function AboutPage() {
             ].map((dna, idx) => (
               <div
                 key={idx}
-                className="flex gap-4 p-5 rounded-2xl border border-slate-200/40 bg-white/40 backdrop-blur-xl shadow-sm hover:shadow-[0_15px_30px_rgba(17,97,237,0.06)] hover:border-[#111111]/20 hover:bg-white/60 transition-all duration-300 relative group overflow-hidden"
+                className="flex gap-4 p-5 rounded-2xl border border-slate-200/40 bg-white/40 backdrop-blur-xl shadow-sm hover:shadow-[0_15px_30px_rgba(17, 97, 237,0.06)] hover:border-[#111111]/20 hover:bg-white/60 transition-all duration-300 relative group overflow-hidden"
               >
                 
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] to-[#111111]" />
+                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#0055DA] to-[#111111]" />
 
                 <div className="w-10 h-10 rounded-xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-[#111111] group-hover:text-white transition-all duration-300 shadow-sm">
                   {dna.icon}
@@ -266,7 +265,7 @@ export default function AboutPage() {
             Our Crew
           </div>
           <h2 className="text-3xl md:text-[2.4rem] font-black text-[#0F172A] tracking-tight">
-            Meet the <span>Builders</span>
+            Meet the <AlternatingText>Builders</AlternatingText>
           </h2>
           <p className="text-[#111111] text-sm max-w-[500px] mx-auto mt-2">
             The design-obsessed partners and engineering minds behind V2 Labs.
@@ -290,7 +289,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-[#2F2FE4] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_4px_20px_rgba(17,97,237,0.25)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-wider"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-[#0055DA] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_4px_20px_rgba(17, 97, 237,0.25)] hover:shadow-[0_8px_30px_rgba(17, 97, 237,0.4)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-wider"
           >
             Initiate Estimate
           </Link>

@@ -1,4 +1,5 @@
 "use client";
+import AlternatingText from "@/components/AlternatingText";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -116,7 +117,7 @@ export default function CareersPage() {
             Join V2 Labs
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none mb-6">
-            Build the Future of <span>Digital Studio Systems</span>
+            Build the Future of <AlternatingText>Digital Studio Systems</AlternatingText>
           </h1>
           <p className="text-lg text-[#111111] max-w-[700px] mx-auto leading-relaxed">
             We partner with visionary startups and global brands to build premium user experiences, high-performance dashboards, and LLM pipelines. We are seeking collaborative builders who love pixel perfection.
@@ -194,7 +195,7 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {perks.map((p, idx) => (
-              <div key={idx} className="bg-white/40 border border-slate-200/40 backdrop-blur-xl p-8 rounded-2xl shadow-sm flex flex-col items-start hover:border-[#111111]/20 hover:bg-white/60 hover:shadow-[0_15px_30px_rgba(17,97,237,0.04)] transition-all duration-300 group">
+              <div key={idx} className="bg-white/40 border border-slate-200/40 backdrop-blur-xl p-8 rounded-2xl shadow-sm flex flex-col items-start hover:border-[#111111]/20 hover:bg-white/60 hover:shadow-[0_15px_30px_rgba(17, 97, 237,0.04)] transition-all duration-300 group">
                 <div className="w-12 h-12 rounded-xl bg-[#111111]/[0.05] flex items-center justify-center mb-6 shrink-0 group-hover:bg-[#111111]/10 transition-colors">
                   {p.icon}
                 </div>
@@ -278,7 +279,7 @@ export default function CareersPage() {
                   <div className="mt-8 pt-6 border-t border-slate-100 flex justify-end">
                     <Link
                       href={`/contact?role=${r.id}`}
-                      className="bg-slate-900 text-white hover:bg-[#111111] hover:shadow-[0_4px_12px_rgba(17,97,237,0.22)] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-200"
+                      className="bg-slate-900 text-white hover:bg-[#111111] hover:shadow-[0_4px_12px_rgba(17, 97, 237,0.22)] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-200"
                     >
                       Apply for this Role
                     </Link>

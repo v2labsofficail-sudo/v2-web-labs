@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import AlternatingText from "@/components/AlternatingText";
 import Image from "next/image";
 
 const PORTFOLIO_VIDEOS = [
@@ -14,7 +15,7 @@ const PORTFOLIO_VIDEOS = [
     url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
     img: "/cinematic_supercar.png",
     aspect: "video", // 16:9
-    gradient: "from-[#2F2FE4] to-[#111111]",
+    gradient: "from-[#0055DA] to-[#111111]",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -94,7 +95,7 @@ const capabilities = [
     title: "Cinematic Post-Production",
     desc: "Crafting bespoke color grading ranges that perfectly match your visual identity guidelines and establish content authority.",
     badge: "Studio Cinematic",
-    gradient: "from-[#2F2FE4] to-[#111111]",
+    gradient: "from-[#0055DA] to-[#111111]",
     icon: (
       <svg
         className="w-6 h-6"
@@ -242,7 +243,7 @@ const steps = [
             Color Checked & Equalized
           </div>
           <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden border border-white/5">
-            <div className="h-full bg-gradient-to-r from-[#2F2FE4] to-[#111111] w-[100%] rounded-full shadow-[0_0_10px_rgba(17,97,237,0.5)]" />
+            <div className="h-full bg-gradient-to-r from-[#0055DA] to-[#111111] w-[100%] rounded-full shadow-[0_0_10px_rgba(17, 97, 237,0.5)]" />
           </div>
         </div>
 
@@ -270,7 +271,7 @@ function PortfolioVideoCard({
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group p-2 rounded-[32px] border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-[0_12px_40px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(17,97,237,0.08)] hover:border-[#111111]/20 hover:bg-white flex flex-col min-h-[360px]"
+      className="group p-2 rounded-[32px] border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-[0_12px_40px_rgba(17, 97, 237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.08)] hover:border-[#111111]/20 hover:bg-white flex flex-col min-h-[360px]"
     >
       {/* Widescreen Video Player Wrapper */}
       <div className="relative w-full aspect-video rounded-[24px] bg-slate-950 shadow-inner overflow-hidden flex items-center justify-center border border-black/5">
@@ -402,13 +403,13 @@ export default function VideoMotionPage() {
 
         {/* Hero Section with premium typographic depth */}
         <header className="mb-24 text-center md:text-left relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
             <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             Motion Media Focus
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.05] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            Cinematic Post-Production & <span>Motion Design</span>
+            Cinematic Post-Production & <AlternatingText>Motion Design</AlternatingText>
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[780px] font-medium">
@@ -447,7 +448,7 @@ export default function VideoMotionPage() {
                         ? "bg-white text-[#8b5cf6] shadow-[0_8px_20px_rgba(139,92,246,0.12)] scale-[1.02] border border-[#8b5cf6]/10"
                         : mode === "motion"
                           ? "bg-white text-[#10b981] shadow-[0_8px_20px_rgba(16,185,129,0.12)] scale-[1.02] border border-[#10b981]/10"
-                          : "bg-white text-[#111111] shadow-[0_8px_20px_rgba(17,97,237,0.12)] scale-[1.02] border border-[#111111]/10"
+                          : "bg-white text-[#111111] shadow-[0_8px_20px_rgba(17, 97, 237,0.12)] scale-[1.02] border border-[#111111]/10"
                       : "text-[#111111] hover:text-[#111111]"
                   }`}
                 >
@@ -624,7 +625,7 @@ export default function VideoMotionPage() {
                   </div>
                 ) : editorMode === "cinematic" ? (
                   /* Widescreen pro-cinematic supercar timeline player mockup */
-                  <div className="w-full aspect-video bg-slate-950 border-4 border-slate-800 rounded-[24px] shadow-[0_20px_50px_rgba(17,97,237,0.15)] relative overflow-hidden flex flex-col items-center justify-center transition-all duration-300">
+                  <div className="w-full aspect-video bg-slate-950 border-4 border-slate-800 rounded-[24px] shadow-[0_20px_50px_rgba(17, 97, 237,0.15)] relative overflow-hidden flex flex-col items-center justify-center transition-all duration-300">
                     <video
                       className="absolute inset-0 w-full h-full object-cover"
                       src={PORTFOLIO_VIDEOS[0].url}
@@ -686,7 +687,7 @@ export default function VideoMotionPage() {
             {capabilities.map((cap, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.09)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
+                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17, 97, 237,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.09)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
               >
                 {/* Premium Accent Top Border in Brand Gradient */}
                 <div
@@ -772,13 +773,13 @@ export default function VideoMotionPage() {
                     onClick={() => setActiveStep(idx)}
                     className={`flex gap-5 p-5 rounded-[24px] border transition-all duration-300 cursor-pointer relative group overflow-hidden ${
                       isActive
-                        ? "bg-white shadow-[0_20px_40px_rgba(17,97,237,0.06)] border-[#111111]/20 scale-[1.03]"
+                        ? "bg-white shadow-[0_20px_40px_rgba(17, 97, 237,0.06)] border-[#111111]/20 scale-[1.03]"
                         : "bg-transparent border-transparent hover:border-slate-300/40"
                     }`}
                   >
                     {/* Left Brand Line accent */}
                     {isActive && (
-                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] via-[#111111] to-[#8b5cf6]" />
+                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#0055DA] via-[#111111] to-[#8b5cf6]" />
                     )}
 
                     <div
@@ -807,9 +808,9 @@ export default function VideoMotionPage() {
 
             {/* Right Active Step visual preview box */}
             <div className="lg:col-span-7 z-10">
-              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.07)] hover:border-[#111111]/20 transition-all duration-500">
+              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.07)] hover:border-[#111111]/20 transition-all duration-500">
                 {/* Visual Top Accent Strip */}
-                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
+                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
 
                 <div>
                   <span className="text-[0.62rem] font-black tracking-widest text-[#111111] uppercase block mb-1">
@@ -863,7 +864,7 @@ export default function VideoMotionPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.3)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17, 97, 237,0.3)] hover:shadow-[0_10px_35px_rgba(17, 97, 237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Start Your Project
             </Link>

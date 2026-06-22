@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
+import AlternatingText from "@/components/AlternatingText";
 
 export default function UiUxBrandPage() {
   
@@ -45,7 +46,7 @@ export default function UiUxBrandPage() {
       title: "Interactive High-Fi Prototypes",
       desc: "Constructing click-through user flows that perfectly simulate production system speeds and animations. This enables rapid client alignment and user feedback loop.",
       badge: "User Validated",
-      gradient: "from-[#2F2FE4] to-[#111111]",
+      gradient: "from-[#0055DA] to-[#111111]",
       icon: (
         <svg
           className="w-6 h-6"
@@ -120,7 +121,7 @@ export default function UiUxBrandPage() {
             <span className="text-[#111111] font-black animate-ping text-[0.6rem]">
               ➔
             </span>
-            <span className="px-2.5 py-1.5 bg-[#111111] text-white rounded-xl shadow-[0_4px_10px_rgba(17,97,237,0.2)] font-black">
+            <span className="px-2.5 py-1.5 bg-[#111111] text-white rounded-xl shadow-[0_4px_10px_rgba(17, 97, 237,0.2)] font-black">
               Configure Service
             </span>
             <span className="text-[#111111]">➔</span>
@@ -193,7 +194,7 @@ export default function UiUxBrandPage() {
               Neon Conversion Dashboard
             </div>
             <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden border border-slate-300/40">
-              <div className="h-full bg-gradient-to-r from-[#2F2FE4] to-[#111111] w-[88%] rounded-full shadow-[0_0_10px_rgba(17,97,237,0.15)]" />
+              <div className="h-full bg-gradient-to-r from-[#0055DA] to-[#111111] w-[88%] rounded-full shadow-[0_0_10px_rgba(17, 97, 237,0.15)]" />
             </div>
           </div>
           <div className="flex justify-between items-center text-[0.6rem] text-[#111111] relative z-10 pt-2 border-t border-slate-200/40">
@@ -218,13 +219,13 @@ export default function UiUxBrandPage() {
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
         
         <header className="mb-24 text-center md:text-left relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
             <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             UI/UX Studio Focus
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.05] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            High-Fidelity Interfaces & <span>Brand Systems</span>
+            High-Fidelity Interfaces & <AlternatingText>Brand Systems</AlternatingText>
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[780px] font-medium">
@@ -260,7 +261,7 @@ export default function UiUxBrandPage() {
                   onClick={() => setSandboxMode(mode)}
                   className={`flex-1 md:flex-initial px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer ${
                     sandboxMode === mode
-                      ? "bg-white text-[#111111] shadow-[0_8px_20px_rgba(17,97,237,0.08)] scale-[1.02]"
+                      ? "bg-white text-[#111111] shadow-[0_8px_20px_rgba(17, 97, 237,0.08)] scale-[1.02]"
                       : "text-[#111111] hover:text-[#111111]"
                   }`}
                 >
@@ -343,7 +344,7 @@ export default function UiUxBrandPage() {
                   {sandboxMode === "tokens" &&
                     `:root { \n  --padding-core: var(--space-8);\n  --glow-blur: 24px;\n  --radius-main: 28px;\n}`}
                   {sandboxMode === "hifi" &&
-                    `.dashboard-card { \n  background: rgba(255,255,255,0.7);\n  backdrop-filter: blur(20px);\n  box-shadow: 0 20px 50px rgba(17,97,237,0.06);\n}`}
+                    `.dashboard-card { \n  background: rgba(255,255,255,0.7);\n  backdrop-filter: blur(20px);\n  box-shadow: 0 20px 50px rgba(17, 97, 237,0.06);\n}`}
                 </code>
               </div>
             </div>
@@ -357,7 +358,7 @@ export default function UiUxBrandPage() {
                     ? "bg-transparent border-[2.2px] border-dashed border-slate-300 rounded-none shadow-none text-[#111111]"
                     : sandboxMode === "tokens"
                       ? "bg-purple-50/20 border border-purple-300/60 rounded-[28px] text-purple-900 shadow-lg relative"
-                      : "bg-white/90 backdrop-blur-xl border border-slate-200 rounded-[32px] text-slate-800 shadow-[0_25px_60px_rgba(17,97,237,0.06)] relative"
+                      : "bg-white/90 backdrop-blur-xl border border-slate-200 rounded-[32px] text-slate-800 shadow-[0_25px_60px_rgba(17, 97, 237,0.06)] relative"
                 }`}
               >
                 
@@ -504,7 +505,7 @@ export default function UiUxBrandPage() {
                       </div>
 
                       
-                      <button className="w-full py-3.5 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] rounded-xl text-white font-extrabold text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(17,97,237,0.15)] hover:shadow-[0_8px_30px_rgba(17,97,237,0.3)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+                      <button className="w-full py-3.5 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] rounded-xl text-white font-extrabold text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(17, 97, 237,0.15)] hover:shadow-[0_8px_30px_rgba(17, 97, 237,0.3)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
                         Launch Figma Hifi Blueprint
                       </button>
                     </div>
@@ -534,7 +535,7 @@ export default function UiUxBrandPage() {
             {capabilities.map((cap, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17,97,237,0.01)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17,97,237,0.05)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
+                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.05)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
               >
                 
                 <div
@@ -589,13 +590,13 @@ export default function UiUxBrandPage() {
                     onClick={() => setActiveStep(idx)}
                     className={`flex gap-5 p-5 rounded-[24px] border transition-all duration-300 cursor-pointer relative group overflow-hidden ${
                       isActive
-                        ? "bg-white shadow-[0_20px_40px_rgba(17,97,237,0.04)] border-[#111111]/20 scale-[1.03]"
+                        ? "bg-white shadow-[0_20px_40px_rgba(17, 97, 237,0.04)] border-[#111111]/20 scale-[1.03]"
                         : "bg-transparent border-transparent hover:border-slate-200"
                     }`}
                   >
                     
                     {isActive && (
-                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#2F2FE4] via-[#111111] to-[#8b5cf6]" />
+                      <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#0055DA] via-[#111111] to-[#8b5cf6]" />
                     )}
 
                     <div
@@ -624,9 +625,9 @@ export default function UiUxBrandPage() {
 
             
             <div className="lg:col-span-7 z-10">
-              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17,97,237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17,97,237,0.04)] hover:border-[#111111]/20 transition-all duration-500">
+              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.04)] hover:border-[#111111]/20 transition-all duration-500">
                 
-                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
+                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
 
                 <div>
                   <span className="text-[0.62rem] font-black tracking-widest text-[#111111] uppercase block mb-1">
@@ -687,7 +688,7 @@ export default function UiUxBrandPage() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#111111]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
                 
                 
-                <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17,97,237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
+                <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17, 97, 237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-50/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
                   
                   <Image
@@ -711,7 +712,7 @@ export default function UiUxBrandPage() {
               <div className="lg:col-span-6 flex flex-col gap-6">
                 
                 
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-[#111111]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(17,97,237,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-[#111111]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(17, 97, 237,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 100 150" fill="none">
                       <path d="M25 37.5C25 51.3 36.2 62.5 50 62.5C50 48.7 38.8 37.5 25 37.5Z" fill="#F24E1E"/>
@@ -818,7 +819,7 @@ export default function UiUxBrandPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#2F2FE4] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17,97,237,0.15)] hover:shadow-[0_10px_35px_rgba(17,97,237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17, 97, 237,0.15)] hover:shadow-[0_10px_35px_rgba(17, 97, 237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Initiate Blueprint Estimate
             </Link>
