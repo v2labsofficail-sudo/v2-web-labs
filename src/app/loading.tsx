@@ -37,7 +37,7 @@ export default function Loading() {
           {Array.from({ length: 3 }).map((_, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-8 rounded-[24px] border border-slate-200/30 bg-white/40 backdrop-blur-xl shadow-sm min-h-[270px] sm:min-h-[290px] flex flex-col justify-between items-start"
+              className="p-6 sm:p-8 rounded-[24px] border border-slate-200/30 bg-white  shadow-sm min-h-[270px] sm:min-h-[290px] flex flex-col justify-between items-start"
             >
               <div className="w-full">
                 <div className="w-12 h-12 rounded-xl bg-slate-200/70 border border-slate-200/20 mb-6 animate-pulse" />

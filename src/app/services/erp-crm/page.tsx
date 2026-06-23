@@ -349,13 +349,13 @@ export default function ErpCrmPage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 w-full sm:w-auto">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center justify-center px-8 py-4.5 bg-gradient-to-r from-[#635BFF] to-[#111111] hover:from-[#5145CD] hover:to-[#000000] shadow-[0_8px_25px_rgba(99,91,255,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
+                className="inline-flex items-center justify-center px-8 py-4.5 bg-[#0055DA] hover:bg-[#0044B3] hover:from-[#0044B3] hover:to-[#000000] shadow-[0_8px_25px_rgba(0,85,218,0.22)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-[0.95rem] text-center cursor-pointer"
               >
                 Start Your System
               </Link>
               <a 
                 href="#architecture" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-white border border-[#635BFF]/20 hover:border-[#635BFF]/50 text-slate-800 font-extrabold rounded-full transition-all duration-300 hover:bg-slate-50 shadow-sm text-[0.95rem] text-center cursor-pointer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white border border-[#0055DA]/20 hover:border-[#0055DA]/50 text-slate-800 font-extrabold rounded-full transition-all duration-300 hover:bg-white shadow-sm text-[0.95rem] text-center cursor-pointer"
               >
                 View Data Architecture
               </a>
@@ -372,7 +372,7 @@ export default function ErpCrmPage() {
             <div className="w-full max-w-[440px] rounded-3xl border border-[#635BFF]/10 bg-white shadow-[0_25px_60px_rgba(99,91,255,0.08)] overflow-hidden hover:-translate-y-1 transition-all duration-300">
               
               
-              <div className="flex items-center justify-between bg-slate-50/80 border-b border-slate-100 px-5 py-3.5">
+              <div className="flex items-center justify-between bg-white border-b border-slate-100 px-5 py-3.5">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-[#ef4444] shadow-sm" />
                   <span className="w-3 h-3 rounded-full bg-[#eab308] shadow-sm" />
@@ -468,7 +468,7 @@ export default function ErpCrmPage() {
                   {marqueeTech.map((tech, idx) => (
                     <div 
                       key={`${tech.name}-${i}-${idx}`} 
-                      className="inline-flex items-center gap-4 px-6.5 py-4 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm hover:border-[#635BFF]/20 hover:bg-white transition-all duration-300"
+                      className="inline-flex items-center gap-4 px-6.5 py-4 bg-white border border-slate-100 rounded-2xl shadow-sm hover:border-[#635BFF]/20 hover:bg-white transition-all duration-300"
                     >
                       <span className="w-9 h-9 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">{tech.icon}</span>
                       <div className="text-left">
@@ -557,7 +557,7 @@ export default function ErpCrmPage() {
                   className={`p-4.5 rounded-2xl border transition-all duration-300 cursor-pointer relative overflow-hidden flex items-center gap-4.5 ${
                     activeArchStep === step.id 
                       ? "bg-white border-[#635BFF] shadow-[0_12px_30px_rgba(99,91,255,0.06)] -translate-y-0.5" 
-                      : "bg-white/80 border-slate-100 hover:border-[#635BFF]/30"
+                      : "bg-white border-slate-100 hover:border-[#635BFF]/30"
                   }`}
                 >
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-black text-xs transition-colors shrink-0 ${
@@ -648,7 +648,7 @@ export default function ErpCrmPage() {
                   </span>
                   <div className="flex gap-1.5">
                     {["Next.js", "FastAPI", "HubSpot API"].map((tag, i) => (
-                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
+                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-white border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -662,7 +662,7 @@ export default function ErpCrmPage() {
                 <div className="rounded-2xl border border-slate-100 shadow-[0_10px_25px_rgba(0,0,0,0.02)] overflow-hidden mb-6 bg-white select-none">
                   
                   
-                  <div className="bg-slate-50/80 border-b border-slate-100 px-4 py-2.5 flex items-center justify-between">
+                  <div className="bg-white border-b border-slate-100 px-4 py-2.5 flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444] shadow-sm" />
                       <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
@@ -685,11 +685,11 @@ export default function ErpCrmPage() {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                      <div className="p-2 rounded bg-slate-50 border border-slate-100 flex items-center justify-between text-[0.62rem]">
+                      <div className="p-2 rounded bg-white border border-slate-100 flex items-center justify-between text-[0.62rem]">
                         <span className="font-bold text-slate-800">Acme Corporation (SaaS Integration)</span>
                         <span className="font-black text-[#635BFF]">$95,000</span>
                       </div>
-                      <div className="p-2 rounded bg-slate-50 border border-slate-100 flex items-center justify-between text-[0.62rem]">
+                      <div className="p-2 rounded bg-white border border-slate-100 flex items-center justify-between text-[0.62rem]">
                         <span className="font-bold text-slate-800">Zenith Retailers (Custom ERP Bridge)</span>
                         <span className="font-black text-[#635BFF]">$42,500</span>
                       </div>
@@ -715,7 +715,7 @@ export default function ErpCrmPage() {
                 </div>
               </div>
 
-              <Link href="/contact" className="block text-center bg-slate-900 group-hover:bg-[#635BFF] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
+              <Link href="/contact" className="block text-center bg-[#0055DA] group-hover:bg-[#635BFF] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
                 Inquire About V2 OpsSuite
               </Link>
             </div>
@@ -731,7 +731,7 @@ export default function ErpCrmPage() {
                   </span>
                   <div className="flex gap-1.5">
                     {["Next.js", "Django", "Redis DB"].map((tag, i) => (
-                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
+                      <span key={i} className="text-[0.55rem] font-bold text-[#111111] bg-white border border-slate-100 px-2 py-0.5 rounded">{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -745,7 +745,7 @@ export default function ErpCrmPage() {
                 <div className="rounded-2xl border border-slate-100 shadow-[0_10px_25px_rgba(0,0,0,0.02)] overflow-hidden mb-6 bg-white select-none">
                   
                   
-                  <div className="bg-slate-50/80 border-b border-slate-100 px-4 py-2.5 flex items-center justify-between">
+                  <div className="bg-white border-b border-slate-100 px-4 py-2.5 flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444] shadow-sm" />
                       <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
@@ -807,7 +807,7 @@ export default function ErpCrmPage() {
                 </div>
               </div>
 
-              <Link href="/contact" className="block text-center bg-slate-900 group-hover:bg-[#635BFF] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
+              <Link href="/contact" className="block text-center bg-[#0055DA] group-hover:bg-[#635BFF] text-white py-3.5 rounded-xl font-bold text-sm transition-colors duration-300 shadow-sm cursor-pointer">
                 Inquire About StockFlow
               </Link>
             </div>
@@ -850,7 +850,7 @@ export default function ErpCrmPage() {
         <section id="credibility" className="py-12 border-t border-black/[0.04] mb-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4 items-center justify-center">
             {stats.map((st, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center p-3 rounded-2xl hover:bg-slate-50 transition-colors duration-300">
+              <div key={idx} className="flex flex-col items-center text-center p-3 rounded-2xl hover:bg-white transition-colors duration-300">
                 <span className="text-3xl md:text-4xl font-black text-[#0F172A] tracking-tight mb-2 block bg-gradient-to-r from-[#635BFF] to-[#111111] bg-clip-text text-transparent">{st.value}</span>
                 <span className="text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider block max-w-[140px] leading-tight">{st.label}</span>
               </div>

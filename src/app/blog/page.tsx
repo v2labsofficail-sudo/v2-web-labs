@@ -20,7 +20,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     : blogCategories;
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900">
+    <div className="bg-white min-h-screen text-slate-900">
       <ScrollReveal>
         <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#111111] mb-4">
@@ -47,7 +47,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             {filteredCategories.map((category) => (
               <article
                 key={category.slug}
-                className="rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 p-7 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group relative overflow-hidden flex flex-col justify-between min-h-[290px] gpu-accelerated"
+                className="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group relative overflow-hidden flex flex-col justify-between min-h-[290px] gpu-accelerated"
               >
                 <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#0055DA] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17, 97, 237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -80,7 +80,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             ))}
           </div>
           {!filteredCategories.length ? (
-            <div className="mt-8 rounded-3xl border border-slate-200/40 bg-white/40 backdrop-blur-xl p-7 text-[#111111] shadow-sm">
+            <div className="mt-8 rounded-3xl border border-slate-200/40 bg-white  p-7 text-[#111111] shadow-sm">
               No categories matched that search yet. Use the main service pages to keep
               discovery paths active while the editorial library grows.
             </div>

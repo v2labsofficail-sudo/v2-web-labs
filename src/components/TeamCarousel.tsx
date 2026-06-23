@@ -158,7 +158,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                   />
                 )}
 
-                <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
+                <div className="absolute inset-0 bg-slate-950/60 -[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
@@ -175,7 +175,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-8 h-8 rounded-lg bg-white/10 text-white hover:bg-white hover:text-[#111111] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
+                      className="w-8 h-8 rounded-lg bg-white text-white hover:bg-white hover:text-[#111111] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
                       aria-label="LinkedIn"
                     >
                       in
@@ -185,7 +185,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-8 h-8 rounded-lg bg-white/10 text-white hover:bg-white hover:text-[#0F172A] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
+                      className="w-8 h-8 rounded-lg bg-white text-white hover:bg-white hover:text-[#0F172A] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
                       aria-label="GitHub"
                     >
                       git
@@ -248,7 +248,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
         <div className="flex gap-3">
           <button
             onClick={handlePrev}
-            className="w-12 h-12 rounded-full border border-slate-200 bg-white/70 backdrop-blur-md text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#111111] hover:border-[#111111]/30 active:scale-95 hover:shadow-lg transition-all"
+            className="w-12 h-12 rounded-full border border-slate-200 bg-white  text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#111111] hover:border-[#111111]/30 active:scale-95 hover:shadow-lg transition-all"
             aria-label="Previous Team Member"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -258,7 +258,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
           
           <button
             onClick={handleNext}
-            className="w-12 h-12 rounded-full border border-slate-200 bg-white/70 backdrop-blur-md text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#111111] hover:border-[#111111]/30 active:scale-95 hover:shadow-lg transition-all"
+            className="w-12 h-12 rounded-full border border-slate-200 bg-white  text-slate-800 flex items-center justify-center hover:bg-white hover:text-[#111111] hover:border-[#111111]/30 active:scale-95 hover:shadow-lg transition-all"
             aria-label="Next Team Member"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -272,7 +272,7 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div 
             onClick={() => setShowModal(false)}
-            className="absolute inset-0 bg-slate-950/50 backdrop-blur-md transition-opacity duration-300 animate-fadeIn" 
+            className="absolute inset-0 bg-slate-950/50  transition-opacity duration-300 animate-fadeIn" 
           />
           
           <div className="bg-white border border-slate-200 rounded-[32px] w-full max-w-[550px] overflow-hidden shadow-2xl relative z-10 flex flex-col animate-scaleUp">
@@ -285,9 +285,9 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
             </button>
 
             <div className={`w-full py-10 px-8 bg-gradient-to-br ${selectedMember.gradient} text-white flex items-center gap-6 relative overflow-hidden`}>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full blur-2xl" />
               
-              <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center overflow-hidden shadow-md shrink-0 relative">
+              <div className="w-20 h-20 rounded-2xl bg-white  flex items-center justify-center overflow-hidden shadow-md shrink-0 relative">
                 {selectedMember.img ? (
                   <Image 
                     src={selectedMember.img} 

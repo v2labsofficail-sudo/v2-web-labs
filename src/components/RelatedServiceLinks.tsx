@@ -1,5 +1,25 @@
 import Link from "next/link";
 import { serviceItems } from "@/lib/site-data";
+import { 
+  Globe, 
+  Cpu, 
+  Palette, 
+  Database, 
+  Layers, 
+  Video, 
+  Target,
+  Sparkles 
+} from "lucide-react";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  "web-platform": Globe,
+  "ai-automation": Cpu,
+  "ui-ux-brand": Palette,
+  "erp-crm": Database,
+  "saas-product": Layers,
+  "video-motion": Video,
+  "digital-marketing": Target,
+};
 
 type RelatedServiceLinksProps = {
   currentSlug?: string;
@@ -44,18 +64,30 @@ export default function RelatedServiceLinks({
         </Link>
       </div>
       <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-        {items.map((service) => (
-          <Link
-            key={service.slug}
-            href={service.href}
-            className="rounded-2xl border border-slate-200 px-5 py-4 transition hover:border-[#111111] hover:bg-[#111111]/[0.03]"
-          >
-            <div className="text-sm font-black text-slate-900">{service.navLabel}</div>
-            <div className="mt-2 text-sm leading-6 text-[#111111]">
-              {service.summary}
-            </div>
-          </Link>
-        ))}
+        {items.map((service) => {
+          const IconComponent = iconMap[service.slug] || Sparkles;
+          return (
+            <Link
+              key={service.slug}
+              href={service.href}
+              className="rounded-2xl border border-slate-200 px-5 py-4 transition hover:border-[#111111] hover:bg-[#111111]/[0.03] group flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded bg-[#111111]/5 flex items-center justify-center text-slate-800 group-hover:bg-[#111111] group-hover:text-white transition-all duration-200 shrink-0">
+                    <IconComponent className="w-3.5 h-3.5" />
+                  </div>
+                  <div className="text-sm font-black text-slate-900 group-hover:text-[#111111] transition-colors">
+                    {service.navLabel}
+                  </div>
+                </div>
+                <div className="text-sm leading-6 text-[#111111] line-clamp-2">
+                  {service.summary}
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

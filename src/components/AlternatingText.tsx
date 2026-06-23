@@ -15,9 +15,9 @@ export default function AlternatingText({ children }: AlternatingTextProps) {
         return (
           <span
             key={idx}
-            className={isBlue ? 'text-[#1161ed]' : 'text-[#111111]'}
+            className={isBlue ? 'text-[#0055DA]' : 'text-[#111111]'}
             style={{
-              WebkitTextFillColor: isBlue ? '#1161ed' : '#111111',
+              WebkitTextFillColor: isBlue ? '#0055DA' : '#111111',
               background: 'none',
               display: 'inline-block'
             }}

@@ -51,7 +51,7 @@ export default function TermsPage() {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24 select-none">
+    <div className="bg-white min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24 select-none">
       {/* Background Soft Mesh Gradients */}
       <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-[#111111]/[0.03] rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-0 w-[450px] h-[450px] bg-[#111111]/[0.02] rounded-full blur-3xl -z-10" />
@@ -96,7 +96,7 @@ export default function TermsPage() {
                     className={`w-full text-left py-2.5 px-3.5 rounded-xl font-bold text-xs transition-all duration-200 active:scale-[0.995] flex items-center gap-2 group ${
                       isActive
                         ? "bg-[#111111]/[0.06] text-[#111111]"
-                        : "text-[#111111] hover:bg-slate-50 hover:text-slate-800"
+                        : "text-[#111111] hover:bg-white hover:text-slate-800"
                     }`}
                   >
                     <span className={`w-1.5 h-1.5 rounded-full transition-transform duration-200 ${
@@ -162,21 +162,21 @@ export default function TermsPage() {
                     Professional fees are set according to standard milestones outlined in our Statement of Work (SOW). Engagement triggers a strict billing lifecycle:
                   </p>
                   <div className="grid gap-3.5 mt-2.5">
-                    <div className="flex gap-3 px-4 py-3 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div className="flex gap-3 px-4 py-3 rounded-2xl bg-white border border-slate-100">
                       <span className="font-extrabold text-[#111111] text-sm mt-0.5">01</span>
                       <div>
                         <strong className="text-slate-800 font-extrabold text-[0.88rem]">Retainer Deposit:</strong>
                         <p className="text-xs text-[#111111] mt-0.5">A non-refundable mobilization deposit is required to lock operational pipelines before any engineering or auditing starts.</p>
                       </div>
                     </div>
-                    <div className="flex gap-3 px-4 py-3 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div className="flex gap-3 px-4 py-3 rounded-2xl bg-white border border-slate-100">
                       <span className="font-extrabold text-[#111111] text-sm mt-0.5">02</span>
                       <div>
                         <strong className="text-slate-800 font-extrabold text-[0.88rem]">Milestone Invoices:</strong>
                         <p className="text-xs text-[#111111] mt-0.5">Interim fees are invoiced upon deliverable hand-offs (e.g. database schema sign-offs or secure staging deployments).</p>
                       </div>
                     </div>
-                    <div className="flex gap-3 px-4 py-3 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div className="flex gap-3 px-4 py-3 rounded-2xl bg-white border border-slate-100">
                       <span className="font-extrabold text-[#111111] text-sm mt-0.5">03</span>
                       <div>
                         <strong className="text-slate-800 font-extrabold text-[0.88rem]">Late Remittances:</strong>
@@ -302,7 +302,7 @@ export default function TermsPage() {
                   </p>
                   
                   <div className="flex flex-col gap-3.5 mt-2.5 max-w-[340px]">
-                    <div className="flex items-center gap-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
+                    <div className="flex items-center gap-3.5 bg-white border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
                       <span className="w-8 h-8 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-[#111111] shrink-0">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -318,7 +318,7 @@ export default function TermsPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
+                    <div className="flex items-center gap-3.5 bg-white border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
                       <span className="w-8 h-8 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-[#111111] shrink-0">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />

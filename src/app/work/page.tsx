@@ -133,7 +133,7 @@ export default function WorkPage() {
   ] as const;
 
   return (
-    <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
+    <div className="bg-white min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       {/* Background Soft Mesh Gradients for Premium Studio Feel */}
       <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
       <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
@@ -185,7 +185,7 @@ export default function WorkPage() {
             {PROJECTS.map((proj, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 shadow-[0_10px_35px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group flex flex-col justify-between min-h-[360px]"
+                className="p-8 rounded-[32px] border border-slate-200/80 bg-white shadow-[0_10px_35px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group flex flex-col justify-between min-h-[360px]"
               >
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17, 97, 237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div
@@ -281,7 +281,7 @@ export default function WorkPage() {
                 ].map((spec, i) => (
                   <div
                     key={i}
-                    className="p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17, 97, 237,0.01)] hover:border-[#111111]/15 transition-all duration-300"
+                    className="p-5 bg-white  rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17, 97, 237,0.01)] hover:border-[#111111]/15 transition-all duration-300"
                   >
                     <h4 className="text-slate-900 font-extrabold text-[0.84rem] tracking-tight mb-1.5">
                       {spec.title}
@@ -321,7 +321,7 @@ export default function WorkPage() {
                 <div className="relative z-10 pt-4 border-t border-white/5">
                   <Link
                     href="/contact"
-                    className="inline-flex w-full items-center justify-center py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17, 97, 237,0.3)] hover:shadow-[0_10px_35px_rgba(17, 97, 237,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
+                    className="inline-flex w-full items-center justify-center py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_6px_25px_rgba(17, 97, 237,0.3)] hover:shadow-[0_10px_35px_rgba(0,85,218,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
                   >
                     Start Your Project
                   </Link>

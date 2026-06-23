@@ -51,7 +51,7 @@ export default function PrivacyPage() {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24 select-none">
+    <div className="bg-white min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24 select-none">
       {/* Background Soft Mesh Gradients */}
       <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-[#111111]/[0.03] rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-0 w-[450px] h-[450px] bg-[#111111]/[0.02] rounded-full blur-3xl -z-10" />
@@ -98,7 +98,7 @@ export default function PrivacyPage() {
                     className={`w-full text-left py-2.5 px-3.5 rounded-xl font-bold text-xs transition-all duration-200 active:scale-[0.99] flex items-center gap-2 group ${
                       isActive
                         ? "bg-[#111111]/[0.06] text-[#111111]"
-                        : "text-[#111111] hover:bg-slate-50 hover:text-slate-800"
+                        : "text-[#111111] hover:bg-white hover:text-slate-800"
                     }`}
                   >
                     <span
@@ -161,7 +161,7 @@ export default function PrivacyPage() {
                     pipelines:
                   </p>
                   <div className="grid gap-3 mt-2">
-                    <div className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-3 border border-slate-200/40">
+                    <div className="flex items-start gap-3 rounded-2xl bg-white px-4 py-3 border border-slate-200/40">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#111111] mt-2 shrink-0" />
                       <div>
                         <strong className="text-slate-800 font-extrabold text-[0.88rem]">
@@ -174,7 +174,7 @@ export default function PrivacyPage() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-3 border border-slate-200/40">
+                    <div className="flex items-start gap-3 rounded-2xl bg-white px-4 py-3 border border-slate-200/40">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#111111] mt-2 shrink-0" />
                       <div>
                         <strong className="text-slate-800 font-extrabold text-[0.88rem]">
@@ -346,7 +346,7 @@ export default function PrivacyPage() {
                       from our systems.
                     </li>
                   </ul>
-                  <p className="mt-2 text-xs bg-slate-50 border border-slate-200/50 p-4.5 rounded-2xl text-[#111111] leading-relaxed font-semibold">
+                  <p className="mt-2 text-xs bg-white border border-slate-200/50 p-4.5 rounded-2xl text-[#111111] leading-relaxed font-semibold">
                     To exercise any of these security choices, please submit a
                     written coordinate request to contact@v2labsglobal.com. We will
                     process and respond to all requests within 30 calendar days.
@@ -398,7 +398,7 @@ export default function PrivacyPage() {
                     our engineering coordinates:
                   </p>
                   <div className="flex flex-col gap-3.5 mt-2 max-w-[340px]">
-                    <div className="flex items-center gap-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
+                    <div className="flex items-center gap-3.5 bg-white border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
                       <span className="w-8 h-8 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-[#111111] shrink-0">
                         <svg
                           className="w-4 h-4"
@@ -427,7 +427,7 @@ export default function PrivacyPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3.5 bg-slate-50 border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
+                    <div className="flex items-center gap-3.5 bg-white border border-slate-200/50 rounded-2xl px-4 py-3 shadow-sm">
                       <span className="w-8 h-8 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-[#111111] shrink-0">
                         <svg
                           className="w-4 h-4"

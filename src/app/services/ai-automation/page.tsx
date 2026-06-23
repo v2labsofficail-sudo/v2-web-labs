@@ -199,7 +199,7 @@ export default function AiAutomationPage() {
   }, []);
 
   return (
-    <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
+    <div className="bg-white min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       {/* Animated Floating Luminous Mesh Background Orbs (Premium Light Theme!) */}
       <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
       <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
@@ -220,7 +220,7 @@ export default function AiAutomationPage() {
           <div className="absolute inset-[25px] rounded-full border border-[#8b5cf6]/20 border-t-2 border-b-2 border-t-[#8b5cf6]/60 border-b-[#8b5cf6]/60 animate-spin duration-[15s] [animation-direction:reverse]" />
           
           {/* Glowing Neural Core */}
-          <div className="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#111111] p-[1.5px] shadow-[0_8px_35px_rgba(17, 97, 237,0.15)] flex items-center justify-center animate-pulse duration-[3.5s]">
+          <div className="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#111111] p-[1.5px] shadow-[0_8px_35px_rgba(0, 85, 218,0.15)] flex items-center justify-center animate-pulse duration-[3.5s]">
             <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-inner">
               <svg className="w-12 h-12 md:w-16 md:h-16 text-[#111111] animate-spin duration-[40s]" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" />
@@ -234,7 +234,7 @@ export default function AiAutomationPage() {
 
         {/* Hero Text */}
         <div className="max-w-[850px] relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(0, 85, 218,0.05)]">
             <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             Autonomous AI Focus
           </div>
@@ -258,13 +258,13 @@ export default function AiAutomationPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link 
               href="/contact" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_6px_25px_rgba(17, 97, 237,0.15)] hover:shadow-[0_10px_30px_rgba(17, 97, 237,0.25)] text-xs uppercase tracking-widest text-center"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#0055DA] hover:bg-[#0044B3] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_6px_25px_rgba(0, 85, 218,0.15)] hover:shadow-[0_10px_30px_rgba(0, 85, 218,0.25)] text-xs uppercase tracking-widest text-center"
             >
               Start Automated Pipeline
             </Link>
             <a 
               href="#operations-center" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/80 backdrop-blur-md border border-slate-200 hover:border-slate-350 hover:bg-white text-slate-700 font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-sm text-xs uppercase tracking-widest text-center"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white  border border-slate-200 hover:border-slate-350 hover:bg-white text-slate-700 font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-sm text-xs uppercase tracking-widest text-center"
             >
               View Operations Loop
             </a>
@@ -289,7 +289,7 @@ export default function AiAutomationPage() {
           </div>
 
           {/* Fake Live Dashboard Grid */}
-          <div className="w-full bg-white/70 backdrop-blur-xl border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col lg:flex-row gap-10 items-center justify-between">
+          <div className="w-full bg-white  border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col lg:flex-row gap-10 items-center justify-between">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#111111]/[0.03] rounded-full blur-[110px] pointer-events-none" />
             
             {/* LEFT: Ingest Cards */}
@@ -302,8 +302,8 @@ export default function AiAutomationPage() {
                     key={`in-${item.id}`}
                     className={`p-4.5 rounded-2xl border text-left transition-all duration-500 flex justify-between items-center ${
                       isActive 
-                        ? "bg-white border-[#111111]/40 shadow-[0_12px_25px_rgba(17, 97, 237,0.04)] -translate-y-0.5 scale-[1.01]" 
-                        : "bg-white/40 border-slate-100/60 opacity-60"
+                        ? "bg-white border-[#111111]/40 shadow-[0_12px_25px_rgba(0, 85, 218,0.04)] -translate-y-0.5 scale-[1.01]" 
+                        : "bg-white border-slate-100/60 opacity-60"
                     }`}
                   >
                     <div>
@@ -320,7 +320,7 @@ export default function AiAutomationPage() {
             </div>
 
             {/* CENTER: AI Neural Processor Brain */}
-            <div className="flex-1 w-full flex flex-col items-center justify-center p-8 bg-slate-50/50 border border-slate-200/60 rounded-[32px] shadow-inner relative overflow-hidden min-h-[340px] z-10">
+            <div className="flex-1 w-full flex flex-col items-center justify-center p-8 bg-white border border-slate-200/60 rounded-[32px] shadow-inner relative overflow-hidden min-h-[340px] z-10">
               <div className="absolute w-[200px] h-[200px] rounded-full border border-[#111111]/5 animate-ping duration-[3.5s] pointer-events-none" />
               
               <div className="relative z-10 flex flex-col items-center text-center">
@@ -350,7 +350,7 @@ export default function AiAutomationPage() {
 
                 {/* Progress bar wave simulation */}
                 <div className="w-[140px] h-[3px] bg-slate-200 rounded-full mt-6 overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#0055DA] to-[#111111] rounded-full animate-marquee" style={{ width: "60%" }} />
+                  <div className="h-full bg-[#0055DA] hover:bg-[#0044B3] rounded-full animate-marquee" style={{ width: "60%" }} />
                 </div>
               </div>
             </div>
@@ -366,7 +366,7 @@ export default function AiAutomationPage() {
                     className={`p-4.5 rounded-2xl border text-left transition-all duration-500 flex justify-between items-center ${
                       isActive 
                         ? "bg-white border-[#22c55e]/45 shadow-[0_12px_25px_rgba(34,197,94,0.04)] -translate-y-0.5 scale-[1.01]" 
-                        : "bg-white/40 border-slate-100/60 opacity-60"
+                        : "bg-white border-slate-100/60 opacity-60"
                     }`}
                   >
                     <div>
@@ -411,8 +411,8 @@ export default function AiAutomationPage() {
                   onClick={() => setActiveWorkflowStep(idx)}
                   className={`p-4 rounded-2xl border text-left transition-all duration-300 flex items-center gap-3.5 cursor-pointer ${
                     activeWorkflowStep === idx 
-                      ? "bg-white border-[#111111]/30 shadow-[0_12px_25px_rgba(17, 97, 237,0.03)] -translate-x-0.5 font-bold" 
-                      : "bg-white/40 border-slate-100/60 hover:bg-white hover:border-slate-250"
+                      ? "bg-white border-[#111111]/30 shadow-[0_12px_25px_rgba(0, 85, 218,0.03)] -translate-x-0.5 font-bold" 
+                      : "bg-white border-slate-100/60 hover:bg-white hover:border-slate-250"
                   }`}
                 >
                   <div className={`w-7 h-7 rounded-lg flex items-center justify-center font-black text-xs transition-colors shrink-0 ${
@@ -427,8 +427,8 @@ export default function AiAutomationPage() {
 
             {/* Right display card displaying active flow details */}
             <div className="lg:col-span-7 z-10">
-              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] min-h-[340px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.04)] hover:border-[#111111]/20 transition-all duration-500">
-                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
+              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(0, 85, 218,0.01)] min-h-[340px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(0, 85, 218,0.04)] hover:border-[#111111]/20 transition-all duration-500">
+                <div className="absolute top-0 left-0 right-0 h-[5px] bg-[#0055DA] hover:bg-[#0044B3] rounded-t-[36px]" />
                 
                 <div>
                   <div className="flex justify-between items-center mb-6">
@@ -453,7 +453,7 @@ export default function AiAutomationPage() {
                       <div 
                         className={`h-[5px] rounded-full transition-all duration-500 flex-1 ${
                           idx <= activeWorkflowStep 
-                            ? "bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6]" 
+                            ? "bg-[#0055DA] hover:bg-[#0044B3]" 
                             : "bg-slate-100"
                         }`} 
                       />
@@ -489,7 +489,7 @@ export default function AiAutomationPage() {
 
               <div className="flex flex-wrap gap-2">
                 {["REST Bridges", "SSO Audited", "Safe Webhooks", "Zero Latency Logs"].map((tag, idx) => (
-                  <span key={idx} className="px-3.5 py-1.5 rounded-xl border border-slate-200/60 bg-white/70 backdrop-blur-sm text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider">
+                  <span key={idx} className="px-3.5 py-1.5 rounded-xl border border-slate-200/60 bg-white  text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider">
                     {tag}
                   </span>
                 ))}
@@ -548,13 +548,13 @@ export default function AiAutomationPage() {
           </div>
 
           {/* Interactive Floating Diagram Container */}
-          <div className="relative w-full max-w-[750px] aspect-[4/3] mx-auto border border-slate-200/80 bg-white/70 backdrop-blur-xl rounded-[36px] shadow-[0_15px_40px_rgba(0,0,0,0.015)] overflow-hidden flex items-center justify-center p-6 z-10">
+          <div className="relative w-full max-w-[750px] aspect-[4/3] mx-auto border border-slate-200/80 bg-white  rounded-[36px] shadow-[0_15px_40px_rgba(0,0,0,0.015)] overflow-hidden flex items-center justify-center p-6 z-10">
             
             {/* Grid Overlay background lines */}
             <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1.5px,transparent_1.5px)] [background-size:24px_24px] opacity-40 pointer-events-none" />
             
             {/* Center Node (V2 AI Engine Core) */}
-            <div className="relative z-20 w-[140px] h-[140px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#111111] p-[1.5px] shadow-[0_8px_30px_rgba(17, 97, 237,0.12)] animate-pulse duration-[3s] flex items-center justify-center">
+            <div className="relative z-20 w-[140px] h-[140px] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#111111] p-[1.5px] shadow-[0_8px_30px_rgba(0, 85, 218,0.12)] animate-pulse duration-[3s] flex items-center justify-center">
               <div className="w-full h-full bg-white rounded-full flex flex-col items-center justify-center text-slate-800 text-center shadow-inner">
                 <span className="text-[0.45rem] font-black uppercase text-[#111111] tracking-widest mb-0.5">V2 Core</span>
                 <span className="text-[0.92rem] font-black leading-none">AI ENGINE</span>
@@ -576,12 +576,12 @@ export default function AiAutomationPage() {
                 >
                   {/* Floating Circular Node */}
                   <div className={`w-14 h-14 rounded-2xl bg-white border flex items-center justify-center shadow-[0_5px_15px_rgba(0,0,0,0.02)] transition-all duration-300 ${
-                    isHovered ? "border-[#111111] shadow-[0_8px_25px_rgba(17, 97, 237,0.08)]" : "border-slate-100"
+                    isHovered ? "border-[#111111] shadow-[0_8px_25px_rgba(0, 85, 218,0.08)]" : "border-slate-100"
                   }`}>
                     {node.icon}
                   </div>
                   <span className={`text-[0.58rem] font-black uppercase tracking-wider mt-2 px-2 py-0.5 rounded transition-all duration-300 ${
-                    isHovered ? "bg-[#111111] text-white" : "bg-slate-50 text-[#111111]"
+                    isHovered ? "bg-[#111111] text-white" : "bg-white text-[#111111]"
                   }`}>
                     {node.label}
                   </span>
@@ -623,7 +623,7 @@ export default function AiAutomationPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1100px] mx-auto select-none">
             {/* OpenAI */}
-            <div className="p-8 rounded-3xl bg-white/70 backdrop-blur-md border border-slate-200/40 shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] flex flex-col justify-between hover:border-[#10A37F]/30 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.04)] hover:bg-white transition-all duration-500 group text-left min-h-[380px]">
+            <div className="p-8 rounded-3xl bg-white  border border-slate-200/40 shadow-[0_8px_30px_rgba(0, 85, 218,0.01)] flex flex-col justify-between hover:border-[#10A37F]/30 hover:shadow-[0_25px_50px_rgba(0, 85, 218,0.04)] hover:bg-white transition-all duration-500 group text-left min-h-[380px]">
               <div>
                 <div className="w-12 h-12 bg-[#10A37F]/[0.08] rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                   <ECO_ICONS.OpenAIModel />
@@ -634,13 +634,13 @@ export default function AiAutomationPage() {
                   Perfect for multi-step agent decisions, complex software writing, structured JSON outputs, and high-intensity logic pipelines.
                 </p>
               </div>
-              <Link href="/contact" className="w-full text-center bg-slate-900 group-hover:bg-[#10A37F] text-white py-3.5 rounded-xl font-bold text-xs transition-colors duration-300 shadow-sm cursor-pointer uppercase tracking-widest font-Outfit">
+              <Link href="/contact" className="w-full text-center bg-[#0055DA] group-hover:bg-[#10A37F] text-white py-3.5 rounded-xl font-bold text-xs transition-colors duration-300 shadow-sm cursor-pointer uppercase tracking-widest font-Outfit">
                 Deploy GPT Agent
               </Link>
             </div>
 
             {/* Google Gemini */}
-            <div className="p-8 rounded-3xl bg-white/70 backdrop-blur-md border border-slate-200/40 shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] flex flex-col justify-between hover:border-[#1a73e8]/30 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.04)] hover:bg-white transition-all duration-500 group text-left min-h-[380px]">
+            <div className="p-8 rounded-3xl bg-white  border border-slate-200/40 shadow-[0_8px_30px_rgba(0, 85, 218,0.01)] flex flex-col justify-between hover:border-[#1a73e8]/30 hover:shadow-[0_25px_50px_rgba(0, 85, 218,0.04)] hover:bg-white transition-all duration-500 group text-left min-h-[380px]">
               <div>
                 <div className="w-12 h-12 bg-[#1a73e8]/[0.08] rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                   <ECO_ICONS.GeminiModel />
@@ -651,13 +651,13 @@ export default function AiAutomationPage() {
                   Perfect for processing hours of video, massive databases, whole PDF manuals, and high-volume image analysis pipelines.
                 </p>
               </div>
-              <Link href="/contact" className="w-full text-center bg-slate-900 group-hover:bg-[#1a73e8] text-white py-3.5 rounded-xl font-bold text-xs transition-colors duration-300 shadow-sm cursor-pointer uppercase tracking-widest font-Outfit">
+              <Link href="/contact" className="w-full text-center bg-[#0055DA] group-hover:bg-[#1a73e8] text-white py-3.5 rounded-xl font-bold text-xs transition-colors duration-300 shadow-sm cursor-pointer uppercase tracking-widest font-Outfit">
                 Deploy Gemini Engine
               </Link>
             </div>
 
             {/* Anthropic Claude */}
-            <div className="p-8 rounded-3xl bg-white/70 backdrop-blur-md border border-slate-200/40 shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] flex flex-col justify-between hover:border-[#D97706]/30 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.04)] hover:bg-white transition-all duration-500 group text-left min-h-[380px]">
+            <div className="p-8 rounded-3xl bg-white  border border-slate-200/40 shadow-[0_8px_30px_rgba(0, 85, 218,0.01)] flex flex-col justify-between hover:border-[#D97706]/30 hover:shadow-[0_25px_50px_rgba(0, 85, 218,0.04)] hover:bg-white transition-all duration-500 group text-left min-h-[380px]">
               <div>
                 <div className="w-12 h-12 bg-[#D97706]/[0.08] rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                   <ECO_ICONS.ClaudeModel />
@@ -668,7 +668,7 @@ export default function AiAutomationPage() {
                   Perfect for precise document parsing, mathematical code vetting, enterprise writing styles, and safe, guardrailed automations.
                 </p>
               </div>
-              <Link href="/contact" className="w-full text-center bg-slate-900 group-hover:bg-[#D97706] text-white py-3.5 rounded-xl font-bold text-xs transition-colors duration-300 shadow-sm cursor-pointer uppercase tracking-widest font-Outfit">
+              <Link href="/contact" className="w-full text-center bg-[#0055DA] group-hover:bg-[#D97706] text-white py-3.5 rounded-xl font-bold text-xs transition-colors duration-300 shadow-sm cursor-pointer uppercase tracking-widest font-Outfit">
                 Deploy Claude Pipeline
               </Link>
             </div>
@@ -689,7 +689,7 @@ export default function AiAutomationPage() {
             </p>
           </div>
 
-          <div className="max-w-[1000px] mx-auto bg-white/70 backdrop-blur-xl border border-slate-200/80 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.015)] overflow-hidden p-6 md:p-10 text-left">
+          <div className="max-w-[1000px] mx-auto bg-white  border border-slate-200/80 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.015)] overflow-hidden p-6 md:p-10 text-left">
             
             {/* Side-by-side split layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch relative">
@@ -803,7 +803,7 @@ export default function AiAutomationPage() {
               <div className="lg:col-span-6 flex justify-center relative">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#111111]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
                 
-                <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17, 97, 237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
+                <div className="p-4 bg-white  border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(0, 85, 218,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-50/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
                   
                   <Image
@@ -815,7 +815,7 @@ export default function AiAutomationPage() {
                     className="object-cover rounded-[28px] shadow-sm transform group-hover:scale-[1.015] transition-transform duration-700 ease-out"
                   />
                   
-                  <div className="absolute bottom-6 right-6 bg-slate-900/90 text-white font-mono text-[0.62rem] tracking-wider px-3.5 py-2 rounded-xl backdrop-blur-sm shadow-md border border-white/10 z-20">
+                  <div className="absolute bottom-6 right-6 bg-slate-900/90 text-white font-mono text-[0.62rem] tracking-wider px-3.5 py-2 rounded-xl  shadow-md border border-white/10 z-20">
                     ◇ ENGINE: ACTIVE
                   </div>
                 </div>
@@ -825,7 +825,7 @@ export default function AiAutomationPage() {
               <div className="lg:col-span-6 flex flex-col gap-6">
                 
                 {/* OpenAI / Anthropic */}
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-[#10A37F]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(16,163,127,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-[#10A37F]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(16,163,127,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7 text-[#10A37F]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="10" />
@@ -844,7 +844,7 @@ export default function AiAutomationPage() {
                 </div>
 
                 {/* n8n / Make */}
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-orange-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(255,109,90,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-orange-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(255,109,90,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
                       <circle cx="6" cy="12" r="3" fill="#FF6D5A" />
@@ -866,7 +866,7 @@ export default function AiAutomationPage() {
                 </div>
 
                 {/* LangChain / Python */}
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-blue-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(48,105,152,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-blue-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(48,105,152,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
                       <rect width="24" height="24" rx="6" fill="#306998" />
@@ -886,7 +886,7 @@ export default function AiAutomationPage() {
                 </div>
 
                 {/* SQL & Redis */}
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-purple-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(139,92,246,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-purple-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(139,92,246,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
                       <rect width="24" height="24" rx="6" fill="#336791" />
@@ -925,7 +925,7 @@ export default function AiAutomationPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17, 97, 237,0.15)] hover:shadow-[0_10px_35px_rgba(17, 97, 237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_6px_25px_rgba(0, 85, 218,0.15)] hover:shadow-[0_10px_35px_rgba(0, 85, 218,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Initiate Pipeline Estimate
             </Link>

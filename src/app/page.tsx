@@ -91,37 +91,32 @@ function TestimonialCard({
   testimonial: (typeof TESTIMONIALS)[number];
 }) {
   return (
-    <article className="w-[350px] sm:w-[450px] md:w-[600px] lg:w-[800px] shrink-0 bg-[#F4F4F4] rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-12 transition-all duration-300 select-none flex flex-row gap-5 md:gap-10 h-full relative group items-center">
+    <article className="w-[280px] sm:w-[320px] md:w-[350px] shrink-0 bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,85,218,0.06)] hover:border-[#0055DA]/20 transition-all duration-500 select-none flex flex-col justify-between h-[210px] sm:h-[230px] relative group text-left">
       
-      {/* Left side: Avatar */}
-      <div className="shrink-0 flex items-center justify-center">
-        <div className="flex h-16 w-16 sm:h-20 sm:w-20 md:h-36 md:w-36 shrink-0 items-center justify-center rounded-full bg-slate-800 text-xl sm:text-2xl md:text-5xl font-bold text-white shadow-xl overflow-hidden">
-           {testimonial.initials}
+      {/* Quote Icon & Text */}
+      <div className="flex-1">
+        <div className="text-[#0055DA] opacity-80 mb-3">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
         </div>
+        <p className="text-[#111111] text-xs sm:text-[0.84rem] leading-relaxed font-semibold italic">
+          &ldquo;{testimonial.quote}&rdquo;
+        </p>
       </div>
       
-      {/* Right side: Content */}
-      <div className="flex-1 flex flex-col w-full h-full justify-center">
-        <p className="text-[0.85rem] sm:text-[1rem] md:text-[1.3rem] font-semibold leading-snug md:leading-relaxed text-slate-800 flex-1 mb-4 md:mb-8">
-          {testimonial.quote}
-        </p>
-
-        <div className="flex items-end justify-between w-full mt-auto">
-          <div>
-             <p className="text-[0.9rem] md:text-[1.1rem] font-bold text-slate-900">
-               {testimonial.name}
-             </p>
-             <p className="text-[0.75rem] md:text-[0.9rem] font-medium text-[#111111] mt-0.5 md:mt-1">
-               {testimonial.role}
-             </p>
-          </div>
-          
-          {/* Quote Icon */}
-          <div className="text-[#111111] opacity-90 pb-1 pr-1 md:pr-2">
-            <svg className="w-6 h-6 md:w-10 md:h-10" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-            </svg>
-          </div>
+      {/* Author details */}
+      <div className="flex items-center gap-3 mt-4 pt-4 border-t border-slate-50">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0055DA]/10 text-xs font-black text-[#0055DA] border border-[#0055DA]/20 shadow-sm uppercase">
+           {testimonial.initials}
+        </div>
+        <div className="truncate">
+           <p className="text-xs sm:text-[0.84rem] font-black text-slate-900 truncate">
+             {testimonial.name}
+           </p>
+           <p className="text-[10px] sm:text-xs font-bold text-slate-400 mt-0.5 truncate">
+             {testimonial.role}
+           </p>
         </div>
       </div>
     </article>
@@ -446,7 +441,7 @@ function MouseTrackingAnimation() {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden bg-slate-50/20"
+      className="absolute inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden bg-white/20"
       style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.015) 1px, transparent 0)`,
         backgroundSize: "24px 24px",
@@ -517,7 +512,7 @@ function TiltIllustration() {
         transformStyle: "preserve-3d",
       }}
     >
-      <div className={`${isHovered ? "" : "animate-float"} gpu-accelerated relative w-full h-[380px] bg-slate-950/90 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-5 shadow-[0_30px_60px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden`}>
+      <div className={`${isHovered ? "" : "animate-float"} gpu-accelerated relative w-full h-[380px] bg-slate-950/90  border border-slate-800/80 rounded-3xl p-5 shadow-[0_30px_60px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden`}>
         {/* Browser control header */}
         <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4 select-none" style={{ transform: "translateZ(20px)" }}>
           <div className="flex gap-1.5">
@@ -593,7 +588,7 @@ function TiltIllustration() {
 
         {/* Floating statistics/glowing cards */}
         <div 
-          className="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
+          className="absolute -top-4 -left-4 bg-white  border border-slate-200/60 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.06)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
           style={{ transform: "translateZ(65px)" }}
         >
           <div className="w-8 h-8 rounded-xl bg-[#111111]/10 text-[#111111] flex items-center justify-center font-black text-sm">
@@ -606,7 +601,7 @@ function TiltIllustration() {
         </div>
 
         <div 
-          className="absolute -bottom-4 -right-4 bg-slate-900/95 backdrop-blur-md border border-slate-800/80 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.15)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
+          className="absolute -bottom-4 -right-4 bg-slate-900/95  border border-slate-800/80 rounded-2xl p-3 shadow-[0_12px_30px_rgba(0,0,0,0.15)] flex items-center gap-2.5 transition-transform duration-500 hover:scale-105 pointer-events-auto"
           style={{ transform: "translateZ(55px)" }}
         >
           <div className="w-8 h-8 rounded-xl bg-[#404040]/10 text-[#404040] flex items-center justify-center font-black text-sm">
@@ -675,14 +670,14 @@ function AnimatedHubImage() {
   const y = useTransform(scrollYProgress, [0, 1], [50, 0]);
 
   return (
-    <div ref={ref} className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden drop-shadow-xl">
+    <div ref={ref} className="relative w-full max-w-[500px] aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-slate-200/60 bg-white">
       <motion.div style={{ scale, opacity, y }} className="w-full h-full relative">
         <Image
-          src="/hub_graphic.png"
+          src="/images/services/web-platform.jpg"
           alt="Company-wide Engineering Hub"
           fill
           sizes="(max-width: 768px) 100vw, 500px"
-          className="object-contain"
+          className="object-cover"
         />
       </motion.div>
     </div>
@@ -696,23 +691,23 @@ function AnimatedLaptopImage() {
     offset: ["start end", "center center"],
   });
 
-  const rotateX = useTransform(scrollYProgress, [0, 1], [25, 5]);
-  const rotateY = useTransform(scrollYProgress, [0, 1], [-25, -10]);
-  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const rotateX = useTransform(scrollYProgress, [0, 1], [15, 0]);
+  const rotateY = useTransform(scrollYProgress, [0, 1], [-15, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [60, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div ref={ref} className="w-full aspect-[4/3] relative perspective-1000">
+    <div ref={ref} className="w-full aspect-[2/3] relative perspective-1000 max-w-[380px] mx-auto rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200/60 bg-white">
       <motion.div 
         style={{ rotateX, rotateY, y, opacity }} 
-        className="w-full h-full relative transition-transform duration-700 ease-out hover:rotate-x-0 hover:rotate-y-0"
+        className="w-full h-full relative transition-transform duration-700 ease-out hover:scale-[1.02]"
       >
         <Image
-          src="/laptop_animation.png"
-          alt="V2Labs Platform Analytics"
+          src="/images/services/digital-marketing.jpg"
+          alt="V2Labs B2B Lead Generation"
           fill
-          sizes="(max-width: 768px) 100vw, 800px"
-          className="object-contain drop-shadow-2xl"
+          sizes="(max-width: 768px) 100vw, 400px"
+          className="object-cover"
         />
       </motion.div>
     </div>
@@ -756,52 +751,11 @@ function HubSection() {
   );
 }
 
-function MobileScrollSection() {
-  const ref = React.useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [40, -40]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -80]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [60, -30]);
-
-  return (
-    <section ref={ref} className="py-20 md:py-32 relative overflow-hidden bg-slate-900 border-y border-slate-800 w-full">
-       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-[#111111]/20 to-[#404040]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
-       
-       <div className="text-center mb-16 relative z-10 px-4">
-          <h2 className="text-[clamp(2rem,5vw,3rem)] text-white font-extrabold tracking-tight mb-4">
-            Flawless on Every Device
-          </h2>
-          <p className="text-white/90 text-lg max-w-[600px] mx-auto font-semibold font-poppins">
-            Our interfaces adapt seamlessly. Experience pixel-perfect scaling, fluid animations, and optimal Core Web Vitals on mobile.
-          </p>
-       </div>
-
-       <div className="flex justify-center items-center gap-6 sm:gap-10 h-[400px] sm:h-[500px] relative px-4 z-10 perspective-1000">
-         <motion.div style={{ y: y1 }} className="w-[160px] sm:w-[220px] h-[340px] sm:h-[460px] bg-slate-800 rounded-[2rem] border-4 border-slate-700 shadow-2xl overflow-hidden hidden sm:block relative">
-           <div className="absolute top-0 inset-x-0 h-4 bg-slate-700 rounded-b-lg w-1/2 mx-auto z-30"></div>
-           <Image src="/mobile-flow-1.png" alt="Mobile Flow 1" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
-         </motion.div>
-         
-         <motion.div style={{ y: y2 }} className="w-[200px] sm:w-[260px] h-[400px] sm:h-[540px] bg-slate-800 rounded-[2.5rem] border-[6px] border-slate-700 shadow-[0_30px_60px_rgba(0,0,0,0.5)] overflow-hidden relative z-20">
-           <div className="absolute top-0 inset-x-0 h-5 bg-slate-700 rounded-b-xl w-1/2 mx-auto z-30"></div>
-           <Image src="/mobile-flow-2.png" alt="Mobile Flow 2" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
-         </motion.div>
-
-         <motion.div style={{ y: y3 }} className="w-[160px] sm:w-[220px] h-[340px] sm:h-[460px] bg-slate-800 rounded-[2rem] border-4 border-slate-700 shadow-2xl overflow-hidden hidden sm:block relative">
-           <div className="absolute top-0 inset-x-0 h-4 bg-slate-700 rounded-b-lg w-1/2 mx-auto z-30"></div>
-           <Image src="/hero-mobile.png" alt="Mobile Flow 3" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
-         </motion.div>
-       </div>
-    </section>
-  );
-}
 
 export default function Home() {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
+  const [activeDominance, setActiveDominance] = React.useState<number | null>(0);
 
   const FAQS = [
     {
@@ -1071,13 +1025,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-10 py-4 border-2 border-[#0055DA] text-[#0055DA] hover:bg-[#0055DA] hover:text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
             >
               Book a strategy call
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-[#0055DA] to-[#111111] hover:from-[#000000] hover:to-[#1A1A1A] shadow-[0_10px_30px_rgba(15,23,42,0.16)] hover:shadow-[0_14px_36px_rgba(15,23,42,0.2)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_10px_30px_rgba(15,23,42,0.16)] hover:shadow-[0_14px_36px_rgba(15,23,42,0.2)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
             >
               Start your project
             </Link>
@@ -1089,7 +1043,7 @@ export default function Home() {
               ["Web + SEO", "Fast, indexable websites with strong technical SEO foundations."],
               ["Brand + Growth", "Design systems, landing pages, and conversion-focused messaging."],
             ].map(([title, copy]) => (
-              <div key={title} className="rounded-[24px] border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/50 px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 relative overflow-hidden group">
+              <div key={title} className="rounded-[24px] border border-slate-200/80 bg-white px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 relative overflow-hidden group">
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0055DA] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <p className="text-sm font-black uppercase tracking-[0.12em] text-[#0055DA] relative z-10">{title}</p>
                 <p className="mt-2 text-sm font-medium leading-6 text-[#111111] relative z-10">{copy}</p>
@@ -1109,7 +1063,7 @@ export default function Home() {
       <ScrollReveal>
         <section
         id="services"
-        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden bg-slate-50/50"
+        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden bg-white"
       >
         <div className="absolute top-10 left-10 w-[250px] h-[250px] bg-[#111111]/[0.03] rounded-full blur-[80px] pointer-events-none select-none -z-10" />
         <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#2A2A2A]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10" />
@@ -1127,11 +1081,11 @@ export default function Home() {
           
           {/* Left Side: Sticky Image */}
           <div className="hidden lg:block relative">
-            <div className="sticky top-32 w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.15)] flex items-center justify-center bg-slate-100 border border-slate-200">
+            <div className="sticky top-32 w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.1)] flex items-center justify-center bg-slate-100 border border-slate-200/60">
               <div className="relative w-full h-full">
                 <Image
-                  src="/live_preview.png"
-                  alt="Live Preview Interface"
+                  src="/images/services/saas-product.jpg"
+                  alt="SaaS Platform Engineering Solutions"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -1174,7 +1128,7 @@ export default function Home() {
              ))}
 
              <div className="mt-6">
-               <Link href="/contact" className="inline-flex px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-[#111111] transition-colors shadow-lg">
+               <Link href="/contact" className="inline-flex px-8 py-4 bg-[#0055DA] text-white rounded-full font-bold hover:bg-[#0044B3] transition-colors shadow-lg">
                  Book a Discovery Call
                </Link>
              </div>
@@ -1229,28 +1183,113 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-      {/* Flawless on Every Device Section */}
+      {/* Digital Dominance Section */}
       <ScrollReveal>
-        <section className="py-20 md:py-32 bg-[#FFFFFF] relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
-          <div className="max-w-[1200px] mx-auto px-4 flex flex-col items-center text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
-              Flawless on <AlternatingText>Every Device</AlternatingText>
-            </h2>
-            <p className="text-lg text-[#111111] mb-12 font-medium leading-relaxed max-w-[700px]">
-              Whether you're managing pipelines on your desktop, checking metrics on a tablet, or responding to alerts on your phone, V2Labs ensures a seamless, responsive experience across all your screens.
-            </p>
+        <section className="py-24 bg-[#000000] text-white overflow-hidden border-t border-[rgba(255,255,255,0.05)]">
+          <div className="max-w-7xl mx-auto px-6">
             
-            <div className="w-full max-w-[900px] aspect-[16/10] relative perspective-1000 group">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.1)_0%,transparent_60%)] -z-10" />
-              <div className="w-full h-full relative transition-transform duration-700 ease-out group-hover:scale-[1.02]">
-                <Image
-                  src="/multi_device_mockup.png"
-                  alt="V2Labs Flawless on Every Device"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  className="object-contain drop-shadow-2xl"
-                />
-              </div>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tighter uppercase font-Outfit">
+                Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16598a] to-[#28b8d9]">Dominance.</span>
+              </h2>
+              <p className="!text-white max-w-3xl mx-auto text-sm md:text-base leading-relaxed font-poppins">
+                We bridge the gap between imagination and ROI. From <strong className="!text-white">Custom Web Development</strong> to <strong className="!text-white">Surgical Ad Targeting</strong>, V2Labs deploys growth-first systems that dominate the digital landscape.
+              </p>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-[550px] w-full font-poppins">
+              {[
+                {
+                  title: "Web Development",
+                  badge: "Build & Scale",
+                  subtitle: "Custom Architecture",
+                  desc: "Engineering high-speed Next.js and React platforms with seamless API integrations and intuitive UX/UI design.",
+                  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800",
+                  alt: "Web Development"
+                },
+                {
+                  title: "SEO & Marketing",
+                  badge: "Search Authority",
+                  subtitle: "Digital Marketing",
+                  desc: "Dominating search engine result pages through deep-tech technical SEO, keyword gap analysis, and content strategy.",
+                  image: "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=800",
+                  alt: "SEO"
+                },
+                {
+                  title: "Video Editing",
+                  badge: "Cinematic Stories",
+                  subtitle: "High-Impact Reels",
+                  desc: "Transforming raw footage into scroll-stopping professional narratives for Instagram, YouTube, and TV Ads.",
+                  image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=800",
+                  alt: "Video Editing"
+                },
+                {
+                  title: "Paid Advertising",
+                  badge: "ROI Maximization",
+                  subtitle: "Google & Meta Ads",
+                  desc: "Surgical precision targeting and budget management to ensure every click turns into high-value revenue.",
+                  image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800",
+                  alt: "Paid Ads"
+                },
+                {
+                  title: "Brand Identity",
+                  badge: "Visual Soul",
+                  subtitle: "Graphic Design",
+                  desc: "Crafting premium logos and brand identities that create psychological trust and market differentiation.",
+                  image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800",
+                  alt: "Branding"
+                }
+              ].map((card, idx) => {
+                const isActive = activeDominance === idx;
+                return (
+                  <div
+                    key={idx}
+                    onClick={() => setActiveDominance(isActive ? null : idx)}
+                    className={`group relative transition-all duration-700 ease-in-out overflow-hidden rounded-[2.5rem] border border-white/10 cursor-pointer w-full lg:w-auto ${
+                      isActive 
+                        ? "h-[320px] lg:flex-[5] lg:h-full" 
+                        : "h-[110px] lg:flex-1 lg:h-full"
+                    }`}
+                  >
+                    <img
+                      src={card.image}
+                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
+                        isActive ? "grayscale-0 scale-105" : "grayscale lg:group-hover:grayscale-0 lg:group-hover:scale-110"
+                      }`}
+                      alt={card.alt}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    
+                    {/* Collapsed view label - Rotated vertical text on desktop, centered horizontal on mobile */}
+                    <div
+                      className={`absolute bottom-6 left-1/2 -translate-x-1/2 lg:rotate-[-90deg] lg:origin-left lg:left-12 lg:bottom-12 whitespace-nowrap transition-all duration-500 ${
+                        isActive ? "opacity-0 invisible" : "opacity-100 visible"
+                      } lg:group-hover:opacity-0 lg:group-hover:invisible`}
+                    >
+                      <h4 className="text-lg lg:text-xl font-bold uppercase tracking-widest text-white/80 font-Outfit">
+                        {card.title}
+                      </h4>
+                    </div>
+
+                    {/* Expanded view details - Fades in on active state (mobile) or hover state (desktop) */}
+                    <div
+                      className={`absolute inset-0 p-8 flex flex-col justify-end transition-all duration-500 ${
+                        isActive ? "opacity-100 visible" : "opacity-0 invisible"
+                      } lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:delay-100`}
+                    >
+                      <span className="text-[#28b8d9] font-black text-[10px] uppercase tracking-[0.3em] mb-2">
+                        {card.badge}
+                      </span>
+                      <h4 className="text-2xl font-bold text-white mb-3 font-Outfit">
+                        {card.subtitle}
+                      </h4>
+                      <p className="!text-slate-300 text-sm max-w-xs">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -1471,7 +1510,7 @@ export default function Home() {
                         <div className="mb-3 w-14 h-14 rounded-2xl bg-gradient-to-br from-[#111111]/[0.08] to-[#111111]/[0.02] border border-[#111111]/10 flex items-center justify-center text-[#111111]">
                           {s.icon}
                         </div>
-                        <span className="text-[0.7rem] font-black uppercase text-white tracking-widest bg-gradient-to-r from-[#0055DA] to-[#111111] px-4 py-1 rounded-full mb-2.5 shadow-[0_2px_8px_rgba(17,97,237,0.2)]">
+                        <span className="text-[0.7rem] font-black uppercase text-white tracking-widest bg-[#0055DA] hover:bg-[#0044B3] px-4 py-1 rounded-full mb-2.5 shadow-[0_2px_8px_rgba(17,97,237,0.2)]">
                           Step {s.step}
                         </span>
                         <h3 className="text-[0.95rem] font-extrabold text-[#0F172A] leading-snug max-w-[140px] tracking-tight">
@@ -1558,224 +1597,89 @@ export default function Home() {
 
       {/* Industries Solutions Section */}
       <ScrollReveal>
-        <section
-          id="industries"
-          className="py-20 md:py-28 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
-        >
-        <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] bg-[#111111]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[8s]" />
-        <div className="absolute bottom-[20%] right-[-10%] w-[350px] h-[350px] bg-[#8b5cf6]/[0.015] rounded-full blur-[100px] pointer-events-none select-none -z-10 animate-pulse duration-[6s]" />
-
-        <div className="max-w-[1100px] mx-auto px-4 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-xs font-black uppercase text-[#111111] tracking-[0.15em] mb-4 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17,97,237,0.05)]">
-              <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
-              Vertical Focus
+        <section id="industries" className="py-24 bg-white px-4 md:px-12 lg:px-24">
+          <div className="max-w-7xl mx-auto">
+            
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">
+                Customised Solutions For <span className="text-[#0055DA]">Industries</span>
+              </h2>
+              <p className="!text-slate-500 font-medium">Killer results and unbeatable client service</p>
+              <div className="w-24 h-1 bg-[#0055DA] mx-auto mt-4 rounded-full"></div>
             </div>
-            <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
-              Customised Solutions for{" "}
-              <span className="text-[#111111]">Industries</span>
-            </h2>
-            <p className="text-[#111111] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
-              We design and engineer bespoke software ecosystems tailored to the
-              unique operational parameters of modern industry verticals.
-            </p>
-          </div>
 
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 px-4 -mx-4 no-scrollbar md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:pb-0">
-            {[
-              {
-                name: "Food & Beverage",
-                desc: "Headless ordering apps, automated inventory trackers, and delivery route integrations.",
-                image: "/industry_food.png",
-                badge: "F&B Operations",
-                gradient: "from-[#f59e0b] to-[#d97706]",
-              },
-              {
-                name: "Industrial & Manufacturing",
-                desc: "Real-time assembly line telemetry, supplier portals, and precision engineering databases.",
-                image: "/industry_manufacturing.png",
-                badge: "Industry 4.0",
-                gradient: "from-[#ef4444] to-[#f97316]",
-              },
-              {
-                name: "Real Estate & Architecture",
-                desc: "3D virtual listing modules, automated contract generators, and custom broker CRM networks.",
-                image: "/industry_real_estate.png",
-                badge: "PropTech",
-                gradient: "from-[#10b981] to-[#059669]",
-              },
-              {
-                name: "Entertainment & Media",
-                desc: "High-retention streaming pipelines, digital asset catalogs, and motion graphics automation.",
-                image: "/industry_entertainment.png",
-                badge: "MediaTech",
-                gradient: "from-[#ec4899] to-[#d946ef]",
-              },
-              {
-                name: "Healthcare & MedTech",
-                desc: "ACID-compliant patient portals, secure HIPAA-ready databases, and AI diagnostic guides.",
-                image: "/industry_healthcare.png",
-                badge: "HealthTech",
-                gradient: "from-[#404040] to-[#2A2A2A]",
-              },
-              {
-                name: "Fashion & Cosmetics",
-                desc: "Immersive luxury catalog systems, influencer pipelines, and Shopify Plus headless hubs.",
-                image: "/industry_fashion.png",
-                badge: "E-Commerce",
-                gradient: "from-[#d946ef] to-[#8b5cf6]",
-              },
-              {
-                name: "Financial & Investment",
-                desc: "High-fidelity stock ticker logs, secure transaction gateways, and automated ledger indexing.",
-                image: "/industry_finance.png",
-                badge: "FinTech",
-                gradient: "from-[#111111] to-[#8b5cf6]",
-              },
-              {
-                name: "Your Vertical Solution",
-                desc: "Don't see your specific industry? We build bespoke operational software tailored to any complex model.",
-                image: "",
-                badge: "Bespoke",
-                gradient: "from-[#0055DA] to-[#111111]",
-                isCTA: true,
-              },
-            ].map((ind, idx) => {
-              if (ind.isCTA) {
-                return (
-                  <Link
-                    key={idx}
-                    href="/contact"
-                    className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/30 bg-gradient-to-br from-[#0055DA] to-[#111111] p-6 shadow-[0_8px_32px_rgba(15,23,42,0.05)] hover:shadow-[0_20px_45px_rgba(17,97,237,0.15)] transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
-                  >
-                    <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] opacity-100 animate-pulse pointer-events-none" />
-                    <div className="flex flex-col gap-4 relative z-10">
-                      <div className="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center border border-white/20 mb-2">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </div>
-                      <h3 className="text-lg sm:text-xl font-black text-white font-Outfit tracking-tight leading-tight">
-                        {ind.name}
-                      </h3>
-                      <p className="text-white/80 leading-relaxed text-xs sm:text-[0.8rem] font-semibold font-Outfit">
-                        {ind.desc}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-xs font-black uppercase text-white mt-6 cursor-pointer select-none font-Outfit relative self-start group/action">
-                      <span className="relative">
-                        Start Your Spec
-                        <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-white scale-x-0 group-hover/action:scale-x-100 transition-transform origin-left duration-300" />
-                      </span>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        className="transform group-hover:translate-x-1.5 transition-transform duration-300"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </div>
-                  </Link>
-                );
-              }
-
-              return (
-                <div
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6">
+              {[
+                {
+                  name: "Food industry",
+                  image: "https://i.pinimg.com/736x/b4/d3/ee/b4d3ee08a66ba4ed844533eb8d706516.jpg",
+                  alt: "Restaurant"
+                },
+                {
+                  name: "Manufacturing",
+                  image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500",
+                  alt: "Manufacturing"
+                },
+                {
+                  name: "Real Estate",
+                  image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=500",
+                  alt: "Real Estate"
+                },
+                {
+                  name: "Entertainment",
+                  image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=500",
+                  alt: "Entertainment"
+                },
+                {
+                  name: "Education",
+                  image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=500",
+                  alt: "School"
+                },
+                {
+                  name: "Healthcare",
+                  image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=500",
+                  alt: "Healthcare"
+                },
+                {
+                  name: "Fashion & Cosmetics",
+                  image: "https://businessfinancing.co.uk/wp-content/uploads/08_Most-Popular-Consumer-Brand-in-Every-Country_Fashion-HD.png",
+                  alt: "Fashion & Cosmetics"
+                },
+                {
+                  name: "Finance & Investment",
+                  image: "https://media.istockphoto.com/id/1203543894/photo/trees-and-coins-in-glass-bottles-stacked-coins-red-arrows-placed-as-graphs-or-charts.jpg?s=170667a&w=0&k=20&c=Db15v0cZ43LL20PYaLoiQ31W3bNvelyL0AgzrnK5-LI=",
+                  alt: "Finance"
+                },
+                {
+                  name: "AI & Automation",
+                  image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=500",
+                  alt: "AI & Automation Solutions"
+                }
+              ].map((ind, idx) => (
+                <Link
                   key={idx}
-                  className="group rounded-[24px] sm:rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 p-5 sm:p-6 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 transition-all duration-500 flex flex-col justify-between overflow-hidden relative min-h-[340px] sm:min-h-[360px] w-[82vw] sm:w-[320px] md:w-auto shrink-0 snap-start md:shrink md:snap-align-none gpu-accelerated"
+                  href="/contact"
+                  className="group relative h-64 md:h-80 overflow-hidden rounded-3xl bg-slate-200 shadow-lg cursor-pointer block"
                 >
-                  <div
-                    className={`absolute top-0 left-0 h-[4px] bg-gradient-to-r ${ind.gradient} w-0 group-hover:w-full transition-all duration-500 rounded-t-[24px] sm:rounded-t-[32px]`}
+                  <img
+                    src={ind.image}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    alt={ind.alt}
+                    loading="lazy"
                   />
-                  <div className="flex flex-col gap-4 sm:gap-5">
-                    <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-100 shadow-sm relative group-hover:scale-[1.015] transition-transform duration-500 ease-out bg-slate-50">
-                      <Image
-                        src={ind.image}
-                        alt={`${ind.name} Customized Solution Artwork`}
-                        fill
-                        sizes="(max-width: 640px) 82vw, (max-width: 1024px) 45vw, 320px"
-                        loading="lazy"
-                        className="object-cover filter transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-[1.03]"
-                      />
-                      <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 bg-slate-900/90 text-white font-mono text-[0.52rem] sm:text-[0.58rem] tracking-wider px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-white/5 backdrop-blur-sm shadow z-20 font-bold">
-                        {ind.badge}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-base sm:text-lg md:text-lg lg:text-xl font-black text-slate-900 group-hover:text-[#111111] transition-colors duration-300 font-Outfit tracking-tight leading-tight">
-                        {ind.name}
-                      </h3>
-                      <p className="text-[#111111] leading-relaxed text-xs sm:text-[0.8rem] font-semibold mt-1.5 font-Outfit">
-                        {ind.desc}
-                      </p>
-                    </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#081E3F]/90 via-[#081E3F]/20 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-4 text-center">
+                    <h3 className="text-white font-bold text-sm md:text-xl uppercase tracking-wider">
+                      {ind.name}
+                    </h3>
+                    <div className="h-1 w-0 group-hover:w-full bg-[#0055DA] transition-all duration-300 mt-2 mx-auto"></div>
                   </div>
-                  <div className="flex items-center gap-1.5 text-xs font-black uppercase text-[#111111] mt-6 cursor-pointer select-none font-Outfit relative self-start group/action">
-                    <span className="relative">
-                      View Solution Spec
-                      <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#111111] scale-x-0 group-hover/action:scale-x-100 transition-transform origin-left duration-300" />
-                    </span>
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      className="transform group-hover:translate-x-1.5 transition-transform duration-300"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </div>
-                </div>
-              );
-            })}
+                </Link>
+              ))}
+            </div>
           </div>
-
-          <div className="flex md:hidden items-center justify-center gap-1.5 mt-5 text-[#111111]/70 font-Outfit text-[0.68rem] font-bold uppercase tracking-[0.12em] animate-pulse">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-            >
-              <line x1="19" y1="12" x2="5" y2="12" />
-              <polyline points="12 19 5 12 12 5" />
-            </svg>
-            <span>Swipe to explore industries</span>
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </div>
-        </div>
-      </section>
-    </ScrollReveal>
+        </section>
+      </ScrollReveal>
 
       {/* Why Startups Choose V2Labs Section */}
       <ScrollReveal>
@@ -1787,7 +1691,7 @@ export default function Home() {
 
         <div className="max-w-[1100px] mx-auto px-4 relative z-10">
           <div className="text-center mb-16 px-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/60 shadow-[0_2px_10px_rgba(0,0,0,0.01)] mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200/60 shadow-[0_2px_10px_rgba(0,0,0,0.01)] mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#111111] animate-pulse" />
               <span className="text-[0.62rem] sm:text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-[#111111]">
                 Founders' Choice
@@ -1909,9 +1813,9 @@ export default function Home() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 shadow-[0_10px_30px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group gpu-accelerated"
+                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/80 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group gpu-accelerated"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-gradient-to-r from-[#0055DA] to-[#111111] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-[#0055DA] hover:bg-[#0044B3] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.06)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center border border-[#111111]/10 group-hover:bg-gradient-to-br group-hover:from-[#111111] group-hover:to-[#2A2A2A] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)] transition-all duration-300 shadow-sm mb-4 md:mb-6">
@@ -1937,24 +1841,27 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="testimonials"
-          className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-gradient-to-b from-[#fafbfc] to-[#f5f8ff]/30"
+          className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-white"
         >
         {/* Soft Glowing Orbs */}
         <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#111111]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
         <div className="absolute right-[-5%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#2A2A2A]/[0.02] blur-[120px] duration-[8s] pointer-events-none select-none -z-10" />
 
         {/* Section Header */}
-        <div className="relative mb-12 text-center md:mb-20 px-6 z-10">
-          <h2 className="mx-auto max-w-[800px] text-3xl md:text-[2.6rem] font-extrabold tracking-tight text-[#0F172A] leading-[1.15] font-Outfit">
+        <div className="relative mb-10 text-center px-6 z-10">
+          <h2 className="mx-auto max-w-[600px] text-2xl md:text-3xl font-extrabold tracking-tight text-[#0F172A] leading-[1.15] font-Outfit">
             What Our <AlternatingText>Customers</AlternatingText> Say
           </h2>
+          <p className="!text-slate-500 text-xs sm:text-sm font-semibold mt-2.5 font-poppins">
+            Loved by founders and product leaders worldwide
+          </p>
         </div>
 
         {/* Double Row Horizontal Marquee - Full Page Edge-to-Edge */}
         <div className="relative flex flex-col gap-8 overflow-hidden py-4 select-none z-10 w-full">
           {/* Transparent Gradient Fade Masks at Page Edges */}
-          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-16 bg-gradient-to-r from-[#fafbfc] via-[#fafbfc]/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
-          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-16 bg-gradient-to-l from-[#fafbfc] via-[#fafbfc]/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
+          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-16 bg-gradient-to-r from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
+          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-16 bg-gradient-to-l from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
 
           {/* Row 1: Leftward Marquee */}
           <div className="relative flex w-full overflow-hidden">
@@ -2004,8 +1911,7 @@ export default function Home() {
       </section>
     </ScrollReveal>
 
-      {/* Information & FAQ Section */}
-      <MobileScrollSection />
+
 
       <ScrollReveal>
         <section
@@ -2039,7 +1945,7 @@ export default function Home() {
                 className={`rounded-2xl border p-4 sm:p-5 transition-all duration-300 relative overflow-hidden group ${
                   openFaq === idx
                     ? "bg-white border-[#111111]/30 shadow-[0_15px_35px_rgba(17,97,237,0.06)] pl-7 sm:pl-8"
-                    : "bg-white/60 border-black/[0.03] shadow-sm hover:border-[#111111]/20 hover:bg-white hover:shadow-[0_10px_25px_rgba(17,97,237,0.04)]"
+                    : "bg-white border-black/[0.03] shadow-sm hover:border-[#111111]/20 hover:bg-white hover:shadow-[0_10px_25px_rgba(17,97,237,0.04)]"
                 }`}
               >
                 <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

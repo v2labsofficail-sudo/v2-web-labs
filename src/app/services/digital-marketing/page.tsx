@@ -26,7 +26,7 @@ const pillars = [
 
 export default function DigitalMarketingPage() {
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900">
+    <div className="bg-white min-h-screen text-slate-900">
       <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
         <p className="text-sm font-black uppercase tracking-[0.18em] text-[#111111] mb-4">
           Digital Marketing
@@ -63,7 +63,7 @@ export default function DigitalMarketingPage() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/services"
-              className="inline-flex items-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#111111]"
+              className="inline-flex items-center rounded-full bg-[#0055DA] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#0044B3]"
             >
               View all services
             </Link>

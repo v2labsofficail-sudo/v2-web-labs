@@ -104,7 +104,7 @@ export default function UiUxBrandPage() {
       desc: "Creating solid, logical user navigation frameworks. We design flow connections and map exactly how clients complete actions before drawing any visual vectors.",
       tools: ["FigJam", "Miro Workspace", "Notion Studio"],
       preview: (
-        <div className="w-full h-full border border-slate-200 bg-slate-50/70 p-4 rounded-2xl flex flex-col justify-between text-[0.68rem] font-mono text-[#111111] shadow-inner relative overflow-hidden">
+        <div className="w-full h-full border border-slate-200 bg-white p-4 rounded-2xl flex flex-col justify-between text-[0.68rem] font-mono text-[#111111] shadow-inner relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
           <div className="flex justify-between items-center pb-2 border-b border-slate-200/60 relative z-10">
             <span className="font-extrabold text-[#111111]">
@@ -121,7 +121,7 @@ export default function UiUxBrandPage() {
             <span className="text-[#111111] font-black animate-ping text-[0.6rem]">
               ➔
             </span>
-            <span className="px-2.5 py-1.5 bg-[#111111] text-white rounded-xl shadow-[0_4px_10px_rgba(17, 97, 237,0.2)] font-black">
+            <span className="px-2.5 py-1.5 bg-[#111111] text-white rounded-xl shadow-[0_4px_10px_rgba(0, 85, 218,0.2)] font-black">
               Configure Service
             </span>
             <span className="text-[#111111]">➔</span>
@@ -143,7 +143,7 @@ export default function UiUxBrandPage() {
       desc: "Constructing high-contrast skeleton structures. This step maps proper element ratios, typographic layout priorities, and clear visual hooks.",
       tools: ["Figma Variables", "Structural Guides", "Atomic Assets"],
       preview: (
-        <div className="w-full h-full border border-slate-200 rounded-2xl bg-slate-50/70 p-4 flex flex-col gap-3 font-mono text-[0.68rem] text-[#111111] relative overflow-hidden shadow-inner">
+        <div className="w-full h-full border border-slate-200 rounded-2xl bg-white p-4 flex flex-col gap-3 font-mono text-[0.68rem] text-[#111111] relative overflow-hidden shadow-inner">
           <div className="absolute left-1/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
           <div className="absolute left-2/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
           <div className="absolute left-3/4 top-0 bottom-0 w-[1px] bg-slate-200/60 border-dashed" />
@@ -152,10 +152,10 @@ export default function UiUxBrandPage() {
             <div className="w-3 h-3 border border-[#111111]/30 rounded-full" />
           </div>
           <div className="grid grid-cols-3 gap-3 flex-1 z-10">
-            <div className="border border-dashed border-slate-300 rounded-xl flex items-center justify-center p-1 bg-white/40">
+            <div className="border border-dashed border-slate-300 rounded-xl flex items-center justify-center p-1 bg-white">
               Side Spec
             </div>
-            <div className="col-span-2 border border-dashed border-[#111111]/30 rounded-xl flex flex-col justify-between p-3 bg-white/60">
+            <div className="col-span-2 border border-dashed border-[#111111]/30 rounded-xl flex flex-col justify-between p-3 bg-white">
               <div className="h-2 bg-slate-200 rounded-full w-2/3" />
               <div className="h-8 bg-[#111111]/5 border border-dashed border-[#111111]/20 rounded-lg flex items-center justify-center text-[#111111] text-[0.6rem] font-bold">
                 Grid Anchor [W: 100%]
@@ -194,7 +194,7 @@ export default function UiUxBrandPage() {
               Neon Conversion Dashboard
             </div>
             <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden border border-slate-300/40">
-              <div className="h-full bg-gradient-to-r from-[#0055DA] to-[#111111] w-[88%] rounded-full shadow-[0_0_10px_rgba(17, 97, 237,0.15)]" />
+              <div className="h-full bg-[#0055DA] hover:bg-[#0044B3] w-[88%] rounded-full shadow-[0_0_10px_rgba(0, 85, 218,0.15)]" />
             </div>
           </div>
           <div className="flex justify-between items-center text-[0.6rem] text-[#111111] relative z-10 pt-2 border-t border-slate-200/40">
@@ -207,7 +207,7 @@ export default function UiUxBrandPage() {
   ];
 
   return (
-    <div className="bg-slate-50/60 min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
+    <div className="bg-white min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
       
       <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
       <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse duration-[12s]" />
@@ -219,7 +219,7 @@ export default function UiUxBrandPage() {
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
         
         <header className="mb-24 text-center md:text-left relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(17, 97, 237,0.05)]">
+          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-[0_2px_10px_rgba(0, 85, 218,0.05)]">
             <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
             UI/UX Studio Focus
           </div>
@@ -254,14 +254,14 @@ export default function UiUxBrandPage() {
             </div>
 
             
-            <div className="flex p-1.5 bg-slate-200/50 backdrop-blur-md border border-slate-200/60 rounded-[20px] w-full md:w-auto shadow-inner">
+            <div className="flex p-1.5 bg-white  border border-slate-200/60 rounded-[20px] w-full md:w-auto shadow-inner">
               {(["wireframe", "tokens", "hifi"] as const).map((mode) => (
                 <button
                   key={mode}
                   onClick={() => setSandboxMode(mode)}
                   className={`flex-1 md:flex-initial px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer ${
                     sandboxMode === mode
-                      ? "bg-white text-[#111111] shadow-[0_8px_20px_rgba(17, 97, 237,0.08)] scale-[1.02]"
+                      ? "bg-white text-[#111111] shadow-[0_8px_20px_rgba(0, 85, 218,0.08)] scale-[1.02]"
                       : "text-[#111111] hover:text-[#111111]"
                   }`}
                 >
@@ -272,7 +272,7 @@ export default function UiUxBrandPage() {
           </div>
 
           
-          <div className="w-full bg-white/70 backdrop-blur-xl border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col md:flex-row gap-10 items-center justify-between">
+          <div className="w-full bg-white  border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col md:flex-row gap-10 items-center justify-between">
             
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#111111]/[0.05] rounded-full blur-[110px] pointer-events-none" />
 
@@ -288,7 +288,7 @@ export default function UiUxBrandPage() {
                 </span>
               </div>
 
-              <div className="p-5 rounded-3xl bg-slate-55/80 backdrop-blur-md border border-slate-200/60 flex flex-col gap-3.5 shadow-inner">
+              <div className="p-5 rounded-3xl bg-slate-55/80  border border-slate-200/60 flex flex-col gap-3.5 shadow-inner">
                 <div className="flex justify-between items-center">
                   <span className="text-[#111111]">Interface Type</span>
                   <span className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-[#111111] font-bold">
@@ -344,7 +344,7 @@ export default function UiUxBrandPage() {
                   {sandboxMode === "tokens" &&
                     `:root { \n  --padding-core: var(--space-8);\n  --glow-blur: 24px;\n  --radius-main: 28px;\n}`}
                   {sandboxMode === "hifi" &&
-                    `.dashboard-card { \n  background: rgba(255,255,255,0.7);\n  backdrop-filter: blur(20px);\n  box-shadow: 0 20px 50px rgba(17, 97, 237,0.06);\n}`}
+                    `.dashboard-card { \n  background: rgba(255,255,255,0.7);\n  backdrop-filter: blur(20px);\n  box-shadow: 0 20px 50px rgba(0, 85, 218,0.06);\n}`}
                 </code>
               </div>
             </div>
@@ -358,7 +358,7 @@ export default function UiUxBrandPage() {
                     ? "bg-transparent border-[2.2px] border-dashed border-slate-300 rounded-none shadow-none text-[#111111]"
                     : sandboxMode === "tokens"
                       ? "bg-purple-50/20 border border-purple-300/60 rounded-[28px] text-purple-900 shadow-lg relative"
-                      : "bg-white/90 backdrop-blur-xl border border-slate-200 rounded-[32px] text-slate-800 shadow-[0_25px_60px_rgba(17, 97, 237,0.06)] relative"
+                      : "bg-white  border border-slate-200 rounded-[32px] text-slate-800 shadow-[0_25px_60px_rgba(0, 85, 218,0.06)] relative"
                 }`}
               >
                 
@@ -442,7 +442,7 @@ export default function UiUxBrandPage() {
                   ) : (
                     <div className="flex flex-col gap-5">
                       
-                      <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between relative overflow-hidden shadow-inner">
+                      <div className="p-5 rounded-2xl bg-white border border-slate-100 flex flex-col justify-between relative overflow-hidden shadow-inner">
                         <div className="absolute top-0 right-0 w-16 h-16 bg-[#111111]/5 rounded-full blur-lg" />
                         <div className="flex justify-between items-center mb-3">
                           <span className="text-[0.68rem] font-bold text-[#111111] tracking-wider">
@@ -505,7 +505,7 @@ export default function UiUxBrandPage() {
                       </div>
 
                       
-                      <button className="w-full py-3.5 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] rounded-xl text-white font-extrabold text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(17, 97, 237,0.15)] hover:shadow-[0_8px_30px_rgba(17, 97, 237,0.3)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+                      <button className="w-full py-3.5 bg-[#0055DA] hover:bg-[#0044B3] rounded-xl text-white font-extrabold text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(0, 85, 218,0.15)] hover:shadow-[0_8px_30px_rgba(0, 85, 218,0.3)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
                         Launch Figma Hifi Blueprint
                       </button>
                     </div>
@@ -535,7 +535,7 @@ export default function UiUxBrandPage() {
             {capabilities.map((cap, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-[32px] border border-slate-200/40 bg-white/70 backdrop-blur-md shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.05)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
+                className="p-8 rounded-[32px] border border-slate-200/40 bg-white  shadow-[0_8px_30px_rgba(0, 85, 218,0.01)] relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0, 85, 218,0.05)] hover:border-[#111111]/30 hover:bg-white group flex flex-col justify-between min-h-[290px]"
               >
                 
                 <div
@@ -590,7 +590,7 @@ export default function UiUxBrandPage() {
                     onClick={() => setActiveStep(idx)}
                     className={`flex gap-5 p-5 rounded-[24px] border transition-all duration-300 cursor-pointer relative group overflow-hidden ${
                       isActive
-                        ? "bg-white shadow-[0_20px_40px_rgba(17, 97, 237,0.04)] border-[#111111]/20 scale-[1.03]"
+                        ? "bg-white shadow-[0_20px_40px_rgba(0, 85, 218,0.04)] border-[#111111]/20 scale-[1.03]"
                         : "bg-transparent border-transparent hover:border-slate-200"
                     }`}
                   >
@@ -625,9 +625,9 @@ export default function UiUxBrandPage() {
 
             
             <div className="lg:col-span-7 z-10">
-              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(17, 97, 237,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(17, 97, 237,0.04)] hover:border-[#111111]/20 transition-all duration-500">
+              <div className="bg-white rounded-[36px] border border-slate-200/40 p-8 shadow-[0_8px_30px_rgba(0, 85, 218,0.01)] min-h-[390px] flex flex-col justify-between relative group hover:shadow-[0_25px_50px_rgba(0, 85, 218,0.04)] hover:border-[#111111]/20 transition-all duration-500">
                 
-                <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] rounded-t-[36px]" />
+                <div className="absolute top-0 left-0 right-0 h-[5px] bg-[#0055DA] hover:bg-[#0044B3] rounded-t-[36px]" />
 
                 <div>
                   <span className="text-[0.62rem] font-black tracking-widest text-[#111111] uppercase block mb-1">
@@ -688,7 +688,7 @@ export default function UiUxBrandPage() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-gradient-to-tr from-[#111111]/10 to-[#8b5cf6]/10 rounded-full blur-[80px] -z-10 animate-float" />
                 
                 
-                <div className="p-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(17, 97, 237,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
+                <div className="p-4 bg-white  border border-slate-200/80 rounded-[40px] shadow-[0_30px_70px_rgba(0,0,0,0.04)] hover:shadow-[0_35px_80px_rgba(0, 85, 218,0.06)] hover:scale-[1.01] transition-all duration-500 relative overflow-hidden group aspect-square max-w-[460px] w-full">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-50/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
                   
                   <Image
@@ -702,7 +702,7 @@ export default function UiUxBrandPage() {
                   />
                   
                   
-                  <div className="absolute bottom-6 right-6 bg-slate-900/90 text-white font-mono text-[0.62rem] tracking-wider px-3.5 py-2 rounded-xl backdrop-blur-sm shadow-md border border-white/10 z-20">
+                  <div className="absolute bottom-6 right-6 bg-slate-900/90 text-white font-mono text-[0.62rem] tracking-wider px-3.5 py-2 rounded-xl  shadow-md border border-white/10 z-20">
                     ◇ SHADER: ACTIVE
                   </div>
                 </div>
@@ -712,7 +712,7 @@ export default function UiUxBrandPage() {
               <div className="lg:col-span-6 flex flex-col gap-6">
                 
                 
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-[#111111]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(17, 97, 237,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-[#111111]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(0, 85, 218,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-7 h-7" viewBox="0 0 100 150" fill="none">
                       <path d="M25 37.5C25 51.3 36.2 62.5 50 62.5C50 48.7 38.8 37.5 25 37.5Z" fill="#F24E1E"/>
@@ -734,7 +734,7 @@ export default function UiUxBrandPage() {
                 </div>
 
                 
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-blue-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(0,196,255,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-blue-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(0,196,255,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
                       <rect width="24" height="24" rx="6" fill="#001C3D"/>
@@ -753,7 +753,7 @@ export default function UiUxBrandPage() {
                 </div>
 
                 
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-amber-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(255,154,0,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-amber-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(255,154,0,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
                       <rect width="24" height="24" rx="6" fill="#1b1202"/>
@@ -772,7 +772,7 @@ export default function UiUxBrandPage() {
                 </div>
 
                 
-                <div className="flex items-center gap-5 p-5 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-3xl hover:border-purple-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(125,42,232,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-purple-300/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(125,42,232,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
                       <circle cx="12" cy="12" r="10" fill="url(#canvaGrad)"/>
@@ -819,7 +819,7 @@ export default function UiUxBrandPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-[#0055DA] via-[#111111] to-[#8b5cf6] hover:from-[#000000] hover:to-[#7c3aed] shadow-[0_6px_25px_rgba(17, 97, 237,0.15)] hover:shadow-[0_10px_35px_rgba(17, 97, 237,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_6px_25px_rgba(0, 85, 218,0.15)] hover:shadow-[0_10px_35px_rgba(0, 85, 218,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Initiate Blueprint Estimate
             </Link>

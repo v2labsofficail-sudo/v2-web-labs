@@ -5,6 +5,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 import { serviceItems } from "@/lib/site-data";
+import { 
+  Globe, 
+  Cpu, 
+  Palette, 
+  Database, 
+  Layers, 
+  Video, 
+  Target,
+  Sparkles 
+} from "lucide-react";
 
 const Icons = {
   Home: () => (
@@ -97,30 +107,38 @@ export default function Navbar() {
     return () => clearTimeout(timer);
   }, [pathname]);
 
-  const services = serviceItems.map((service) => ({
-    ...service,
-    name: service.title,
-    desc: service.summary,
-    icon:
-      service.slug === "saas-product"
-        ? <Icons.Ecom />
-        : service.slug === "erp-crm"
-          ? <Icons.Database />
-          : service.slug === "ai-automation"
-            ? <Icons.UiUx />
-            : service.slug === "web-platform"
-              ? <Icons.Web />
-              : service.slug === "video-motion"
-                ? <Icons.Video />
-                : <Icons.Design />,
-  }));
+  const services = serviceItems.map((service) => {
+    const IconComponent =
+      service.slug === "web-platform"
+        ? Globe
+        : service.slug === "ai-automation"
+          ? Cpu
+          : service.slug === "ui-ux-brand"
+            ? Palette
+            : service.slug === "erp-crm"
+              ? Database
+              : service.slug === "saas-product"
+                ? Layers
+                : service.slug === "video-motion"
+                  ? Video
+                  : service.slug === "digital-marketing"
+                    ? Target
+                    : Sparkles;
+
+    return {
+      ...service,
+      name: service.navLabel,
+      desc: service.summary,
+      icon: <IconComponent className="w-5 h-5" strokeWidth={2} />,
+    };
+  });
 
   return (
     <>
       <header className={`sticky top-0 left-0 w-full z-[1000] select-none transition-all duration-300 border-b ${
         isScrolled 
-          ? "py-2 sm:py-3 px-4 sm:px-8 bg-white/90 border-slate-200/50 backdrop-blur-xl shadow-[0_12px_40px_rgba(15,23,42,0.04)]" 
-          : "py-3.5 sm:py-5 px-4 sm:px-8 bg-white/75 border-slate-100/10 backdrop-blur-xl"
+          ? "py-2 sm:py-3 px-4 sm:px-8 bg-white border-slate-200/50  shadow-[0_12px_40px_rgba(15,23,42,0.04)]" 
+          : "py-3.5 sm:py-5 px-4 sm:px-8 bg-white border-slate-100/10 "
       }`}>
         <div className="flex justify-between items-center w-full max-w-[1240px] mx-auto">
           <Link 
@@ -137,15 +155,15 @@ export default function Navbar() {
               href="/" 
               className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/" 
-                  ? "text-[#1161ed] bg-[#1161ed]/[0.04]" 
-                  : "text-black hover:text-[#1161ed] hover:bg-slate-50/70"
+                  ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
+                  : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
               <span className="relative z-10">Home</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#1161ed]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#1161ed] transition-all duration-300 ${
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/" 
-                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#1161ed]" 
+                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#0055DA]" 
                   : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60"
               }`} />
             </Link>
@@ -154,15 +172,15 @@ export default function Navbar() {
               href="/about" 
               className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/about" 
-                  ? "text-[#1161ed] bg-[#1161ed]/[0.04]" 
-                  : "text-black hover:text-[#1161ed] hover:bg-slate-50/70"
+                  ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
+                  : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
               <span className="relative z-10">About</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#1161ed]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#1161ed] transition-all duration-300 ${
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/about" 
-                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#1161ed]" 
+                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#0055DA]" 
                   : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60"
               }`} />
             </Link>
@@ -170,45 +188,45 @@ export default function Navbar() {
             <div className="relative group py-4 px-2">
               <button className={`flex items-center gap-1.5 font-bold font-poppins text-[0.94rem] transition-all duration-300 cursor-pointer py-2 px-4 rounded-xl relative overflow-hidden ${
                 pathname.startsWith("/services")
-                  ? "text-[#1161ed] bg-[#1161ed]/[0.04]"
-                  : "text-black group-hover:text-[#1161ed] group-hover:bg-slate-50/70"
+                  ? "text-[#0055DA] bg-[#0055DA]/[0.04]"
+                  : "text-black group-hover:text-[#0055DA] group-hover:bg-white"
               }`}>
                 <span className="relative z-10 flex items-center gap-1.5 font-poppins">
                   Solutions
-                  <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400 group-hover:text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400 group-hover:text-[#0055DA]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#1161ed]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#1161ed] transition-all duration-300 ${
+                <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                   pathname.startsWith("/services")
-                    ? "scale-x-100 opacity-100 shadow-[0_0_8px_#1161ed]"
+                    ? "scale-x-100 opacity-100 shadow-[0_0_8px_#0055DA]"
                     : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60"
                 }`} />
               </button>
               
-              <div className="invisible opacity-0 absolute top-full left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl min-w-[780px] grid grid-cols-12 gap-5 rounded-3xl p-5 shadow-[0_20px_50px_rgba(17, 97, 237,0.08)] border border-slate-200/40 transition-all duration-300 translate-y-3 group-hover:visible group-hover:opacity-100 group-hover:translate-y-2.5 z-50">
+              <div className="invisible opacity-0 absolute top-full left-1/2 -translate-x-1/2 bg-white  min-w-[780px] grid grid-cols-12 gap-5 rounded-3xl p-5 shadow-[0_20px_50px_rgba(0, 85, 218,0.08)] border border-slate-200/40 transition-all duration-300 translate-y-3 group-hover:visible group-hover:opacity-100 group-hover:translate-y-2.5 z-50">
                 <div className="col-span-8 grid grid-cols-2 gap-2">
                   {services.map((s) => (
                     <Link 
                       key={s.href} 
                       href={s.href} 
-                      className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100/50 group/item"
+                      className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-white transition-all border border-transparent hover:border-slate-100/50 group/item"
                     >
-                      <div className="w-9 h-9 rounded-lg bg-[#1161ed]/[0.06] text-[#1161ed] flex items-center justify-center shrink-0 group-hover/item:bg-[#1161ed] group-hover/item:text-white transition-all duration-300">
+                      <div className="w-9 h-9 rounded-lg bg-[#0055DA]/[0.06] text-[#0055DA] flex items-center justify-center shrink-0 group-hover/item:bg-[#0055DA] group-hover/item:text-white transition-all duration-300">
                         {s.icon}
                       </div>
                       <div className="font-poppins">
-                        <div className="text-black font-extrabold text-[0.82rem] leading-none mb-1 group-hover/item:text-[#1161ed] transition-colors">{s.name}</div>
+                        <div className="text-black font-extrabold text-[0.82rem] leading-none mb-1 group-hover/item:text-[#0055DA] transition-colors">{s.name}</div>
                         <div className="text-slate-500 text-[0.72rem] leading-snug font-semibold">{s.desc}</div>
                       </div>
                     </Link>
                   ))}
                 </div>
 
-                <div className="col-span-4 bg-gradient-to-br from-[#1161ed]/5 to-[#06b6d4]/5 rounded-2xl p-5 border border-[#1161ed]/10 flex flex-col justify-between relative overflow-hidden font-poppins">
+                <div className="col-span-4 bg-gradient-to-br from-[#0055DA]/5 to-[#06b6d4]/5 rounded-2xl p-5 border border-[#0055DA]/10 flex flex-col justify-between relative overflow-hidden font-poppins">
                   <div>
-                    <span className="inline-block bg-[#1161ed]/[0.08] text-[#1161ed] font-extrabold text-[0.6rem] uppercase tracking-wider px-2 py-0.5 rounded-md mb-2.5">
+                    <span className="inline-block bg-[#0055DA]/[0.08] text-[#0055DA] font-extrabold text-[0.6rem] uppercase tracking-wider px-2 py-0.5 rounded-md mb-2.5">
                       Partner Program
                     </span>
                     <h4 className="text-black font-extrabold text-[0.88rem] tracking-tight leading-snug mb-1">
@@ -222,14 +240,14 @@ export default function Navbar() {
                   <div className="flex flex-col gap-2 mt-4">
                     <Link 
                       href="/services"
-                      className="inline-flex items-center gap-1.5 text-[0.76rem] font-black text-black hover:text-[#1161ed] transition-colors group/promo select-none"
+                      className="inline-flex items-center gap-1.5 text-[0.76rem] font-black text-black hover:text-[#0055DA] transition-colors group/promo select-none"
                     >
                       <span>Explore all solutions</span>
                     </Link>
 
                     <Link 
                       href="/contact" 
-                      className="inline-flex items-center gap-1.5 text-[0.76rem] font-black text-[#1161ed] hover:text-[#0c4ec3] transition-colors group/promo select-none"
+                      className="inline-flex items-center gap-1.5 text-[0.76rem] font-black text-[#0055DA] hover:text-[#0044B3] transition-colors group/promo select-none"
                     >
                       <span>Build with V2 Labs</span>
                       <svg className="w-3.5 h-3.5 transform group-hover/promo:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -246,15 +264,15 @@ export default function Navbar() {
               href="/work" 
               className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/work" 
-                  ? "text-[#1161ed] bg-[#1161ed]/[0.04]" 
-                  : "text-black hover:text-[#1161ed] hover:bg-slate-50/70"
+                  ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
+                  : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
               <span className="relative z-10">Work</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#1161ed]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#1161ed] transition-all duration-300 ${
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/work" 
-                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#1161ed]" 
+                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#0055DA]" 
                   : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60"
               }`} />
             </Link>
@@ -263,15 +281,15 @@ export default function Navbar() {
               href="/careers" 
               className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/careers" 
-                  ? "text-[#1161ed] bg-[#1161ed]/[0.04]" 
-                  : "text-black hover:text-[#1161ed] hover:bg-slate-50/70"
+                  ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
+                  : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
               <span className="relative z-10">Careers</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#1161ed]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#1161ed] transition-all duration-300 ${
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/careers" 
-                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#1161ed]" 
+                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#0055DA]" 
                   : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60"
               }`} />
             </Link>
@@ -280,15 +298,15 @@ export default function Navbar() {
               href="/contact" 
               className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/contact" 
-                  ? "text-[#1161ed] bg-[#1161ed]/[0.04]" 
-                  : "text-black hover:text-[#1161ed] hover:bg-slate-50/70"
+                  ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
+                  : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
               <span className="relative z-10">Contact</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#1161ed]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#1161ed] transition-all duration-300 ${
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/contact" 
-                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#1161ed]" 
+                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#0055DA]" 
                   : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60"
               }`} />
             </Link>
@@ -297,7 +315,7 @@ export default function Navbar() {
           <div className="hidden min-[901px]:flex items-center gap-3">
             <Link 
               href="/request-a-demo" 
-              className={`group relative inline-flex items-center gap-1.5 bg-white text-[#1161ed] border-2 border-[#1161ed] rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(17, 97, 237,0.1)] hover:shadow-[0_8px_25px_rgba(17, 97, 237,0.25)] hover:bg-[#1161ed]/5 active:scale-95 overflow-hidden ${
+              className={`group relative inline-flex items-center gap-1.5 bg-white text-[#0055DA] border-2 border-[#0055DA] rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(0, 85, 218,0.1)] hover:shadow-[0_8px_25px_rgba(0, 85, 218,0.25)] hover:bg-[#0055DA]/5 active:scale-95 overflow-hidden ${
                 isScrolled ? "px-4 py-1.5 text-[0.66rem]" : "px-5 py-2 text-[0.72rem]"
               }`}
             >
@@ -308,7 +326,7 @@ export default function Navbar() {
 
             <Link 
               href="/contact" 
-              className={`group relative inline-flex items-center gap-1.5 bg-slate-900 text-white rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_rgba(17, 97, 237,0.35)] active:scale-95 overflow-hidden ${
+              className={`group relative inline-flex items-center gap-1.5 bg-slate-900 text-white rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_rgba(0, 85, 218,0.35)] active:scale-95 overflow-hidden ${
                 isScrolled ? "px-4 py-2 text-[0.66rem]" : "px-5 py-2.5 text-[0.72rem]"
               }`}
             >
@@ -318,7 +336,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#1161ed] to-[#3b82f6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA] to-[#0044B3] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
           </div>
 
@@ -338,7 +356,7 @@ export default function Navbar() {
       </header>
 
       <div 
-        className={`fixed inset-0 bg-slate-950/20 backdrop-blur-sm z-[1050] transition-all duration-500 min-[901px]:hidden ${
+        className={`fixed inset-0 bg-slate-950/20  z-[1050] transition-all duration-500 min-[901px]:hidden ${
           isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         style={{ visibility: isMenuOpen ? "visible" : "hidden" }}
@@ -346,7 +364,7 @@ export default function Navbar() {
       />
 
       <aside 
-        className={`fixed top-4 left-4 w-[calc(100%-2rem)] max-w-[340px] h-[calc(100vh-2rem)] bg-white/95 backdrop-blur-xl z-[1100] border border-slate-200/50 rounded-[24px] shadow-[10px_10px_40px_rgba(15,23,42,0.08)] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] min-[901px]:hidden ${
+        className={`fixed top-4 left-4 w-[calc(100%-2rem)] max-w-[340px] h-[calc(100vh-2rem)] bg-white  z-[1100] border border-slate-200/50 rounded-[24px] shadow-[10px_10px_40px_rgba(15,23,42,0.08)] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] min-[901px]:hidden ${
           isMenuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
         style={{ 
@@ -363,7 +381,7 @@ export default function Navbar() {
             <button 
               type="button"
               onClick={() => setIsMenuOpen(false)}
-              className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-slate-500 hover:text-slate-950 active:scale-95 transition-all cursor-pointer"
+              className="p-2.5 rounded-xl bg-white border border-slate-100 text-slate-500 hover:text-slate-950 active:scale-95 transition-all cursor-pointer"
               aria-label="Close menu"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -374,7 +392,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col gap-1.5 mb-6">
-            <p className="text-[#1161ed] font-extrabold text-[0.66rem] uppercase tracking-widest mb-3 px-1">Navigation</p>
+            <p className="text-[#0055DA] font-extrabold text-[0.66rem] uppercase tracking-widest mb-3 px-1">Navigation</p>
             {[
               { name: "Home", href: "/", icon: <Icons.Home /> },
               { name: "About", href: "/about", icon: <Icons.About /> },
@@ -390,21 +408,21 @@ export default function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`w-full flex items-center gap-3.5 py-3 px-4 rounded-xl font-bold font-poppins border transition-all duration-300 active:scale-[0.99] group relative overflow-hidden ${
                     isActive
-                      ? "bg-[#1161ed]/[0.06] border-[#1161ed]/15 text-[#1161ed]"
-                      : "bg-slate-50/50 border-slate-100/50 text-black hover:bg-[#1161ed]/5 hover:border-[#1161ed]/10 hover:text-[#1161ed]"
+                      ? "bg-[#0055DA]/[0.06] border-[#0055DA]/15 text-[#0055DA]"
+                      : "bg-white border-slate-100/50 text-black hover:bg-[#0055DA]/5 hover:border-[#0055DA]/10 hover:text-[#0055DA]"
                   }`}
                 >
-                  <span className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full bg-[#1161ed] transition-all duration-300 ${
+                  <span className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full bg-[#0055DA] transition-all duration-300 ${
                     isActive ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 group-hover:scale-y-75 group-hover:opacity-70"
                   }`} />
                   <div className={`p-1.5 rounded-lg shrink-0 transition-colors relative z-10 ${
-                    isActive ? "text-[#1161ed]" : "text-slate-400 group-hover:text-[#1161ed]"
+                    isActive ? "text-[#0055DA]" : "text-slate-400 group-hover:text-[#0055DA]"
                   }`}>
                     {item.icon}
                   </div>
                   <span className="flex-1 text-[0.9rem] relative z-10">{item.name}</span>
                   <svg className={`w-3.5 h-3.5 shrink-0 transition-all relative z-10 ${
-                    isActive ? "text-[#1161ed] translate-x-0.5" : "text-slate-300 group-hover:text-[#1161ed]"
+                    isActive ? "text-[#0055DA] translate-x-0.5" : "text-slate-300 group-hover:text-[#0055DA]"
                   }`} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
@@ -420,7 +438,7 @@ export default function Navbar() {
               className="w-full flex justify-between items-center text-slate-400 font-extrabold font-poppins text-[0.66rem] uppercase tracking-widest mb-3 px-1 cursor-pointer"
             >
               <span>Solutions ({services.length})</span>
-              <svg className={`w-3.5 h-3.5 text-[#1161ed] transition-transform duration-300 ${isMobileServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+              <svg className={`w-3.5 h-3.5 text-[#0055DA] transition-transform duration-300 ${isMobileServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -435,12 +453,12 @@ export default function Navbar() {
                   <Link 
                     href="/services"
                     onClick={() => setIsMenuOpen(false)}
-                    className="w-full flex items-center justify-between gap-3.5 p-3.5 rounded-xl bg-[#1161ed]/5 border border-[#1161ed]/10 hover:bg-[#1161ed]/10 active:scale-[0.99] transition-all group font-poppins"
+                    className="w-full flex items-center justify-between gap-3.5 p-3.5 rounded-xl bg-[#0055DA]/5 border border-[#0055DA]/10 hover:bg-[#0055DA]/10 active:scale-[0.99] transition-all group font-poppins"
                   >
                     <span className="text-[0.84rem] font-extrabold text-black">
                       Explore all solutions
                     </span>
-                    <svg className="w-3.5 h-3.5 text-[#1161ed]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <svg className="w-3.5 h-3.5 text-[#0055DA]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -449,13 +467,13 @@ export default function Navbar() {
                       key={s.href} 
                       href={s.href} 
                       onClick={() => setIsMenuOpen(false)}
-                      className="w-full flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:bg-[#1161ed]/5 hover:border-[#1161ed]/15 active:scale-[0.99] transition-all group font-poppins"
+                      className="w-full flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-slate-100 hover:bg-[#0055DA]/5 hover:border-[#0055DA]/15 active:scale-[0.99] transition-all group font-poppins"
                     >
-                      <div className="w-9 h-9 bg-white border border-slate-100 text-slate-400 group-hover:text-[#1161ed] rounded-xl flex items-center justify-center transition-colors shrink-0 shadow-sm">
+                      <div className="w-9 h-9 bg-white border border-slate-100 text-slate-400 group-hover:text-[#0055DA] rounded-xl flex items-center justify-center transition-colors shrink-0 shadow-sm">
                         {s.icon}
                       </div>
                       <div className="flex-1 font-poppins">
-                        <span className="block text-[0.84rem] font-extrabold text-black group-hover:text-[#1161ed] transition-colors mb-0.5">{s.name}</span>
+                        <span className="block text-[0.84rem] font-extrabold text-black group-hover:text-[#0055DA] transition-colors mb-0.5">{s.name}</span>
                         <span className="block text-[0.72rem] text-slate-400 leading-snug font-semibold">{s.desc}</span>
                       </div>
                     </Link>
@@ -469,7 +487,7 @@ export default function Navbar() {
             <Link 
               href="/contact" 
               onClick={() => setIsMenuOpen(false)}
-              className="block w-full bg-gradient-to-r from-[#1161ed] to-[#3b82f6] hover:from-[#0c4ec3] hover:to-[#2563EB] text-white text-center py-3.5 rounded-xl font-extrabold text-[0.92rem] shadow-[0_4px_15px_rgba(17, 97, 237,0.12)] active:scale-[0.99] transition-all"
+              className="block w-full bg-[#0055DA] hover:bg-[#0044B3] text-white text-center py-3.5 rounded-xl font-extrabold text-[0.92rem] shadow-[0_4px_15px_rgba(0, 85, 218,0.12)] active:scale-[0.99] transition-all"
             >
               Let&apos;s Build Together
             </Link>

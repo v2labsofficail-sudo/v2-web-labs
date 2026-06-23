@@ -21,7 +21,7 @@ export default function Footer() {
               href="https://www.linkedin.com/company/v2labsco/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-black transition-all duration-300 hover:-translate-y-1 hover:border-[#1161ed]/30 hover:bg-[#1161ed] hover:text-white"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-black transition-all duration-300 hover:-translate-y-1 hover:border-[#0055DA]/30 hover:bg-[#0055DA] hover:text-white"
               aria-label="LinkedIn"
             >
               <svg
@@ -43,7 +43,7 @@ export default function Footer() {
               href="https://x.com/v2labsglobal"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-black transition-all duration-300 hover:-translate-y-1 hover:border-[#1161ed]/30 hover:bg-[#1161ed] hover:text-white"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-black transition-all duration-300 hover:-translate-y-1 hover:border-[#0055DA]/30 hover:bg-[#0055DA] hover:text-white"
               aria-label="X (formerly Twitter)"
             >
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function Footer() {
               href="https://www.instagram.com/v2.labsglobal?igsh=bmd5ZzJrcHl4NGls"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-black transition-all duration-300 hover:-translate-y-1 hover:border-[#1161ed]/30 hover:bg-[#1161ed] hover:text-white"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-black transition-all duration-300 hover:-translate-y-1 hover:border-[#0055DA]/30 hover:bg-[#0055DA] hover:text-white"
               aria-label="Instagram"
             >
               <svg
@@ -88,7 +88,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[0.88rem] font-normal text-black transition-all duration-300 hover:translate-x-1 hover:text-[#1161ed]"
+                className="text-[0.88rem] font-normal text-black transition-all duration-300 hover:translate-x-1 hover:text-[#0055DA]"
               >
                 {item.label}
               </Link>
@@ -109,7 +109,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[0.88rem] font-normal text-black transition-all duration-300 hover:translate-x-1 hover:text-[#1161ed]"
+                className="text-[0.88rem] font-normal text-black transition-all duration-300 hover:translate-x-1 hover:text-[#0055DA]"
               >
                 {item.label}
               </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[0.88rem] font-normal text-black transition-all duration-300 hover:translate-x-1 hover:text-[#1161ed]"
+                className="text-[0.88rem] font-normal text-black transition-all duration-300 hover:translate-x-1 hover:text-[#0055DA]"
               >
                 {item.label}
               </Link>
@@ -146,7 +146,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <a
               href="mailto:contact@v2labsglobal.com"
-              className="group flex items-center gap-3 text-[0.88rem] font-normal text-black transition-colors duration-300 hover:text-[#1161ed]"
+              className="group flex items-center gap-3 text-[0.88rem] font-normal text-black transition-colors duration-300 hover:text-[#0055DA]"
             >
               <svg
                 width="15"
@@ -157,7 +157,7 @@ export default function Footer() {
                 strokeWidth="2.2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-slate-400 transition-transform duration-200 group-hover:scale-105 group-hover:text-[#1161ed]"
+                className="text-slate-400 transition-transform duration-200 group-hover:scale-105 group-hover:text-[#0055DA]"
               >
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
@@ -183,7 +183,7 @@ export default function Footer() {
             </div>
             <a
               href="/contact"
-              className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-[#1161ed] px-5 py-2.5 text-[0.82rem] font-bold text-white transition-all duration-300 hover:bg-[#0c4ec3] hover:shadow-[0_8px_24px_rgba(17, 97, 237,0.18)]"
+              className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-[#0055DA] px-5 py-2.5 text-[0.82rem] font-bold text-white transition-all duration-300 hover:bg-[#0044B3] hover:shadow-[0_8px_24px_rgba(0,85,218,0.18)]"
             >
               Contact Us
             </a>
@@ -195,10 +195,10 @@ export default function Footer() {
         <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-4 px-6 text-center text-[0.8rem] font-normal text-black sm:flex-row sm:gap-0 sm:text-left">
           <p>&copy; {currentYear} V2Labs Global. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="transition-colors duration-300 hover:text-[#1161ed]">
+            <Link href="/privacy" className="transition-colors duration-300 hover:text-[#0055DA]">
               Privacy
             </Link>
-            <Link href="/terms" className="transition-colors duration-300 hover:text-[#1161ed]">
+            <Link href="/terms" className="transition-colors duration-300 hover:text-[#0055DA]">
               Terms
             </Link>
           </div>

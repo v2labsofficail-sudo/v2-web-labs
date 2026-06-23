@@ -109,7 +109,7 @@ export default function CareersPage() {
   });
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 font-Outfit">
+    <div className="bg-white min-h-screen text-slate-900 font-Outfit">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-24 bg-white border-b border-slate-100">
         <div className="max-w-[1100px] mx-auto px-6 text-center">
@@ -128,7 +128,7 @@ export default function CareersPage() {
       <section className="sticky z-30 transition-all duration-300 w-full bg-transparent top-[83px] sm:top-[107px] lg:top-[111px]">
         <div className={`transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           isScrolled
-            ? "max-w-[1100px] py-3 bg-white/85 backdrop-blur-xl border border-slate-200/40 rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.06)] mx-4 sm:mx-6 lg:mx-auto px-5"
+            ? "max-w-[1100px] py-3 bg-white  border border-slate-200/40 rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.06)] mx-4 sm:mx-6 lg:mx-auto px-5"
             : "max-w-full py-6 bg-white border-b border-slate-100 rounded-none mx-0 px-6"
         }`}>
           <div className="max-w-[1100px] mx-auto w-full">
@@ -144,7 +144,7 @@ export default function CareersPage() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search positions, technologies, skills..."
-                  className="w-full pl-11 pr-4 py-3 bg-slate-50/60 hover:bg-slate-100/50 hover:border-slate-300/80 border border-slate-200 rounded-2xl text-sm font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#111111] focus:ring-4 focus:ring-[#111111]/8 transition-all text-slate-800"
+                  className="w-full pl-11 pr-4 py-3 bg-white hover:bg-white hover:border-slate-300/80 border border-slate-200 rounded-2xl text-sm font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#111111] focus:ring-4 focus:ring-[#111111]/8 transition-all text-slate-800"
                 />
                 {searchQuery && (
                   <button
@@ -168,7 +168,7 @@ export default function CareersPage() {
                       className={`whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold border transition-all cursor-pointer active:scale-95 duration-150 ${
                         isActive
                           ? "bg-[#111111] border-[#111111] text-white shadow-sm shadow-[#111111]/15"
-                          : "bg-slate-50/60 border-slate-200 text-[#111111] hover:bg-slate-100 hover:border-slate-300"
+                          : "bg-white border-slate-200 text-[#111111] hover:bg-slate-100 hover:border-slate-300"
                       }`}
                     >
                       {cat}
@@ -195,7 +195,7 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {perks.map((p, idx) => (
-              <div key={idx} className="bg-white/40 border border-slate-200/40 backdrop-blur-xl p-8 rounded-2xl shadow-sm flex flex-col items-start hover:border-[#111111]/20 hover:bg-white/60 hover:shadow-[0_15px_30px_rgba(17, 97, 237,0.04)] transition-all duration-300 group">
+              <div key={idx} className="bg-white border border-slate-200/40  p-8 rounded-2xl shadow-sm flex flex-col items-start hover:border-[#111111]/20 hover:bg-white hover:shadow-[0_15px_30px_rgba(17, 97, 237,0.04)] transition-all duration-300 group">
                 <div className="w-12 h-12 rounded-xl bg-[#111111]/[0.05] flex items-center justify-center mb-6 shrink-0 group-hover:bg-[#111111]/10 transition-colors">
                   {p.icon}
                 </div>
@@ -208,7 +208,7 @@ export default function CareersPage() {
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="py-20 bg-slate-100/50 border-t border-slate-200/60 border-b border-slate-200/60">
+        <section className="py-20 bg-white border-t border-slate-200/60 border-b border-slate-200/60">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[#111111] font-extrabold text-[0.75rem] uppercase tracking-widest mb-3">
@@ -224,7 +224,7 @@ export default function CareersPage() {
           {filteredRoles.length === 0 ? (
             /* Beautiful Filter Empty State */
             <div className="bg-white rounded-3xl border border-slate-200/60 p-12 text-center max-w-xl mx-auto shadow-sm">
-              <div className="w-16 h-16 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-[#111111]">
+              <div className="w-16 h-16 bg-white border border-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-[#111111]">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -238,7 +238,7 @@ export default function CareersPage() {
                   setSearchQuery("");
                   setSelectedCategory("All");
                 }}
-                className="bg-[#111111] text-white hover:bg-[#000000] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-150 cursor-pointer"
+                className="bg-[#0055DA] text-white hover:bg-[#0044B3] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-150 cursor-pointer"
               >
                 Reset Search Filters
               </button>
@@ -279,7 +279,7 @@ export default function CareersPage() {
                   <div className="mt-8 pt-6 border-t border-slate-100 flex justify-end">
                     <Link
                       href={`/contact?role=${r.id}`}
-                      className="bg-slate-900 text-white hover:bg-[#111111] hover:shadow-[0_4px_12px_rgba(17, 97, 237,0.22)] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-200"
+                      className="bg-[#0055DA] text-white hover:bg-[#0044B3] hover:shadow-[0_4px_12px_rgba(0, 85, 218,0.22)] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-200"
                     >
                       Apply for this Role
                     </Link>
