@@ -13,6 +13,8 @@ const priorityRoutes = new Set<string>([
   "/services/erp-crm",
   "/services/ui-ux-brand",
   "/services/digital-marketing",
+  "/services/saas-product",
+  "/services/video-motion",
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
