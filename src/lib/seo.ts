@@ -132,6 +132,7 @@ export const siteConfig = {
     "sasta and accha website maker",
     "website design in 99 rs",
     "v2 labs global mira road",
+    
   ],
   ogImage: "/logo-cover-v2labs.jpeg",
   socialLinks: [

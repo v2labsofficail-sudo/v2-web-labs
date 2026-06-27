@@ -35,6 +35,7 @@ export default function AboutPage() {
       github: "https://github.com/Vandann-1/",
       bio: "Oversees core systems scaling, cloud sync grids, and security layers. Focused on TypeScript and React performance.",
       img: "/Vandan Darji.png",
+      hidden: true,
     },
     {
       name: "Jevin Kalathiya",
@@ -69,6 +70,7 @@ export default function AboutPage() {
       github: "#",
       bio: "Social media manager and wordpress designer & developer focused on building secure, scalable, and high-performance web applications. Experienced in REST APIs, database design, authentication systems, and backend architecture.",
       img: "/Rishabh Tiwari.png",
+      hidden: true,
     },
     {
       name: "Vansh Shukla",
@@ -285,7 +287,7 @@ export default function AboutPage() {
             The design-obsessed partners and engineering minds behind V2 Labs.
           </p>
         </div>
-        <TeamCarousel team={team} />
+        <TeamCarousel team={team.filter((member) => !member.hidden)} />
         </section>
       </ScrollReveal>
       <ScrollReveal>
