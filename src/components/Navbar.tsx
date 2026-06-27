@@ -42,6 +42,11 @@ const Icons = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
     </svg>
   ),
+  Plans: () => (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>
+  ),
   Web: () => (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <polyline points="16 18 22 12 16 6" />
@@ -278,6 +283,23 @@ export default function Navbar() {
             </Link>
 
             <Link 
+              href="/plans" 
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+                pathname === "/plans" 
+                  ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
+                  : "text-black hover:text-[#0055DA] hover:bg-white"
+              }`}
+            >
+              <span className="relative z-10">Plans</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
+                pathname === "/plans" 
+                  ? "scale-x-100 opacity-100 shadow-[0_0_8px_#0055DA]" 
+                  : "scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-60"
+              }`} />
+            </Link>
+
+            <Link 
               href="/careers" 
               className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/careers" 
@@ -397,6 +419,7 @@ export default function Navbar() {
               { name: "Home", href: "/", icon: <Icons.Home /> },
               { name: "About", href: "/about", icon: <Icons.About /> },
               { name: "Work", href: "/work", icon: <Icons.Work /> },
+              { name: "Plans", href: "/plans", icon: <Icons.Plans /> },
               { name: "Careers", href: "/careers", icon: <Icons.Careers /> },
               { name: "Contact", href: "/contact", icon: <Icons.Contact /> },
             ].map((item) => {
