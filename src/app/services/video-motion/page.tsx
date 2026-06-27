@@ -8,64 +8,25 @@ import Image from "next/image";
 
 const PORTFOLIO_VIDEOS = [
   {
-    id: "car",
-    title: "Automotive Motion (Supercar Cinematic)",
-    desc: "High-speed professional track drifting graded with ultra-warm custom Rec.709 lut filters for deep luxury brand appeal.",
-    badge: "Automotive Motion",
-    url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
-    img: "/cinematic_supercar.png",
-    aspect: "video", // 16:9
-    gradient: "from-[#0055DA] to-[#111111]",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    )
+    id: "short1",
+    title: "Retention Editing Showcase 1",
+    desc: "Vertical short-form video featuring high-retention editing styles, dynamic typography, sound design, and custom graphic transitions.",
+    badge: "Retention Pacing",
+    videoId: "Ph9kQsIoPeY"
   },
   {
-    id: "social",
-    title: "High-Retention Shortform Reels",
-    desc: "Fast-cut social hook vertical reels with animated glowing outline text layers designed for maximum mobile conversion and watch-time.",
-    badge: "Social Retention",
-    url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-    img: "/cinematic_shortform.png",
-    aspect: "9/16",
-    gradient: "from-[#8b5cf6] to-[#d946ef]",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.008v.008H12V18zm0-6h.008v.008H12V12zm0-6h.008v.008H12V6z" />
-      </svg>
-    )
+    id: "short2",
+    title: "Retention Editing Showcase 2",
+    desc: "A fast-paced engaging sequence optimized for mobile feeds, loops, and maximum average watch-time metrics.",
+    badge: "Fast Visuals",
+    videoId: "NPhOP54fgOQ"
   },
   {
-    id: "drone",
-    title: "Rec.709 Landscape Drone Grading",
-    desc: "Breathtaking landscape drone tracking shots compiled with complex color balancing and cinematic ambient soundscapes.",
-    badge: "Drone Cinematic",
-    url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
-    img: "/cinematic_drone.png",
-    aspect: "video",
-    gradient: "from-[#f59e0b] to-[#ec4899]",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
-      </svg>
-    )
-  },
-  {
-    id: "abstract",
-    title: "Dynamic Abstract Motion Graphics",
-    desc: "Fluid, high-framerate vector simulations configured with spring dynamics, custom paths, and mathematical geometry outlines.",
-    badge: "Abstract Physics",
-    url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    img: "/cinematic_abstract.png",
-    aspect: "video",
-    gradient: "from-[#10b981] to-[#059669]",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.3 10.3a5.9 5.9 0 11-6.6 0M12 21v-3.5m0-11V3" />
-      </svg>
-    )
+    id: "short3",
+    title: "Retention Editing Showcase 3",
+    desc: "Kinetic caption loops and sound effects configured to capture viewer attention within the first 3 seconds.",
+    badge: "Hook Design",
+    videoId: "OmlZ0WGlKRU"
   }
 ];
 
@@ -219,157 +180,42 @@ const steps = [
     desc: "Balancing final visual tones, executing custom LUT mappings, blending ambient sound fields, and rendering top-spec files.",
     tools: ["Rec.709 Lut Node", "Wwise Audio Sync", "ProRes 422 HQ"],
     preview: (
-      <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#080d19] to-[#162238] p-4 flex flex-col justify-between text-white relative overflow-hidden shadow-xl border border-white/5">
-        <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#111111]/30 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-[#2A2A2A]/20 rounded-full blur-2xl" />
+      <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-50 to-white p-4 flex flex-col justify-between text-slate-850 relative overflow-hidden shadow-inner border border-slate-200/50">
+        <div className="absolute -top-12 -right-12 w-28 h-28 bg-slate-200 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-slate-100 rounded-full blur-2xl" />
 
         <div className="flex justify-between items-center relative z-10">
-          <span className="text-[0.62rem] uppercase tracking-widest text-[#2A2A2A] font-extrabold">
+          <span className="text-[0.62rem] uppercase tracking-widest text-[#0055DA] font-extrabold">
             Rendering Engine
           </span>
           <div className="flex items-center gap-1">
-            <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping" />
-            <span className="text-[0.58rem] font-mono text-emerald-400 font-bold">
+            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
+            <span className="text-[0.58rem] font-mono text-emerald-600 font-bold">
               RENDER_SUCCESS
             </span>
           </div>
         </div>
 
-        <div className="my-auto relative z-10">
-          <div className="text-[0.62rem] text-[#111111] uppercase tracking-wider mb-1 font-semibold">
+        <div className="my-auto relative z-10 text-left">
+          <div className="text-[0.62rem] text-slate-500 uppercase tracking-wider mb-1 font-semibold">
             ProRes High bit-rate Format
           </div>
-          <div className="text-sm font-black tracking-tight mb-2">
+          <div className="text-sm font-black tracking-tight mb-2 text-slate-900">
             Color Checked & Equalized
           </div>
-          <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden border border-white/5">
-            <div className="h-full bg-[#0055DA] hover:bg-[#0044B3] w-[100%] rounded-full shadow-[0_0_10px_rgba(0, 85, 218,0.5)]" />
+          <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden border border-slate-300/30">
+            <div className="h-full bg-[#0055DA] hover:bg-[#0044B3] w-[100%] rounded-full shadow-[0_0_10px_rgba(0, 85, 218,0.2)]" />
           </div>
         </div>
 
-        <div className="flex justify-between items-center text-[0.6rem] text-[#111111] relative z-10 pt-2 border-t border-white/5">
+        <div className="flex justify-between items-center text-[0.6rem] text-slate-650 relative z-10 pt-2 border-t border-slate-200/50">
           <span>Video Resolution Rating</span>
-          <span className="text-emerald-400 font-black">ProRes 4K</span>
+          <span className="text-emerald-600 font-black">ProRes 4K</span>
         </div>
       </div>
     ),
   },
 ];
-
-function PortfolioVideoCard({
-  video,
-  isMuted,
-  onMuteToggle,
-}: {
-  video: typeof PORTFOLIO_VIDEOS[number];
-  isMuted: boolean;
-  onMuteToggle: () => void;
-}) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="group p-2 rounded-[32px] border border-slate-200/30 bg-white  shadow-[0_12px_40px_rgba(0, 85, 218,0.02)] relative overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(0, 85, 218,0.08)] hover:border-[#111111]/20 hover:bg-white flex flex-col min-h-[360px]"
-    >
-      {/* Widescreen Video Player Wrapper */}
-      <div className="relative w-full aspect-video rounded-[24px] bg-slate-950 shadow-inner overflow-hidden flex items-center justify-center border border-black/5">
-        {isHovered ? (
-          <video
-            className="absolute inset-0 w-full h-full object-cover scale-105 transition-transform duration-700"
-            src={video.url}
-            autoPlay
-            loop
-            muted={isMuted}
-            playsInline
-          />
-        ) : (
-          <div className="absolute inset-0 w-full h-full transition-all duration-300 flex flex-col items-center justify-center p-6 text-white text-center">
-            {video.img ? (
-              <Image
-                src={video.img}
-                alt={video.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
-                loading="lazy"
-                className="object-cover brightness-[0.55] transition-all duration-500 group-hover:scale-105"
-              />
-            ) : (
-              <div className={`absolute inset-0 bg-gradient-to-br ${video.gradient} opacity-90`} />
-            )}
-            
-            {/* Play Button Overlay */}
-            <div className="w-14 h-14 rounded-full bg-white  border border-white/30 flex items-center justify-center text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#111111] cursor-pointer z-10">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="5 3 19 12 5 21" />
-              </svg>
-            </div>
-            <span className="text-[0.62rem] font-black uppercase tracking-[0.18em] text-white/80 mt-4 leading-none z-10">Hover to Play Clip</span>
-          </div>
-        )}
-
-        {/* High Quality Badge */}
-        <div className="absolute top-4 left-4 bg-black/60  px-2.5 py-1 rounded-full text-[0.55rem] text-white font-mono border border-white/10 font-bold z-20 shadow-sm flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#111111] animate-ping" />
-          1080P HD
-        </div>
-
-        {/* Sound Toggle Playback Control */}
-        {isHovered && (
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              onMuteToggle();
-            }}
-            className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-slate-950/70 hover:bg-slate-950  text-white flex items-center justify-center border border-white/10 shadow-lg transition-all duration-200 z-20 cursor-pointer"
-            title={isMuted ? "Unmute sound" : "Mute sound"}
-          >
-            {isMuted ? (
-              /* Mute SVG */
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6L4.5 9H1.5v6h3l4.5 3.75V5.25z" />
-              </svg>
-            ) : (
-              /* Unmute SVG */
-              <svg className="w-4 h-4 text-yellow-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
-              </svg>
-            )}
-          </button>
-        )}
-
-        {/* Dark Vignette Bottom Overlay */}
-        <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10 pointer-events-none" />
-      </div>
-
-      {/* Card Info Details */}
-      <div className="p-6 flex-1 flex flex-col justify-between">
-        <div>
-          <span className="text-[0.62rem] font-black uppercase text-[#111111] tracking-[0.15em] mb-2 block">
-            {video.badge}
-          </span>
-          <h3 className="text-[1.15rem] text-slate-900 mb-2 font-black group-hover:text-[#111111] transition-colors duration-300">
-            {video.title}
-          </h3>
-          <p className="text-[#111111] leading-relaxed text-[0.8rem] font-medium">
-            {video.desc}
-          </p>
-        </div>
-        
-        {/* Micro interaction CTA */}
-        <div className="flex items-center gap-1.5 text-[0.68rem] font-black uppercase text-[#111111] mt-5 cursor-pointer select-none">
-          <span>Explore Editing Tech</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transform group-hover:translate-x-1 transition-transform duration-300">
-            <line x1="5" y1="12" x2="19" y2="12" />
-            <polyline points="12 5 19 12 12 19" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function VideoMotionPage() {
   // Video Sandbox interactive mode
@@ -380,13 +226,19 @@ export default function VideoMotionPage() {
   // Interactive Timeline active step
   const [activeStep, setActiveStep] = useState(0);
 
-  // Video portfolio sound muting states
-  const [mutedMap, setMutedMap] = useState<Record<string, boolean>>({
-    car: true,
-    social: true,
-    drone: true,
-    abstract: true,
-  });
+  // Video portfolio active index
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [playingMap, setPlayingMap] = useState<Record<string, boolean>>({});
+
+  const handlePrev = () => {
+    setPlayingMap({});
+    setActiveIndex((prev) => (prev - 1 + PORTFOLIO_VIDEOS.length) % PORTFOLIO_VIDEOS.length);
+  };
+
+  const handleNext = () => {
+    setPlayingMap({});
+    setActiveIndex((prev) => (prev + 1) % PORTFOLIO_VIDEOS.length);
+  };
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
@@ -463,19 +315,19 @@ export default function VideoMotionPage() {
           </div>
 
           {/* Master Interactive Workspace Container */}
-          <div className="w-full bg-[#05080f] border border-slate-800/80 rounded-[40px] p-6 sm:p-12 shadow-2xl relative overflow-hidden min-h-[460px] flex flex-col md:flex-row gap-10 items-center justify-between">
+          <div className="w-full bg-white border border-slate-200/80 rounded-[40px] p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] relative overflow-hidden min-h-[460px] flex flex-col md:flex-row gap-10 items-center justify-between">
             {/* Luminous Inner Gradient Glow */}
             <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full blur-[110px] pointer-events-none transition-colors duration-500 ${
               editorMode === "shortform"
-                ? "bg-[#8b5cf6]/[0.12]"
+                ? "bg-[#8b5cf6]/[0.05]"
                 : editorMode === "motion"
-                  ? "bg-[#10b981]/[0.12]"
-                  : "bg-[#111111]/[0.18]"
+                  ? "bg-[#10b981]/[0.05]"
+                  : "bg-[#111111]/[0.05]"
             }`} />
 
             {/* Sidebar Code Variable Panel */}
-            <div className="w-full md:w-[330px] shrink-0 z-10 flex flex-col gap-4 font-mono text-[0.72rem] text-[#111111]">
-              <div className="pb-3 border-b border-slate-800 flex justify-between items-center">
+            <div className="w-full md:w-[330px] shrink-0 z-10 flex flex-col gap-4 font-mono text-[0.72rem] text-[#111111] text-left">
+              <div className="pb-3 border-b border-slate-200 flex justify-between items-center">
                 <span className={`font-extrabold flex items-center gap-1.5 transition-colors duration-350 ${
                   editorMode === "shortform"
                     ? "text-[#8b5cf6]"
@@ -492,15 +344,15 @@ export default function VideoMotionPage() {
                   }`} />
                   post_timeline_variables.json
                 </span>
-                <span className="px-2.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-[0.6rem] font-bold text-[#111111]">
+                <span className="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-[0.6rem] font-bold text-[#111111]">
                   Davinci Resolve
                 </span>
               </div>
 
-              <div className="p-5 rounded-3xl bg-slate-900/60  border border-slate-800/80 flex flex-col gap-3.5 shadow-inner">
+              <div className="p-5 rounded-3xl bg-slate-50/50  border border-slate-200/60 flex flex-col gap-3.5 shadow-inner">
                 <div className="flex justify-between items-center">
                   <span className="text-[#111111]">Video Aspect Ratio</span>
-                  <span className={`px-2 py-0.5 rounded bg-slate-800 border border-slate-700/50 font-bold transition-colors duration-300 ${
+                  <span className={`px-2 py-0.5 rounded bg-slate-100 border border-slate-200 font-bold transition-colors duration-300 ${
                     editorMode === "shortform"
                       ? "text-[#8b5cf6]"
                       : editorMode === "motion"
@@ -518,10 +370,10 @@ export default function VideoMotionPage() {
                   <span className="text-[#111111]">Target Retention Lift</span>
                   <span className={`font-bold transition-colors duration-300 ${
                     editorMode === "shortform"
-                      ? "text-[#c084fc]"
+                      ? "text-[#8b5cf6]"
                       : editorMode === "motion"
-                        ? "text-[#34d399]"
-                        : "text-[#2A2A2A]"
+                        ? "text-[#10b981]"
+                        : "text-[#111111]"
                   }`}>
                     {editorMode === "shortform"
                       ? "+82% Initial View"
@@ -542,10 +394,10 @@ export default function VideoMotionPage() {
                   <span className="text-[#111111]">Color LUT Range</span>
                   <span className={`font-bold transition-colors duration-300 ${
                     editorMode === "shortform"
-                      ? "text-[#c084fc]"
+                      ? "text-[#8b5cf6]"
                       : editorMode === "motion"
-                        ? "text-[#34d399]"
-                        : "text-[#2A2A2A]"
+                        ? "text-[#10b981]"
+                        : "text-[#111111]"
                   }`}>
                     {editorMode === "cinematic"
                       ? "Bespoke Rec.709 Warm"
@@ -556,7 +408,7 @@ export default function VideoMotionPage() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-[#111111]">Subtitles Layout</span>
-                  <span className="text-yellow-400 font-bold">
+                  <span className="text-[#111111] font-bold">
                     {editorMode === "shortform"
                       ? "Kinetic Yellow Pop"
                       : editorMode === "cinematic"
@@ -567,16 +419,16 @@ export default function VideoMotionPage() {
               </div>
 
               {/* Dynamic JSON / CSS Tagging panel */}
-              <div className="p-5 rounded-3xl bg-slate-900/40 border border-dashed border-slate-800 flex flex-col gap-2">
+              <div className="p-5 rounded-3xl bg-slate-50/30 border border-dashed border-slate-200 flex flex-col gap-2">
                 <div className="text-[0.62rem] text-[#111111]">
                   {"/* active timeline track data specs */"}
                 </div>
                 <code className={`font-bold text-[0.68rem] leading-relaxed whitespace-pre-wrap transition-colors duration-300 ${
                   editorMode === "shortform"
-                    ? "text-[#c084fc]"
+                    ? "text-[#8b5cf6]"
                     : editorMode === "motion"
-                      ? "text-[#34d399]"
-                      : "text-[#2A2A2A]"
+                      ? "text-[#10b981]"
+                      : "text-[#111111]"
                 }`}>
                   {editorMode === "shortform" &&
                     '// Social hook caption overlay\nconst caption = {\n  text: "UNLEASH_POTENTIAL",\n  font: "Outfit Black",\n  color: "#facc15"\n};'}
@@ -600,7 +452,7 @@ export default function VideoMotionPage() {
                   <div className="w-[230px] h-[408px] bg-slate-950 border-[8px] border-slate-800 rounded-[32px] shadow-2xl relative overflow-hidden flex items-center justify-center transition-all duration-300">
                     <video
                       className="absolute inset-0 w-full h-full object-cover"
-                      src={PORTFOLIO_VIDEOS[1].url}
+                      src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
                       autoPlay
                       loop
                       muted
@@ -628,7 +480,7 @@ export default function VideoMotionPage() {
                   <div className="w-full aspect-video bg-slate-950 border-4 border-slate-800 rounded-[24px] shadow-[0_20px_50px_rgba(0, 85, 218,0.15)] relative overflow-hidden flex flex-col items-center justify-center transition-all duration-300">
                     <video
                       className="absolute inset-0 w-full h-full object-cover"
-                      src={PORTFOLIO_VIDEOS[0].url}
+                      src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"
                       autoPlay
                       loop
                       muted
@@ -647,7 +499,7 @@ export default function VideoMotionPage() {
                   <div className="w-full aspect-video bg-slate-950 border-4 border-dashed border-[#111111]/30 rounded-[24px] shadow-2xl relative overflow-hidden flex flex-col items-center justify-center transition-all duration-300">
                     <video
                       className="absolute inset-0 w-full h-full object-cover opacity-80"
-                      src={PORTFOLIO_VIDEOS[3].url}
+                      src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
                       autoPlay
                       loop
                       muted
@@ -716,34 +568,147 @@ export default function VideoMotionPage() {
           </div>
         </section>
 
-        {/* Cinematic & Motion Portfolio Showcase Section */}
-        <section className="mb-28 border-t border-slate-200/50 pt-16 relative">
-          <div className="text-center mb-16 relative z-10">
+        {/* Cinematic & Motion Portfolio Showcase Section (3D Perspective Mobile Carousel) */}
+        <section className="mb-28 border-t border-slate-200/50 pt-16 relative overflow-hidden">
+          <div className="text-center mb-10 relative z-10">
             <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Studio Portfolio
             </div>
             <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
               Cinematic & Motion Portfolio
             </h2>
-            <p className="text-[#111111] text-sm max-w-[580px] mx-auto mt-2 leading-relaxed">
-              Explore our real, looping portfolio clips. Click the sound toggle icon on any card to unmute and hear our cinematic audio design.
+            <p className="text-[#111111] text-sm max-w-[580px] mx-auto mt-2 leading-relaxed font-semibold">
+              Explore our vertical short-form editing showcases. Click play on the active center mockup below to start playback.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-            {PORTFOLIO_VIDEOS.map((video) => (
-              <PortfolioVideoCard
-                key={video.id}
-                video={video}
-                isMuted={mutedMap[video.id]}
-                onMuteToggle={() =>
-                  setMutedMap({
-                    ...mutedMap,
-                    [video.id]: !mutedMap[video.id],
-                  })
+          {/* 3D Perspective Carousel Container */}
+          <div className="relative w-full max-w-[900px] mx-auto flex items-center justify-center min-h-[540px] z-10 select-none">
+            
+            {/* Left Navigation Arrow */}
+            <button
+              onClick={handlePrev}
+              className="absolute left-2 sm:left-4 w-12 h-12 rounded-full bg-white hover:bg-slate-50 border border-slate-200/80 shadow-lg flex items-center justify-center text-slate-800 hover:text-slate-950 transition-all duration-200 cursor-pointer z-40 active:scale-95"
+              aria-label="Previous slide"
+            >
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+
+            {/* Carousel Track */}
+            <div 
+              className="relative flex items-center justify-center w-full h-[500px]"
+              style={{ perspective: "1200px", transformStyle: "preserve-3d" }}
+            >
+              {PORTFOLIO_VIDEOS.map((video, idx) => {
+                let diff = idx - activeIndex;
+                if (diff < -1) diff += PORTFOLIO_VIDEOS.length;
+                if (diff > 1) diff -= PORTFOLIO_VIDEOS.length;
+
+                const isActive = diff === 0;
+                const isLeft = diff === -1;
+                const isRight = diff === 1;
+
+                let transformStyle = "";
+                let zIndex = 0;
+                let opacity = 0;
+                let filter = "blur(4px)";
+                let pointerEvents: "auto" | "none" = "none";
+
+                if (isActive) {
+                  transformStyle = "translateX(0) scale(1.05) rotateY(0deg) skewY(0deg)";
+                  zIndex = 30;
+                  opacity = 1;
+                  filter = "blur(0px)";
+                  pointerEvents = "auto";
+                } else if (isLeft) {
+                  transformStyle = "translateX(-60%) scale(0.82) rotateY(28deg) skewY(3deg)";
+                  zIndex = 10;
+                  opacity = 0.55;
+                  filter = "blur(1.5px)";
+                } else if (isRight) {
+                  transformStyle = "translateX(60%) scale(0.82) rotateY(-28deg) skewY(-3deg)";
+                  zIndex = 10;
+                  opacity = 0.55;
+                  filter = "blur(1.5px)";
                 }
-              />
-            ))}
+
+                return (
+                  <div
+                    key={video.id}
+                    className="absolute w-[240px] sm:w-[270px] h-[420px] sm:h-[480px] bg-slate-950 border-[6px] sm:border-[8px] border-slate-900 rounded-[32px] sm:rounded-[36px] shadow-[0_25px_60px_rgba(0,0,0,0.22)] overflow-hidden flex flex-col justify-between transition-all duration-700 ease-out"
+                    style={{
+                      transform: transformStyle,
+                      zIndex: zIndex,
+                      opacity: opacity,
+                      filter: filter,
+                      pointerEvents: pointerEvents,
+                      transformStyle: "preserve-3d",
+                      backfaceVisibility: "hidden"
+                    }}
+                  >
+                    {playingMap[video.id] ? (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1&mute=0&loop=1&playlist=${video.videoId}&controls=1`}
+                        className="w-full h-full object-cover border-0"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <div className="absolute inset-0 w-full h-full group">
+                        <img
+                          src={`https://img.youtube.com/vi/${video.videoId}/0.jpg`}
+                          alt={video.title}
+                          className="w-full h-full object-cover brightness-[0.7] group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        {/* Play Button Overlay */}
+                        <div 
+                          onClick={() => {
+                            if (isActive) {
+                              setPlayingMap({ [video.id]: true });
+                            }
+                          }}
+                          className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <div className="w-16 h-16 rounded-full bg-white/95 border border-white/20 flex items-center justify-center text-slate-900 shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-[#0055DA] hover:text-white">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="ml-1">
+                              <polygon points="5 3 19 12 5 21" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Right Navigation Arrow */}
+            <button
+              onClick={handleNext}
+              className="absolute right-2 sm:right-4 w-12 h-12 rounded-full bg-white hover:bg-slate-50 border border-slate-200/80 shadow-lg flex items-center justify-center text-slate-800 hover:text-slate-950 transition-all duration-200 cursor-pointer z-40 active:scale-95"
+              aria-label="Next slide"
+            >
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+
+          </div>
+
+          {/* Active video metadata display below carousel */}
+          <div className="max-w-[600px] mx-auto text-center mt-6 px-6 transition-all duration-500 relative z-10 min-h-[120px]">
+            <span className="text-[0.62rem] font-black uppercase text-[#0055DA] bg-[#0055DA]/10 px-3.5 py-1 rounded-full tracking-widest shadow-sm">
+              {PORTFOLIO_VIDEOS[activeIndex].badge}
+            </span>
+            <h3 className="text-xl font-black text-slate-900 mt-3 mb-2">
+              {PORTFOLIO_VIDEOS[activeIndex].title}
+            </h3>
+            <p className="text-[#111111] leading-relaxed text-xs sm:text-[0.85rem] font-semibold">
+              {PORTFOLIO_VIDEOS[activeIndex].desc}
+            </p>
           </div>
         </section>
 
@@ -846,25 +811,23 @@ export default function VideoMotionPage() {
           </div>
         </section>
 
-        {/* Premium Navy CTA Section with glowing grid borders */}
-        <section className="relative rounded-[40px] bg-[#020713] p-10 sm:p-20 text-center text-white overflow-hidden shadow-2xl z-10 mt-16 max-w-[1100px] mx-auto border border-white/5">
+        {/* Premium Light CTA Section */}
+        <section className="relative rounded-[40px] bg-gradient-to-tr from-[#111111]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60">
           {/* Luminous soft mesh bubbles */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#111111] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8b5cf6] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#111111] opacity-5 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8b5cf6] opacity-5 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
 
           <div className="relative z-10 max-w-[650px] mx-auto">
-            <h2 className="text-3xl sm:text-[2.8rem] font-black tracking-tight leading-tight mb-5 text-white">
+            <h2 className="text-3xl sm:text-[2.8rem] font-black tracking-tight leading-tight mb-5 text-slate-900">
               Want Cinematic Video & Motion Cuts?
             </h2>
-            <p className="text-[#94A3B8] max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-medium">
-              Our post-production team is prepared to edit your social assets,
-              product ads, or custom outlines. Get in touch to schedule a
-              project.
+            <p className="text-[#111111] max-w-[540px] mx-auto text-[0.92rem] leading-relaxed mb-10 font-semibold">
+              Our post-production team is prepared to edit your social assets, product ads, or custom outlines. Get in touch to schedule a project.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-9 py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_6px_25px_rgba(0, 85, 218,0.3)] hover:shadow-[0_10px_35px_rgba(0, 85, 218,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
+              className="inline-flex items-center justify-center px-9 py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_6px_25px_rgba(0, 85, 218,0.15)] hover:shadow-[0_10px_35px_rgba(0, 85, 218,0.3)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-sm uppercase tracking-widest"
             >
               Start Your Project
             </Link>

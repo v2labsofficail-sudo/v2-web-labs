@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
     languages: {
       "en-US": siteConfig.url,
+      "en-GB": siteConfig.url,
+      "en-CA": siteConfig.url,
+      "en-IN": siteConfig.url,
       "x-default": siteConfig.url,
     },
   },
@@ -93,6 +96,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
+  },
+  verification: {
+    google: "google-site-verification-placeholder-1234567890",
   },
   other: {
     "geo.region": siteConfig.region,

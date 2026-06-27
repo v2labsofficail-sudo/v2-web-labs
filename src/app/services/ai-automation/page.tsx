@@ -8,8 +8,9 @@ import Image from "next/image";
 
 const ECO_ICONS = {
   Whatsapp: () => (
-    <svg className="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.731-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.015 14.07 1.015 11.5 1.015c-5.44 0-9.866 4.372-9.87 9.802 0 1.772.483 3.502 1.396 5.042l-1.01 3.686 3.813-.989z" />
+    <svg className="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 720 720">
+      <path d="M360,0C161.18,0,0,161.18,0,360c0,65.41,17.45,126.75,47.94,179.61L0,720l187.02-44.21c51.34,28.18,110.28,44.21,172.98,44.21,198.82,0,360-161.18,360-360S558.82,0,360,0ZM360,655.52c-60.17,0-116.13-17.98-162.82-48.87l-110.49,28.14,30.99-105.61c-33.53-47.93-53.2-106.26-53.2-169.19,0-163.21,132.31-295.52,295.52-295.52s295.52,132.31,295.52,295.52-132.31,295.52-295.52,295.52Z" />
+      <path d="M444.35,407.52l87.1,41.06c4,1.88,6.56,5.94,6.2,10.34-.94,11.46-5.54,34.43-26.13,55.02-58.12,58.12-162.49-7.64-166.74-10.18-25.67-13.79-50.06-32.24-73.19-55.36-23.12-23.12-41.58-47.52-55.37-73.19-2.55-4.24-68.31-108.61-10.18-166.74,20.59-20.59,43.56-25.19,55.02-26.13,4.41-.36,8.46,2.2,10.34,6.2l41.07,87.1c1.94,4.12,1.09,9.02-2.13,12.24l-30.61,30.61c-6.62,6.62-8.56,16.93-4,25.11,11.17,20.03,26.19,39.32,43.59,57.07,17.75,17.4,37.04,32.43,57.07,43.59,8.18,4.56,18.48,2.62,25.11-4l30.61-30.61c3.22-3.22,8.12-4.08,12.24-2.13Z" />
     </svg>
   ),
   Stripe: () => (
@@ -52,17 +53,13 @@ const ECO_ICONS = {
     </svg>
   ),
   Openai: () => (
-    <svg className="w-6 h-6 text-[#10A37F]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2v20M2 12h20M12 12m-4 0a4 4 0 108 0 4 4 0 10-8 0" />
+    <svg className="w-6 h-6 text-[#10A37F]" fill="currentColor" viewBox="0 0 720 720">
+      <path d="M304.246 294.611V249.028C304.246 245.189 305.687 242.309 309.044 240.392L400.692 187.612C413.167 180.415 428.042 177.058 443.394 177.058C500.971 177.058 537.44 221.682 537.44 269.182C537.44 272.54 537.44 276.379 536.959 280.218L441.954 224.558C436.197 221.201 430.437 221.201 424.68 224.558L304.246 294.611ZM518.245 472.145V363.224C518.245 356.505 515.364 351.707 509.608 348.349L389.174 278.296L428.519 255.743C431.877 253.826 434.757 253.826 438.115 255.743L529.762 308.523C556.154 323.879 573.905 356.505 573.905 388.171C573.905 424.636 552.315 458.225 518.245 472.141V472.145ZM275.937 376.182L236.592 353.152C233.235 351.235 231.794 348.354 231.794 344.515V238.956C231.794 187.617 271.139 148.749 324.4 148.749C344.555 148.749 363.264 155.468 379.102 167.463L284.578 222.164C278.822 225.521 275.942 230.319 275.942 237.039V376.186L275.937 376.182ZM360.626 425.122L304.246 393.455V326.283L360.626 294.616L417.002 326.283V393.455L360.626 425.122ZM396.852 570.989C376.698 570.989 357.989 564.27 342.151 552.276L436.674 497.574C442.431 494.217 445.311 489.419 445.311 482.699V343.552L485.138 366.582C488.495 368.499 489.936 371.379 489.936 375.219V480.778C489.936 532.117 450.109 570.985 396.852 570.985V570.989ZM283.134 463.99L191.486 411.211C165.094 395.854 147.343 363.229 147.343 331.562C147.343 294.616 169.415 261.509 203.48 247.593V356.991C203.48 363.71 206.361 368.508 212.117 371.866L332.074 441.437L292.729 463.99C289.372 465.907 286.491 465.907 283.134 463.99ZM277.859 542.68C223.639 542.68 183.813 501.895 183.813 451.514C183.813 447.675 184.294 443.836 184.771 439.997L279.295 494.698C285.051 498.056 290.812 498.056 296.568 494.698L417.002 425.127V470.71C417.002 474.549 415.562 477.429 412.204 479.346L320.557 532.126C308.081 539.323 293.206 542.68 277.854 542.68H277.859ZM396.852 599.776C454.911 599.776 503.37 558.513 514.41 503.812C568.149 489.896 602.696 439.515 602.696 388.176C602.696 354.587 588.303 321.962 562.392 298.45C564.791 288.373 566.231 278.296 566.231 268.224C566.231 199.611 510.571 148.267 446.274 148.267C433.322 148.267 420.846 150.184 408.37 154.505C386.775 133.392 357.026 119.958 324.4 119.958C266.342 119.958 217.883 161.22 206.843 215.921C153.104 229.837 118.557 280.218 118.557 331.557C118.557 365.146 132.95 397.771 158.861 421.283C156.462 431.36 155.022 441.437 155.022 451.51C155.022 520.123 210.682 571.466 274.978 571.466C287.931 571.466 300.407 569.549 312.883 565.228C334.473 586.341 364.222 599.776 396.852 599.776Z" />
     </svg>
   ),
   OpenAIModel: () => (
-    <svg className="w-6 h-6 text-[#10A37F]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-      <path d="M4.5 16.5c-1.5 0-2.5-1-2.5-2.5s1-2.5 2.5-2.5h15c1.5 0 2.5 1 2.5 2.5s-1 2.5-2.5 2.5H4.5z" />
-      <circle cx="7" cy="14" r="1.5" fill="currentColor" />
-      <circle cx="17" cy="14" r="1.5" fill="currentColor" />
-      <path d="M12 3v18" />
+    <svg className="w-6 h-6 text-[#10A37F]" fill="currentColor" viewBox="0 0 720 720">
+      <path d="M304.246 294.611V249.028C304.246 245.189 305.687 242.309 309.044 240.392L400.692 187.612C413.167 180.415 428.042 177.058 443.394 177.058C500.971 177.058 537.44 221.682 537.44 269.182C537.44 272.54 537.44 276.379 536.959 280.218L441.954 224.558C436.197 221.201 430.437 221.201 424.68 224.558L304.246 294.611ZM518.245 472.145V363.224C518.245 356.505 515.364 351.707 509.608 348.349L389.174 278.296L428.519 255.743C431.877 253.826 434.757 253.826 438.115 255.743L529.762 308.523C556.154 323.879 573.905 356.505 573.905 388.171C573.905 424.636 552.315 458.225 518.245 472.141V472.145ZM275.937 376.182L236.592 353.152C233.235 351.235 231.794 348.354 231.794 344.515V238.956C231.794 187.617 271.139 148.749 324.4 148.749C344.555 148.749 363.264 155.468 379.102 167.463L284.578 222.164C278.822 225.521 275.942 230.319 275.942 237.039V376.186L275.937 376.182ZM360.626 425.122L304.246 393.455V326.283L360.626 294.616L417.002 326.283V393.455L360.626 425.122ZM396.852 570.989C376.698 570.989 357.989 564.27 342.151 552.276L436.674 497.574C442.431 494.217 445.311 489.419 445.311 482.699V343.552L485.138 366.582C488.495 368.499 489.936 371.379 489.936 375.219V480.778C489.936 532.117 450.109 570.985 396.852 570.985V570.989ZM283.134 463.99L191.486 411.211C165.094 395.854 147.343 363.229 147.343 331.562C147.343 294.616 169.415 261.509 203.48 247.593V356.991C203.48 363.71 206.361 368.508 212.117 371.866L332.074 441.437L292.729 463.99C289.372 465.907 286.491 465.907 283.134 463.99ZM277.859 542.68C223.639 542.68 183.813 501.895 183.813 451.514C183.813 447.675 184.294 443.836 184.771 439.997L279.295 494.698C285.051 498.056 290.812 498.056 296.568 494.698L417.002 425.127V470.71C417.002 474.549 415.562 477.429 412.204 479.346L320.557 532.126C308.081 539.323 293.206 542.68 277.854 542.68H277.859ZM396.852 599.776C454.911 599.776 503.37 558.513 514.41 503.812C568.149 489.896 602.696 439.515 602.696 388.176C602.696 354.587 588.303 321.962 562.392 298.45C564.791 288.373 566.231 278.296 566.231 268.224C566.231 199.611 510.571 148.267 446.274 148.267C433.322 148.267 420.846 150.184 408.37 154.505C386.775 133.392 357.026 119.958 324.4 119.958C266.342 119.958 217.883 161.22 206.843 215.921C153.104 229.837 118.557 280.218 118.557 331.557C118.557 365.146 132.95 397.771 158.861 421.283C156.462 431.36 155.022 441.437 155.022 451.51C155.022 520.123 210.682 571.466 274.978 571.466C287.931 571.466 300.407 569.549 312.883 565.228C334.473 586.341 364.222 599.776 396.852 599.776Z" />
     </svg>
   ),
   GeminiModel: () => (
@@ -72,11 +69,8 @@ const ECO_ICONS = {
     </svg>
   ),
   ClaudeModel: () => (
-    <svg className="w-6 h-6 text-[#D97706]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-      <path d="M12 3L4 9v8l8 4 8-4V9l-8-6z" />
-      <line x1="12" y1="3" x2="12" y2="21" />
-      <line x1="4" y1="9" x2="20" y2="17" />
-      <line x1="20" y1="9" x2="4" y2="17" />
+    <svg className="w-6 h-6 text-[#D97706]" fill="currentColor" viewBox="0 0 24 24">
+      <path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z" />
     </svg>
   )
 };
@@ -133,16 +127,6 @@ export default function AiAutomationPage() {
   // --- Stepper State ---
   const [activeWorkflowStep, setActiveWorkflowStep] = useState(0);
 
-  // --- Command Terminal State ---
-  const [terminalLogs, setTerminalLogs] = useState<string[]>([
-    "Initializing AI automation engine...",
-    "Connecting secure internal CRM bridges...",
-    "Syncing company customer databases...",
-    "V2 active workflow pipeline status: Healthy",
-    "182 operations automated today."
-  ]);
-  const logGeneratorInterval = useRef<NodeJS.Timeout | null>(null);
-
   // --- Ecosystem Map State ---
   const [activeEcoNode, setActiveEcoNode] = useState<string | null>(null);
   const ecosystemNodes = [
@@ -156,9 +140,6 @@ export default function AiAutomationPage() {
     { id: "Openai", label: "OpenAI GPT-4", x: "90%", y: "50%", icon: <ECO_ICONS.Openai /> },
   ];
 
-  // --- Chaos Slider State ---
-  const [transformationSlider, setTransformationSlider] = useState(0);
-
   // Intervals for Hero and Dashboard Simulation
   useEffect(() => {
     // 1. Ticker Loop
@@ -171,30 +152,9 @@ export default function AiAutomationPage() {
       setActiveStreamIndex(prev => (prev + 1) % operationsStream.length);
     }, 4500);
 
-    // 3. Command Terminal logs writer simulation
-    const terminalLogsPool = [
-      "[SYSTEM] Trigger received: webhook.inbound_lead (200 OK)",
-      "[AI Brain] Running prompt qualification pipeline...",
-      "[AI Brain] Qualification score: 0.94 - HIGH INTENT detected",
-      "[HubSpot] Connecting database gateway...",
-      "[HubSpot] Lead created successfully: ID_482910",
-      "[Slack] Formatting rich webhook alert...",
-      "[Slack] Dispatching operational alert to channel #sales-leads",
-      "[SYSTEM] Batch scheduled task executed successfully (0.02s)",
-      "[Stripe] Payment invoice webhook verified - Stripe Secure",
-      "[Database] Caching system latency parameters in Redis Cache",
-      "[AI Brain] Analyzing customer inquiry sentiment... Positive",
-    ];
-
-    logGeneratorInterval.current = setInterval(() => {
-      const randomLine = terminalLogsPool[Math.floor(Math.random() * terminalLogsPool.length)];
-      setTerminalLogs(prev => [...prev.slice(1), randomLine]);
-    }, 2200);
-
     return () => {
       clearInterval(tickerTimer);
       clearInterval(streamTimer);
-      if (logGeneratorInterval.current) clearInterval(logGeneratorInterval.current);
     };
   }, []);
 
@@ -471,67 +431,7 @@ export default function AiAutomationPage() {
           </div>
         </section>
 
-        {/* 4. AI Command Terminal Section (Premium High-Contrast Shell) */}
-        <section id="command-terminal" className="py-20 border-t border-slate-200/50 mb-28 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left description */}
-            <div className="lg:col-span-5 flex flex-col text-left items-start">
-              <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
-                Command Console
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] font-black text-[#0F172A] tracking-tight leading-none mb-6">
-                Technical AI Command Terminal.
-              </h2>
-              <p className="text-[#111111] text-sm leading-[1.65] font-semibold mb-8">
-                Watch raw actions stream instantly through our database gates. We code robust serverless handlers designed to secure role validation keys and sync operations with zero downtime.
-              </p>
 
-              <div className="flex flex-wrap gap-2">
-                {["REST Bridges", "SSO Audited", "Safe Webhooks", "Zero Latency Logs"].map((tag, idx) => (
-                  <span key={idx} className="px-3.5 py-1.5 rounded-xl border border-slate-200/60 bg-white  text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Terminal shell UI */}
-            <div className="lg:col-span-7 w-full flex flex-col select-none">
-              <div className="w-full rounded-3xl border border-slate-800 bg-[#070a13] shadow-[0_20px_50px_rgba(9,13,26,0.15)] overflow-hidden">
-                
-                {/* Header terminal tabs */}
-                <div className="bg-[#03050a] border-b border-slate-800/80 px-5 py-3.5 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444] shadow-sm" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#eab308] shadow-sm" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-sm" />
-                  </div>
-                  <span className="text-[0.62rem] font-bold text-[#111111] uppercase tracking-widest font-mono">
-                    v2-logger@sh - active
-                  </span>
-                  <div className="w-4 h-4" />
-                </div>
-
-                {/* Console logs output */}
-                <div className="p-6 font-mono text-left text-[0.72rem] text-[#111111] min-h-[220px] flex flex-col gap-2.5">
-                  {terminalLogs.map((log, idx) => (
-                    <div key={idx} className={`leading-relaxed ${idx === terminalLogs.length - 1 ? "text-white font-extrabold" : "opacity-75"}`}>
-                      <span className="text-[#111111] mr-2">&gt;</span>
-                      {log}
-                    </div>
-                  ))}
-                  <div className="flex items-center gap-1">
-                    <span className="text-[#111111] mr-2">&gt;</span>
-                    <span className="w-2 h-4 bg-[#22c55e] animate-ping" />
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </section>
 
         {/* 5. Dynamic Ecosystem Map */}
         <section id="ecosystem" className="py-16 border-t border-slate-200/50 mb-28 select-none relative z-10">
@@ -675,111 +575,7 @@ export default function AiAutomationPage() {
           </div>
         </section>
 
-        {/* 7. "Chaos to Automation" Transformation */}
-        <section id="chaos-transformation" className="py-20 border-t border-slate-200/50 mb-20 select-none relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
-              Operations Shift
-            </div>
-            <h2 className="text-3xl md:text-[2.6rem] font-black text-[#0F172A] tracking-tight">
-              Chaos to Automation
-            </h2>
-            <p className="text-[#111111] text-sm max-w-[550px] mx-auto mt-2 leading-relaxed font-semibold">
-              Use the sliding controller directly below to witness messy operations transform into centralized, systemized, and automated V2 pipelines.
-            </p>
-          </div>
 
-          <div className="max-w-[1000px] mx-auto bg-white  border border-slate-200/80 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.015)] overflow-hidden p-6 md:p-10 text-left">
-            
-            {/* Side-by-side split layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch relative">
-              
-              {/* CHAOS PANEL (LEFT) */}
-              <div 
-                className="flex flex-col justify-between p-6 rounded-2xl bg-red-500/[0.015] border border-red-500/10 min-h-[300px] transition-opacity duration-300"
-                style={{ opacity: 1 - transformationSlider / 100 }}
-              >
-                <div>
-                  <span className="text-[0.62rem] font-black uppercase text-red-500 bg-red-500/10 px-2.5 py-1 rounded-full tracking-wider mb-5 inline-block shadow-sm">
-                    Messy Legacy Operations
-                  </span>
-                  <h3 className="text-lg font-black text-[#0F172A] mb-4">Disconnected Manual Bottlenecks</h3>
-                  
-                  <ul className="flex flex-col gap-3 text-xs text-slate-650">
-                    <li className="flex gap-2 items-center">
-                      <span className="text-red-500 font-extrabold">✕</span>
-                      <span className="font-semibold">Cluttered offline spreadsheets prone to user overwrite errors</span>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <span className="text-red-500 font-extrabold">✕</span>
-                      <span className="font-semibold">Repetitive administrative copy-paste tasks between platforms</span>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <span className="text-red-500 font-extrabold">✕</span>
-                      <span className="font-semibold">Hours of delayed lead responses due to manual qualification</span>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <span className="text-red-500 font-extrabold">✕</span>
-                      <span className="font-semibold">Disconnected isolated tools requiring custom manual exports</span>
-                    </li>
-                  </ul>
-                </div>
-                <span className="text-[0.58rem] font-bold text-red-500 uppercase tracking-widest mt-6">40+ hours wasted per week</span>
-              </div>
-
-              {/* AUTOMATION PANEL (RIGHT) */}
-              <div 
-                className="flex flex-col justify-between p-6 rounded-2xl bg-[#111111]/[0.015] border border-[#111111]/10 min-h-[300px] transition-opacity duration-300"
-                style={{ opacity: transformationSlider / 100 }}
-              >
-                <div>
-                  <span className="text-[0.62rem] font-black uppercase text-[#111111] bg-[#111111]/10 px-2.5 py-1 rounded-full tracking-wider mb-5 inline-block shadow-sm">
-                    ✓ Clean V2 Pipeline
-                  </span>
-                  <h3 className="text-lg font-black text-[#0F172A] mb-4">Centralized Systemized Ecosystem</h3>
-                  
-                  <ul className="flex flex-col gap-3 text-xs text-[#111111]">
-                    <li className="flex gap-2 items-center">
-                      <span className="text-[#111111] font-extrabold">✓</span>
-                      <span className="font-semibold">Direct bidirectional live API webhook connections</span>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <span className="text-[#111111] font-extrabold">✓</span>
-                      <span className="font-semibold">Qualify and segment leads on the fly using OpenAI models</span>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <span className="text-[#111111] font-extrabold">✓</span>
-                      <span className="font-semibold">Instant automated Slack alarms and customer alerts</span>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <span className="text-[#111111] font-extrabold">✓</span>
-                      <span className="font-semibold">One centralized database dashboard showing real-time logs</span>
-                    </li>
-                  </ul>
-                </div>
-                <span className="text-[0.58rem] font-bold text-[#111111] uppercase tracking-widest mt-6 font-Outfit">Zero manual copy-paste action</span>
-              </div>
-
-            </div>
-
-            {/* Slider controller */}
-            <div className="mt-10 border-t border-slate-150 pt-6 flex flex-col items-center">
-              <label htmlFor="slider" className="text-[0.68rem] font-extrabold uppercase text-[#111111] tracking-wider mb-3 block">
-                Slide to Automate: {transformationSlider}%
-              </label>
-              <input 
-                id="slider"
-                type="range"
-                min="0"
-                max="100"
-                value={transformationSlider}
-                onChange={(e) => setTransformationSlider(Number(e.target.value))}
-                className="w-full max-w-md h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#111111]"
-              />
-            </div>
-
-          </div>
-        </section>
 
         {/* ========================================================================= */}
         {/* DESIGN TOOLING STACK & SHOWCASE SECTION (AI & AUTOMATION PIPELINE) */}
@@ -827,9 +623,8 @@ export default function AiAutomationPage() {
                 {/* OpenAI / Anthropic */}
                 <div className="flex items-center gap-5 p-5 bg-white  border border-slate-200/50 rounded-3xl hover:border-[#10A37F]/30 hover:bg-white hover:shadow-[0_12px_30px_rgba(16,163,127,0.03)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                    <svg className="w-7 h-7 text-[#10A37F]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 2v20M2 12h20M12 12m-5 0a5 5 0 1010 0 5 5 0 10-10 0" />
+                    <svg className="w-7 h-7 text-[#10A37F]" fill="currentColor" viewBox="0 0 720 720">
+                      <path d="M304.246 294.611V249.028C304.246 245.189 305.687 242.309 309.044 240.392L400.692 187.612C413.167 180.415 428.042 177.058 443.394 177.058C500.971 177.058 537.44 221.682 537.44 269.182C537.44 272.54 537.44 276.379 536.959 280.218L441.954 224.558C436.197 221.201 430.437 221.201 424.68 224.558L304.246 294.611ZM518.245 472.145V363.224C518.245 356.505 515.364 351.707 509.608 348.349L389.174 278.296L428.519 255.743C431.877 253.826 434.757 253.826 438.115 255.743L529.762 308.523C556.154 323.879 573.905 356.505 573.905 388.171C573.905 424.636 552.315 458.225 518.245 472.141V472.145ZM275.937 376.182L236.592 353.152C233.235 351.235 231.794 348.354 231.794 344.515V238.956C231.794 187.617 271.139 148.749 324.4 148.749C344.555 148.749 363.264 155.468 379.102 167.463L284.578 222.164C278.822 225.521 275.942 230.319 275.942 237.039V376.186L275.937 376.182ZM360.626 425.122L304.246 393.455V326.283L360.626 294.616L417.002 326.283V393.455L360.626 425.122ZM396.852 570.989C376.698 570.989 357.989 564.27 342.151 552.276L436.674 497.574C442.431 494.217 445.311 489.419 445.311 482.699V343.552L485.138 366.582C488.495 368.499 489.936 371.379 489.936 375.219V480.778C489.936 532.117 450.109 570.985 396.852 570.985V570.989ZM283.134 463.99L191.486 411.211C165.094 395.854 147.343 363.229 147.343 331.562C147.343 294.616 169.415 261.509 203.48 247.593V356.991C203.48 363.71 206.361 368.508 212.117 371.866L332.074 441.437L292.729 463.99C289.372 465.907 286.491 465.907 283.134 463.99ZM277.859 542.68C223.639 542.68 183.813 501.895 183.813 451.514C183.813 447.675 184.294 443.836 184.771 439.997L279.295 494.698C285.051 498.056 290.812 498.056 296.568 494.698L417.002 425.127V470.71C417.002 474.549 415.562 477.429 412.204 479.346L320.557 532.126C308.081 539.323 293.206 542.68 277.854 542.68H277.859ZM396.852 599.776C454.911 599.776 503.37 558.513 514.41 503.812C568.149 489.896 602.696 439.515 602.696 388.176C602.696 354.587 588.303 321.962 562.392 298.45C564.791 288.373 566.231 278.296 566.231 268.224C566.231 199.611 510.571 148.267 446.274 148.267C433.322 148.267 420.846 150.184 408.37 154.505C386.775 133.392 357.026 119.958 324.4 119.958C266.342 119.958 217.883 161.22 206.843 215.921C153.104 229.837 118.557 280.218 118.557 331.557C118.557 365.146 132.95 397.771 158.861 421.283C156.462 431.36 155.022 441.437 155.022 451.51C155.022 520.123 210.682 571.466 274.978 571.466C287.931 571.466 300.407 569.549 312.883 565.228C334.473 586.341 364.222 599.776 396.852 599.776Z" />
                     </svg>
                   </div>
                   <div>
