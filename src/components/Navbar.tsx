@@ -5,16 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 import { serviceItems } from "@/lib/site-data";
-import { 
-  Globe, 
-  Cpu, 
-  Palette, 
-  Database, 
-  Layers, 
-  Video, 
-  Target,
-  Sparkles 
-} from "lucide-react";
 
 const Icons = {
   Home: () => (
@@ -47,48 +37,115 @@ const Icons = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
     </svg>
   ),
-  Web: () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <polyline points="16 18 22 12 16 6" />
-      <polyline points="8 6 2 12 8 18" />
-      <line x1="14" y1="4" x2="10" y2="20" />
+  Marketing: () => (
+    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="14" rx="1.5" />
+      <path d="M8 3v4" />
+      <path d="M16 3v4" />
+      <path d="M4 9h16" />
+      <circle cx="12" cy="14" r="3.5" />
+      <path d="M12 10.5a5.4 5.4 0 0 0 0 7" />
+      <path d="M8.7 14h6.6" />
     </svg>
   ),
-  Video: () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
-      <line x1="7" y1="2" x2="7" y2="22" />
-      <line x1="17" y1="2" x2="17" y2="22" />
-      <line x1="2" y1="12" x2="22" y2="12" />
+  Website: () => (
+    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.7" viewBox="0 0 24 24">
+      <rect x="4" y="6" width="11" height="12" rx="1.5" />
+      <rect x="9" y="3" width="11" height="12" rx="1.5" />
+      <path d="M7 9h5" />
+      <path d="M7 12h5" />
+      <path d="M7 15h4" />
+      <path d="M12 6h5" />
+      <path d="M12 9h5" />
     </svg>
   ),
-  Design: () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <polygon points="12 2 2 7 12 12 22 7 12 2" />
-      <polyline points="2 12 12 17 22 12" />
+  Social: () => (
+    <svg className="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="24" cy="24" r="22" fill="#1DA1F2" />
+      <path d="M34.6 17.2c-.7.3-1.4.5-2.2.6.8-.5 1.4-1.2 1.7-2.1-.7.4-1.6.8-2.5.9a4 4 0 0 0-6.9 2.7c0 .3 0 .6.1.9-3.3-.2-6.3-1.8-8.3-4.3-.4.6-.5 1.3-.5 2.1 0 1.4.7 2.7 1.9 3.4-.6 0-1.2-.2-1.8-.5 0 2 1.4 3.7 3.3 4.1-.3.1-.7.1-1 .1-.2 0-.5 0-.8-.1.5 1.7 2.1 2.9 4 2.9A8 8 0 0 1 16 30c-.4 0-.8 0-1.2-.1A11.3 11.3 0 0 0 21 31.7c7.4 0 11.4-6.4 11.4-12v-.6c.8-.5 1.5-1.2 2.2-1.9Z" fill="white" />
     </svg>
   ),
-  Database: () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="2" />
-      <line x1="21" y1="9" x2="3" y2="9" />
-      <line x1="12" y1="3" x2="12" y2="21" />
+  VideoPlay: () => (
+    <svg className="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="6" width="40" height="28" rx="6" fill="#4FC3F7" />
+      <path d="M20 15.5c0-1.2 1.3-1.9 2.3-1.3l10.3 6.5c1 .6 1 2 0 2.6l-10.3 6.5c-1 .6-2.3-.1-2.3-1.3V15.5Z" fill="white" />
+      <path d="M14 39h20" stroke="#4FC3F7" strokeWidth="3" strokeLinecap="round" />
     </svg>
   ),
-  UiUx: () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10" />
+  Branding: () => (
+    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+      <path d="M12 3 4 7l8 4 8-4-8-4Z" />
+      <path d="M4 12l8 4 8-4" />
+      <path d="M4 17l8 4 8-4" />
     </svg>
   ),
-  Ecom: () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <circle cx="9" cy="21" r="1" />
-      <circle cx="20" cy="21" r="1" />
-      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72" />
+  Erp: () => (
+    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <path d="M4 10h16" />
+      <path d="M10 4v16" />
+    </svg>
+  ),
+  Saas: () => (
+    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M7 9h10" />
+      <path d="M7 13h7" />
+      <path d="M7 17h4" />
+    </svg>
+  ),
+  Automation: () => (
+    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9A1.65 1.65 0 0 0 20.91 10H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" />
     </svg>
   ),
 };
+
+const serviceMenuContent = {
+  "digital-marketing": {
+    name: "Digital Marketing",
+    desc: "SEO & Ads Management",
+    icon: <Icons.Marketing />,
+    iconWrap: "text-slate-950",
+  },
+  "web-platform": {
+    name: "Website Design",
+    desc: "UI/UX & Development",
+    icon: <Icons.Website />,
+    iconWrap: "text-slate-950",
+  },
+  "ui-ux-brand": {
+    name: "Social Media",
+    desc: "Growth & Management",
+    icon: <Icons.Social />,
+    iconWrap: "",
+  },
+  "video-motion": {
+    name: "Video Editing",
+    desc: "Reels & Ads Production",
+    icon: <Icons.VideoPlay />,
+    iconWrap: "",
+  },
+  "erp-crm": {
+    name: "ERP & CRM",
+    desc: "Business Tools & Dashboards",
+    icon: <Icons.Erp />,
+    iconWrap: "text-slate-950",
+  },
+  "saas-product": {
+    name: "SaaS Product",
+    desc: "MVP & Platform Delivery",
+    icon: <Icons.Saas />,
+    iconWrap: "text-slate-950",
+  },
+  "ai-automation": {
+    name: "AI Automation",
+    desc: "Agents & Workflow Systems",
+    icon: <Icons.Automation />,
+    iconWrap: "text-slate-950",
+  },
+} as const;
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -113,28 +170,14 @@ export default function Navbar() {
   }, [pathname]);
 
   const services = serviceItems.map((service) => {
-    const IconComponent =
-      service.slug === "web-platform"
-        ? Globe
-        : service.slug === "ai-automation"
-          ? Cpu
-          : service.slug === "ui-ux-brand"
-            ? Palette
-            : service.slug === "erp-crm"
-              ? Database
-              : service.slug === "saas-product"
-                ? Layers
-                : service.slug === "video-motion"
-                  ? Video
-                  : service.slug === "digital-marketing"
-                    ? Target
-                    : Sparkles;
+    const menuContent = serviceMenuContent[service.slug as keyof typeof serviceMenuContent];
 
     return {
       ...service,
-      name: service.navLabel,
-      desc: service.summary,
-      icon: <IconComponent className="w-5 h-5" strokeWidth={2} />,
+      name: menuContent?.name ?? service.navLabel,
+      desc: menuContent?.desc ?? service.summary,
+      icon: menuContent?.icon ?? <Icons.Branding />,
+      iconWrap: menuContent?.iconWrap ?? "text-slate-950",
     };
   });
 
@@ -210,57 +253,27 @@ export default function Navbar() {
                 }`} />
               </button>
               
-              <div className="invisible opacity-0 absolute top-full left-1/2 -translate-x-1/2 bg-white  min-w-[780px] grid grid-cols-12 gap-5 rounded-3xl p-5 shadow-[0_20px_50px_rgba(0, 85, 218,0.08)] border border-slate-200/40 transition-all duration-300 translate-y-3 group-hover:visible group-hover:opacity-100 group-hover:translate-y-2.5 z-50">
-                <div className="col-span-8 grid grid-cols-2 gap-2">
+              <div className="invisible absolute top-full left-1/2 z-50 w-[820px] -translate-x-1/2 translate-y-3 rounded-[18px] border border-slate-100 bg-white px-10 py-9 opacity-0 shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition-all duration-300 group-hover:visible group-hover:translate-y-2 group-hover:opacity-100">
+                <div className="grid grid-cols-2 gap-x-14 gap-y-10 font-poppins">
                   {services.map((s) => (
-                    <Link 
-                      key={s.href} 
-                      href={s.href} 
-                      className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-white transition-all border border-transparent hover:border-slate-100/50 group/item"
+                    <Link
+                      key={s.href}
+                      href={s.href}
+                      className="group/item flex items-start gap-5 rounded-2xl"
                     >
-                      <div className="w-9 h-9 rounded-lg bg-[#0055DA]/[0.06] text-[#0055DA] flex items-center justify-center shrink-0 group-hover/item:bg-[#0055DA] group-hover/item:text-white transition-all duration-300">
+                      <div className={`flex h-14 w-14 shrink-0 items-center justify-center ${s.iconWrap}`}>
                         {s.icon}
                       </div>
-                      <div className="font-poppins">
-                        <div className="text-black font-extrabold text-[0.82rem] leading-none mb-1 group-hover/item:text-[#0055DA] transition-colors">{s.name}</div>
-                        <div className="text-slate-500 text-[0.72rem] leading-snug font-semibold">{s.desc}</div>
+                      <div className="pt-1">
+                        <div className="text-[0.98rem] font-extrabold leading-tight text-[#111111] transition-colors group-hover/item:text-[#0055DA]">
+                          {s.name}
+                        </div>
+                        <div className="mt-0.5 text-[0.84rem] font-medium leading-snug text-[#6E7891]">
+                          {s.desc}
+                        </div>
                       </div>
                     </Link>
                   ))}
-                </div>
-
-                <div className="col-span-4 bg-gradient-to-br from-[#0055DA]/5 to-[#06b6d4]/5 rounded-2xl p-5 border border-[#0055DA]/10 flex flex-col justify-between relative overflow-hidden font-poppins">
-                  <div>
-                    <span className="inline-block bg-[#0055DA]/[0.08] text-[#0055DA] font-extrabold text-[0.6rem] uppercase tracking-wider px-2 py-0.5 rounded-md mb-2.5">
-                      Partner Program
-                    </span>
-                    <h4 className="text-black font-extrabold text-[0.88rem] tracking-tight leading-snug mb-1">
-                      Ready to Scale Up?
-                    </h4>
-                    <p className="text-slate-500 text-[0.7rem] leading-relaxed font-semibold">
-                      We engineer premium custom products with lightning-fast delivery.
-                    </p>
-                  </div>
-                  
-                  <div className="flex flex-col gap-2 mt-4">
-                    <Link 
-                      href="/services"
-                      className="inline-flex items-center gap-1.5 text-[0.76rem] font-black text-black hover:text-[#0055DA] transition-colors group/promo select-none"
-                    >
-                      <span>Explore all solutions</span>
-                    </Link>
-
-                    <Link 
-                      href="/contact" 
-                      className="inline-flex items-center gap-1.5 text-[0.76rem] font-black text-[#0055DA] hover:text-[#0044B3] transition-colors group/promo select-none"
-                    >
-                      <span>Build with V2 Labs</span>
-                      <svg className="w-3.5 h-3.5 transform group-hover/promo:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
