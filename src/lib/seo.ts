@@ -160,6 +160,10 @@ export const publicRoutes = [
   "/careers",
   "/privacy",
   "/plans",
+  "/plans/web-development",
+  "/plans/branding",
+  "/plans/ecommerce",
+  "/plans/erp-crm",
   "/terms",
   "/services/web-platform",
   "/services/video-motion",
@@ -250,7 +254,7 @@ export function buildPageMetadata({
       },
     },
     verification: {
-      google: "google-site-verification-placeholder-1234567890",
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-placeholder-1234567890",
     },
     other: {
       "geo.region": siteConfig.region,

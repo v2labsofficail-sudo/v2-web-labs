@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-placeholder-1234567890",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-placeholder-1234567890",
   },
   other: {
     "geo.region": siteConfig.region,
