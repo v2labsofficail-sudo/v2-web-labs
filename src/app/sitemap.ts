@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl, publicRoutes } from "@/lib/seo";
 import { blogCategories, pricingCategories } from "@/lib/site-data";
+import { blogPosts } from "@/lib/blog-data";
 
 const homepage = new Set<string>(["/"]);
 const priorityRoutes = new Set<string>([
@@ -28,9 +29,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     (category) => `/plans/${category.id}` as const
   );
 
+  // Dynamically include all blog post pages in the sitemap for indexing
+  const dynamicPostRoutes = blogPosts.map(
+    (post) => `/blog/${post.categorySlug}/${post.slug}` as const
+  );
+
   // Use a Set to ensure unique routes and filter out any duplicates (e.g. if defined in publicRoutes as well)
   const allRoutes = Array.from(
-    new Set([...publicRoutes, ...dynamicCategoryRoutes, ...dynamicPlansRoutes])
+    new Set([
+      ...publicRoutes, 
+      ...dynamicCategoryRoutes, 
+      ...dynamicPlansRoutes, 
+      ...dynamicPostRoutes
+    ])
   );
 
   return allRoutes.map((route) => ({
