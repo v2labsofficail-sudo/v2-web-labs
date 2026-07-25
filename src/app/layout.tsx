@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Inter, Outfit, Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GoogleTagManager from "@/components/GoogleTagManager";
 import { buildOgImageUrl, siteConfig, structuredData } from "@/lib/seo";
 import "./globals.css";
 
@@ -113,6 +114,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   const schemaGraph = {
     "@context": "https://schema.org",
     "@graph": [
@@ -125,6 +127,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable} ${outfit.variable} ${poppins.variable}`}>
       <head>
+        <GoogleTagManager gtmId={gtmId} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -133,6 +136,16 @@ export default function RootLayout({
         />
       </head>
       <body style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        {gtmId ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        ) : null}
         <Navbar />
         <main style={{ flex: 1 }}>
           {children}
