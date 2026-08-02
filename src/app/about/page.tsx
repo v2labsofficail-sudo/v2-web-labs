@@ -27,7 +27,7 @@ export default function AboutPage() {
     },
     {
       name: "Vandan Darji",
-      role: "CEO & Full Stack Developer",
+      role: "Founder & CEO",
       initials: "VD",
       quote: "Compiles bulletproof, sub-second architectures.",
       gradient: "from-[#0055DA] to-[#111111]",
@@ -35,11 +35,10 @@ export default function AboutPage() {
       github: "https://github.com/Vandann-1/",
       bio: "Oversees core systems scaling, cloud sync grids, and security layers. Focused on TypeScript and React performance.",
       img: "/Vandan Darji.png",
-      hidden: true,
     },
     {
       name: "Jevin Kalathiya",
-      role: "MD & PHP Laravel Developer",
+      role: "Co-founder & MD",
       initials: "JK",
       quote:
         "Building scalable backend systems and efficient web applications.",
@@ -82,17 +81,6 @@ export default function AboutPage() {
       github: "#",
       bio: "Junior web developer contributing to responsive interfaces and smooth user experiences across modern web projects.",
       img: "/vansh-je.jpeg",
-    },
-    {
-      name: "Omm S. Das",
-      role: "Video Editor & Social Media Manager",
-      initials: "OD",
-      quote: "Crafting visual narratives that engage and inspire on every screen.",
-      gradient: "from-[#8b5cf6] to-[#ec4899]",
-      linkedin: "#",
-      github: "#",
-      bio: "Specializes in editing high-impact videos and managing dynamic social media campaigns to elevate brand presence.",
-      img: "/Omm_S_Das.jpg",
     },
     {
       name: "Navneet Vyas",
