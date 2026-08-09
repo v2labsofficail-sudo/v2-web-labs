@@ -15,50 +15,29 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "Vishal Dudhabarve",
-      role: "Founder & AI Full Stack Developer",
-      initials: "VD",
-      quote: "Building intelligent systems that push boundaries.",
-      gradient: "from-[#6366f1] to-[#4f46e5]",
-      linkedin: "#",
-      github: "#",
-      bio: "Founder of V2 Labs. Focuses on architecting multi-agent AI ecosystems, custom LLM fine-tuning, and scalable TypeScript frontends.",
-      img: "/vishal-dudhabarve.jpeg",
-    },
-    {
       name: "Vandan Darji",
       role: "Founder & CEO",
       initials: "VD",
       quote: "Compiles bulletproof, sub-second architectures.",
       gradient: "from-[#0055DA] to-[#111111]",
       linkedin: "https://www.linkedin.com/in/vandan-darji-3b282931a/",
-      github: "https://github.com/Vandann-1/",
+      instagram: "https://www.instagram.com/vandanndarji.13/",
       bio: "Oversees core systems scaling, cloud sync grids, and security layers. Focused on TypeScript and React performance.",
       img: "/Vandan Darji.png",
     },
     {
       name: "Jevin Kalathiya",
-      role: "Co-founder & MD",
+      role: "Founder & MD",
       initials: "JK",
       quote:
         "Building scalable backend systems and efficient web applications.",
-      gradient: "from-[#ec4899] to-[#f43f5e]",
+      gradient: "from-[#0055DA] to-[#111111]",
       linkedin: "https://www.linkedin.com/in/jevinkalathiya/",
-      github: "https://github.com/JevinKalathiya",
+      instagram: "https://www.instagram.com/jevinkalathiya/",
       bio: "PHP and Laravel developer focused on building secure, scalable, and high-performance web applications. Experienced in REST APIs, database design, authentication systems, and backend architecture.",
       img: "/Jevin Kalathiya.jpeg",
     },
-    {
-      name: "Biswadeep Dey",
-      role: "Professional Video Editor",
-      initials: "BD",
-      quote: "Cinematic storytelling that captivates and converts.",
-      gradient: "from-[#f43f5e] to-[#e11d48]",
-      linkedin: "#",
-      github: "#",
-      bio: "Crafts premium cinematic edits, complex motion graphics, and high-conversion brand advertisements. Expert in Premiere Pro and After Effects.",
-      img: "/Biswadeep Dey.jpg",
-    },
+
     {
       name: "Rishabh Tiwari",
       role: "Social Media Manager / Wordpress Developer / Co-Manager",
@@ -66,7 +45,7 @@ export default function AboutPage() {
       quote: "Transforms abstract ideas into bold visual stories.",
       gradient: "from-[#10b981] to-[#059669]",
       linkedin: "#",
-      github: "#",
+      instagram: "#",
       bio: "Social media manager and wordpress designer & developer focused on building secure, scalable, and high-performance web applications. Experienced in REST APIs, database design, authentication systems, and backend architecture.",
       img: "/Rishabh Tiwari.png",
       hidden: true,
@@ -78,7 +57,7 @@ export default function AboutPage() {
       quote: "Focused on building clean, dependable web experiences.",
       gradient: "from-[#f59e0b] to-[#f97316]",
       linkedin: "#",
-      github: "#",
+      instagram: "#",
       bio: "Junior web developer contributing to responsive interfaces and smooth user experiences across modern web projects.",
       img: "/vansh-je.jpeg",
     },
@@ -89,7 +68,7 @@ export default function AboutPage() {
       quote: "Architecting gorgeous, high-fidelity responsive layouts.",
       gradient: "from-[#0055DA] to-[#111111]",
       linkedin: "#",
-      github: "#",
+      instagram: "#",
       bio: "Leads engineering of premium responsive frontends, interactive motion architectures, and robust styling systems with pixel-perfect precision.",
       img: "/Navneet_Vyas.png",
     },
@@ -156,10 +135,10 @@ export default function AboutPage() {
               From College Dorm Hustle to <AlternatingText>Proper Engineering</AlternatingText>
             </h2>
             <p className="text-[#111111] text-sm sm:text-[0.92rem] leading-relaxed mb-5">
-              V2Labs was forged through relentless dedication. Our founders, **Vishal** and **Vandan**, began their partnership during college. Struggling to manage rigid university workloads, attendance requirements, and exams, they invested every spare night self-teaching advanced web architectures and system designs.
+              V2Labs was forged through relentless dedication. Our founders, **Vandan** and **Jevin**, began their partnership during college. Struggling to manage rigid university workloads, attendance requirements, and exams, they invested every spare night self-teaching advanced web architectures and system designs.
             </p>
             <p className="text-[#111111] text-sm sm:text-[0.92rem] leading-relaxed">
-              They started by freelancing on small client projects, delivering proper high-quality execution and pixel-perfect precision. This hands-on experience and obsession with performance laid the foundation for V2Labs (named after **Vishal** + **Vandan**). Today, we operate as an elite engineering studio shipping high-scale software globally.
+              They started by freelancing on small client projects, delivering proper high-quality execution and pixel-perfect precision. This hands-on experience and obsession with performance laid the foundation for V2Labs. Today, we operate as an elite engineering studio shipping high-scale software globally.
             </p>
           </div>
 

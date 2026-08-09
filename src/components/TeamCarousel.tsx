@@ -10,7 +10,7 @@ interface TeamMember {
   quote: string;
   gradient: string;
   linkedin: string;
-  github: string;
+  instagram: string;
   bio: string;
   img?: string;
 }
@@ -158,37 +158,63 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
                   />
                 )}
 
-                <div className="absolute inset-0 bg-slate-950/60 -[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0055DA]/90 to-[#111111]/95 backdrop-blur-[4px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-4">
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
                       setSelectedMember(member);
                       setShowModal(true);
                     }}
-                    className="px-4 py-2 rounded-full bg-white text-slate-900 font-extrabold text-xs tracking-wider uppercase shadow-md hover:scale-105 active:scale-95 transition-transform"
+                    className="px-4 py-2 rounded-full bg-white text-[#111111] font-black text-[0.68rem] tracking-widest uppercase shadow-md hover:scale-105 active:scale-95 transition-transform"
                   >
                     View Full Bio
                   </button>
-                  <div className="flex gap-2 mt-2">
+                  <div className="flex gap-3">
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-8 h-8 rounded-lg bg-white text-white hover:bg-white hover:text-[#111111] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
+                      className="w-10 h-10 rounded-xl bg-white/10 text-white border border-white/10 hover:bg-white hover:text-[#0055DA] hover:border-white flex items-center justify-center transition-all duration-300 shadow-md"
                       aria-label="LinkedIn"
                     >
-                      in
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
                     </a>
                     <a
-                      href={member.github}
+                      href={member.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-8 h-8 rounded-lg bg-white text-white hover:bg-white hover:text-[#0F172A] flex items-center justify-center transition-all shadow-sm font-bold text-xs"
-                      aria-label="GitHub"
+                      className="w-10 h-10 rounded-xl bg-white/10 text-white border border-white/10 hover:bg-white hover:text-[#0055DA] hover:border-white flex items-center justify-center transition-all duration-300 shadow-md"
+                      aria-label="Instagram"
                     >
-                      git
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                      </svg>
                     </a>
                   </div>
                 </div>
@@ -324,18 +350,22 @@ export default function TeamCarousel({ team }: TeamCarouselProps) {
               </div>
 
               <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
-                <div className="flex gap-2">
+                <div className="flex gap-2.5">
                   <a
                     href={selectedMember.linkedin}
-                    className="px-4 py-2 rounded-xl bg-[#111111]/[0.08] hover:bg-[#111111] text-[#111111] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2.5 rounded-xl bg-[#0055DA]/[0.08] hover:bg-[#0055DA] text-[#0055DA] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5"
                   >
                     LinkedIn
                   </a>
                   <a
-                    href={selectedMember.github}
-                    className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-900 text-slate-900 hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5"
+                    href={selectedMember.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2.5 rounded-xl bg-[#111111]/[0.08] hover:bg-[#111111] text-[#111111] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5"
                   >
-                    GitHub
+                    Instagram
                   </a>
                 </div>
 
