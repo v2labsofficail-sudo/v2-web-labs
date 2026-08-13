@@ -1,16 +1,18 @@
 import type { ReactNode } from "react";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, buildBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Video and Motion Design Services",
+  title: "Video Production & Motion Graphics Services",
   description:
-    "V2Labs Global creates cinematic video editing, motion design, and visual storytelling assets that strengthen modern digital brands.",
+    "Premium video post-production and motion graphics design services. We craft branded video content, campaign reels, and dynamic motion assets.",
   path: "/services/video-motion",
   keywords: [
-    "Video editing agency",
-    "Motion design services",
-    "Brand video production",
-    "Creative agency video services",
+    "video editing agency",
+    "motion design services",
+    "brand video production",
+    "motion graphics agency",
+    "social video editing",
+    "corporate video assets",
   ],
 });
 
@@ -19,5 +21,20 @@ export default function VideoMotionLayout({
 }: {
   children: ReactNode;
 }) {
-  return children;
+  const breadcrumbJson = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Video & Motion", path: "/services/video-motion" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson).replace(/</g, "\\u003c") }}
+      />
+      {children}
+    </>
+  );
 }
+

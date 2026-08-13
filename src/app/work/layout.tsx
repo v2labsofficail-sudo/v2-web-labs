@@ -1,19 +1,32 @@
 import type { ReactNode } from "react";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, buildBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Work and Case Studies",
+  title: "Work & Case Studies | Premium AI & Software Portfolio",
   description:
-    "Explore V2Labs Global case studies across AI platforms, web development, SaaS products, branding systems, and ERP CRM solutions.",
+    "Explore V2 Labs Global engineering portfolio and custom case studies across AI solutions, high-performance web platforms, and SaaS products.",
   path: "/work",
   keywords: [
     "V2Labs portfolio",
-    "V2Labs case studies",
-    "Web development projects",
-    "AI solutions portfolio",
+    "software case studies",
+    "headless commerce projects",
+    "AI automation systems portfolio",
   ],
 });
 
 export default function WorkLayout({ children }: { children: ReactNode }) {
-  return children;
+  const breadcrumbJson = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Work", path: "/work" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson).replace(/</g, "\\u003c") }}
+      />
+      {children}
+    </>
+  );
 }

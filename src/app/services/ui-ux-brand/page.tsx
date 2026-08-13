@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 import AlternatingText from "@/components/AlternatingText";
+import FaqSection from "@/components/FaqSection";
 
 export default function UiUxBrandPage() {
   
@@ -225,7 +226,7 @@ export default function UiUxBrandPage() {
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.05] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            High-Fidelity Interfaces & <AlternatingText>Brand Systems</AlternatingText>
+            UI/UX Design & <AlternatingText>Digital Product Design</AlternatingText>
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[780px] font-medium">
@@ -800,6 +801,26 @@ export default function UiUxBrandPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FaqSection items={[
+          {
+            question: "What does your UI UX design process look like?",
+            answer: "We follow a 4-step workflow: research and wireframing, high-fidelity UI design in Figma, clickable prototyping, and asset compilation ready for front-end engineers."
+          },
+          {
+            question: "Do you build custom design systems?",
+            answer: "Yes, we construct scalable design systems in Figma including spacing rules, color palettes, typography, responsive grids, and modular button/input component libraries."
+          },
+          {
+            question: "Do you design responsive web applications?",
+            answer: "Absolutely. Every interface we design is responsive and optimized for touch interactions on mobile as well as hover triggers on desktop."
+          },
+          {
+            question: "Can you prototype using Figma?",
+            answer: "Yes, we create clickable, high-fidelity prototypes in Figma to let you simulate user journeys and animations before writing a single line of code."
+          }
+        ]} />
 
         
         <section className="relative rounded-[40px] bg-gradient-to-tr from-[#111111]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60">

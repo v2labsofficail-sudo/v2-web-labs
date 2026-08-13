@@ -1012,9 +1012,9 @@ export default function Home() {
         <div className="flex flex-col text-center items-center w-full max-w-[900px] mx-auto relative z-10 px-4">
 
           <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-black font-poppins leading-[1.05] text-[#111111] mb-6 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
-            We build, innovate, and scale <br className="hidden md:block" />
+            Enterprise AI Solutions & <br className="hidden md:block" />
             <span className="text-[#0055DA] block mt-2 min-h-[1.2em]">
-              <Typewriter phrases={["AI systems.", "digital brands.", "websites & businesses."]} />
+              <Typewriter phrases={["Custom Software Development", "SaaS Product Engineering", "Next.js Web Platforms"]} />
             </span>
           </h1>
           

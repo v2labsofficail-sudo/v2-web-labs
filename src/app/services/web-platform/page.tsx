@@ -1,6 +1,7 @@
 import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 import AlternatingText from "@/components/AlternatingText";
+import FaqSection from "@/components/FaqSection";
 
 export default function WebPlatformPage() {
   const STACKS = [
@@ -63,7 +64,7 @@ export default function WebPlatformPage() {
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            High-Performance Web <AlternatingText>Engineering</AlternatingText>
+            High-Performance Web <AlternatingText>Development Services</AlternatingText>
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium">
@@ -212,9 +213,28 @@ export default function WebPlatformPage() {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FaqSection items={[
+          {
+            question: "What technologies do you use for web development?",
+            answer: "We primarily utilize React 19, Next.js (App Router), TypeScript, Tailwind CSS, Node.js, Express, NestJS, and PostgreSQL to construct secure, type-safe, and search-optimized web applications."
+          },
+          {
+            question: "Will my website be mobile-friendly and search engine optimized?",
+            answer: "Yes, every platform we deploy is custom-coded using semantic HTML5, lazy loading, lightweight styling sheets, and responsive flex grid containers. This ensures 100/100 Lighthouse performance and flawless mobile renders."
+          },
+          {
+            question: "Do you provide headless e-commerce development?",
+            answer: "Yes, we specialize in building headless e-commerce systems by integrating Shopify, Strapi, or custom content engines with Next.js frontends to deliver sub-second product pages and frictionless checkout."
+          },
+          {
+            question: "Can you migrate a legacy website to a modern tech stack?",
+            answer: "Absolutely. We migrate legacy WordPress, PHP, or React sites to Next.js while preserving indexing value using proper 301 redirection maps and canonical headers alignment."
+          }
+        ]} />
 
         <RelatedServiceLinks
           currentSlug="web-platform"

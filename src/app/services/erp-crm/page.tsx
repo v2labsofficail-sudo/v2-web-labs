@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 import AlternatingText from "@/components/AlternatingText";
+import FaqSection from "@/components/FaqSection";
 
 
 const SVG = {
@@ -339,7 +340,7 @@ export default function ErpCrmPage() {
               Operational Control
             </div>
             <h1 className="text-[clamp(2.2rem,5.5vw,4.2rem)] font-black leading-[1.1] text-[#0F172A] mb-8 tracking-tight">
-              Intelligent ERP & CRM systems <AlternatingText>engineered for operational dominance.</AlternatingText>
+              Custom ERP & CRM <AlternatingText>Software Development</AlternatingText>
             </h1>
             <p className="text-[#111111] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
               From workflow automation to secure database warehouses, V2 Labs designs, codes, and deploys high-performance internal tools that eliminate operational friction and save overhead.
@@ -668,6 +669,30 @@ export default function ErpCrmPage() {
             ))}
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FaqSection items={[
+          {
+            question: "How much does custom ERP development cost?",
+            answer: "Custom ERP development cost varies based on structural complexity, user counts, database volumes, and integration points. We offer fixed pricing starting from ₹15,000 for essentials up to Professional and Enterprise tiers."
+          },
+          {
+            question: "Can ERP software be customized for a business?",
+            answer: "Yes, our ERP CRM setups are built entirely from scratch around the workflows your business actually uses, rather than forcing you to fit into bloated off-the-shelf software."
+          },
+          {
+            question: "Can you integrate CRM with ERP?",
+            answer: "Yes, we connect customer relationship management databases with backend billing systems, inventory catalogs, and HR payroll grids using API interfaces."
+          },
+          {
+            question: "Can ERP software include inventory management?",
+            answer: "Yes, we build comprehensive inventory tracking sheets, automatic stock replenishment workflows, barcode scanner compatibility, and real-time dispatch dashboards."
+          },
+          {
+            question: "How long does custom ERP development take?",
+            answer: "An essential ERP system takes about 3 to 5 weeks to configure and deploy, while custom enterprise platforms require 8 to 12 weeks of engineering, testing, and training."
+          }
+        ]} />
 
         <RelatedServiceLinks
           currentSlug="erp-crm"

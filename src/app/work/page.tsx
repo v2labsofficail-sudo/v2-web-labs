@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 export default function WorkPage() {
   const PROJECTS = [
     {
+      slug: "placfy-ai",
       title: "Placfy AI",
       category: "AI & Platform Engineering",
       badge: "AI-Powered Systems",
@@ -31,6 +32,7 @@ export default function WorkPage() {
       ),
     },
     {
+      slug: "thinknshop",
       title: "ThinknShop",
       category: "Headless E-Commerce",
       badge: "thinknshop.in",
@@ -59,6 +61,7 @@ export default function WorkPage() {
       ),
     },
     {
+      slug: "naya-job",
       title: "Naya-Job",
       category: "Full-Stack Portal",
       badge: "Job Search Engine",
@@ -83,6 +86,7 @@ export default function WorkPage() {
       ),
     },
     {
+      slug: "calendar-plus",
       title: "Calendar Plus",
       category: "Custom SaaS System",
       badge: "Calendar & Scheduling",
@@ -107,6 +111,7 @@ export default function WorkPage() {
       ),
     },
     {
+      slug: "webproarts",
       title: "WebProArts",
       category: "Creative Media Portal",
       badge: "Custom Brand & Identity",
@@ -224,15 +229,23 @@ export default function WorkPage() {
                     ))}
                   </div>
 
-                  {/* Pulsing Uptime Stat Highlight */}
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center justify-center w-2 h-2 relative">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  {/* Pulsing Uptime Stat Highlight & Read Case Study Link */}
+                  <div className="flex justify-between items-center mt-2.5">
+                    <div className="flex items-center gap-2">
+                      <div className="flex items-center justify-center w-2 h-2 relative">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      </div>
+                      <span className="text-[0.72rem] font-extrabold text-slate-800 tracking-tight uppercase">
+                        {proj.stat}
+                      </span>
                     </div>
-                    <span className="text-[0.72rem] font-extrabold text-slate-800 tracking-tight uppercase">
-                      {proj.stat}
-                    </span>
+                    <Link
+                      href={`/work/${proj.slug}`}
+                      className="text-xs font-bold text-[#0055DA] hover:underline flex items-center gap-1 shrink-0"
+                    >
+                      Read Case Study ➔
+                    </Link>
                   </div>
                 </div>
               </div>

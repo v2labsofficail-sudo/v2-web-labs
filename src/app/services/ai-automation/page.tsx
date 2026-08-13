@@ -5,6 +5,7 @@ import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 import AlternatingText from "@/components/AlternatingText";
 import Image from "next/image";
+import FaqSection, { FaqItem } from "@/components/FaqSection";
 
 const ECO_ICONS = {
   Whatsapp: () => (
@@ -200,7 +201,7 @@ export default function AiAutomationPage() {
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.05] text-slate-900 tracking-tight mb-6 max-w-[850px] mx-auto">
-            AI Systems That Run Operations <AlternatingText>Automatically.</AlternatingText>
+            AI Automation & <AlternatingText>AI Agent Development Services</AlternatingText>
           </h1>
           
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[760px] mx-auto font-medium mb-8">
@@ -703,6 +704,30 @@ export default function AiAutomationPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FaqSection items={[
+          {
+            question: "What is AI automation?",
+            answer: "AI automation is the integration of artificial intelligence, machine learning, and large language models (LLMs) to perform complex business tasks and decision-making processes that previously required human intervention."
+          },
+          {
+            question: "How can AI automate business processes?",
+            answer: "AI can automate processes by reading and sorting documents, drafting email replies, synchronizing data between systems, qualifying incoming leads, and answering customer queries via autonomous chat agents."
+          },
+          {
+            question: "Can you build custom AI agents?",
+            answer: "Yes, we design and program custom AI agents capable of calling APIs, running background workflows, executing code, and interacting with users or internal databases to perform specific operational roles."
+          },
+          {
+            question: "Can AI integrate with existing CRM software?",
+            answer: "Absolutely. We specialize in connecting OpenAI, Gemini, and Claude API models directly to HubSpot, Zoho, Salesforce, and custom CRM platforms via secure webhook bridges."
+          },
+          {
+            question: "Can you integrate OpenAI or Gemini into an application?",
+            answer: "Yes, we integrate OpenAI's GPT models, Google Gemini, Anthropic's Claude, and open-source models (like Llama) with tailored system prompts, function calling capabilities, and RAG data layers."
+          }
+        ]} />
 
         {/* Premium Light CTA Section with glowing grid borders (NO MORE NAVY DARK BLUE BOX!) */}
         <section className="relative rounded-[40px] bg-gradient-to-tr from-[#111111]/[0.06] via-[#8b5cf6]/[0.03] to-white p-10 sm:p-20 text-center text-slate-800 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.01)] z-10 mt-16 max-w-[1100px] mx-auto border border-slate-200/60 animate-fade-in">

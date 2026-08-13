@@ -5,6 +5,7 @@ import Link from "next/link";
 import RelatedServiceLinks from "@/components/RelatedServiceLinks";
 import AlternatingText from "@/components/AlternatingText";
 import Image from "next/image";
+import FaqSection from "@/components/FaqSection";
 
 const SVG = {
   Nextjs: () => (
@@ -272,7 +273,7 @@ export default function SaasProductPage() {
               SaaS Engine Studio
             </div>
             <h1 className="text-[clamp(2.2rem,5.5vw,4.2rem)] font-black leading-[1.1] text-[#0F172A] mb-8 tracking-tight">
-              Building scalable SaaS products <AlternatingText>engineered for growth.</AlternatingText>
+              SaaS Product Development & <AlternatingText>MVP Engineering</AlternatingText>
             </h1>
             <p className="text-[#111111] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
               From MVPs to enterprise-grade platforms, V2 Labs develops high-performance software products with modern architecture, automation, and scalable infrastructure.
@@ -717,6 +718,26 @@ export default function SaasProductPage() {
             ))}
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FaqSection items={[
+          {
+            question: "How much does SaaS development cost?",
+            answer: "The cost depends on system complexity, integration count, data pipelines, and timeline. We develop scalable MVPs starting from fixed rates and customized enterprise quotes."
+          },
+          {
+            question: "Can you build a multi-tenant SaaS application?",
+            answer: "Yes, we specialize in multi-tenant SaaS architectures, ensuring strict tenant data isolation, secure authentication, customized subdomains routing, and scalable API access."
+          },
+          {
+            question: "Can you develop an MVP?",
+            answer: "Yes, we prioritize rapid prototyping and MVP engineering to help startups launch in as little as 4 to 6 weeks with core functional features, clean UI, and scalable databases."
+          },
+          {
+            question: "Can you integrate subscription billing?",
+            answer: "Absolutely. We integrate Stripe, Razorpay, or Paddle subscription billing engines, including automated recurring invoices, customer portals, billing webhooks, and dunning workflows."
+          }
+        ]} />
 
         <RelatedServiceLinks
           currentSlug="saas-product"

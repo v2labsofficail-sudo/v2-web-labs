@@ -2,15 +2,15 @@ import type { ReactNode } from "react";
 import { buildPageMetadata } from "@/lib/seo";
 // 1
 export const metadata = buildPageMetadata({
-  title: "About",
+  title: "About Us | Enterprise AI & Software Engineering",
   description:
-    "Meet V2Labs Global, a digital agency building AI solutions, web platforms, branding systems, and scalable ERP CRM solutions for ambitious companies.",
+    "Meet V2 Labs Global, a premium software engineering agency building enterprise AI solutions, custom web platforms, and SaaS products. Read our story.",
   path: "/about",
   keywords: [
-    "About V2Labs Global",
-    "V2Labs team",
-    "Digital agency team",
-    "AI solutions agency",
+    "V2 Labs founders",
+    "software developers Mumbai",
+    "AI solutions company team",
+    "custom software architects",
   ],
 });
 
