@@ -93,6 +93,9 @@ export const publicRoutes = [
   "/services/ui-ux-brand",
   "/services/saas-product",
   "/services/digital-marketing",
+  "/locations/bhayandar",
+  "/locations/mira-road",
+  "/locations/mira-bhayandar",
 ] as const;
 
 export function absoluteUrl(path = "/") {
