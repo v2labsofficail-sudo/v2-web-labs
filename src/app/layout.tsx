@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter, Outfit, Poppins } from "next/font/google";
+import { Montserrat, Inter, Outfit, Poppins, League_Spartan } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import { buildOgImageUrl, siteConfig, structuredData } from "@/lib/seo";
 import "./globals.css";
+
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  variable: "--font-league-spartan",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -125,7 +131,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${outfit.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${outfit.variable} ${poppins.variable} ${leagueSpartan.variable}`}>
       <head>
         <GoogleTagManager gtmId={gtmId} />
         <script
