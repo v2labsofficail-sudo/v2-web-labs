@@ -691,23 +691,28 @@ function AnimatedLaptopImage() {
     offset: ["start end", "center center"],
   });
 
-  const rotateX = useTransform(scrollYProgress, [0, 1], [15, 0]);
-  const rotateY = useTransform(scrollYProgress, [0, 1], [-15, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [60, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const rotateX = useTransform(scrollYProgress, [0, 1], [8, 0]);
+  const rotateY = useTransform(scrollYProgress, [0, 1], [-8, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [40, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
 
   return (
-    <div ref={ref} className="w-full aspect-[2/3] relative perspective-1000 max-w-[380px] mx-auto rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200/60 bg-white">
+    <div 
+      ref={ref} 
+      className="w-full aspect-[3/2] relative perspective-1000 max-w-[540px] lg:max-w-[580px] mx-auto rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-100 group"
+    >
       <motion.div 
         style={{ rotateX, rotateY, y, opacity }} 
         className="w-full h-full relative transition-transform duration-700 ease-out hover:scale-[1.02]"
       >
         <Image
-          src="/images/services/digital-marketing.jpg"
-          alt="V2Labs B2B Lead Generation"
+          src="https://tse3.mm.bing.net/th/id/OIP.hNRufyklH5hUItA1Kz--dgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="Extend Your Engineering Impact - V2Labs Team"
           fill
-          sizes="(max-width: 768px) 100vw, 400px"
-          className="object-cover"
+          unoptimized
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 540px, 580px"
+          className="object-cover object-center"
+          priority={false}
         />
       </motion.div>
     </div>
@@ -1139,13 +1144,13 @@ export default function Home() {
 
       <ScrollReveal>
         <section className="py-20 md:py-32 bg-white relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
-          <div className="max-w-[1200px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
-            <div className="flex-1 relative flex justify-center w-full max-w-[600px] lg:max-w-none">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
+            <div className="flex-1 relative flex justify-center w-full max-w-[580px] lg:max-w-none">
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.08)_0%,transparent_70%)] -z-10" />
                <AnimatedLaptopImage />
             </div>
             
-            <div className="flex-1 lg:pl-10">
+            <div className="flex-1 w-full max-w-[580px] lg:max-w-none lg:pl-10">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6">
                 Extend Your <br />
                 <AlternatingText>Engineering Impact</AlternatingText>
