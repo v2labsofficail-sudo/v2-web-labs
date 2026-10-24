@@ -7,7 +7,7 @@ export const metadata = buildPageMetadata({
     "Explore V2 Labs Global engineering portfolio and custom case studies across AI solutions, high-performance web platforms, and SaaS products.",
   path: "/work",
   keywords: [
-    "V2Labs portfolio",
+    "V2 Labs Global portfolio",
     "software case studies",
     "headless commerce projects",
     "AI automation systems portfolio",

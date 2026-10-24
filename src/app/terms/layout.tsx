@@ -7,7 +7,7 @@ export const metadata = buildPageMetadata({
     "Review the V2Labs Global terms and conditions covering project delivery, commercial terms, ownership, and service engagement.",
   path: "/terms",
   keywords: [
-    "V2Labs terms",
+    "V2 Labs Global terms",
     "V2Labs Global terms and conditions",
     "Digital agency terms",
   ],

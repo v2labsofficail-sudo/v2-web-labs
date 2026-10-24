@@ -141,7 +141,7 @@ export default function ContactPage() {
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-square rounded-[2rem] overflow-hidden shadow-lg border border-slate-200/50 bg-white">
                 <Image
                   src="/images/services/ai-automation.jpg"
-                  alt="Connect with V2Labs"
+                  alt="Connect with V2 Labs Global"
                   fill
                   sizes="(max-width: 1024px) 100vw, 400px"
                   className="object-cover hover:scale-[1.02] transition-transform duration-500 ease-out"

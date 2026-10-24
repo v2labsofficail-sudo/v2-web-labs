@@ -96,7 +96,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="text-[#111111] text-sm sm:text-base lg:text-[1.05rem] leading-[1.75] max-w-[720px] mx-auto">
-          V2 Labs is a modern digital agency and collaborative engineering
+          V2 Labs Global is a modern digital agency and collaborative engineering
           studio. We partner with visionary startups and global brands to
           architect gorgeous websites, scalable software products, customized
           ERP/CRM integrations, and AI workflow automation platforms.
@@ -135,10 +135,10 @@ export default function AboutPage() {
               From College Dorm Hustle to <AlternatingText>Proper Engineering</AlternatingText>
             </h2>
             <p className="text-[#111111] text-sm sm:text-[0.92rem] leading-relaxed mb-5">
-              V2Labs was forged through relentless dedication. Our founders, **Vandan** and **Jevin**, began their partnership during college. Struggling to manage rigid university workloads, attendance requirements, and exams, they invested every spare night self-teaching advanced web architectures and system designs.
+              V2 Labs Global was forged through relentless dedication. Our founders, **Vandan** and **Jevin**, began their partnership during college. Struggling to manage rigid university workloads, attendance requirements, and exams, they invested every spare night self-teaching advanced web architectures and system designs.
             </p>
             <p className="text-[#111111] text-sm sm:text-[0.92rem] leading-relaxed">
-              They started by freelancing on small client projects, delivering proper high-quality execution and pixel-perfect precision. This hands-on experience and obsession with performance laid the foundation for V2Labs. Today, we operate as an elite engineering studio shipping high-scale software globally.
+              They started by freelancing on small client projects, delivering proper high-quality execution and pixel-perfect precision. This hands-on experience and obsession with performance laid the foundation for V2 Labs Global. Today, we operate as an elite engineering studio shipping high-scale software globally.
             </p>
           </div>
 
@@ -251,7 +251,7 @@ export default function AboutPage() {
             Meet the <AlternatingText>Builders</AlternatingText>
           </h2>
           <p className="text-[#111111] text-sm max-w-[500px] mx-auto mt-2">
-            The design-obsessed partners and engineering minds behind V2 Labs.
+            The design-obsessed partners and engineering minds behind V2 Labs Global.
           </p>
         </div>
         <TeamCarousel team={team.filter((member) => !member.hidden)} />

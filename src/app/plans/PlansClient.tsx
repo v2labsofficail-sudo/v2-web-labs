@@ -430,7 +430,7 @@ export default function PlansClient({ activeTab }: { activeTab: string }) {
                       {/* Book/Call to Action */}
                       <Link
                         href={`/contact?subject=${encodeURIComponent(plan.contactSubject)}&message=${encodeURIComponent(
-                          `Hi V2Labs Team, I am interested in the ${plan.name} under ${category.name} (${plan.price}). I'd love to learn more and discuss our roadmap.`
+                          `Hi V2 Labs Global Team, I am interested in the ${plan.name} under ${category.name} (${plan.price}). I'd love to learn more and discuss our roadmap.`
                         )}`}
                         className={`w-full text-center py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-sm ${
                           isPopular

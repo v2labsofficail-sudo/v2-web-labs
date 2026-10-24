@@ -22,7 +22,7 @@ export default function Logo({
       <div className={`flex items-center select-none ${finalClassName}`}>
         <Image
           src="/logo-cover-v2labs-black.jpeg"
-          alt="V2 Labs"
+          alt="V2 Labs Global"
           width={120}
           height={38}
           className="h-full w-auto object-contain"
@@ -37,7 +37,7 @@ export default function Logo({
     <div className={`flex items-center select-none ${finalClassName}`}>
       <Image
         src="/logo-global.png"
-        alt="V2 Labs"
+        alt="V2 Labs Global"
         width={150}
         height={50}
         className="h-full w-auto object-contain mix-blend-multiply"

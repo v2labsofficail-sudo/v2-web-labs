@@ -27,8 +27,8 @@ export const blogPosts: BlogPost[] = [
     date: "July 24, 2026",
     coverImage: "/images/blog/slow-website.png",
     author: {
-      name: "V2 Labs Team",
-      role: "V2 Labs Editorial",
+      name: "V2 Labs Global Team",
+      role: "V2 Labs Global Editorial",
       avatar: "/logo-global.png",
     },
     tags: ["Web Performance", "Core Web Vitals", "SEO Rank", "UX Design"],
@@ -97,8 +97,8 @@ export const blogPosts: BlogPost[] = [
     date: "July 22, 2026",
     coverImage: "/images/blog/seo-myths.png",
     author: {
-      name: "V2 Labs Team",
-      role: "V2 Labs Editorial",
+      name: "V2 Labs Global Team",
+      role: "V2 Labs Global Editorial",
       avatar: "/logo-global.png",
     },
     tags: ["SEO Myths", "Content Strategy", "Digital Marketing", "AI Search"],
@@ -164,8 +164,8 @@ export const blogPosts: BlogPost[] = [
     date: "July 12, 2026",
     coverImage: "/images/blog/nextjs15.png",
     author: {
-      name: "V2 Labs Team",
-      role: "V2 Labs Editorial",
+      name: "V2 Labs Global Team",
+      role: "V2 Labs Global Editorial",
       avatar: "/logo-global.png",
     },
     tags: ["Next.js", "React", "Web Development", "SEO", "Performance"],
@@ -224,8 +224,8 @@ export const blogPosts: BlogPost[] = [
     date: "July 05, 2026",
     coverImage: "/images/blog/custom-erp.png",
     author: {
-      name: "V2 Labs Team",
-      role: "V2 Labs Editorial",
+      name: "V2 Labs Global Team",
+      role: "V2 Labs Global Editorial",
       avatar: "/logo-global.png",
     },
     tags: ["ERP", "CRM", "SaaS vs Custom", "Business Software"],

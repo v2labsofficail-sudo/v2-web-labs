@@ -7,7 +7,7 @@ export const metadata = buildPageMetadata({
     "V2Labs Global blog covering AI automation, web development, branding, ERP CRM systems, and digital marketing strategy.",
   path: "/blog",
   keywords: [
-    "V2Labs blog",
+    "V2 Labs Global blog",
     "AI automation blog",
     "Web development blog",
     "Branding insights",

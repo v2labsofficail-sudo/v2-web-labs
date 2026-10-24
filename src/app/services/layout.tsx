@@ -7,7 +7,7 @@ export const metadata = buildPageMetadata({
     "Explore V2Labs Global services across web development, AI solutions, branding, ERP CRM delivery, SaaS engineering, and digital marketing.",
   path: "/services",
   keywords: [
-    "V2Labs services",
+    "V2 Labs Global services",
     "Web development services",
     "AI solutions services",
     "Branding services",

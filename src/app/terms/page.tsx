@@ -66,7 +66,7 @@ export default function TermsPage() {
             Terms & <AlternatingText>Conditions</AlternatingText>
           </h1>
           <p className="text-base sm:text-lg text-[#111111] max-w-[620px] mx-auto leading-relaxed">
-            Last Updated: May 29, 2026. These Terms & Conditions define the professional engagement standards and client governance structures of V2 Labs.
+            Last Updated: May 29, 2026. These Terms & Conditions define the professional engagement standards and client governance structures of V2 Labs Global.
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function TermsPage() {
                 </div>
                 <div className="text-sm leading-7 text-slate-650 font-medium flex flex-col gap-4">
                   <p>
-                    By engaging V2 Labs (“Studio”) for operational auditing, system design, background worker integration, cloud migration, or digital production, you agree to be legally governed by these Terms & Conditions.
+                    By engaging V2 Labs Global (“Studio”) for operational auditing, system design, background worker integration, cloud migration, or digital production, you agree to be legally governed by these Terms & Conditions.
                   </p>
                   <p>
                     Any specific projects, features, or customized scopes will be defined in a separate Statement of Work (SOW) or high-fidelity blueprint document which remains subservient to this legal framework.
@@ -144,7 +144,7 @@ export default function TermsPage() {
                     We design, code, test, and deploy software products under agreed scope timelines. All deliverables are built against explicit technical benchmarks. Any change requests outside the initial blueprint scopes will be considered out-of-scope work and will initiate secondary fee assessments.
                   </p>
                   <p>
-                    While we test systems under strict simulated spikes and database audits, V2 Labs does not guarantee third-party platform API up-times (such as Salesforce, HubSpot, or Zoho API endpoints) or third-party cloud infrastructure status.
+                    While we test systems under strict simulated spikes and database audits, V2 Labs Global does not guarantee third-party platform API up-times (such as Salesforce, HubSpot, or Zoho API endpoints) or third-party cloud infrastructure status.
                   </p>
                 </div>
               </section>
@@ -200,7 +200,7 @@ export default function TermsPage() {
                     Upon complete settlement of all agreed milestone payments, the custom codebase and bespoke graphic interfaces programmed specifically for your project transfer entirely to you.
                   </p>
                   <p>
-                    V2 Labs retains ownership of any pre-existing software templates, internal framework modules, proprietary helper scripts, and atomic design elements developed in-house prior to the project start. We grant you an irrevocable, royalty-free, perpetual license to run, compile, and scale these foundational modules inside your product.
+                    V2 Labs Global retains ownership of any pre-existing software templates, internal framework modules, proprietary helper scripts, and atomic design elements developed in-house prior to the project start. We grant you an irrevocable, royalty-free, perpetual license to run, compile, and scale these foundational modules inside your product.
                   </p>
                 </div>
               </section>
@@ -235,7 +235,7 @@ export default function TermsPage() {
                 </div>
                 <div className="text-sm leading-7 text-slate-650 font-medium flex flex-col gap-4">
                   <p>
-                    To the maximum extent permitted by applicable law, V2 Labs will not be liable for any indirect, incidental, special, consequential, or punitive damages. This includes but is not limited to:
+                    To the maximum extent permitted by applicable law, V2 Labs Global will not be liable for any indirect, incidental, special, consequential, or punitive damages. This includes but is not limited to:
                   </p>
                   <ul className="list-disc pl-5 flex flex-col gap-2.5 mt-1 text-[#111111] font-medium">
                     <li>Loss of business profits, corporate revenues, data, or reputation.</li>
@@ -243,7 +243,7 @@ export default function TermsPage() {
                     <li>System bugs arising from unapproved Client modifications to the database or code.</li>
                   </ul>
                   <p>
-                    Our total cumulative liability in any contract dispute will never exceed the total fee amount actually paid by the Client to V2 Labs for the specific deliverable under dispute.
+                    Our total cumulative liability in any contract dispute will never exceed the total fee amount actually paid by the Client to V2 Labs Global for the specific deliverable under dispute.
                   </p>
                 </div>
               </section>
@@ -261,7 +261,7 @@ export default function TermsPage() {
                     Either party may terminate an active contract by providing 30 calendar days of written notice to the other party. Upon notice:
                   </p>
                   <ul className="list-disc pl-5 flex flex-col gap-2.5 mt-1 text-[#111111]">
-                    <li>V2 Labs will immediately suspend engineering pipelines and halt hourly scopes.</li>
+                    <li>V2 Labs Global will immediately suspend engineering pipelines and halt hourly scopes.</li>
                     <li>The Client remains fully obligated to settle all pending invoices and work-in-progress hours logged up to the termination date.</li>
                   </ul>
                   <p>
@@ -298,7 +298,7 @@ export default function TermsPage() {
                 </div>
                 <div className="text-sm leading-7 text-slate-650 font-medium flex flex-col gap-4">
                   <p>
-                    For inquiries, SOW blueprints, or contract clarifications, reach out directly to the V2 Labs legal operations desk:
+                    For inquiries, SOW blueprints, or contract clarifications, reach out directly to the V2 Labs Global legal operations desk:
                   </p>
                   
                   <div className="flex flex-col gap-3.5 mt-2.5 max-w-[340px]">

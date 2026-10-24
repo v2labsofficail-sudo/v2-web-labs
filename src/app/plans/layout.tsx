@@ -7,7 +7,7 @@ export const metadata = buildPageMetadata({
     "Explore our flexible and transparent pricing plans for website development, branding, e-commerce stores, and custom ERP CRM solutions.",
   path: "/plans",
   keywords: [
-    "V2Labs plans",
+    "V2 Labs Global plans",
     "Pricing plans",
     "Website development pricing",
     "Branding package pricing",

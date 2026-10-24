@@ -7,7 +7,7 @@ export const metadata = buildPageMetadata({
     "Join V2Labs Global and help build AI solutions, web products, branding systems, and ERP CRM platforms for growing businesses.",
   path: "/careers",
   keywords: [
-    "V2Labs careers",
+    "V2 Labs Global careers",
     "Digital agency jobs",
     "Web development careers",
     "AI company careers",

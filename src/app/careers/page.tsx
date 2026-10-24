@@ -114,7 +114,7 @@ export default function CareersPage() {
       <section className="relative overflow-hidden py-24 bg-white border-b border-slate-100">
         <div className="max-w-[1100px] mx-auto px-6 text-center">
           <p className="text-[#111111] font-extrabold text-[0.8rem] uppercase tracking-widest mb-4">
-            Join V2 Labs
+            Join V2 Labs Global
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none mb-6">
             Build the Future of <AlternatingText>Digital Studio Systems</AlternatingText>

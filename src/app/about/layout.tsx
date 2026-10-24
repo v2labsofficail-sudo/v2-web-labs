@@ -7,7 +7,7 @@ export const metadata = buildPageMetadata({
     "Meet V2 Labs Global, a premium software engineering agency building enterprise AI solutions, custom web platforms, and SaaS products. Read our story.",
   path: "/about",
   keywords: [
-    "V2 Labs founders",
+    "V2 Labs Global founders",
     "software developers Mumbai",
     "AI solutions company team",
     "custom software architects",

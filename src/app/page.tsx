@@ -7,121 +7,9 @@ import { buildFaqJsonLd } from "@/lib/seo";
 import ScrollReveal from "@/components/ScrollReveal";
 import AlternatingText from "@/components/AlternatingText";
 import Typewriter from "@/components/Typewriter";
+import OurServicesBanner from "@/components/OurServicesBanner";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import { motion, useScroll, useTransform } from "framer-motion";
-
-const TESTIMONIALS = [
-  {
-    name: "Aris Thorne",
-    role: "Founder, SynthFlow AI",
-    initials: "AT",
-    quote:
-      "V2Labs shipped our MVP in just 18 days. The speed, clarity, and finish quality gave our launch a serious edge.",
-  },
-  {
-    name: "Sarah Chen",
-    role: "Co-Founder, MedLink",
-    initials: "SC",
-    quote:
-      "The product feels premium on every screen. Their mobile-first thinking helped us convert more users from day one.",
-  },
-  {
-    name: "Devin Patel",
-    role: "Founder, GrowthPilot",
-    initials: "DP",
-    quote:
-      "They made the frontend incredibly smooth and fast. Our landing page conversion rate jumped within the first week.",
-  },
-  {
-    name: "Maya Verma",
-    role: "CEO, NovaDesk",
-    initials: "MV",
-    quote:
-      "Design and development finally felt aligned. Every detail was thoughtful, and the final experience matched our brand perfectly.",
-  },
-  {
-    name: "Nikhil Rao",
-    role: "Founder, FleetOps",
-    initials: "NR",
-    quote:
-      "We needed clean execution without agency drag. V2Labs moved like an in-house product team and delivered with confidence.",
-  },
-  {
-    name: "Laura Winters",
-    role: "Product Lead, CoreStack",
-    initials: "LW",
-    quote:
-      "The UI feels modern, calm, and trustworthy. Our customers noticed the polish immediately after the redesign went live.",
-  },
-  {
-    name: "Jason Reed",
-    role: "Founder, PulseCart",
-    initials: "JR",
-    quote:
-      "Their structure, communication, and delivery speed were excellent. We always knew what was happening and what came next.",
-  },
-  {
-    name: "Priya Malhotra",
-    role: "Co-Founder, SkillMint",
-    initials: "PM",
-    quote:
-      "They turned a rough concept into a sharp product experience. The responsive layouts feel especially good on smaller devices.",
-  },
-  {
-    name: "Cory Zamora",
-    role: "Marketing Specialist, Influx",
-    initials: "CZ",
-    quote:
-      "The final product looks elevated and performs beautifully. It gave our team a much stronger foundation to scale from.",
-  },
-  {
-    name: "Alex Rivera",
-    role: "Founder, ApexLabs",
-    initials: "AR",
-    quote:
-      "V2Labs exceeded all expectations. The custom animations are fluid, and the page loading speeds are absolutely blazing fast.",
-  },
-] as const;
-
-const TESTIMONIALS_ROW_1 = TESTIMONIALS.slice(0, 5);
-const TESTIMONIALS_ROW_2 = TESTIMONIALS.slice(5, 10);
-
-function TestimonialCard({
-  testimonial,
-}: {
-  testimonial: (typeof TESTIMONIALS)[number];
-}) {
-  return (
-    <article className="w-[280px] sm:w-[320px] md:w-[350px] shrink-0 bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,85,218,0.06)] hover:border-[#0055DA]/20 transition-all duration-500 select-none flex flex-col justify-between h-[210px] sm:h-[230px] relative group text-left">
-      
-      {/* Quote Icon & Text */}
-      <div className="flex-1">
-        <div className="text-[#0055DA] opacity-80 mb-3">
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-        </div>
-        <p className="text-[#111111] text-xs sm:text-[0.84rem] leading-relaxed font-semibold italic">
-          &ldquo;{testimonial.quote}&rdquo;
-        </p>
-      </div>
-      
-      {/* Author details */}
-      <div className="flex items-center gap-3 mt-4 pt-4 border-t border-slate-50">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0055DA]/10 text-xs font-black text-[#0055DA] border border-[#0055DA]/20 shadow-sm uppercase">
-           {testimonial.initials}
-        </div>
-        <div className="truncate">
-           <p className="text-xs sm:text-[0.84rem] font-black text-slate-900 truncate">
-             {testimonial.name}
-           </p>
-           <p className="text-[10px] sm:text-xs font-bold text-slate-400 mt-0.5 truncate">
-             {testimonial.role}
-           </p>
-        </div>
-      </div>
-    </article>
-  );
-}
 
 function MouseTrackingAnimation() {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -521,7 +409,7 @@ function TiltIllustration() {
             <span className="w-3 h-3 rounded-full bg-green-500/80" />
           </div>
           <div className="bg-slate-900 border border-slate-800 px-4 py-0.5 rounded-full text-[10px] text-[#111111] font-mono tracking-tight w-1/2 text-center">
-            app.v2labs.com/designer
+            app.v2labsglobal.com/designer
           </div>
           <div className="w-6" /> {/* spacer */}
         </div>
@@ -579,7 +467,7 @@ function TiltIllustration() {
 
               {/* Company banner area */}
               <div className="relative z-10 flex justify-between items-center text-[0.55rem] font-black text-[#111111] uppercase tracking-widest leading-none">
-                <span>V2Labs engineered product</span>
+                <span>V2 Labs Global engineered product</span>
                 <span className="text-[#111111] tracking-wider leading-none">synthflow.ai</span>
               </div>
             </div>
@@ -707,7 +595,7 @@ function AnimatedLaptopImage() {
       >
         <Image
           src="https://tse3.mm.bing.net/th/id/OIP.hNRufyklH5hUItA1Kz--dgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-          alt="Extend Your Engineering Impact - V2Labs Team"
+          alt="Extend Your Engineering Impact - V2 Labs Global Team"
           fill
           unoptimized
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 540px, 580px"
@@ -764,12 +652,12 @@ export default function Home() {
 
   const FAQS = [
     {
-      question: "What core services does V2Labs specialize in?",
+      question: "What core services does V2 Labs Global specialize in?",
       answer:
-        "V2Labs specializes in high-velocity SaaS & product development, custom ERP & CRM solutions, AI-ready automations, sub-second React/Next.js platforms, cinematic post-production video editing, and complete brand design systems.",
+        "V2 Labs Global specializes in high-velocity SaaS & product development, custom ERP & CRM solutions, AI-ready automations, sub-second React/Next.js platforms, cinematic post-production video editing, and complete brand design systems.",
     },
     {
-      question: "How quickly can V2Labs deliver a production-ready MVP?",
+      question: "How quickly can V2 Labs Global deliver a production-ready MVP?",
       answer:
         "We move with startup speed. A standard MVP takes 2 to 4 weeks depending on the complexity. We launch fast, gather active user feedback, and iterate in rapid, continuous cycles.",
     },
@@ -779,12 +667,12 @@ export default function Home() {
         "Yes. We act as a dedicated engineering partner, providing ongoing feature updates, database scaling, server optimizations, and UX modifications as your product grows.",
     },
     {
-      question: "How does V2Labs collaborate with our internal team?",
+      question: "How does V2 Labs Global collaborate with our internal team?",
       answer:
         "We operate with a founder's mindset. We communicate directly via Slack, collaborate in GitHub, maintain clear Linear boards, and eliminate typical agency overhead.",
     },
     {
-      question: "What technology stack does V2Labs build on?",
+      question: "What technology stack does V2 Labs Global build on?",
       answer:
         "We select and utilize the optimal technology stack according to each client's unique requirements, objectives, and existing infrastructure. While we have deep expertise in modern tools like Next.js, React, Tailwind CSS, TypeScript, Node.js, Django, PostgreSQL, and native AI SDKs (OpenAI, Gemini, Claude), we always prioritize the best fit for your specific project.",
     },
@@ -809,7 +697,7 @@ export default function Home() {
         "We offer transparent, milestone-based pricing or flexible monthly retainer models depending on your startup's roadmap, ensuring complete budget clarity.",
     },
     {
-      question: "How do we kickstart our project with V2Labs today?",
+      question: "How do we kickstart our project with V2 Labs Global today?",
       answer:
         "Simply reach out via contact@v2labsglobal.com or click 'Get Started' to schedule a direct discovery consultation with our product and engineering team.",
     },
@@ -966,7 +854,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://v2labsglobal.com/#webpage",
         url: "https://v2labsglobal.com/",
-        name: "V2Labs Global Homepage",
+        name: "V2 Labs Global Homepage",
         description:
           "AI solutions, web development, branding, SEO, GEO, and AEO services for startups and growing businesses.",
         isPartOf: {
@@ -1024,7 +912,7 @@ export default function Home() {
           </h1>
           
           <p className="text-[#111111] text-base md:text-xl leading-[1.7] max-w-[700px] mb-8 font-semibold font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
-            V2Labs Global helps startups and growth teams launch AI solutions, high-performance web platforms, branding systems, and search-ready digital experiences across Mumbai, Thane, and global markets.
+            V2 Labs Global helps startups and growth teams launch AI solutions, high-performance web platforms, branding systems, and search-ready digital experiences across Mumbai, Thane, and global markets.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
@@ -1060,6 +948,11 @@ export default function Home() {
         <AnimatedHeroImages />
       </section>
 
+      {/* Interactive Our Services Banner */}
+      <ScrollReveal>
+        <OurServicesBanner />
+      </ScrollReveal>
+
       <HubSection />
 
 
@@ -1075,10 +968,10 @@ export default function Home() {
 
         <div className="text-center mb-16 relative z-10 px-4">
           <h2 className="text-[clamp(2rem,5vw,3rem)] text-[#0F172A] font-extrabold tracking-tight mb-4">
-            Why <AlternatingText>V2Labs</AlternatingText> Engineering?
+            Why <AlternatingText>V2 Labs Global</AlternatingText> Engineering?
           </h2>
           <p className="text-[#111111] text-lg max-w-[700px] mx-auto font-semibold font-poppins">
-            V2Labs is the world-leading centrally managed solution for bespoke software ecosystems, platforms, and AI automations.
+            V2 Labs Global is the world-leading centrally managed solution for bespoke software ecosystems, platforms, and AI automations.
           </p>
         </div>
 
@@ -1198,7 +1091,7 @@ export default function Home() {
                 Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16598a] to-[#28b8d9]">Dominance.</span>
               </h2>
               <p className="!text-white max-w-3xl mx-auto text-sm md:text-base leading-relaxed font-poppins">
-                We bridge the gap between imagination and ROI. From <strong className="!text-white">Custom Web Development</strong> to <strong className="!text-white">Surgical Ad Targeting</strong>, V2Labs deploys growth-first systems that dominate the digital landscape.
+                We bridge the gap between imagination and ROI. From <strong className="!text-white">Custom Web Development</strong> to <strong className="!text-white">Surgical Ad Targeting</strong>, V2 Labs Global deploys growth-first systems that dominate the digital landscape.
               </p>
             </div>
 
@@ -1686,237 +1579,10 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-      {/* Why Startups Choose V2Labs Section */}
+      {/* Why Choose Us Circular Orbit Section */}
       <ScrollReveal>
-        <section
-          id="why-us"
-          className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
-        >
-        <div className="absolute top-[30%] right-[-5%] w-[400px] h-[400px] bg-[#111111]/[0.02] rounded-full blur-[130px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
-
-        <div className="max-w-[1100px] mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 px-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200/60 shadow-[0_2px_10px_rgba(0,0,0,0.01)] mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#111111] animate-pulse" />
-              <span className="text-[0.62rem] sm:text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-[#111111]">
-                Founders' Choice
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-[2.6rem] font-extrabold text-[#0F172A] tracking-tight leading-[1.15] mb-4">
-              Why Startups Choose <AlternatingText>V2Labs</AlternatingText>
-            </h2>
-            <p className="text-[#111111] text-base md:text-lg max-w-[600px] mx-auto leading-relaxed font-semibold">
-              Engineered for absolute velocity. Architected for rapid enterprise scaling.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-8">
-            {[
-              {
-                title: "Startup-Focused Execution",
-                desc: "High-velocity development cycles built for rapid pivot capabilities, continuous deployment, and immediate search engine indexing authority.",
-                icon: (
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9" />
-                    <line x1="5.7" y1="5.7" x2="18.3" y2="18.3" />
-                    <polyline points="19 9 19 5 15 5" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Fast MVP Delivery",
-                desc: "Convert raw concepts into fully responsive, production-ready web platforms and native builds in weeks, completely skipping legacy agency lag times.",
-                icon: (
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    viewBox="0 0 24 24"
-                  >
-                    <polyline points="13 5 20 12 13 19" />
-                    <polyline points="4 5 11 12 4 19" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Scalable Architecture",
-                desc: "Sub-second load times built on optimized Next.js + Django APIs, prepared to support enterprise load spikes and millions of monthly operations.",
-                icon: (
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    viewBox="0 0 24 24"
-                  >
-                    <ellipse cx="12" cy="5" rx="8" ry="2.5" />
-                    <path d="M4 5v5c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5V5" />
-                    <path d="M4 10v5c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5v-5" />
-                    <path d="M4 15v5c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5v-5" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Modern UI Systems",
-                desc: "Bespoke, visual-first interactive aesthetics containing micro-interactions and harmonious color schemes that instantly establish industry dominance.",
-                icon: (
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <line x1="9" y1="3" x2="9" y2="21" />
-                    <line x1="3" y1="9" x2="21" y2="9" />
-                  </svg>
-                ),
-              },
-              {
-                title: "AI-Ready Infrastructure",
-                desc: "Native pipeline integrations configured for Large Language Models, agentic automation grids, vector databases, and responsive real-time AI widgets.",
-                icon: (
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="5" r="2.5" />
-                    <circle cx="5" cy="18" r="2.5" />
-                    <circle cx="19" cy="18" r="2.5" />
-                    <line x1="12" y1="7.5" x2="5" y2="15.5" />
-                    <line x1="12" y1="7.5" x2="19" y2="15.5" />
-                    <line x1="7.5" y1="18" x2="16.5" y2="18" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Product-First Thinking",
-                desc: "We operate with a founder's mindset. We don't just ship lines of code; we build for retention, conversion metrics, and active product-led growth.",
-                icon: (
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9.663 17h4.673M12 3v1m6.364.364l-.707.707M21 12h-1M4 12H3m3.343-5.657l.707-.707m2.828 9.9a5 5 0 113.626 0" />
-                  </svg>
-                ),
-              },
-            ].map((feature, idx) => (
-              <div
-                key={idx}
-                className="p-5 sm:p-7 md:p-9 rounded-[24px] border border-slate-200/80 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.03)] relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 group gpu-accelerated"
-              >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-[#0055DA] hover:bg-[#0044B3] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500 ease-out" />
-                <div className="absolute -inset-24 bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.06)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#111111]/[0.08] text-[#111111] flex items-center justify-center border border-[#111111]/10 group-hover:bg-gradient-to-br group-hover:from-[#111111] group-hover:to-[#2A2A2A] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(17,97,237,0.2)] transition-all duration-300 shadow-sm mb-4 md:mb-6">
-                  <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current transform group-hover:rotate-[8deg] group-hover:scale-105 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                </div>
-
-                <h3 className="text-[0.95rem] sm:text-[1.1rem] md:text-[1.3rem] text-[#0F172A] font-Outfit font-black mb-2 md:mb-3.5 tracking-tight group-hover:text-[#111111] transition-colors duration-200 leading-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-[#111111] leading-relaxed text-[0.7rem] sm:text-[0.78rem] md:text-[0.9rem] font-Outfit font-semibold group-hover:text-[#111111] transition-colors duration-300">
-                  {feature.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </ScrollReveal>
-
-      {/* Auto-Moving Testimonials Wall - Edge-to-Edge Premium Marquee */}
-      <ScrollReveal>
-        <section
-          id="testimonials"
-          className="relative overflow-hidden border-y border-black/[0.02] py-16 md:py-24 bg-white"
-        >
-        {/* Soft Glowing Orbs */}
-        <div className="absolute left-[-5%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#111111]/[0.02] blur-[120px] duration-[10s] pointer-events-none select-none -z-10" />
-        <div className="absolute right-[-5%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-[#2A2A2A]/[0.02] blur-[120px] duration-[8s] pointer-events-none select-none -z-10" />
-
-        {/* Section Header */}
-        <div className="relative mb-10 text-center px-6 z-10">
-          <h2 className="mx-auto max-w-[600px] text-2xl md:text-3xl font-extrabold tracking-tight text-[#0F172A] leading-[1.15] font-Outfit">
-            What Our <AlternatingText>Customers</AlternatingText> Say
-          </h2>
-          <p className="!text-slate-500 text-xs sm:text-sm font-semibold mt-2.5 font-poppins">
-            Loved by founders and product leaders worldwide
-          </p>
-        </div>
-
-        {/* Double Row Horizontal Marquee - Full Page Edge-to-Edge */}
-        <div className="relative flex flex-col gap-8 overflow-hidden py-4 select-none z-10 w-full">
-          {/* Transparent Gradient Fade Masks at Page Edges */}
-          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-16 bg-gradient-to-r from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
-          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-16 bg-gradient-to-l from-white via-white/80 to-transparent sm:w-28 md:w-40 lg:w-56" />
-
-          {/* Row 1: Leftward Marquee */}
-          <div className="relative flex w-full overflow-hidden">
-            <div className="flex shrink-0 gap-8 md:gap-12 animate-marquee hover:[animation-play-state:paused] py-2 cursor-pointer">
-              {/* Set 1 */}
-              <div className="flex gap-8 md:gap-12 shrink-0">
-                {TESTIMONIALS_ROW_1.map((t, idx) => (
-                  <TestimonialCard key={`row1-1-${idx}`} testimonial={t} />
-                ))}
-              </div>
-              {/* Set 2 (Duplicate) */}
-              <div className="flex gap-8 md:gap-12 shrink-0" aria-hidden="true">
-                {TESTIMONIALS_ROW_1.map((t, idx) => (
-                  <TestimonialCard key={`row1-2-${idx}`} testimonial={t} />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Row 2: Rightward Marquee */}
-          <div className="relative flex w-full overflow-hidden">
-            <div className="flex shrink-0 gap-8 md:gap-12 animate-marquee-reverse hover:[animation-play-state:paused] py-2 cursor-pointer">
-              {/* Set 1 */}
-              <div className="flex gap-8 md:gap-12 shrink-0">
-                {TESTIMONIALS_ROW_2.map((t, idx) => (
-                  <TestimonialCard key={`row2-1-${idx}`} testimonial={t} />
-                ))}
-              </div>
-              {/* Set 2 (Duplicate) */}
-              <div className="flex gap-8 md:gap-12 shrink-0" aria-hidden="true">
-                {TESTIMONIALS_ROW_2.map((t, idx) => (
-                  <TestimonialCard key={`row2-2-${idx}`} testimonial={t} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Dynamic status helper indicator */}
-        <div className="mt-10 flex items-center justify-center gap-2.5 text-[0.68rem] sm:text-[0.74rem] font-bold uppercase tracking-[0.18em] text-[#111111] select-none z-10">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#111111] opacity-75"></span>
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#111111]"></span>
-          </span>
-          <span>Auto-moving founder feedback • Hover to Pause</span>
-        </div>
-      </section>
-    </ScrollReveal>
-
-
+        <WhyChooseUsSection />
+      </ScrollReveal>
 
       <ScrollReveal>
         <section

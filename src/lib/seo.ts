@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "V2 Labs Global",
-  shortName: "V2 Labs",
+  shortName: "V2 Labs Global",
   url: "https://www.v2labsglobal.com",
   email: "contact@v2labsglobal.com",
   telephone: "+91-9022641867",
@@ -296,7 +296,7 @@ export const structuredData = {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "V2Labs Services",
+      name: "V2 Labs Global Services",
       itemListElement: [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Solutions" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Development" } },

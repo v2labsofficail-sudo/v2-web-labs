@@ -77,7 +77,7 @@ export default function Footer() {
 
         <div className="flex flex-col">
           <h4 className="mb-6 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-slate-400">
-            Why V2Labs
+            Why V2 Labs Global
           </h4>
           <nav className="flex flex-col gap-3.5">
             {[
@@ -194,7 +194,7 @@ export default function Footer() {
 
       <div className="relative z-10 border-t border-slate-200 py-6">
         <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-4 px-6 text-center text-[0.8rem] font-normal text-black sm:flex-row sm:gap-0 sm:text-left">
-          <p>&copy; {currentYear} V2Labs Global. All rights reserved.</p>
+          <p>&copy; {currentYear} V2 Labs Global. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="transition-colors duration-300 hover:text-[#0055DA]">
               Privacy

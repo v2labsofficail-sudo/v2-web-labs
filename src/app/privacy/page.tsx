@@ -66,7 +66,7 @@ export default function PrivacyPage() {
             Privacy <AlternatingText>Policy</AlternatingText>
           </h1>
           <p className="text-base sm:text-lg text-[#111111] max-w-[620px] mx-auto leading-relaxed">
-            Last Updated: May 29, 2026. This Privacy Policy details how V2 Labs
+            Last Updated: May 29, 2026. This Privacy Policy details how V2 Labs Global
             collects, uses, shares, and protects your information when you
             engage with our studio platforms.
           </p>
@@ -128,7 +128,7 @@ export default function PrivacyPage() {
                 </div>
                 <div className="text-sm leading-7 text-slate-650 font-medium flex flex-col gap-4">
                   <p>
-                    V2 Labs (“we”, “us”, or “our”) is dedicated to protecting
+                    V2 Labs Global (“we”, “us”, or “our”) is dedicated to protecting
                     the privacy of our clients, prospective hires, and visitors.
                     This Privacy Policy details the types of personal
                     information we collect, how we manage it, and the security
@@ -203,7 +203,7 @@ export default function PrivacyPage() {
                 </div>
                 <div className="text-sm leading-7 text-slate-650 font-medium flex flex-col gap-4">
                   <p>
-                    V2 Labs uses the collected data strictly for professional
+                    V2 Labs Global uses the collected data strictly for professional
                     purposes:
                   </p>
                   <ul className="list-disc pl-5 flex flex-col gap-2.5 mt-1 text-[#111111]">
@@ -273,7 +273,7 @@ export default function PrivacyPage() {
                       We do not sell, rent, or lease your personal information.
                     </strong>{" "}
                     Your data is accessed strictly by authorized engineers and
-                    designers in V2 Labs. We may disclose data only under these
+                    designers in V2 Labs Global. We may disclose data only under these
                     narrow conditions:
                   </p>
                   <ul className="list-disc pl-5 flex flex-col gap-2.5 mt-1 text-[#111111]">

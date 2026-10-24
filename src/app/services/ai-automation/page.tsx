@@ -111,7 +111,7 @@ const operationsStream = [
 
 const workflowSteps = [
   { step: 1, label: "Customer inquiry submitted", desc: "An inbound email, lead form, or chat query triggers a webhook listener in sub-second time." },
-  { step: 2, label: "AI analyzes request intent", desc: "V2 Labs neural filters run semantic analysis via OpenAI/Gemini to extract user goals and budget parameters." },
+  { step: 2, label: "AI analyzes request intent", desc: "V2 Labs Global neural filters run semantic analysis via OpenAI/Gemini to extract user goals and budget parameters." },
   { step: 3, label: "Lead routed automatically", desc: "The analyzed record is instantly routed to the optimal sales rep based on territory rules." },
   { step: 4, label: "CRM updated instantly", desc: "Customer records in HubSpot or Salesforce are populated with direct intent tags and transcript summaries." },
   { step: 5, label: "Team notified in real-time", desc: "A beautifully formatted rich Slack or MS Teams alert tags team members with action items." },

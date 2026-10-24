@@ -55,7 +55,7 @@ export async function generateMetadata({
     keywords: [
       `${category.name} pricing`,
       `${category.name} packages`,
-      "V2Labs pricing plans",
+      "V2 Labs Global pricing plans",
       `${categoryId} plans`,
       "cheap website 999",
       "sasti website design mumbai",

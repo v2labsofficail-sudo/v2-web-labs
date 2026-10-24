@@ -276,7 +276,7 @@ export default function SaasProductPage() {
               SaaS Product Development & <AlternatingText>MVP Engineering</AlternatingText>
             </h1>
             <p className="text-[#111111] text-base sm:text-[1.1rem] leading-[1.7] max-w-[620px] mb-12">
-              From MVPs to enterprise-grade platforms, V2 Labs develops high-performance software products with modern architecture, automation, and scalable infrastructure.
+              From MVPs to enterprise-grade platforms, V2 Labs Global develops high-performance software products with modern architecture, automation, and scalable infrastructure.
             </p>
             
             {/* Buttons Row */}
