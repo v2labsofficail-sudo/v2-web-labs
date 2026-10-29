@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import { buildOgImageUrl, siteConfig, structuredData } from "@/lib/seo";
 import "./globals.css";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  weight: ["300", "400", "500", "700", "900"],
-  display: "swap",
-});
 
 
 const defaultOgImage = buildOgImageUrl(
@@ -109,8 +101,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={roboto.variable}>
+    <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
         <GoogleTagManager gtmId={gtmId} />
         <script
           type="application/ld+json"

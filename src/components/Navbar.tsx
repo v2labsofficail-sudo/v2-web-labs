@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 import { serviceItems } from "@/lib/site-data";
+import StartProjectModal from "@/components/StartProjectModal";
 
 const Icons = {
   Blog: () => (
@@ -156,6 +157,13 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpenModal = () => setIsProjectModalOpen(true);
+    window.addEventListener("open-start-project-modal", handleOpenModal);
+    return () => window.removeEventListener("open-start-project-modal", handleOpenModal);
+  }, []);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -381,9 +389,10 @@ export default function Navbar() {
               </span>
             </Link>
 
-            <Link 
-              href="/contact" 
-              className={`group relative inline-flex items-center gap-1.5 bg-slate-900 text-white rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_rgba(0, 85, 218,0.35)] active:scale-95 overflow-hidden ${
+            <button 
+              type="button"
+              onClick={() => setIsProjectModalOpen(true)}
+              className={`group relative inline-flex items-center gap-1.5 bg-slate-900 text-white rounded-full font-extrabold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_12px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_rgba(0, 85, 218,0.35)] active:scale-95 overflow-hidden cursor-pointer ${
                 isScrolled ? "px-4 py-2 text-[0.66rem]" : "px-5 py-2.5 text-[0.72rem]"
               }`}
             >
@@ -394,7 +403,7 @@ export default function Navbar() {
                 </svg>
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA] to-[#0044B3] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </Link>
+            </button>
           </div>
 
           <button 
@@ -543,16 +552,21 @@ export default function Navbar() {
           </div>
 
           <div className="border-t border-slate-100 pt-5 pb-2 mt-auto">
-            <Link 
-              href="/contact" 
-              onClick={() => setIsMenuOpen(false)}
-              className="block w-full bg-[#0055DA] hover:bg-[#0044B3] text-white text-center py-3.5 rounded-xl font-extrabold text-[0.92rem] shadow-[0_4px_15px_rgba(0, 85, 218,0.12)] active:scale-[0.99] transition-all"
+            <button 
+              type="button"
+              onClick={() => {
+                setIsMenuOpen(false);
+                setIsProjectModalOpen(true);
+              }}
+              className="block w-full bg-[#0055DA] hover:bg-[#0044B3] text-white text-center py-3.5 rounded-xl font-extrabold text-[0.92rem] shadow-[0_4px_15px_rgba(0, 85, 218,0.12)] active:scale-[0.99] transition-all cursor-pointer"
             >
-              Let&apos;s Build Together
-            </Link>
+              Start a Project
+            </button>
           </div>
         </div>
       </aside>
+
+      <StartProjectModal isOpen={isProjectModalOpen} onClose={() => setIsProjectModalOpen(false)} />
     </>
   );
 }
