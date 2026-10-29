@@ -1,40 +1,18 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter, Outfit, Poppins, League_Spartan } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import { buildOgImageUrl, siteConfig, structuredData } from "@/lib/seo";
 import "./globals.css";
 
-const leagueSpartan = League_Spartan({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-league-spartan",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-roboto",
+  weight: ["300", "400", "500", "700", "900"],
+  display: "swap",
 });
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  variable: "--font-poppins",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-});
 
 const defaultOgImage = buildOgImageUrl(
   "AI Solutions, Web Development and Branding",
@@ -131,7 +109,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${outfit.variable} ${poppins.variable} ${leagueSpartan.variable}`}>
+    <html lang="en" className={roboto.variable}>
       <head>
         <GoogleTagManager gtmId={gtmId} />
         <script

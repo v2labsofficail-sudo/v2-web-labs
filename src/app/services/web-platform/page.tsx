@@ -135,83 +135,48 @@ export default function WebPlatformPage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* SECTION 3: UNDER-THE-HOOD PERFORMANCE FRAMEWORK & CALL TO ACTION */}
+        {/* SECTION 3: UNDER-THE-HOOD PERFORMANCE FRAMEWORK */}
         {/* ========================================================================= */}
-        <section className="relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-            
-            {/* Left Column: Informative Technical Benchmarks */}
-            <div className="lg:col-span-7 flex flex-col justify-center">
+        <section className="relative z-10 mb-16 sm:mb-20">
+          <div className="w-full">
+            <div className="max-w-3xl mb-8">
               <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3.5 w-fit">
                 Performance Sweep
               </div>
               
-              <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight mb-5">
+              <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight mb-4">
                 Our Core Web Performance Standards
               </h2>
 
-              <p className="text-[#111111] text-sm leading-relaxed mb-6 font-medium">
+              <p className="text-[#111111] text-sm leading-relaxed font-medium">
                 We believe premium aesthetics must be supported by bulletproof technical implementations. Every web platform leaving our studio is calibrated to hit elite technical benchmarks:
               </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  {
-                    title: "Brotli Compression Layers",
-                    desc: "Asset packages are heavily compressed before network transfers, shrinking file payloads by up to 80% to ensure instantaneous loading.",
-                  },
-                  {
-                    title: "Static Cache Brokerage",
-                    desc: "Leveraging static incremental regeneration (ISR) and Edge server CDNs to serve page payloads within 150ms from anywhere in the world.",
-                  },
-                  {
-                    title: "100/100 Lighthouse & SEO Metrics",
-                    desc: "Engineered with semantic HTML5 hierarchies, structured metadata injections, and optimized image compression to secure top search rankings.",
-                  },
-                  {
-                    title: "Safe Serverless API Gateways",
-                    desc: "Decoupling standard routing layouts from backend APIs to prevent database injections and maintain 100% platform uptime.",
-                  },
-                ].map((spec, i) => (
-                  <div key={i} className="p-5 bg-white  rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(0, 85, 218,0.01)] hover:border-[#111111]/15 transition-all duration-300">
-                    <h4 className="text-slate-900 font-extrabold text-[0.84rem] tracking-tight mb-1.5">{spec.title}</h4>
-                    <p className="text-[#111111] text-[0.72rem] leading-relaxed font-semibold">{spec.desc}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Right Column: Premium Glowing CTA Card */}
-            <div className="lg:col-span-5 flex items-stretch">
-              <div className="relative rounded-[40px] bg-[#020713] p-8 sm:p-12 text-left text-white overflow-hidden shadow-2xl flex flex-col justify-between border border-white/5 w-full">
-                {/* Luminous soft mesh bubbles */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#111111] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#8b5cf6] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-                <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
-
-                <div className="relative z-10">
-                  <span className="inline-block bg-[#111111]/[0.15] text-[#2A2A2A] border border-[#111111]/20 font-extrabold text-[0.62rem] uppercase tracking-wider px-3 py-1 rounded-md mb-6">
-                    Connect With Engineers
-                  </span>
-                  
-                  <h3 className="text-2xl sm:text-[1.8rem] font-black tracking-tight leading-tight mb-4 text-white">
-                    Let&apos;s build a high-velocity web platform.
-                  </h3>
-                  
-                  <p className="text-[#94A3B8] text-[0.84rem] leading-relaxed mb-10 font-semibold">
-                    We compile modern designs into lightning-fast static systems. Partner with our developers and design studio to accelerate your platform growth.
-                  </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  title: "Brotli Compression Layers",
+                  desc: "Asset packages are heavily compressed before network transfers, shrinking file payloads by up to 80% to ensure instantaneous loading.",
+                },
+                {
+                  title: "Static Cache Brokerage",
+                  desc: "Leveraging static incremental regeneration (ISR) and Edge server CDNs to serve page payloads within 150ms from anywhere in the world.",
+                },
+                {
+                  title: "100/100 Lighthouse & SEO Metrics",
+                  desc: "Engineered with semantic HTML5 hierarchies, structured metadata injections, and optimized image compression to secure top search rankings.",
+                },
+                {
+                  title: "Safe Serverless API Gateways",
+                  desc: "Decoupling standard routing layouts from backend APIs to prevent database injections and maintain 100% platform uptime.",
+                },
+              ].map((spec, i) => (
+                <div key={i} className="p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-[#0055DA]/40 transition-all duration-300">
+                  <h4 className="text-slate-900 font-extrabold text-[0.88rem] tracking-tight mb-2">{spec.title}</h4>
+                  <p className="text-slate-600 text-xs leading-relaxed font-normal">{spec.desc}</p>
                 </div>
-
-                <div className="relative z-10 pt-4 border-t border-white/5">
-                  <Link
-                    href="/contact"
-                    className="inline-flex w-full items-center justify-center py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_6px_25px_rgba(0, 85, 218,0.3)] hover:shadow-[0_10px_35px_rgba(0, 85, 218,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
-                  >
-                    Start Your Project
-                  </Link>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

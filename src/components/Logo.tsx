@@ -21,11 +21,11 @@ export default function Logo({
     return (
       <div className={`flex items-center select-none ${finalClassName}`}>
         <Image
-          src="/logo-cover-v2labs-black.jpeg"
+          src="/logo-global.png"
           alt="V2 Labs Global"
-          width={120}
-          height={38}
-          className="h-full w-auto object-contain"
+          width={150}
+          height={50}
+          className="h-full w-auto object-contain brightness-0 invert"
           style={{ width: 'auto', height: 'auto' }}
           loading="lazy"
         />

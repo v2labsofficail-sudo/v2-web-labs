@@ -255,91 +255,56 @@ export default function WorkPage() {
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-            <div className="lg:col-span-7 flex flex-col justify-center">
+        <section className="relative z-10 mb-16 sm:mb-20">
+          <div className="w-full">
+            <div className="max-w-3xl mb-8">
               <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase tracking-widest mb-3.5 w-fit">
                 Production Standards
               </div>
 
-              <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight mb-5">
+              <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight mb-4">
                 Our Architectural Benchmarks
               </h2>
 
-              <p className="text-[#111111] text-sm leading-relaxed mb-6 font-medium">
+              <p className="text-[#111111] text-sm leading-relaxed font-medium">
                 We approach design and systems development with mathematical
                 rigor. Every case study displayed represents thousands of lines
                 of optimized code formulated to operate under direct compliance
                 with modern web metrics:
               </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  {
-                    title: "Bespoke System Integrations",
-                    desc: "Skip legacy agency boilerplate. We custom-code layouts, database configurations, and automation structures mapped exactly to client needs.",
-                  },
-                  {
-                    title: "Lightning Core Web Vitals",
-                    desc: "Engineered from day one for sub-second visual renders, clean layout stability, and zero render-blocking bundle payloads.",
-                  },
-                  {
-                    title: "Rigorous Code Optimization",
-                    desc: "Writing semantic schemas and modular components using TypeScript engines to completely prevent system type mismatches.",
-                  },
-                  {
-                    title: "Global CDN Content Edge",
-                    desc: "Deploying production builds onto edge serverless brokers to guarantee complete layout caching and zero latency drag.",
-                  },
-                ].map((spec, i) => (
-                  <div
-                    key={i}
-                    className="p-5 bg-white  rounded-2xl border border-slate-200/40 shadow-[0_4px_12px_rgba(17, 97, 237,0.01)] hover:border-[#111111]/15 transition-all duration-300"
-                  >
-                    <h4 className="text-slate-900 font-extrabold text-[0.84rem] tracking-tight mb-1.5">
-                      {spec.title}
-                    </h4>
-                    <p className="text-[#111111] text-[0.72rem] leading-relaxed font-semibold">
-                      {spec.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Right Column: Premium Glowing CTA Card */}
-            <div className="lg:col-span-5 flex items-stretch">
-              <div className="relative rounded-[40px] bg-[#020713] p-8 sm:p-12 text-left text-white overflow-hidden shadow-2xl flex flex-col justify-between border border-white/5 w-full">
-                {/* Luminous soft mesh bubbles */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#111111] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#8b5cf6] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
-                <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.08] pointer-events-none" />
-
-                <div className="relative z-10">
-                  <span className="inline-block bg-[#111111]/[0.15] text-[#2A2A2A] border border-[#111111]/20 font-extrabold text-[0.62rem] uppercase tracking-wider px-3 py-1 rounded-md mb-6">
-                    Connect With Engineers
-                  </span>
-
-                  <h3 className="text-2xl sm:text-[1.8rem] font-black tracking-tight leading-tight mb-4 text-white">
-                    Have a custom project request?
-                  </h3>
-
-                  <p className="text-[#94A3B8] text-[0.84rem] leading-relaxed mb-10 font-semibold">
-                    Coordinate with our engineering and visual design studio to
-                    launch high-performance digital products designed to scale
-                    from prototype to CDN edge.
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  title: "Bespoke System Integrations",
+                  desc: "Skip legacy agency boilerplate. We custom-code layouts, database configurations, and automation structures mapped exactly to client needs.",
+                },
+                {
+                  title: "Lightning Core Web Vitals",
+                  desc: "Engineered from day one for sub-second visual renders, clean layout stability, and zero render-blocking bundle payloads.",
+                },
+                {
+                  title: "Rigorous Code Optimization",
+                  desc: "Writing semantic schemas and modular components using TypeScript engines to completely prevent system type mismatches.",
+                },
+                {
+                  title: "Global CDN Content Edge",
+                  desc: "Deploying production builds onto edge serverless brokers to guarantee complete layout caching and zero latency drag.",
+                },
+              ].map((spec, i) => (
+                <div
+                  key={i}
+                  className="p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-[#0055DA]/40 transition-all duration-300"
+                >
+                  <h4 className="text-slate-900 font-extrabold text-[0.88rem] tracking-tight mb-2">
+                    {spec.title}
+                  </h4>
+                  <p className="text-slate-600 text-xs leading-relaxed font-normal">
+                    {spec.desc}
                   </p>
                 </div>
-
-                <div className="relative z-10 pt-4 border-t border-white/5">
-                  <Link
-                    href="/contact"
-                    className="inline-flex w-full items-center justify-center py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_6px_25px_rgba(17, 97, 237,0.3)] hover:shadow-[0_10px_35px_rgba(0,85,218,0.55)] text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
-                  >
-                    Start Your Project
-                  </Link>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

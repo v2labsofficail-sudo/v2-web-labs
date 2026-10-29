@@ -103,7 +103,7 @@ export default function WhyChooseUsSection() {
   return (
     <section
       id="why-choose-us"
-      className="relative w-full bg-[#021430] overflow-hidden select-none py-14 sm:py-20 lg:py-0 border-y border-white/10"
+      className="relative w-full bg-[#021430] overflow-hidden select-none py-8 sm:py-12 lg:py-0 border-y border-white/10"
     >
       {/* Background ambient lighting */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#010D20] via-[#02183D] to-[#003899] opacity-95" />

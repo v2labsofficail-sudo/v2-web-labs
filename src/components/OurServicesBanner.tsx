@@ -130,7 +130,7 @@ const PILL_ROWS: ServicePill[][] = [
 export default function OurServicesBanner() {
   return (
     <section
-      className="relative w-full bg-[#0055DA] overflow-hidden py-16 sm:py-24 md:py-32 px-5 sm:px-10 md:px-16 lg:px-24 select-none border-y border-white/15"
+      className="relative w-full bg-[#0055DA] overflow-hidden py-10 sm:py-14 md:py-16 px-5 sm:px-10 md:px-16 lg:px-24 select-none border-y border-white/15"
       style={{
         // Full bleed vibrant Brand Logo Blue canvas
         background:
@@ -156,7 +156,7 @@ export default function OurServicesBanner() {
       {/* Full width content container */}
       <div className="relative z-10 w-full max-w-[1480px] mx-auto flex flex-col justify-between">
         {/* Top Header: "OUR SERVICES" + "WORK WITH US" */}
-        <div className="flex flex-row items-start justify-between gap-4 mb-12 sm:mb-16 md:mb-20">
+        <div className="flex flex-row items-start justify-between gap-4 mb-8 sm:mb-10 md:mb-12">
           <div>
             <h2 className="text-[clamp(3.4rem,8.5vw,7.6rem)] font-black uppercase tracking-[-0.03em] leading-[0.88] text-white font-poppins drop-shadow-sm select-none">
               OUR <br />

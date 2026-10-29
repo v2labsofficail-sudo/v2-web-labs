@@ -190,8 +190,8 @@ export default function Navbar() {
     <>
       <header className={`sticky top-0 left-0 w-full z-[1000] select-none transition-all duration-300 border-b ${
         isScrolled 
-          ? "py-2 sm:py-3 px-4 sm:px-8 bg-white border-slate-200/50  shadow-[0_12px_40px_rgba(15,23,42,0.04)]" 
-          : "py-3.5 sm:py-5 px-4 sm:px-8 bg-white border-slate-100/10 "
+          ? "py-2 sm:py-2.5 px-4 sm:px-8 bg-white border-slate-200/60 shadow-[0_4px_20px_rgba(0,0,0,0.03)]" 
+          : "py-2 sm:py-2.5 px-4 sm:px-8 bg-white border-slate-100"
       }`}>
         <div className="flex justify-between items-center w-full max-w-[1240px] mx-auto">
           <Link 
@@ -206,13 +206,13 @@ export default function Navbar() {
           <nav className="hidden min-[901px]:flex items-center gap-1">
             <Link 
               href="/" 
-              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold  transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/" 
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
                   : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
-              <span className="relative z-10">Home</span>
+              <span className="relative z-10 flex items-center gap-1.5">{pathname === "/" && <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] shrink-0 inline-block" />}Home</span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/" 
@@ -223,13 +223,13 @@ export default function Navbar() {
 
             <Link 
               href="/about" 
-              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold  transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/about" 
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
                   : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
-              <span className="relative z-10">About</span>
+              <span className="relative z-10 flex items-center gap-1.5">{pathname === "/about" && <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] shrink-0 inline-block" />}About</span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/about" 
@@ -239,12 +239,12 @@ export default function Navbar() {
             </Link>
             
             <div className="relative group py-4 px-2">
-              <button className={`flex items-center gap-1.5 font-bold font-poppins text-[0.94rem] transition-all duration-300 cursor-pointer py-2 px-4 rounded-xl relative overflow-hidden ${
+              <button className={`flex items-center gap-1.5 font-bold  text-[0.94rem] transition-all duration-300 cursor-pointer py-2 px-4 rounded-xl relative overflow-hidden ${
                 pathname.startsWith("/services")
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]"
                   : "text-black group-hover:text-[#0055DA] group-hover:bg-white"
               }`}>
-                <span className="relative z-10 flex items-center gap-1.5 font-poppins">
+                <span className="relative z-10 flex items-center gap-1.5 ">
                   Solutions
                   <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400 group-hover:text-[#0055DA]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -259,7 +259,7 @@ export default function Navbar() {
               </button>
               
               <div className="invisible absolute top-full left-1/2 z-50 w-[820px] -translate-x-1/2 translate-y-3 rounded-[18px] border border-slate-100 bg-white px-10 py-9 opacity-0 shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition-all duration-300 group-hover:visible group-hover:translate-y-2 group-hover:opacity-100">
-                <div className="grid grid-cols-2 gap-x-14 gap-y-10 font-poppins">
+                <div className="grid grid-cols-2 gap-x-14 gap-y-10 ">
                   {services.map((s) => (
                     <Link
                       key={s.href}
@@ -285,13 +285,13 @@ export default function Navbar() {
 
             <Link 
               href="/work" 
-              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold  transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/work" 
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
                   : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
-              <span className="relative z-10">Work</span>
+              <span className="relative z-10 flex items-center gap-1.5">{pathname === "/work" && <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] shrink-0 inline-block" />}Work</span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/work" 
@@ -302,13 +302,13 @@ export default function Navbar() {
 
             <Link 
               href="/plans" 
-              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold  transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/plans" 
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
                   : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
-              <span className="relative z-10">Plans</span>
+              <span className="relative z-10 flex items-center gap-1.5">{pathname === "/plans" && <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] shrink-0 inline-block" />}Plans</span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/plans" 
@@ -319,13 +319,13 @@ export default function Navbar() {
 
             <Link 
               href="/blog" 
-              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold  transition-all duration-300 relative group overflow-hidden ${
                 pathname.startsWith("/blog") 
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
                   : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
-              <span className="relative z-10">Blog</span>
+              <span className="relative z-10 flex items-center gap-1.5">{pathname.startsWith("/blog") && <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] shrink-0 inline-block" />}Blog</span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname.startsWith("/blog") 
@@ -336,13 +336,13 @@ export default function Navbar() {
 
             <Link 
               href="/careers" 
-              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold  transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/careers" 
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
                   : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
-              <span className="relative z-10">Careers</span>
+              <span className="relative z-10 flex items-center gap-1.5">{pathname === "/careers" && <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] shrink-0 inline-block" />}Careers</span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/careers" 
@@ -353,13 +353,13 @@ export default function Navbar() {
 
             <Link 
               href="/contact" 
-              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold font-poppins transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-xl text-[0.94rem] font-bold  transition-all duration-300 relative group overflow-hidden ${
                 pathname === "/contact" 
                   ? "text-[#0055DA] bg-[#0055DA]/[0.04]" 
                   : "text-black hover:text-[#0055DA] hover:bg-white"
               }`}
             >
-              <span className="relative z-10">Contact</span>
+              <span className="relative z-10 flex items-center gap-1.5">{pathname === "/contact" && <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] shrink-0 inline-block" />}Contact</span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#0055DA]/5 to-[#3b82f6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#0055DA] transition-all duration-300 ${
                 pathname === "/contact" 
@@ -465,7 +465,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`w-full flex items-center gap-3.5 py-3 px-4 rounded-xl font-bold font-poppins border transition-all duration-300 active:scale-[0.99] group relative overflow-hidden ${
+                  className={`w-full flex items-center gap-3.5 py-3 px-4 rounded-xl font-bold  border transition-all duration-300 active:scale-[0.99] group relative overflow-hidden ${
                     isActive
                       ? "bg-[#0055DA]/[0.06] border-[#0055DA]/15 text-[#0055DA]"
                       : "bg-white border-slate-100/50 text-black hover:bg-[#0055DA]/5 hover:border-[#0055DA]/10 hover:text-[#0055DA]"
@@ -494,7 +494,7 @@ export default function Navbar() {
             <button 
               type="button"
               onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-              className="w-full flex justify-between items-center text-slate-400 font-extrabold font-poppins text-[0.66rem] uppercase tracking-widest mb-3 px-1 cursor-pointer"
+              className="w-full flex justify-between items-center text-slate-400 font-extrabold  text-[0.66rem] uppercase tracking-widest mb-3 px-1 cursor-pointer"
             >
               <span>Solutions ({services.length})</span>
               <svg className={`w-3.5 h-3.5 text-[#0055DA] transition-transform duration-300 ${isMobileServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
@@ -512,7 +512,7 @@ export default function Navbar() {
                   <Link 
                     href="/services"
                     onClick={() => setIsMenuOpen(false)}
-                    className="w-full flex items-center justify-between gap-3.5 p-3.5 rounded-xl bg-[#0055DA]/5 border border-[#0055DA]/10 hover:bg-[#0055DA]/10 active:scale-[0.99] transition-all group font-poppins"
+                    className="w-full flex items-center justify-between gap-3.5 p-3.5 rounded-xl bg-[#0055DA]/5 border border-[#0055DA]/10 hover:bg-[#0055DA]/10 active:scale-[0.99] transition-all group "
                   >
                     <span className="text-[0.84rem] font-extrabold text-black">
                       Explore all solutions
@@ -526,12 +526,12 @@ export default function Navbar() {
                       key={s.href} 
                       href={s.href} 
                       onClick={() => setIsMenuOpen(false)}
-                      className="w-full flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-slate-100 hover:bg-[#0055DA]/5 hover:border-[#0055DA]/15 active:scale-[0.99] transition-all group font-poppins"
+                      className="w-full flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-slate-100 hover:bg-[#0055DA]/5 hover:border-[#0055DA]/15 active:scale-[0.99] transition-all group "
                     >
                       <div className="w-9 h-9 bg-white border border-slate-100 text-slate-400 group-hover:text-[#0055DA] rounded-xl flex items-center justify-center transition-colors shrink-0 shadow-sm">
                         {s.icon}
                       </div>
-                      <div className="flex-1 font-poppins">
+                      <div className="flex-1 ">
                         <span className="block text-[0.84rem] font-extrabold text-black group-hover:text-[#0055DA] transition-colors mb-0.5">{s.name}</span>
                         <span className="block text-[0.72rem] text-slate-400 leading-snug font-semibold">{s.desc}</span>
                       </div>

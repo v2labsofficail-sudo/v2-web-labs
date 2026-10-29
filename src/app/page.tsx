@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -504,48 +504,6 @@ function TiltIllustration() {
     </div>
   );
 }
-
-function AnimatedHeroImages() {
-  const ref = React.useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [100, -50]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-
-  return (
-    <div ref={ref} className="relative w-full max-w-[1100px] mx-auto mt-12 lg:mt-20 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] perspective-1000 z-10 pointer-events-none">
-      <motion.div 
-        style={{ y: y2 }} 
-        className="absolute -bottom-4 right-0 sm:right-10 md:-right-10 lg:-right-20 w-[130px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-[260px] sm:h-[440px] md:h-[520px] lg:h-[600px] bg-slate-900 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] border-[4px] sm:border-[6px] lg:border-[8px] border-slate-800 shadow-2xl overflow-hidden z-20"
-      >
-        <div className="h-full w-full relative bg-slate-900">
-          <div className="absolute top-0 inset-x-0 h-3.5 sm:h-5 lg:h-6 bg-slate-800 rounded-b-lg sm:rounded-b-xl w-[40%] mx-auto z-30"></div>
-          <Image src="/hero-mobile.png" alt="Mobile App Dashboard Mockup" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" priority />
-        </div>
-      </motion.div>
-      <motion.div 
-        style={{ y: y1, scale }} 
-        className="absolute inset-0 flex justify-center items-start origin-top"
-      >
-        <div className="relative w-full h-[80%] bg-slate-900 rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.2)] border border-slate-800 flex flex-col">
-          <div className="w-full h-8 bg-slate-800 flex items-center px-4 gap-2 border-b border-slate-700/50 shrink-0 z-10 relative">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-          </div>
-          <div className="w-full flex-1 relative bg-slate-900 overflow-hidden">
-             <Image src="/hero-dashboard.png" alt="SaaS Dashboard Mockup" fill sizes="(max-width: 768px) 100vw, 1000px" className="object-cover object-top" priority />
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-}
-
 function AnimatedHubImage() {
   const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -609,7 +567,7 @@ function AnimatedLaptopImage() {
 
 function HubSection() {
   return (
-    <section className="py-20 md:py-32 relative bg-white overflow-hidden border-b border-slate-100">
+    <section className="py-10 md:py-14 relative bg-white overflow-hidden border-b border-slate-100">
       <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
         <div className="flex-1 relative flex justify-center">
            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.05)_0%,transparent_60%)] -z-10" />
@@ -646,8 +604,62 @@ function HubSection() {
 
 
 
+const CORE_SERVICE_CARDS = [
+  {
+    title: "Performance Marketing",
+    description: "Run targeted ad campaigns that generate leads, sales, measurable growth.",
+    banner: "/images/hero-cards/banner-performance-marketing-clean.png",
+    href: "/services/digital-marketing",
+    icon: (
+      <svg className="w-5 h-5 text-[#0055DA]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+        <path d="M4 14l6-6 4 4 6-6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Websites That Convert",
+    description: "Fast, mobile-first builds designed to turn visitors into enquiries.",
+    banner: "/images/hero-cards/banner-websites-that-convert-clean.png",
+    href: "/services/web-platform",
+    icon: (
+      <svg className="w-5 h-5 text-[#0055DA]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+    ),
+  },
+  {
+    title: "Meta Advertising",
+    description: "Facebook and Instagram campaigns built on offer, audience, and creative.",
+    banner: "/images/hero-cards/banner-meta-advertising-clean.png",
+    href: "/services/digital-marketing",
+    icon: (
+      <svg className="w-5 h-5 text-[#0055DA]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+      </svg>
+    ),
+  },
+  {
+    title: "SEO & Organic Growth",
+    description: "We improve rankings and drive consistent organic traffic for your website.",
+    banner: "/images/hero-cards/banner-seo-organic-growth-clean.png",
+    href: "/services/digital-marketing",
+    icon: (
+      <svg className="w-5 h-5 text-[#0055DA]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="7" />
+        <line x1="21" y1="21" x2="16" y2="16" />
+        <path d="M8 11h6" />
+      </svg>
+    ),
+  },
+];
+
 export default function Home() {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
+  const [isVideoOpen, setIsVideoOpen] = React.useState(false);
   const [activeDominance, setActiveDominance] = React.useState<number | null>(0);
 
   const FAQS = [
@@ -889,64 +901,202 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111111/[0.012]_1px,transparent_1px),linear-gradient(to_bottom,#111111/[0.012]_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20 pointer-events-none" />
+    <div className="w-full relative overflow-hidden bg-white">
+      <div className="absolute inset-0 bg-white -z-20 pointer-events-none" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd) }}
       />
-      <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-[#111111]/[0.03] rounded-full blur-[130px] pointer-events-none select-none -z-10" />
-      <div className="absolute top-[40%] right-[5%] w-[500px] h-[500px] bg-[#111111]/[0.02] rounded-full blur-[150px] pointer-events-none select-none -z-10 animate-pulse duration-[10s]" />
-
-      <section
+      
+                        <section
         id="hero"
-        className="pt-16 pb-8 md:pt-24 md:pb-16 flex flex-col items-center relative overflow-hidden"
+        className="relative overflow-hidden bg-white text-slate-900 pt-0 sm:pt-1 pb-10 sm:pb-14 lg:pb-16 select-none"
       >
-        <div className="flex flex-col text-center items-center w-full max-w-[900px] mx-auto relative z-10 px-4">
+        {/* Soft Fluid Background Cloud / Organic Shape in Center-Top */}
+        <div className="absolute top-0 right-1/4 w-[600px] h-[450px] bg-blue-50/40 rounded-full blur-3xl pointer-events-none -z-0" />
 
-          <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-black font-poppins leading-[1.05] text-[#111111] mb-6 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "150ms" }}>
-            Enterprise AI Solutions & <br className="hidden md:block" />
-            <span className="text-[#0055DA] block mt-2 min-h-[1.2em]">
-              <Typewriter phrases={["Custom Software Development", "SaaS Product Engineering", "Next.js Web Platforms"]} />
-            </span>
-          </h1>
-          
-          <p className="text-[#111111] text-base md:text-xl leading-[1.7] max-w-[700px] mb-8 font-semibold font-poppins animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
-            V2 Labs Global helps startups and growth teams launch AI solutions, high-performance web platforms, branding systems, and search-ready digital experiences across Mumbai, Thane, and global markets.
-          </p>
+        {/* Main Content Container with proper upper padding & direct flow */}
+        <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto animate-fade-in-up opacity-0" style={{ animationDelay: "450ms" }}>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 border-2 border-[#0055DA] text-[#0055DA] hover:bg-[#0055DA] hover:text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
-            >
-              Book a strategy call
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_10px_30px_rgba(15,23,42,0.16)] hover:shadow-[0_14px_36px_rgba(15,23,42,0.2)] text-white font-extrabold font-poppins rounded-full transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-[0.95rem] text-center w-full sm:w-auto"
-            >
-              Start your project
-            </Link>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+            
+            {/* Left Content Column - tight and proper upper alignment */}
+            <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-start text-left pt-0">
 
-          <div className="mt-8 grid w-full max-w-[760px] grid-cols-1 gap-3 text-left sm:grid-cols-3 animate-fade-in-up opacity-0" style={{ animationDelay: "600ms" }}>
-            {[
-              ["AI + Automation", "Agent workflows, copilots, and business automations."],
-              ["Web + SEO", "Fast, indexable websites with strong technical SEO foundations."],
-              ["Brand + Growth", "Design systems, landing pages, and conversion-focused messaging."],
-            ].map(([title, copy]) => (
-              <div key={title} className="rounded-[24px] border border-slate-200/80 bg-white px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0, 85, 218,0.08)] hover:border-[#0055DA]/30 relative overflow-hidden group">
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0055DA] to-[#0F172A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <p className="text-sm font-black uppercase tracking-[0.12em] text-[#0055DA] relative z-10">{title}</p>
-                <p className="mt-2 text-sm font-medium leading-6 text-[#111111] relative z-10">{copy}</p>
+              {/* Main Headline styled like reference (Blue word + Dark words) */}
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] font-black text-slate-950 leading-[1.08] tracking-tight mb-4">
+                <span className="text-[#0055DA] block">Digital Growth</span>
+                Agency For Modern Businesses
+              </h1>
+
+              {/* Bold Subheading */}
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-5 leading-snug">
+                Scale Your Web Traffic, Conversions & Revenue{" "}
+                <span className="text-[#0055DA]">Up To 3X Faster</span>
+              </h2>
+
+              {/* Rich SEO Content Paragraphs for Digital Agency Offerings */}
+              <div className="space-y-3.5 mb-7 sm:mb-9 max-w-2xl text-slate-700 text-sm sm:text-base leading-relaxed">
+                <p>
+                  <strong className="text-slate-900 font-bold">V2 Labs Global</strong> is an enterprise digital transformation and full-service digital agency. We combine custom software engineering, high-performance web development, technical SEO, and scalable enterprise ERP & CRM systems to transform ambitious brands into market leaders.
+                </p>
+                <p className="text-slate-600 text-xs sm:text-sm">
+                  Whether scaling enterprise operations or engineering high-growth digital platforms, our engineers and technical strategists deliver speed, search-dominance, and conversion-focused infrastructure.
+                </p>
               </div>
-            ))}
+              
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-9 py-4 bg-[#0055DA] hover:bg-[#0047C2] text-white font-black text-sm uppercase tracking-wider rounded-full shadow-[0_12px_28px_rgba(0,85,218,0.35)] hover:shadow-[0_16px_36px_rgba(0,85,218,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer group"
+                >
+                  <span>JOIN NOW</span>
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+
+                <Link
+                  href="/services"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white hover:bg-slate-50 text-slate-800 hover:text-[#0055DA] font-bold text-sm uppercase tracking-wider rounded-full border-2 border-slate-300 hover:border-[#0055DA] shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer"
+                >
+                  <span>OUR SERVICES</span>
+                </Link>
+              </div>
+
+            </div>
+
+            {/* Right Column: Model in Organic Blue Pod Shape with Left-Right alternating floating tags */}
+            <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-center lg:justify-end items-start mt-1 lg:mt-0 lg:-translate-y-6 xl:-translate-y-10">
+              
+              {/* Organic Blue Fluid Shape / Pod framing the model */}
+              <div className="relative w-[270px] sm:w-[330px] lg:w-[390px] xl:w-[410px] aspect-[3/4] flex items-end justify-center select-none">
+                
+                {/* Organic Blue Shape Background - backdrop behind torso and shoulders */}
+                <div
+                  className="absolute inset-x-2 sm:inset-x-0 bottom-0 top-10 sm:top-12 bg-gradient-to-br from-[#0055DA] via-[#0062FF] to-[#0042B3] shadow-[0_20px_50px_rgba(0,85,218,0.3)] pointer-events-none"
+                  style={{
+                    borderRadius: "45% 55% 65% 35% / 45% 45% 55% 55%",
+                  }}
+                />
+
+                {/* Dashed Accent Border matching reference */}
+                <div
+                  className="absolute inset-x-4 sm:inset-x-2 bottom-2 top-12 sm:top-14 border-2 border-dashed border-white/70 pointer-events-none"
+                  style={{
+                    borderRadius: "45% 55% 65% 35% / 45% 45% 55% 55%",
+                  }}
+                />
+
+                {/* Transparent Model Cutout - Complete, uncut, rising cleanly above the pod */}
+                <div className="relative z-10 w-full h-full flex items-end justify-center overflow-visible pointer-events-none">
+                  <Image
+                    src="/images/hero_model_v2_transparent.png"
+                    alt="V2 Labs Global Digital Agency & Enterprise Solutions"
+                    width={896}
+                    height={1200}
+                    priority
+                    className="w-full h-full object-contain object-bottom select-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.22)]"
+                    sizes="(max-width: 640px) 270px, (max-width: 1024px) 330px, 410px"
+                  />
+                </div>
+
+                {/* Top-Left: Compact Capabilities Badge - positioned above shoulder, outside face */}
+                <div className="absolute top-1 sm:top-2 left-0 sm:-left-4 lg:-left-8 z-20 flex items-center gap-1 text-[#0055DA] font-bold text-[10px] sm:text-[11px] tracking-tight bg-white/95 backdrop-blur-sm px-2.5 sm:px-3 py-1 rounded-full border border-blue-100 shadow-[0_4px_12px_rgba(0,85,218,0.12)] select-none">
+                  <span className="font-extrabold">#</span>
+                  <span>Capabilities</span>
+                </div>
+
+                {/* Left Pill 1: Web Development - at chest level, completely below the face */}
+                <Link
+                  href="/services/web-platform"
+                  className="absolute top-[40%] -left-1 sm:-left-6 lg:-left-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                >
+                  Web Development
+                </Link>
+
+                {/* Right Pill 1: SEO & Growth - at chest/shoulder level, completely below the face */}
+                <Link
+                  href="/services/digital-marketing"
+                  className="absolute top-[46%] -right-1 sm:-right-6 lg:-right-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                >
+                  SEO &amp; Growth
+                </Link>
+
+                {/* Left Pill 2: ERP & CRM - at waist level */}
+                <Link
+                  href="/services/erp-crm"
+                  className="absolute top-[66%] -left-1 sm:-left-6 lg:-left-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                >
+                  ERP &amp; CRM
+                </Link>
+
+                {/* Right Pill 2: AI Automations - at waist level */}
+                <Link
+                  href="/services/ai-automation"
+                  className="absolute top-[72%] -right-1 sm:-right-6 lg:-right-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                >
+                  AI Automations
+                </Link>
+
+                {/* Left Pill 3: Free Consultation - at bottom */}
+                <Link
+                  href="/contact"
+                  className="absolute bottom-1 left-1/2 -translate-x-1/2 sm:left-2 sm:translate-x-0 z-20 bg-white hover:bg-slate-50 text-[#0055DA] text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_16px_rgba(0,85,218,0.18)] hover:scale-105 transition-all duration-200 cursor-pointer border-2 border-[#0055DA] whitespace-nowrap flex items-center gap-1.5"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] animate-pulse" />
+                  Free Consultation
+                </Link>
+
+              </div>
+
+            </div>
+
           </div>
         </div>
-
-        <AnimatedHeroImages />
       </section>
+
+      {/* Video Modal when Watch Our Story is clicked */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-fade-in">
+          <div className="relative w-full max-w-4xl bg-slate-950 rounded-3xl border border-slate-800 p-3 sm:p-5 shadow-2xl overflow-hidden">
+            <div className="flex items-center justify-between pb-3 px-2 border-b border-slate-800">
+              <span className="text-white font-bold text-sm sm:text-base font-poppins flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#0055DA]" />
+                V2 Labs Global • Watch Our Story
+              </span>
+              <button
+                onClick={() => setIsVideoOpen(false)}
+                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors text-sm font-bold cursor-pointer"
+                aria-label="Close modal"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mt-3 bg-black flex items-center justify-center">
+              <div className="p-8 text-center max-w-lg">
+                <div className="w-16 h-16 rounded-full bg-[#0055DA]/20 text-[#38BDF8] flex items-center justify-center mx-auto mb-4 border border-[#0055DA]/40">
+                  <svg className="w-7 h-7 fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-white mb-2">V2 Labs Global Overview</h4>
+                <p className="text-slate-400 text-sm mb-6">
+                  Experience how we engineer high-velocity platforms, AI automations, and custom enterprise tools.
+                </p>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsVideoOpen(false)}
+                  className="inline-flex px-6 py-3 rounded-full bg-[#0055DA] text-white font-bold text-sm hover:bg-[#0047C2] transition-colors"
+                >
+                  Schedule Live Walkthrough →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Interactive Our Services Banner */}
       <ScrollReveal>
@@ -961,12 +1111,12 @@ export default function Home() {
       <ScrollReveal>
         <section
         id="services"
-        className="py-16 md:py-24 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden bg-white"
+        className="py-10 md:py-14 border-t border-slate-100 relative overflow-hidden bg-white"
       >
         <div className="absolute top-10 left-10 w-[250px] h-[250px] bg-[#111111]/[0.03] rounded-full blur-[80px] pointer-events-none select-none -z-10" />
         <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#2A2A2A]/[0.02] rounded-full blur-[100px] pointer-events-none select-none -z-10" />
 
-        <div className="text-center mb-16 relative z-10 px-4">
+        <div className="text-center mb-8 md:mb-10 relative z-10 px-4">
           <h2 className="text-[clamp(2rem,5vw,3rem)] text-[#0F172A] font-extrabold tracking-tight mb-4">
             Why <AlternatingText>V2 Labs Global</AlternatingText> Engineering?
           </h2>
@@ -993,7 +1143,7 @@ export default function Home() {
           </div>
 
           {/* Right Side: Scrolling Features */}
-          <div className="flex flex-col gap-6 lg:pb-32">
+          <div className="flex flex-col gap-6 lg:pb-8">
              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 font-Outfit">Dynamic features for every condition</h3>
              
              {[
@@ -1036,7 +1186,7 @@ export default function Home() {
     </ScrollReveal>
 
       <ScrollReveal>
-        <section className="py-20 md:py-32 bg-white relative overflow-hidden border-t border-[rgba(0,0,0,0.05)]">
+        <section className="py-10 md:py-14 bg-white relative overflow-hidden border-t border-slate-100">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
             <div className="flex-1 relative flex justify-center w-full max-w-[580px] lg:max-w-none">
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(17,97,237,0.08)_0%,transparent_70%)] -z-10" />
@@ -1081,17 +1231,17 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-      {/* Digital Dominance Section */}
+      {/* Digital Dominance Section - Pure White Theme */}
       <ScrollReveal>
-        <section className="py-24 bg-[#000000] text-white overflow-hidden border-t border-[rgba(255,255,255,0.05)]">
+        <section className="py-10 md:py-14 bg-white text-slate-900 overflow-hidden border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-6">
             
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tighter uppercase font-Outfit">
-                Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#16598a] to-[#28b8d9]">Dominance.</span>
+            <div className="text-center mb-8 md:mb-10">
+              <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tighter uppercase font-Outfit text-slate-900">
+                Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055DA] to-[#0284C7]">Dominance.</span>
               </h2>
-              <p className="!text-white max-w-3xl mx-auto text-sm md:text-base leading-relaxed font-poppins">
-                We bridge the gap between imagination and ROI. From <strong className="!text-white">Custom Web Development</strong> to <strong className="!text-white">Surgical Ad Targeting</strong>, V2 Labs Global deploys growth-first systems that dominate the digital landscape.
+              <p className="text-slate-600 max-w-3xl mx-auto text-sm md:text-base leading-relaxed font-poppins font-medium">
+                We bridge the gap between imagination and ROI. From <strong className="text-slate-900 font-bold">Custom Web Development</strong> to <strong className="text-slate-900 font-bold">Surgical Ad Targeting</strong>, V2 Labs Global deploys growth-first systems that dominate the digital landscape.
               </p>
             </div>
 
@@ -1143,10 +1293,10 @@ export default function Home() {
                   <div
                     key={idx}
                     onClick={() => setActiveDominance(isActive ? null : idx)}
-                    className={`group relative transition-all duration-700 ease-in-out overflow-hidden rounded-[2.5rem] border border-white/10 cursor-pointer w-full lg:w-auto ${
+                    className={`group relative transition-all duration-700 ease-in-out overflow-hidden rounded-[2.5rem] border border-slate-200/90 shadow-[0_8px_30px_rgba(0,0,0,0.06)] cursor-pointer w-full lg:w-auto ${
                       isActive 
-                        ? "h-[320px] lg:flex-[5] lg:h-full" 
-                        : "h-[110px] lg:flex-1 lg:h-full"
+                        ? "h-[320px] lg:flex-[5] lg:h-full ring-2 ring-[#0055DA]/50" 
+                        : "h-[110px] lg:flex-1 lg:h-full hover:border-[#0055DA]/40"
                     }`}
                   >
                     <img
@@ -1156,7 +1306,7 @@ export default function Home() {
                       }`}
                       alt={card.alt}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
                     
                     {/* Collapsed view label - Rotated vertical text on desktop, centered horizontal on mobile */}
                     <div
@@ -1164,7 +1314,7 @@ export default function Home() {
                         isActive ? "opacity-0 invisible" : "opacity-100 visible"
                       } lg:group-hover:opacity-0 lg:group-hover:invisible`}
                     >
-                      <h4 className="text-lg lg:text-xl font-bold uppercase tracking-widest text-white/80 font-Outfit">
+                      <h4 className="text-lg lg:text-xl font-bold uppercase tracking-widest text-white font-Outfit drop-shadow">
                         {card.title}
                       </h4>
                     </div>
@@ -1175,13 +1325,13 @@ export default function Home() {
                         isActive ? "opacity-100 visible" : "opacity-0 invisible"
                       } lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:delay-100`}
                     >
-                      <span className="text-[#28b8d9] font-black text-[10px] uppercase tracking-[0.3em] mb-2">
+                      <span className="text-[#38BDF8] font-black text-[10px] uppercase tracking-[0.3em] mb-2 drop-shadow">
                         {card.badge}
                       </span>
-                      <h4 className="text-2xl font-bold text-white mb-3 font-Outfit">
+                      <h4 className="text-2xl font-bold text-white mb-3 font-Outfit drop-shadow">
                         {card.subtitle}
                       </h4>
-                      <p className="!text-slate-300 text-sm max-w-xs">
+                      <p className="text-slate-200 text-sm max-w-xs drop-shadow">
                         {card.desc}
                       </p>
                     </div>
@@ -1197,7 +1347,7 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="process"
-          className="py-24 md:py-36 border-t border-[rgba(0,0,0,0.05)] relative overflow-hidden"
+          className="py-10 md:py-14 border-t border-slate-100 relative overflow-hidden"
         >
         {/* Mouse Tracking Particles Animation */}
         <MouseTrackingAnimation />
@@ -1308,7 +1458,7 @@ export default function Home() {
           </div>
 
           {/* Desktop Process Flow (Horizontal Zig-Zag Alternating Grid with Premium SVG Bezier Wave Connector & Vertical Flip Cards) */}
-          <div className="hidden lg:grid lg:grid-cols-6 gap-6 pt-24 pb-28 relative min-h-[520px]">
+          <div className="hidden lg:grid lg:grid-cols-6 gap-6 pt-12 pb-14 relative min-h-[420px]">
             {/* Smooth SVG Bezier Path Connector */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none -z-10"
@@ -1450,8 +1600,8 @@ export default function Home() {
     </ScrollReveal>
 
       {/* Trusted By Section (Marquee) */}
-      <div className="border-y border-slate-100 bg-white py-12 md:py-16 relative overflow-hidden">
-         <div className="text-center mb-8 px-4">
+      <div className="border-y border-slate-100 bg-white py-8 md:py-10 relative overflow-hidden">
+         <div className="text-center mb-4 px-4">
            <h3 className="text-sm sm:text-base font-bold tracking-widest text-[#111111] uppercase">
              Trusted by leading brands worldwide
            </h3>
@@ -1495,10 +1645,10 @@ export default function Home() {
 
       {/* Industries Solutions Section */}
       <ScrollReveal>
-        <section id="industries" className="py-24 bg-white px-4 md:px-12 lg:px-24">
+        <section id="industries" className="py-10 md:py-14 bg-white px-4 md:px-12 lg:px-24 border-t border-slate-100">
           <div className="max-w-7xl mx-auto">
             
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 md:mb-10">
               <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">
                 Customised Solutions For <span className="text-[#0055DA]">Industries</span>
               </h2>
@@ -1579,6 +1729,52 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
+            {/* 4 Core Pillars Showcase Section - Before Why Choose Us */}
+      <ScrollReveal>
+        <section className="py-12 sm:py-16 lg:py-20 bg-white relative z-10 select-none">
+          <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
+            
+            {/* 4 Cards Grid matching reference */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+              {CORE_SERVICE_CARDS.map((card, idx) => (
+                <Link
+                  key={idx}
+                  href={card.href}
+                  className="group relative bg-white rounded-[28px] sm:rounded-[32px] border border-slate-200/90 p-3.5 sm:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_40px_rgba(0,85,218,0.12)] hover:border-[#0055DA]/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+                >
+                  {/* Top Illustration Banner Box */}
+                  <div className="relative w-full aspect-[208/88] rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center">
+                    <Image
+                      src={card.banner}
+                      alt={card.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+
+                  {/* Overlapping Circular Icon Badge */}
+                  <div className="relative -mt-6 mx-auto w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border-[3.5px] border-white shadow-[0_4px_14px_rgba(0,85,218,0.18)] flex items-center justify-center text-[#0055DA] group-hover:scale-110 group-hover:bg-[#0055DA] group-hover:text-white transition-all duration-300 z-10">
+                    {card.icon}
+                  </div>
+
+                  {/* Title & Description */}
+                  <div className="text-center pt-3 pb-2 px-1 flex-1 flex flex-col justify-start">
+                    <h3 className="font-extrabold text-slate-900 text-base sm:text-[1.05rem] mb-2 group-hover:text-[#0055DA] transition-colors leading-snug">
+                      {card.title}
+                    </h3>
+                    <p className="text-slate-600 text-xs sm:text-[0.82rem] leading-relaxed font-normal">
+                      {card.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+          </div>
+        </section>
+      </ScrollReveal>
+
       {/* Why Choose Us Circular Orbit Section */}
       <ScrollReveal>
         <WhyChooseUsSection />
@@ -1587,14 +1783,14 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="info"
-          className="py-14 md:py-20 bg-[#F8FAFC] mb-10 md:mb-14 rounded-[40px] relative mx-4 md:mx-10"
+          className="py-14 md:py-20 bg-white border border-slate-200/80 shadow-sm mb-10 md:mb-14 rounded-[40px] relative mx-4 md:mx-10"
         >
         {/* Soft Background glow-orb */}
         <div className="absolute right-[10%] top-[10%] w-[300px] h-[300px] bg-[#111111]/[0.015] rounded-full blur-[90px] pointer-events-none select-none -z-10" />
 
         <div className="max-w-[850px] mx-auto px-5 relative z-10 flex flex-col items-center">
           {/* FAQ Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-[#111111] font-extrabold uppercase text-[0.8rem] tracking-[0.15em] mb-3">
               FAQ
             </p>
