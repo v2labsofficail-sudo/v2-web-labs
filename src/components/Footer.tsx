@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="mb-4 inline-block">
               <Logo dark={true} className="h-9 sm:h-10" />
             </Link>
-            <p className="text-neutral-200 text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-white !text-white text-sm leading-relaxed mb-6 max-w-sm" style={{ color: "#FFFFFF" }}>
               V2 Labs Global is an enterprise digital transformation firm. We engineer high-performance web applications, scalable ERP &amp; CRM systems, technical SEO frameworks, and custom AI automations.
             </p>
 
@@ -198,16 +198,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Legal */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-200">
-          <p className="text-white font-medium">© {currentYear} V2 Labs Global. All rights reserved.</p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white">
+          <p className="text-white !text-white font-medium" style={{ color: "#FFFFFF" }}>© {currentYear} V2 Labs Global. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-neutral-200 hover:text-white transition-colors">
+            <Link href="/privacy" className="text-neutral-200 hover:text-white transition-colors" style={{ color: "#E5E5E5" }}>
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-neutral-200 hover:text-white transition-colors">
+            <Link href="/terms" className="text-neutral-200 hover:text-white transition-colors" style={{ color: "#E5E5E5" }}>
               Terms of Service
             </Link>
-            <Link href="/sitemap.xml" className="text-neutral-200 hover:text-white transition-colors">
+            <Link href="/sitemap.xml" className="text-neutral-200 hover:text-white transition-colors" style={{ color: "#E5E5E5" }}>
               Sitemap
             </Link>
           </div>

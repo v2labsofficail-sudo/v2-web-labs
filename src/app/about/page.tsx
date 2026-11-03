@@ -1,4 +1,5 @@
 import AlternatingText from "@/components/AlternatingText";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import Link from "next/link";
 import TeamCarousel from "@/components/TeamCarousel";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -6,10 +7,10 @@ import Image from "next/image";
 
 export default function AboutPage() {
   const stats = [
-    { value: "120+", label: "Projects Completed" },
-    { value: "45+", label: "Active Startups Launched" },
-    { value: "100%", label: "Client Satisfaction" },
-    { value: "15+", label: "Design Awards" },
+    { target: 24, suffix: "+", label: "Projects Completed" },
+    { target: 5, suffix: "+", label: "Active Startups Launched" },
+    { target: 100, suffix: "%", label: "Client Satisfaction" },
+    { target: 2, suffix: "", label: "Design Awards" },
   ];
 
 
@@ -19,7 +20,7 @@ export default function AboutPage() {
       role: "Founder & CEO",
       initials: "VD",
       quote: "Compiles bulletproof, sub-second architectures.",
-      gradient: "from-[#0055DA] to-[#111111]",
+      gradient: "from-[#0a0a0a] to-[#171717]",
       linkedin: "https://www.linkedin.com/in/vandan-darji-3b282931a/",
       instagram: "https://www.instagram.com/vandanndarji.13/",
       bio: "Oversees core systems scaling, cloud sync grids, and security layers. Focused on TypeScript and React performance.",
@@ -31,7 +32,7 @@ export default function AboutPage() {
       initials: "JK",
       quote:
         "Building scalable backend systems and efficient web applications.",
-      gradient: "from-[#0055DA] to-[#111111]",
+      gradient: "from-[#0a0a0a] to-[#171717]",
       linkedin: "https://www.linkedin.com/in/jevinkalathiya/",
       instagram: "https://www.instagram.com/jevinkalathiya/",
       bio: "PHP and Laravel developer focused on building secure, scalable, and high-performance web applications. Experienced in REST APIs, database design, authentication systems, and backend architecture.",
@@ -43,7 +44,7 @@ export default function AboutPage() {
       role: "Social Media Manager / Wordpress Developer / Co-Manager",
       initials: "RT",
       quote: "Transforms abstract ideas into bold visual stories.",
-      gradient: "from-[#10b981] to-[#059669]",
+      gradient: "from-[#0a0a0a] to-[#171717]",
       linkedin: "#",
       instagram: "#",
       bio: "Social media manager and wordpress designer & developer focused on building secure, scalable, and high-performance web applications. Experienced in REST APIs, database design, authentication systems, and backend architecture.",
@@ -55,22 +56,22 @@ export default function AboutPage() {
       role: "Junior Web Developer",
       initials: "VS",
       quote: "Focused on building clean, dependable web experiences.",
-      gradient: "from-[#f59e0b] to-[#f97316]",
+      gradient: "from-[#0a0a0a] to-[#171717]",
       linkedin: "#",
       instagram: "#",
       bio: "Junior web developer contributing to responsive interfaces and smooth user experiences across modern web projects.",
       img: "/vansh-je.jpeg",
     },
     {
-      name: "Navneet Vyas",
-      role: "Senior Frontend & Mobile App Developer",
-      initials: "NV",
-      quote: "Architecting gorgeous, high-fidelity responsive layouts.",
-      gradient: "from-[#0055DA] to-[#111111]",
+      name: "Jasmine Casem",
+      role: "AI Video Editor & Creative Content Specialist",
+      initials: "JC",
+      quote: "Bridging human imagination with generative AI video production.",
+      gradient: "from-[#0a0a0a] to-[#171717]",
       linkedin: "#",
       instagram: "#",
-      bio: "Leads engineering of premium responsive frontends, interactive motion architectures, and robust styling systems with pixel-perfect precision.",
-      img: "/Navneet_Vyas.png",
+      bio: "Specializes in cutting-edge AI video workflows, generative asset production, high-retention short-form editing, and cinematic storytelling. Leverages Runway, Midjourney, and top-tier post-production suites to create high-impact visual narratives.",
+      img: "/Jasmine Casem.jpg",
     },
   ];
 
@@ -113,7 +114,7 @@ export default function AboutPage() {
             <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#0055DA] hover:bg-[#0044B3] rounded-t-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             <span className="text-[2.2rem] sm:text-[2.8rem] font-black tracking-tight text-[#111111] mb-1.5 leading-none">
-              {stat.value}
+              <AnimatedCounter target={stat.target} suffix={stat.suffix} />
             </span>
             <span className="text-[#111111] font-extrabold text-[0.8rem] sm:text-[0.88rem] tracking-tight leading-snug">
               {stat.label}

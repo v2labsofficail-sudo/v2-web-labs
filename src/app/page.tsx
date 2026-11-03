@@ -1082,7 +1082,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">V2 Labs Global Overview</h4>
-                <p className="text-slate-400 text-sm mb-6">
+                <p className="text-slate-200 !text-slate-200 text-sm mb-6 font-normal" style={{ color: "#E2E8F0" }}>
                   Experience how we engineer high-velocity platforms, AI automations, and custom enterprise tools.
                 </p>
                 <Link
@@ -1331,7 +1331,7 @@ export default function Home() {
                       <h4 className="text-2xl font-bold text-white mb-3 font-Outfit drop-shadow">
                         {card.subtitle}
                       </h4>
-                      <p className="text-slate-200 text-sm max-w-xs drop-shadow">
+                      <p className="text-white !text-white text-sm max-w-xs drop-shadow font-normal" style={{ color: "#FFFFFF" }}>
                         {card.desc}
                       </p>
                     </div>
