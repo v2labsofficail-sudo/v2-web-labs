@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
         destination: "/plans",
         permanent: true,
       },
+      {
+        source: "/locations/mira-road",
+        destination: "/locations/mira-bhayandar",
+        permanent: true,
+      },
     ];
   },
 };

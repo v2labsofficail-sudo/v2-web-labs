@@ -815,7 +815,7 @@ export default function ErpCrmPage() {
             <div className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm flex flex-col justify-between hover:border-[#635BFF]/30 hover:shadow-md transition-all">
               <div>
                 <span className="inline-block px-3 py-1 bg-[#0055DA]/[0.08] text-[#0055DA] text-[0.68rem] font-black uppercase tracking-wider rounded-md mb-4">
-                  Thane & Mira Road Hubs
+                  Thane & Mira Bhayandar Hubs
                 </span>
                 <h3 className="text-xl font-black text-slate-900 mb-3">Real Estate, Clinics & Professional Services</h3>
                 <p className="text-[#111111] text-xs sm:text-sm leading-relaxed mb-6 font-medium">
@@ -828,7 +828,7 @@ export default function ErpCrmPage() {
                   <li className="flex items-center gap-2"><span className="text-[#0055DA]">✔</span> Strict role-based permissions (sales agent vs manager view)</li>
                 </ul>
               </div>
-              <Link href="/locations/mira-road" className="text-xs font-bold text-[#0055DA] hover:underline flex items-center gap-1">
+              <Link href="/locations/mira-bhayandar" className="text-xs font-bold text-[#0055DA] hover:underline flex items-center gap-1">
                 Explore Service & Sales CRM Systems ➔
               </Link>
             </div>

@@ -2,18 +2,24 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Web Development Company | Custom Web Platforms & Next.js",
+  title: "Website Design, WordPress, Shopify & Web Development Services",
   description:
-    "Custom web development company building high-performance Next.js platforms, React web applications, and headless commerce systems. Get a project estimate.",
+    "V2 Labs Global delivers custom website design, responsive web development, WordPress solutions, and Shopify e-commerce platforms engineered for speed, conversions, and high search ranking.",
   path: "/services/web-platform",
   keywords: [
-    "web development company",
-    "custom web development",
+    "Website development company in Mira Bhayandar",
+    "Website development company in Bhayandar",
+    "Web development company in Bhayandar East",
+    "Website designing company in Mira Bhayandar",
+    "Website designer in Bhayandar",
+    "WordPress development company",
+    "Shopify development company",
+    "custom website development",
+    "responsive website design",
+    "corporate website development",
+    "small business website design",
+    "landing page development",
     "Next.js development company",
-    "React development company",
-    "web application development",
-    "enterprise web development",
-    "high performance web development",
     "headless commerce development",
   ],
 });
@@ -31,20 +37,20 @@ export default function WebPlatformLayout({
 
   const faqJson = buildFaqJsonLd([
     {
-      question: "What technologies do you use for web development?",
-      answer: "We primarily utilize React 19, Next.js (App Router), TypeScript, Tailwind CSS, Node.js, Express, NestJS, and PostgreSQL to construct secure, type-safe, and search-optimized web applications."
+      question: "Which technologies do you use for website development?",
+      answer: "We develop on modern frameworks including Next.js (React 19), TypeScript, Tailwind CSS, Node.js, as well as customized WordPress CMS and Shopify e-commerce platforms based on your project requirements."
     },
     {
       question: "Will my website be mobile-friendly and search engine optimized?",
-      answer: "Yes, every platform we deploy is custom-coded using semantic HTML5, lazy loading, lightweight styling sheets, and responsive flex grid containers. This ensures 100/100 Lighthouse performance and flawless mobile renders."
+      answer: "Yes, every website we build is 100% mobile-responsive, engineered for sub-second Core Web Vitals, and built with semantic HTML5, localized schema markup, and metadata structured for Google and AI search engines."
     },
     {
-      question: "Do you provide headless e-commerce development?",
-      answer: "Yes, we specialize in building headless e-commerce systems by integrating Shopify, Strapi, or custom content engines with Next.js frontends to deliver sub-second product pages and frictionless checkout."
+      question: "Do you build custom WordPress and Shopify stores?",
+      answer: "Yes, we build bespoke WordPress themes and plugins for corporate brands, as well as high-converting Shopify stores with custom liquid sections, checkout optimizations, and inventory sync."
     },
     {
-      question: "Can you migrate a legacy website to a modern tech stack?",
-      answer: "Absolutely. We migrate legacy WordPress, PHP, or React sites to Next.js while preserving indexing value using proper 301 redirection maps and canonical headers alignment."
+      question: "Can you redesign our existing business website without losing SEO rankings?",
+      answer: "Absolutely. We execute structured website redesigns with complete 301 redirect mappings, canonical link preservation, and improved page speeds, ensuring you retain and grow your organic traffic."
     }
   ]);
 
@@ -62,4 +68,3 @@ export default function WebPlatformLayout({
     </>
   );
 }
-

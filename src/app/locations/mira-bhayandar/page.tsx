@@ -2,42 +2,59 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import AlternatingText from "@/components/AlternatingText";
 import FaqSection from "@/components/FaqSection";
 import ScrollReveal from "@/components/ScrollReveal";
-import { CheckCircle2, ChevronRight, Server, Database, Globe, HelpCircle, ShieldCheck } from "lucide-react";
+import { CheckCircle2, ChevronRight } from "lucide-react";
 
 export default function MiraBhayandarPage() {
   const LOCAL_SERVICES = [
     {
-      title: "Enterprise Custom Software",
-      desc: "Custom database portals, ERP suites, CRM tools, and internal automation systems programmed with React, Next.js, Node.js, and PostgreSQL for maximum security and uptime.",
-      link: "/services/erp-crm",
-      anchorText: "Software Engineering"
-    },
-    {
-      title: "Speed-Optimized Web Platforms",
-      desc: "Static and server-side pre-compiled web systems configured with edge CDN caching, structured local schemas, and Brotli compression maps.",
+      title: "Custom Website & Platform Development",
+      desc: "Modern, high-velocity websites, Next.js web applications, WordPress systems, and Shopify e-commerce platforms engineered for sub-second speeds and top Google rankings.",
       link: "/services/web-platform",
-      anchorText: "Web Platforms"
+      anchorText: "Web Development"
     },
     {
-      title: "AI Solutions & Integrations",
-      desc: "Autonomous workflow tools, LLM embeddings, custom AI chatbots, and semantic vector database lookups to automate manual administrative roles.",
+      title: "Enterprise ERP & CRM Software",
+      desc: "Custom database portals, ERP suites, client management pipelines, inventory tracking, and billing automation built for manufacturing units and growing enterprises.",
+      link: "/services/erp-crm",
+      anchorText: "ERP & CRM Engineering"
+    },
+    {
+      title: "AI Automation & AI Agents",
+      desc: "Autonomous workflow tools, custom AI chatbots, OpenAI/Claude/Gemini API integrations, and semantic vector lookups to eliminate repetitive manual processes.",
       link: "/services/ai-automation",
       anchorText: "AI Agent Solutions"
+    },
+    {
+      title: "SaaS Product & MVP Development",
+      desc: "Rapid MVP builds from concept to market in 2 to 4 weeks. Multi-tenant SaaS architecture, Stripe payment processing, and scalable PostgreSQL databases.",
+      link: "/services/saas-product",
+      anchorText: "SaaS Development"
+    },
+    {
+      title: "SEO, GEO & Digital Marketing",
+      desc: "Full-funnel organic search optimization, Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), and high-ROI Google & Meta Ads management.",
+      link: "/services/digital-marketing",
+      anchorText: "Digital Marketing"
+    },
+    {
+      title: "Branding, UI/UX & Motion Creatives",
+      desc: "Figma design systems, brand identity kits, high-converting social media creatives, promotional video production, and commercial reel editing.",
+      link: "/services/ui-ux-brand",
+      anchorText: "Branding & Creative"
     }
   ];
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-Outfit relative overflow-hidden pb-24">
-      {/* Mesh gradients */}
-      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#111111]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
-      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2A2A2A]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse" />
+      {/* Ambient background accents */}
+      <div className="absolute top-[8%] left-[5%] w-[450px] h-[450px] bg-[#0055DA]/[0.03] rounded-full blur-[140px] pointer-events-none select-none -z-10 animate-float" />
+      <div className="absolute top-[32%] right-[5%] w-[550px] h-[550px] bg-[#2563EB]/[0.02] rounded-full blur-[160px] pointer-events-none select-none -z-10 animate-pulse" />
 
       {/* Dotted grid */}
-      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.15] -z-10 pointer-events-none select-none" />
+      <div className="absolute right-[-40px] top-[2%] w-[350px] h-[350px] bg-[radial-gradient(#111111_3px,transparent_3px)] [background-size:24px_24px] opacity-[0.12] -z-10 pointer-events-none select-none" />
 
       <div className="max-w-[1100px] mx-auto px-6 pt-16">
         
@@ -47,22 +64,22 @@ export default function MiraBhayandarPage() {
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-slate-500">Locations</span>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-slate-800">Mira-Bhayandar</span>
+          <span className="text-slate-800">Mira Bhayandar</span>
         </nav>
 
         {/* Hero Section */}
         <header className="mb-20 relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-sm">
-            <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
-            IT & SOFTWARE COMPANY
+          <div className="inline-flex items-center gap-2 bg-[#0055DA]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#0055DA] tracking-[0.18em] mb-6 border border-[#0055DA]/20 shadow-sm">
+            <span className="w-1.5 h-1.5 bg-[#0055DA] rounded-full animate-ping"></span>
+            HEADQUARTERS &bull; MIRA BHAYANDAR
           </div>
 
-          <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            Software Development & <AlternatingText>IT Company in Mira-Bhayandar</AlternatingText>
+          <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[880px]">
+            Website Development &amp; Software Company in <AlternatingText>Mira Bhayandar</AlternatingText>
           </h1>
 
-          <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium mb-8">
-            V2Labs Global is a premium IT and software engineering agency serving the entire Mira-Bhayandar region. We engineer custom enterprise software, mobile apps, scalable SaaS products, and conversion-ready websites.
+          <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[820px] font-medium mb-8">
+            Operating from Bhayandar East, V2 Labs Global is a technology and digital growth company serving businesses across the entire Mira Bhayandar Municipal Corporation area. We build custom websites, automated ERP/CRM software, AI agents, and conversion-focused digital marketing campaigns.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -70,13 +87,13 @@ export default function MiraBhayandarPage() {
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-[#0055DA] hover:bg-[#0044B3] shadow-[0_8px_25px_rgba(0,85,218,0.2)] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] text-sm text-center"
             >
-              Consult Our Engineers
+              Start Your Project
             </Link>
             <Link
-              href="/work"
+              href="/plans"
               className="inline-flex items-center justify-center px-8 py-4 bg-white border border-slate-200 hover:border-slate-400 text-slate-800 font-extrabold rounded-full transition-all duration-300 shadow-sm text-sm text-center"
             >
-              See Case Studies
+              View Transparent Packages
             </Link>
           </div>
         </header>
@@ -87,20 +104,20 @@ export default function MiraBhayandarPage() {
             {/* Left Narrative Text */}
             <div className="lg:col-span-7 flex flex-col justify-center text-left">
               <h2 className="text-2xl sm:text-[2rem] font-black text-[#0F172A] tracking-tight mb-5 leading-tight">
-                Enterprise IT and Systems Integration in Mira-Bhayandar
+                Enterprise Engineering for Mira Bhayandar Businesses
               </h2>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed mb-6 font-medium">
-                V2Labs Global serves the full municipal region of **Mira-Bhayandar**, including industrial zones in **Kashigaon** and corporate hubs in **Kashimira**. We build systems designed to increase operational control and save administrative overhead. We write custom Next.js web applications, build secure databases, and automate workflows.
+                V2 Labs Global provides end-to-end digital engineering across **Mira Bhayandar**, including key commercial and residential corridors: **Bhayandar East, Bhayandar West, Kashimira, Golden Nest, Indralok, Navghar**, and nearby industrial hubs. We eliminate operational bottlenecks by writing clean Next.js/React code, creating relational database schemas, and deploying secure systems on cloud edge CDNs.
               </p>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed font-medium mb-6">
-                Instead of slow, boilerplate templates, we custom-code type-safe structures using React and TypeScript. We keep your systems secure, fast, and optimized for search engine crawlers.
+                From retail enterprises and healthcare clinics to industrial manufacturers and modern online startups, we engineer solutions designed around genuine user intent, fast Core Web Vitals, and measurable business growth.
               </p>
               <div className="flex flex-col gap-3">
                 {[
-                  "Relational database normalizations and API gateways.",
-                  "Edge hosting distribution on AWS and Vercel CDNs.",
-                  "Comprehensive Breadcrumbs and LocalBusiness schemas.",
-                  "Continuous deployment monitoring and version auditing."
+                  "Clean, custom-coded Next.js and React architecture — zero bloated templates.",
+                  "Bespoke relational database models and automated business logic.",
+                  "Local SEO, AEO, and GEO structured data for high search and AI engine visibility.",
+                  "Full IP ownership transferred to you upon project completion."
                 ].map((spec, idx) => (
                   <div key={idx} className="flex gap-2.5 items-center">
                     <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
@@ -118,10 +135,10 @@ export default function MiraBhayandarPage() {
 
                 <div className="relative z-10">
                   <span className="inline-block bg-white/[0.08] text-white border border-white/10 font-extrabold text-[0.62rem] uppercase tracking-wider px-3.5 py-1 rounded-md mb-6">
-                    Mira-Bhayandar Entity Info
+                    Mira Bhayandar Entity NAP
                   </span>
                   <h3 className="text-2xl font-black tracking-tight leading-tight mb-6 text-white">
-                    V2Labs Global Studio
+                    V2 Labs Global HQ
                   </h3>
                   
                   <div className="space-y-4 text-xs font-semibold text-slate-350">
@@ -142,7 +159,7 @@ export default function MiraBhayandarPage() {
 
                 <div className="relative z-10 pt-6 border-t border-white/5">
                   <p className="text-[0.68rem] text-slate-400 leading-relaxed font-semibold">
-                    *Registered Service Area Business serving the entire Bhayandar, Mira-Bhayandar, and Mumbai Metropolitan areas.
+                    *Serving verified localities across Mira Bhayandar, Bhayandar East, Bhayandar West, Kashimira, Golden Nest, Indralok, Navghar, and the Mumbai Metropolitan region.
                   </p>
                 </div>
               </div>
@@ -153,18 +170,18 @@ export default function MiraBhayandarPage() {
         {/* Localized Services Section */}
         <section className="mb-24 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#0055DA]/[0.08] text-[#0055DA] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               Capabilities
             </div>
             <h2 className="text-3xl md:text-[2.4rem] font-black text-[#0F172A] tracking-tight">
-              Our Core Technology Verticals
+              Our Core Technology &amp; Growth Verticals
             </h2>
-            <p className="text-[#111111] text-sm max-w-[500px] mx-auto mt-2 font-semibold">
-              High-performance implementations customized for our regional partners.
+            <p className="text-[#111111] text-sm max-w-[540px] mx-auto mt-2 font-semibold">
+              Comprehensive digital engineering customized for Mira Bhayandar businesses.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {LOCAL_SERVICES.map((serv, idx) => (
               <div
                 key={idx}
@@ -194,33 +211,37 @@ export default function MiraBhayandarPage() {
         {/* FAQ Accordion Section */}
         <section className="mb-24 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#111111]/[0.08] text-[#111111] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+            <div className="inline-block bg-[#0055DA]/[0.08] text-[#0055DA] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3">
               FAQ
             </div>
             <h2 className="text-3xl md:text-[2.4rem] font-black text-[#0F172A] tracking-tight">
               Frequently Asked Questions
             </h2>
             <p className="text-[#111111] text-sm max-w-[500px] mx-auto mt-2 font-semibold">
-              Answering local technology and web design development concerns.
+              Answering common questions from Mira Bhayandar business owners.
             </p>
           </div>
 
           <FaqSection items={[
             {
-              question: "Are you a registered IT company in Mira-Bhayandar?",
-              answer: "Yes, V2Labs Global is an elite software engineering agency and IT consulting studio located in Bhayandar East, operating across the full Mira-Bhayandar Municipal Corporation limits."
+              question: "Which company develops websites in Mira Bhayandar?",
+              answer: "V2 Labs Global is a premier technology and digital growth company located in Bhayandar East, providing modern website development, Next.js web applications, WordPress, and Shopify stores across the Mira Bhayandar Municipal Corporation (MBMC) region."
             },
             {
-              question: "What industries do you serve in the Mira-Bhayandar area?",
-              answer: "We support retail stores, factories, manufacturing units in Kashigaon, warehousing services, real estate developers, and global startups requiring custom administrative software."
+              question: "How much does website development cost in Bhayandar?",
+              answer: "Website development costs start from transparent tier-based packages (₹999 for Starter personal sites, ₹2,999 for multi-page Business websites, up to custom Enterprise scopes for e-commerce, ERP, and bespoke web platforms)."
             },
             {
-              question: "Do you develop custom ERP and CRM applications?",
-              answer: "Yes, we custom-engineer operational portals, timesheet controls, client pipelines, automated billing ledgers, and API integrations with platforms like HubSpot and Salesforce."
+              question: "What is the difference between custom ERP and standard CRM software?",
+              answer: "A CRM (Customer Relationship Management) focuses on client tracking, lead nurturing, and sales pipelines. An ERP (Enterprise Resource Planning) coordinates end-to-end operational workflows: inventory, manufacturing, accounting, procurement, and staff payroll. V2 Labs Global engineers integrated systems that combine both seamlessly."
             },
             {
-              question: "Do you offer post-production support and hosting services?",
-              answer: "Yes, we deploy application assets to globally scalable CDN edge networks (Vercel, AWS, Cloudflare) and provide server health checks and version audits."
+              question: "How can my Mira Bhayandar business rank higher on Google and AI search engines?",
+              answer: "By combining technical SEO (sub-second Core Web Vitals, clean crawlability), localized keyword clusters, schema structured data, Answer Engine Optimization (AEO) for direct featured answers, and Generative Engine Optimization (GEO) for brand citations in ChatGPT, Perplexity, and Gemini."
+            },
+            {
+              question: "How do we get started with V2 Labs Global?",
+              answer: "Simply visit our contact page or email contact@v2labsglobal.com to schedule a direct discovery consultation with our technical team."
             }
           ]} />
         </section>
@@ -228,20 +249,20 @@ export default function MiraBhayandarPage() {
         {/* High-Converting CTA Box */}
         <section className="relative z-10">
           <div className="relative rounded-[40px] bg-[#020713] p-10 sm:p-16 text-center text-white overflow-hidden shadow-2xl border border-white/5">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#111111] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0055DA] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#0055DA] opacity-15 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2563EB] opacity-10 rounded-full blur-3xl -ml-28 -mb-28 pointer-events-none" />
 
             <div className="relative z-10 max-w-[680px] mx-auto">
               <span className="inline-block bg-white/[0.06] text-white border border-white/10 font-black text-xs uppercase tracking-widest px-4 py-1.5 rounded-lg mb-6">
-                Start Your Tech Blueprint
+                Build. Innovate. Scale.
               </span>
 
               <h2 className="text-2xl sm:text-[2.2rem] font-black tracking-tight leading-tight mb-4 text-white">
-                Launch Your Custom Platform Today
+                Ready to Upgrade Your Digital Infrastructure?
               </h2>
 
               <p className="text-[#94A3B8] text-xs sm:text-sm leading-relaxed mb-10 font-semibold">
-                Work directly with our software engineers to architect static web interfaces, database syncs, or custom CRM portals. Schedule a free quote.
+                Partner with local software engineers and digital growth strategists in Mira Bhayandar. Get a free proposal and technology roadmap.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -255,7 +276,7 @@ export default function MiraBhayandarPage() {
                   href="/work"
                   className="inline-flex w-full sm:w-auto items-center justify-center px-10 py-4 bg-white/5 border border-white/10 hover:border-white/30 text-white font-extrabold rounded-full transition-all duration-300 hover:-translate-y-0.5 text-xs uppercase tracking-widest"
                 >
-                  See Our Case Studies
+                  See Case Studies
                 </Link>
               </div>
             </div>

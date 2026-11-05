@@ -2,18 +2,21 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "SaaS Product Development Company | Custom SaaS MVPs",
+  title: "SaaS Product Development & Custom Software Engineering Company",
   description:
-    "Scale from MVP to multi-tenant SaaS application architecture. Custom SaaS product development services, subscription billing, and dashboard analytics.",
+    "Scale from concept to multi-tenant SaaS application architecture. Custom SaaS product development, MVP engineering, subscription billing, and web software development.",
   path: "/services/saas-product",
   keywords: [
     "SaaS development company",
-    "SaaS product development",
-    "SaaS MVP development",
-    "custom SaaS development",
-    "multi tenant SaaS development",
     "SaaS application development",
-    "SaaS platform development",
+    "SaaS MVP development",
+    "Startup software development",
+    "Custom software development company",
+    "Software development company in Mira Bhayandar",
+    "Web application development",
+    "Product development agency",
+    "Multi-tenant SaaS development",
+    "Custom software development Mumbai",
   ],
 });
 
@@ -30,20 +33,20 @@ export default function SaasProductLayout({
 
   const faqJson = buildFaqJsonLd([
     {
-      question: "How much does SaaS development cost?",
-      answer: "The cost depends on system complexity, integration count, data pipelines, and timeline. We develop scalable MVPs starting from fixed rates and customized enterprise quotes."
+      question: "How long does it take to develop a SaaS MVP?",
+      answer: "We engineer lean, production-ready SaaS MVPs in 2 to 4 weeks with core user journeys, secure authentication, Stripe/Razorpay billing, and scalable PostgreSQL database schemas."
     },
     {
-      question: "Can you build a multi-tenant SaaS application?",
-      answer: "Yes, we specialize in multi-tenant SaaS architectures, ensuring strict tenant data isolation, secure authentication, customized subdomains routing, and scalable API access."
+      question: "Can you build multi-tenant SaaS applications?",
+      answer: "Yes, we specialize in multi-tenant SaaS architectures, ensuring strict tenant data isolation, role-based access control, customized subdomain routing, and high-performance API endpoints."
     },
     {
-      question: "Can you develop an MVP?",
-      answer: "Yes, we prioritize rapid prototyping and MVP engineering to help startups launch in as little as 4 to 6 weeks with core functional features, clean UI, and scalable databases."
+      question: "Who owns the SaaS product intellectual property (IP)?",
+      answer: "You do. We transfer 100% ownership of source code, design systems, and database configurations upon project completion with zero vendor lock-in."
     },
     {
-      question: "Can you integrate subscription billing?",
-      answer: "Absolutely. We integrate Stripe, Razorpay, or Paddle subscription billing engines, including automated recurring invoices, customer portals, billing webhooks, and dunning workflows."
+      question: "Can you integrate automated subscription billing?",
+      answer: "Yes, we implement complete subscription monetization using Stripe Billing, Razorpay Subscriptions, and Lemon Squeezy with automated webhook handling, invoice generation, and tier upgrade flows."
     }
   ]);
 
@@ -61,4 +64,3 @@ export default function SaasProductLayout({
     </>
   );
 }
-

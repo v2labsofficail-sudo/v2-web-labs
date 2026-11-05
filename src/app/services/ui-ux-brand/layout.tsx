@@ -2,18 +2,22 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "UI UX Design Services | Product Design & Design Systems",
+  title: "Branding, UI/UX Design & Graphic Design Agency",
   description:
-    "Premium UI UX design services, visual identity systems, and Figma prototyping. We build conversion-led user interfaces optimized for web applications.",
+    "Premium branding identity design, UI/UX product design, logo creation, and Figma design systems engineered by V2 Labs Global for conversion and brand authority.",
   path: "/services/ui-ux-brand",
   keywords: [
+    "Branding agency in Mira Bhayandar",
+    "Graphic design services",
+    "Logo design company",
+    "Brand identity design",
+    "Social media post design",
     "UI UX design services",
+    "UI UX design agency Mumbai",
     "product design",
     "SaaS UI UX design",
     "web application UI UX",
-    "UX design services",
     "design systems",
-    "digital product design",
     "Figma prototyping",
   ],
 });
@@ -31,20 +35,20 @@ export default function UiUxBrandLayout({
 
   const faqJson = buildFaqJsonLd([
     {
-      question: "What does your UI UX design process look like?",
-      answer: "We follow a 4-step workflow: research and wireframing, high-fidelity UI design in Figma, clickable prototyping, and asset compilation ready for front-end engineers."
+      question: "What branding and design services does V2 Labs Global provide?",
+      answer: "We offer comprehensive brand identity creation: custom logo design, color typography schemes, brand guidelines, social media creative templates, packaging design, and complete UI/UX Figma design systems."
     },
     {
-      question: "Do you build custom design systems?",
-      answer: "Yes, we construct scalable design systems in Figma including spacing rules, color palettes, typography, responsive grids, and modular button/input component libraries."
+      question: "Do you build complete Figma design systems?",
+      answer: "Yes, we construct atomic design systems in Figma with standardized design tokens, accessible color contrasts, auto-layout responsive components, and clickable interaction prototypes."
     },
     {
-      question: "Do you design responsive web applications?",
-      answer: "Absolutely. Every interface we design is responsive and optimized for touch interactions on mobile as well as hover triggers on desktop."
+      question: "Why is UX design important for conversion rates?",
+      answer: "A well-architected user experience reduces cognitive load, clarifies value propositions, guides visitors directly to high-intent actions, and significantly lowers bounce rates."
     },
     {
-      question: "Can you prototype using Figma?",
-      answer: "Yes, we create clickable, high-fidelity prototypes in Figma to let you simulate user journeys and animations before writing a single line of code."
+      question: "Do we get full rights to the brand assets?",
+      answer: "Yes, upon project completion you receive 100% intellectual property ownership and all production-ready source files (Figma, SVG, EPS, PNG, PDF)."
     }
   ]);
 
@@ -62,4 +66,3 @@ export default function UiUxBrandLayout({
     </>
   );
 }
-

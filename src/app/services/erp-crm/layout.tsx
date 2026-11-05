@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd, siteConfig, absoluteUrl } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Custom ERP & CRM Development Company Mumbai Thane | V2 Labs Global",
+  title: "Custom ERP & CRM Development Company Mumbai Thane Mira Bhayandar | V2 Labs Global",
   description:
     "V2 Labs Global engineers custom ERP and CRM software for SMEs and mid-market enterprises. Zero per-seat licensing, automated operational workflows, GST/inventory sync, and full data ownership.",
   path: "/services/erp-crm",
@@ -10,6 +10,7 @@ export const metadata = buildPageMetadata({
     "custom ERP development company Mumbai",
     "custom CRM development company Thane",
     "ERP software developers Bhayandar",
+    "ERP software company Mira Bhayandar",
     "manufacturing ERP development India",
     "SME ERP software solutions",
     "custom sales CRM development",
@@ -74,8 +75,8 @@ export default function ErpCrmLayout({ children }: { children: ReactNode }) {
     areaServed: [
       { "@type": "City", name: "Mumbai" },
       { "@type": "City", name: "Thane" },
+      { "@type": "City", name: "Mira Bhayandar" },
       { "@type": "City", name: "Bhayandar" },
-      { "@type": "City", name: "Mira Road" },
       { "@type": "City", name: "Navi Mumbai" },
       { "@type": "Country", name: "India" },
       "Worldwide",
@@ -138,4 +139,3 @@ export default function ErpCrmLayout({ children }: { children: ReactNode }) {
     </>
   );
 }
-

@@ -45,7 +45,7 @@ export default function BhayandarPage() {
         <nav className="flex items-center gap-2.5 text-xs font-bold text-slate-400 mb-8 uppercase tracking-widest relative z-10">
           <Link href="/" className="hover:text-[#0055DA] transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-slate-500">Locations</span>
+          <Link href="/locations/mira-bhayandar" className="hover:text-[#0055DA] transition-colors">Locations</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-slate-800">Bhayandar</span>
         </nav>
@@ -54,15 +54,15 @@ export default function BhayandarPage() {
         <header className="mb-20 relative z-10">
           <div className="inline-flex items-center gap-2 bg-[#111111]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#111111] tracking-[0.18em] mb-6 border border-[#111111]/20 shadow-sm">
             <span className="w-1.5 h-1.5 bg-[#111111] rounded-full animate-ping"></span>
-            LOCAL IT AGENCY
+            LOCAL IT &amp; DIGITAL AGENCY
           </div>
 
           <h1 className="text-[2.5rem] sm:text-[4rem] font-black leading-[1.08] text-slate-900 tracking-tight mb-6 max-w-[850px]">
-            Web Development & Custom <AlternatingText>Software in Bhayandar</AlternatingText>
+            Web Development &amp; Custom <AlternatingText>Software in Bhayandar</AlternatingText>
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium mb-8">
-            Operating from Bhayandar East, V2Labs Global is a premium software engineering agency. We partner with local business owners, startups, and enterprises to build sub-second websites, custom ERP modules, and intelligent AI automation agents.
+            Operating from Bhayandar East, V2 Labs Global is a premier software engineering agency. We partner with local business owners, startups, and enterprises to build sub-second websites, custom ERP modules, and intelligent AI automation agents.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -90,17 +90,17 @@ export default function BhayandarPage() {
                 Empowering Bhayandar Businesses with Elite Software
               </h2>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed mb-6 font-medium">
-                V2Labs Global was founded to bring global-tier web design and database integration standards directly to companies in **Bhayandar East, Bhayandar West, Mira Road**, and surrounding areas. We eliminate operational bottlenecks by writing optimized React code, designing clean relational schemas, and deploying secure systems on edge CDNs.
+                V2 Labs Global was founded to bring global-tier web design and database integration standards directly to companies in **Bhayandar East, Bhayandar West, Kashimira, Indralok, Golden Nest, Navghar**, and surrounding areas. We eliminate operational bottlenecks by writing optimized React code, designing clean relational schemas, and deploying secure systems on edge CDNs.
               </p>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed font-medium mb-6">
                 Whether you run an industrial unit in Bhayandar West, a retail storefront, or a service agency, we translate your ideas into clean, maintainable web products. We focus on search intent, fast render speeds, and direct conversion hooks.
               </p>
               <div className="flex flex-col gap-3">
                 {[
-                  "Responsive visual interfaces matching Figma systems.",
+                  "Responsive visual interfaces matching custom Figma design systems.",
                   "Bespoke database schemas normalizations to prevent duplication.",
                   "Localized SEO setups mapping standard search parameters.",
-                  "Zero PBNs, template-stuffing, or robotic AI-generated text."
+                  "Zero PBNs, template-stuffing, or robotic AI-generated spam."
                 ].map((spec, idx) => (
                   <div key={idx} className="flex gap-2.5 items-center">
                     <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
@@ -121,7 +121,7 @@ export default function BhayandarPage() {
                     Bhayandar Entity NAP
                   </span>
                   <h3 className="text-2xl font-black tracking-tight leading-tight mb-6 text-white">
-                    V2Labs Global Studio
+                    V2 Labs Global Studio
                   </h3>
                   
                   <div className="space-y-4 text-xs font-semibold text-slate-350">
@@ -142,7 +142,7 @@ export default function BhayandarPage() {
 
                 <div className="relative z-10 pt-6 border-t border-white/5">
                   <p className="text-[0.68rem] text-slate-400 leading-relaxed font-semibold">
-                    *Registered Service Area Business serving the entire Bhayandar, Mira-Bhayandar, and Mumbai Metropolitan areas.
+                    *Registered Service Area Business serving the entire Bhayandar, Mira Bhayandar, and Mumbai Metropolitan areas.
                   </p>
                 </div>
               </div>
@@ -208,7 +208,7 @@ export default function BhayandarPage() {
           <FaqSection items={[
             {
               question: "Are you located in Bhayandar?",
-              answer: "Yes, V2Labs Global operates from Bhayandar East (401105). We are a local technology and software engineering team serving startups and business owners across Bhayandar East, Bhayandar West, Mira Road, and the wider Mumbai area."
+              answer: "Yes, V2 Labs Global operates from Bhayandar East (401105). We are a local technology and software engineering team serving startups and business owners across Bhayandar East, Bhayandar West, Kashimira, Indralok, Golden Nest, Navghar, and the wider Mumbai area."
             },
             {
               question: "What services do you offer for local businesses in Bhayandar?",

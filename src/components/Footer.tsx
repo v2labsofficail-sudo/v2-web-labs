@@ -17,7 +17,7 @@ export default function Footer() {
               <Logo dark={true} className="h-9 sm:h-10" />
             </Link>
             <p className="text-white !text-white text-sm leading-relaxed mb-6 max-w-sm" style={{ color: "#FFFFFF" }}>
-              V2 Labs Global is an enterprise digital transformation firm. We engineer high-performance web applications, scalable ERP &amp; CRM systems, technical SEO frameworks, and custom AI automations.
+              V2 Labs Global is a technology and digital growth company based in Bhayandar East, Mira Bhayandar. We engineer high-performance web platforms, custom ERP &amp; CRM systems, AI automations, and conversion-focused growth marketing.
             </p>
 
             {/* Social Links with verified official icons */}
@@ -126,6 +126,11 @@ export default function Footer() {
                   UI/UX &amp; Brand Systems
                 </Link>
               </li>
+              <li>
+                <Link href="/services/video-motion" className="text-neutral-200 hover:text-white transition-colors">
+                  Video &amp; Motion Ads
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -147,7 +152,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/plans" className="text-neutral-200 hover:text-white transition-colors">
-                  Plans &amp; Retainers
+                  Plans &amp; Packages
                 </Link>
               </li>
               <li>
@@ -158,6 +163,16 @@ export default function Footer() {
               <li>
                 <Link href="/blog" className="text-neutral-200 hover:text-white transition-colors">
                   Insights &amp; Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/mira-bhayandar" className="text-neutral-200 hover:text-white transition-colors">
+                  Mira Bhayandar HQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/bhayandar" className="text-neutral-200 hover:text-white transition-colors">
+                  Bhayandar Hub
                 </Link>
               </li>
               <li>
@@ -187,9 +202,9 @@ export default function Footer() {
                 </a>
               </p>
               <p className="flex flex-col">
-                <span className="text-[11px] font-bold text-neutral-300 uppercase tracking-wider mb-0.5">Office</span>
+                <span className="text-[11px] font-bold text-neutral-300 uppercase tracking-wider mb-0.5">Primary Office</span>
                 <span className="text-white font-medium">
-                  Mira Road, Thane, Maharashtra 401107, India
+                  Bhayandar East, Thane, Maharashtra 401105, India
                 </span>
               </p>
             </div>
@@ -206,9 +221,6 @@ export default function Footer() {
             </Link>
             <Link href="/terms" className="text-neutral-200 hover:text-white transition-colors" style={{ color: "#E5E5E5" }}>
               Terms of Service
-            </Link>
-            <Link href="/sitemap.xml" className="text-neutral-200 hover:text-white transition-colors" style={{ color: "#E5E5E5" }}>
-              Sitemap
             </Link>
           </div>
         </div>

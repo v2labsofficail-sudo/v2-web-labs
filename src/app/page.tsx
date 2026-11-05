@@ -664,6 +664,16 @@ export default function Home() {
 
   const FAQS = [
     {
+      question: "Which company develops websites in Mira Bhayandar?",
+      answer:
+        "V2 Labs Global is a leading technology and digital growth company based in Bhayandar East, providing modern website development, Next.js web applications, WordPress, Shopify, and enterprise software across the Mira Bhayandar Municipal Corporation (MBMC) region.",
+    },
+    {
+      question: "What is the difference between custom ERP and CRM software?",
+      answer:
+        "A CRM focuses on customer relationships, sales pipelines, and lead nurturing. An ERP manages core operational workflows: inventory, manufacturing, procurement, accounting, and staff logistics. V2 Labs Global engineers integrated systems with zero per-seat licensing penalties.",
+    },
+    {
       question: "What core services does V2 Labs Global specialize in?",
       answer:
         "V2 Labs Global specializes in high-velocity SaaS & product development, custom ERP & CRM solutions, AI-ready automations, sub-second React/Next.js platforms, cinematic post-production video editing, and complete brand design systems.",
@@ -884,12 +894,19 @@ export default function Home() {
         "@type": "ItemList",
         name: "Core service areas",
         itemListElement: [
-          "AI Solutions",
-          "Web Development",
-          "Branding and UI UX",
-          "ERP CRM",
-          "SaaS Product Development",
-          "SEO, GEO and AEO",
+          "Website Design, UI/UX & Development",
+          "WordPress Development",
+          "Shopify & E-commerce Development",
+          "Custom Software Development",
+          "AI Automation & AI Agents",
+          "ERP & CRM Solutions",
+          "SaaS Product & MVP Development",
+          "Social Media Management & Growth",
+          "SEO & Digital Marketing",
+          "Google & Meta Ads Management",
+          "Video Editing, Reels & Advertisement Production",
+          "Branding & Graphic Design",
+          "Mobile App Development",
         ].map((name, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -923,25 +940,31 @@ export default function Home() {
             {/* Left Content Column - tight and proper upper alignment */}
             <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-start text-left pt-0">
 
-              {/* Main Headline styled like reference (Blue word + Dark words) */}
+              {/* Brand Tagline Badge */}
+              <div className="inline-flex items-center gap-2 bg-[#0055DA]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#0055DA] tracking-[0.18em] mb-4 border border-[#0055DA]/20 shadow-sm">
+                <span className="w-1.5 h-1.5 bg-[#0055DA] rounded-full animate-ping"></span>
+                BUILD. INNOVATE. SCALE. &bull; TECHNOLOGY &amp; DIGITAL SOLUTIONS
+              </div>
+
+              {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] font-black text-slate-950 leading-[1.08] tracking-tight mb-4">
-                <span className="text-[#0055DA] block">Digital Growth</span>
-                Agency For Modern Businesses
+                <span className="text-[#0055DA] block">We Build The Technology</span>
+                Behind Your Next Big Move.
               </h1>
 
               {/* Bold Subheading */}
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-5 leading-snug">
-                Scale Your Web Traffic, Conversions & Revenue{" "}
-                <span className="text-[#0055DA]">Up To 3X Faster</span>
+                From Ideas to Intelligent Digital Solutions &mdash;{" "}
+                <span className="text-[#0055DA]">Custom Web, AI &amp; Enterprise Software</span>
               </h2>
 
-              {/* Rich SEO Content Paragraphs for Digital Agency Offerings */}
+              {/* Rich SEO Content Paragraphs */}
               <div className="space-y-3.5 mb-7 sm:mb-9 max-w-2xl text-slate-700 text-sm sm:text-base leading-relaxed">
                 <p>
-                  <strong className="text-slate-900 font-bold">V2 Labs Global</strong> is an enterprise digital transformation and full-service digital agency. We combine custom software engineering, high-performance web development, technical SEO, and scalable enterprise ERP & CRM systems to transform ambitious brands into market leaders.
+                  <strong className="text-slate-900 font-bold">V2 Labs Global</strong> is a premier technology and digital growth company based in Bhayandar East, Mira Bhayandar. We engineer high-velocity Next.js websites, Shopify &amp; WordPress platforms, custom ERP/CRM engines, autonomous AI agents, and ROI-driven SEO systems for businesses across Mira Bhayandar, Mumbai, and global markets.
                 </p>
                 <p className="text-slate-600 text-xs sm:text-sm">
-                  Whether scaling enterprise operations or engineering high-growth digital platforms, our engineers and technical strategists deliver speed, search-dominance, and conversion-focused infrastructure.
+                  Whether scaling enterprise operations or engineering high-growth digital platforms, our engineers deliver speed, search-engine dominance, and conversion-focused infrastructure.
                 </p>
               </div>
               
@@ -951,18 +974,28 @@ export default function Home() {
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 px-9 py-4 bg-[#0055DA] hover:bg-[#0047C2] text-white font-black text-sm uppercase tracking-wider rounded-full shadow-[0_12px_28px_rgba(0,85,218,0.35)] hover:shadow-[0_16px_36px_rgba(0,85,218,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer group"
                 >
-                  <span>JOIN NOW</span>
+                  <span>Start Your Project</span>
                   <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
 
                 <Link
-                  href="/services"
+                  href="/plans"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white hover:bg-slate-50 text-slate-800 hover:text-[#0055DA] font-bold text-sm uppercase tracking-wider rounded-full border-2 border-slate-300 hover:border-[#0055DA] shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer"
                 >
-                  <span>OUR SERVICES</span>
+                  <span>Explore Packages</span>
                 </Link>
+
+                <a
+                  href="https://wa.me/919022641867?text=Hi%20V2%20Labs%20Global,%20I%20would%20like%20to%20discuss%20a%20project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs uppercase tracking-wider rounded-full border border-emerald-300 shadow-sm transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span>WhatsApp Us</span>
+                </a>
               </div>
 
             </div>

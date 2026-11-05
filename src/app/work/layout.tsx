@@ -2,14 +2,15 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Work & Case Studies | Premium AI & Software Portfolio",
+  title: "Work & Case Studies | Website Development & Software Portfolio",
   description:
-    "Explore V2 Labs Global engineering portfolio and custom case studies across AI solutions, high-performance web platforms, and SaaS products.",
+    "Explore V2 Labs Global's engineering portfolio and client case studies across web platforms, Shopify stores, custom ERP/CRM engines, and AI automation systems.",
   path: "/work",
   keywords: [
     "V2 Labs Global portfolio",
-    "software case studies",
-    "headless commerce projects",
+    "website development case studies",
+    "software project portfolio",
+    "custom ERP case studies",
     "AI automation systems portfolio",
   ],
 });

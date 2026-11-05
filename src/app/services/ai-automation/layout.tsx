@@ -2,17 +2,22 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "AI Automation Company | AI Agents & Business Automation",
+  title: "AI Automation Company | AI Agents, Chatbots & Business Process Automation",
   description:
-    "Partner with an enterprise AI automation company. We build custom AI agents, LLM integrations, RAG database pipelines, and workflows. Discuss your project.",
+    "Partner with an enterprise AI automation company in Mira Bhayandar & Mumbai. We build custom AI agents, LLM integrations, chatbot systems, and automated workflows. Discuss your project.",
   path: "/services/ai-automation",
   keywords: [
-    "AI Automation Company",
-    "AI agent development",
+    "AI automation company in Mira Bhayandar",
+    "AI development company",
     "AI automation services",
-    "custom AI solutions",
-    "LLM integration",
+    "AI chatbot development",
+    "AI agent development",
+    "Business process automation",
+    "AI integration services",
+    "Custom AI solutions",
     "AI workflow automation",
+    "AI solutions for small businesses",
+    "LLM integration",
     "RAG development",
   ],
 });
@@ -30,24 +35,20 @@ export default function AiAutomationLayout({
 
   const faqJson = buildFaqJsonLd([
     {
-      question: "What is AI automation?",
-      answer: "AI automation is the integration of artificial intelligence, machine learning, and large language models (LLMs) to perform complex business tasks and decision-making processes that previously required human intervention."
+      question: "What does an AI automation company do?",
+      answer: "An AI automation company builds intelligent software tools, AI agents, custom chatbots, and automated workflows that streamline repetitive business operations, handle customer inquiries, and extract insights from unstructured data."
     },
     {
-      question: "How can AI automate business processes?",
-      answer: "AI can automate processes by reading and sorting documents, drafting email replies, synchronizing data between systems, qualifying incoming leads, and answering customer queries via autonomous chat agents."
+      question: "How can a small business automate its operations with AI?",
+      answer: "Small businesses can automate customer service via 24/7 AI WhatsApp/web chat, automatically categorize and route incoming leads, generate invoice summaries, and sync CRM records without manual data entry."
     },
     {
-      question: "Can you build custom AI agents?",
-      answer: "Yes, we design and program custom AI agents capable of calling APIs, running background workflows, executing code, and interacting with users or internal databases to perform specific operational roles."
+      question: "Can you build custom AI agents for our specific business workflows?",
+      answer: "Yes, we engineer autonomous AI agents equipped with role-based system prompts, secure API integrations, and vector search access to query your internal knowledge base and execute complex multi-step tasks."
     },
     {
-      question: "Can AI integrate with existing CRM software?",
-      answer: "Absolutely. We specialize in connecting OpenAI, Gemini, and Claude API models directly to HubSpot, Zoho, Salesforce, and custom CRM platforms via secure webhook bridges."
-    },
-    {
-      question: "Can you integrate OpenAI or Gemini into an application?",
-      answer: "Yes, we integrate OpenAI's GPT models, Google Gemini, Anthropic's Claude, and open-source models (like Llama) with tailored system prompts, function calling capabilities, and RAG data layers."
+      question: "Can AI integrate with existing CRM and database systems?",
+      answer: "Yes, we connect OpenAI, Claude, and Gemini LLMs directly with PostgreSQL databases, custom ERP/CRM architectures, HubSpot, and WhatsApp API to create unified automation pipelines."
     }
   ]);
 
@@ -65,4 +66,3 @@ export default function AiAutomationLayout({
     </>
   );
 }
-
