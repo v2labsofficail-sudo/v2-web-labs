@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Website Development & Digital Solutions Pricing Plans",
   description:
-    "Explore transparent pricing packages for website development (from ₹999), startup branding packages, Shopify e-commerce stores, and custom ERP/CRM solutions.",
+    "Explore transparent pricing packages for website development (from ₹2,999), startup branding packages, Shopify e-commerce stores, and custom ERP/CRM solutions.",
   path: "/plans",
   keywords: [
     "Website development pricing Bhayandar",

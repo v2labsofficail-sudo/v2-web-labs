@@ -130,50 +130,50 @@ const PILL_ROWS: ServicePill[][] = [
 export default function OurServicesBanner() {
   return (
     <section
-      className="relative w-full bg-[#0055DA] overflow-hidden py-10 sm:py-14 md:py-16 px-5 sm:px-10 md:px-16 lg:px-24 select-none border-y border-white/15"
+      className="relative w-full bg-[#FFE500] text-black overflow-hidden py-10 sm:py-14 md:py-16 px-5 sm:px-10 md:px-16 lg:px-24 select-none border-y-2 border-black"
       style={{
-        // Full bleed vibrant Brand Logo Blue canvas
+        // Full bleed vibrant electric yellow canvas
         background:
-          "radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.22) 0%, transparent 45%), radial-gradient(circle at 15% 85%, rgba(0, 50, 160, 0.35) 0%, transparent 50%), #0055DA",
+          "radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.45) 0%, transparent 45%), radial-gradient(circle at 15% 85%, rgba(235, 185, 0, 0.4) 0%, transparent 50%), #FFE500",
       }}
     >
-      {/* Edge-to-edge full width grid texture overlay (exact match to reference image) */}
+      {/* Edge-to-edge full width dark grid texture overlay */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-25"
+        className="absolute inset-0 pointer-events-none opacity-10"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.85) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 1px, transparent 1px)
+            linear-gradient(to right, rgba(0, 0, 0, 0.85) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 1px, transparent 1px)
           `,
           backgroundSize: "3.5rem 3.5rem",
         }}
       />
 
       {/* Atmospheric ambient lighting */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-white/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-[32rem] h-[32rem] bg-white/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-white/35 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-[32rem] h-[32rem] bg-amber-400/25 rounded-full blur-3xl pointer-events-none" />
 
       {/* Full width content container */}
       <div className="relative z-10 w-full max-w-[1480px] mx-auto flex flex-col justify-between">
-        {/* Top Header: "OUR SERVICES" + "WORK WITH US" */}
+        {/* Top Header: "OUR SERVICES" + "WORK WITH US" in solid Black */}
         <div className="flex flex-row items-start justify-between gap-4 mb-8 sm:mb-10 md:mb-12">
           <div>
-            <h2 className="text-[clamp(3.4rem,8.5vw,7.6rem)] font-black uppercase tracking-[-0.03em] leading-[0.88] text-white font-poppins drop-shadow-sm select-none">
+            <h2 className="text-[clamp(3.4rem,8.5vw,7.6rem)] font-black uppercase tracking-[-0.03em] leading-[0.88] text-black drop-shadow-sm select-none">
               OUR <br />
               SERVICES
             </h2>
           </div>
 
-          {/* Stacked "WORK WITH US" link matching reference image */}
+          {/* Stacked "WORK WITH US" link in Black */}
           <div className="pt-2 sm:pt-4 text-right">
             <Link
               href="/contact"
-              className="group inline-flex flex-col items-end text-white hover:text-[#FFD166] transition-all duration-300 cursor-pointer"
+              className="group inline-flex flex-col items-end text-black hover:opacity-75 transition-all duration-300 cursor-pointer"
             >
-              <span className="font-black text-xs sm:text-sm md:text-base tracking-[0.18em] uppercase underline underline-offset-4 decoration-2 decoration-white/90 group-hover:decoration-[#FFD166] leading-snug">
+              <span className="font-black text-xs sm:text-sm md:text-base tracking-[0.18em] uppercase underline underline-offset-4 decoration-2 decoration-black/90 leading-snug">
                 WORK
               </span>
-              <span className="font-black text-xs sm:text-sm md:text-base tracking-[0.18em] uppercase underline underline-offset-4 decoration-2 decoration-white/90 group-hover:decoration-[#FFD166] leading-snug flex items-center gap-1.5">
+              <span className="font-black text-xs sm:text-sm md:text-base tracking-[0.18em] uppercase underline underline-offset-4 decoration-2 decoration-black/90 leading-snug flex items-center gap-1.5">
                 <span>WITH US</span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 font-mono text-sm sm:text-base">
                   →
@@ -183,7 +183,7 @@ export default function OurServicesBanner() {
           </div>
         </div>
 
-        {/* Floating Moving Pills Section ("lili lil moving sect") covering full width */}
+        {/* Floating Moving Pills Section covering full width */}
         <div className="flex flex-col gap-3.5 sm:gap-4 md:gap-5 w-full">
           {PILL_ROWS.map((row, rIdx) => (
             <div
@@ -222,8 +222,8 @@ export default function OurServicesBanner() {
                       href={pill.href}
                       className={`inline-flex items-center justify-center px-5 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 rounded-full font-black text-xs sm:text-sm md:text-base tracking-wider uppercase transition-all duration-300 select-none ${
                         isFilled
-                          ? "bg-white text-[#0055DA] hover:bg-white/95 shadow-[0_12px_28px_rgba(0,0,0,0.16)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.22)]"
-                          : "bg-transparent text-[#FFD166] border-2 border-[#FFD166] hover:bg-[#FFD166]/15 hover:shadow-[0_8px_24px_rgba(255,209,102,0.28)]"
+                          ? "bg-black text-white hover:bg-neutral-900 border-2 border-black shadow-[0_12px_28px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)]"
+                          : "bg-white text-black border-2 border-black hover:bg-neutral-100 shadow-[0_8px_20px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.18)]"
                       }`}
                     >
                       {pill.label}

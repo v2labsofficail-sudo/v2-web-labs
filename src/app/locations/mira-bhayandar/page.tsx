@@ -229,7 +229,7 @@ export default function MiraBhayandarPage() {
             },
             {
               question: "How much does website development cost in Bhayandar?",
-              answer: "Website development costs start from transparent tier-based packages (₹999 for Starter personal sites, ₹2,999 for multi-page Business websites, up to custom Enterprise scopes for e-commerce, ERP, and bespoke web platforms)."
+              answer: "Website development costs start from transparent tier-based packages (from ₹2,999 for multi-page Business websites, up to custom Enterprise scopes for e-commerce, ERP, and bespoke web platforms)."
             },
             {
               question: "What is the difference between custom ERP and standard CRM software?",

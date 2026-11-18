@@ -165,20 +165,6 @@ export const pricingCategories: PricingCategory[] = [
     description: "Modern, fast, responsive web systems that build trust and generate leads.",
     plans: [
       {
-        name: "Starter Plan",
-        price: "₹999",
-        description: "Perfect for Personal Brands & Startups.",
-        features: [
-          "Up to 4 Pages",
-          "Responsive Design",
-          "Contact Form Integration",
-          "Basic SEO Setup",
-          "30 Days Support"
-        ],
-        ctaText: "Choose Starter Plan",
-        contactSubject: "Inquiry: Web Dev Starter Plan (₹999)"
-      },
-      {
         name: "Business Plan",
         price: "₹2,999",
         description: "Ideal for Growing Businesses.",
@@ -427,4 +413,3 @@ export const pricingCategories: PricingCategory[] = [
     ]
   }
 ];
-

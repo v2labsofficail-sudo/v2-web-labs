@@ -358,7 +358,11 @@ export default function PlansClient({ activeTab }: { activeTab: string }) {
             <div key={category.id} className="relative">
               <div
                 onScroll={handleScroll}
-                className="flex md:grid gap-8 md:grid-cols-3 items-stretch max-w-5xl mx-auto overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth no-scrollbar pb-8 md:pb-0 px-4 md:px-0"
+                className={`flex md:grid gap-8 items-stretch mx-auto overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth no-scrollbar pb-8 md:pb-0 px-4 md:px-0 ${
+                  category.plans.length === 2
+                    ? "md:grid-cols-2 max-w-3xl"
+                    : "md:grid-cols-3 max-w-5xl"
+                }`}
               >
                 {category.plans.map((plan, idx) => {
                   const isPopular = plan.popular;

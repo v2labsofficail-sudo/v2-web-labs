@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -10,6 +10,7 @@ import Typewriter from "@/components/Typewriter";
 import OurServicesBanner from "@/components/OurServicesBanner";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Code2, TrendingUp, Layers, Bot, PhoneCall } from "lucide-react";
 
 function MouseTrackingAnimation() {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -925,64 +926,69 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd) }}
       />
       
-                        <section
+      <section
         id="hero"
-        className="relative overflow-hidden bg-white text-slate-900 pt-0 sm:pt-1 pb-10 sm:pb-14 lg:pb-16 select-none"
+        className="relative overflow-hidden text-white pt-6 sm:pt-10 pb-14 sm:pb-18 lg:pb-20 select-none border-b border-white/10"
+        style={{
+          background:
+            "radial-gradient(circle at 18% 25%, rgba(255, 255, 255, 0.18) 0%, transparent 48%), radial-gradient(circle at 85% 75%, rgba(0, 32, 110, 0.45) 0%, transparent 55%), #0055DA",
+        }}
       >
-        {/* Soft Fluid Background Cloud / Organic Shape in Center-Top */}
-        <div className="absolute top-0 right-1/4 w-[600px] h-[450px] bg-blue-50/40 rounded-full blur-3xl pointer-events-none -z-0" />
+        {/* Edge-to-edge subtle grid texture matching brand identity */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-15"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 1px, transparent 1px)
+            `,
+            backgroundSize: "3.5rem 3.5rem",
+          }}
+        />
 
-        {/* Main Content Container with proper upper padding & direct flow */}
+        {/* Soft atmospheric ambient glows */}
+        <div className="absolute top-0 right-1/4 w-[600px] h-[450px] bg-white/10 rounded-full blur-3xl pointer-events-none -z-0" />
+        <div className="absolute -bottom-16 left-8 w-[400px] h-[300px] bg-black/25 rounded-full blur-3xl pointer-events-none -z-0" />
+
+        {/* Main Content Container */}
         <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
             
-            {/* Left Content Column - tight and proper upper alignment */}
+            {/* Left Content Column */}
             <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-start text-left pt-0">
 
-              {/* Brand Tagline Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#0055DA]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#0055DA] tracking-[0.18em] mb-4 border border-[#0055DA]/20 shadow-sm">
-                <span className="w-1.5 h-1.5 bg-[#0055DA] rounded-full animate-ping"></span>
-                BUILD. INNOVATE. SCALE. &bull; TECHNOLOGY &amp; DIGITAL SOLUTIONS
-              </div>
-
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] font-black text-slate-950 leading-[1.08] tracking-tight mb-4">
-                <span className="text-[#0055DA] block">We Build The Technology</span>
-                Behind Your Next Big Move.
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] font-black text-white leading-[1.12] tracking-tight mb-4 drop-shadow-sm">
+                <span className="block text-white">We Build The Technology</span>
+                <span className="inline-block mt-2 px-4 py-1.5 rounded-2xl bg-white text-black font-black shadow-[0_12px_28px_rgba(0,0,0,0.35)] border-2 border-black/10">
+                  Behind Your Next Big Move.
+                </span>
               </h1>
 
               {/* Bold Subheading */}
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-5 leading-snug">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-100 mb-8 leading-snug max-w-2xl">
                 From Ideas to Intelligent Digital Solutions &mdash;{" "}
-                <span className="text-[#0055DA]">Custom Web, AI &amp; Enterprise Software</span>
+                <span className="text-white font-black underline decoration-white/35 underline-offset-4">
+                  Custom Web, AI &amp; Enterprise Software
+                </span>
               </h2>
-
-              {/* Rich SEO Content Paragraphs */}
-              <div className="space-y-3.5 mb-7 sm:mb-9 max-w-2xl text-slate-700 text-sm sm:text-base leading-relaxed">
-                <p>
-                  <strong className="text-slate-900 font-bold">V2 Labs Global</strong> is a premier technology and digital growth company based in Bhayandar East, Mira Bhayandar. We engineer high-velocity Next.js websites, Shopify &amp; WordPress platforms, custom ERP/CRM engines, autonomous AI agents, and ROI-driven SEO systems for businesses across Mira Bhayandar, Mumbai, and global markets.
-                </p>
-                <p className="text-slate-600 text-xs sm:text-sm">
-                  Whether scaling enterprise operations or engineering high-growth digital platforms, our engineers deliver speed, search-engine dominance, and conversion-focused infrastructure.
-                </p>
-              </div>
               
-              {/* Action Buttons */}
+              {/* Action Buttons in High-Contrast White and Black */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-9 py-4 bg-[#0055DA] hover:bg-[#0047C2] text-white font-black text-sm uppercase tracking-wider rounded-full shadow-[0_12px_28px_rgba(0,85,218,0.35)] hover:shadow-[0_16px_36px_rgba(0,85,218,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer group"
+                  className="inline-flex items-center justify-center gap-2 px-9 py-4 bg-white hover:bg-neutral-100 text-neutral-950 font-black text-sm uppercase tracking-wider rounded-full shadow-[0_14px_30px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer group border-2 border-white"
                 >
                   <span>Start Your Project</span>
-                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 shrink-0 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
 
                 <Link
                   href="/plans"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white hover:bg-slate-50 text-slate-800 hover:text-[#0055DA] font-bold text-sm uppercase tracking-wider rounded-full border-2 border-slate-300 hover:border-[#0055DA] shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-neutral-950 hover:bg-black text-white font-bold text-sm uppercase tracking-wider rounded-full border-2 border-neutral-900 hover:border-white/50 shadow-[0_10px_24px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer"
                 >
                   <span>Explore Packages</span>
                 </Link>
@@ -991,38 +997,22 @@ export default function Home() {
                   href="https://wa.me/919022641867?text=Hi%20V2%20Labs%20Global,%20I%20would%20like%20to%20discuss%20a%20project"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs uppercase tracking-wider rounded-full border border-emerald-300 shadow-sm transition-all duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-full border border-white/30 backdrop-blur-md shadow-sm transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span>WhatsApp Us</span>
                 </a>
               </div>
 
             </div>
 
-            {/* Right Column: Model in Organic Blue Pod Shape with Left-Right alternating floating tags */}
+            {/* Right Column: Model Girl with NO Background & Animated Floating Tags with Real Icons */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-center lg:justify-end items-start mt-1 lg:mt-0 lg:-translate-y-6 xl:-translate-y-10">
               
-              {/* Organic Blue Fluid Shape / Pod framing the model */}
-              <div className="relative w-[270px] sm:w-[330px] lg:w-[390px] xl:w-[410px] aspect-[3/4] flex items-end justify-center select-none">
+              {/* Model & Floating Tags Container (No Pod Shape Background) */}
+              <div className="relative w-[280px] sm:w-[340px] lg:w-[400px] xl:w-[420px] aspect-[3/4] flex items-end justify-center select-none">
                 
-                {/* Organic Blue Shape Background - backdrop behind torso and shoulders */}
-                <div
-                  className="absolute inset-x-2 sm:inset-x-0 bottom-0 top-10 sm:top-12 bg-gradient-to-br from-[#0055DA] via-[#0062FF] to-[#0042B3] shadow-[0_20px_50px_rgba(0,85,218,0.3)] pointer-events-none"
-                  style={{
-                    borderRadius: "45% 55% 65% 35% / 45% 45% 55% 55%",
-                  }}
-                />
-
-                {/* Dashed Accent Border matching reference */}
-                <div
-                  className="absolute inset-x-4 sm:inset-x-2 bottom-2 top-12 sm:top-14 border-2 border-dashed border-white/70 pointer-events-none"
-                  style={{
-                    borderRadius: "45% 55% 65% 35% / 45% 45% 55% 55%",
-                  }}
-                />
-
-                {/* Transparent Model Cutout - Complete, uncut, rising cleanly above the pod */}
+                {/* Transparent Model Cutout with NO background */}
                 <div className="relative z-10 w-full h-full flex items-end justify-center overflow-visible pointer-events-none">
                   <Image
                     src="/images/hero_model_v2_transparent.png"
@@ -1030,57 +1020,85 @@ export default function Home() {
                     width={896}
                     height={1200}
                     priority
-                    className="w-full h-full object-contain object-bottom select-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.22)]"
-                    sizes="(max-width: 640px) 270px, (max-width: 1024px) 330px, 410px"
+                    className="w-full h-full object-contain object-bottom select-none drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)]"
+                    sizes="(max-width: 640px) 280px, (max-width: 1024px) 340px, 420px"
                   />
                 </div>
 
-                {/* Top-Left: Compact Capabilities Badge - positioned above shoulder, outside face */}
-                <div className="absolute top-1 sm:top-2 left-0 sm:-left-4 lg:-left-8 z-20 flex items-center gap-1 text-[#0055DA] font-bold text-[10px] sm:text-[11px] tracking-tight bg-white/95 backdrop-blur-sm px-2.5 sm:px-3 py-1 rounded-full border border-blue-100 shadow-[0_4px_12px_rgba(0,85,218,0.12)] select-none">
-                  <span className="font-extrabold">#</span>
-                  <span>Capabilities</span>
-                </div>
-
-                {/* Left Pill 1: Web Development - at chest level, completely below the face */}
-                <Link
-                  href="/services/web-platform"
-                  className="absolute top-[40%] -left-1 sm:-left-6 lg:-left-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                {/* Left Pill 1: Web Development with Real Code2 Icon in Motion */}
+                <motion.div
+                  animate={{ y: [0, -8, 0], x: [0, 3, 0] }}
+                  transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+                  className="absolute top-[38%] -left-1 sm:-left-6 lg:-left-12 z-20"
                 >
-                  Web Development
-                </Link>
+                  <Link
+                    href="/services/web-platform"
+                    className="inline-flex items-center gap-1.5 bg-white hover:bg-neutral-100 text-neutral-950 text-[10px] sm:text-[11px] font-black tracking-tight px-3.5 sm:px-4 py-1.5 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] hover:scale-105 transition-all duration-200 cursor-pointer border border-black/10 whitespace-nowrap"
+                  >
+                    <Code2 className="w-3.5 h-3.5 text-[#0055DA] shrink-0" />
+                    <span>Web Development</span>
+                  </Link>
+                </motion.div>
 
-                {/* Right Pill 1: SEO & Growth - at chest/shoulder level, completely below the face */}
-                <Link
-                  href="/services/digital-marketing"
-                  className="absolute top-[46%] -right-1 sm:-right-6 lg:-right-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                {/* Right Pill 1: SEO & Growth with Real TrendingUp Icon in Motion */}
+                <motion.div
+                  animate={{ y: [0, 8, 0], x: [0, -3, 0] }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="absolute top-[44%] -right-1 sm:-right-6 lg:-right-12 z-20"
                 >
-                  SEO &amp; Growth
-                </Link>
+                  <Link
+                    href="/services/digital-marketing"
+                    className="inline-flex items-center gap-1.5 bg-neutral-950 hover:bg-black text-white text-[10px] sm:text-[11px] font-bold tracking-tight px-3.5 sm:px-4 py-1.5 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/30 whitespace-nowrap"
+                  >
+                    <TrendingUp className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>SEO &amp; Growth</span>
+                  </Link>
+                </motion.div>
 
-                {/* Left Pill 2: ERP & CRM - at waist level */}
-                <Link
-                  href="/services/erp-crm"
-                  className="absolute top-[66%] -left-1 sm:-left-6 lg:-left-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                {/* Left Pill 2: ERP & CRM with Real Layers Icon in Motion */}
+                <motion.div
+                  animate={{ y: [0, -7, 0], x: [0, -2, 0] }}
+                  transition={{ duration: 4.0, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                  className="absolute top-[64%] -left-1 sm:-left-6 lg:-left-12 z-20"
                 >
-                  ERP &amp; CRM
-                </Link>
+                  <Link
+                    href="/services/erp-crm"
+                    className="inline-flex items-center gap-1.5 bg-white hover:bg-neutral-100 text-neutral-950 text-[10px] sm:text-[11px] font-black tracking-tight px-3.5 sm:px-4 py-1.5 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] hover:scale-105 transition-all duration-200 cursor-pointer border border-black/10 whitespace-nowrap"
+                  >
+                    <Layers className="w-3.5 h-3.5 text-[#0055DA] shrink-0" />
+                    <span>ERP &amp; CRM</span>
+                  </Link>
+                </motion.div>
 
-                {/* Right Pill 2: AI Automations - at waist level */}
-                <Link
-                  href="/services/ai-automation"
-                  className="absolute top-[72%] -right-1 sm:-right-6 lg:-right-12 z-20 bg-[#0055DA] hover:bg-[#0047C2] text-white text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_14px_rgba(0,85,218,0.25)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/25 whitespace-nowrap"
+                {/* Right Pill 2: AI Automations with Real Bot Icon in Motion */}
+                <motion.div
+                  animate={{ y: [0, 7, 0], x: [0, 3, 0] }}
+                  transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                  className="absolute top-[70%] -right-1 sm:-right-6 lg:-right-12 z-20"
                 >
-                  AI Automations
-                </Link>
+                  <Link
+                    href="/services/ai-automation"
+                    className="inline-flex items-center gap-1.5 bg-neutral-950 hover:bg-black text-white text-[10px] sm:text-[11px] font-bold tracking-tight px-3.5 sm:px-4 py-1.5 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] hover:scale-105 transition-all duration-200 cursor-pointer border border-white/30 whitespace-nowrap"
+                  >
+                    <Bot className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                    <span>AI Automations</span>
+                  </Link>
+                </motion.div>
 
-                {/* Left Pill 3: Free Consultation - at bottom */}
-                <Link
-                  href="/contact"
-                  className="absolute bottom-1 left-1/2 -translate-x-1/2 sm:left-2 sm:translate-x-0 z-20 bg-white hover:bg-slate-50 text-[#0055DA] text-[9.5px] sm:text-[10.5px] lg:text-[11px] font-bold tracking-tight px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-[0_4px_16px_rgba(0,85,218,0.18)] hover:scale-105 transition-all duration-200 cursor-pointer border-2 border-[#0055DA] whitespace-nowrap flex items-center gap-1.5"
+                {/* Left Pill 3: Free Consultation with Real PhoneCall Icon in Motion */}
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 1.0 }}
+                  className="absolute bottom-1 left-1/2 -translate-x-1/2 sm:left-2 sm:translate-x-0 z-20"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#0055DA] animate-pulse" />
-                  Free Consultation
-                </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-1.5 bg-white hover:bg-neutral-100 text-neutral-950 text-[10px] sm:text-[11px] font-black tracking-tight px-4 py-1.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.4)] hover:scale-105 transition-all duration-200 cursor-pointer border-2 border-black whitespace-nowrap"
+                  >
+                    <PhoneCall className="w-3.5 h-3.5 text-[#0055DA] shrink-0" />
+                    <span>Free Consultation</span>
+                  </Link>
+                </motion.div>
 
               </div>
 
@@ -1131,14 +1149,12 @@ export default function Home() {
         </div>
       )}
 
+      <HubSection />
+
       {/* Interactive Our Services Banner */}
       <ScrollReveal>
         <OurServicesBanner />
       </ScrollReveal>
-
-      <HubSection />
-
-
 
       {/* Services Grid Section */}
       <ScrollReveal>

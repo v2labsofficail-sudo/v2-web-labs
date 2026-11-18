@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
       <p>When users click your link and immediately click the back button because the page is still loading, Google's algorithm interprets this as a signal that your website did not satisfy the user's query, leading to a drop in keyword rankings.</p>
 
       <h2>The Conversion Dropoff: Milliseconds Matter</h2>
-      <p>Research shows that a 100-millisecond delay in load time can lower conversion rates by <strong>7%</strong>. For a business generating ₹5,00,000 in monthly online revenue, a 1-second delay could cost them ₹35,000 every single month in lost leads and sales. High-performance web development isn't just about clean code—it is an investment in direct business growth.</p>
+      <p>Research shows that a 100-millisecond delay in load time can lower conversion rates by <strong>7%</strong>. For a business generating ₹5,0,000 in monthly online revenue, a 1-second delay could cost them ₹35,000 every single month in lost leads and sales. High-performance web development isn't just about clean code—it is an investment in direct business growth.</p>
 
       <h2>Actionable Checklist to Speed Up Your Website</h2>
       <ol>
@@ -326,7 +326,7 @@ export const blogPosts: BlogPost[] = [
     schemaDescription: "A comprehensive 2026 pricing and strategic evaluation guide for businesses seeking professional website development in Mira Bhayandar, Bhayandar East, and surrounding regions.",
     content: `
       <h2>How Much Does a Business Website Really Cost in Mira Bhayandar?</h2>
-      <p>Whether you operate a manufacturing facility in Bhayandar West, an export house in Kashigaon, or a professional practice in Bhayandar East, having a fast, modern website is no longer optional. However, website development pricing in Mira Bhayandar ranges dramatically from ₹1,000 to over ₹1,50,000. Understanding what drives these costs helps you avoid slow, insecure templates and invest in real growth.</p>
+      <p>Whether you operate a manufacturing facility in Bhayandar West, an export house in Kashigaon, or a professional practice in Bhayandar East, having a fast, modern website is no longer optional. However, website development pricing in Mira Bhayandar ranges dramatically from ₹2,999 to over ₹1,50,000. Understanding what drives these costs helps you avoid slow, insecure templates and invest in real growth.</p>
 
       <h2>Key Website Cost Factors</h2>
       <ul>
@@ -338,9 +338,9 @@ export const blogPosts: BlogPost[] = [
       <h2>Transparent Pricing Tiers at V2 Labs Global</h2>
       <p>To eliminate hidden agency markups, V2 Labs Global offers structured, milestone-based packages:</p>
       <ul>
-        <li><strong>Starter Plan (₹999):</strong> Ideal for personal portfolios and new startups needing a fast, mobile-friendly landing page with essential SEO.</li>
         <li><strong>Business Plan (₹2,999):</strong> Designed for local SMEs needing up to 7 pages, speed-optimized builds, WhatsApp sync, and complete Google Analytics/Search Console setup.</li>
-        <li><strong>Premium & Custom Web Application (Custom Quote):</strong> Bespoke Next.js platforms, multi-tiered web portals, and headless e-commerce engineered for high-volume conversions.</li>
+        <li><strong>Premium Plan (₹4,999):</strong> Best for growing brands needing up to 10 pages, blog integration, dynamic sections, and advanced SEO optimization.</li>
+        <li><strong>Custom Web Application (Custom Quote):</strong> Bespoke Next.js platforms, multi-tiered web portals, and headless e-commerce engineered for high-volume conversions.</li>
       </ul>
 
       <h2>Conclusion: Invest in Conversions, Not Just Code</h2>
@@ -349,7 +349,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: "How much does a basic business website cost in Bhayandar?",
-        answer: "Basic business websites start from ₹999 to ₹2,999 for verified starter packages, while custom multi-page corporate platforms range between ₹15,000 to ₹50,000+ depending on database complexity."
+        answer: "Basic business websites start from ₹2,999 for verified multi-page packages, while custom corporate platforms range between ₹15,000 to ₹50,000+ depending on database complexity."
       },
       {
         question: "How long does it take to launch a website with V2 Labs Global?",

@@ -36,7 +36,7 @@ export async function generateMetadata({
 
   if (categoryId === "web-development") {
     title = "Website Development Pricing & Plans";
-    description = "Flexible & transparent website development pricing plans. Explore Starter, Business, and Premium tiers tailored for your growth.";
+    description = "Flexible & transparent website development pricing plans. Explore Business and Premium tiers tailored for your growth.";
   } else if (categoryId === "branding") {
     title = "Branding & Brand Identity Packages Pricing";
     description = "From 0 to Hero. Start-to-finish branding, logo design, graphics, video, and social media setup pricing packages.";
@@ -57,9 +57,9 @@ export async function generateMetadata({
       `${category.name} packages`,
       "V2 Labs Global pricing plans",
       `${categoryId} plans`,
-      "cheap website 999",
-      "sasti website design mumbai",
-      "low cost web designer",
+      "affordable website development",
+      "website design mumbai",
+      "web engineering agency",
     ],
   });
 }
