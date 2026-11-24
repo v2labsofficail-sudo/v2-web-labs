@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "AI Automation Company | AI Agents, Chatbots & Business Process Automation",
+  title: "AI Automation Solutions & AI Agents Mumbai",
   description:
-    "Partner with an enterprise AI automation company in Mira Bhayandar & Mumbai. We build custom AI agents, LLM integrations, chatbot systems, and automated workflows. Discuss your project.",
+    "Partner with an AI automation company in Mumbai & Mira Bhayandar. We build custom AI agents, LLM integrations, WhatsApp bots, and automated workflows.",
   path: "/services/ai-automation",
   keywords: [
     "AI automation company in Mira Bhayandar",

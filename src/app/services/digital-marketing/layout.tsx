@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "SEO, Performance Marketing, Google Ads & Digital Marketing Agency",
+  title: "Digital Marketing & Performance SEO Agency",
   description:
-    "Data-driven SEO, GEO, AEO, Google & Meta Ads management, and social media growth marketing engineered by V2 Labs Global to drive qualified local and global leads.",
+    "Data-driven SEO, Google & Meta Ads management, and growth marketing engineered by V2 Labs Global to drive qualified leads across Mumbai and India.",
   path: "/services/digital-marketing",
   keywords: [
     "Digital marketing agency in Mira Bhayandar",

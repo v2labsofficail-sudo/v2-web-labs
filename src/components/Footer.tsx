@@ -97,18 +97,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/services/web-platform" className="text-neutral-200 hover:text-white transition-colors">
+                <Link href="/services/website-development" className="text-neutral-200 hover:text-white transition-colors">
                   Website Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className="text-neutral-200 hover:text-white transition-colors">
-                  SEO &amp; Organic Growth
+                <Link href="/services/wordpress-development" className="text-neutral-200 hover:text-white transition-colors">
+                  WordPress Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/erp-crm" className="text-neutral-200 hover:text-white transition-colors">
-                  Custom ERP &amp; CRM Systems
+                <Link href="/services/shopify-development" className="text-neutral-200 hover:text-white transition-colors">
+                  Shopify &amp; E-commerce
                 </Link>
               </li>
               <li>
@@ -117,18 +117,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/saas-product" className="text-neutral-200 hover:text-white transition-colors">
-                  SaaS Product Engineering
+                <Link href="/services/erp-development" className="text-neutral-200 hover:text-white transition-colors">
+                  Custom ERP Software
                 </Link>
               </li>
               <li>
-                <Link href="/services/ui-ux-brand" className="text-neutral-200 hover:text-white transition-colors">
-                  UI/UX &amp; Brand Systems
+                <Link href="/services/crm-development" className="text-neutral-200 hover:text-white transition-colors">
+                  Custom CRM Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services/video-motion" className="text-neutral-200 hover:text-white transition-colors">
-                  Video &amp; Motion Ads
+                <Link href="/services/saas-development" className="text-neutral-200 hover:text-white transition-colors">
+                  SaaS Product Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/seo-services" className="text-neutral-200 hover:text-white transition-colors">
+                  SEO &amp; Organic Growth
                 </Link>
               </li>
             </ul>

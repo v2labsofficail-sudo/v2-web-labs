@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Video Editing, Reels & Advertisement Production Services",
+  title: "Video Editing & Motion Ad Production Services",
   description:
-    "Cinematic video post-production, commercial reel editing, and promotional video production engineered by V2 Labs Global for high-retention social media and ad campaigns.",
+    "Cinematic video editing, commercial reel production, and high-retention motion ad creative engineered by V2 Labs Global in Mumbai.",
   path: "/services/video-motion",
   keywords: [
     "Professional video editing services",

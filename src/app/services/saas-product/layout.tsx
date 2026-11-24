@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "SaaS Product Development & Custom Software Engineering Company",
+  title: "SaaS Product & Custom Software Engineering",
   description:
-    "Scale from concept to multi-tenant SaaS application architecture. Custom SaaS product development, MVP engineering, subscription billing, and web software development.",
+    "Scale from concept to multi-tenant SaaS architecture. Custom SaaS product development, MVP engineering, subscription billing, and web software in Mumbai.",
   path: "/services/saas-product",
   keywords: [
     "SaaS development company",

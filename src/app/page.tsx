@@ -454,7 +454,7 @@ function TiltIllustration() {
                   AT
                 </div>
                 <div>
-                  <h4 className="font-poppins text-[0.88rem] font-black text-slate-900 leading-none mb-1">Alex Thorne</h4>
+                  <p className="font-poppins text-[0.88rem] font-black text-slate-900 leading-none mb-1">Alex Thorne</p>
                   <p className="font-poppins text-[0.66rem] font-bold text-[#111111] leading-none mb-2">Founder & CEO, SynthFlow AI</p>
                   <div className="flex flex-col gap-1 text-[0.6rem] font-bold text-[#111111]">
                     <span className="flex items-center gap-1">✉ alex@synthflow.ai</span>
@@ -875,20 +875,20 @@ export default function Home() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://v2labsglobal.com/#webpage",
-        url: "https://v2labsglobal.com/",
-        name: "V2 Labs Global Homepage",
+        "@id": "https://www.v2labsglobal.com/#webpage",
+        url: "https://www.v2labsglobal.com/",
+        name: "V2 Labs Global | Web & Software Development Company",
         description:
-          "AI solutions, web development, branding, SEO, GEO, and AEO services for startups and growing businesses.",
+          "V2 Labs Global builds custom websites, e-commerce platforms, AI automation, ERP and CRM solutions for growing businesses in Mumbai and India.",
         isPartOf: {
-          "@id": "https://v2labsglobal.com/#website",
+          "@id": "https://www.v2labsglobal.com/#website",
         },
         about: {
-          "@id": "https://v2labsglobal.com/#professional-service",
+          "@id": "https://www.v2labsglobal.com/#professional-service",
         },
         primaryImageOfPage: {
           "@type": "ImageObject",
-          url: "https://v2labsglobal.com/logo-cover-v2labs.jpeg",
+          url: "https://www.v2labsglobal.com/logo-cover-v2labs.jpeg",
         },
       },
       {
@@ -959,20 +959,24 @@ export default function Home() {
             <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-start text-left pt-0">
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] font-black text-white leading-[1.12] tracking-tight mb-4 drop-shadow-sm">
-                <span className="block text-white">We Build The Technology</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-white leading-[1.12] tracking-tight mb-4 drop-shadow-sm">
+                <span className="block text-white">Custom Website &amp; Software</span>
                 <span className="inline-block mt-2 px-4 py-1.5 rounded-2xl bg-white text-black font-black shadow-[0_12px_28px_rgba(0,0,0,0.35)] border-2 border-black/10">
-                  Behind Your Next Big Move.
+                  Development Company in Mumbai
                 </span>
               </h1>
 
               {/* Bold Subheading */}
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-100 mb-8 leading-snug max-w-2xl">
-                From Ideas to Intelligent Digital Solutions &mdash;{" "}
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-100 mb-4 leading-snug max-w-2xl">
+                Build Your Business with V2 Labs Global &mdash;{" "}
                 <span className="text-white font-black underline decoration-white/35 underline-offset-4">
                   Custom Web, AI &amp; Enterprise Software
                 </span>
               </h2>
+
+              <p className="text-blue-50 text-sm sm:text-base leading-relaxed max-w-2xl mb-8">
+                Based in Bhayandar East, Mira Bhayandar, V2 Labs Global engineers high-speed custom websites, responsive WordPress &amp; Shopify storefronts, autonomous AI agents, enterprise ERP/CRM platforms, and SaaS products that generate qualified leads and drive organic business growth.
+              </p>
               
               {/* Action Buttons in High-Contrast White and Black */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
@@ -1132,7 +1136,7 @@ export default function Home() {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold text-white mb-2">V2 Labs Global Overview</h4>
+                <p className="text-xl font-bold text-white mb-2">V2 Labs Global Overview</p>
                 <p className="text-slate-200 !text-slate-200 text-sm mb-6 font-normal" style={{ color: "#E2E8F0" }}>
                   Experience how we engineer high-velocity platforms, AI automations, and custom enterprise tools.
                 </p>
@@ -1154,6 +1158,161 @@ export default function Home() {
       {/* Interactive Our Services Banner */}
       <ScrollReveal>
         <OurServicesBanner />
+      </ScrollReveal>
+
+      {/* ========================================================================= */}
+      {/* SECTION: OUR TECHNOLOGY & DEVELOPMENT SERVICES */}
+      {/* ========================================================================= */}
+      <ScrollReveal>
+        <section className="py-14 sm:py-20 bg-slate-50 border-t border-slate-200/60 relative overflow-hidden">
+          <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
+            
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 bg-[#0055DA]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#0055DA] tracking-[0.18em] mb-4 border border-[#0055DA]/20">
+                End-To-End Tech Capabilities
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black text-slate-950 tracking-tight leading-tight mb-4">
+                Our Technology &amp; Development Services
+              </h2>
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                We engineer scalable digital platforms, modern web architecture, and intelligent automation systems tailored for high-growth businesses in Mumbai, Maharashtra, and international markets.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              
+              {/* Service 1 */}
+              <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#0055DA]/30 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#0055DA]/10 text-[#0055DA] flex items-center justify-center font-black text-xl mb-5">
+                    🌐
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                    Website Development
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                    Custom website development engineered with Next.js, React, and TypeScript. We build sub-second, mobile-first business platforms optimized for Google Core Web Vitals, conversion architecture, and high search ranking.
+                  </p>
+                </div>
+                <Link href="/services/website-development" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0055DA] uppercase tracking-wider hover:underline">
+                  Explore Website Development &rarr;
+                </Link>
+              </div>
+
+              {/* Service 2 */}
+              <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#0055DA]/30 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#0055DA]/10 text-[#0055DA] flex items-center justify-center font-black text-xl mb-5">
+                    ⚙️
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                    WordPress Development
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                    Enterprise WordPress development company specializing in custom theme engineering, headless WP APIs, secure plugin development, and speed optimization with zero visual compromises.
+                  </p>
+                </div>
+                <Link href="/services/wordpress-development" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0055DA] uppercase tracking-wider hover:underline">
+                  Explore WordPress Services &rarr;
+                </Link>
+              </div>
+
+              {/* Service 3 */}
+              <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#0055DA]/30 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#0055DA]/10 text-[#0055DA] flex items-center justify-center font-black text-xl mb-5">
+                    🛍️
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                    Shopify &amp; E-commerce Development
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                    Bespoke Shopify and e-commerce platforms designed to maximize checkout conversions. Custom Liquid sections, automated ERP inventory sync, fast payment gateway integrations, and omnichannel architecture.
+                  </p>
+                </div>
+                <Link href="/services/shopify-development" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0055DA] uppercase tracking-wider hover:underline">
+                  Explore Shopify &amp; E-commerce &rarr;
+                </Link>
+              </div>
+
+              {/* Service 4 */}
+              <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#0055DA]/30 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#0055DA]/10 text-[#0055DA] flex items-center justify-center font-black text-xl mb-5">
+                    🤖
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                    AI Automation Solutions
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                    Intelligent business automation through autonomous AI agents, WhatsApp bots, and LLM integrations. We automate repetitive operational tasks, customer support workflows, and lead qualification cycles.
+                  </p>
+                </div>
+                <Link href="/services/ai-automation" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0055DA] uppercase tracking-wider hover:underline">
+                  Explore AI Automation &rarr;
+                </Link>
+              </div>
+
+              {/* Service 5 */}
+              <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#0055DA]/30 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#0055DA]/10 text-[#0055DA] flex items-center justify-center font-black text-xl mb-5">
+                    📊
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                    ERP &amp; CRM Development
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                    Custom ERP and CRM software engineered for modern enterprises. Centralize lead pipelines, warehouse inventory, billing logistics, and employee management without expensive per-seat subscription fees.
+                  </p>
+                </div>
+                <Link href="/services/erp-development" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0055DA] uppercase tracking-wider hover:underline">
+                  Explore ERP &amp; CRM Systems &rarr;
+                </Link>
+              </div>
+
+              {/* Service 6 */}
+              <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#0055DA]/30 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#0055DA]/10 text-[#0055DA] flex items-center justify-center font-black text-xl mb-5">
+                    🚀
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                    SaaS &amp; Custom Software Development
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                    End-to-end SaaS MVP and scalable custom software engineering. We build multi-tenant cloud architectures, resilient REST/GraphQL APIs, role-based authorization, and high-performance database infrastructure.
+                  </p>
+                </div>
+                <Link href="/services/saas-development" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0055DA] uppercase tracking-wider hover:underline">
+                  Explore SaaS Development &rarr;
+                </Link>
+              </div>
+
+              {/* Service 7 */}
+              <div className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#0055DA]/30 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-3">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                  <div className="max-w-2xl">
+                    <div className="w-12 h-12 rounded-2xl bg-[#0055DA]/10 text-[#0055DA] flex items-center justify-center font-black text-xl mb-5">
+                      📈
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                      SEO &amp; Digital Growth
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Dominate Google organic search and AI search engines with technical SEO, localized Google Map Pack optimization, structured schema markup, and performance digital marketing across Mumbai and India.
+                    </p>
+                  </div>
+                  <Link href="/services/seo-services" className="inline-flex px-8 py-3.5 bg-[#0055DA] hover:bg-[#0047C2] text-white font-bold text-sm uppercase tracking-wider rounded-full shrink-0 shadow-md transition-all">
+                    Explore SEO Services &rarr;
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
       </ScrollReveal>
 
       {/* Services Grid Section */}
@@ -1234,6 +1393,10 @@ export default function Home() {
       </section>
     </ScrollReveal>
 
+
+
+
+
       <ScrollReveal>
         <section className="py-10 md:py-14 bg-white relative overflow-hidden border-t border-slate-100">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
@@ -1262,7 +1425,7 @@ export default function Home() {
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
                      </div>
                      <div>
-                        <h4 className="text-lg font-bold text-slate-900 mb-1">{item.title}</h4>
+                        <h3 className="text-lg font-bold text-slate-900 mb-1">{item.title}</h3>
                         <p className="text-[#111111] font-medium text-sm">{item.desc}</p>
                      </div>
                   </div>
@@ -1363,9 +1526,9 @@ export default function Home() {
                         isActive ? "opacity-0 invisible" : "opacity-100 visible"
                       } lg:group-hover:opacity-0 lg:group-hover:invisible`}
                     >
-                      <h4 className="text-lg lg:text-xl font-bold uppercase tracking-widest text-white font-Outfit drop-shadow">
+                      <h3 className="text-lg lg:text-xl font-bold uppercase tracking-widest text-white font-Outfit drop-shadow">
                         {card.title}
-                      </h4>
+                      </h3>
                     </div>
 
                     {/* Expanded view details - Fades in on active state (mobile) or hover state (desktop) */}
@@ -1377,9 +1540,9 @@ export default function Home() {
                       <span className="text-[#38BDF8] font-black text-[10px] uppercase tracking-[0.3em] mb-2 drop-shadow">
                         {card.badge}
                       </span>
-                      <h4 className="text-2xl font-bold text-white mb-3 font-Outfit drop-shadow">
+                      <h3 className="text-2xl font-bold text-white mb-3 font-Outfit drop-shadow">
                         {card.subtitle}
-                      </h4>
+                      </h3>
                       <p className="text-white !text-white text-sm max-w-xs drop-shadow font-normal" style={{ color: "#FFFFFF" }}>
                         {card.desc}
                       </p>
@@ -1648,6 +1811,10 @@ export default function Home() {
       </section>
     </ScrollReveal>
 
+
+
+
+
       {/* Trusted By Section (Marquee) */}
       <div className="border-y border-slate-100 bg-white py-8 md:py-10 relative overflow-hidden">
          <div className="text-center mb-4 px-4">
@@ -1699,7 +1866,7 @@ export default function Home() {
             
             <div className="text-center mb-8 md:mb-10">
               <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">
-                Customised Solutions For <span className="text-[#0055DA]">Industries</span>
+                Industries We <span className="text-[#0055DA]">Help</span>
               </h2>
               <p className="!text-slate-500 font-medium">Killer results and unbeatable client service</p>
               <div className="w-24 h-1 bg-[#0055DA] mx-auto mt-4 rounded-full"></div>
@@ -1829,6 +1996,93 @@ export default function Home() {
         <WhyChooseUsSection />
       </ScrollReveal>
 
+      {/* ========================================================================= */}
+      {/* SECTION: OUR DEVELOPMENT PROCESS */}
+      {/* ========================================================================= */}
+      <ScrollReveal>
+        <section className="py-14 sm:py-20 bg-slate-50 border-t border-slate-200/60 relative">
+          <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 bg-[#0055DA]/[0.08] px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-[#0055DA] tracking-[0.18em] mb-4 border border-[#0055DA]/20">
+                Agile Execution
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black text-slate-950 tracking-tight leading-tight mb-4">
+                Our Development Process
+              </h2>
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                A disciplined, transparent, and high-velocity engineering lifecycle designed to turn complex business ideas into robust digital products.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {[
+                { step: "01", title: "Discovery & Strategy", desc: "Detailed requirements mapping, technical stack selection, competitor analysis, and KPI definition." },
+                { step: "02", title: "UI/UX Architecture", desc: "Conversion-centered design mockups, responsive wireframes, design system creation, and interactive user flows." },
+                { step: "03", title: "Agile Engineering", desc: "Clean, modular code written in Next.js, React, Node.js, and TypeScript with continuous integration." },
+                { step: "04", title: "QA & Performance", desc: "Rigorous cross-browser verification, accessibility testing, security scans, and Core Web Vitals optimization." },
+                { step: "05", title: "Deployment & Growth", desc: "Zero-downtime launch, localized Google Search Console submission, technical SEO audit, and 24/7 support." }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white p-6 rounded-3xl border border-slate-200/70 shadow-sm flex flex-col justify-between">
+                  <div>
+                    <span className="text-3xl font-black text-[#0055DA]/30 block mb-2">{item.step}</span>
+                    <h3 className="text-base font-bold text-slate-900 mb-2">{item.title}</h3>
+                    <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* ========================================================================= */}
+      {/* SECTION: SERVING BUSINESSES ACROSS MUMBAI & MAHARASHTRA */}
+      {/* ========================================================================= */}
+      <ScrollReveal>
+        <section className="py-14 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
+          <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+            <div className="max-w-3xl mb-10">
+              <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-[0.7rem] font-black uppercase text-blue-200 tracking-[0.18em] mb-4 border border-white/20">
+                Local Presence &bull; Regional Reach
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black text-white tracking-tight leading-tight mb-4">
+                Serving Businesses Across Mumbai and Maharashtra
+              </h2>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                Headquartered in Bhayandar East, Mira Bhayandar, V2 Labs Global delivers dedicated technology consulting, custom software development, and performance SEO across the entire Mumbai Metropolitan Region and surrounding industrial belts.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 pt-4">
+              {[
+                "Mira Bhayandar", "Bhayandar East", "Bhayandar West", "Mira Road", "Vasai", "Virar",
+                "Borivali", "Kandivali", "Malad", "Andheri", "Bandra", "Dadar",
+                "Kurla", "Mumbai Central", "Grant Road", "Mahim", "Vapi", "Gujarat",
+                "Thane", "Navi Mumbai", "Pune", "Nashik", "Maharashtra", "Pan India"
+              ].map((loc, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-center text-xs font-bold text-slate-200 hover:bg-[#0055DA]/30 hover:border-[#0055DA]/50 transition-colors">
+                  📍 {loc}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="text-sm text-slate-300">
+                Looking for a trusted software engineering team near you?
+              </div>
+              <div className="flex gap-4">
+                <Link href="/locations/mira-bhayandar" className="text-xs font-bold uppercase tracking-wider text-white hover:text-blue-300 transition-colors">
+                  Mira Bhayandar Office &rarr;
+                </Link>
+                <Link href="/contact" className="text-xs font-bold uppercase tracking-wider text-[#38BDF8] hover:text-white transition-colors">
+                  Schedule In-Person Consultation &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
       <ScrollReveal>
         <section
           id="info"
@@ -1912,6 +2166,45 @@ export default function Home() {
         </div>
       </section>
     </ScrollReveal>
+
+    {/* ========================================================================= */}
+    {/* SECTION: CTA BANNER */}
+    {/* ========================================================================= */}
+    <ScrollReveal>
+      <section className="py-14 sm:py-20 bg-gradient-to-r from-[#0055DA] to-[#003899] text-white text-center relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight leading-tight mb-4">
+            Let&apos;s Build Something That Grows Your Business
+          </h2>
+          <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            Whether you need a high-converting website, custom AI agents, or an enterprise ERP/CRM system, our team is ready to engineer your solution.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-white text-slate-950 hover:bg-neutral-100 font-black text-sm uppercase tracking-wider rounded-full shadow-lg transition-transform hover:-translate-y-0.5"
+            >
+              Start Your Project
+            </Link>
+            <Link
+              href="/plans"
+              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 font-bold text-sm uppercase tracking-wider rounded-full transition-transform hover:-translate-y-0.5"
+            >
+              View Plans &amp; Pricing
+            </Link>
+            <a
+              href="https://wa.me/919022641867"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm uppercase tracking-wider rounded-full transition-transform hover:-translate-y-0.5"
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </ScrollReveal>
+
     </div>
   );
 }

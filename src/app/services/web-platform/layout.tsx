@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Website Design, WordPress, Shopify & Web Development Services",
+  title: "Web Platform & Custom Website Development",
   description:
-    "V2 Labs Global delivers custom website design, responsive web development, WordPress solutions, and Shopify e-commerce platforms engineered for speed, conversions, and high search ranking.",
+    "V2 Labs Global delivers high-speed web platforms, custom Next.js development, WordPress solutions, and Shopify stores engineered for speed and search ranking.",
   path: "/services/web-platform",
   keywords: [
     "Website development company in Mira Bhayandar",

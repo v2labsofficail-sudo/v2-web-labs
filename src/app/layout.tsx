@@ -31,13 +31,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteConfig.url,
-    languages: {
-      "en-US": siteConfig.url,
-      "en-GB": siteConfig.url,
-      "en-CA": siteConfig.url,
-      "en-IN": siteConfig.url,
-      "x-default": siteConfig.url,
-    },
   },
   openGraph: {
     title: siteConfig.defaultTitle,

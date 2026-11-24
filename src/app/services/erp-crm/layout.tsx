@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd, siteConfig, absoluteUrl } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Custom ERP & CRM Development Company Mumbai Thane Mira Bhayandar | V2 Labs Global",
+  title: "Custom ERP & CRM Development Mumbai",
   description:
-    "V2 Labs Global engineers custom ERP and CRM software for SMEs and mid-market enterprises. Zero per-seat licensing, automated operational workflows, GST/inventory sync, and full data ownership.",
+    "V2 Labs Global engineers custom ERP and CRM software in Mumbai & Mira Bhayandar. Zero per-seat licensing, automated workflows, and full data ownership.",
   path: "/services/erp-crm",
   keywords: [
     "custom ERP development company Mumbai",
