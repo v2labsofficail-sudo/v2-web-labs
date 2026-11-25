@@ -956,7 +956,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
             
             {/* Left Content Column */}
-            <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-start text-left pt-0">
+            <div className="order-1 lg:order-1 lg:col-span-7 flex flex-col items-start text-left pt-0">
 
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-white leading-[1.12] tracking-tight mb-4 drop-shadow-sm">
@@ -1011,7 +1011,7 @@ export default function Home() {
             </div>
 
             {/* Right Column: Model Girl with NO Background & Animated Floating Tags with Real Icons */}
-            <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-center lg:justify-end items-start mt-1 lg:mt-0 lg:-translate-y-6 xl:-translate-y-10">
+            <div className="order-2 lg:order-2 lg:col-span-5 relative flex justify-center lg:justify-end items-start mt-8 lg:mt-0 lg:-translate-y-6 xl:-translate-y-10">
               
               {/* Model & Floating Tags Container (No Pod Shape Background) */}
               <div className="relative w-[280px] sm:w-[340px] lg:w-[400px] xl:w-[420px] aspect-[3/4] flex items-end justify-center select-none">
