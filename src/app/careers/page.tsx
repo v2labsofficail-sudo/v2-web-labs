@@ -1,315 +1,540 @@
 "use client";
-import AlternatingText from "@/components/AlternatingText";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import { 
+  Video, 
+  TrendingUp, 
+  CheckCircle2, 
+  ArrowUpRight, 
+  MapPin, 
+  Briefcase, 
+  Clock, 
+  Award, 
+  Laptop, 
+  MessageSquare,
+  Sparkles
+} from "lucide-react";
+
+const GOOGLE_FORM_URL = "https://forms.gle/kMoAvfYPaiPvgYmB6";
 
 export default function CareersPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 120);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const perks = [
-    {
-      title: "100% Distributed & Remote",
-      desc: "Work from anywhere in the world. We focus on results, high-fidelity deliverables, and clear sync boundaries, not desk hours.",
-      icon: (
-        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A11.952 11.952 0 0 1 12 16.5c-3.12 0-6.002-1.2-8.284-3.186m0 0A8.959 8.959 0 0 1 3 12c0-.778.099-1.533.284-2.253" />
-        </svg>
-      ),
-    },
-    {
-      title: "Premium Tooling & Budget",
-      desc: "Top-tier setups deserve top-tier equipment. We subsidize late-model MacBook Pros, atomic Figma licenses, and LLM automation tools.",
-      icon: (
-        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766l.002-.001a1.56 1.56 0 0 1 1.883 1.882l-.001.002c-.14.468-.382.89-.766 1.208l-3.03 2.496ZM11.42 15.17 8.39 18.2c-.384.317-.89.468-1.208.766l-.002.001A1.56 1.56 0 0 1 5.3 17.085l.001-.002c.14-.468.382-.89.766-1.208l3.03-2.496M11.42 15.17l-3.03-2.496a1.56 1.56 0 0 1 1.882-1.883l.002.001c.468.14.89.382 1.208.766l3.03 2.496Z" />
-        </svg>
-      ),
-    },
-    {
-      title: "Self-Development Budget",
-      desc: "Never stop engineering your skillset. We allocate an annual $2,000 learning budget for conferences, advanced courses, and books.",
-      icon: (
-        <svg className="w-6 h-6 text-[#111111]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-        </svg>
-      ),
-    },
-  ];
+  const [selectedRole, setSelectedRole] = useState<"all" | "video" | "marketing">("all");
 
   const roles = [
     {
-      id: "fs-eng",
-      title: "Senior Full-Stack Engineer",
-      team: "Product & Systems Engineering",
-      location: "Remote (Global)",
+      id: "video",
+      title: "Video Editor & Motion Designer",
+      exp: "1–2 Years Experience",
+      department: "Creative & Media Production",
+      location: "Mira Bhayandar / Mumbai (Hybrid/On-site)",
       type: "Full-Time",
-      category: "Engineering",
-      description: "Scale high-performance Next.js architectures and microservice frameworks. Ideal candidate is hyper-focused on sub-second rendering, clean TypeScript types, and database optimization.",
+      salary: "Competitive Salary + Performance Bonuses",
+      image: "/images/services/video-motion.jpg",
+      tags: ["Premiere Pro", "After Effects", "Short-Form Reels", "Motion Design", "Sound Design"],
+      summary:
+        "We are looking for a creative Video Editor with 1 to 2 years of experience who understands viral short-form hooks, dynamic pacing, cinematic sound design, and high-retention video storytelling.",
+      responsibilities: [
+        "Edit high-converting short-form reels, YouTube shorts, and promotional brand videos.",
+        "Craft clean motion graphics, animated text kinetic overlays, and visual effects in After Effects.",
+        "Execute precision sound design, sound effects (SFX), and music sync to maintain maximum viewer retention.",
+        "Collaborate with the marketing and creative team to turn raw hooks and scripts into engaging visual assets.",
+        "Deliver polished cuts optimized for multiple aspect ratios (9:16, 16:9, 1:1).",
+      ],
       requirements: [
-        "5+ years engineering React/Next.js/Node platforms in production.",
-        "Deep familiarity with PostgreSQL, Redis caching pipelines, and Dockerized environments.",
-        "A strong portfolio of launched SaaS systems or atomic web dashboards.",
+        "1–2 years of active video editing experience with a verified showreel or portfolio of published reels.",
+        "Proficiency in Adobe Premiere Pro, After Effects, DaVinci Resolve, or equivalent editing tools.",
+        "Strong understanding of hook retention, pacing, and modern social media aesthetics.",
+        "Good visual taste in typography, color grading, and motion rhythm.",
+        "Ability to deliver projects within committed sprint deadlines.",
       ],
     },
     {
-      id: "ai-workflow",
-      title: "AI Workflow Engineer & Architect",
-      team: "Automation Solutions",
-      location: "Remote (Global)",
+      id: "marketing",
+      title: "Digital Marketer & Growth Strategist",
+      exp: "2–3 Years Experience",
+      department: "Growth & Performance Marketing",
+      location: "Mira Bhayandar / Mumbai (Hybrid/On-site)",
       type: "Full-Time",
-      category: "AI & Automation",
-      description: "Build secure Operational Databases, custom agents, and LLM automation pipelines. Bridge the gap between vector search tools and daily operations.",
-      requirements: [
-        "3+ years experience engineering AI pipelines (Langchain, LlamaIndex, or raw APIs).",
-        "Expert knowledge in prompt tuning, embeddings, and context window optimization.",
-        "Solid Python/Node engineering foundations with clear system orchestration skills.",
+      salary: "Competitive Salary + High Growth Trajectory",
+      image: "/images/services/digital-marketing.jpg",
+      tags: ["Meta Ads", "Google Ads", "Technical SEO", "Lead Generation", "GA4 & Funnels"],
+      summary:
+        "We are looking for an analytical, results-driven Digital Marketer with 2 to 3 years of hands-on experience in paid advertising (Meta & Google Ads), SEO, conversion rate optimization, and brand growth.",
+      responsibilities: [
+        "Plan, launch, and optimize high-ROAS paid advertising campaigns across Meta (Facebook & Instagram) and Google Ads.",
+        "Implement technical SEO, keyword mapping, on-page optimization, and local search strategies to drive organic leads.",
+        "Design and execute lead generation funnels, automated WhatsApp/email drip workflows, and conversion landing pages.",
+        "Perform A/B creative testing, audience segmentation, and conversion rate optimization (CRO) audits.",
+        "Track weekly campaign metrics and deliver clear reports on ROAS, CAC, CTR, and qualified inbound leads.",
       ],
-    },
-    {
-      id: "motion-editor",
-      title: "Senior Video Editor & Motion Artist",
-      team: "Creative & Brand Assets",
-      location: "Remote (Global)",
-      type: "Full-Time / Contract",
-      category: "Creative",
-      description: "Craft premium, cinematic Cuts and high-retention video stories for visual brands. Ideal artist has a profound eye for layout balance, timing, and dynamic sound design.",
       requirements: [
-        "Expert proficiency in Premiere Pro, After Effects, and Figma assets.",
-        "Stunning portfolio of motion reels, high-fidelity promotional clips, or cinematic layouts.",
-        "Ability to self-start on scripting concepts and timing guidelines.",
+        "2–3 years of proven experience managing paid ad budgets and delivering measurable organic growth.",
+        "Deep expertise with Meta Ads Manager, Google Ads, Google Analytics 4 (GA4), and Google Search Console.",
+        "Solid understanding of marketing funnels, copy testing, and landing page conversions.",
+        "Familiarity with SEO research tools such as Semrush, Ahrefs, or Screaming Frog is a plus.",
+        "Proactive problem solver with clear written and verbal communication skills.",
       ],
     },
   ];
 
-  const categories = ["All", "Engineering", "AI & Automation", "Creative"];
-
   const filteredRoles = roles.filter((role) => {
-    const matchesSearch =
-      role.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      role.team.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      role.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      role.requirements.some((req) => req.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    const matchesCategory =
-      selectedCategory === "All" || role.category === selectedCategory;
-
-    return matchesSearch && matchesCategory;
+    if (selectedRole === "all") return true;
+    return role.id === selectedRole;
   });
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-Outfit">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 bg-white border-b border-slate-100">
-        <div className="max-w-[1100px] mx-auto px-6 text-center">
-          <p className="text-[#111111] font-extrabold text-[0.8rem] uppercase tracking-widest mb-4">
-            Join V2 Labs Global
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none mb-6">
-            Build the Future of <AlternatingText>Digital Studio Systems</AlternatingText>
+      
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (CLEAN & SIMPLE) */}
+      {/* ========================================================================= */}
+      <section className="py-14 sm:py-20 border-b border-slate-100">
+        <div className="max-w-[1100px] mx-auto px-5 sm:px-8 text-center">
+          
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-slate-100 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-slate-700 mb-6 border border-slate-200">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            We Are Hiring &bull; 2 Openings
+          </div>
+
+          {/* Heading */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-tight mb-5">
+            Careers at V2 Labs Global
           </h1>
-          <p className="text-lg text-[#111111] max-w-[700px] mx-auto leading-relaxed">
-            We partner with visionary startups and global brands to build premium user experiences, high-performance dashboards, and LLM pipelines. We are seeking collaborative builders who love pixel perfection.
+
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+            We are looking for talented creators and marketers to join our team in Bhayandar East, Mira Bhayandar. Work on ambitious brand projects, viral videos, and high-impact digital campaigns.
           </p>
-        </div>
-      </section>
 
-      <section className="sticky z-30 transition-all duration-300 w-full bg-transparent top-[83px] sm:top-[107px] lg:top-[111px]">
-        <div className={`transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          isScrolled
-            ? "max-w-[1100px] py-3 bg-white  border border-slate-200/40 rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.06)] mx-4 sm:mx-6 lg:mx-auto px-5"
-            : "max-w-full py-6 bg-white border-b border-slate-100 rounded-none mx-0 px-6"
-        }`}>
-          <div className="max-w-[1100px] mx-auto w-full">
-            <div className="flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-              <div className="relative w-full md:max-w-md shrink-0">
-                <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#111111]">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search positions, technologies, skills..."
-                  className="w-full pl-11 pr-4 py-3 bg-white hover:bg-white hover:border-slate-300/80 border border-slate-200 rounded-2xl text-sm font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#111111] focus:ring-4 focus:ring-[#111111]/8 transition-all text-slate-800"
-                />
-                {searchQuery && (
-                  <button
-                    onClick={() => setSearchQuery("")}
-                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-[#111111] hover:text-[#111111] transition-colors"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                )}
-              </div>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
+            <a
+              href="#openings"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-950 hover:bg-black text-white font-bold text-sm rounded-full shadow-sm transition-all hover:-translate-y-0.5"
+            >
+              <span>View Openings</span>
+              <span className="w-5 h-5 rounded-full bg-white/20 text-xs flex items-center justify-center">2</span>
+            </a>
 
-              <div className="w-full flex gap-2 overflow-x-auto no-scrollbar pb-1 md:pb-0 justify-start md:justify-end">
-                {categories.map((cat) => {
-                  const isActive = selectedCategory === cat;
-                  return (
-                    <button
-                      key={cat}
-                      onClick={() => setSelectedCategory(cat)}
-                      className={`whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold border transition-all cursor-pointer active:scale-95 duration-150 ${
-                        isActive
-                          ? "bg-[#111111] border-[#111111] text-white shadow-sm shadow-[#111111]/15"
-                          : "bg-white border-slate-200 text-[#111111] hover:bg-slate-100 hover:border-slate-300"
-                      }`}
-                    >
-                      {cat}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+            <a
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-900 font-bold text-sm rounded-full border border-slate-300 shadow-sm transition-all hover:-translate-y-0.5"
+            >
+              <span>Application Form</span>
+              <ArrowUpRight className="w-4 h-4 text-slate-500" />
+            </a>
           </div>
+
+          {/* Simple Info Pills */}
+          <div className="mt-10 pt-6 border-t border-slate-100 flex flex-wrap justify-center items-center gap-6 text-xs sm:text-sm font-semibold text-slate-500">
+            <span className="flex items-center gap-1.5">
+              <Briefcase className="w-4 h-4 text-slate-700" /> 2 Active Roles
+            </span>
+            <span className="flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 text-slate-700" /> Bhayandar East, Mumbai
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4 text-slate-700" /> Full-Time Roles
+            </span>
+          </div>
+
         </div>
       </section>
 
+      {/* ========================================================================= */}
+      {/* 2. SIMPLE PHOTO SHOWCASE */}
+      {/* ========================================================================= */}
       <ScrollReveal>
-        {/* Perks Section */}
-        <section className="py-20 max-w-[1100px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-[#111111] font-extrabold text-[0.75rem] uppercase tracking-widest mb-3">
-              Why Us
-            </p>
-            <h2 className="text-3xl font-black tracking-tight text-slate-900">
-              A Collaborative Digital Environment
-            </h2>
-          </div>
+        <section className="py-14 sm:py-16 bg-slate-50 border-b border-slate-100">
+          <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
+            
+            <div className="text-center max-w-xl mx-auto mb-10">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+                Life &amp; Work at V2 Labs
+              </h2>
+              <p className="text-slate-600 text-sm mt-2">
+                A focused, creative environment where great work gets recognized and rewarded.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {perks.map((p, idx) => (
-              <div key={idx} className="bg-white border border-slate-200/40  p-8 rounded-2xl shadow-sm flex flex-col items-start hover:border-[#111111]/20 hover:bg-white hover:shadow-[0_15px_30px_rgba(17, 97, 237,0.04)] transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-xl bg-[#111111]/[0.05] flex items-center justify-center mb-6 shrink-0 group-hover:bg-[#111111]/10 transition-colors">
-                  {p.icon}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              {/* Photo 1: Video Editing */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+                <div className="relative aspect-[16/10] w-full bg-slate-100">
+                  <Image
+                    src="/images/services/video-motion.jpg"
+                    alt="Video Editing Workspace"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-lg font-extrabold text-slate-900 mb-3">{p.title}</h3>
-                <p className="text-sm text-[#111111] leading-relaxed">{p.desc}</p>
+                <div className="p-5">
+                  <h3 className="font-bold text-base text-slate-900 mb-1">Video Editing &amp; Motion</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Editing dynamic short-form reels, typography overlays, and performance video ads.
+                  </p>
+                </div>
               </div>
-            ))}
+
+              {/* Photo 2: Digital Marketing */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+                <div className="relative aspect-[16/10] w-full bg-slate-100">
+                  <Image
+                    src="/images/services/digital-marketing.jpg"
+                    alt="Digital Marketing and Analytics"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-base text-slate-900 mb-1">Marketing &amp; Growth</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Managing paid ad campaigns, SEO strategies, and conversion funnels.
+                  </p>
+                </div>
+              </div>
+
+              {/* Photo 3: Team Collaboration */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+                <div className="relative aspect-[16/10] w-full bg-slate-100">
+                  <Image
+                    src="/hero_collaboration.jpg"
+                    alt="Team Collaboration"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-base text-slate-900 mb-1">Direct Collaboration</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Work directly with founders and senior colleagues without corporate red tape.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </section>
       </ScrollReveal>
 
+      {/* ========================================================================= */}
+      {/* 3. PERKS (SIMPLE & CLEAN) */}
+      {/* ========================================================================= */}
       <ScrollReveal>
-        <section className="py-20 bg-white border-t border-slate-200/60 border-b border-slate-200/60">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-[#111111] font-extrabold text-[0.75rem] uppercase tracking-widest mb-3">
-              Open Positions
-            </p>
-            <h2 className="text-3xl font-black tracking-tight text-slate-900">
-              {filteredRoles.length === 0
-                ? "No matching roles found"
-                : `Open Global Roles (${filteredRoles.length})`}
-            </h2>
-          </div>
-
-          {filteredRoles.length === 0 ? (
-            /* Beautiful Filter Empty State */
-            <div className="bg-white rounded-3xl border border-slate-200/60 p-12 text-center max-w-xl mx-auto shadow-sm">
-              <div className="w-16 h-16 bg-white border border-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-[#111111]">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-extrabold text-slate-900 mb-2">No roles match your search filters</h3>
-              <p className="text-[#111111] text-sm leading-relaxed mb-6">
-                Try resetting your search query or department pills, or drop us an open application below and we will contact you.
-              </p>
-              <button
-                onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All");
-                }}
-                className="bg-[#0055DA] text-white hover:bg-[#0044B3] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-150 cursor-pointer"
-              >
-                Reset Search Filters
-              </button>
+        <section className="py-14 sm:py-16 bg-white border-b border-slate-100">
+          <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
+            
+            <div className="text-center max-w-xl mx-auto mb-10">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+                Why Work With Us
+              </h2>
             </div>
-          ) : (
-            <div className="flex flex-col gap-6">
-              {filteredRoles.map((r) => (
-                <div key={r.id} className="bg-white rounded-2xl border border-slate-200/60 p-8 shadow-sm flex flex-col hover:shadow-md transition-all duration-300">
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-100 pb-6 mb-6">
-                    <div>
-                      <h3 className="text-xl font-extrabold text-slate-900 mb-1">{r.title}</h3>
-                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-[#111111] font-bold">
-                        <span>{r.team}</span>
-                        <span>•</span>
-                        <span>{r.location}</span>
-                      </div>
-                    </div>
-                    <span className="bg-[#111111]/[0.06] text-[#111111] px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-wide uppercase shrink-0">
-                      {r.type}
-                    </span>
-                  </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8">
-                    <div>
-                      <h4 className="text-xs font-extrabold uppercase text-[#111111] tracking-wider mb-2.5">Description</h4>
-                      <p className="text-sm text-[#111111] leading-relaxed mb-6">{r.description}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-xs font-extrabold uppercase text-[#111111] tracking-wider mb-2.5">Key Requirements</h4>
-                      <ul className="list-disc pl-4 space-y-1.5 text-sm text-[#111111] leading-relaxed">
-                        {r.requirements.map((req, idx) => (
-                          <li key={idx}>{req}</li>
-                        ))}
-                      </ul>
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                {
+                  icon: <Award className="w-5 h-5 text-slate-800" />,
+                  title: "Competitive Salary",
+                  desc: "Fair compensation with performance incentives on client deliverables.",
+                },
+                {
+                  icon: <Laptop className="w-5 h-5 text-slate-800" />,
+                  title: "Modern Tools",
+                  desc: "High-spec workstations, licensed editing software, and asset libraries.",
+                },
+                {
+                  icon: <TrendingUp className="w-5 h-5 text-slate-800" />,
+                  title: "Real Career Growth",
+                  desc: "Fast promotions based on execution quality and initiative.",
+                },
+                {
+                  icon: <MapPin className="w-5 h-5 text-slate-800" />,
+                  title: "Bhayandar East Location",
+                  desc: "Convenient office easily accessible via local train station and Metro.",
+                },
+              ].map((perk, idx) => (
+                <div key={idx} className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mb-4">
+                    {perk.icon}
                   </div>
-
-                  <div className="mt-8 pt-6 border-t border-slate-100 flex justify-end">
-                    <Link
-                      href={`/contact?role=${r.id}`}
-                      className="bg-[#0055DA] text-white hover:bg-[#0044B3] hover:shadow-[0_4px_12px_rgba(0, 85, 218,0.22)] px-6 py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95 duration-200"
-                    >
-                      Apply for this Role
-                    </Link>
-                  </div>
+                  <h3 className="font-bold text-sm text-slate-900 mb-1.5">{perk.title}</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">{perk.desc}</p>
                 </div>
               ))}
             </div>
-          )}
-        </div>
-      </section>
+
+          </div>
+        </section>
       </ScrollReveal>
 
-      <ScrollReveal>
-        {/* General Submission */}
-        <section className="py-24 max-w-[1100px] mx-auto px-6 text-center">
-        <div className="bg-slate-900 rounded-3xl p-10 sm:p-14 text-white shadow-xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#111111] opacity-10 rounded-full blur-3xl -mr-16 -mt-16" />
-          <h2 className="text-3xl font-black tracking-tight mb-4 relative z-10">Don&apos;t see your alignment?</h2>
-          <p className="text-[#111111] max-w-[500px] mx-auto text-sm leading-relaxed mb-8 relative z-10">
-            We are always seeking hyper-collaborative builders, specialized system engineers, and graphic storytellers. Drop us an open application.
-          </p>
-          <Link
-            href="/contact?role=general"
-            className="bg-white text-slate-950 hover:bg-[#111111] hover:text-white px-8 py-3 rounded-full font-bold text-sm tracking-wide transition-all shadow-md inline-block relative z-10 active:scale-95 duration-200"
-          >
-            Submit Open Application
-          </Link>
+      {/* ========================================================================= */}
+      {/* 4. CURRENT OPENINGS (EXACTLY 2 ROLES - SIMPLE & CLEAN) */}
+      {/* ========================================================================= */}
+      <section id="openings" className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100 scroll-mt-10">
+        <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
+          
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+                Current Openings (2)
+              </h2>
+              <p className="text-slate-600 text-sm mt-1">
+                We are actively hiring for these two positions.
+              </p>
+            </div>
+
+            {/* Simple Filter Pills */}
+            <div className="flex items-center gap-1.5 p-1 bg-white border border-slate-200 rounded-xl shadow-sm self-start sm:self-auto">
+              <button
+                onClick={() => setSelectedRole("all")}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  selectedRole === "all"
+                    ? "bg-slate-900 text-white"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                All (2)
+              </button>
+              <button
+                onClick={() => setSelectedRole("video")}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  selectedRole === "video"
+                    ? "bg-slate-900 text-white"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                Video Editor (1)
+              </button>
+              <button
+                onClick={() => setSelectedRole("marketing")}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  selectedRole === "marketing"
+                    ? "bg-slate-900 text-white"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                Digital Marketer (1)
+              </button>
+            </div>
+          </div>
+
+          {/* Role Cards */}
+          <div className="space-y-8">
+            {filteredRoles.map((role) => (
+              <div
+                key={role.id}
+                className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-slate-300 transition-all overflow-hidden"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-12">
+                  
+                  {/* Left Column: Image Thumbnail */}
+                  <div className="lg:col-span-4 relative aspect-[16/10] lg:aspect-auto min-h-[220px] bg-slate-100">
+                    <Image
+                      src={role.image}
+                      alt={role.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 rounded-full text-xs font-bold text-slate-900 shadow-sm">
+                        {role.id === "video" ? <Video className="w-3.5 h-3.5" /> : <TrendingUp className="w-3.5 h-3.5" />}
+                        {role.department}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <span className="inline-block px-2.5 py-1 bg-slate-900 text-white rounded-md text-xs font-bold mb-1">
+                        {role.exp}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Role Details */}
+                  <div className="lg:col-span-8 p-6 sm:p-8 flex flex-col justify-between">
+                    
+                    <div>
+                      {/* Title & Top Action */}
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-black text-slate-950">
+                            {role.title}
+                          </h3>
+                          <div className="flex flex-wrap items-center gap-2 mt-1 text-xs font-medium text-slate-500">
+                            <span className="font-bold text-slate-900">{role.exp}</span>
+                            <span>&bull;</span>
+                            <span>{role.type}</span>
+                            <span>&bull;</span>
+                            <span className="text-slate-700">{role.location}</span>
+                          </div>
+                        </div>
+
+                        <a
+                          href={GOOGLE_FORM_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 bg-slate-900 hover:bg-black text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all self-start sm:self-auto shrink-0"
+                        >
+                          <span>Apply</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+
+                      {/* Summary */}
+                      <p className="text-slate-600 text-sm leading-relaxed my-5">
+                        {role.summary}
+                      </p>
+
+                      {/* Grid: Responsibilities & Requirements */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-1">
+                        
+                        <div>
+                          <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-2.5">
+                            Key Responsibilities
+                          </h4>
+                          <ul className="space-y-2">
+                            {role.responsibilities.map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-2.5">
+                            Requirements
+                          </h4>
+                          <ul className="space-y-2">
+                            {role.requirements.map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                      </div>
+
+                      {/* Tags */}
+                      <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        {role.tags.map((tag, idx) => (
+                          <span key={idx} className="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs rounded-md">
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Bottom Apply Bar */}
+                    <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                      <span className="text-xs text-slate-500 text-center sm:text-left">
+                        Submit resume &amp; portfolio link via our official application form.
+                      </span>
+
+                      <a
+                        href={GOOGLE_FORM_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-950 hover:bg-black text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all"
+                      >
+                        <span>Submit Application</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
+
+      {/* ========================================================================= */}
+      {/* 5. SIMPLE APPLICATION PORTAL (NO DARK BLUE - CLEAN LIGHT CARD) */}
+      {/* ========================================================================= */}
+      <ScrollReveal>
+        <section className="py-16 sm:py-20 bg-white">
+          <div className="max-w-[850px] mx-auto px-5 sm:px-8 text-center">
+            
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
+              
+              <div className="w-12 h-12 bg-white rounded-2xl border border-slate-200 flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <CheckCircle2 className="w-6 h-6 text-slate-900" />
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight mb-3">
+                Ready to Apply?
+              </h2>
+
+              <p className="text-slate-600 text-sm max-w-lg mx-auto leading-relaxed mb-6">
+                Please complete our official Google Form to submit your profile. Make sure your portfolio or showreel link has public viewing permissions enabled.
+              </p>
+
+              {/* Checklist */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-lg mx-auto mb-8 text-left text-xs">
+                <div className="bg-white p-3 rounded-xl border border-slate-200">
+                  <span className="font-bold text-slate-900 block mb-0.5">1. Resume / CV</span>
+                  <span className="text-slate-500">Updated PDF file</span>
+                </div>
+                <div className="bg-white p-3 rounded-xl border border-slate-200">
+                  <span className="font-bold text-slate-900 block mb-0.5">2. Live Portfolio</span>
+                  <span className="text-slate-500">Reels or ad samples</span>
+                </div>
+                <div className="bg-white p-3 rounded-xl border border-slate-200">
+                  <span className="font-bold text-slate-900 block mb-0.5">3. Location</span>
+                  <span className="text-slate-500">Mumbai / Bhayandar</span>
+                </div>
+              </div>
+
+              {/* Main Button */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href={GOOGLE_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-slate-950 hover:bg-black text-white font-bold text-sm rounded-full shadow-sm transition-all hover:-translate-y-0.5"
+                >
+                  <span>Open Application Form</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+
+                <a
+                  href="https://wa.me/919022641867?text=Hi%20V2%20Labs%20Team,%20I%20have%20a%20query%20about%20the%20careers%20opening"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs uppercase tracking-wider rounded-full border border-slate-300 transition-all"
+                >
+                  <MessageSquare className="w-4 h-4 text-emerald-600" />
+                  <span>Ask on WhatsApp</span>
+                </a>
+              </div>
+
+              <p className="text-xs text-slate-400 mt-5 font-mono">
+                Form link: <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="text-slate-700 underline">{GOOGLE_FORM_URL}</a>
+              </p>
+
+            </div>
+
+          </div>
+        </section>
       </ScrollReveal>
+
     </div>
   );
 }

@@ -2,15 +2,17 @@ import type { ReactNode } from "react";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Careers",
+  title: "Careers | Open Job Roles",
   description:
-    "Join V2Labs Global and help build AI solutions, web products, branding systems, and ERP CRM platforms for growing businesses.",
+    "We are hiring! Join V2 Labs Global in Mira Bhayandar & Mumbai. Open roles: Video Editor (1-2 years exp) & Digital Marketer (2-3 years exp). Apply now.",
   path: "/careers",
   keywords: [
     "V2 Labs Global careers",
-    "Digital agency jobs",
-    "Web development careers",
-    "AI company careers",
+    "Video Editor jobs Mumbai",
+    "Video editor hiring Mira Bhayandar",
+    "Digital Marketer jobs Mumbai",
+    "Performance marketing hiring Bhayandar",
+    "SEO specialist jobs Mumbai",
   ],
 });
 
