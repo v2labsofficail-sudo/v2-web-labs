@@ -55,7 +55,7 @@ export default function ShopifyDevelopmentPage() {
         },
         {
           title: "Dedicated Mumbai Development Team",
-          desc: "Work directly with local developers in Bhayandar East who understand the Indian retail market, festive campaigns, and local customer psychology."
+          desc: "Work directly with local developers in Mira Bhayandar who understand the Indian retail market, festive campaigns, and local customer psychology."
         }
       ]}
       process={[

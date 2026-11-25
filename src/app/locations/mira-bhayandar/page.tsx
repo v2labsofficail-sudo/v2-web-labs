@@ -79,7 +79,7 @@ export default function MiraBhayandarPage() {
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[820px] font-medium mb-8">
-            Operating from Bhayandar East, V2 Labs Global is a technology and digital growth company serving businesses across the entire Mira Bhayandar Municipal Corporation area. We build custom websites, automated ERP/CRM software, AI agents, and conversion-focused digital marketing campaigns.
+            Based in Mira Bhayandar, V2 Labs Global is a technology and digital growth company serving businesses across the entire Mira Bhayandar Municipal Corporation area. We build custom websites, automated ERP/CRM software, AI agents, and conversion-focused digital marketing campaigns.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -107,7 +107,7 @@ export default function MiraBhayandarPage() {
                 Enterprise Engineering for Mira Bhayandar Businesses
               </h2>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed mb-6 font-medium">
-                V2 Labs Global provides end-to-end digital engineering across **Mira Bhayandar**, including key commercial and residential corridors: **Bhayandar East, Bhayandar West, Kashimira, Golden Nest, Indralok, Navghar**, and nearby industrial hubs. We eliminate operational bottlenecks by writing clean Next.js/React code, creating relational database schemas, and deploying secure systems on cloud edge CDNs.
+                V2 Labs Global provides end-to-end digital engineering across **Mira Bhayandar**, including key commercial and residential corridors: **Mira Road, Bhayandar, Kashimira, Golden Nest, Indralok, Navghar**, and nearby industrial hubs. We eliminate operational bottlenecks by writing clean Next.js/React code, creating relational database schemas, and deploying secure systems on cloud edge CDNs.
               </p>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed font-medium mb-6">
                 From retail enterprises and healthcare clinics to industrial manufacturers and modern online startups, we engineer solutions designed around genuine user intent, fast Core Web Vitals, and measurable business growth.
@@ -144,7 +144,7 @@ export default function MiraBhayandarPage() {
                   <div className="space-y-4 text-xs font-semibold text-slate-350">
                     <div className="flex flex-col gap-1 border-b border-white/5 pb-3">
                       <span className="text-[0.62rem] text-slate-450 uppercase tracking-widest block">Address</span>
-                      <span className="text-white text-sm">Bhayandar East, Thane, Maharashtra, 401105, India</span>
+                      <span className="text-white text-sm">Mira Bhayandar, Maharashtra, 401105, India</span>
                     </div>
                     <div className="flex flex-col gap-1 border-b border-white/5 pb-3">
                       <span className="text-[0.62rem] text-slate-450 uppercase tracking-widest block">Email</span>
@@ -152,14 +152,14 @@ export default function MiraBhayandarPage() {
                     </div>
                     <div className="flex flex-col gap-1 pb-1">
                       <span className="text-[0.62rem] text-slate-450 uppercase tracking-widest block">Contact Phone</span>
-                      <span className="text-white text-sm">+91-9022641867</span>
+                      <span className="text-white text-sm">+91-7021827910</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="relative z-10 pt-6 border-t border-white/5">
                   <p className="text-[0.68rem] text-slate-400 leading-relaxed font-semibold">
-                    *Serving verified localities across Mira Bhayandar, Bhayandar East, Bhayandar West, Kashimira, Golden Nest, Indralok, Navghar, and the Mumbai Metropolitan region.
+                    *Serving verified localities across Mira Bhayandar, Mira Road, Bhayandar, Kashimira, and the Mumbai Metropolitan region.
                   </p>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function MiraBhayandarPage() {
           <FaqSection items={[
             {
               question: "Which company develops websites in Mira Bhayandar?",
-              answer: "V2 Labs Global is a premier technology and digital growth company located in Bhayandar East, providing modern website development, Next.js web applications, WordPress, and Shopify stores across the Mira Bhayandar Municipal Corporation (MBMC) region."
+              answer: "V2 Labs Global is a premier technology and digital growth company based in Mira Bhayandar, providing modern website development, Next.js web applications, WordPress, and Shopify stores across the Mira Bhayandar Municipal Corporation (MBMC) region."
             },
             {
               question: "How much does website development cost in Bhayandar?",

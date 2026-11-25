@@ -365,7 +365,7 @@ export default function ErpCrmPage() {
                 Schedule Scoping Call
               </Link>
               <a 
-                href="https://wa.me/919022641867?text=Hello%20V2%20Labs%20Global,%20I%20would%20like%20to%20consult%20on%20a%20Custom%20ERP%20/%20CRM%20system%20for%20my%20business."
+                href="https://wa.me/917021827910?text=Hello%20V2%20Labs%20Global,%20I%20would%20like%20to%20consult%20on%20a%20Custom%20ERP%20/%20CRM%20system%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] shadow-[0_6px_20px_rgba(37,211,102,0.25)] text-[0.92rem] text-center cursor-pointer"
@@ -883,7 +883,7 @@ export default function ErpCrmPage() {
                   Book Technical Scoping Call
                 </Link>
                 <a
-                  href="https://wa.me/919022641867?text=Hello%20V2%20Labs%20Global,%20I%20would%20like%20to%20consult%20on%20a%20Custom%20ERP%20/%20CRM%20system%20for%20my%20business."
+                  href="https://wa.me/917021827910?text=Hello%20V2%20Labs%20Global,%20I%20would%20like%20to%20consult%20on%20a%20Custom%20ERP%20/%20CRM%20system%20for%20my%20business."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold rounded-full transition-all duration-300 hover:scale-[1.02] shadow-[0_6px_20px_rgba(37,211,102,0.3)] text-xs uppercase tracking-widest"

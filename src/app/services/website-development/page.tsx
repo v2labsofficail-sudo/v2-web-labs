@@ -7,7 +7,7 @@ export default function WebsiteDevelopmentPage() {
       badge="Custom Website Architecture"
       h1="Custom Website Development Company in Mumbai"
       subtitle="Engineered with Next.js, React & TypeScript for sub-second page speed, flawless responsive layouts, and organic search engine dominance."
-      intro="At V2 Labs Global, we design and build bespoke business websites that combine modern aesthetics with high-velocity web engineering. Based in Bhayandar East, Mira Bhayandar, we help small businesses, established enterprises, and growing startups across Mumbai and Maharashtra transform their web presence into high-converting revenue drivers."
+      intro="At V2 Labs Global, we design and build bespoke business websites that combine modern aesthetics with high-velocity web engineering. Based in Mira Bhayandar, we help small businesses, established enterprises, and growing startups across Mumbai and Maharashtra transform their web presence into high-converting revenue drivers."
       capabilities={[
         {
           title: "Next.js & React Engineering",

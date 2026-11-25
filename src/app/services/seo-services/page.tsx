@@ -16,7 +16,7 @@ export default function SeoServicesPage() {
         },
         {
           title: "Local SEO & Google Business Profile (GBP)",
-          desc: "Dominating local search in Mira Bhayandar, Bhayandar East/West, Thane, and Mumbai with optimized GBP listings, local citations, and geo-targeted schema.",
+          desc: "Dominating local search in Mira Bhayandar, Thane, and Mumbai with optimized GBP listings, local citations, and geo-targeted schema.",
           badge: "Local 3-Pack"
         },
         {

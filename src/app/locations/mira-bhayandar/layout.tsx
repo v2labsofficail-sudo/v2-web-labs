@@ -37,11 +37,11 @@ export default function MiraBhayandarLayout({
   const faqJson = buildFaqJsonLd([
     {
       question: "Which company develops websites in Mira Bhayandar?",
-      answer: "V2 Labs Global is a premier technology and digital growth company located in Bhayandar East, providing modern website development, Next.js web applications, WordPress, and Shopify stores across the Mira Bhayandar Municipal Corporation (MBMC) region."
+      answer: "V2 Labs Global is a premier technology and digital growth company based in Mira Bhayandar, providing modern website development, Next.js web applications, WordPress, and Shopify stores across the Mira Bhayandar Municipal Corporation (MBMC) region."
     },
     {
       question: "Are you a registered IT & software company in Mira Bhayandar?",
-      answer: "Yes, V2 Labs Global is a professional technology agency with engineering headquarters in Bhayandar East, serving businesses across Bhayandar East, Bhayandar West, Kashimira, Golden Nest, Indralok, Navghar, and the Mumbai metropolitan area."
+      answer: "Yes, V2 Labs Global is a professional technology agency with engineering headquarters in Mira Bhayandar, serving businesses across Mira Road, Bhayandar, Thane, and the Mumbai metropolitan area."
     },
     {
       question: "What industries do you serve in the Mira Bhayandar area?",
@@ -70,7 +70,7 @@ export default function MiraBhayandarLayout({
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Bhayandar East",
+      "streetAddress": "Mira Bhayandar",
       "addressLocality": "Mira Bhayandar",
       "addressRegion": "Maharashtra",
       "postalCode": "401105",

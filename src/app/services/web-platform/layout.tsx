@@ -9,7 +9,7 @@ export const metadata = buildPageMetadata({
   keywords: [
     "Website development company in Mira Bhayandar",
     "Website development company in Bhayandar",
-    "Web development company in Bhayandar East",
+    "Web development company in Mira Bhayandar",
     "Website designing company in Mira Bhayandar",
     "Website designer in Bhayandar",
     "WordPress development company",

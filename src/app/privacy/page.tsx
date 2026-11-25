@@ -453,7 +453,7 @@ export default function PrivacyPage() {
                           Location Coordinates
                         </h4>
                         <p className="text-slate-800 font-extrabold text-xs">
-                          Bhayandar East, Thane, Maharashtra, India
+                          Mira Bhayandar, Maharashtra, India
                         </p>
                       </div>
                     </div>

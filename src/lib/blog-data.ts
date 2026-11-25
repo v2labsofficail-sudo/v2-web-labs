@@ -323,10 +323,10 @@ export const blogPosts: BlogPost[] = [
       "affordable business website",
       "custom nextjs development cost"
     ],
-    schemaDescription: "A comprehensive 2026 pricing and strategic evaluation guide for businesses seeking professional website development in Mira Bhayandar, Bhayandar East, and surrounding regions.",
+    schemaDescription: "A comprehensive 2026 pricing and strategic evaluation guide for businesses seeking professional website development in Mira Bhayandar and surrounding regions.",
     content: `
       <h2>How Much Does a Business Website Really Cost in Mira Bhayandar?</h2>
-      <p>Whether you operate a manufacturing facility in Bhayandar West, an export house in Kashigaon, or a professional practice in Bhayandar East, having a fast, modern website is no longer optional. However, website development pricing in Mira Bhayandar ranges dramatically from ₹2,999 to over ₹1,50,000. Understanding what drives these costs helps you avoid slow, insecure templates and invest in real growth.</p>
+      <p>Whether you operate a manufacturing facility, an export house in Kashigaon, or a professional practice in Mira Bhayandar, having a fast, modern website is no longer optional. However, website development pricing in Mira Bhayandar ranges dramatically from ₹2,999 to over ₹1,50,000. Understanding what drives these costs helps you avoid slow, insecure templates and invest in real growth.</p>
 
       <h2>Key Website Cost Factors</h2>
       <ul>

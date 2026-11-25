@@ -62,7 +62,7 @@ export default function BhayandarPage() {
           </h1>
 
           <p className="text-[#111111] text-base sm:text-lg lg:text-[1.08rem] leading-[1.8] max-w-[800px] font-medium mb-8">
-            Operating from Bhayandar East, V2 Labs Global is a premier software engineering agency. We partner with local business owners, startups, and enterprises to build sub-second websites, custom ERP modules, and intelligent AI automation agents.
+            Based in Mira Bhayandar, V2 Labs Global is a premier software engineering agency. We partner with local business owners, startups, and enterprises to build sub-second websites, custom ERP modules, and intelligent AI automation agents.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -90,7 +90,7 @@ export default function BhayandarPage() {
                 Empowering Bhayandar Businesses with Elite Software
               </h2>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed mb-6 font-medium">
-                V2 Labs Global was founded to bring global-tier web design and database integration standards directly to companies in **Bhayandar East, Bhayandar West, Kashimira, Indralok, Golden Nest, Navghar**, and surrounding areas. We eliminate operational bottlenecks by writing optimized React code, designing clean relational schemas, and deploying secure systems on edge CDNs.
+                V2 Labs Global was founded to bring global-tier web design and database integration standards directly to companies in **Mira Bhayandar, Bhayandar, Mira Road, Kashimira, Indralok, Golden Nest**, and surrounding areas. We eliminate operational bottlenecks by writing optimized React code, designing clean relational schemas, and deploying secure systems on edge CDNs.
               </p>
               <p className="text-[#111111] text-sm sm:text-base leading-relaxed font-medium mb-6">
                 Whether you run an industrial unit in Bhayandar West, a retail storefront, or a service agency, we translate your ideas into clean, maintainable web products. We focus on search intent, fast render speeds, and direct conversion hooks.
@@ -127,7 +127,7 @@ export default function BhayandarPage() {
                   <div className="space-y-4 text-xs font-semibold text-slate-350">
                     <div className="flex flex-col gap-1 border-b border-white/5 pb-3">
                       <span className="text-[0.62rem] text-slate-450 uppercase tracking-widest block">Address</span>
-                      <span className="text-white text-sm">Bhayandar East, Thane, Maharashtra, 401105, India</span>
+                      <span className="text-white text-sm">Mira Bhayandar, Maharashtra, 401105, India</span>
                     </div>
                     <div className="flex flex-col gap-1 border-b border-white/5 pb-3">
                       <span className="text-[0.62rem] text-slate-450 uppercase tracking-widest block">Email</span>
@@ -135,7 +135,7 @@ export default function BhayandarPage() {
                     </div>
                     <div className="flex flex-col gap-1 pb-1">
                       <span className="text-[0.62rem] text-slate-450 uppercase tracking-widest block">Contact Phone</span>
-                      <span className="text-white text-sm">+91-9022641867</span>
+                      <span className="text-white text-sm">+91-7021827910</span>
                     </div>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function BhayandarPage() {
           <FaqSection items={[
             {
               question: "Are you located in Bhayandar?",
-              answer: "Yes, V2 Labs Global operates from Bhayandar East (401105). We are a local technology and software engineering team serving startups and business owners across Bhayandar East, Bhayandar West, Kashimira, Indralok, Golden Nest, Navghar, and the wider Mumbai area."
+              answer: "Yes, V2 Labs Global is based in Mira Bhayandar (401105). We are a local technology and software engineering team serving startups and business owners across Bhayandar, Mira Road, and the wider Mumbai area."
             },
             {
               question: "What services do you offer for local businesses in Bhayandar?",

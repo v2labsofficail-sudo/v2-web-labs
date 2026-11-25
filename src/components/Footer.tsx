@@ -17,7 +17,7 @@ export default function Footer() {
               <Logo dark={true} className="h-9 sm:h-10" />
             </Link>
             <p className="text-white !text-white text-sm leading-relaxed mb-6 max-w-sm" style={{ color: "#FFFFFF" }}>
-              V2 Labs Global is a technology and digital growth company based in Bhayandar East, Mira Bhayandar. We engineer high-performance web platforms, custom ERP &amp; CRM systems, AI automations, and conversion-focused growth marketing.
+              V2 Labs Global is a technology and digital growth company based in Mira Bhayandar. We engineer high-performance web platforms, custom ERP &amp; CRM systems, AI automations, and conversion-focused growth marketing.
             </p>
 
             {/* Social Links with verified official icons */}
@@ -63,7 +63,7 @@ export default function Footer() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/919022641867"
+                href="https://wa.me/917021827910"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -202,14 +202,14 @@ export default function Footer() {
               </p>
               <p className="flex flex-col">
                 <span className="text-[11px] font-bold text-neutral-300 uppercase tracking-wider mb-0.5">Phone</span>
-                <a href="tel:+919022641867" className="text-white hover:text-[#38BDF8] transition-colors font-semibold">
-                  +91 9022641867
+                <a href="tel:+917021827910" className="text-white hover:text-[#38BDF8] transition-colors font-semibold">
+                  +91 7021827910
                 </a>
               </p>
               <p className="flex flex-col">
                 <span className="text-[11px] font-bold text-neutral-300 uppercase tracking-wider mb-0.5">Primary Office</span>
                 <span className="text-white font-medium">
-                  Bhayandar East, Thane, Maharashtra 401105, India
+                  Mira Bhayandar, Maharashtra 401105, India
                 </span>
               </p>
             </div>

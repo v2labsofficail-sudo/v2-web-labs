@@ -667,7 +667,7 @@ export default function Home() {
     {
       question: "Which company develops websites in Mira Bhayandar?",
       answer:
-        "V2 Labs Global is a leading technology and digital growth company based in Bhayandar East, providing modern website development, Next.js web applications, WordPress, Shopify, and enterprise software across the Mira Bhayandar Municipal Corporation (MBMC) region.",
+        "V2 Labs Global is a leading technology and digital growth company based in Mira Bhayandar, providing modern website development, Next.js web applications, WordPress, Shopify, and enterprise software across the Mira Bhayandar Municipal Corporation (MBMC) region.",
     },
     {
       question: "What is the difference between custom ERP and CRM software?",
@@ -975,7 +975,7 @@ export default function Home() {
               </h2>
 
               <p className="text-blue-50 text-sm sm:text-base leading-relaxed max-w-2xl mb-8">
-                Based in Bhayandar East, Mira Bhayandar, V2 Labs Global engineers high-speed custom websites, responsive WordPress &amp; Shopify storefronts, autonomous AI agents, enterprise ERP/CRM platforms, and SaaS products that generate qualified leads and drive organic business growth.
+                Based in Mira Bhayandar, V2 Labs Global engineers high-speed custom websites, responsive WordPress &amp; Shopify storefronts, autonomous AI agents, enterprise ERP/CRM platforms, and SaaS products that generate qualified leads and drive organic business growth.
               </p>
               
               {/* Action Buttons in High-Contrast White and Black */}
@@ -998,7 +998,7 @@ export default function Home() {
                 </Link>
 
                 <a
-                  href="https://wa.me/919022641867?text=Hi%20V2%20Labs%20Global,%20I%20would%20like%20to%20discuss%20a%20project"
+                  href="https://wa.me/917021827910?text=Hi%20V2%20Labs%20Global,%20I%20would%20like%20to%20discuss%20a%20project"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-full border border-white/30 backdrop-blur-md shadow-sm transition-all duration-300 hover:-translate-y-0.5"
@@ -2049,13 +2049,13 @@ export default function Home() {
                 Serving Businesses Across Mumbai and Maharashtra
               </h2>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                Headquartered in Bhayandar East, Mira Bhayandar, V2 Labs Global delivers dedicated technology consulting, custom software development, and performance SEO across the entire Mumbai Metropolitan Region and surrounding industrial belts.
+                Headquartered in Mira Bhayandar, V2 Labs Global delivers dedicated technology consulting, custom software development, and performance SEO across the entire Mumbai Metropolitan Region and surrounding industrial belts.
               </p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 pt-4">
               {[
-                "Mira Bhayandar", "Bhayandar East", "Bhayandar West", "Mira Road", "Vasai", "Virar",
+                "Mira Bhayandar", "Bhayandar", "Kashimira", "Mira Road", "Vasai", "Virar",
                 "Borivali", "Kandivali", "Malad", "Andheri", "Bandra", "Dadar",
                 "Kurla", "Mumbai Central", "Grant Road", "Mahim", "Vapi", "Gujarat",
                 "Thane", "Navi Mumbai", "Pune", "Nashik", "Maharashtra", "Pan India"
@@ -2193,7 +2193,7 @@ export default function Home() {
               View Plans &amp; Pricing
             </Link>
             <a
-              href="https://wa.me/919022641867"
+              href="https://wa.me/917021827910"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm uppercase tracking-wider rounded-full transition-transform hover:-translate-y-0.5"

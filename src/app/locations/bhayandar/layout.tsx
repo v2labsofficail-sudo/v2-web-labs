@@ -4,12 +4,12 @@ import { buildPageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd, siteConfig, a
 export const metadata = buildPageMetadata({
   title: "Web Development & Software Company in Bhayandar",
   description:
-    "Partner with V2 Labs Global, a premier web development & software solutions company in Bhayandar East. We build custom Next.js websites, Shopify stores, ERP/CRM systems, and AI automation.",
+    "Partner with V2 Labs Global, a premier web development & software solutions company based in Mira Bhayandar. We build custom Next.js websites, Shopify stores, ERP/CRM systems, and AI automation.",
   path: "/locations/bhayandar",
   keywords: [
     "web development company bhayandar",
     "website development company bhayandar",
-    "web development company in bhayandar east",
+    "web development company in mira bhayandar",
     "website designer in bhayandar",
     "website designing company in bhayandar west",
     "software company bhayandar",
@@ -36,7 +36,7 @@ export default function BhayandarLayout({
   const faqJson = buildFaqJsonLd([
     {
       question: "Are you located in Bhayandar?",
-      answer: "Yes, V2 Labs Global operates from Bhayandar East (401105). We are a local technology and software engineering team serving startups, businesses, and industrial units across Bhayandar East, Bhayandar West, Kashimira, Indralok, Golden Nest, Navghar, and the wider Mumbai region."
+      answer: "Yes, V2 Labs Global is based in Mira Bhayandar (401105). We are a local technology and software engineering team serving startups, businesses, and industrial units across Bhayandar, Mira Road, and the wider Mumbai region."
     },
     {
       question: "What services do you offer for local businesses in Bhayandar?",
@@ -65,7 +65,7 @@ export default function BhayandarLayout({
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Bhayandar East",
+      "streetAddress": "Mira Bhayandar",
       "addressLocality": "Mira Bhayandar",
       "addressRegion": "Maharashtra",
       "postalCode": "401105",

@@ -98,7 +98,7 @@ export default function ServiceDetailTemplate({
             </Link>
 
             <a
-              href="https://wa.me/919022641867"
+              href="https://wa.me/917021827910"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-sm uppercase tracking-wider rounded-full border border-emerald-200 transition-all hover:-translate-y-0.5"
@@ -266,7 +266,7 @@ export default function ServiceDetailTemplate({
               Start Free Consultation
             </Link>
             <a
-              href="https://wa.me/919022641867"
+              href="https://wa.me/917021827910"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm uppercase tracking-wider rounded-full transition-transform hover:-translate-y-0.5"
